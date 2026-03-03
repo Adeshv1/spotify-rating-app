@@ -14,14 +14,14 @@ function pushTopNByRating(list, item, maxN) {
 }
 
 /**
- * @param {Array<{ trackKey: string, name?: string|null, rating: number, artists: string[], artistsDetailed?: Array<{name:string, id:string|null}> }>} tracks
+ * @param {Array<{ trackKey: string, id?: string|null, name?: string|null, rating: number, artists: string[], artistsDetailed?: Array<{name:string, id:string|null}> }>} tracks
  * @param {{ maxSongsPerArtist?: number, maxArtists?: number }} [options]
  */
 export function computeTopArtistsFromTracks(tracks, options = {}) {
   const maxSongsPerArtist = Number(options.maxSongsPerArtist) || 5
   const maxArtists = Number(options.maxArtists) || 15
 
-  /** @type {Map<string, Array<{trackKey:string, name:string|null, rating:number}>>} */
+  /** @type {Map<string, Array<{trackKey:string, id:string|null, name:string|null, rating:number}>>} */
   const byArtist = new Map()
   /** @type {Map<string, string>} */
   const idByArtist = new Map()
@@ -29,6 +29,7 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
   for (const t of tracks) {
     const rating = Number(t?.rating)
     if (!Number.isFinite(rating)) continue
+    const trackId = typeof t?.id === 'string' ? t.id : null
     const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
     if (!artists.length) continue
 
@@ -41,7 +42,7 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
       const existing = byArtist.get(artistName) || []
       pushTopNByRating(
         existing,
-        { trackKey: t.trackKey, name: typeof t?.name === 'string' ? t.name : null, rating },
+        { trackKey: t.trackKey, id: trackId, name: typeof t?.name === 'string' ? t.name : null, rating },
         maxSongsPerArtist,
       )
       byArtist.set(artistName, existing)

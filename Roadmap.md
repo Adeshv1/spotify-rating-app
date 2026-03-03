@@ -37,3 +37,4 @@
 + Server: refresh artist images periodically (TTL + null retry) (implemented 2026-03-03)
 + UI: header title + conditional nav buttons (implemented 2026-03-03)
 + UI: remove manual sync controls; keep autosync debounce (800ms) (implemented 2026-03-03)
++ UI: stabilize dashboard column layout (use CSS grid to avoid flex sizing issues) (implemented 2026-03-03)

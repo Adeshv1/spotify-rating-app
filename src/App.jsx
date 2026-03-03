@@ -17,7 +17,7 @@ import {
   writePlaylistTracksCache,
   writePlaylistTracksErrorCache,
 } from './lib/spotifyPlaylistTracksCache'
-import { openTrackInSpotify } from './lib/openInSpotify'
+import { openArtistInSpotify, openTrackInSpotify } from './lib/openInSpotify'
 import {
   excludeTrack,
   createEmptyUserRanking,
@@ -639,7 +639,7 @@ function App() {
   )
 }
 
-function TopArtistCard({ artist, rootEl, imageState, onVisible }) {
+function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
   const cardRef = useRef(null)
   const artistName = typeof artist?.name === 'string' ? artist.name : 'Unknown artist'
   const tracks = Array.isArray(artist?.topTracks)
@@ -669,6 +669,11 @@ function TopArtistCard({ artist, rootEl, imageState, onVisible }) {
 
   return (
     <div ref={cardRef} className="artistCard" role="listitem">
+      {artistId ? (
+        <button className="btn small artistCardPlayBtn" onClick={() => openArtistInSpotify(artistId)} title="Open artist in Spotify">
+          Play
+        </button>
+      ) : null}
       <div className="artistCardImage">
         {imageUrl ? (
           <img src={imageUrl} alt={`${artistName}`} loading="lazy" />
@@ -687,7 +692,24 @@ function TopArtistCard({ artist, rootEl, imageState, onVisible }) {
           {tracks.slice(0, 5).map((s) => (
             <li key={s.trackKey} className="artistCardTrack">
               <span className="artistCardTrackName">{s.name || s.trackKey}</span>
-              <span className="artistCardTrackScore">{Math.round(Number(s.rating) || 0)}</span>
+              <span className="artistCardTrackRight">
+                <span className="artistCardTrackScore">{Math.round(Number(s.rating) || 0)}</span>
+                {(() => {
+                  const trackId =
+                    (typeof s?.id === 'string' ? s.id : null) ||
+                    (typeof s?.trackKey === 'string' && s.trackKey.startsWith('spid:') ? s.trackKey.slice('spid:'.length) : null)
+                  if (!trackId) return null
+                  return (
+                    <button
+                      className="btn small artistCardTrackPlayBtn"
+                      onClick={() => openTrackInSpotify(trackId)}
+                      title="Open track in Spotify"
+                    >
+                      Play
+                    </button>
+                  )
+                })()}
+              </span>
             </li>
           ))}
         </ul>
@@ -960,26 +982,30 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
     const hasAnyRatings = rows.some((r) => r.bucket !== 'U' || r.games > 0 || r.rating !== 1000)
     rows.sort((a, b) => b.rating - a.rating)
 
-    const albumAgg = new Map()
+	    const albumAgg = new Map()
 
-    for (const r of rows) {
-      if (r.album) {
-        const prev = albumAgg.get(r.album) || { name: r.album, tracks: 0, sumRating: 0 }
-        prev.tracks += 1
-        prev.sumRating += r.rating
-        albumAgg.set(r.album, prev)
-      }
-    }
+	    for (const r of rows) {
+	      if (r.album) {
+	        const prev = albumAgg.get(r.album) || { name: r.album, tracks: 0, sumRating: 0, bestTrackId: null, bestRating: -Infinity }
+	        prev.tracks += 1
+	        prev.sumRating += r.rating
+	        if (r.id && r.rating > prev.bestRating) {
+	          prev.bestRating = r.rating
+	          prev.bestTrackId = r.id
+	        }
+	        albumAgg.set(r.album, prev)
+	      }
+	    }
 
     const topSongs = rows
     const topArtists = computeTopArtistsFromTracks(rows, { maxSongsPerArtist: 5, maxArtists: Number.POSITIVE_INFINITY })
 
-    const topAlbums = Array.from(albumAgg.values())
-      .sort((a, b) => b.sumRating - a.sumRating)
-      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+	    const topAlbums = Array.from(albumAgg.values())
+	      .sort((a, b) => b.sumRating - a.sumRating)
+	      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
 
-    return { hasAnyRatings, topSongs, topArtists, topAlbums }
-  }, [ranking, trackIndex])
+	    return { hasAnyRatings, topSongs, topArtists, topAlbums }
+	  }, [ranking, trackIndex])
 
   if (!userId) return <p className="meta">Loading…</p>
 	  if (!ranking) return <p className="meta">Loading ranking…</p>
@@ -1016,24 +1042,52 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
       ) : null}
 
       <div className="dashboardColumns" role="region" aria-label="Dashboard columns">
-        <div className="dashPanel">
-          <div className="dashPanelHeader">
-            <h3>Top songs ({computed.topSongs.length})</h3>
-          </div>
-	          <div className="dashPanelBody" role="region" aria-label="Top songs list" tabIndex={0}>
-	            <ol className="dashList">
-	              {computed.topSongs.map((t, idx) => (
-	                <li key={t.trackKey} className="dashItem">
-	                  <div className="dashItemLeft">
-	                    <div className="cellTitle">
-	                      <span className="dashRank">{idx + 1}.</span> {t.name || t.id || t.trackKey}
-	                    </div>
-	                    <div className="cellSub">{t.artists?.length ? t.artists.join(', ') : 'Unknown artist'}</div>
-	                  </div>
-	                  <div className="dashItemRight">{Math.round(Number(t.rating) || 0)}</div>
-	                </li>
-	              ))}
-	            </ol>
+	        <div className="dashPanel">
+	          <div className="dashPanelHeader">
+	            <h3>Top songs ({computed.topSongs.length})</h3>
+	          </div>
+	          <div className="dashPanelBody dashPanelBodyTight" role="region" aria-label="Top songs list" tabIndex={0}>
+	            <table className="dashTable">
+	              <thead>
+	                <tr>
+	                  <th className="right dashColIndex">#</th>
+	                  <th>Song</th>
+	                  <th>Artist</th>
+	                  <th className="right dashColElo">Elo</th>
+	                  <th className="right dashColPlay" aria-label="Play column" />
+	                </tr>
+	              </thead>
+	              <tbody>
+	                {computed.topSongs.map((t, idx) => {
+	                  const trackId =
+	                    (typeof t?.id === 'string' ? t.id : null) ||
+	                    (typeof t?.trackKey === 'string' && t.trackKey.startsWith('spid:') ? t.trackKey.slice('spid:'.length) : null)
+	                  return (
+	                    <tr key={t.trackKey} className="dashTableRow">
+	                      <td className="right">
+	                        <span className="cellSub">{idx + 1}</span>
+	                      </td>
+	                      <td>
+	                        <div className="cellTitle">{t.name || t.id || t.trackKey}</div>
+	                      </td>
+	                      <td>
+	                        <div className="cellSub">{t.artists?.length ? t.artists.join(', ') : 'Unknown artist'}</div>
+	                      </td>
+	                      <td className="right">
+	                        <span className="cellSub">{Math.round(Number(t.rating) || 0)}</span>
+	                      </td>
+	                      <td className="right">
+	                        {trackId ? (
+	                          <button className="btn small rowPlayBtn" onClick={() => openTrackInSpotify(trackId)} title="Open in Spotify">
+	                            Play
+	                          </button>
+	                        ) : null}
+	                      </td>
+	                    </tr>
+	                  )
+	                })}
+	              </tbody>
+	            </table>
 	          </div>
 	        </div>
 
@@ -1058,6 +1112,7 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
 	                <TopArtistCard
 	                  key={a.name}
 	                  artist={a}
+	                  artistId={effectiveArtistId}
 	                  rootEl={artistCardsRootEl}
 	                  imageState={imageState}
 	                  onVisible={ensureArtistImageForArtist}
@@ -1071,23 +1126,50 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
 	        <div className="dashPanel">
 	          <div className="dashPanelHeader">
 	            <h3>Top albums ({computed.topAlbums.length})</h3>
-          </div>
-          <div className="dashPanelBody" role="region" aria-label="Top albums list" tabIndex={0}>
-            <ol className="dashList">
-              {computed.topAlbums.map((a, idx) => (
-                <li key={a.name} className="dashItem">
-                  <div className="dashItemLeft">
-                    <div className="cellTitle">
-                      <span className="dashRank">{idx + 1}.</span> {a.name}
-                    </div>
-                    <div className="cellSub">{a.tracks} track(s)</div>
-                  </div>
-                  <div className="dashItemRight">{Math.round(Number(a.avgRating) || 0)}</div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
+	          </div>
+	          <div className="dashPanelBody dashPanelBodyTight" role="region" aria-label="Top albums list" tabIndex={0}>
+	            <table className="dashTable">
+	              <thead>
+	                <tr>
+	                  <th className="right dashColIndex">#</th>
+	                  <th>Album</th>
+	                  <th className="right dashColTracks">Tracks</th>
+	                  <th className="right dashColElo">Elo</th>
+	                  <th className="right dashColPlay" aria-label="Play column" />
+	                </tr>
+	              </thead>
+	              <tbody>
+	                {computed.topAlbums.map((a, idx) => (
+	                  <tr key={a.name} className="dashTableRow">
+	                    <td className="right">
+	                      <span className="cellSub">{idx + 1}</span>
+	                    </td>
+	                    <td>
+	                      <div className="cellTitle">{a.name}</div>
+	                    </td>
+	                    <td className="right">
+	                      <span className="cellSub">{a.tracks}</span>
+	                    </td>
+	                    <td className="right">
+	                      <span className="cellSub">{Math.round(Number(a.avgRating) || 0)}</span>
+	                    </td>
+	                    <td className="right">
+	                      {a?.bestTrackId ? (
+	                        <button
+	                          className="btn small rowPlayBtn"
+	                          onClick={() => openTrackInSpotify(a.bestTrackId)}
+	                          title="Open a track from this album in Spotify"
+	                        >
+	                          Play
+	                        </button>
+	                      ) : null}
+	                    </td>
+	                  </tr>
+	                ))}
+	              </tbody>
+	            </table>
+	          </div>
+	        </div>
       </div>
     </div>
   )
