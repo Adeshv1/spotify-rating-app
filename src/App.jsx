@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import {
   clearPlaylistsCache,
@@ -17,6 +17,22 @@ import {
   writePlaylistTracksCache,
   writePlaylistTracksErrorCache,
 } from './lib/spotifyPlaylistTracksCache'
+import { openTrackInSpotify } from './lib/openInSpotify'
+import {
+  excludeTrack,
+  createEmptyUserRanking,
+  getTrackState,
+  mergeLegacyPlaylistRanking,
+  readUserRanking,
+  recordDuel,
+  setTrackBucket,
+  TIER_BUCKETS,
+  trackKeyOfTrack,
+  undoLast,
+  writeUserRanking,
+} from './lib/userRankingStore'
+import { pickMatchup } from './lib/matchup'
+import { readPlaylistRanking as readLegacyPlaylistRanking } from './lib/playlistRankingStore'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -347,8 +363,10 @@ function App() {
 
             {selectedPlaylistId ? (
               <PlaylistView
+                key={`${profile?.id || 'anon'}:${selectedPlaylistId}`}
                 playlistsCache={playlistsCache}
                 playlistId={selectedPlaylistId}
+                userId={profile?.id}
                 cooldownUntilMs={cooldownUntilMs}
                 nowMs={nowMs}
                 tracksLoading={tracksLoading}
@@ -478,6 +496,7 @@ function PlaylistsView({
 function PlaylistView({
   playlistsCache,
   playlistId,
+  userId,
   cooldownUntilMs,
   nowMs,
   tracksLoading,
@@ -491,6 +510,34 @@ function PlaylistView({
   const playlistSnapshotId = typeof playlist?.snapshotId === 'string' ? playlist.snapshotId : null
   const cachedSnapshotId = typeof tracksCache?.snapshotId === 'string' ? tracksCache.snapshotId : null
   const snapshotMismatch = playlistSnapshotId && cachedSnapshotId && playlistSnapshotId !== cachedSnapshotId
+
+  const [view, setView] = useState('tracks') // tracks | bucket | duel | leaderboard
+  const [ranking, setRanking] = useState(() => {
+    if (!userId || !playlistId) return null
+    const base = readUserRanking(userId) ?? createEmptyUserRanking({ userId })
+    const legacy = readLegacyPlaylistRanking(userId, playlistId)
+    return legacy ? mergeLegacyPlaylistRanking(base, legacy, playlistId) : base
+  })
+
+  const uniqueTracks = useMemo(() => {
+    const items = Array.isArray(tracksCache?.items) ? tracksCache.items : []
+    const map = new Map()
+    for (const t of items) {
+      const key = trackKeyOfTrack(t)
+      const existing = map.get(key)
+      if (existing) {
+        existing.count += 1
+      } else {
+        map.set(key, { key, track: t, count: 1 })
+      }
+    }
+    return Array.from(map.values())
+  }, [tracksCache])
+
+  useEffect(() => {
+    if (!userId || !ranking) return
+    writeUserRanking(userId, ranking)
+  }, [userId, ranking])
 
   return (
     <div className="section">
@@ -506,6 +553,21 @@ function PlaylistView({
       </div>
 
       <h2>{playlist?.name || 'Playlist'}</h2>
+
+      <div className="tabs" role="tablist" aria-label="Playlist views">
+        <button className={`tab ${view === 'tracks' ? 'active' : ''}`} onClick={() => setView('tracks')}>
+          Tracks
+        </button>
+        <button className={`tab ${view === 'bucket' ? 'active' : ''}`} onClick={() => setView('bucket')}>
+          Seed tiers (global)
+        </button>
+        <button className={`tab ${view === 'duel' ? 'active' : ''}`} onClick={() => setView('duel')}>
+          Head-to-head
+        </button>
+        <button className={`tab ${view === 'leaderboard' ? 'active' : ''}`} onClick={() => setView('leaderboard')}>
+          Leaderboard (global)
+        </button>
+      </div>
 
       {tracksError ? <p className="error">{tracksError}</p> : null}
 
@@ -525,24 +587,376 @@ function PlaylistView({
         <p className="meta">No track cache for this playlist yet.</p>
       )}
 
-      {tracksCache?.items?.length ? (
-        <ol className="tracks">
-          {tracksCache.items.map((t, idx) => (
-            <li key={`${t.id || t.name}-${idx}`}>
-              {t.externalUrl ? (
-                <a href={t.externalUrl} target="_blank" rel="noreferrer">
-                  {t.name || '(untitled track)'}
-                </a>
-              ) : (
-                <span>{t.name || '(untitled track)'}</span>
-              )}
-              {t.artists?.length ? <span className="sub"> — {t.artists.join(', ')}</span> : null}
-              {t.album ? <span className="sub"> · {t.album}</span> : null}
-              {t.addedAt ? <span className="sub"> · added {formatDateTime(t.addedAt)}</span> : null}
+      {view === 'tracks' ? (
+        tracksCache?.items?.length ? (
+          <ol className="tracks">
+            {tracksCache.items.map((t, idx) => {
+              const key = trackKeyOfTrack(t)
+              const state = ranking ? getTrackState(ranking, key) : null
+              return (
+                <li key={`${key}-${idx}`}>
+                  <span>{t.name || '(untitled track)'}</span>
+                  {t.artists?.length ? <span className="sub"> — {t.artists.join(', ')}</span> : null}
+                  {t.album ? <span className="sub"> · {t.album}</span> : null}
+                  {t.addedAt ? <span className="sub"> · added {formatDateTime(t.addedAt)}</span> : null}
+                  {state ? (
+                    <span className="sub">
+                      {' '}
+                      · tier {state.bucket === 'U' ? 'unseeded' : state.bucket}
+                      {state.bucket !== 'X' ? ` · Elo ${Math.round(state.rating)}` : ' · excluded'}
+                    </span>
+                  ) : null}
+                  {t.id ? (
+                    <button className="playBtn" onClick={() => openTrackInSpotify(t.id)} title="Play in Spotify">
+                      Play
+                    </button>
+                  ) : null}
+                </li>
+              )
+            })}
+          </ol>
+        ) : null
+      ) : null}
+
+      {view === 'bucket' ? (
+        <BucketSeeder uniqueTracks={uniqueTracks} ranking={ranking} onChange={setRanking} />
+      ) : null}
+
+      {view === 'duel' ? (
+        <HeadToHead uniqueTracks={uniqueTracks} ranking={ranking} onChange={setRanking} />
+      ) : null}
+
+      {view === 'leaderboard' ? (
+        <Leaderboard uniqueTracks={uniqueTracks} ranking={ranking} />
+      ) : null}
+    </div>
+  )
+}
+
+function BucketSeeder({ uniqueTracks, ranking, onChange }) {
+  const [query, setQuery] = useState('')
+  const [filterBucket, setFilterBucket] = useState('ALL')
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    return uniqueTracks.filter(({ key, track }) => {
+      const state = ranking ? getTrackState(ranking, key) : null
+      if (filterBucket !== 'ALL' && state && state.bucket !== filterBucket) return false
+      if (!q) return true
+      const hay = `${track?.name ?? ''} ${(track?.artists ?? []).join(' ')}`.toLowerCase()
+      return hay.includes(q)
+    })
+  }, [uniqueTracks, ranking, query, filterBucket])
+
+  return (
+    <div className="cardSub">
+      <p className="meta">
+        Fast seeding step (global per song): put favorites into <strong>S</strong>, good songs into <strong>A</strong>, and
+        leave the rest <strong>unseeded</strong>. Head-to-head mostly happens within the tier you pick, so you don’t have to
+        grind through everything.
+      </p>
+
+      <div className="controls">
+        <input
+          className="textInput"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search tracks…"
+          aria-label="Search tracks"
+        />
+        <label className="inlineLabel">
+          Filter
+          <select value={filterBucket} onChange={(e) => setFilterBucket(e.target.value)}>
+            <option value="ALL">All</option>
+            {TIER_BUCKETS.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+            <option value="U">Unseeded</option>
+            <option value="X">Do not rate</option>
+          </select>
+        </label>
+      </div>
+
+      <ul className="seedList">
+        {filtered.map(({ key, track, count }) => {
+          const state = ranking ? getTrackState(ranking, key) : null
+          const bucket = state?.bucket ?? 'U'
+          return (
+            <li key={key} className="seedRow">
+              <div className="seedMain">
+                <div className="seedTitle">
+                  <span>{track?.name || '(untitled track)'}</span>
+                </div>
+                <div className="seedMeta">
+                  {(track?.artists ?? []).length ? `${track.artists.join(', ')}` : 'Unknown artist'}
+                  {count > 1 ? ` · in playlist x${count}` : ''}
+                  {bucket !== 'U' ? ` · tier ${bucket === 'X' ? 'do not rate' : bucket}` : ' · unseeded'}
+                </div>
+              </div>
+
+              <div className="seedActions">
+                {track?.id ? (
+                  <button className="playBtn" onClick={() => openTrackInSpotify(track.id)} title="Play in Spotify">
+                    Play
+                  </button>
+                ) : null}
+                {TIER_BUCKETS.map((b) => (
+                  <button
+                    key={b}
+                    className={`bucketBtn ${bucket === b ? 'active' : ''}`}
+                    onClick={() => ranking && onChange(setTrackBucket(ranking, key, b))}
+                    disabled={!ranking}
+                    title={`Set tier ${b}`}
+                  >
+                    {b}
+                  </button>
+                ))}
+                <button
+                  className={`bucketBtn ${bucket === 'U' ? 'active' : ''}`}
+                  onClick={() => ranking && onChange(setTrackBucket(ranking, key, 'U'))}
+                  disabled={!ranking}
+                  title="Clear tier (unseeded)"
+                >
+                  —
+                </button>
+                <button
+                  className={`bucketBtn danger ${bucket === 'X' ? 'active' : ''}`}
+                  onClick={() => ranking && onChange(setTrackBucket(ranking, key, 'X'))}
+                  disabled={!ranking}
+                  title="Do not rate (exclude)"
+                >
+                  X
+                </button>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}
+
+function Leaderboard({ uniqueTracks, ranking }) {
+  const [bucket, setBucket] = useState('S')
+
+  const rows = useMemo(() => {
+    if (!ranking) return []
+    return uniqueTracks
+      .map(({ key, track }) => ({ key, track, state: getTrackState(ranking, key) }))
+      .filter((r) => r.state.bucket !== 'X')
+      .filter((r) => (bucket === 'ALL' ? r.state.bucket !== 'X' : r.state.bucket === bucket))
+      .sort((a, b) => b.state.rating - a.state.rating)
+  }, [uniqueTracks, ranking, bucket])
+
+  return (
+    <div className="cardSub">
+      <div className="controls">
+        <label className="inlineLabel">
+          Tier
+          <select value={bucket} onChange={(e) => setBucket(e.target.value)}>
+            {TIER_BUCKETS.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+            <option value="U">Unseeded</option>
+            <option value="ALL">All (except excluded)</option>
+          </select>
+        </label>
+      </div>
+
+      {!ranking ? <p className="meta">Loading ranking…</p> : null}
+
+      {ranking && rows.length ? (
+        <ol className="leaderboard">
+          {rows.slice(0, 100).map((r) => (
+            <li key={r.key}>
+              <span>{r.track?.name || '(untitled track)'}</span>
+              {(r.track?.artists ?? []).length ? <span className="sub"> — {r.track.artists.join(', ')}</span> : null}
+              <span className="sub">
+                {' '}
+                · Elo {Math.round(r.state.rating)} · {r.state.games} match{r.state.games === 1 ? '' : 'es'}
+              </span>
+              {r.track?.id ? (
+                <button className="playBtn" onClick={() => openTrackInSpotify(r.track.id)} title="Play in Spotify">
+                  Play
+                </button>
+              ) : null}
             </li>
           ))}
         </ol>
+      ) : ranking ? (
+        <p className="meta">No tracks to show for this tier yet.</p>
       ) : null}
+    </div>
+  )
+}
+
+function HeadToHead({ uniqueTracks, ranking, onChange }) {
+  const [bucket, setBucket] = useState('AUTO')
+  const [seed, setSeed] = useState(0)
+  const [sessionTarget, setSessionTarget] = useState(25)
+  const [sessionDone, setSessionDone] = useState(0)
+
+  const trackByKey = useMemo(() => {
+    const map = new Map()
+    for (const u of uniqueTracks) map.set(u.key, u.track)
+    return map
+  }, [uniqueTracks])
+
+  const trackKeys = useMemo(() => uniqueTracks.map((t) => t.key), [uniqueTracks])
+
+  const matchup = useMemo(() => {
+    if (!ranking) return null
+    return pickMatchup({ trackKeys, ranking, bucket, seed })
+  }, [ranking, trackKeys, bucket, seed])
+
+  const leftTrack = matchup ? trackByKey.get(matchup.leftKey) : null
+  const rightTrack = matchup ? trackByKey.get(matchup.rightKey) : null
+
+  const leftState = matchup && ranking ? getTrackState(ranking, matchup.leftKey) : null
+  const rightState = matchup && ranking ? getTrackState(ranking, matchup.rightKey) : null
+
+  const canUndo = Boolean(ranking?.history?.length)
+
+  function vote(winnerKey) {
+    if (!matchup) return
+    onChange((r) => (r ? recordDuel(r, { leftKey: matchup.leftKey, rightKey: matchup.rightKey, winnerKey }) : r))
+    setSessionDone((n) => n + 1)
+  }
+
+  function skip() {
+    setSeed((s) => s + 1)
+  }
+
+  function undo() {
+    onChange((r) => {
+      const next = r ? undoLast(r) : r
+      if (next !== r) setSessionDone((n) => Math.max(0, n - 1))
+      return next
+    })
+  }
+
+  function doNotRate(trackKey) {
+    onChange((r) => (r ? excludeTrack(r, trackKey) : r))
+    setSeed((s) => s + 1)
+  }
+
+  return (
+    <div className="cardSub">
+      <p className="meta">
+        Tip: seed 10–30 favorites into <strong>S</strong>, set Tier to <strong>S</strong>, and you’ll quickly get a Top list
+        without comparing every song. Everything is saved globally per song across playlists.
+      </p>
+
+      <div className="controls">
+        <label className="inlineLabel">
+          Tier
+          <select value={bucket} onChange={(e) => setBucket(e.target.value)}>
+            <option value="AUTO">Auto</option>
+            {TIER_BUCKETS.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+            <option value="U">Unseeded</option>
+          </select>
+        </label>
+
+        <button onClick={() => setSessionDone(0)} title="Resets the in-session counter only (does not affect ratings).">
+          Reset session
+        </button>
+
+        <label className="inlineLabel">
+          Target
+          <select value={sessionTarget} onChange={(e) => setSessionTarget(Number(e.target.value) || 25)}>
+            <option value={10}>10</option>
+            <option value={25}>25</option>
+            <option value={50}>50</option>
+          </select>
+        </label>
+
+        <button onClick={undo} disabled={!canUndo} title="Undo last comparison">
+          Undo
+        </button>
+      </div>
+
+      {ranking ? (
+        <p className="meta">
+          Session: {sessionDone}/{sessionTarget}. Total comparisons: {ranking.history.length}.
+        </p>
+      ) : null}
+
+      {!ranking ? (
+        <p className="meta">Loading ranking…</p>
+      ) : !matchup || !leftTrack || !rightTrack ? (
+        <p className="meta">
+          Not enough eligible tracks for a matchup yet. Add at least 2 non-excluded songs to the selected tier (or use
+          Auto).
+        </p>
+      ) : (
+        <>
+          <div className="duelGrid">
+            <div className="duelCard">
+              <div className="duelTitle">{leftTrack?.name || '(untitled track)'}</div>
+              {(leftTrack?.artists ?? []).length ? <div className="duelMeta">{leftTrack.artists.join(', ')}</div> : null}
+              {leftState ? (
+                <div className="duelStats">
+                  tier {leftState.bucket} · Elo {Math.round(leftState.rating)} · {leftState.games} match
+                  {leftState.games === 1 ? '' : 'es'}
+                </div>
+              ) : null}
+              <div className="controls">
+                {leftTrack?.id ? (
+                  <button className="ghost" onClick={() => openTrackInSpotify(leftTrack.id)} title="Play in Spotify">
+                    Play
+                  </button>
+                ) : null}
+                <button className="primary" onClick={() => vote(matchup.leftKey)}>
+                  Left wins
+                </button>
+                <button className="ghost" onClick={() => doNotRate(matchup.leftKey)} title="Exclude this track forever">
+                  Do not rate
+                </button>
+              </div>
+            </div>
+
+            <div className="duelVs">vs</div>
+
+            <div className="duelCard">
+              <div className="duelTitle">{rightTrack?.name || '(untitled track)'}</div>
+              {(rightTrack?.artists ?? []).length ? <div className="duelMeta">{rightTrack.artists.join(', ')}</div> : null}
+              {rightState ? (
+                <div className="duelStats">
+                  tier {rightState.bucket} · Elo {Math.round(rightState.rating)} · {rightState.games} match
+                  {rightState.games === 1 ? '' : 'es'}
+                </div>
+              ) : null}
+              <div className="controls">
+                {rightTrack?.id ? (
+                  <button className="ghost" onClick={() => openTrackInSpotify(rightTrack.id)} title="Play in Spotify">
+                    Play
+                  </button>
+                ) : null}
+                <button className="primary" onClick={() => vote(matchup.rightKey)}>
+                  Right wins
+                </button>
+                <button className="ghost" onClick={() => doNotRate(matchup.rightKey)} title="Exclude this track forever">
+                  Do not rate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="controls">
+            <button onClick={skip} title="Skip this matchup and ask again later">
+              Skip
+            </button>
+          </div>
+        </>
+      )}
     </div>
   )
 }
