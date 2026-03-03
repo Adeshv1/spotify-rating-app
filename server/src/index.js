@@ -100,6 +100,55 @@ function getRetryAfterSeconds(headers) {
   return Number.isFinite(n) ? n : null
 }
 
+function sendPartialJson(res, body) {
+  sendJson(res, 206, body)
+}
+
+function logSpotifyFailure({ label, url, status, retryAfterSeconds, wwwAuthenticate, requestId, context, data }) {
+  const summary = {
+    label,
+    status,
+    url,
+    retryAfterSeconds: retryAfterSeconds ?? null,
+    wwwAuthenticate: wwwAuthenticate ?? null,
+    requestId: requestId ?? null,
+    context: context ?? null,
+    error: data?.error ?? data ?? null,
+  }
+  console.error('[spotify] request failed', JSON.stringify(summary, null, 2))
+}
+
+async function spotifyMe({ accessToken }) {
+  const response = await fetch('https://api.spotify.com/v1/me', {
+    headers: { authorization: `Bearer ${accessToken}` },
+  })
+
+  let data
+  try {
+    data = await response.json()
+  } catch {
+    data = null
+  }
+
+  const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+  const wwwAuthenticate = response.headers.get('www-authenticate')
+  const requestId = response.headers.get('x-request-id')
+
+  if (!response.ok) {
+    logSpotifyFailure({
+      label: 'GET /v1/me (callback)',
+      url: 'https://api.spotify.com/v1/me',
+      status: response.status,
+      retryAfterSeconds,
+      wwwAuthenticate,
+      data,
+      requestId,
+    })
+  }
+
+  return { ok: response.ok, status: response.status, data, retryAfterSeconds, requestId }
+}
+
 function base64Url(buffer) {
   return buffer
     .toString('base64')
@@ -176,6 +225,10 @@ async function spotifyRefresh({ refreshToken, clientId }) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url ?? '/', `http://${req.headers.host ?? 'localhost'}`)
   const cookies = parseCookies(req.headers.cookie)
+  const debugContext = {
+    userId: typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null,
+    scopes: typeof cookies.sp_scope === 'string' ? cookies.sp_scope : null,
+  }
 
   if (req.method === 'GET' && url.pathname === '/health') {
     res.statusCode = 200
@@ -204,6 +257,7 @@ const server = http.createServer((req, res) => {
       'user-read-email',
       'user-read-private',
       'playlist-read-private',
+      'playlist-read-collaborative',
     ].join(' ')
 
     const authUrl = new URL('https://accounts.spotify.com/authorize')
@@ -214,6 +268,7 @@ const server = http.createServer((req, res) => {
     authUrl.searchParams.set('code_challenge_method', 'S256')
     authUrl.searchParams.set('code_challenge', challenge)
     authUrl.searchParams.set('scope', scopes)
+    authUrl.searchParams.set('show_dialog', 'true')
 
     res.statusCode = 302
     res.setHeader('location', authUrl.toString())
@@ -258,12 +313,25 @@ const server = http.createServer((req, res) => {
         const accessToken = token.access_token
         const refreshToken = token.refresh_token
         const expiresIn = token.expires_in
+        const scope = token.scope
 
         if (typeof accessToken === 'string') {
           setCookie(res, 'sp_access', accessToken, { path: '/', maxAge: Math.max(0, (Number(expiresIn) || 3600) - 30) })
         }
         if (typeof refreshToken === 'string') {
           setCookie(res, 'sp_refresh', refreshToken, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+        }
+        if (typeof scope === 'string') {
+          setCookie(res, 'sp_scope', scope, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+        }
+
+        // Helpful for debugging + client cache keying without extra calls on every page load.
+        if (typeof accessToken === 'string') {
+          const me = await spotifyMe({ accessToken })
+          if (me.ok && me.data && typeof me.data === 'object') {
+            if (typeof me.data.id === 'string') setCookie(res, 'sp_user_id', me.data.id, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+            if (typeof me.data.display_name === 'string') setCookie(res, 'sp_user_name', me.data.display_name, { path: '/', maxAge: 30 * 24 * 60 * 60, httpOnly: false })
+          }
         }
 
         res.statusCode = 302
@@ -280,6 +348,9 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && url.pathname === '/auth/logout') {
     clearCookie(res, 'sp_access', { path: '/' })
     clearCookie(res, 'sp_refresh', { path: '/' })
+    clearCookie(res, 'sp_scope', { path: '/' })
+    clearCookie(res, 'sp_user_id', { path: '/' })
+    clearCookie(res, 'sp_user_name', { path: '/' })
     sendJson(res, 200, { ok: true })
     return
   }
@@ -288,7 +359,9 @@ const server = http.createServer((req, res) => {
     const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
     const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
     const loggedIn = hasAccess || hasRefresh
-    sendJson(res, 200, { loggedIn })
+    const scopes = typeof cookies.sp_scope === 'string' ? cookies.sp_scope.split(' ').filter(Boolean) : []
+    const user = typeof cookies.sp_user_id === 'string' ? { id: cookies.sp_user_id, display_name: cookies.sp_user_name || null } : null
+    sendJson(res, 200, { loggedIn, scopes, user })
     return
   }
 
@@ -312,7 +385,22 @@ const server = http.createServer((req, res) => {
           headers: { authorization: `Bearer ${token}` },
         })
         const data = await response.json()
-        return { ok: response.ok, status: response.status, data, retryAfterSeconds: getRetryAfterSeconds(response.headers) }
+        const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+        const wwwAuthenticate = response.headers.get('www-authenticate')
+        const requestId = response.headers.get('x-request-id')
+        if (!response.ok) {
+          logSpotifyFailure({
+            label: 'GET /v1/me',
+            url: 'https://api.spotify.com/v1/me',
+            status: response.status,
+            retryAfterSeconds,
+            wwwAuthenticate,
+            requestId,
+            context: debugContext,
+            data,
+          })
+        }
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds }
       }
 
       try {
@@ -354,8 +442,10 @@ const server = http.createServer((req, res) => {
       return
     }
 
-    const rawLimit = Number(url.searchParams.get('limit'))
-    const rawOffset = Number(url.searchParams.get('offset'))
+    const limitParam = url.searchParams.get('limit')
+    const offsetParam = url.searchParams.get('offset')
+    const rawLimit = limitParam == null ? NaN : Number(limitParam)
+    const rawOffset = offsetParam == null ? NaN : Number(offsetParam)
     const limit = Math.min(50, Math.max(1, Number.isFinite(rawLimit) ? rawLimit : 50))
     const offset = Math.max(0, Number.isFinite(rawOffset) ? rawOffset : 0)
     const all = url.searchParams.get('all') === '1'
@@ -367,6 +457,31 @@ const server = http.createServer((req, res) => {
         const apiUrl = new URL('https://api.spotify.com/v1/me/playlists')
         apiUrl.searchParams.set('limit', String(limit))
         apiUrl.searchParams.set('offset', String(pageOffset))
+        apiUrl.searchParams.set(
+          'fields',
+          [
+            'href',
+            'limit',
+            'next',
+            'offset',
+            'previous',
+            'total',
+            'items(' +
+              [
+                'id',
+                'name',
+                'description',
+                'images',
+                'owner(id,display_name)',
+                'tracks(total)',
+                'public',
+                'collaborative',
+                'external_urls(spotify)',
+                'snapshot_id',
+              ].join(',') +
+            ')',
+          ].join(','),
+        )
 
         const response = await fetch(apiUrl.toString(), {
           headers: { authorization: `Bearer ${token}` },
@@ -379,7 +494,22 @@ const server = http.createServer((req, res) => {
           data = null
         }
 
-        return { ok: response.ok, status: response.status, data, retryAfterSeconds: getRetryAfterSeconds(response.headers) }
+        const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+        const wwwAuthenticate = response.headers.get('www-authenticate')
+        const requestId = response.headers.get('x-request-id')
+        if (!response.ok) {
+          logSpotifyFailure({
+            label: 'GET /v1/me/playlists',
+            url: apiUrl.toString(),
+            status: response.status,
+            retryAfterSeconds,
+            wwwAuthenticate,
+            requestId,
+            context: debugContext,
+            data,
+          })
+        }
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds }
       }
 
       const fetchWithRefresh = async (fn) => {
@@ -419,12 +549,12 @@ const server = http.createServer((req, res) => {
         const total = Number(first.data?.total) || items.length
         let nextOffset = items.length
 
-        const maxPages = 20
+        const maxPages = 200
         let pagesFetched = 1
 
         while (nextOffset < total) {
           if (pagesFetched >= maxPages) {
-            sendJson(res, 400, { error: 'spotify_playlists_too_many_pages', details: { maxPages, total, nextOffset } })
+            sendPartialJson(res, { ...first.data, items, offset: 0, limit, total, partial: true, nextOffset, maxPages })
             return
           }
 
@@ -444,6 +574,170 @@ const server = http.createServer((req, res) => {
         sendJson(res, 200, { ...first.data, items, offset: 0, limit, total })
       } catch (error) {
         sendJson(res, 500, { error: 'spotify_playlists_failed', message: error?.message })
+      }
+    })()
+
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname.startsWith('/api/playlists/') && url.pathname.endsWith('/tracks')) {
+    const clientId = process.env.SPOTIFY_CLIENT_ID
+    const accessToken = cookies.sp_access
+    const refreshToken = cookies.sp_refresh
+
+    if (!clientId) {
+      sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
+      return
+    }
+    if (!accessToken) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const parts = url.pathname.split('/').filter(Boolean) // ['api','playlists',':id','tracks']
+    const playlistId = parts.length === 4 ? parts[2] : null
+    if (!playlistId) {
+      sendJson(res, 400, { error: 'missing_playlist_id' })
+      return
+    }
+
+    const limitParam = url.searchParams.get('limit')
+    const offsetParam = url.searchParams.get('offset')
+    const rawLimit = limitParam == null ? NaN : Number(limitParam)
+    const rawOffset = offsetParam == null ? NaN : Number(offsetParam)
+    const limit = Math.min(50, Math.max(1, Number.isFinite(rawLimit) ? rawLimit : 50))
+    const offset = Math.max(0, Number.isFinite(rawOffset) ? rawOffset : 0)
+    const all = url.searchParams.get('all') === '1'
+
+    ;(async () => {
+      let currentAccessToken = accessToken
+
+      const callTracks = async (token, { offset: pageOffset }) => {
+        const apiUrl = new URL(`https://api.spotify.com/v1/playlists/${encodeURIComponent(playlistId)}/items`)
+        apiUrl.searchParams.set('limit', String(limit))
+        apiUrl.searchParams.set('offset', String(pageOffset))
+        apiUrl.searchParams.set('market', 'from_token')
+        apiUrl.searchParams.set('additional_types', 'track')
+        apiUrl.searchParams.set(
+          'fields',
+          [
+            'href',
+            'limit',
+            'next',
+            'offset',
+            'previous',
+            'total',
+            'snapshot_id',
+            'items(' +
+              [
+                'added_at',
+                'item(' +
+                  [
+                    'type',
+                    'id',
+                    'name',
+                    'duration_ms',
+                    'explicit',
+                    'external_urls(spotify)',
+                    'artists(name)',
+                    'album(name)',
+                  ].join(',') +
+                ')',
+              ].join(',') +
+            ')',
+          ].join(','),
+        )
+
+        const response = await fetch(apiUrl.toString(), {
+          headers: { authorization: `Bearer ${token}` },
+        })
+
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = null
+        }
+
+        const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+        const wwwAuthenticate = response.headers.get('www-authenticate')
+        const requestId = response.headers.get('x-request-id')
+        if (!response.ok) {
+          logSpotifyFailure({
+            label: 'GET /v1/playlists/:id/items',
+            url: apiUrl.toString(),
+            status: response.status,
+            retryAfterSeconds,
+            wwwAuthenticate,
+            requestId,
+            context: debugContext,
+            data,
+          })
+        }
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+      }
+
+      const fetchWithRefresh = async (fn) => {
+        let result = await fn(currentAccessToken)
+
+        if (!result.ok && result.status === 401 && refreshToken) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, { path: '/', maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30) })
+            currentAccessToken = refreshed.access_token
+            result = await fn(currentAccessToken)
+          }
+        }
+
+        return result
+      }
+
+      try {
+        if (!all) {
+          const result = await fetchWithRefresh((token) => callTracks(token, { offset }))
+          if (!result.ok) {
+            sendJson(res, result.status, { error: 'spotify_playlist_tracks_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+            return
+          }
+          sendJson(res, 200, result.data)
+          return
+        }
+
+        const first = await fetchWithRefresh((token) => callTracks(token, { offset: 0 }))
+        if (!first.ok) {
+          sendJson(res, first.status, { error: 'spotify_playlist_tracks_failed', details: first.data, retryAfterSeconds: first.retryAfterSeconds })
+          return
+        }
+
+        const items = Array.isArray(first.data?.items) ? first.data.items.slice() : []
+        const total = Number(first.data?.total) || items.length
+        let nextOffset = items.length
+
+        const maxPages = 50
+        let pagesFetched = 1
+
+        while (nextOffset < total) {
+          if (pagesFetched >= maxPages) {
+            sendPartialJson(res, { ...first.data, items, offset: 0, limit, total, partial: true, nextOffset, maxPages })
+            return
+          }
+
+          const page = await fetchWithRefresh((token) => callTracks(token, { offset: nextOffset }))
+          if (!page.ok) {
+            sendJson(res, page.status, { error: 'spotify_playlist_tracks_failed', details: page.data, retryAfterSeconds: page.retryAfterSeconds, partial: { items, total, nextOffset } })
+            return
+          }
+
+          const pageItems = Array.isArray(page.data?.items) ? page.data.items : []
+          items.push(...pageItems)
+          if (pageItems.length === 0) break
+          nextOffset += pageItems.length
+          pagesFetched += 1
+        }
+
+        sendJson(res, 200, { ...first.data, items, offset: 0, limit, total })
+      } catch (error) {
+        sendJson(res, 500, { error: 'spotify_playlist_tracks_failed', message: error?.message })
       }
     })()
 

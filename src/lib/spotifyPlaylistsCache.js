@@ -23,6 +23,7 @@ function pickPlaylist(item) {
     name: item.name ?? null,
     description: item.description ?? null,
     images: Array.isArray(item.images) ? item.images : [],
+    snapshotId: item.snapshot_id ?? null,
     owner: item.owner
       ? { id: item.owner.id ?? null, display_name: item.owner.display_name ?? null }
       : null,
@@ -82,22 +83,35 @@ export function clearPlaylistsCache(userId) {
   localStorage.removeItem(keyForUserPlaylists(userId))
 }
 
-export function getPlaylistsCooldownUntil(userId) {
+function getSpotifyCooldownKey(userId) {
+  return cooldownKeyForUser(userId)
+}
+
+export function getSpotifyCooldownUntil(userId) {
   if (!userId) return null
-  const raw = localStorage.getItem(cooldownKeyForUser(userId))
+  const raw = localStorage.getItem(getSpotifyCooldownKey(userId))
   if (!raw) return null
   const parsed = safeJsonParse(raw)
   const ms = typeof parsed?.cooldownUntilMs === 'number' ? parsed.cooldownUntilMs : null
   return Number.isFinite(ms) ? ms : null
 }
 
-export function setPlaylistsCooldown(userId, cooldownUntilMs) {
+export function setSpotifyCooldown(userId, cooldownUntilMs) {
   if (!userId) return
   try {
-    localStorage.setItem(cooldownKeyForUser(userId), JSON.stringify({ cooldownUntilMs }))
+    localStorage.setItem(getSpotifyCooldownKey(userId), JSON.stringify({ cooldownUntilMs }))
   } catch {
     // ignore
   }
+}
+
+// Backwards-compatible aliases (older code paths)
+export function getPlaylistsCooldownUntil(userId) {
+  return getSpotifyCooldownUntil(userId)
+}
+
+export function setPlaylistsCooldown(userId, cooldownUntilMs) {
+  setSpotifyCooldown(userId, cooldownUntilMs)
 }
 
 export function formatDateTime(isoString) {
@@ -116,4 +130,3 @@ export function formatAge(ms) {
   if (ms < 24 * 60 * 60_000) return `${Math.floor(ms / (60 * 60_000))}h`
   return `${Math.floor(ms / (24 * 60 * 60_000))}d`
 }
-
