@@ -164,21 +164,66 @@ export function recordDuel(ranking, { leftKey, rightKey, winnerKey, kFactor = 24
   })
 }
 
-export function undoLast(ranking) {
-  const last = ranking?.history?.length ? ranking.history[ranking.history.length - 1] : null
-  if (!last || last.type !== 'duel') return ranking
+export function setTrackElo(ranking, trackKey, rating) {
+  if (!trackKey) return ranking
+  const nextRating = Number(rating)
+  if (!Number.isFinite(nextRating)) return ranking
 
-  const nextHistory = ranking.history.slice(0, -1)
+  const at = new Date().toISOString()
+  const prev = getTrackState(ranking, trackKey)
+  const next = { ...prev, rating: nextRating, lastComparedAt: at }
+
+  const historyItem = {
+    at,
+    type: 'manual_elo',
+    trackKey,
+    prev,
+    next,
+  }
+
+  const maxHistory = 2500
+  const nextHistory = ranking.history.length >= maxHistory ? ranking.history.slice(-maxHistory + 1).concat(historyItem) : ranking.history.concat(historyItem)
 
   return withUpdatedAt({
     ...ranking,
     tracks: {
       ...ranking.tracks,
-      [last.leftKey]: last.prev.left,
-      [last.rightKey]: last.prev.right,
+      [trackKey]: next,
     },
     history: nextHistory,
   })
+}
+
+export function undoLast(ranking) {
+  const last = ranking?.history?.length ? ranking.history[ranking.history.length - 1] : null
+  if (!last) return ranking
+
+  const nextHistory = ranking.history.slice(0, -1)
+
+  if (last.type === 'duel') {
+    return withUpdatedAt({
+      ...ranking,
+      tracks: {
+        ...ranking.tracks,
+        [last.leftKey]: last.prev.left,
+        [last.rightKey]: last.prev.right,
+      },
+      history: nextHistory,
+    })
+  }
+
+  if (last.type === 'manual_elo') {
+    return withUpdatedAt({
+      ...ranking,
+      tracks: {
+        ...ranking.tracks,
+        [last.trackKey]: last.prev,
+      },
+      history: nextHistory,
+    })
+  }
+
+  return ranking
 }
 
 export function mergeLegacyPlaylistRanking(userRanking, legacyPlaylistRanking, playlistId) {

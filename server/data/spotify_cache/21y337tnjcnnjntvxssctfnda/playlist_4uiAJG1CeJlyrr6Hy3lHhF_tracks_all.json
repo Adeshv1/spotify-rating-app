@@ -1,0 +1,896 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "playlist_4uiAJG1CeJlyrr6Hy3lHhF_tracks_all",
+  "fetchedAt": "2026-03-03T19:52:10.620Z",
+  "lastRefreshedAt": "2026-03-03T19:52:10.620Z",
+  "data": {
+    "limit": 50,
+    "items": [
+      {
+        "item": {
+          "album": {
+            "name": "Autobahn"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Dishant"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4TEAN4lkqV5W3gkVsWuTXw"
+          },
+          "explicit": false,
+          "duration_ms": 143389,
+          "name": "Autobahn",
+          "type": "track",
+          "id": "4TEAN4lkqV5W3gkVsWuTXw"
+        },
+        "added_at": "2025-11-20T10:34:43Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Naar"
+          },
+          "artists": [
+            {
+              "name": "Real Boss"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/29InCgoMa4g3zQP53MoxSd"
+          },
+          "explicit": false,
+          "duration_ms": 161178,
+          "name": "Naar",
+          "type": "track",
+          "id": "29InCgoMa4g3zQP53MoxSd"
+        },
+        "added_at": "2025-11-20T10:34:03Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Anthem"
+          },
+          "artists": [
+            {
+              "name": "Jassi Gosal"
+            },
+            {
+              "name": "Jagan Randhawa"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7080wmYzn5pzn6bd5RCS5p"
+          },
+          "explicit": false,
+          "duration_ms": 206000,
+          "name": "Anthem",
+          "type": "track",
+          "id": "7080wmYzn5pzn6bd5RCS5p"
+        },
+        "added_at": "2025-11-20T10:43:27Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "24 (Freestyle)"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/74NglPivWzHd1NAsRPSABJ"
+          },
+          "explicit": true,
+          "duration_ms": 133894,
+          "name": "24 (Freestyle)",
+          "type": "track",
+          "id": "74NglPivWzHd1NAsRPSABJ"
+        },
+        "added_at": "2025-11-20T10:50:53Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "SIDEWALK 2 STARDOM"
+          },
+          "artists": [
+            {
+              "name": "Baggh-e SMG"
+            },
+            {
+              "name": "Farmaan SMG"
+            },
+            {
+              "name": "BIG KAY SMG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1upGq2z1JcGm2en01psP8y"
+          },
+          "explicit": true,
+          "duration_ms": 205895,
+          "name": "C.R.E.A.M POSSE",
+          "type": "track",
+          "id": "1upGq2z1JcGm2en01psP8y"
+        },
+        "added_at": "2025-11-20T10:34:14Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Saun Di Jhadi"
+          },
+          "artists": [
+            {
+              "name": "OtaaL"
+            },
+            {
+              "name": "Lata Mangeshkar"
+            },
+            {
+              "name": "Bappi Lahiri"
+            },
+            {
+              "name": "Anand Bakshi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5KE5dZEg15RPmaPElJUTKa"
+          },
+          "explicit": false,
+          "duration_ms": 170653,
+          "name": "Saun Di Jhadi",
+          "type": "track",
+          "id": "5KE5dZEg15RPmaPElJUTKa"
+        },
+        "added_at": "2025-11-20T10:40:28Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Strings Attached"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5qXOKKtAPWAzsf2fEQIxIq"
+          },
+          "explicit": true,
+          "duration_ms": 154430,
+          "name": "Strings Attached",
+          "type": "track",
+          "id": "5qXOKKtAPWAzsf2fEQIxIq"
+        },
+        "added_at": "2025-11-20T10:34:41Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "No Chance"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            },
+            {
+              "name": "SOE"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3lUQ3qgpSSCdslaNbGGKs0"
+          },
+          "explicit": false,
+          "duration_ms": 149333,
+          "name": "No Chance",
+          "type": "track",
+          "id": "3lUQ3qgpSSCdslaNbGGKs0"
+        },
+        "added_at": "2025-11-20T10:34:27Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "4 Real"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Dishant"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0UENPp0gkseopK29vUsOkt"
+          },
+          "explicit": false,
+          "duration_ms": 144543,
+          "name": "Ask Them",
+          "type": "track",
+          "id": "0UENPp0gkseopK29vUsOkt"
+        },
+        "added_at": "2025-11-20T10:36:27Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Bexley .Road"
+          },
+          "artists": [
+            {
+              "name": "Baggh-e SMG"
+            },
+            {
+              "name": "BIG KAY SMG"
+            },
+            {
+              "name": "Farmaan SMG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0gHProQhPc0YQ2pDfGuIjn"
+          },
+          "explicit": false,
+          "duration_ms": 170322,
+          "name": "Bexley .Road",
+          "type": "track",
+          "id": "0gHProQhPc0YQ2pDfGuIjn"
+        },
+        "added_at": "2025-11-20T10:37:10Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Big Chillin"
+          },
+          "artists": [
+            {
+              "name": "Jassi Gosal"
+            },
+            {
+              "name": "Jagan Randhawa"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0INKKFVnFs7i02XCK6krkD"
+          },
+          "explicit": false,
+          "duration_ms": 149387,
+          "name": "Big Chillin",
+          "type": "track",
+          "id": "0INKKFVnFs7i02XCK6krkD"
+        },
+        "added_at": "2025-11-20T10:43:48Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "762 Flow"
+          },
+          "artists": [
+            {
+              "name": "Jagan Randhawa"
+            },
+            {
+              "name": "Jassi Gosal"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/61VOm3O94mAKaRZ5GBTuri"
+          },
+          "explicit": true,
+          "duration_ms": 195603,
+          "name": "762 Flow",
+          "type": "track",
+          "id": "61VOm3O94mAKaRZ5GBTuri"
+        },
+        "added_at": "2025-11-20T10:44:47Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Look Out"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0JPHLanYRqJ5IsUaE7sYBL"
+          },
+          "explicit": true,
+          "duration_ms": 168791,
+          "name": "Look Out",
+          "type": "track",
+          "id": "0JPHLanYRqJ5IsUaE7sYBL"
+        },
+        "added_at": "2025-11-20T10:47:55Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "4 Real"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Dishant"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/285YOhGpgXRFVz1XcmEXct"
+          },
+          "explicit": false,
+          "duration_ms": 125071,
+          "name": "Even Flow",
+          "type": "track",
+          "id": "285YOhGpgXRFVz1XcmEXct"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Breakin Boundaries"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0IU3udts4NQ1C4KHRfv6sv"
+          },
+          "explicit": true,
+          "duration_ms": 150927,
+          "name": "My Way",
+          "type": "track",
+          "id": "0IU3udts4NQ1C4KHRfv6sv"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Breakin Boundaries"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/10Pjg6e1n3KdNfRryu5j8F"
+          },
+          "explicit": true,
+          "duration_ms": 156129,
+          "name": "What We Do",
+          "type": "track",
+          "id": "10Pjg6e1n3KdNfRryu5j8F"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Face Value"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Azaad 4L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0PiQb1xuNqzeIHrSEwH3Cm"
+          },
+          "explicit": false,
+          "duration_ms": 176504,
+          "name": "Face Value",
+          "type": "track",
+          "id": "0PiQb1xuNqzeIHrSEwH3Cm"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Sigma"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            },
+            {
+              "name": "Hxrmxn"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0wLTjfoVYYfVG5TLb2yRoj"
+          },
+          "explicit": false,
+          "duration_ms": 145263,
+          "name": "Sigma",
+          "type": "track",
+          "id": "0wLTjfoVYYfVG5TLb2yRoj"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "They Don't Know"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2VKIsMhpHQ4jLm0XuN91TU"
+          },
+          "explicit": true,
+          "duration_ms": 162000,
+          "name": "They Don't Know",
+          "type": "track",
+          "id": "2VKIsMhpHQ4jLm0XuN91TU"
+        },
+        "added_at": "2025-11-20T10:48:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Big Plays"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0sps5UVl5nsm5S9hXSe1z2"
+          },
+          "explicit": true,
+          "duration_ms": 149444,
+          "name": "Big Plays",
+          "type": "track",
+          "id": "0sps5UVl5nsm5S9hXSe1z2"
+        },
+        "added_at": "2025-11-20T10:52:28Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "4 Real"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5w7N5Rm5YdFtURcZzempat"
+          },
+          "explicit": false,
+          "duration_ms": 150927,
+          "name": "That's All I Know",
+          "type": "track",
+          "id": "5w7N5Rm5YdFtURcZzempat"
+        },
+        "added_at": "2025-11-20T10:54:19Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "4 Real"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "AR Paisley"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1yfKC3OaHWQYBwY72vN9P4"
+          },
+          "explicit": false,
+          "duration_ms": 208163,
+          "name": "Why Me?",
+          "type": "track",
+          "id": "1yfKC3OaHWQYBwY72vN9P4"
+        },
+        "added_at": "2025-11-20T10:54:32Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Fire Call"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            },
+            {
+              "name": "Sickboi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4oc1K7zXUopEM9JfdJmZ1Q"
+          },
+          "explicit": true,
+          "duration_ms": 150666,
+          "name": "Fire Call",
+          "type": "track",
+          "id": "4oc1K7zXUopEM9JfdJmZ1Q"
+        },
+        "added_at": "2025-11-20T10:56:38Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "God Damn"
+          },
+          "artists": [
+            {
+              "name": "Jassi Gosal"
+            },
+            {
+              "name": "Jagan Randhawa"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2o5Dg7WQZZO7Q4ZqM9knHz"
+          },
+          "explicit": false,
+          "duration_ms": 195428,
+          "name": "God Damn",
+          "type": "track",
+          "id": "2o5Dg7WQZZO7Q4ZqM9knHz"
+        },
+        "added_at": "2025-11-20T10:58:44Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Boomin"
+          },
+          "artists": [
+            {
+              "name": "Jassi Gosal"
+            },
+            {
+              "name": "Jagan Randhawa"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3ZM4dLHabesrz6tbGAqcV8"
+          },
+          "explicit": false,
+          "duration_ms": 145531,
+          "name": "Baby Calmdown",
+          "type": "track",
+          "id": "3ZM4dLHabesrz6tbGAqcV8"
+        },
+        "added_at": "2025-11-20T10:59:54Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "WE TAKIN OVER"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3h2EibJZalaVDB041GfYU7"
+          },
+          "explicit": false,
+          "duration_ms": 144872,
+          "name": "GTHANG",
+          "type": "track",
+          "id": "3h2EibJZalaVDB041GfYU7"
+        },
+        "added_at": "2025-11-20T11:01:57Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Over The Top"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/27ooPYgBlXhugk9IQPZMHA"
+          },
+          "explicit": false,
+          "duration_ms": 147555,
+          "name": "Over The Top",
+          "type": "track",
+          "id": "27ooPYgBlXhugk9IQPZMHA"
+        },
+        "added_at": "2025-11-20T11:02:00Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Lemme Know"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1u1mZ6jV4Bmc3SCDJdUGbk"
+          },
+          "explicit": true,
+          "duration_ms": 173877,
+          "name": "Lemme Know",
+          "type": "track",
+          "id": "1u1mZ6jV4Bmc3SCDJdUGbk"
+        },
+        "added_at": "2025-11-20T11:02:04Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kaali Ghodi"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3X231mHtL0mlujAg71ok3P"
+          },
+          "explicit": true,
+          "duration_ms": 120793,
+          "name": "Kaali Ghodi",
+          "type": "track",
+          "id": "3X231mHtL0mlujAg71ok3P"
+        },
+        "added_at": "2025-11-20T11:02:13Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "J Thang"
+          },
+          "artists": [
+            {
+              "name": "Gagan Kooner"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0G27XzEpdTqZVTzAK1Mgud"
+          },
+          "explicit": false,
+          "duration_ms": 148300,
+          "name": "J Thang",
+          "type": "track",
+          "id": "0G27XzEpdTqZVTzAK1Mgud"
+        },
+        "added_at": "2025-11-20T11:02:20Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "NO REMORSE"
+          },
+          "artists": [
+            {
+              "name": "OtaaL"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/78kfPNNJmy5mRjnB4iinol"
+          },
+          "explicit": false,
+          "duration_ms": 195899,
+          "name": "DEMISE",
+          "type": "track",
+          "id": "78kfPNNJmy5mRjnB4iinol"
+        },
+        "added_at": "2025-11-20T11:04:36Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The One And Only"
+          },
+          "artists": [
+            {
+              "name": "Dulla"
+            },
+            {
+              "name": "Shah Rehan"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2zDvY1uKpQHXYCXht7jDP6"
+          },
+          "explicit": false,
+          "duration_ms": 161592,
+          "name": "Living Style",
+          "type": "track",
+          "id": "2zDvY1uKpQHXYCXht7jDP6"
+        },
+        "added_at": "2025-12-27T07:56:02Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "FEEM TO FAME"
+          },
+          "artists": [
+            {
+              "name": "Sardar Khehra"
+            },
+            {
+              "name": "Manna Music"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1NNbi5Jc6j83KZ1kIIQ6g6"
+          },
+          "explicit": false,
+          "duration_ms": 177272,
+          "name": "FEEM TO FAME",
+          "type": "track",
+          "id": "1NNbi5Jc6j83KZ1kIIQ6g6"
+        },
+        "added_at": "2025-11-20T23:18:46Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Big Gun"
+          },
+          "artists": [
+            {
+              "name": "BIG JORA"
+            },
+            {
+              "name": "Seji Dhillon"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/54bTwHYNtnmyRaz3Cg4YOx"
+          },
+          "explicit": true,
+          "duration_ms": 190345,
+          "name": "Big Gun",
+          "type": "track",
+          "id": "54bTwHYNtnmyRaz3Cg4YOx"
+        },
+        "added_at": "2025-12-03T21:03:14Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "1911"
+          },
+          "artists": [
+            {
+              "name": "Jxggi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0SBI2P0sOKIBnr6cPcojbH"
+          },
+          "explicit": true,
+          "duration_ms": 150447,
+          "name": "1911",
+          "type": "track",
+          "id": "0SBI2P0sOKIBnr6cPcojbH"
+        },
+        "added_at": "2026-01-02T21:19:54Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Let's Create The Time"
+          },
+          "artists": [
+            {
+              "name": "BIG KAY SMG"
+            },
+            {
+              "name": "Baggh-e SMG"
+            },
+            {
+              "name": "Farmaan SMG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/04Gyftm06xrJ48BvqhxhIy"
+          },
+          "explicit": true,
+          "duration_ms": 183300,
+          "name": "4PF",
+          "type": "track",
+          "id": "04Gyftm06xrJ48BvqhxhIy"
+        },
+        "added_at": "2026-01-03T09:25:38Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Ima Rider"
+          },
+          "artists": [
+            {
+              "name": "GAV"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4YjXm9L1RJ6aDWNNAqFGFV"
+          },
+          "explicit": true,
+          "duration_ms": 135438,
+          "name": "Ima Rider",
+          "type": "track",
+          "id": "4YjXm9L1RJ6aDWNNAqFGFV"
+        },
+        "added_at": "2026-01-30T01:04:02Z"
+      }
+    ],
+    "href": "https://api.spotify.com/v1/playlists/4uiAJG1CeJlyrr6Hy3lHhF/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(name),album(name)))&locale=*",
+    "next": null,
+    "total": 37,
+    "previous": null,
+    "offset": 0
+  }
+}

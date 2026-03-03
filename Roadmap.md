@@ -9,6 +9,8 @@
 + Add head-to-head Elo ranking UI with skip + undo + session targets (implemented 2026-03-03)
 + Add leaderboard per tier + all tracks (implemented 2026-03-03)
 + Add server-side ranking persistence + sync across devices (implemented 2026-03-03)
++ UI overhaul: tables + header + manual Elo editing (implemented 2026-03-03)
++ UI polish: album columns + fixed table widths + hover-only Elo edit + remove scopes (implemented 2026-03-03)
 + Decide Spotify auth approach: auth code + PKCE via `/server` (implemented 2026-03-03)
 + Add Spotify login flow (auth endpoints + client prompt) (implemented 2026-03-03)
 + Fetch + cache current user's playlists (`/me/playlists`) with manual refresh, cache source, and cache age indicator (implemented 2026-03-03)
@@ -19,3 +21,5 @@
 - Add keyboard shortcuts for faster seeding/duels
 - Add export/import (CSV/JSON) for rankings
 - Add tests/linting and basic CI
++ Add owner-only permission helper (Spotify user id) (implemented 2026-03-03)
++ Add non-owner cache refresh policy (server throttle + auto-refresh) (implemented 2026-03-03)

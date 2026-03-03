@@ -3,6 +3,7 @@ import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { isOwnerUser } from './permissions/isOwnerUser.js'
 
 function loadEnvFile(filePath) {
   let contents
@@ -52,8 +53,12 @@ const port = Number(process.env.PORT) || 8787
 
 const dataDir = path.join(process.cwd(), 'data')
 const rankingsDir = path.join(dataDir, 'rankings')
+const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
+const REFRESH_WINDOW_MS = 15 * 60 * 1000
+const spotifyRefreshInFlight = new Map()
 try {
   fs.mkdirSync(rankingsDir, { recursive: true })
+  fs.mkdirSync(spotifyCacheDir, { recursive: true })
 } catch {
   // ignore
 }
@@ -66,6 +71,42 @@ function safeFileComponent(value) {
 
 function rankingFilePathForUser(userId) {
   return path.join(rankingsDir, `${safeFileComponent(userId)}.json`)
+}
+
+function spotifyCacheFilePathForUserKey(userId, cacheKey) {
+  const userDir = path.join(spotifyCacheDir, safeFileComponent(userId))
+  try {
+    fs.mkdirSync(userDir, { recursive: true })
+  } catch {
+    // ignore
+  }
+  return path.join(userDir, `${safeFileComponent(cacheKey)}.json`)
+}
+
+function readSpotifyCacheRecord(userId, cacheKey) {
+  if (!userId || !cacheKey) return null
+  const filePath = spotifyCacheFilePathForUserKey(userId, cacheKey)
+  const record = readJsonFile(filePath)
+  if (!record || typeof record !== 'object') return null
+  if (typeof record.fetchedAt !== 'string') return null
+  if (typeof record.lastRefreshedAt !== 'string') return null
+  if (record.data == null) return null
+  return record
+}
+
+function writeSpotifyCacheRecordAtomic(userId, cacheKey, record) {
+  if (!userId || !cacheKey) return
+  const filePath = spotifyCacheFilePathForUserKey(userId, cacheKey)
+  writeJsonFileAtomic(filePath, record)
+}
+
+function shouldAttemptSpotifyRefresh({ record, nowMs }) {
+  if (!record) return { stale: true, throttled: false, shouldRefresh: true }
+  const fetchedAtMs = Date.parse(record.fetchedAt)
+  const lastRefreshedAtMs = Date.parse(record.lastRefreshedAt)
+  const stale = Number.isFinite(fetchedAtMs) ? nowMs - fetchedAtMs >= REFRESH_WINDOW_MS : true
+  const throttled = Number.isFinite(lastRefreshedAtMs) ? nowMs - lastRefreshedAtMs < REFRESH_WINDOW_MS : false
+  return { stale, throttled, shouldRefresh: stale && !throttled }
 }
 
 function readJsonFile(filePath) {
@@ -431,7 +472,8 @@ const server = http.createServer((req, res) => {
     const loggedIn = hasAccess || hasRefresh
     const scopes = typeof cookies.sp_scope === 'string' ? cookies.sp_scope.split(' ').filter(Boolean) : []
     const user = typeof cookies.sp_user_id === 'string' ? { id: cookies.sp_user_id, display_name: cookies.sp_user_name || null } : null
-    sendJson(res, 200, { loggedIn, scopes, user })
+    const owner = isOwnerUser(user?.id)
+    sendJson(res, 200, { loggedIn, scopes, user, isOwnerUser: owner })
     return
   }
 
@@ -562,6 +604,8 @@ const server = http.createServer((req, res) => {
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
@@ -581,6 +625,42 @@ const server = http.createServer((req, res) => {
     const all = url.searchParams.get('all') === '1'
 
     ;(async () => {
+      const canUseServerCache = Boolean(!owner && all && userId)
+      const cacheKey = 'me_playlists_all'
+      const nowMs = Date.now()
+      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
+      const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
+      let lockTaken = false
+
+      if (canUseServerCache && cachedRecord) {
+        const decision = shouldAttemptSpotifyRefresh({ record: cachedRecord, nowMs })
+        if (!decision.shouldRefresh) {
+          res.setHeader('x-sp-cache', decision.stale ? 'hit_throttled' : 'hit_fresh')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        if (lockKey && spotifyRefreshInFlight.has(lockKey)) {
+          res.setHeader('x-sp-cache', 'hit_inflight')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        if (lockKey) {
+          spotifyRefreshInFlight.set(lockKey, true)
+          lockTaken = true
+        }
+
+        // Mark a refresh attempt so we don't keep hammering Spotify if it fails.
+        const attemptedAt = new Date(nowMs).toISOString()
+        cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+      }
+
       let currentAccessToken = accessToken
 
       const callPlaylists = async (token, { offset: pageOffset }) => {
@@ -671,6 +751,13 @@ const server = http.createServer((req, res) => {
 
         const first = await fetchWithRefresh((token) => callPlaylists(token, { offset: 0 }))
         if (!first.ok) {
+          if (canUseServerCache && cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_fallback')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+            sendJson(res, 200, cachedRecord.data)
+            return
+          }
           sendJson(res, first.status, { error: 'spotify_playlists_failed', details: first.data, retryAfterSeconds: first.retryAfterSeconds })
           return
         }
@@ -690,6 +777,13 @@ const server = http.createServer((req, res) => {
 
           const page = await fetchWithRefresh((token) => callPlaylists(token, { offset: nextOffset }))
           if (!page.ok) {
+            if (canUseServerCache && cachedRecord) {
+              res.setHeader('x-sp-cache', 'hit_fallback')
+              res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+              res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+              sendJson(res, 200, cachedRecord.data)
+              return
+            }
             sendJson(res, page.status, { error: 'spotify_playlists_failed', details: page.data, retryAfterSeconds: page.retryAfterSeconds, partial: { items, total, nextOffset } })
             return
           }
@@ -701,9 +795,34 @@ const server = http.createServer((req, res) => {
           pagesFetched += 1
         }
 
-        sendJson(res, 200, { ...first.data, items, offset: 0, limit, total })
+        const payload = { ...first.data, items, offset: 0, limit, total }
+        if (canUseServerCache) {
+          const storedAt = new Date().toISOString()
+          writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+            schemaVersion: 1,
+            userId,
+            cacheKey,
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: payload,
+          })
+          res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
+          res.setHeader('x-sp-cache-fetched-at', storedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+        }
+
+        sendJson(res, 200, payload)
       } catch (error) {
+        if (canUseServerCache && cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_fallback')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
         sendJson(res, 500, { error: 'spotify_playlists_failed', message: error?.message })
+      } finally {
+        if (lockKey && lockTaken) spotifyRefreshInFlight.delete(lockKey)
       }
     })()
 
@@ -714,6 +833,8 @@ const server = http.createServer((req, res) => {
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
@@ -740,6 +861,41 @@ const server = http.createServer((req, res) => {
     const all = url.searchParams.get('all') === '1'
 
     ;(async () => {
+      const canUseServerCache = Boolean(!owner && all && userId)
+      const cacheKey = `playlist_${playlistId}_tracks_all`
+      const nowMs = Date.now()
+      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
+      const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
+      let lockTaken = false
+
+      if (canUseServerCache && cachedRecord) {
+        const decision = shouldAttemptSpotifyRefresh({ record: cachedRecord, nowMs })
+        if (!decision.shouldRefresh) {
+          res.setHeader('x-sp-cache', decision.stale ? 'hit_throttled' : 'hit_fresh')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        if (lockKey && spotifyRefreshInFlight.has(lockKey)) {
+          res.setHeader('x-sp-cache', 'hit_inflight')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        if (lockKey) {
+          spotifyRefreshInFlight.set(lockKey, true)
+          lockTaken = true
+        }
+
+        const attemptedAt = new Date(nowMs).toISOString()
+        cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+      }
+
       let currentAccessToken = accessToken
 
       const callTracks = async (token, { offset: pageOffset }) => {
@@ -835,6 +991,13 @@ const server = http.createServer((req, res) => {
 
         const first = await fetchWithRefresh((token) => callTracks(token, { offset: 0 }))
         if (!first.ok) {
+          if (canUseServerCache && cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_fallback')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+            sendJson(res, 200, cachedRecord.data)
+            return
+          }
           sendJson(res, first.status, { error: 'spotify_playlist_tracks_failed', details: first.data, retryAfterSeconds: first.retryAfterSeconds })
           return
         }
@@ -854,6 +1017,13 @@ const server = http.createServer((req, res) => {
 
           const page = await fetchWithRefresh((token) => callTracks(token, { offset: nextOffset }))
           if (!page.ok) {
+            if (canUseServerCache && cachedRecord) {
+              res.setHeader('x-sp-cache', 'hit_fallback')
+              res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+              res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+              sendJson(res, 200, cachedRecord.data)
+              return
+            }
             sendJson(res, page.status, { error: 'spotify_playlist_tracks_failed', details: page.data, retryAfterSeconds: page.retryAfterSeconds, partial: { items, total, nextOffset } })
             return
           }
@@ -865,9 +1035,33 @@ const server = http.createServer((req, res) => {
           pagesFetched += 1
         }
 
-        sendJson(res, 200, { ...first.data, items, offset: 0, limit, total })
+        const payload = { ...first.data, items, offset: 0, limit, total }
+        if (canUseServerCache) {
+          const storedAt = new Date().toISOString()
+          writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+            schemaVersion: 1,
+            userId,
+            cacheKey,
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: payload,
+          })
+          res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
+          res.setHeader('x-sp-cache-fetched-at', storedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+        }
+        sendJson(res, 200, payload)
       } catch (error) {
+        if (canUseServerCache && cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_fallback')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
         sendJson(res, 500, { error: 'spotify_playlist_tracks_failed', message: error?.message })
+      } finally {
+        if (lockKey && lockTaken) spotifyRefreshInFlight.delete(lockKey)
       }
     })()
 

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "createdAt": "2026-03-03T07:07:44.488Z",
-  "updatedAt": "2026-03-03T08:34:17.636Z",
+  "updatedAt": "2026-03-03T19:56:14.116Z",
   "tracks": {
     "spid:4TEAN4lkqV5W3gkVsWuTXw": {
       "bucket": "S",
@@ -14,19 +14,19 @@
     },
     "spid:54bTwHYNtnmyRaz3Cg4YOx": {
       "bucket": "S",
-      "rating": 988,
+      "rating": 1000,
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastComparedAt": "2026-03-03T07:11:08.668Z"
+      "lastComparedAt": "2026-03-03T19:52:31.666Z"
     },
     "spid:29InCgoMa4g3zQP53MoxSd": {
       "bucket": "S",
-      "rating": 1012,
+      "rating": 1000,
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastComparedAt": "2026-03-03T07:11:08.668Z"
+      "lastComparedAt": "2026-03-03T19:52:25.751Z"
     },
     "spid:5kO2QYkB7zuGuD6lXB6uxa": {
       "bucket": "S",
@@ -1123,6 +1123,102 @@
       "wins": 0,
       "losses": 0,
       "lastComparedAt": null
+    },
+    "spid:13O0A6hqW8oHtQPr2I1vvd": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:4QwDfdbahBjOvORJvWme5L": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:4u5AgS9gLOPy69YxTQuPz2": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:52XpQt2fDLozI4qlhYvWl0": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:5DVnSQ90r2M3gm6XbgTCLp": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:58f4twRnbZOOVUhMUpplJ4": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:7mYMLOOaJ1Gk5gBhe8N2Ao": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:2iNqdCchlUZEgjJbQyZf8T": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:1w12WokQbN5Ic0SpCJhHZm": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:15rEEVR9tYJS4hbubgS3u7": {
+      "bucket": "D",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:2fMlezwwP5Hr1UwuAknN4o": {
+      "bucket": "X",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
+    },
+    "spid:4NAnp7Sar7BAVXGwhOD69x": {
+      "bucket": "X",
+      "rating": 1000,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": null
     }
   },
   "history": [
@@ -1169,8 +1265,50 @@
           "lastComparedAt": "2026-03-03T07:11:08.668Z"
         }
       }
+    },
+    {
+      "at": "2026-03-03T19:52:25.751Z",
+      "type": "manual_elo",
+      "trackKey": "spid:29InCgoMa4g3zQP53MoxSd",
+      "prev": {
+        "bucket": "S",
+        "rating": 1012,
+        "games": 1,
+        "wins": 1,
+        "losses": 0,
+        "lastComparedAt": "2026-03-03T07:11:08.668Z"
+      },
+      "next": {
+        "bucket": "S",
+        "rating": 1000,
+        "games": 1,
+        "wins": 1,
+        "losses": 0,
+        "lastComparedAt": "2026-03-03T19:52:25.751Z"
+      }
+    },
+    {
+      "at": "2026-03-03T19:52:31.666Z",
+      "type": "manual_elo",
+      "trackKey": "spid:54bTwHYNtnmyRaz3Cg4YOx",
+      "prev": {
+        "bucket": "S",
+        "rating": 988,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-03T07:11:08.668Z"
+      },
+      "next": {
+        "bucket": "S",
+        "rating": 1000,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-03T19:52:31.666Z"
+      }
     }
   ],
   "migratedPlaylists": {},
-  "serverSavedAt": "2026-03-03T08:34:17.323Z"
+  "serverSavedAt": "2026-03-03T19:56:15.991Z"
 }

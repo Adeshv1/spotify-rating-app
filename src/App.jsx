@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import {
   clearPlaylistsCache,
@@ -26,6 +26,7 @@ import {
   readUserRanking,
   recordDuel,
   setTrackBucket,
+  setTrackElo,
   TIER_BUCKETS,
   trackKeyOfTrack,
   undoLast,
@@ -40,7 +41,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [profile, setProfile] = useState(null)
   const [error, setError] = useState(null)
-  const [scopes, setScopes] = useState([])
+  const [isOwnerUser, setIsOwnerUser] = useState(false)
 
   const [nowMs, setNowMs] = useState(() => Date.now())
 
@@ -56,8 +57,9 @@ function App() {
   const [tracksCache, setTracksCache] = useState(null)
   const [tracksSource, setTracksSource] = useState(null) // 'cache' | 'api'
 
-  const [rankingRevision, setRankingRevision] = useState(0)
   const [rankingSync, setRankingSync] = useState({ status: 'idle', lastSyncedAt: null, message: null })
+  const [userRanking, setUserRanking] = useState(null)
+  const saveTimerRef = useRef(null)
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000)
@@ -72,11 +74,12 @@ function App() {
 
         if (!session?.loggedIn) {
           setLoggedIn(false)
+          setIsOwnerUser(false)
           return
         }
 
         setLoggedIn(true)
-        setScopes(Array.isArray(session?.scopes) ? session.scopes : [])
+        setIsOwnerUser(Boolean(session?.isOwnerUser))
 
         if (session?.user && typeof session.user === 'object') {
           setProfile(session.user)
@@ -106,6 +109,9 @@ function App() {
       setTracksCache(null)
       setTracksError(null)
       setTracksSource(null)
+      setUserRanking(null)
+      setRankingSync({ status: 'idle', lastSyncedAt: null, message: null })
+      setIsOwnerUser(false)
     }
   }, [loggedIn])
 
@@ -202,13 +208,14 @@ function App() {
     if (cached) {
       setPlaylistsCache(cached)
       setPlaylistsSource('cache')
+      if (!isOwnerUser) refreshPlaylistsCache({ force: false })
       return
     }
 
     // No cache yet: do a fetch to seed the cache.
     refreshPlaylistsCache({ force: false })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn, profile?.id])
+  }, [loggedIn, profile?.id, isOwnerUser])
 
   async function refreshPlaylistTracks({ playlistId, force = false } = {}) {
     if (!loggedIn || !profile?.id || !playlistId) return
@@ -317,19 +324,22 @@ function App() {
     if (cachedTracks) {
       setTracksCache(cachedTracks)
       setTracksSource('cache')
+      if (!isOwnerUser) refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false })
       return
     }
 
     if (!ownedByUser) {
       setTracksError(
-        'Spotify may forbid reading items for playlists you do not own (even if they appear in your list). Click “Refresh playlist cache” to try anyway.',
+        isOwnerUser
+          ? 'Spotify may forbid reading items for playlists you do not own (even if they appear in your list). Click “Refresh playlist cache” to try anyway.'
+          : 'Spotify may forbid reading items for playlists you do not own (even if they appear in your list).',
       )
       return
     }
 
     refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache])
+  }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache, isOwnerUser])
 
   async function logout() {
     await fetch('/auth/logout', { method: 'POST' })
@@ -359,6 +369,8 @@ function App() {
         // ignore
       }
 
+      setUserRanking(local)
+
       try {
         const res = await fetch('/api/ranking')
         const data = await res.json().catch(() => null)
@@ -379,7 +391,7 @@ function App() {
         }
 
         writeUserRanking(userId, merged)
-        setRankingRevision((r) => r + 1)
+        setUserRanking(merged)
         setRankingSync({ status: 'ok', lastSyncedAt: new Date().toISOString(), message: null })
       } catch (e) {
         setRankingSync((s) => ({ status: 'error', lastSyncedAt: s.lastSyncedAt, message: e?.message || 'Sync failed' }))
@@ -395,19 +407,103 @@ function App() {
     })()
   }, [loggedIn, profile?.id, syncRankings])
 
+  useEffect(() => {
+    if (!loggedIn || !profile?.id || !userRanking) return
+    writeUserRanking(profile.id, userRanking)
+  }, [loggedIn, profile?.id, userRanking])
+
+  useEffect(() => {
+    if (!loggedIn || !profile?.id || !userRanking) return
+    if (rankingSync.status === 'syncing') return
+    if (saveTimerRef.current) clearTimeout(saveTimerRef.current)
+
+    saveTimerRef.current = setTimeout(() => {
+      ;(async () => {
+        try {
+          await fetch('/api/ranking', {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(userRanking),
+          })
+          setRankingSync(() => ({ status: 'ok', lastSyncedAt: new Date().toISOString(), message: null }))
+        } catch (e) {
+          setRankingSync((s) => ({ status: 'error', lastSyncedAt: s.lastSyncedAt, message: e?.message || 'Sync failed' }))
+        }
+      })()
+    }, 900)
+
+    return () => {
+      if (saveTimerRef.current) clearTimeout(saveTimerRef.current)
+    }
+  }, [loggedIn, profile?.id, userRanking, rankingSync.status])
+
   if (loading) {
     return (
-      <div className="card">
-        <p>Loading…</p>
+      <div className="appShell">
+        <div className="container">
+          <div className="card">
+            <p>Loading…</p>
+          </div>
+        </div>
       </div>
     )
   }
 
   return (
-    <>
-      <div className="card">
-        <h1>Spotify Rating App</h1>
-        {error ? <p>{error}</p> : null}
+    <div className="appShell">
+      <header className="topBar">
+        <div className="topBarInner">
+          <div className="brand">
+            <div className="brandTitle">Spotify Rating App</div>
+            <div className="brandSub">
+              {loggedIn ? (
+                <>
+                  {profile?.display_name ? `Signed in as ${profile.display_name}.` : 'Signed in.'}
+                </>
+              ) : (
+                'Rank your songs with tiers + head-to-head.'
+              )}
+            </div>
+          </div>
+
+          <div className="topActions">
+            {loggedIn ? (
+              <>
+                <span
+                  className={`pill ${
+                    rankingSync.status === 'ok'
+                      ? 'ok'
+                      : rankingSync.status === 'error'
+                        ? 'err'
+                        : ''
+                  }`}
+                >
+                  {rankingSync.status === 'syncing'
+                    ? 'Syncing…'
+                    : rankingSync.status === 'ok'
+                      ? rankingSync.lastSyncedAt
+                        ? `Synced ${formatDateTime(rankingSync.lastSyncedAt)}`
+                        : 'Synced'
+                      : rankingSync.status === 'error'
+                        ? `Sync error: ${rankingSync.message || 'unknown'}`
+                        : 'Not synced yet'}
+                </span>
+
+                <button className="btn" onClick={() => syncRankings({ force: true })} disabled={rankingSync.status === 'syncing'}>
+                  Sync
+                </button>
+                <button className="btn danger" onClick={logout}>
+                  Log out
+                </button>
+              </>
+            ) : null}
+          </div>
+        </div>
+      </header>
+
+      <div className="container">
+        <div className="card">
+          {error ? <p className="error">{error}</p> : null}
 
         {!loggedIn ? (
           <>
@@ -418,30 +514,13 @@ function App() {
           </>
         ) : (
           <>
-            <p>
-              Logged in{profile?.display_name ? ` as ${profile.display_name}` : ''}.
-            </p>
-            {scopes?.length ? <p className="meta">Scopes: {scopes.join(' ')}</p> : null}
-            <button onClick={logout}>Log out</button>
-            <div className="controls">
-              <button onClick={() => syncRankings({ force: true })} disabled={rankingSync.status === 'syncing'}>
-                {rankingSync.status === 'syncing' ? 'Syncing…' : 'Sync rankings'}
-              </button>
-              <span className="sub">
-                {rankingSync.status === 'ok' && rankingSync.lastSyncedAt
-                  ? `synced ${formatDateTime(rankingSync.lastSyncedAt)}`
-                  : rankingSync.status === 'error'
-                    ? `sync error: ${rankingSync.message || 'unknown'}`
-                    : 'not synced yet'}
-              </span>
-            </div>
-
             {selectedPlaylistId ? (
               <PlaylistView
-                key={`${profile?.id || 'anon'}:${selectedPlaylistId}:${rankingRevision}`}
                 playlistsCache={playlistsCache}
                 playlistId={selectedPlaylistId}
-                userId={profile?.id}
+                ranking={userRanking}
+                onChangeRanking={setUserRanking}
+                isOwnerUser={isOwnerUser}
                 cooldownUntilMs={cooldownUntilMs}
                 nowMs={nowMs}
                 tracksLoading={tracksLoading}
@@ -463,6 +542,7 @@ function App() {
                 playlistsError={playlistsError}
                 playlistsCache={playlistsCache}
                 playlistsSource={playlistsSource}
+                isOwnerUser={isOwnerUser}
                 cooldownUntilMs={cooldownUntilMs}
                 nowMs={nowMs}
                 onRefresh={() => refreshPlaylistsCache({ force: true })}
@@ -476,8 +556,9 @@ function App() {
             )}
           </>
         )}
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -487,6 +568,7 @@ function PlaylistsView({
   playlistsError,
   playlistsCache,
   playlistsSource,
+  isOwnerUser,
   cooldownUntilMs,
   nowMs,
   onRefresh,
@@ -498,13 +580,16 @@ function PlaylistsView({
       <h2>Your playlists</h2>
 
       <div className="controls">
-        <button
-          onClick={onRefresh}
-          disabled={playlistsLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)}
-          title="Re-fetches playlists from Spotify and overwrites the local cache."
-        >
-          Refresh playlists cache
-        </button>
+        {isOwnerUser ? (
+          <button
+            className="btn"
+            onClick={onRefresh}
+            disabled={playlistsLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)}
+            title="Re-fetches playlists from Spotify and overwrites the local cache."
+          >
+            Refresh playlists cache
+          </button>
+        ) : null}
       </div>
 
       {playlistsError ? <p className="error">{playlistsError}</p> : null}
@@ -571,7 +656,9 @@ function PlaylistsView({
 function PlaylistView({
   playlistsCache,
   playlistId,
-  userId,
+  ranking,
+  onChangeRanking,
+  isOwnerUser,
   cooldownUntilMs,
   nowMs,
   tracksLoading,
@@ -587,12 +674,6 @@ function PlaylistView({
   const snapshotMismatch = playlistSnapshotId && cachedSnapshotId && playlistSnapshotId !== cachedSnapshotId
 
   const [view, setView] = useState('tracks') // tracks | bucket | duel | leaderboard
-  const [ranking, setRanking] = useState(() => {
-    if (!userId || !playlistId) return null
-    const base = readUserRanking(userId) ?? createEmptyUserRanking({ userId })
-    const legacy = readLegacyPlaylistRanking(userId, playlistId)
-    return legacy ? mergeLegacyPlaylistRanking(base, legacy, playlistId) : base
-  })
 
   const uniqueTracks = useMemo(() => {
     const items = Array.isArray(tracksCache?.items) ? tracksCache.items : []
@@ -609,22 +690,22 @@ function PlaylistView({
     return Array.from(map.values())
   }, [tracksCache])
 
-  useEffect(() => {
-    if (!userId || !ranking) return
-    writeUserRanking(userId, ranking)
-  }, [userId, ranking])
-
   return (
     <div className="section">
       <div className="controls">
-        <button onClick={onBack}>← Back</button>
-        <button
-          onClick={onRefresh}
-          disabled={tracksLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)}
-          title="Re-fetches playlist tracks from Spotify and overwrites the local cache for this playlist."
-        >
-          Refresh playlist cache
+        <button className="btn" onClick={onBack}>
+          ← Back
         </button>
+        {isOwnerUser ? (
+          <button
+            className="btn"
+            onClick={onRefresh}
+            disabled={tracksLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)}
+            title="Re-fetches playlist tracks from Spotify and overwrites the local cache for this playlist."
+          >
+            Refresh playlist cache
+          </button>
+        ) : null}
       </div>
 
       <h2>{playlist?.name || 'Playlist'}</h2>
@@ -663,47 +744,139 @@ function PlaylistView({
       )}
 
       {view === 'tracks' ? (
-        tracksCache?.items?.length ? (
-          <ol className="tracks">
-            {tracksCache.items.map((t, idx) => {
-              const key = trackKeyOfTrack(t)
-              const state = ranking ? getTrackState(ranking, key) : null
-              return (
-                <li key={`${key}-${idx}`}>
-                  <span>{t.name || '(untitled track)'}</span>
-                  {t.artists?.length ? <span className="sub"> — {t.artists.join(', ')}</span> : null}
-                  {t.album ? <span className="sub"> · {t.album}</span> : null}
-                  {t.addedAt ? <span className="sub"> · added {formatDateTime(t.addedAt)}</span> : null}
-                  {state ? (
-                    <span className="sub">
-                      {' '}
-                      · tier {state.bucket === 'U' ? 'unseeded' : state.bucket}
-                      {state.bucket !== 'X' ? ` · Elo ${Math.round(state.rating)}` : ' · excluded'}
-                    </span>
-                  ) : null}
-                  {t.id ? (
-                    <button className="playBtn" onClick={() => openTrackInSpotify(t.id)} title="Play in Spotify">
-                      Play
-                    </button>
-                  ) : null}
-                </li>
-              )
-            })}
-          </ol>
-        ) : null
+        <TracksTable uniqueTracks={uniqueTracks} ranking={ranking} onChangeRanking={onChangeRanking} />
       ) : null}
 
       {view === 'bucket' ? (
-        <BucketSeeder uniqueTracks={uniqueTracks} ranking={ranking} onChange={setRanking} />
+        <BucketSeeder uniqueTracks={uniqueTracks} ranking={ranking} onChange={onChangeRanking} />
       ) : null}
 
       {view === 'duel' ? (
-        <HeadToHead uniqueTracks={uniqueTracks} ranking={ranking} onChange={setRanking} />
+        <HeadToHead uniqueTracks={uniqueTracks} ranking={ranking} onChange={onChangeRanking} />
       ) : null}
 
       {view === 'leaderboard' ? (
-        <Leaderboard uniqueTracks={uniqueTracks} ranking={ranking} />
+        <Leaderboard uniqueTracks={uniqueTracks} ranking={ranking} onChange={onChangeRanking} />
       ) : null}
+    </div>
+  )
+}
+
+function EloEditor({ rating, disabled = false, onSave }) {
+  const [editing, setEditing] = useState(false)
+  const [value, setValue] = useState(() => String(Math.round(Number.isFinite(rating) ? rating : 1000)))
+
+  function commit() {
+    const next = Number(value)
+    if (!Number.isFinite(next)) return
+    onSave?.(next)
+    setEditing(false)
+  }
+
+  if (!editing) {
+    return (
+      <span className="eloEditor">
+        <span className="eloValue">{Math.round(Number.isFinite(rating) ? rating : 1000)}</span>
+        <button
+          className="btn small eloEditBtn"
+          onClick={() => {
+            setValue(String(Math.round(Number.isFinite(rating) ? rating : 1000)))
+            setEditing(true)
+          }}
+          disabled={disabled}
+          title="Edit Elo"
+        >
+          Edit
+        </button>
+      </span>
+    )
+  }
+
+  return (
+    <span className="eloEditor">
+      <input
+        className="eloInput"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        disabled={disabled}
+        inputMode="numeric"
+        aria-label="Elo"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') commit()
+          if (e.key === 'Escape') setEditing(false)
+        }}
+      />
+      <button className="btn small primary" onClick={commit} disabled={disabled}>
+        Save
+      </button>
+      <button className="btn small" onClick={() => setEditing(false)} disabled={disabled}>
+        Cancel
+      </button>
+    </span>
+  )
+}
+
+function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
+  const rows = useMemo(() => {
+    return uniqueTracks.map(({ key, track }) => {
+      const state = ranking ? getTrackState(ranking, key) : null
+      return {
+        key,
+        track,
+        state,
+        artists: Array.isArray(track?.artists) ? track.artists.join(', ') : '',
+      }
+    })
+  }, [uniqueTracks, ranking])
+
+  if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>
+
+  return (
+    <div className="cardSub">
+      <div className="tableWrap" role="region" aria-label="Tracks table" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="colSong">Song</th>
+              <th className="colArtist">Artist</th>
+              <th className="colAlbum">Album</th>
+              <th className="right colElo">Elo</th>
+              <th className="right colActions">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.key}>
+                <td>
+                  <div className="cellTitle">{r.track?.name || '(untitled track)'}</div>
+                </td>
+                <td>
+                  <div className="cellSub">{r.artists || 'Unknown artist'}</div>
+                </td>
+                <td>
+                  <div className="cellSub">{r.track?.album || 'Unknown album'}</div>
+                </td>
+                <td className="right">
+                  <EloEditor
+                    rating={r.state?.rating}
+                    disabled={!ranking}
+                    onSave={(next) => onChangeRanking?.((rk) => (rk ? setTrackElo(rk, r.key, next) : rk))}
+                  />
+                </td>
+                <td className="right">
+                  <span className="btnRow">
+                    {r.track?.id ? (
+                      <button className="btn small" onClick={() => openTrackInSpotify(r.track.id)} title="Play in Spotify">
+                        Play
+                      </button>
+                    ) : null}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
@@ -766,81 +939,129 @@ function BucketSeeder({ uniqueTracks, ranking, onChange }) {
         </div>
       </div>
 
-      <ul className="seedList">
-        {filtered.map(({ key, track, count }, idx) => {
-          const state = ranking ? getTrackState(ranking, key) : null
-          const bucket = state?.bucket ?? 'U'
-          return (
-            <li key={key} className="seedRow">
-              <div className="seedIndex">#{idx + 1}</div>
-              <div className="seedMain">
-                <div className="seedTitle">
-                  <span>{track?.name || '(untitled track)'}</span>
-                </div>
-                <div className="seedMeta">
-                  {(track?.artists ?? []).length ? `${track.artists.join(', ')}` : 'Unknown artist'}
-                  {count > 1 ? ` · in playlist x${count}` : ''}
-                  {bucket !== 'U' ? ` · tier ${bucket === 'X' ? 'do not rate' : bucket}` : ' · unseeded'}
-                </div>
-              </div>
-
-              <div className="seedActions">
-                {track?.id ? (
-                  <button className="playBtn" onClick={() => openTrackInSpotify(track.id)} title="Play in Spotify">
-                    Play
-                  </button>
-                ) : null}
-                {TIER_BUCKETS.map((b) => (
-                  <button
-                    key={b}
-                    className={`bucketBtn ${bucket === b ? 'active' : ''}`}
-                    onClick={() => ranking && onChange(setTrackBucket(ranking, key, b))}
-                    disabled={!ranking}
-                    title={`Set tier ${b}`}
-                  >
-                    {b}
-                  </button>
-                ))}
-                <button
-                  className={`bucketBtn ${bucket === 'U' ? 'active' : ''}`}
-                  onClick={() => ranking && onChange(setTrackBucket(ranking, key, 'U'))}
-                  disabled={!ranking}
-                  title="Clear tier (unseeded)"
-                >
-                  —
-                </button>
-                <button
-                  className={`bucketBtn danger ${bucket === 'X' ? 'active' : ''}`}
-                  onClick={() => ranking && onChange(setTrackBucket(ranking, key, 'X'))}
-                  disabled={!ranking}
-                  title="Do not rate (exclude)"
-                >
-                  X
-                </button>
-              </div>
-            </li>
-          )
-        })}
-      </ul>
+      <div className="tableWrap" role="region" aria-label="Seeding table" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="right colIndex">#</th>
+              <th className="colSong">Song</th>
+              <th className="colArtist">Artist</th>
+              <th className="colAlbum">Album</th>
+              <th className="right colElo">Elo</th>
+              <th className="right colTier">Tier</th>
+              <th className="right colActions">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map(({ key, track }, idx) => {
+              const state = ranking ? getTrackState(ranking, key) : null
+              const bucket = state?.bucket ?? 'U'
+              const artists = Array.isArray(track?.artists) ? track.artists.join(', ') : ''
+              return (
+                <tr key={key}>
+                  <td className="right">
+                    <span className="cellSub">{idx + 1}</span>
+                  </td>
+                  <td>
+                    <div className="cellTitle">{track?.name || '(untitled track)'}</div>
+                  </td>
+                  <td>
+                    <div className="cellSub">{artists || 'Unknown artist'}</div>
+                  </td>
+                  <td>
+                    <div className="cellSub">{track?.album || 'Unknown album'}</div>
+                  </td>
+                  <td className="right">
+                    <EloEditor
+                      rating={state?.rating}
+                      disabled={!ranking}
+                      onSave={(next) => onChange?.((rk) => (rk ? setTrackElo(rk, key, next) : rk))}
+                    />
+                  </td>
+                  <td className="right">
+                    <span className="btnRow tierButtons">
+                      {TIER_BUCKETS.map((b) => (
+                        <button
+                          key={b}
+                          className={`btn small ${bucket === b ? 'active' : ''}`}
+                          onClick={() => onChange?.((rk) => (rk ? setTrackBucket(rk, key, b) : rk))}
+                          disabled={!ranking}
+                          title={`Set tier ${b}`}
+                        >
+                          {b}
+                        </button>
+                      ))}
+                      <button
+                        className={`btn small ${bucket === 'U' ? 'active' : ''}`}
+                        onClick={() => onChange?.((rk) => (rk ? setTrackBucket(rk, key, 'U') : rk))}
+                        disabled={!ranking}
+                        title="Clear tier (unseeded)"
+                      >
+                        —
+                      </button>
+                      <button
+                        className={`btn small danger ${bucket === 'X' ? 'active' : ''}`}
+                        onClick={() => onChange?.((rk) => (rk ? setTrackBucket(rk, key, 'X') : rk))}
+                        disabled={!ranking}
+                        title="Do not rate (exclude)"
+                      >
+                        X
+                      </button>
+                    </span>
+                  </td>
+                  <td className="right">
+                    <span className="btnRow">
+                      {track?.id ? (
+                        <button className="btn small" onClick={() => openTrackInSpotify(track.id)} title="Play in Spotify">
+                          Play
+                        </button>
+                      ) : null}
+                    </span>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
 
-function Leaderboard({ uniqueTracks, ranking }) {
+function Leaderboard({ uniqueTracks, ranking, onChange }) {
   const [bucket, setBucket] = useState('S')
+  const [query, setQuery] = useState('')
 
   const rows = useMemo(() => {
     if (!ranking) return []
+    const q = query.trim().toLowerCase()
     return uniqueTracks
-      .map(({ key, track }) => ({ key, track, state: getTrackState(ranking, key) }))
+      .map(({ key, track }) => ({
+        key,
+        track,
+        state: getTrackState(ranking, key),
+        artists: Array.isArray(track?.artists) ? track.artists.join(', ') : '',
+      }))
       .filter((r) => r.state.bucket !== 'X')
       .filter((r) => (bucket === 'ALL' ? r.state.bucket !== 'X' : r.state.bucket === bucket))
+      .filter((r) => {
+        if (!q) return true
+        const hay = `${r.track?.name ?? ''} ${r.artists}`.toLowerCase()
+        return hay.includes(q)
+      })
       .sort((a, b) => b.state.rating - a.state.rating)
-  }, [uniqueTracks, ranking, bucket])
+  }, [uniqueTracks, ranking, bucket, query])
 
   return (
     <div className="cardSub">
       <div className="controls">
+        <input
+          className="textInput"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search leaderboard…"
+          aria-label="Search leaderboard"
+        />
         <label className="inlineLabel">
           Tier
           <select value={bucket} onChange={(e) => setBucket(e.target.value)}>
@@ -858,23 +1079,59 @@ function Leaderboard({ uniqueTracks, ranking }) {
       {!ranking ? <p className="meta">Loading ranking…</p> : null}
 
       {ranking && rows.length ? (
-        <ol className="leaderboard">
-          {rows.slice(0, 100).map((r) => (
-            <li key={r.key}>
-              <span>{r.track?.name || '(untitled track)'}</span>
-              {(r.track?.artists ?? []).length ? <span className="sub"> — {r.track.artists.join(', ')}</span> : null}
-              <span className="sub">
-                {' '}
-                · Elo {Math.round(r.state.rating)} · {r.state.games} match{r.state.games === 1 ? '' : 'es'}
-              </span>
-              {r.track?.id ? (
-                <button className="playBtn" onClick={() => openTrackInSpotify(r.track.id)} title="Play in Spotify">
-                  Play
-                </button>
-              ) : null}
-            </li>
-          ))}
-        </ol>
+        <div className="tableWrap" role="region" aria-label="Leaderboard table" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th className="right colIndex">Rank</th>
+                <th className="colSong">Song</th>
+                <th className="colArtist">Artist</th>
+                <th className="colAlbum">Album</th>
+                <th className="right colElo">Elo</th>
+                <th className="right colMatches">Matches</th>
+                <th className="right colActions">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.slice(0, 250).map((r, idx) => (
+                <tr key={r.key}>
+                  <td className="right">
+                    <span className="cellSub">{idx + 1}</span>
+                  </td>
+                  <td>
+                    <div className="cellTitle">{r.track?.name || '(untitled track)'}</div>
+                    <div className="cellSub">tier {r.state.bucket === 'U' ? 'unseeded' : r.state.bucket}</div>
+                  </td>
+                  <td>
+                    <div className="cellSub">{r.artists || 'Unknown artist'}</div>
+                  </td>
+                  <td>
+                    <div className="cellSub">{r.track?.album || 'Unknown album'}</div>
+                  </td>
+                  <td className="right">
+                    <EloEditor
+                      rating={r.state.rating}
+                      disabled={!ranking}
+                      onSave={(next) => onChange?.((rk) => (rk ? setTrackElo(rk, r.key, next) : rk))}
+                    />
+                  </td>
+                  <td className="right">
+                    <span className="cellSub">{r.state.games}</span>
+                  </td>
+                  <td className="right">
+                    <span className="btnRow">
+                      {r.track?.id ? (
+                        <button className="btn small" onClick={() => openTrackInSpotify(r.track.id)} title="Play in Spotify">
+                          Play
+                        </button>
+                      ) : null}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       ) : ranking ? (
         <p className="meta">No tracks to show for this tier yet.</p>
       ) : null}
@@ -953,7 +1210,11 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
           </select>
         </label>
 
-        <button onClick={() => setSessionDone(0)} title="Resets the in-session counter only (does not affect ratings).">
+        <button
+          className="btn"
+          onClick={() => setSessionDone(0)}
+          title="Resets the in-session counter only (does not affect ratings)."
+        >
           Reset session
         </button>
 
@@ -966,7 +1227,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
           </select>
         </label>
 
-        <button onClick={undo} disabled={!canUndo} title="Undo last comparison">
+        <button className="btn" onClick={undo} disabled={!canUndo} title="Undo last comparison">
           Undo
         </button>
       </div>
@@ -992,20 +1253,30 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
               {(leftTrack?.artists ?? []).length ? <div className="duelMeta">{leftTrack.artists.join(', ')}</div> : null}
               {leftState ? (
                 <div className="duelStats">
-                  tier {leftState.bucket} · Elo {Math.round(leftState.rating)} · {leftState.games} match
-                  {leftState.games === 1 ? '' : 'es'}
+                  <span className="cellSub">tier {leftState.bucket === 'U' ? 'unseeded' : leftState.bucket}</span>
+                  <span className="cellSub"> · matches {leftState.games}</span>
+                </div>
+              ) : null}
+              {leftState ? (
+                <div className="controls">
+                  <span className="cellSub">Elo</span>
+                  <EloEditor
+                    rating={leftState.rating}
+                    disabled={!ranking}
+                    onSave={(next) => onChange?.((rk) => (rk ? setTrackElo(rk, matchup.leftKey, next) : rk))}
+                  />
                 </div>
               ) : null}
               <div className="controls">
                 {leftTrack?.id ? (
-                  <button className="ghost" onClick={() => openTrackInSpotify(leftTrack.id)} title="Play in Spotify">
+                  <button className="btn" onClick={() => openTrackInSpotify(leftTrack.id)} title="Play in Spotify">
                     Play
                   </button>
                 ) : null}
-                <button className="primary" onClick={() => vote(matchup.leftKey)}>
+                <button className="btn primary" onClick={() => vote(matchup.leftKey)}>
                   Left wins
                 </button>
-                <button className="ghost" onClick={() => doNotRate(matchup.leftKey)} title="Exclude this track forever">
+                <button className="btn danger" onClick={() => doNotRate(matchup.leftKey)} title="Exclude this track forever">
                   Do not rate
                 </button>
               </div>
@@ -1018,20 +1289,30 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
               {(rightTrack?.artists ?? []).length ? <div className="duelMeta">{rightTrack.artists.join(', ')}</div> : null}
               {rightState ? (
                 <div className="duelStats">
-                  tier {rightState.bucket} · Elo {Math.round(rightState.rating)} · {rightState.games} match
-                  {rightState.games === 1 ? '' : 'es'}
+                  <span className="cellSub">tier {rightState.bucket === 'U' ? 'unseeded' : rightState.bucket}</span>
+                  <span className="cellSub"> · matches {rightState.games}</span>
+                </div>
+              ) : null}
+              {rightState ? (
+                <div className="controls">
+                  <span className="cellSub">Elo</span>
+                  <EloEditor
+                    rating={rightState.rating}
+                    disabled={!ranking}
+                    onSave={(next) => onChange?.((rk) => (rk ? setTrackElo(rk, matchup.rightKey, next) : rk))}
+                  />
                 </div>
               ) : null}
               <div className="controls">
                 {rightTrack?.id ? (
-                  <button className="ghost" onClick={() => openTrackInSpotify(rightTrack.id)} title="Play in Spotify">
+                  <button className="btn" onClick={() => openTrackInSpotify(rightTrack.id)} title="Play in Spotify">
                     Play
                   </button>
                 ) : null}
-                <button className="primary" onClick={() => vote(matchup.rightKey)}>
+                <button className="btn primary" onClick={() => vote(matchup.rightKey)}>
                   Right wins
                 </button>
-                <button className="ghost" onClick={() => doNotRate(matchup.rightKey)} title="Exclude this track forever">
+                <button className="btn danger" onClick={() => doNotRate(matchup.rightKey)} title="Exclude this track forever">
                   Do not rate
                 </button>
               </div>
@@ -1039,7 +1320,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
           </div>
 
           <div className="controls">
-            <button onClick={skip} title="Skip this matchup and ask again later">
+            <button className="btn" onClick={skip} title="Skip this matchup and ask again later">
               Skip
             </button>
           </div>
