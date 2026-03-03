@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3f97Rg1lhGbhnHE4WYJjz7_artists",
+  "fetchedAt": "2026-03-03T22:20:15.762Z",
+  "lastRefreshedAt": "2026-03-03T22:20:15.762Z",
+  "data": {
+    "artists": [
+      {
+        "id": "49rpuSgVLanEVfk2vuAKEU",
+        "name": "Deep Dhaliwal"
+      },
+      {
+        "id": "54BjV0qctcWp8xOip7uaJD",
+        "name": "thiarajxtt"
+      }
+    ]
+  }
+}

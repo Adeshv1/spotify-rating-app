@@ -3,9 +3,22 @@
 }
 
 :root {
-  --app-bg: radial-gradient(1200px 600px at 10% 0%, rgba(99, 102, 241, 0.18), transparent 60%),
-    radial-gradient(800px 500px at 90% 10%, rgba(59, 130, 246, 0.16), transparent 55%),
-    radial-gradient(900px 700px at 50% 120%, rgba(37, 99, 235, 0.12), transparent 55%),
+  --app-bg:
+    radial-gradient(
+      1200px 600px at 10% 0%,
+      rgba(99, 102, 241, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 90% 10%,
+      rgba(59, 130, 246, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 700px at 50% 120%,
+      rgba(37, 99, 235, 0.12),
+      transparent 55%
+    ),
     #0b1020;
 
   --surface: rgba(255, 255, 255, 0.06);
@@ -27,9 +40,22 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --app-bg: radial-gradient(1200px 600px at 10% 0%, rgba(79, 141, 255, 0.18), transparent 60%),
-      radial-gradient(800px 500px at 90% 10%, rgba(99, 102, 241, 0.16), transparent 55%),
-      radial-gradient(900px 700px at 50% 120%, rgba(59, 130, 246, 0.14), transparent 55%),
+    --app-bg:
+      radial-gradient(
+        1200px 600px at 10% 0%,
+        rgba(79, 141, 255, 0.18),
+        transparent 60%
+      ),
+      radial-gradient(
+        800px 500px at 90% 10%,
+        rgba(99, 102, 241, 0.16),
+        transparent 55%
+      ),
+      radial-gradient(
+        900px 700px at 50% 120%,
+        rgba(59, 130, 246, 0.14),
+        transparent 55%
+      ),
       #f7f9ff;
 
     --surface: #ffffff;
@@ -70,6 +96,37 @@
   padding: clamp(0.75rem, 1.8vw, 1.25rem) clamp(0.75rem, 2.4vw, 2rem) 2rem;
 }
 
+.mainDashboard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainDashboard > .container {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardDashboard {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardPage {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardPage.section {
+  margin-top: 0;
+}
+
 .topBar {
   position: sticky;
   top: 0;
@@ -81,18 +138,42 @@
 
 @media (prefers-color-scheme: light) {
   .topBar {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0)
+    );
   }
 }
 
 .topBarInner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1rem;
   max-width: 2200px;
   margin: 0 auto;
+}
+
+.headerTitle {
+  justify-self: center;
+  font-size: 2rem;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: min(52vw, 560px);
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .headerTitle {
+    color: rgba(17, 24, 39, 0.9);
+  }
 }
 
 .brand {
@@ -119,6 +200,38 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  justify-self: end;
+}
+
+.saveStatus {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  padding: 0.2rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.saveStatus.err {
+  color: var(--danger);
+  border-color: rgba(255, 95, 122, 0.35);
+  background: var(--danger-surface);
+}
+
+@media (max-width: 780px) {
+  .topBarInner {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .headerTitle {
+    justify-self: start;
+    max-width: 100%;
+    pointer-events: auto;
+  }
+  .topActions {
+    justify-self: start;
+    justify-content: flex-start;
+  }
 }
 
 .pill {
@@ -206,12 +319,12 @@
 }
 
 .dashboardColumns {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
   align-items: stretch;
-  height: 72vh;
-  min-height: 440px;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 @media (max-width: 1100px) {
@@ -219,6 +332,7 @@
     flex-direction: column;
     height: auto;
     min-height: 0;
+    flex: 0 0 auto;
   }
 }
 
@@ -232,6 +346,10 @@
   border-radius: 16px;
   background: var(--surface);
   overflow: hidden;
+}
+
+.dashPanelArtists {
+  flex: 1.18 1 0;
 }
 
 .dashPanelHeader {
@@ -299,7 +417,7 @@
 
 .artistGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.85rem;
 }
 
@@ -333,12 +451,16 @@
   place-items: center;
   color: var(--text-muted);
   font-weight: 700;
-  font-size: 1.75rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  font-size: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
 }
 
 .artistCardBody {
-  padding: 0.75rem 0.85rem 0.85rem;
+  padding: 0.6rem 0.75rem 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -346,6 +468,7 @@
 
 .artistCardName {
   font-weight: 650;
+  font-size: 0.98rem;
   line-height: 1.2;
   word-break: break-word;
 }
@@ -353,13 +476,13 @@
 .artistCardScore {
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .artistCardTracks {
   list-style: none;
   padding: 0;
-  margin: 0.55rem 0 0;
+  margin: 0.45rem 0 0;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -415,7 +538,8 @@
 
 .tableWrap {
   width: 100%;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid var(--surface-border);
   border-radius: 16px;
   background: var(--surface-3);
@@ -425,7 +549,7 @@
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  min-width: 1360px;
+  min-width: 1200px;
 }
 
 .table th,
@@ -493,19 +617,19 @@
 }
 
 .colSong {
-  width: 360px;
+  width: 300px;
 }
 
 .colArtist {
-  width: 200px;
+  width: 190px;
 }
 
 .colAlbum {
-  width: 200px;
+  width: 190px;
 }
 
 .colElo {
-  width: 150px;
+  width: 120px;
 }
 
 .colTier {

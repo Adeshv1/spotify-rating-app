@@ -63,6 +63,10 @@ function App() {
   const [rankingSync, setRankingSync] = useState({ status: 'idle', lastSyncedAt: null, message: null })
   const [userRanking, setUserRanking] = useState(null)
   const saveTimerRef = useRef(null)
+  const pendingSaveRef = useRef(false)
+
+  const isDashboardRoute = routePath === '/app/dashboard'
+  const headerTitle = loggedIn ? (isDashboardRoute ? 'Dashboard' : 'Playlists') : ''
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000)
@@ -467,6 +471,7 @@ function App() {
     if (rankingSync.status === 'syncing') return
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current)
 
+    pendingSaveRef.current = true
     saveTimerRef.current = setTimeout(() => {
       ;(async () => {
         try {
@@ -476,16 +481,38 @@ function App() {
             body: JSON.stringify(userRanking),
           })
           setRankingSync(() => ({ status: 'ok', lastSyncedAt: new Date().toISOString(), message: null }))
+          pendingSaveRef.current = false
         } catch (e) {
           setRankingSync((s) => ({ status: 'error', lastSyncedAt: s.lastSyncedAt, message: e?.message || 'Sync failed' }))
         }
       })()
-    }, 900)
+    }, 800)
 
     return () => {
       if (saveTimerRef.current) clearTimeout(saveTimerRef.current)
     }
   }, [loggedIn, profile?.id, userRanking, rankingSync.status])
+
+  useEffect(() => {
+    if (!loggedIn || !profile?.id) return
+
+    const onBeforeUnload = () => {
+      if (!pendingSaveRef.current) return
+      try {
+        fetch('/api/ranking', {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(userRanking),
+          keepalive: true,
+        })
+      } catch {
+        // ignore
+      }
+    }
+
+    window.addEventListener('beforeunload', onBeforeUnload)
+    return () => window.removeEventListener('beforeunload', onBeforeUnload)
+  }, [loggedIn, profile?.id, userRanking])
 
   if (loading) {
     return (
@@ -501,11 +528,11 @@ function App() {
 
   return (
     <div className="appShell">
-      <header className="topBar">
-        <div className="topBarInner">
-          <div className="brand">
-            <div className="brandTitle">Spotify Rating App</div>
-            <div className="brandSub">
+	      <header className="topBar">
+	        <div className="topBarInner">
+	          <div className="brand">
+	            <div className="brandTitle">Spotify Rating App</div>
+	            <div className="brandSub">
               {loggedIn ? (
                 <>
                   {profile?.display_name ? `Signed in as ${profile.display_name}.` : 'Signed in.'}
@@ -513,59 +540,43 @@ function App() {
               ) : (
                 'Rank your songs with tiers + head-to-head.'
               )}
-            </div>
-          </div>
+	            </div>
+	          </div>
 
-          <div className="topActions">
-            {loggedIn ? (
-              <>
-                <button className="btn" onClick={() => navigate('/app', { replace: true })} disabled={routePath === '/app'}>
-                  Playlists
-                </button>
-                <button
-                  className="btn"
-                  onClick={() => navigate('/app/dashboard', { replace: true })}
-                  disabled={routePath === '/app/dashboard'}
-                >
-                  Dashboard
-                </button>
+	          <div className="headerTitle" aria-label="Page title">
+	            {headerTitle}
+	          </div>
 
-                <span
-                  className={`pill ${
-                    rankingSync.status === 'ok'
-                      ? 'ok'
-                      : rankingSync.status === 'error'
-                        ? 'err'
-                        : ''
-                  }`}
-                >
-                  {rankingSync.status === 'syncing'
-                    ? 'Syncing…'
-                    : rankingSync.status === 'ok'
-                      ? rankingSync.lastSyncedAt
-                        ? `Synced ${formatDateTime(rankingSync.lastSyncedAt)}`
-                        : 'Synced'
-                      : rankingSync.status === 'error'
-                        ? `Sync error: ${rankingSync.message || 'unknown'}`
-                        : 'Not synced yet'}
-                </span>
-
-                <button className="btn" onClick={() => syncRankings({ force: true })} disabled={rankingSync.status === 'syncing'}>
-                  Sync
-                </button>
-                <button className="btn danger" onClick={logout}>
-                  Log out
-                </button>
-              </>
-            ) : null}
-          </div>
+		          <div className="topActions">
+		            {loggedIn ? (
+		              <>
+		                {isDashboardRoute ? (
+		                  <button className="btn" onClick={() => navigate('/app', { replace: true })}>
+		                    Playlists
+		                  </button>
+		                ) : (
+		                  <button className="btn" onClick={() => navigate('/app/dashboard', { replace: true })}>
+		                    Dashboard
+		                  </button>
+		                )}
+		                {rankingSync.status === 'error' ? (
+		                  <span className="saveStatus err" title={rankingSync.message || 'Save failed'}>
+		                    Save failed (will retry)
+		                  </span>
+		                ) : null}
+		                <button className="btn danger" onClick={logout}>
+		                  Log out
+		                </button>
+		              </>
+		            ) : null}
+		          </div>
         </div>
-      </header>
+	      </header>
 
-      <main className="main">
-        <div className="container">
-          <div className="card">
-            {error ? <p className="error">{error}</p> : null}
+	      <main className={isDashboardRoute ? 'main mainDashboard' : 'main'}>
+	        <div className="container">
+	          <div className={isDashboardRoute ? 'card cardDashboard' : 'card'}>
+	            {error ? <p className="error">{error}</p> : null}
 
           {!loggedIn ? (
             <LandingPage publicPreview={publicPreview} />
@@ -971,28 +982,21 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
   }, [ranking, trackIndex])
 
   if (!userId) return <p className="meta">Loading…</p>
-  if (!ranking) return <p className="meta">Loading ranking…</p>
-  if (!computed?.hasAnyRatings) {
-    return (
-      <div className="section dashboardPage">
-        <h2>Dashboard</h2>
-        <p className="meta">No ratings yet. Seed some songs into tiers or do a few head-to-head matchups first.</p>
-      </div>
-    )
-  }
+	  if (!ranking) return <p className="meta">Loading ranking…</p>
+	  if (!computed?.hasAnyRatings) {
+	    return (
+	      <div className="section dashboardPage">
+	        <p className="meta">No ratings yet. Seed some songs into tiers or do a few head-to-head matchups first.</p>
+	      </div>
+	    )
+	  }
 
-  return (
-    <div className="section dashboardPage">
-      <h2>Dashboard</h2>
-
-      <p className="meta">
-        Computed from your saved ranking. Artist/album labels come from your cached playlist tracks on this device.
-      </p>
-
-      {!isOwnerUser ? (
-        <div className="cardSub">
-          <h3>Export / Import</h3>
-          <div className="controls">
+	  return (
+	    <div className="section dashboardPage">
+	      {!isOwnerUser ? (
+	        <div className="cardSub">
+	          <h3>Export / Import</h3>
+	          <div className="controls">
             <button className="btn" onClick={exportJson} disabled={!ranking}>
               Export JSON
             </button>
@@ -1033,7 +1037,7 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
 	          </div>
 	        </div>
 
-	        <div className="dashPanel">
+	        <div className="dashPanel dashPanelArtists">
 	          <div className="dashPanelHeader">
 	            <h3>Top artists ({computed.topArtists.length})</h3>
 	          </div>

@@ -58,6 +58,8 @@ const REFRESH_WINDOW_MS = 15 * 60 * 1000
 const spotifyRefreshInFlight = new Map()
 const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
 const ARTIST_IMAGE_MISS_MAX_PER_WINDOW = 25
+const ARTIST_IMAGE_REFRESH_MS = 30 * 24 * 60 * 60 * 1000
+const ARTIST_IMAGE_NULL_RETRY_MS = 24 * 60 * 60 * 1000
 const artistImageMissesByUser = new Map()
 const trackResolveMissesByUser = new Map()
 try {
@@ -1136,21 +1138,36 @@ const server = http.createServer((req, res) => {
     ;(async () => {
       const cacheKey = `artist_${artistId}_image`
       const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
-      if (cachedRecord) {
+      const cachedFetchedAtMs = cachedRecord ? Date.parse(cachedRecord.fetchedAt) : NaN
+      const cachedImageUrl = cachedRecord?.data?.imageUrl ?? null
+      const nowMs = Date.now()
+
+      const isStale =
+        !cachedRecord ||
+        !Number.isFinite(cachedFetchedAtMs) ||
+        nowMs - cachedFetchedAtMs >= ARTIST_IMAGE_REFRESH_MS ||
+        (!cachedImageUrl && Number.isFinite(cachedFetchedAtMs) && nowMs - cachedFetchedAtMs >= ARTIST_IMAGE_NULL_RETRY_MS)
+
+      if (cachedRecord && !isStale) {
         res.setHeader('x-sp-cache', 'hit')
         res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
-        sendJson(res, 200, { imageUrl: cachedRecord.data?.imageUrl ?? null })
+        sendJson(res, 200, { imageUrl: cachedImageUrl })
         return
       }
 
       if (!owner) {
-        const nowMs = Date.now()
         const existing = artistImageMissesByUser.get(userId) || []
         const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
         if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
           const oldest = Math.min(...pruned)
           const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
-          sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
+          if (cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_stale_throttled')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            sendJson(res, 200, { imageUrl: cachedImageUrl })
+          } else {
+            sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
+          }
           return
         }
         pruned.push(nowMs)
@@ -1160,7 +1177,13 @@ const server = http.createServer((req, res) => {
       const lockKey = `${userId}:${cacheKey}`
       let lockTaken = false
       if (spotifyRefreshInFlight.has(lockKey)) {
-        sendJson(res, 429, { error: 'inflight', retryAfterSeconds: 1 })
+        if (cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_stale_inflight')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          sendJson(res, 200, { imageUrl: cachedImageUrl })
+        } else {
+          sendJson(res, 429, { error: 'inflight', retryAfterSeconds: 1 })
+        }
         return
       }
       spotifyRefreshInFlight.set(lockKey, true)
@@ -1219,7 +1242,17 @@ const server = http.createServer((req, res) => {
       try {
         const result = await fetchWithRefresh((token) => callArtist(token))
         if (!result.ok) {
-          sendJson(res, result.status, { error: 'spotify_artist_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+          if (cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_stale_error')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            sendJson(res, 200, { imageUrl: cachedImageUrl })
+          } else {
+            sendJson(res, result.status, {
+              error: 'spotify_artist_failed',
+              details: result.data,
+              retryAfterSeconds: result.retryAfterSeconds,
+            })
+          }
           return
         }
 
@@ -1236,7 +1269,7 @@ const server = http.createServer((req, res) => {
           data: { imageUrl },
         })
 
-        res.setHeader('x-sp-cache', 'miss_stored')
+        res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_stored')
         res.setHeader('x-sp-cache-fetched-at', storedAt)
         sendJson(res, 200, { imageUrl })
       } finally {

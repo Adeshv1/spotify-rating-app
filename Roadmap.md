@@ -33,3 +33,7 @@
 + Dashboard: Top artists card grid w/ top 5 songs (implemented 2026-03-03)
 + Dashboard: lazy Spotify artist images via server cache (implemented 2026-03-03)
 + Dashboard: resolve missing artist IDs via track lookup (implemented 2026-03-03)
++ UI: reduce dashboard/seed scrollbars + tighten layout (implemented 2026-03-03)
++ Server: refresh artist images periodically (TTL + null retry) (implemented 2026-03-03)
++ UI: header title + conditional nav buttons (implemented 2026-03-03)
++ UI: remove manual sync controls; keep autosync debounce (800ms) (implemented 2026-03-03)

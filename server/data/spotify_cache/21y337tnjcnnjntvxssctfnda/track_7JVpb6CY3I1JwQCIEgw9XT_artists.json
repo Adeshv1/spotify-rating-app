@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7JVpb6CY3I1JwQCIEgw9XT_artists",
+  "fetchedAt": "2026-03-03T22:20:15.947Z",
+  "lastRefreshedAt": "2026-03-03T22:20:15.947Z",
+  "data": {
+    "artists": [
+      {
+        "id": "0OytfiwNkc1KzXE4ImyjgW",
+        "name": "Gulab Sidhu"
+      },
+      {
+        "id": "36HuUPCABTgaY4e8rgzSNG",
+        "name": "Sukh Lotey"
+      }
+    ]
+  }
+}

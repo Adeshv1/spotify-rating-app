@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_13O0A6hqW8oHtQPr2I1vvd_artists",
+  "fetchedAt": "2026-03-03T22:20:22.474Z",
+  "lastRefreshedAt": "2026-03-03T22:20:22.474Z",
+  "data": {
+    "artists": [
+      {
+        "id": "1wRPtKGflJrBx9BmLsSwlU",
+        "name": "Pritam"
+      },
+      {
+        "id": "4YRxDV8wJFPHPTeXepOstw",
+        "name": "Arijit Singh"
+      },
+      {
+        "id": "0oOet2f43PA68X5RxKobEy",
+        "name": "Shreya Ghoshal"
+      },
+      {
+        "id": "2fMqTqiTxUDlmcOEPaQSsx",
+        "name": "Amitabh Bhattacharya"
+      }
+    ]
+  }
+}

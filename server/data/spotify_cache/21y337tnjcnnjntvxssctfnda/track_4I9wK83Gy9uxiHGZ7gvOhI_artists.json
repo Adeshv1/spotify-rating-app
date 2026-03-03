@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_4I9wK83Gy9uxiHGZ7gvOhI_artists",
+  "fetchedAt": "2026-03-03T22:20:25.283Z",
+  "lastRefreshedAt": "2026-03-03T22:20:25.283Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5hMRZnYzYhkXvdcEdJMfD2",
+        "name": "Arsh Sandhu"
+      },
+      {
+        "id": "2E6ODN4Dna1vkh6s8sxHC0",
+        "name": "Prodgk"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_15rthophXvWxPFQqYVRjSE_artists",
+  "fetchedAt": "2026-03-03T22:20:21.154Z",
+  "lastRefreshedAt": "2026-03-03T22:20:21.154Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4ZuPcTmzv64QazoSJizaxe",
+        "name": "Kulwinder Sohi"
+      },
+      {
+        "id": "0QntOArZgiNHoemAzwJPu5",
+        "name": "Gur Sidhu"
+      }
+    ]
+  }
+}

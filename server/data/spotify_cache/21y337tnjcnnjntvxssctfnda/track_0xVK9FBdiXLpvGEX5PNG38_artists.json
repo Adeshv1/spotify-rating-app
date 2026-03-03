@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0xVK9FBdiXLpvGEX5PNG38_artists",
+  "fetchedAt": "2026-03-03T22:20:26.125Z",
+  "lastRefreshedAt": "2026-03-03T22:20:26.125Z",
+  "data": {
+    "artists": [
+      {
+        "id": "7Ga3J18ycjEO6bOSxlIvpN",
+        "name": "Jazz Aulakh"
+      }
+    ]
+  }
+}
