@@ -230,3 +230,72 @@ export function mergeLegacyPlaylistRanking(userRanking, legacyPlaylistRanking, p
   })
 }
 
+export function mergeUserRankings(a, b) {
+  if (!a) return b
+  if (!b) return a
+  if (typeof a !== 'object' || typeof b !== 'object') return a
+  if (a.userId && b.userId && a.userId !== b.userId) return a
+
+  const userId = a.userId ?? b.userId ?? null
+  const nextTracks = { ...(a.tracks ?? {}) }
+
+  const bTracks = b.tracks && typeof b.tracks === 'object' ? b.tracks : {}
+  for (const trackKey of Object.keys(bTracks)) {
+    const aHas = Boolean(a.tracks && Object.hasOwn(a.tracks, trackKey))
+    const bHas = Boolean(b.tracks && Object.hasOwn(b.tracks, trackKey))
+    if (!bHas) continue
+
+    if (!aHas) {
+      nextTracks[trackKey] = getTrackState(b, trackKey)
+      continue
+    }
+
+    const aState = getTrackState(a, trackKey)
+    const bState = getTrackState(b, trackKey)
+
+    if (bState.games > aState.games) {
+      nextTracks[trackKey] = bState
+      continue
+    }
+    if (aState.games > bState.games) {
+      nextTracks[trackKey] = aState
+      continue
+    }
+
+    const bucket =
+      aState.bucket === 'X' || bState.bucket === 'X'
+        ? 'X'
+        : aState.bucket !== 'U'
+          ? aState.bucket
+          : bState.bucket !== 'U'
+            ? bState.bucket
+            : 'U'
+
+    nextTracks[trackKey] = {
+      ...aState,
+      bucket,
+      rating: Math.max(aState.rating, bState.rating),
+      wins: Math.max(aState.wins, bState.wins),
+      losses: Math.max(aState.losses, bState.losses),
+      lastComparedAt:
+        aState.lastComparedAt && bState.lastComparedAt
+          ? Date.parse(aState.lastComparedAt) >= Date.parse(bState.lastComparedAt)
+            ? aState.lastComparedAt
+            : bState.lastComparedAt
+          : aState.lastComparedAt ?? bState.lastComparedAt ?? null,
+    }
+  }
+
+  const mergedMigrated = { ...(a.migratedPlaylists ?? {}), ...(b.migratedPlaylists ?? {}) }
+  const history = Array.isArray(a.history) && a.history.length >= (Array.isArray(b.history) ? b.history.length : 0) ? a.history : b.history
+
+  return withUpdatedAt({
+    ...a,
+    schemaVersion: SCHEMA_VERSION,
+    userId,
+    tracks: nextTracks,
+    history: Array.isArray(history) ? history : [],
+    migratedPlaylists: mergedMigrated,
+    createdAt: a.createdAt ?? b.createdAt ?? new Date().toISOString(),
+  })
+}

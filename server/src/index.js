@@ -50,6 +50,76 @@ if (!process.env.SPOTIFY_REDIRECT_URI && process.env.spotify_redirect_uri) {
 
 const port = Number(process.env.PORT) || 8787
 
+const dataDir = path.join(process.cwd(), 'data')
+const rankingsDir = path.join(dataDir, 'rankings')
+try {
+  fs.mkdirSync(rankingsDir, { recursive: true })
+} catch {
+  // ignore
+}
+
+function safeFileComponent(value) {
+  if (typeof value !== 'string') return 'unknown'
+  const cleaned = value.replaceAll(/[^a-zA-Z0-9_-]/g, '_')
+  return cleaned || 'unknown'
+}
+
+function rankingFilePathForUser(userId) {
+  return path.join(rankingsDir, `${safeFileComponent(userId)}.json`)
+}
+
+function readJsonFile(filePath) {
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(raw)
+  } catch {
+    return null
+  }
+}
+
+function writeJsonFileAtomic(filePath, value) {
+  const tmpPath = `${filePath}.${process.pid}.${Date.now()}.tmp`
+  fs.writeFileSync(tmpPath, JSON.stringify(value, null, 2), 'utf8')
+  fs.renameSync(tmpPath, filePath)
+}
+
+function readBody(req, { maxBytes = 1_000_000 } = {}) {
+  return new Promise((resolve, reject) => {
+    let bytes = 0
+    /** @type {Buffer[]} */
+    const chunks = []
+
+    req.on('data', (chunk) => {
+      bytes += chunk.length
+      if (bytes > maxBytes) {
+        const error = new Error('payload_too_large')
+        error.statusCode = 413
+        reject(error)
+        req.destroy()
+        return
+      }
+      chunks.push(chunk)
+    })
+
+    req.on('end', () => {
+      resolve(Buffer.concat(chunks).toString('utf8'))
+    })
+    req.on('error', reject)
+  })
+}
+
+async function readJsonBody(req, options = {}) {
+  const raw = await readBody(req, options)
+  if (!raw) return null
+  try {
+    return JSON.parse(raw)
+  } catch {
+    const error = new Error('invalid_json')
+    error.statusCode = 400
+    throw error
+  }
+}
+
 function parseCookies(cookieHeader) {
   if (!cookieHeader) return {}
   const pairs = cookieHeader.split(';')
@@ -362,6 +432,66 @@ const server = http.createServer((req, res) => {
     const scopes = typeof cookies.sp_scope === 'string' ? cookies.sp_scope.split(' ').filter(Boolean) : []
     const user = typeof cookies.sp_user_id === 'string' ? { id: cookies.sp_user_id, display_name: cookies.sp_user_name || null } : null
     sendJson(res, 200, { loggedIn, scopes, user })
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/ranking') {
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
+    const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
+    const loggedIn = hasAccess || hasRefresh
+
+    if (!loggedIn || !userId) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const filePath = rankingFilePathForUser(userId)
+    const ranking = readJsonFile(filePath)
+    if (!ranking) {
+      sendJson(res, 200, { ok: true, exists: false, ranking: null })
+      return
+    }
+
+    sendJson(res, 200, { ok: true, exists: true, ranking })
+    return
+  }
+
+  if (req.method === 'PUT' && url.pathname === '/api/ranking') {
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
+    const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
+    const loggedIn = hasAccess || hasRefresh
+
+    if (!loggedIn || !userId) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    ;(async () => {
+      try {
+        const body = await readJsonBody(req, { maxBytes: 2_000_000 })
+        if (!body || typeof body !== 'object') {
+          sendJson(res, 400, { error: 'invalid_body', message: 'Expected JSON object.' })
+          return
+        }
+
+        if (Object.hasOwn(body, 'userId') && body.userId !== userId) {
+          sendJson(res, 400, { error: 'user_mismatch' })
+          return
+        }
+
+        const savedAt = new Date().toISOString()
+        const toStore = { ...body, userId, serverSavedAt: savedAt }
+
+        const filePath = rankingFilePathForUser(userId)
+        writeJsonFileAtomic(filePath, toStore)
+        sendJson(res, 200, { ok: true, savedAt })
+      } catch (error) {
+        sendJson(res, Number(error?.statusCode) || 500, { error: 'ranking_save_failed', message: error?.message })
+      }
+    })()
+
     return
   }
 

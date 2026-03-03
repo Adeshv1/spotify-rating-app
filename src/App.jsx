@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
 import {
   clearPlaylistsCache,
@@ -29,6 +29,7 @@ import {
   TIER_BUCKETS,
   trackKeyOfTrack,
   undoLast,
+  mergeUserRankings,
   writeUserRanking,
 } from './lib/userRankingStore'
 import { pickMatchup } from './lib/matchup'
@@ -54,6 +55,9 @@ function App() {
   const [tracksError, setTracksError] = useState(null)
   const [tracksCache, setTracksCache] = useState(null)
   const [tracksSource, setTracksSource] = useState(null) // 'cache' | 'api'
+
+  const [rankingRevision, setRankingRevision] = useState(0)
+  const [rankingSync, setRankingSync] = useState({ status: 'idle', lastSyncedAt: null, message: null })
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000)
@@ -332,6 +336,65 @@ function App() {
     window.location.reload()
   }
 
+  const syncRankings = useCallback(
+    async ({ force = false } = {}) => {
+      if (!loggedIn || !profile?.id) return
+      const userId = profile.id
+
+      setRankingSync((s) => ({ status: 'syncing', lastSyncedAt: s.lastSyncedAt, message: null }))
+
+      let local = readUserRanking(userId) ?? createEmptyUserRanking({ userId })
+
+      const legacyPrefix = `sp_rank_v1_${userId}_`
+      try {
+        for (let i = 0; i < localStorage.length; i += 1) {
+          const k = localStorage.key(i)
+          if (!k || !k.startsWith(legacyPrefix)) continue
+          const playlistId = k.slice(legacyPrefix.length)
+          if (!playlistId) continue
+          const legacy = readLegacyPlaylistRanking(userId, playlistId)
+          if (legacy) local = mergeLegacyPlaylistRanking(local, legacy, playlistId)
+        }
+      } catch {
+        // ignore
+      }
+
+      try {
+        const res = await fetch('/api/ranking')
+        const data = await res.json().catch(() => null)
+        if (!res.ok) throw new Error(data?.error || data?.message || 'ranking_fetch_failed')
+
+        const serverRanking = data?.exists ? data?.ranking : null
+        const merged = serverRanking ? mergeUserRankings(local, serverRanking) : local
+
+        const hasAny = Boolean(Object.keys(merged?.tracks ?? {}).length)
+        if (hasAny || force) {
+          const putRes = await fetch('/api/ranking', {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(merged),
+          })
+          const putData = await putRes.json().catch(() => null)
+          if (!putRes.ok) throw new Error(putData?.error || putData?.message || 'ranking_save_failed')
+        }
+
+        writeUserRanking(userId, merged)
+        setRankingRevision((r) => r + 1)
+        setRankingSync({ status: 'ok', lastSyncedAt: new Date().toISOString(), message: null })
+      } catch (e) {
+        setRankingSync((s) => ({ status: 'error', lastSyncedAt: s.lastSyncedAt, message: e?.message || 'Sync failed' }))
+      }
+    },
+    [loggedIn, profile?.id],
+  )
+
+  useEffect(() => {
+    if (!loggedIn || !profile?.id) return
+    ;(async () => {
+      await syncRankings({ force: false })
+    })()
+  }, [loggedIn, profile?.id, syncRankings])
+
   if (loading) {
     return (
       <div className="card">
@@ -360,10 +423,22 @@ function App() {
             </p>
             {scopes?.length ? <p className="meta">Scopes: {scopes.join(' ')}</p> : null}
             <button onClick={logout}>Log out</button>
+            <div className="controls">
+              <button onClick={() => syncRankings({ force: true })} disabled={rankingSync.status === 'syncing'}>
+                {rankingSync.status === 'syncing' ? 'Syncing…' : 'Sync rankings'}
+              </button>
+              <span className="sub">
+                {rankingSync.status === 'ok' && rankingSync.lastSyncedAt
+                  ? `synced ${formatDateTime(rankingSync.lastSyncedAt)}`
+                  : rankingSync.status === 'error'
+                    ? `sync error: ${rankingSync.message || 'unknown'}`
+                    : 'not synced yet'}
+              </span>
+            </div>
 
             {selectedPlaylistId ? (
               <PlaylistView
-                key={`${profile?.id || 'anon'}:${selectedPlaylistId}`}
+                key={`${profile?.id || 'anon'}:${selectedPlaylistId}:${rankingRevision}`}
                 playlistsCache={playlistsCache}
                 playlistId={selectedPlaylistId}
                 userId={profile?.id}
@@ -635,18 +710,23 @@ function PlaylistView({
 
 function BucketSeeder({ uniqueTracks, ranking, onChange }) {
   const [query, setQuery] = useState('')
-  const [filterBucket, setFilterBucket] = useState('ALL')
+  const [filterBuckets, setFilterBuckets] = useState([])
+
+  function toggleFilter(bucket) {
+    setFilterBuckets((prev) => (prev.includes(bucket) ? prev.filter((b) => b !== bucket) : prev.concat(bucket)))
+  }
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
+    const filterSet = new Set(filterBuckets)
     return uniqueTracks.filter(({ key, track }) => {
       const state = ranking ? getTrackState(ranking, key) : null
-      if (filterBucket !== 'ALL' && state && state.bucket !== filterBucket) return false
+      if (filterBuckets.length && state && !filterSet.has(state.bucket)) return false
       if (!q) return true
       const hay = `${track?.name ?? ''} ${(track?.artists ?? []).join(' ')}`.toLowerCase()
       return hay.includes(q)
     })
-  }, [uniqueTracks, ranking, query, filterBucket])
+  }, [uniqueTracks, ranking, query, filterBuckets])
 
   return (
     <div className="cardSub">
@@ -664,27 +744,35 @@ function BucketSeeder({ uniqueTracks, ranking, onChange }) {
           placeholder="Search tracks…"
           aria-label="Search tracks"
         />
-        <label className="inlineLabel">
-          Filter
-          <select value={filterBucket} onChange={(e) => setFilterBucket(e.target.value)}>
-            <option value="ALL">All</option>
-            {TIER_BUCKETS.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-            <option value="U">Unseeded</option>
-            <option value="X">Do not rate</option>
-          </select>
-        </label>
+        <div className="filterRow" aria-label="Tier filters">
+          <button className={`filterBtn ${filterBuckets.length === 0 ? 'active' : ''}`} onClick={() => setFilterBuckets([])}>
+            All
+          </button>
+          {TIER_BUCKETS.map((b) => (
+            <button
+              key={b}
+              className={`filterBtn ${filterBuckets.includes(b) ? 'active' : ''}`}
+              onClick={() => toggleFilter(b)}
+            >
+              {b}
+            </button>
+          ))}
+          <button className={`filterBtn ${filterBuckets.includes('U') ? 'active' : ''}`} onClick={() => toggleFilter('U')}>
+            Unseeded
+          </button>
+          <button className={`filterBtn ${filterBuckets.includes('X') ? 'active' : ''}`} onClick={() => toggleFilter('X')}>
+            Do not rate
+          </button>
+        </div>
       </div>
 
       <ul className="seedList">
-        {filtered.map(({ key, track, count }) => {
+        {filtered.map(({ key, track, count }, idx) => {
           const state = ranking ? getTrackState(ranking, key) : null
           const bucket = state?.bucket ?? 'U'
           return (
             <li key={key} className="seedRow">
+              <div className="seedIndex">#{idx + 1}</div>
               <div className="seedMain">
                 <div className="seedTitle">
                   <span>{track?.name || '(untitled track)'}</span>

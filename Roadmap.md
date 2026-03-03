@@ -8,6 +8,7 @@
 + Add tier seeding UI (S/A/B/C/D + Do not rate) (implemented 2026-03-03)
 + Add head-to-head Elo ranking UI with skip + undo + session targets (implemented 2026-03-03)
 + Add leaderboard per tier + all tracks (implemented 2026-03-03)
++ Add server-side ranking persistence + sync across devices (implemented 2026-03-03)
 + Decide Spotify auth approach: auth code + PKCE via `/server` (implemented 2026-03-03)
 + Add Spotify login flow (auth endpoints + client prompt) (implemented 2026-03-03)
 + Fetch + cache current user's playlists (`/me/playlists`) with manual refresh, cache source, and cache age indicator (implemented 2026-03-03)
