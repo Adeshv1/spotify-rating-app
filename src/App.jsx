@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
+import './Dashboard.css'
 import {
   clearPlaylistsCache,
   formatAge,
@@ -669,11 +670,6 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
 
   return (
     <div ref={cardRef} className="artistCard" role="listitem">
-      {artistId ? (
-        <button className="btn small artistCardPlayBtn" onClick={() => openArtistInSpotify(artistId)} title="Open artist in Spotify">
-          Play
-        </button>
-      ) : null}
       <div className="artistCardImage">
         {imageUrl ? (
           <img src={imageUrl} alt={`${artistName}`} loading="lazy" />
@@ -684,16 +680,30 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
         )}
       </div>
       <div className="artistCardBody">
-        <div className="artistCardName">{artistName}</div>
+        <div className="artistCardHeaderRow">
+          <div className="artistCardName">{artistName}</div>
+          {artistId ? (
+            <button
+              className="btn small artistCardPlayBtn"
+              onClick={() => openArtistInSpotify(artistId)}
+              title="Open artist in Spotify"
+            >
+              Play
+            </button>
+          ) : null}
+        </div>
         {Number.isFinite(Number(artist?.artistScore)) ? (
-          <div className="artistCardScore">Score {Math.round(Number(artist.artistScore) || 0)}</div>
+          <div className="artistCardScore">
+            <span className="artistCardScoreLabel">AVG ELO (Top 5):</span>{' '}
+            <span className="eloValue">{Math.round(Number(artist.artistScore) || 0)}</span>
+          </div>
         ) : null}
         <ul className="artistCardTracks" aria-label={`${artistName} top songs`}>
           {tracks.slice(0, 5).map((s) => (
             <li key={s.trackKey} className="artistCardTrack">
               <span className="artistCardTrackName">{s.name || s.trackKey}</span>
               <span className="artistCardTrackRight">
-                <span className="artistCardTrackScore">{Math.round(Number(s.rating) || 0)}</span>
+                <span className="artistCardTrackScore eloValue">{Math.round(Number(s.rating) || 0)}</span>
                 {(() => {
                   const trackId =
                     (typeof s?.id === 'string' ? s.id : null) ||
@@ -1074,7 +1084,7 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
 	                        <div className="cellSub">{t.artists?.length ? t.artists.join(', ') : 'Unknown artist'}</div>
 	                      </td>
 	                      <td className="right">
-	                        <span className="cellSub">{Math.round(Number(t.rating) || 0)}</span>
+	                        <span className="cellSub eloValue">{Math.round(Number(t.rating) || 0)}</span>
 	                      </td>
 	                      <td className="right">
 	                        {trackId ? (
@@ -1151,7 +1161,7 @@ function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwri
 	                      <span className="cellSub">{a.tracks}</span>
 	                    </td>
 	                    <td className="right">
-	                      <span className="cellSub">{Math.round(Number(a.avgRating) || 0)}</span>
+	                      <span className="cellSub eloValue">{Math.round(Number(a.avgRating) || 0)}</span>
 	                    </td>
 	                    <td className="right">
 	                      {a?.bestTrackId ? (

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_33FtExk8Vj24Zmxu0IPnRa_artists",
+  "fetchedAt": "2026-03-03T23:27:41.044Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.044Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6DARBhWbfcS9E4yJzcliqQ",
+        "name": "Karan Aujla"
+      },
+      {
+        "id": "3GOxylxqB046EtIQynePq2",
+        "name": "Yeah Proof"
+      }
+    ]
+  }
+}

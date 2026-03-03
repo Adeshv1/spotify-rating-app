@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7mYMLOOaJ1Gk5gBhe8N2Ao_artists",
+  "fetchedAt": "2026-03-03T23:27:41.347Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.347Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5CGQa62CAweD76eHlDmp1m",
+        "name": "Dilpreet Dhillon"
+      },
+      {
+        "id": "6lMIhndzcevFkVWSJnXPt2",
+        "name": "Desi Crew"
+      },
+      {
+        "id": "7A4obJxXx9kh8M7qTP2PmI",
+        "name": "Sandhu Saiyanwala"
+      }
+    ]
+  }
+}

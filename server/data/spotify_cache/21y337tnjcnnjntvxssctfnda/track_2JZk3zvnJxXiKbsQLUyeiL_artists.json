@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2JZk3zvnJxXiKbsQLUyeiL_artists",
+  "fetchedAt": "2026-03-03T23:27:41.301Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.301Z",
+  "data": {
+    "artists": [
+      {
+        "id": "1t44XSPiW7z8PebleCo7uP",
+        "name": "Fateh"
+      },
+      {
+        "id": "6MmvoeQxFPr8VWERxYdE5f",
+        "name": "Straight Bank"
+      }
+    ]
+  }
+}

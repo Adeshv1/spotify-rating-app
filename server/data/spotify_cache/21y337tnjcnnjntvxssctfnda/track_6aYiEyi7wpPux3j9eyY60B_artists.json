@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_6aYiEyi7wpPux3j9eyY60B_artists",
+  "fetchedAt": "2026-03-03T23:27:40.856Z",
+  "lastRefreshedAt": "2026-03-03T23:27:40.856Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "503jMzlAxbEpfltywmU45E",
+        "name": "SOE"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      }
+    ]
+  }
+}

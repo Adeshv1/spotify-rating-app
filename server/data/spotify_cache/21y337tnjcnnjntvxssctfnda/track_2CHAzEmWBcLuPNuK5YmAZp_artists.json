@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2CHAzEmWBcLuPNuK5YmAZp_artists",
+  "fetchedAt": "2026-03-03T23:27:41.376Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.376Z",
+  "data": {
+    "artists": [
+      {
+        "id": "28tDK1f7CGg1pjshmxZp96",
+        "name": "Arsh Randhawa"
+      },
+      {
+        "id": "4CBUXK6IUn3TqFUFgQw859",
+        "name": "Blaze"
+      }
+    ]
+  }
+}

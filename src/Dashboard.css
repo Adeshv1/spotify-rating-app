@@ -1,0 +1,190 @@
+/* Dashboard UI polish overrides.
+   Keep this file presentation-only (no data/state changes). */
+
+.dashboardPage .dashPanelBodyTight {
+  padding: 0;
+}
+
+.dashboardPage .dashTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.dashboardPage .dashTable th,
+.dashboardPage .dashTable td {
+  padding: 0.78rem 0.9rem;
+  border-bottom: 1px solid var(--surface-border);
+  vertical-align: middle;
+}
+
+.dashboardPage .dashTable th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  .dashboardPage .dashTable th {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.dashboardPage .dashTable td {
+  transition: background 120ms ease;
+}
+
+.dashboardPage .dashTableRow:hover td {
+  background: rgba(122, 162, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .dashboardPage .dashTableRow:hover td {
+    background: rgba(47, 109, 255, 0.08);
+  }
+}
+
+.dashboardPage .rowPlayBtn {
+  display: inline-flex;
+}
+
+.dashboardPage .dashTable .cellTitle,
+.dashboardPage .dashTable .cellSub {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.dashboardPage .dashColIndex {
+  width: 56px;
+}
+
+.dashboardPage .dashColTracks {
+  width: 86px;
+}
+
+.dashboardPage .dashColElo {
+  width: 84px;
+}
+
+.dashboardPage .dashColPlay {
+  width: 76px;
+}
+
+.dashboardPage .eloValue {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 650;
+}
+
+@media (prefers-color-scheme: light) {
+  .dashboardPage .eloValue {
+    color: rgba(17, 24, 39, 0.84);
+  }
+}
+
+.dashboardPage .artistCard {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+@media (hover: hover) {
+  .dashboardPage .artistCard:hover {
+    transform: translateY(-1px);
+    border-color: rgba(122, 162, 255, 0.32);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+}
+
+@media (prefers-color-scheme: light) and (hover: hover) {
+  .dashboardPage .artistCard:hover {
+    box-shadow: 0 12px 26px rgba(17, 24, 39, 0.12);
+  }
+}
+
+.dashboardPage .artistCardHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.dashboardPage .artistCardPlayBtn {
+  flex: 0 0 auto;
+}
+
+.dashboardPage .artistCardName {
+  font-weight: 760;
+  font-size: 1.05rem;
+  min-width: 0;
+}
+
+.dashboardPage .artistCardScoreLabel {
+  color: var(--text-muted-2);
+}
+
+.dashboardPage .artistCardTracks {
+  font-size: 0.92rem;
+}
+
+.dashboardPage .artistCardTrack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.dashboardPage .artistCardTrackRight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  min-width: 6.5rem;
+  text-align: right;
+}
+
+.dashboardPage .artistCardTrackName {
+  font-weight: 500;
+  color: var(--text-muted-2);
+}
+
+.dashboardPage .artistCardTrackScore.eloValue {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: light) {
+  .dashboardPage .artistCardTrackScore.eloValue {
+    color: rgba(17, 24, 39, 0.68);
+  }
+}
+
+.dashboardPage .artistCardTrackPlayBtn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+}
+
+.dashboardPage .artistCardTrack:hover .artistCardTrackPlayBtn,
+.dashboardPage .artistCard:focus-within .artistCardTrackPlayBtn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (hover: none) {
+  .dashboardPage .artistCardTrackPlayBtn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

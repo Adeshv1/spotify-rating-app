@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_6ygiy70ujkNOYXM1tQuMNe_artists",
+  "fetchedAt": "2026-03-03T23:27:41.181Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.181Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6DARBhWbfcS9E4yJzcliqQ",
+        "name": "Karan Aujla"
+      },
+      {
+        "id": "3nqS8jzqmsPKFJTp0BOIel",
+        "name": "Ikky"
+      },
+      {
+        "id": "5TvdGhdmRObqOkU6eGfXb5",
+        "name": "Preston Pablo"
+      }
+    ]
+  }
+}

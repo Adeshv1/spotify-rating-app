@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_4Gd2y2LG9yW228LBzXEjtA_artists",
+  "fetchedAt": "2026-03-03T23:27:40.872Z",
+  "lastRefreshedAt": "2026-03-03T23:27:40.872Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3bCfmBmsKvp4UXialp6xNZ",
+        "name": "Wazir Patar"
+      },
+      {
+        "id": "0sYnCQ9Eb3RbEHOqVQST8d",
+        "name": "Roop Bhullar"
+      }
+    ]
+  }
+}

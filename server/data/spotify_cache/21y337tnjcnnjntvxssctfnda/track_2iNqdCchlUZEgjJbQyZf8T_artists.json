@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2iNqdCchlUZEgjJbQyZf8T_artists",
+  "fetchedAt": "2026-03-03T23:27:41.364Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.364Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4oVMLzAqW6qhRpZWt8fNw4",
+        "name": "Kailash Kher"
+      },
+      {
+        "id": "3PgeUFj9oHU4K4RGaITz2f",
+        "name": "Paresh Kamath"
+      },
+      {
+        "id": "79sho4jpEGoCCC51KHnNSJ",
+        "name": "Naresh Kamath"
+      }
+    ]
+  }
+}

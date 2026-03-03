@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3D0pmiK3zyF9PudyJ8mkor_artists",
+  "fetchedAt": "2026-03-03T23:27:41.773Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.773Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6LEG9Ld1aLImEFEVHdWNSB",
+        "name": "AP Dhillon"
+      },
+      {
+        "id": "6833GgqHOy9y9Dqnsxko1u",
+        "name": "Amari"
+      }
+    ]
+  }
+}

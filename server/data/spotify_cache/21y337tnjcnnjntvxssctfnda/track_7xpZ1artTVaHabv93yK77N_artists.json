@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7xpZ1artTVaHabv93yK77N_artists",
+  "fetchedAt": "2026-03-03T23:27:41.179Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.179Z",
+  "data": {
+    "artists": [
+      {
+        "id": "2LKbmSS1wx5pW7YfRkIgg6",
+        "name": "SARRB"
+      },
+      {
+        "id": "0Fvud1OrUvlMHqxbEGmtnj",
+        "name": "Starboy X"
+      }
+    ]
+  }
+}

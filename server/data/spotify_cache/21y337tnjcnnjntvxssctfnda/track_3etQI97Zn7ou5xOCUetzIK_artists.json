@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3etQI97Zn7ou5xOCUetzIK_artists",
+  "fetchedAt": "2026-03-03T23:27:41.193Z",
+  "lastRefreshedAt": "2026-03-03T23:27:41.193Z",
+  "data": {
+    "artists": [
+      {
+        "id": "2FddT4wzlf0OF7OXFtKloC",
+        "name": "Guru Sekhon"
+      },
+      {
+        "id": "6YNHmTLaBKTLszcuUsaXCz",
+        "name": "Bugzy"
+      }
+    ]
+  }
+}

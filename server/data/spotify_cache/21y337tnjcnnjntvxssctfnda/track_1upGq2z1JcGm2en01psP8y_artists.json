@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_1upGq2z1JcGm2en01psP8y_artists",
+  "fetchedAt": "2026-03-03T23:27:40.857Z",
+  "lastRefreshedAt": "2026-03-03T23:27:40.857Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4eu7AyzvnafwOygTQlfAMu",
+        "name": "Baggh-e SMG"
+      },
+      {
+        "id": "3yXzSYXBOTZ0m1QAfjlzKK",
+        "name": "Farmaan SMG"
+      },
+      {
+        "id": "0z4Mzficie9vUzDmz4Hy9G",
+        "name": "BIG KAY SMG"
+      }
+    ]
+  }
+}
