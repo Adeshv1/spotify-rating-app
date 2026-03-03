@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3Hm8hD195kNn3FujGljVEW_artists",
+  "fetchedAt": "2026-03-03T21:46:36.906Z",
+  "lastRefreshedAt": "2026-03-03T21:46:36.906Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6DARBhWbfcS9E4yJzcliqQ",
+        "name": "Karan Aujla"
+      },
+      {
+        "id": "3nqS8jzqmsPKFJTp0BOIel",
+        "name": "Ikky"
+      }
+    ]
+  }
+}

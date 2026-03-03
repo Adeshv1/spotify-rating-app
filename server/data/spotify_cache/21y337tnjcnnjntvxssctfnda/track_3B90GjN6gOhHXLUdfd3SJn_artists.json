@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3B90GjN6gOhHXLUdfd3SJn_artists",
+  "fetchedAt": "2026-03-03T21:46:42.958Z",
+  "lastRefreshedAt": "2026-03-03T21:46:42.958Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4C19flKmMm12gRxmBJWMCV",
+        "name": "Varinder Brar"
+      },
+      {
+        "id": "2X1Bu6jg2Se8OclSxn4byQ",
+        "name": "Veer Sandhu"
+      }
+    ]
+  }
+}

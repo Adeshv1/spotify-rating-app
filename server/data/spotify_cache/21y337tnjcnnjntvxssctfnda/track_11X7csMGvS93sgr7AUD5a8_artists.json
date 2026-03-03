@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_11X7csMGvS93sgr7AUD5a8_artists",
+  "fetchedAt": "2026-03-03T21:46:42.895Z",
+  "lastRefreshedAt": "2026-03-03T21:46:42.895Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3j20rwZXFF139vFc4tt8Rp",
+        "name": "Dhaliwal"
+      },
+      {
+        "id": "5Us2dsq4VHlfLbKOrskg7K",
+        "name": "Mxrci"
+      }
+    ]
+  }
+}

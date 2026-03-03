@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "createdAt": "2026-03-03T07:07:44.488Z",
-  "updatedAt": "2026-03-03T19:56:14.116Z",
+  "updatedAt": "2026-03-03T21:47:46.222Z",
   "tracks": {
     "spid:4TEAN4lkqV5W3gkVsWuTXw": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -13,7 +13,7 @@
       "lastComparedAt": null
     },
     "spid:54bTwHYNtnmyRaz3Cg4YOx": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 1,
       "wins": 0,
@@ -29,7 +29,7 @@
       "lastComparedAt": "2026-03-03T19:52:25.751Z"
     },
     "spid:5kO2QYkB7zuGuD6lXB6uxa": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -37,15 +37,15 @@
       "lastComparedAt": null
     },
     "spid:2PG8KMUDxTr5sDEB1Xn4So": {
-      "bucket": "S",
-      "rating": 1000,
-      "games": 0,
-      "wins": 0,
+      "bucket": "U",
+      "rating": 1012,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
-      "lastComparedAt": null
+      "lastComparedAt": "2026-03-03T21:39:46.853Z"
     },
     "spid:7vbA3HRdGmY2oFsDGCiS7W": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -53,7 +53,7 @@
       "lastComparedAt": null
     },
     "spid:2z93Ew2u4nDGsD3xJIDoDy": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -77,12 +77,12 @@
       "lastComparedAt": null
     },
     "spid:076OjFSrSNg1uwxNCuXbeM": {
-      "bucket": "S",
-      "rating": 1000,
-      "games": 0,
+      "bucket": "U",
+      "rating": 988,
+      "games": 1,
       "wins": 0,
-      "losses": 0,
-      "lastComparedAt": null
+      "losses": 1,
+      "lastComparedAt": "2026-03-03T21:39:46.853Z"
     },
     "spid:5QcakoaIefSwMlOr04uhSO": {
       "bucket": "U",
@@ -93,7 +93,7 @@
       "lastComparedAt": null
     },
     "spid:1mWZtc7oYHTR8tbTF3gSxp": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -133,7 +133,7 @@
       "lastComparedAt": null
     },
     "spid:0xVK9FBdiXLpvGEX5PNG38": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -149,7 +149,7 @@
       "lastComparedAt": null
     },
     "spid:05WduITDDUt1QARk6DaZp3": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -157,7 +157,7 @@
       "lastComparedAt": null
     },
     "spid:7JVpb6CY3I1JwQCIEgw9XT": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -165,7 +165,7 @@
       "lastComparedAt": null
     },
     "spid:3i4pUaHM581r5CKeKAOlb9": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -173,7 +173,7 @@
       "lastComparedAt": null
     },
     "spid:5LPRS5eS56UiwTnZVMDis8": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -181,7 +181,7 @@
       "lastComparedAt": null
     },
     "spid:35nhjyhtDdeDIyibcQ7Aa0": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -197,7 +197,7 @@
       "lastComparedAt": null
     },
     "spid:5MY2dkCcqU0dOw80ZDD74c": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -205,7 +205,7 @@
       "lastComparedAt": null
     },
     "spid:0aikTnIlTx4fKJzg8q56Ax": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -221,7 +221,7 @@
       "lastComparedAt": null
     },
     "spid:6DSW4CkHDz6G8xP7t4y2kC": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -229,7 +229,7 @@
       "lastComparedAt": null
     },
     "spid:6dgYHmc5yBnQFI4FSCbp6y": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -237,7 +237,7 @@
       "lastComparedAt": null
     },
     "spid:3Zkd2rqCq0MuJXoVTMmg08": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -253,7 +253,7 @@
       "lastComparedAt": null
     },
     "spid:5RaK2eqyHaBSyjEtI27w3T": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -261,7 +261,7 @@
       "lastComparedAt": null
     },
     "spid:3h2EibJZalaVDB041GfYU7": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -269,7 +269,7 @@
       "lastComparedAt": null
     },
     "spid:2Bh6ALRg9lIYXGrFAahxu6": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -277,7 +277,7 @@
       "lastComparedAt": null
     },
     "spid:0INKKFVnFs7i02XCK6krkD": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -285,7 +285,7 @@
       "lastComparedAt": null
     },
     "spid:7080wmYzn5pzn6bd5RCS5p": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -293,7 +293,7 @@
       "lastComparedAt": null
     },
     "spid:27ooPYgBlXhugk9IQPZMHA": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -301,7 +301,7 @@
       "lastComparedAt": null
     },
     "spid:5K1qTme8mUcrIj9tEM5L5K": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -309,7 +309,7 @@
       "lastComparedAt": null
     },
     "spid:07fDD54BLVrdAvM4krVGlG": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -317,7 +317,7 @@
       "lastComparedAt": null
     },
     "spid:2u7fluplt9dT3aoLmCMzHL": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -325,7 +325,7 @@
       "lastComparedAt": null
     },
     "spid:0bIYsb4AMIQQUvKepMXbAC": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -333,7 +333,7 @@
       "lastComparedAt": null
     },
     "spid:2SlruWHh8xSrv4XGeHelKq": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -341,7 +341,7 @@
       "lastComparedAt": null
     },
     "spid:5eAtCGoVWr3rb1oDbXY2s5": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -349,7 +349,7 @@
       "lastComparedAt": null
     },
     "spid:5olluo8Xh733gDwhmchDlp": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -381,7 +381,7 @@
       "lastComparedAt": null
     },
     "spid:5rh9NbN9vMYYF9sG4DXjVx": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -389,7 +389,7 @@
       "lastComparedAt": null
     },
     "spid:0febwTwLDSZzrt46i1RBF5": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -397,7 +397,7 @@
       "lastComparedAt": null
     },
     "spid:0SBI2P0sOKIBnr6cPcojbH": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -405,7 +405,7 @@
       "lastComparedAt": null
     },
     "spid:7lzqXBwmYwnijurx14e60e": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -421,7 +421,7 @@
       "lastComparedAt": null
     },
     "spid:3hezpjo4jzOc9PjuIxpDRX": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -429,7 +429,7 @@
       "lastComparedAt": null
     },
     "spid:2CBrgqL79JnvwblU9ePMjw": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -437,7 +437,7 @@
       "lastComparedAt": null
     },
     "spid:4oy3rN2WstnyC1UxstIe6W": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -445,7 +445,7 @@
       "lastComparedAt": null
     },
     "spid:1oMW4IqpV4ulyFYk16YzSl": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -453,7 +453,7 @@
       "lastComparedAt": null
     },
     "spid:5qXOKKtAPWAzsf2fEQIxIq": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -461,7 +461,7 @@
       "lastComparedAt": null
     },
     "spid:36jXtcCyZerO3rnj1JzR7n": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -469,7 +469,7 @@
       "lastComparedAt": null
     },
     "spid:1upGq2z1JcGm2en01psP8y": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -477,7 +477,7 @@
       "lastComparedAt": null
     },
     "spid:78kfPNNJmy5mRjnB4iinol": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -485,7 +485,7 @@
       "lastComparedAt": null
     },
     "spid:77om6Ahg6p2FV0ubRJhiyy": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -493,7 +493,7 @@
       "lastComparedAt": null
     },
     "spid:285YOhGpgXRFVz1XcmEXct": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -501,7 +501,7 @@
       "lastComparedAt": null
     },
     "spid:0BlESrrPor7TRRpRz3nRZ5": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -509,7 +509,7 @@
       "lastComparedAt": null
     },
     "spid:6aYiEyi7wpPux3j9eyY60B": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -517,7 +517,7 @@
       "lastComparedAt": null
     },
     "spid:15rthophXvWxPFQqYVRjSE": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -525,7 +525,7 @@
       "lastComparedAt": null
     },
     "spid:4rkWM35hG9c5Sm0wSmDAsK": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -533,7 +533,7 @@
       "lastComparedAt": null
     },
     "spid:3QdKb74HoetwjhLmPnj9fu": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -541,7 +541,7 @@
       "lastComparedAt": null
     },
     "spid:36SPmI1EgX0jii5BAWM6pf": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -549,7 +549,7 @@
       "lastComparedAt": null
     },
     "spid:3W7LZdsp9KhFS3j98wSooG": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -557,7 +557,7 @@
       "lastComparedAt": null
     },
     "spid:1nx8lXVoB0vskUgrqvdleN": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -565,7 +565,7 @@
       "lastComparedAt": null
     },
     "spid:4d2jV5fmX6hbRwaRbY39dt": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -573,7 +573,7 @@
       "lastComparedAt": null
     },
     "spid:2nLNVBcAbuJcUGvGzXQrqw": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -581,7 +581,7 @@
       "lastComparedAt": null
     },
     "spid:1JghUlaAFniZY1hUzuJfDQ": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -589,7 +589,7 @@
       "lastComparedAt": null
     },
     "spid:0IU3udts4NQ1C4KHRfv6sv": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -597,7 +597,7 @@
       "lastComparedAt": null
     },
     "spid:10Pjg6e1n3KdNfRryu5j8F": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -605,7 +605,7 @@
       "lastComparedAt": null
     },
     "spid:2VKIsMhpHQ4jLm0XuN91TU": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -613,7 +613,7 @@
       "lastComparedAt": null
     },
     "spid:0YQJoDL6f46J0n1rOVkpxJ": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -621,7 +621,7 @@
       "lastComparedAt": null
     },
     "spid:0mNxYkKtXVY9HcFTuTmSPP": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -629,7 +629,7 @@
       "lastComparedAt": null
     },
     "spid:6K66rGR4cE0XEA6Sin3BP7": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -637,7 +637,7 @@
       "lastComparedAt": null
     },
     "spid:20BfzSN64kGmkDRUHsuhcq": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -645,7 +645,7 @@
       "lastComparedAt": null
     },
     "spid:7kANgPjomfzBP40V2GOwDv": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -653,7 +653,7 @@
       "lastComparedAt": null
     },
     "spid:3nSiiMEFWbCSuCbN50j1io": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -661,7 +661,7 @@
       "lastComparedAt": null
     },
     "spid:6DIQQB9PpfjDqOENnvtEio": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -669,7 +669,7 @@
       "lastComparedAt": null
     },
     "spid:4XAW7IpR4FSnwAYFdAjBLA": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -677,7 +677,7 @@
       "lastComparedAt": null
     },
     "spid:70faEzwLkHuo8tby7tdbio": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -685,7 +685,7 @@
       "lastComparedAt": null
     },
     "spid:0wLTjfoVYYfVG5TLb2yRoj": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -693,7 +693,7 @@
       "lastComparedAt": null
     },
     "spid:3qABqGH5Dv66oPSDrmiZCn": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -701,7 +701,7 @@
       "lastComparedAt": null
     },
     "spid:0JPHLanYRqJ5IsUaE7sYBL": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -709,7 +709,7 @@
       "lastComparedAt": null
     },
     "spid:5KE5dZEg15RPmaPElJUTKa": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -717,7 +717,7 @@
       "lastComparedAt": null
     },
     "spid:61VOm3O94mAKaRZ5GBTuri": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -725,7 +725,7 @@
       "lastComparedAt": null
     },
     "spid:7KmCQLSSde0UX5OqCgvGN9": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -733,7 +733,7 @@
       "lastComparedAt": null
     },
     "spid:33FtExk8Vj24Zmxu0IPnRa": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -741,7 +741,7 @@
       "lastComparedAt": null
     },
     "spid:5ouREJYZCYqwF0p7VeUtfH": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -749,7 +749,7 @@
       "lastComparedAt": null
     },
     "spid:4igLNfpsIII6FvnR9W2kI8": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -757,7 +757,7 @@
       "lastComparedAt": null
     },
     "spid:11FoY6Yj3iknqKuky8yv46": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -765,7 +765,7 @@
       "lastComparedAt": null
     },
     "spid:62R76FmY8CrbfkqYJRs91K": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -781,7 +781,7 @@
       "lastComparedAt": null
     },
     "spid:74NglPivWzHd1NAsRPSABJ": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -789,7 +789,7 @@
       "lastComparedAt": null
     },
     "spid:1u1mZ6jV4Bmc3SCDJdUGbk": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -797,7 +797,7 @@
       "lastComparedAt": null
     },
     "spid:0sps5UVl5nsm5S9hXSe1z2": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -805,7 +805,7 @@
       "lastComparedAt": null
     },
     "spid:4K5aBuakMjnDhFa56CmlHC": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -813,7 +813,7 @@
       "lastComparedAt": null
     },
     "spid:4Gd2y2LG9yW228LBzXEjtA": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -821,7 +821,7 @@
       "lastComparedAt": null
     },
     "spid:482HfbDPKmeYoj564OyTAX": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -829,7 +829,7 @@
       "lastComparedAt": null
     },
     "spid:6Y33cQ08D3CDJ7BJheHcxO": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -837,7 +837,7 @@
       "lastComparedAt": null
     },
     "spid:1VGYwhhVvwPVj4Gl9kGXJT": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -845,7 +845,7 @@
       "lastComparedAt": null
     },
     "spid:6osUcWPtQAnaYFgPeURwBd": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -853,7 +853,7 @@
       "lastComparedAt": null
     },
     "spid:5mp7gUtETAxyAaC9Q1jsiX": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -861,7 +861,7 @@
       "lastComparedAt": null
     },
     "spid:4ukBDoz8X3TD9DZxeQV3BU": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -869,7 +869,7 @@
       "lastComparedAt": null
     },
     "spid:7AW4g4I9fPfUIyqtbsuAkM": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -877,7 +877,7 @@
       "lastComparedAt": null
     },
     "spid:54gi1uMV6fHYhLmfBfhALE": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -885,7 +885,7 @@
       "lastComparedAt": null
     },
     "spid:5bGRV1Jo5NKJSN9XDdV4T7": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -893,7 +893,7 @@
       "lastComparedAt": null
     },
     "spid:7yDHHVKLbvDmVw1XXhDDIO": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -901,7 +901,7 @@
       "lastComparedAt": null
     },
     "spid:4l8WHDKXzN22fSIq7Vw4Wq": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -909,7 +909,7 @@
       "lastComparedAt": null
     },
     "spid:2vypdX5UtDcNTXKWJWNga1": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -917,7 +917,7 @@
       "lastComparedAt": null
     },
     "spid:11FzxuVIoOWo07FyGwT8iR": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -925,7 +925,7 @@
       "lastComparedAt": null
     },
     "spid:5pswO9oQUB8uJtvpmxbeTV": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -933,7 +933,7 @@
       "lastComparedAt": null
     },
     "spid:7Gm3V7q7zm5byzS0QQ8VHn": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -941,7 +941,7 @@
       "lastComparedAt": null
     },
     "spid:45FFMb6wv36U1xduNY6TyO": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -949,7 +949,7 @@
       "lastComparedAt": null
     },
     "spid:14gr2kwucVsBHtLYhzgYpj": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -957,7 +957,7 @@
       "lastComparedAt": null
     },
     "spid:3D0pmiK3zyF9PudyJ8mkor": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -965,7 +965,7 @@
       "lastComparedAt": null
     },
     "spid:0snQrp1VaY5Pj1YIHRJpRJ": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -973,7 +973,7 @@
       "lastComparedAt": null
     },
     "spid:7xpZ1artTVaHabv93yK77N": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -981,7 +981,7 @@
       "lastComparedAt": null
     },
     "spid:4QUy70hahU2dhIhXciG5MC": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -989,7 +989,7 @@
       "lastComparedAt": null
     },
     "spid:1Er6TEtbyuW1b9QtBVkggD": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -997,7 +997,7 @@
       "lastComparedAt": null
     },
     "spid:6ygiy70ujkNOYXM1tQuMNe": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1005,7 +1005,7 @@
       "lastComparedAt": null
     },
     "spid:2zkp8sFTnlN7xBrxnG5PA6": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1013,7 +1013,7 @@
       "lastComparedAt": null
     },
     "spid:5yj7D4UllTkAccTmROibCQ": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1021,7 +1021,7 @@
       "lastComparedAt": null
     },
     "spid:2JZk3zvnJxXiKbsQLUyeiL": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1029,7 +1029,7 @@
       "lastComparedAt": null
     },
     "spid:1sz9AnKEAHUgiufbzwQJoT": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1037,7 +1037,7 @@
       "lastComparedAt": null
     },
     "spid:1Fw5ukhflInIR231hZlCKm": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1045,7 +1045,7 @@
       "lastComparedAt": null
     },
     "spid:7hPhbMauMl0rHiowYNbI4n": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1053,7 +1053,7 @@
       "lastComparedAt": null
     },
     "spid:1rtqV8vLqY6bvFw1Mna6rs": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1061,7 +1061,7 @@
       "lastComparedAt": null
     },
     "spid:2nxQsbR0Cqy4MPI6vftwyX": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1069,7 +1069,7 @@
       "lastComparedAt": null
     },
     "spid:4NzKxq8OSVhCKvLNG16ebb": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1077,7 +1077,7 @@
       "lastComparedAt": null
     },
     "spid:03yKEFruN3BS2coglBtt2N": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1085,7 +1085,7 @@
       "lastComparedAt": null
     },
     "spid:63Qi4T1xURlOtbQEGyeJao": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1101,7 +1101,7 @@
       "lastComparedAt": null
     },
     "spid:2CHAzEmWBcLuPNuK5YmAZp": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1109,7 +1109,7 @@
       "lastComparedAt": null
     },
     "spid:2qJLxFoFXlK7VsUqUDJXEc": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1117,7 +1117,7 @@
       "lastComparedAt": null
     },
     "spid:384kEWAIjI7xR6tma5g65a": {
-      "bucket": "S",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1125,7 +1125,7 @@
       "lastComparedAt": null
     },
     "spid:13O0A6hqW8oHtQPr2I1vvd": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1133,7 +1133,7 @@
       "lastComparedAt": null
     },
     "spid:4QwDfdbahBjOvORJvWme5L": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1141,7 +1141,7 @@
       "lastComparedAt": null
     },
     "spid:4u5AgS9gLOPy69YxTQuPz2": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1149,7 +1149,7 @@
       "lastComparedAt": null
     },
     "spid:52XpQt2fDLozI4qlhYvWl0": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1157,7 +1157,7 @@
       "lastComparedAt": null
     },
     "spid:5DVnSQ90r2M3gm6XbgTCLp": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1165,7 +1165,7 @@
       "lastComparedAt": null
     },
     "spid:58f4twRnbZOOVUhMUpplJ4": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1173,7 +1173,7 @@
       "lastComparedAt": null
     },
     "spid:7mYMLOOaJ1Gk5gBhe8N2Ao": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1181,7 +1181,7 @@
       "lastComparedAt": null
     },
     "spid:2iNqdCchlUZEgjJbQyZf8T": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1189,7 +1189,7 @@
       "lastComparedAt": null
     },
     "spid:1w12WokQbN5Ic0SpCJhHZm": {
-      "bucket": "D",
+      "bucket": "U",
       "rating": 1000,
       "games": 0,
       "wins": 0,
@@ -1307,8 +1307,52 @@
         "losses": 1,
         "lastComparedAt": "2026-03-03T19:52:31.666Z"
       }
+    },
+    {
+      "at": "2026-03-03T21:39:46.853Z",
+      "type": "duel",
+      "leftKey": "spid:076OjFSrSNg1uwxNCuXbeM",
+      "rightKey": "spid:2PG8KMUDxTr5sDEB1Xn4So",
+      "winnerKey": "spid:2PG8KMUDxTr5sDEB1Xn4So",
+      "context": null,
+      "prev": {
+        "left": {
+          "bucket": "S",
+          "rating": 1000,
+          "games": 0,
+          "wins": 0,
+          "losses": 0,
+          "lastComparedAt": null
+        },
+        "right": {
+          "bucket": "S",
+          "rating": 1000,
+          "games": 0,
+          "wins": 0,
+          "losses": 0,
+          "lastComparedAt": null
+        }
+      },
+      "next": {
+        "left": {
+          "bucket": "S",
+          "rating": 988,
+          "games": 1,
+          "wins": 0,
+          "losses": 1,
+          "lastComparedAt": "2026-03-03T21:39:46.853Z"
+        },
+        "right": {
+          "bucket": "S",
+          "rating": 1012,
+          "games": 1,
+          "wins": 1,
+          "losses": 0,
+          "lastComparedAt": "2026-03-03T21:39:46.853Z"
+        }
+      }
     }
   ],
   "migratedPlaylists": {},
-  "serverSavedAt": "2026-03-03T19:56:15.991Z"
+  "serverSavedAt": "2026-03-03T21:47:47.228Z"
 }

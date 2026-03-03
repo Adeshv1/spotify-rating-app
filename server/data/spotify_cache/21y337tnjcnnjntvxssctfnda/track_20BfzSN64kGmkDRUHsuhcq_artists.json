@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_20BfzSN64kGmkDRUHsuhcq_artists",
+  "fetchedAt": "2026-03-03T21:46:43.266Z",
+  "lastRefreshedAt": "2026-03-03T21:46:43.266Z",
+  "data": {
+    "artists": [
+      {
+        "id": "30QXHMkDM1bkVffpzvrZEy",
+        "name": "Ekam Sudhar"
+      },
+      {
+        "id": "3fn50P81Whm1meTnMmS8zX",
+        "name": "Pavitar Lassoi"
+      },
+      {
+        "id": "04h37X9hVdRuKEbl2y9naq",
+        "name": "Jang Dhillon"
+      }
+    ]
+  }
+}

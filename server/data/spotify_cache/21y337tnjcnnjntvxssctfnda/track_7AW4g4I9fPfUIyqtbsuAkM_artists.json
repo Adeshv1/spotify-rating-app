@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7AW4g4I9fPfUIyqtbsuAkM_artists",
+  "fetchedAt": "2026-03-03T21:46:42.827Z",
+  "lastRefreshedAt": "2026-03-03T21:46:42.827Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6LEG9Ld1aLImEFEVHdWNSB",
+        "name": "AP Dhillon"
+      },
+      {
+        "id": "5DHi2MeoRgAwPE0A0qwRMl",
+        "name": "Gurinder Gill"
+      },
+      {
+        "id": "4vvW590Gq8dNWsP5BM9FkS",
+        "name": "Gminxr"
+      }
+    ]
+  }
+}

@@ -33,11 +33,18 @@ function pickTrackItem(item) {
   if (typeof entry.type === 'string' && entry.type !== 'track') return null
 
   const artists = Array.isArray(entry.artists) ? entry.artists : []
+  const artistPairs = artists
+    .map((a) => ({
+      name: typeof a?.name === 'string' ? a.name : null,
+      id: typeof a?.id === 'string' ? a.id : null,
+    }))
+    .filter((a) => a.name)
   return {
     addedAt: typeof item.added_at === 'string' ? item.added_at : null,
     id: entry.id ?? null,
     name: entry.name ?? null,
-    artists: artists.map((a) => a?.name).filter(Boolean),
+    artists: artistPairs.map((a) => a.name),
+    artistIds: artistPairs.map((a) => a.id),
     album: typeof entry.album?.name === 'string' ? entry.album.name : null,
     durationMs: typeof entry.duration_ms === 'number' ? entry.duration_ms : null,
     explicit: typeof entry.explicit === 'boolean' ? entry.explicit : null,
@@ -140,7 +147,7 @@ export function writePlaylistTracksCache(
     // Quota fallback: cache only minimal fields.
     const minimal = {
       ...record,
-      items: items.map((t) => ({ addedAt: t.addedAt, id: t.id, name: t.name, artists: t.artists })),
+      items: items.map((t) => ({ addedAt: t.addedAt, id: t.id, name: t.name, artists: t.artists, artistIds: t.artistIds })),
     }
     try {
       localStorage.setItem(keyForPlaylistTracks(userId, playlistId), JSON.stringify(minimal))

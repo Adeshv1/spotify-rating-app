@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0INKKFVnFs7i02XCK6krkD_artists",
+  "fetchedAt": "2026-03-03T21:46:37.279Z",
+  "lastRefreshedAt": "2026-03-03T21:46:37.279Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6Yw8Jl1i7Rb1sznqyPYocL",
+        "name": "Jassi Gosal"
+      },
+      {
+        "id": "5bzhWJolUrQTS7XbGyZWQQ",
+        "name": "Jagan Randhawa"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      }
+    ]
+  }
+}

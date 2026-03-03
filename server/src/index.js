@@ -56,6 +56,10 @@ const rankingsDir = path.join(dataDir, 'rankings')
 const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
 const REFRESH_WINDOW_MS = 15 * 60 * 1000
 const spotifyRefreshInFlight = new Map()
+const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
+const ARTIST_IMAGE_MISS_MAX_PER_WINDOW = 25
+const artistImageMissesByUser = new Map()
+const trackResolveMissesByUser = new Map()
 try {
   fs.mkdirSync(rankingsDir, { recursive: true })
   fs.mkdirSync(spotifyCacheDir, { recursive: true })
@@ -345,6 +349,143 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader('content-type', 'application/json; charset=utf-8')
     res.end(JSON.stringify({ ok: true }))
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/public/preview') {
+    const pickPreviewUserId = () => {
+      const envId = typeof process.env.SPOTIFY_OWNER_USER_ID === 'string' ? process.env.SPOTIFY_OWNER_USER_ID.trim() : ''
+      if (envId) return envId
+      try {
+        const files = fs.readdirSync(rankingsDir)
+        const jsonFiles = files.filter((f) => f.endsWith('.json'))
+        if (!jsonFiles.length) return null
+        jsonFiles.sort()
+        return jsonFiles[0].slice(0, -'.json'.length)
+      } catch {
+        return null
+      }
+    }
+
+    const userId = pickPreviewUserId()
+    if (!userId) {
+      sendJson(res, 404, { error: 'preview_unavailable' })
+      return
+    }
+
+    const ranking = readJsonFile(rankingFilePathForUser(userId))
+    if (!ranking) {
+      sendJson(res, 404, { error: 'preview_unavailable' })
+      return
+    }
+
+    /** @type {Map<string, {id:string, name:string|null, artists:string[], album:string|null}>} */
+    const trackMeta = new Map()
+    /** @type {Array<{file:string, fetchedAt:string|null, lastRefreshedAt:string|null}>} */
+    const sources = []
+
+    try {
+      const userCacheDir = path.join(spotifyCacheDir, safeFileComponent(userId))
+      const files = fs.readdirSync(userCacheDir)
+      for (const file of files) {
+        if (!file.endsWith('.json')) continue
+        if (!file.startsWith('playlist_') || !file.endsWith('_tracks_all.json')) continue
+        const record = readJsonFile(path.join(userCacheDir, file))
+        if (!record || typeof record !== 'object') continue
+
+        sources.push({
+          file,
+          fetchedAt: typeof record.fetchedAt === 'string' ? record.fetchedAt : null,
+          lastRefreshedAt: typeof record.lastRefreshedAt === 'string' ? record.lastRefreshedAt : null,
+        })
+
+        const items = Array.isArray(record?.data?.items) ? record.data.items : []
+        for (const row of items) {
+          const entry =
+            row?.item && typeof row.item === 'object'
+              ? row.item
+              : row?.track && typeof row.track === 'object'
+                ? row.track
+                : null
+          if (!entry || typeof entry.id !== 'string' || !entry.id) continue
+
+          const artists = Array.isArray(entry.artists) ? entry.artists.map((a) => a?.name).filter(Boolean) : []
+          const album = typeof entry.album?.name === 'string' ? entry.album.name : null
+
+          trackMeta.set(entry.id, {
+            id: entry.id,
+            name: typeof entry.name === 'string' ? entry.name : null,
+            artists,
+            album,
+          })
+        }
+      }
+    } catch {
+      // ignore
+    }
+
+    const tracks = []
+    const states = ranking?.tracks && typeof ranking.tracks === 'object' ? ranking.tracks : {}
+    for (const [trackKey, state] of Object.entries(states)) {
+      if (typeof trackKey !== 'string' || !trackKey.startsWith('spid:')) continue
+      const id = trackKey.slice('spid:'.length)
+      const meta = trackMeta.get(id)
+      if (!meta) continue
+      const rating = Number(state?.rating)
+      tracks.push({
+        id,
+        name: meta.name,
+        artists: meta.artists,
+        album: meta.album,
+        bucket: typeof state?.bucket === 'string' ? state.bucket : 'U',
+        rating: Number.isFinite(rating) ? rating : 1000,
+        games: Number(state?.games) || 0,
+      })
+    }
+
+    tracks.sort((a, b) => b.rating - a.rating)
+    const topSongs = tracks.slice(0, 25)
+
+    const artistAgg = new Map()
+    const albumAgg = new Map()
+
+    for (const t of tracks) {
+      for (const name of t.artists) {
+        const prev = artistAgg.get(name) || { name, tracks: 0, sumRating: 0 }
+        prev.tracks += 1
+        prev.sumRating += t.rating
+        artistAgg.set(name, prev)
+      }
+
+      const album = t.album
+      if (album) {
+        const prev = albumAgg.get(album) || { name: album, tracks: 0, sumRating: 0 }
+        prev.tracks += 1
+        prev.sumRating += t.rating
+        albumAgg.set(album, prev)
+      }
+    }
+
+    const topArtists = Array.from(artistAgg.values())
+      .sort((a, b) => b.sumRating - a.sumRating)
+      .slice(0, 15)
+      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+
+    const topAlbums = Array.from(albumAgg.values())
+      .sort((a, b) => b.sumRating - a.sumRating)
+      .slice(0, 15)
+      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+
+    sendJson(res, 200, {
+      ok: true,
+      userId,
+      generatedAt: new Date().toISOString(),
+      rankingUpdatedAt: typeof ranking?.updatedAt === 'string' ? ranking.updatedAt : null,
+      sources,
+      topSongs,
+      topArtists,
+      topAlbums,
+    })
     return
   }
 
@@ -829,6 +970,283 @@ const server = http.createServer((req, res) => {
     return
   }
 
+  if (req.method === 'GET' && url.pathname.startsWith('/api/tracks/')) {
+    const clientId = process.env.SPOTIFY_CLIENT_ID
+    const accessToken = cookies.sp_access
+    const refreshToken = cookies.sp_refresh
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const owner = userId ? isOwnerUser(userId) : false
+
+    if (!clientId) {
+      sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
+      return
+    }
+    if (!accessToken || !userId) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const trackId = url.pathname.slice('/api/tracks/'.length)
+    if (!trackId || !/^[a-zA-Z0-9]{10,64}$/.test(trackId)) {
+      sendJson(res, 400, { error: 'invalid_track_id' })
+      return
+    }
+
+    ;(async () => {
+      const cacheKey = `track_${trackId}_artists`
+      const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      if (cachedRecord) {
+        res.setHeader('x-sp-cache', 'hit')
+        res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+        sendJson(res, 200, { artists: cachedRecord.data?.artists ?? [] })
+        return
+      }
+
+      if (!owner) {
+        const nowMs = Date.now()
+        const existing = trackResolveMissesByUser.get(userId) || []
+        const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
+        if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
+          const oldest = Math.min(...pruned)
+          const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
+          sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
+          return
+        }
+        pruned.push(nowMs)
+        trackResolveMissesByUser.set(userId, pruned)
+      }
+
+      const lockKey = `${userId}:${cacheKey}`
+      let lockTaken = false
+      if (spotifyRefreshInFlight.has(lockKey)) {
+        sendJson(res, 429, { error: 'inflight', retryAfterSeconds: 1 })
+        return
+      }
+      spotifyRefreshInFlight.set(lockKey, true)
+      lockTaken = true
+
+      let currentAccessToken = accessToken
+
+      const callTrack = async (token) => {
+        const apiUrl = `https://api.spotify.com/v1/tracks/${encodeURIComponent(trackId)}?market=from_token`
+        const response = await fetch(apiUrl, { headers: { authorization: `Bearer ${token}` } })
+
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = null
+        }
+
+        const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+        const wwwAuthenticate = response.headers.get('www-authenticate')
+        const requestId = response.headers.get('x-request-id')
+        if (!response.ok) {
+          logSpotifyFailure({
+            label: 'GET /v1/tracks/:id',
+            url: apiUrl,
+            status: response.status,
+            retryAfterSeconds,
+            wwwAuthenticate,
+            requestId,
+            context: debugContext,
+            data,
+          })
+        }
+
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+      }
+
+      const fetchWithRefresh = async (fn) => {
+        let result = await fn(currentAccessToken)
+
+        if (!result.ok && result.status === 401 && refreshToken) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, {
+              path: '/',
+              maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30),
+            })
+            currentAccessToken = refreshed.access_token
+            result = await fn(currentAccessToken)
+          }
+        }
+
+        return result
+      }
+
+      try {
+        const result = await fetchWithRefresh((token) => callTrack(token))
+        if (!result.ok) {
+          sendJson(res, result.status, { error: 'spotify_track_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+          return
+        }
+
+        const artistsRaw = Array.isArray(result.data?.artists) ? result.data.artists : []
+        const artists = artistsRaw
+          .map((a) => ({
+            id: typeof a?.id === 'string' ? a.id : null,
+            name: typeof a?.name === 'string' ? a.name : null,
+          }))
+          .filter((a) => a.id && a.name)
+
+        const storedAt = new Date().toISOString()
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+          schemaVersion: 1,
+          userId,
+          cacheKey,
+          fetchedAt: storedAt,
+          lastRefreshedAt: storedAt,
+          data: { artists },
+        })
+
+        res.setHeader('x-sp-cache', 'miss_stored')
+        res.setHeader('x-sp-cache-fetched-at', storedAt)
+        sendJson(res, 200, { artists })
+      } finally {
+        if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
+      }
+    })()
+
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname.startsWith('/artist-image/')) {
+    const clientId = process.env.SPOTIFY_CLIENT_ID
+    const accessToken = cookies.sp_access
+    const refreshToken = cookies.sp_refresh
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const owner = userId ? isOwnerUser(userId) : false
+
+    if (!clientId) {
+      sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
+      return
+    }
+    if (!accessToken || !userId) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const artistId = url.pathname.slice('/artist-image/'.length)
+    if (!artistId || !/^[a-zA-Z0-9]{10,64}$/.test(artistId)) {
+      sendJson(res, 400, { error: 'invalid_artist_id' })
+      return
+    }
+
+    ;(async () => {
+      const cacheKey = `artist_${artistId}_image`
+      const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      if (cachedRecord) {
+        res.setHeader('x-sp-cache', 'hit')
+        res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+        sendJson(res, 200, { imageUrl: cachedRecord.data?.imageUrl ?? null })
+        return
+      }
+
+      if (!owner) {
+        const nowMs = Date.now()
+        const existing = artistImageMissesByUser.get(userId) || []
+        const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
+        if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
+          const oldest = Math.min(...pruned)
+          const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
+          sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
+          return
+        }
+        pruned.push(nowMs)
+        artistImageMissesByUser.set(userId, pruned)
+      }
+
+      const lockKey = `${userId}:${cacheKey}`
+      let lockTaken = false
+      if (spotifyRefreshInFlight.has(lockKey)) {
+        sendJson(res, 429, { error: 'inflight', retryAfterSeconds: 1 })
+        return
+      }
+      spotifyRefreshInFlight.set(lockKey, true)
+      lockTaken = true
+
+      let currentAccessToken = accessToken
+
+      const callArtist = async (token) => {
+        const apiUrl = `https://api.spotify.com/v1/artists/${encodeURIComponent(artistId)}`
+        const response = await fetch(apiUrl, { headers: { authorization: `Bearer ${token}` } })
+
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = null
+        }
+
+        const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+        const wwwAuthenticate = response.headers.get('www-authenticate')
+        const requestId = response.headers.get('x-request-id')
+        if (!response.ok) {
+          logSpotifyFailure({
+            label: 'GET /v1/artists/:id',
+            url: apiUrl,
+            status: response.status,
+            retryAfterSeconds,
+            wwwAuthenticate,
+            requestId,
+            context: debugContext,
+            data,
+          })
+        }
+
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+      }
+
+      const fetchWithRefresh = async (fn) => {
+        let result = await fn(currentAccessToken)
+
+        if (!result.ok && result.status === 401 && refreshToken) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, {
+              path: '/',
+              maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30),
+            })
+            currentAccessToken = refreshed.access_token
+            result = await fn(currentAccessToken)
+          }
+        }
+
+        return result
+      }
+
+      try {
+        const result = await fetchWithRefresh((token) => callArtist(token))
+        if (!result.ok) {
+          sendJson(res, result.status, { error: 'spotify_artist_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+          return
+        }
+
+        const images = Array.isArray(result.data?.images) ? result.data.images : []
+        const imageUrl = typeof images?.[0]?.url === 'string' ? images[0].url : null
+
+        const storedAt = new Date().toISOString()
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+          schemaVersion: 1,
+          userId,
+          cacheKey,
+          fetchedAt: storedAt,
+          lastRefreshedAt: storedAt,
+          data: { imageUrl },
+        })
+
+        res.setHeader('x-sp-cache', 'miss_stored')
+        res.setHeader('x-sp-cache-fetched-at', storedAt)
+        sendJson(res, 200, { imageUrl })
+      } finally {
+        if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
+      }
+    })()
+
+    return
+  }
+
   if (req.method === 'GET' && url.pathname.startsWith('/api/playlists/') && url.pathname.endsWith('/tracks')) {
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
@@ -924,8 +1342,8 @@ const server = http.createServer((req, res) => {
                     'name',
                     'duration_ms',
                     'explicit',
-                    'external_urls(spotify)',
-                    'artists(name)',
+                  'external_urls(spotify)',
+                    'artists(id,name)',
                     'album(name)',
                   ].join(',') +
                 ')',

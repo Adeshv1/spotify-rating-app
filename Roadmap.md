@@ -23,3 +23,13 @@
 - Add tests/linting and basic CI
 + Add owner-only permission helper (Spotify user id) (implemented 2026-03-03)
 + Add non-owner cache refresh policy (server throttle + auto-refresh) (implemented 2026-03-03)
++ Add public landing page + minimal routing (implemented 2026-03-03)
++ Add per-user dashboard route (implemented 2026-03-03)
++ Add export/import on dashboard (implemented 2026-03-03)
++ Dashboard layout: main scroll + column scroll (implemented 2026-03-03)
++ Dashboard: top artists scoring v1 (implemented 2026-03-03)
++ Dashboard: remove list caps (implemented 2026-03-03)
++ Dashboard: hide tier in Top songs list (implemented 2026-03-03)
++ Dashboard: Top artists card grid w/ top 5 songs (implemented 2026-03-03)
++ Dashboard: lazy Spotify artist images via server cache (implemented 2026-03-03)
++ Dashboard: resolve missing artist IDs via track lookup (implemented 2026-03-03)

@@ -35,6 +35,7 @@ import {
 } from './lib/userRankingStore'
 import { pickMatchup } from './lib/matchup'
 import { readPlaylistRanking as readLegacyPlaylistRanking } from './lib/playlistRankingStore'
+import { computeTopArtistsFromTracks } from './lib/dashboardSelectors'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -42,6 +43,8 @@ function App() {
   const [profile, setProfile] = useState(null)
   const [error, setError] = useState(null)
   const [isOwnerUser, setIsOwnerUser] = useState(false)
+  const [routePath, setRoutePath] = useState(() => window.location.pathname || '/')
+  const [publicPreview, setPublicPreview] = useState({ status: 'idle', data: null, error: null })
 
   const [nowMs, setNowMs] = useState(() => Date.now())
 
@@ -65,6 +68,19 @@ function App() {
     const id = setInterval(() => setNowMs(Date.now()), 30_000)
     return () => clearInterval(id)
   }, [])
+
+  useEffect(() => {
+    const onPop = () => setRoutePath(window.location.pathname || '/')
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  function navigate(to, { replace = false } = {}) {
+    if (!to || to === routePath) return
+    if (replace) window.history.replaceState(null, '', to)
+    else window.history.pushState(null, '', to)
+    setRoutePath(to)
+  }
 
   useEffect(() => {
     ;(async () => {
@@ -98,6 +114,40 @@ function App() {
       }
     })()
   }, [])
+
+  useEffect(() => {
+    if (loading) return
+    if (!loggedIn && routePath !== '/') navigate('/', { replace: true })
+    if (loggedIn && !routePath.startsWith('/app')) navigate('/app', { replace: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, loggedIn, routePath])
+
+  useEffect(() => {
+    if (loggedIn) return
+    let cancelled = false
+
+    setPublicPreview((s) => (s.status === 'ok' ? s : { status: 'loading', data: null, error: null }))
+
+    ;(async () => {
+      try {
+        const res = await fetch('/api/public/preview')
+        const data = await res.json().catch(() => null)
+        if (cancelled) return
+        if (!res.ok || !data?.ok) {
+          setPublicPreview({ status: 'error', data: null, error: data?.error || 'Preview unavailable' })
+          return
+        }
+        setPublicPreview({ status: 'ok', data, error: null })
+      } catch (e) {
+        if (cancelled) return
+        setPublicPreview({ status: 'error', data: null, error: e?.message || 'Preview unavailable' })
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [loggedIn])
 
   useEffect(() => {
     if (!loggedIn) {
@@ -343,7 +393,7 @@ function App() {
 
   async function logout() {
     await fetch('/auth/logout', { method: 'POST' })
-    window.location.reload()
+    window.location.href = '/'
   }
 
   const syncRankings = useCallback(
@@ -469,6 +519,17 @@ function App() {
           <div className="topActions">
             {loggedIn ? (
               <>
+                <button className="btn" onClick={() => navigate('/app', { replace: true })} disabled={routePath === '/app'}>
+                  Playlists
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => navigate('/app/dashboard', { replace: true })}
+                  disabled={routePath === '/app/dashboard'}
+                >
+                  Dashboard
+                </button>
+
                 <span
                   className={`pill ${
                     rankingSync.status === 'ok'
@@ -501,62 +562,670 @@ function App() {
         </div>
       </header>
 
-      <div className="container">
-        <div className="card">
-          {error ? <p className="error">{error}</p> : null}
+      <main className="main">
+        <div className="container">
+          <div className="card">
+            {error ? <p className="error">{error}</p> : null}
 
-        {!loggedIn ? (
-          <>
-            <p>Log in to Spotify to continue.</p>
-            <a className="read-the-docs" href="/auth/login">
-              Log in with Spotify
-            </a>
-          </>
-        ) : (
-          <>
-            {selectedPlaylistId ? (
-              <PlaylistView
-                playlistsCache={playlistsCache}
-                playlistId={selectedPlaylistId}
-                ranking={userRanking}
-                onChangeRanking={setUserRanking}
-                isOwnerUser={isOwnerUser}
-                cooldownUntilMs={cooldownUntilMs}
-                nowMs={nowMs}
-                tracksLoading={tracksLoading}
-                tracksError={tracksError}
-                tracksCache={tracksCache}
-                tracksSource={tracksSource}
-                onBack={() => {
-                  setSelectedPlaylistId(null)
-                  setTracksError(null)
-                  setTracksCache(null)
-                  setTracksSource(null)
-                }}
-                onRefresh={() => refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: true })}
-              />
-            ) : (
-              <PlaylistsView
-                profile={profile}
-                playlistsLoading={playlistsLoading}
-                playlistsError={playlistsError}
-                playlistsCache={playlistsCache}
-                playlistsSource={playlistsSource}
-                isOwnerUser={isOwnerUser}
-                cooldownUntilMs={cooldownUntilMs}
-                nowMs={nowMs}
-                onRefresh={() => refreshPlaylistsCache({ force: true })}
-                onSelect={(playlistId) => {
-                  setSelectedPlaylistId(playlistId)
-                  setTracksError(null)
-                  setTracksCache(null)
-                  setTracksSource(null)
-                }}
-              />
-            )}
-          </>
-        )}
+          {!loggedIn ? (
+            <LandingPage publicPreview={publicPreview} />
+          ) : (
+            <>
+              {routePath === '/app/dashboard' ? (
+                <DashboardPage
+                  userId={profile?.id}
+                  isOwnerUser={isOwnerUser}
+                  ranking={userRanking}
+                  playlistsCache={playlistsCache}
+                  onOverwriteRanking={(next) => setUserRanking(next)}
+                />
+              ) : selectedPlaylistId ? (
+                <PlaylistView
+                  playlistsCache={playlistsCache}
+                  playlistId={selectedPlaylistId}
+                  ranking={userRanking}
+                  onChangeRanking={setUserRanking}
+                  isOwnerUser={isOwnerUser}
+                  cooldownUntilMs={cooldownUntilMs}
+                  nowMs={nowMs}
+                  tracksLoading={tracksLoading}
+                  tracksError={tracksError}
+                  tracksCache={tracksCache}
+                  tracksSource={tracksSource}
+                  onBack={() => {
+                    setSelectedPlaylistId(null)
+                    setTracksError(null)
+                    setTracksCache(null)
+                    setTracksSource(null)
+                  }}
+                  onRefresh={() => refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: true })}
+                />
+              ) : (
+                <PlaylistsView
+                  profile={profile}
+                  playlistsLoading={playlistsLoading}
+                  playlistsError={playlistsError}
+                  playlistsCache={playlistsCache}
+                  playlistsSource={playlistsSource}
+                  isOwnerUser={isOwnerUser}
+                  cooldownUntilMs={cooldownUntilMs}
+                  nowMs={nowMs}
+                  onRefresh={() => refreshPlaylistsCache({ force: true })}
+                  onSelect={(playlistId) => {
+                    setSelectedPlaylistId(playlistId)
+                    setTracksError(null)
+                    setTracksCache(null)
+                    setTracksSource(null)
+                  }}
+                />
+              )}
+            </>
+          )}
+          </div>
         </div>
+      </main>
+    </div>
+  )
+}
+
+function TopArtistCard({ artist, rootEl, imageState, onVisible }) {
+  const cardRef = useRef(null)
+  const artistName = typeof artist?.name === 'string' ? artist.name : 'Unknown artist'
+  const tracks = Array.isArray(artist?.topTracks)
+    ? artist.topTracks
+    : Array.isArray(artist?.topSongs)
+      ? artist.topSongs
+      : []
+  const imageUrl = typeof imageState?.imageUrl === 'string' ? imageState.imageUrl : null
+
+  useEffect(() => {
+    if (!cardRef.current) return
+    if (imageState?.status === 'loaded' || imageState?.status === 'loading' || imageState?.status === 'error') return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          onVisible?.(artist)
+          observer.disconnect()
+        }
+      },
+      { root: rootEl || null, rootMargin: '200px 0px', threshold: 0.01 },
+    )
+
+    observer.observe(cardRef.current)
+    return () => observer.disconnect()
+  }, [rootEl, onVisible, artist, imageState?.status])
+
+  return (
+    <div ref={cardRef} className="artistCard" role="listitem">
+      <div className="artistCardImage">
+        {imageUrl ? (
+          <img src={imageUrl} alt={`${artistName}`} loading="lazy" />
+        ) : (
+          <div className="artistCardPlaceholder" aria-hidden="true">
+            {artistName.slice(0, 1).toUpperCase()}
+          </div>
+        )}
+      </div>
+      <div className="artistCardBody">
+        <div className="artistCardName">{artistName}</div>
+        {Number.isFinite(Number(artist?.artistScore)) ? (
+          <div className="artistCardScore">Score {Math.round(Number(artist.artistScore) || 0)}</div>
+        ) : null}
+        <ul className="artistCardTracks" aria-label={`${artistName} top songs`}>
+          {tracks.slice(0, 5).map((s) => (
+            <li key={s.trackKey} className="artistCardTrack">
+              <span className="artistCardTrackName">{s.name || s.trackKey}</span>
+              <span className="artistCardTrackScore">{Math.round(Number(s.rating) || 0)}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+function DashboardPage({ userId, isOwnerUser, ranking, playlistsCache, onOverwriteRanking }) {
+  const importInputRef = useRef(null)
+  const [importError, setImportError] = useState(null)
+  const [artistCardsRootEl, setArtistCardsRootEl] = useState(null)
+  const [artistImagesById, setArtistImagesById] = useState(() => ({}))
+  const [resolvedArtistByName, setResolvedArtistByName] = useState(() => ({}))
+  const artistImageInFlight = useRef(new Map())
+  const trackResolveInFlight = useRef(new Map())
+
+  const ensureArtistImage = useCallback(async (artistId) => {
+    if (!artistId) return
+
+    setArtistImagesById((prev) => {
+      const existing = prev?.[artistId]
+      if (existing && (existing.status === 'loading' || existing.status === 'loaded' || existing.status === 'error')) return prev
+      return { ...prev, [artistId]: { status: 'loading', imageUrl: null } }
+    })
+
+    if (artistImageInFlight.current.has(artistId)) return artistImageInFlight.current.get(artistId)
+
+    const p = (async () => {
+      try {
+        const res = await fetch(`/artist-image/${encodeURIComponent(artistId)}`)
+        let data = null
+        try {
+          data = await res.json()
+        } catch {
+          data = null
+        }
+
+        if (!res.ok) {
+          setArtistImagesById((prev) => ({ ...prev, [artistId]: { status: 'error', imageUrl: null } }))
+          return
+        }
+
+        const imageUrl = typeof data?.imageUrl === 'string' ? data.imageUrl : null
+        setArtistImagesById((prev) => ({ ...prev, [artistId]: { status: 'loaded', imageUrl } }))
+      } catch {
+        setArtistImagesById((prev) => ({ ...prev, [artistId]: { status: 'error', imageUrl: null } }))
+      } finally {
+        artistImageInFlight.current.delete(artistId)
+      }
+    })()
+
+    artistImageInFlight.current.set(artistId, p)
+    return p
+  }, [])
+
+  const ensureArtistIdForName = useCallback(
+    async ({ artistName, tracks }) => {
+      if (!artistName || artistName === 'Unknown artist') return null
+
+      const existing = resolvedArtistByName?.[artistName]
+      if (existing?.status === 'loaded') return existing.artistId || null
+      if (existing?.status === 'loading' || existing?.status === 'error') return null
+
+      const candidateTrackKey = tracks?.map((t) => t?.trackKey).find((k) => typeof k === 'string' && k.startsWith('spid:')) || null
+      const trackId = candidateTrackKey ? candidateTrackKey.slice('spid:'.length) : null
+      if (!trackId) {
+        setResolvedArtistByName((prev) => ({ ...prev, [artistName]: { status: 'error', artistId: null } }))
+        return null
+      }
+
+      setResolvedArtistByName((prev) => ({ ...prev, [artistName]: { status: 'loading', artistId: null } }))
+
+      if (trackResolveInFlight.current.has(trackId)) return trackResolveInFlight.current.get(trackId)
+
+      const p = (async () => {
+        try {
+          const res = await fetch(`/api/tracks/${encodeURIComponent(trackId)}`)
+          let data = null
+          try {
+            data = await res.json()
+          } catch {
+            data = null
+          }
+
+          if (!res.ok) {
+            setResolvedArtistByName((prev) => ({ ...prev, [artistName]: { status: 'error', artistId: null } }))
+            return null
+          }
+
+          const artists = Array.isArray(data?.artists) ? data.artists : []
+          const wanted = artistName.trim().toLowerCase()
+          const match = artists.find((a) => typeof a?.name === 'string' && a.name.trim().toLowerCase() === wanted) || null
+          const artistId = typeof match?.id === 'string' ? match.id : null
+          setResolvedArtistByName((prev) => ({ ...prev, [artistName]: { status: 'loaded', artistId } }))
+          return artistId
+        } catch {
+          setResolvedArtistByName((prev) => ({ ...prev, [artistName]: { status: 'error', artistId: null } }))
+          return null
+        } finally {
+          trackResolveInFlight.current.delete(trackId)
+        }
+      })()
+
+      trackResolveInFlight.current.set(trackId, p)
+      return p
+    },
+    [resolvedArtistByName],
+  )
+
+  const ensureArtistImageForArtist = useCallback(
+    async (artist) => {
+      const artistName = typeof artist?.name === 'string' ? artist.name : null
+      const tracks = Array.isArray(artist?.topTracks) ? artist.topTracks : Array.isArray(artist?.topSongs) ? artist.topSongs : []
+      const directId = typeof artist?.artistId === 'string' ? artist.artistId : null
+      const resolvedId = artistName ? resolvedArtistByName?.[artistName]?.artistId : null
+      const artistId = directId || resolvedId || null
+
+      if (artistId) {
+        await ensureArtistImage(artistId)
+        return
+      }
+
+      const nextId = await ensureArtistIdForName({ artistName, tracks })
+      if (nextId) await ensureArtistImage(nextId)
+    },
+    [ensureArtistImage, ensureArtistIdForName, resolvedArtistByName],
+  )
+
+  function exportJson() {
+    if (!ranking) return
+    const payload = { version: 1, exportedAt: new Date().toISOString(), state: ranking }
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `spotify-rating-export-${new Date().toISOString().slice(0, 10)}.json`
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  }
+
+  function sanitizeImportedState(state) {
+    const next = state && typeof state === 'object' ? { ...state } : null
+    if (!next) return null
+    if (typeof next.schemaVersion !== 'number') next.schemaVersion = 1
+    if (typeof next.userId !== 'string') next.userId = userId
+    if (typeof next.createdAt !== 'string') next.createdAt = new Date().toISOString()
+    if (typeof next.updatedAt !== 'string') next.updatedAt = new Date().toISOString()
+    if (!next.tracks || typeof next.tracks !== 'object') next.tracks = {}
+    if (!Array.isArray(next.history)) next.history = []
+    if (!next.migratedPlaylists || typeof next.migratedPlaylists !== 'object') next.migratedPlaylists = {}
+    return next
+  }
+
+  function importFromText(text) {
+    setImportError(null)
+    let parsed
+    try {
+      parsed = JSON.parse(text)
+    } catch {
+      setImportError('Invalid JSON.')
+      return
+    }
+
+    if (!parsed || typeof parsed !== 'object') {
+      setImportError('Invalid export format.')
+      return
+    }
+
+    if (parsed.version !== 1) {
+      setImportError('Unsupported export version.')
+      return
+    }
+
+    const importedState = sanitizeImportedState(parsed.state)
+    if (!importedState) {
+      setImportError('Missing state.')
+      return
+    }
+
+    if (importedState.schemaVersion !== 1) {
+      setImportError('Unsupported state schemaVersion.')
+      return
+    }
+
+    importedState.userId = userId
+
+    const ok = window.confirm('Import will overwrite your current ranking on this device (and sync to the server). Continue?')
+    if (!ok) return
+
+    onOverwriteRanking?.(importedState)
+  }
+
+  async function onPickImportFile(e) {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    try {
+      const text = await file.text()
+      importFromText(text)
+    } catch (err) {
+      setImportError(err?.message || 'Failed to read file.')
+    }
+  }
+
+  const trackIndex = useMemo(() => {
+    const map = new Map()
+    if (!userId) return map
+
+    const playlistIds = Array.isArray(playlistsCache?.items)
+      ? playlistsCache.items.map((p) => p?.id).filter(Boolean)
+      : []
+
+	    for (const playlistId of playlistIds) {
+	      const cachedTracks = readPlaylistTracksCache(userId, playlistId)
+	      const items = Array.isArray(cachedTracks?.items) ? cachedTracks.items : []
+	      for (const t of items) {
+	        const id = typeof t?.id === 'string' ? t.id : null
+	        if (!id) continue
+	        const key = trackKeyOfTrack(t)
+	        if (!map.has(key)) {
+	          const artistNames = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
+	          const artistIds = Array.isArray(t?.artistIds) ? t.artistIds : []
+	          const artistsDetailed = artistNames.map((name, idx) => ({
+	            name,
+	            id: typeof artistIds?.[idx] === 'string' ? artistIds[idx] : null,
+	          }))
+	          map.set(key, {
+	            id,
+	            name: typeof t?.name === 'string' ? t.name : null,
+	            artists: artistNames,
+	            artistIds,
+	            artistsDetailed,
+	            album: typeof t?.album === 'string' ? t.album : null,
+	          })
+	        }
+	      }
+	    }
+
+    return map
+  }, [userId, playlistsCache])
+
+  const computed = useMemo(() => {
+    if (!ranking) return null
+
+    const entries = Object.entries(ranking?.tracks ?? {})
+    const rows = []
+
+    for (const [trackKey] of entries) {
+      const state = getTrackState(ranking, trackKey)
+      if (trackKey.startsWith('meta:')) continue
+      if (state.bucket === 'X') continue
+
+      const meta = trackIndex.get(trackKey) || null
+	      rows.push({
+	        trackKey,
+	        id: meta?.id || (trackKey.startsWith('spid:') ? trackKey.slice('spid:'.length) : null),
+	        name: meta?.name || null,
+	        artists: meta?.artists || [],
+	        artistsDetailed: meta?.artistsDetailed || [],
+	        album: meta?.album || null,
+	        rating: state.rating,
+	        games: state.games,
+	        bucket: state.bucket,
+	      })
+	    }
+
+    const hasAnyRatings = rows.some((r) => r.bucket !== 'U' || r.games > 0 || r.rating !== 1000)
+    rows.sort((a, b) => b.rating - a.rating)
+
+    const albumAgg = new Map()
+
+    for (const r of rows) {
+      if (r.album) {
+        const prev = albumAgg.get(r.album) || { name: r.album, tracks: 0, sumRating: 0 }
+        prev.tracks += 1
+        prev.sumRating += r.rating
+        albumAgg.set(r.album, prev)
+      }
+    }
+
+    const topSongs = rows
+    const topArtists = computeTopArtistsFromTracks(rows, { maxSongsPerArtist: 5, maxArtists: Number.POSITIVE_INFINITY })
+
+    const topAlbums = Array.from(albumAgg.values())
+      .sort((a, b) => b.sumRating - a.sumRating)
+      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+
+    return { hasAnyRatings, topSongs, topArtists, topAlbums }
+  }, [ranking, trackIndex])
+
+  if (!userId) return <p className="meta">Loading…</p>
+  if (!ranking) return <p className="meta">Loading ranking…</p>
+  if (!computed?.hasAnyRatings) {
+    return (
+      <div className="section dashboardPage">
+        <h2>Dashboard</h2>
+        <p className="meta">No ratings yet. Seed some songs into tiers or do a few head-to-head matchups first.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="section dashboardPage">
+      <h2>Dashboard</h2>
+
+      <p className="meta">
+        Computed from your saved ranking. Artist/album labels come from your cached playlist tracks on this device.
+      </p>
+
+      {!isOwnerUser ? (
+        <div className="cardSub">
+          <h3>Export / Import</h3>
+          <div className="controls">
+            <button className="btn" onClick={exportJson} disabled={!ranking}>
+              Export JSON
+            </button>
+            <button className="btn" onClick={() => importInputRef.current?.click()}>
+              Import JSON
+            </button>
+            <input
+              ref={importInputRef}
+              type="file"
+              accept="application/json"
+              onChange={onPickImportFile}
+              style={{ display: 'none' }}
+            />
+          </div>
+          {importError ? <p className="error">{importError}</p> : null}
+        </div>
+      ) : null}
+
+      <div className="dashboardColumns" role="region" aria-label="Dashboard columns">
+        <div className="dashPanel">
+          <div className="dashPanelHeader">
+            <h3>Top songs ({computed.topSongs.length})</h3>
+          </div>
+	          <div className="dashPanelBody" role="region" aria-label="Top songs list" tabIndex={0}>
+	            <ol className="dashList">
+	              {computed.topSongs.map((t, idx) => (
+	                <li key={t.trackKey} className="dashItem">
+	                  <div className="dashItemLeft">
+	                    <div className="cellTitle">
+	                      <span className="dashRank">{idx + 1}.</span> {t.name || t.id || t.trackKey}
+	                    </div>
+	                    <div className="cellSub">{t.artists?.length ? t.artists.join(', ') : 'Unknown artist'}</div>
+	                  </div>
+	                  <div className="dashItemRight">{Math.round(Number(t.rating) || 0)}</div>
+	                </li>
+	              ))}
+	            </ol>
+	          </div>
+	        </div>
+
+	        <div className="dashPanel">
+	          <div className="dashPanelHeader">
+	            <h3>Top artists ({computed.topArtists.length})</h3>
+	          </div>
+	          <div
+	            ref={setArtistCardsRootEl}
+	            className="dashPanelBody"
+	            role="region"
+	            aria-label="Top artists list"
+	            tabIndex={0}
+	          >
+	            <div className="artistGrid" role="list" aria-label="Top artists cards">
+	              {computed.topArtists.map((a) => {
+	                const artistName = typeof a?.name === 'string' ? a.name : 'Unknown artist'
+	                const effectiveArtistId =
+	                  (typeof a?.artistId === 'string' ? a.artistId : null) || (typeof resolvedArtistByName?.[artistName]?.artistId === 'string' ? resolvedArtistByName[artistName].artistId : null) || null
+	                const imageState = effectiveArtistId ? artistImagesById?.[effectiveArtistId] : null
+	                return (
+	                <TopArtistCard
+	                  key={a.name}
+	                  artist={a}
+	                  rootEl={artistCardsRootEl}
+	                  imageState={imageState}
+	                  onVisible={ensureArtistImageForArtist}
+	                />
+	                )
+	              })}
+	            </div>
+	          </div>
+	        </div>
+
+	        <div className="dashPanel">
+	          <div className="dashPanelHeader">
+	            <h3>Top albums ({computed.topAlbums.length})</h3>
+          </div>
+          <div className="dashPanelBody" role="region" aria-label="Top albums list" tabIndex={0}>
+            <ol className="dashList">
+              {computed.topAlbums.map((a, idx) => (
+                <li key={a.name} className="dashItem">
+                  <div className="dashItemLeft">
+                    <div className="cellTitle">
+                      <span className="dashRank">{idx + 1}.</span> {a.name}
+                    </div>
+                    <div className="cellSub">{a.tracks} track(s)</div>
+                  </div>
+                  <div className="dashItemRight">{Math.round(Number(a.avgRating) || 0)}</div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function LandingPage({ publicPreview }) {
+  const data = publicPreview?.data
+  const topSongs = Array.isArray(data?.topSongs) ? data.topSongs : []
+  const topArtists = Array.isArray(data?.topArtists) ? data.topArtists : []
+  const topAlbums = Array.isArray(data?.topAlbums) ? data.topAlbums : []
+
+  return (
+    <div className="section">
+      <h2>Rate your music with tiers + head-to-head</h2>
+
+      <p className="meta">
+        This app helps you seed songs into tiers (S/A/B/C/D), then refine ordering with Elo-style head-to-head matchups.
+        Your ranking syncs across devices when you sign in.
+      </p>
+
+      <div className="controls">
+        <a className="btn primary" href="/auth/login">
+          Sign in with Spotify
+        </a>
+      </div>
+
+      <div className="cardSub">
+        <h3>Preview: Adesh’s dashboard (read-only)</h3>
+
+        {publicPreview?.status === 'loading' ? <p className="meta">Loading preview…</p> : null}
+        {publicPreview?.status === 'error' ? <p className="meta">{publicPreview.error || 'Preview unavailable.'}</p> : null}
+
+        {publicPreview?.status === 'ok' ? (
+          <>
+            <p className="meta">
+              Updated {data?.rankingUpdatedAt ? formatDateTime(data.rankingUpdatedAt) : 'recently'}.
+            </p>
+
+            <div className="tableWrap" role="region" aria-label="Top songs preview" tabIndex={0}>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th className="right colIndex">#</th>
+                    <th className="colSong">Song</th>
+                    <th className="colArtist">Artist</th>
+                    <th className="colAlbum">Album</th>
+                    <th className="right colElo">Elo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {topSongs.slice(0, 15).map((t, idx) => (
+                    <tr key={t.id || idx}>
+                      <td className="right">
+                        <span className="cellSub">{idx + 1}</span>
+                      </td>
+                      <td>
+                        <div className="cellTitle">{t.name || t.id}</div>
+                      </td>
+                      <td>
+                        <div className="cellSub">{Array.isArray(t.artists) ? t.artists.join(', ') : 'Unknown artist'}</div>
+                      </td>
+                      <td>
+                        <div className="cellSub">{t.album || 'Unknown album'}</div>
+                      </td>
+                      <td className="right">
+                        <span className="cellSub">{Math.round(Number(t.rating) || 0)}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="section">
+              <h3>Top artists</h3>
+              <div className="tableWrap" role="region" aria-label="Top artists preview" tabIndex={0}>
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th className="right colIndex">#</th>
+                      <th className="colArtist">Artist</th>
+                      <th className="right colMatches">Tracks</th>
+                      <th className="right colElo">Avg Elo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {topArtists.slice(0, 10).map((a, idx) => (
+                      <tr key={a.name || idx}>
+                        <td className="right">
+                          <span className="cellSub">{idx + 1}</span>
+                        </td>
+                        <td>
+                          <div className="cellTitle">{a.name}</div>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub">{a.tracks}</span>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub">{Math.round(Number(a.avgRating) || 0)}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="section">
+              <h3>Top albums</h3>
+              <div className="tableWrap" role="region" aria-label="Top albums preview" tabIndex={0}>
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th className="right colIndex">#</th>
+                      <th className="colAlbum">Album</th>
+                      <th className="right colMatches">Tracks</th>
+                      <th className="right colElo">Avg Elo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {topAlbums.slice(0, 10).map((a, idx) => (
+                      <tr key={a.name || idx}>
+                        <td className="right">
+                          <span className="cellSub">{idx + 1}</span>
+                        </td>
+                        <td>
+                          <div className="cellTitle">{a.name}</div>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub">{a.tracks}</span>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub">{Math.round(Number(a.avgRating) || 0)}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
     </div>
   )

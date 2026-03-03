@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_482HfbDPKmeYoj564OyTAX_artists",
+  "fetchedAt": "2026-03-03T21:46:42.822Z",
+  "lastRefreshedAt": "2026-03-03T21:46:42.822Z",
+  "data": {
+    "artists": [
+      {
+        "id": "2f3dFiQ7uWMFKrbxK8LbkX",
+        "name": "HUSTINDER"
+      },
+      {
+        "id": "2WcrD17Io276ir3miEHCrc",
+        "name": "Sargi Maan"
+      },
+      {
+        "id": "6lMIhndzcevFkVWSJnXPt2",
+        "name": "Desi Crew"
+      }
+    ]
+  }
+}
