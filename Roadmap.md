@@ -7,5 +7,6 @@
 - Build core UI: search/list, details, rating input, history
 + Decide Spotify auth approach: auth code + PKCE via `/server` (implemented 2026-03-03)
 + Add Spotify login flow (auth endpoints + client prompt) (implemented 2026-03-03)
++ Fetch + cache current user's playlists (`/me/playlists`) with manual refresh, cache source, and cache age indicator (implemented 2026-03-03)
 - Add Spotify integration (fetch tracks/albums/playlists as needed)
 - Add tests/linting and basic CI

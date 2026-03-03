@@ -93,6 +93,13 @@ function sendJson(res, statusCode, body) {
   res.end(JSON.stringify(body))
 }
 
+function getRetryAfterSeconds(headers) {
+  const raw = headers?.get?.('retry-after')
+  if (!raw) return null
+  const n = Number(raw)
+  return Number.isFinite(n) ? n : null
+}
+
 function base64Url(buffer) {
   return buffer
     .toString('base64')
@@ -196,6 +203,7 @@ const server = http.createServer((req, res) => {
     const scopes = [
       'user-read-email',
       'user-read-private',
+      'playlist-read-private',
     ].join(' ')
 
     const authUrl = new URL('https://accounts.spotify.com/authorize')
@@ -277,7 +285,9 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/session') {
-    const loggedIn = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
+    const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
+    const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
+    const loggedIn = hasAccess || hasRefresh
     sendJson(res, 200, { loggedIn })
     return
   }
@@ -302,7 +312,7 @@ const server = http.createServer((req, res) => {
           headers: { authorization: `Bearer ${token}` },
         })
         const data = await response.json()
-        return { ok: response.ok, status: response.status, data }
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds: getRetryAfterSeconds(response.headers) }
       }
 
       try {
@@ -317,13 +327,123 @@ const server = http.createServer((req, res) => {
         }
 
         if (!result.ok) {
-          sendJson(res, result.status, { error: 'spotify_me_failed', details: result.data })
+          sendJson(res, result.status, { error: 'spotify_me_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
           return
         }
 
         sendJson(res, 200, result.data)
       } catch (error) {
         sendJson(res, 500, { error: 'spotify_me_failed', message: error?.message })
+      }
+    })()
+
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/me/playlists') {
+    const clientId = process.env.SPOTIFY_CLIENT_ID
+    const accessToken = cookies.sp_access
+    const refreshToken = cookies.sp_refresh
+
+    if (!clientId) {
+      sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
+      return
+    }
+    if (!accessToken) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const rawLimit = Number(url.searchParams.get('limit'))
+    const rawOffset = Number(url.searchParams.get('offset'))
+    const limit = Math.min(50, Math.max(1, Number.isFinite(rawLimit) ? rawLimit : 50))
+    const offset = Math.max(0, Number.isFinite(rawOffset) ? rawOffset : 0)
+    const all = url.searchParams.get('all') === '1'
+
+    ;(async () => {
+      let currentAccessToken = accessToken
+
+      const callPlaylists = async (token, { offset: pageOffset }) => {
+        const apiUrl = new URL('https://api.spotify.com/v1/me/playlists')
+        apiUrl.searchParams.set('limit', String(limit))
+        apiUrl.searchParams.set('offset', String(pageOffset))
+
+        const response = await fetch(apiUrl.toString(), {
+          headers: { authorization: `Bearer ${token}` },
+        })
+
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = null
+        }
+
+        return { ok: response.ok, status: response.status, data, retryAfterSeconds: getRetryAfterSeconds(response.headers) }
+      }
+
+      const fetchWithRefresh = async (fn) => {
+        let result = await fn(currentAccessToken)
+
+        if (!result.ok && result.status === 401 && refreshToken) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, { path: '/', maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30) })
+            currentAccessToken = refreshed.access_token
+            result = await fn(currentAccessToken)
+          }
+        }
+
+        return result
+      }
+
+      try {
+        if (!all) {
+          const result = await fetchWithRefresh((token) => callPlaylists(token, { offset }))
+          if (!result.ok) {
+            sendJson(res, result.status, { error: 'spotify_playlists_failed', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+            return
+          }
+
+          sendJson(res, 200, result.data)
+          return
+        }
+
+        const first = await fetchWithRefresh((token) => callPlaylists(token, { offset: 0 }))
+        if (!first.ok) {
+          sendJson(res, first.status, { error: 'spotify_playlists_failed', details: first.data, retryAfterSeconds: first.retryAfterSeconds })
+          return
+        }
+
+        const items = Array.isArray(first.data?.items) ? first.data.items.slice() : []
+        const total = Number(first.data?.total) || items.length
+        let nextOffset = items.length
+
+        const maxPages = 20
+        let pagesFetched = 1
+
+        while (nextOffset < total) {
+          if (pagesFetched >= maxPages) {
+            sendJson(res, 400, { error: 'spotify_playlists_too_many_pages', details: { maxPages, total, nextOffset } })
+            return
+          }
+
+          const page = await fetchWithRefresh((token) => callPlaylists(token, { offset: nextOffset }))
+          if (!page.ok) {
+            sendJson(res, page.status, { error: 'spotify_playlists_failed', details: page.data, retryAfterSeconds: page.retryAfterSeconds, partial: { items, total, nextOffset } })
+            return
+          }
+
+          const pageItems = Array.isArray(page.data?.items) ? page.data.items : []
+          items.push(...pageItems)
+          if (pageItems.length === 0) break
+          nextOffset += pageItems.length
+          pagesFetched += 1
+        }
+
+        sendJson(res, 200, { ...first.data, items, offset: 0, limit, total })
+      } catch (error) {
+        sendJson(res, 500, { error: 'spotify_playlists_failed', message: error?.message })
       }
     })()
 
