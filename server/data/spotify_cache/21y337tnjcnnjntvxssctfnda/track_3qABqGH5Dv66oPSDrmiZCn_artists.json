@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3qABqGH5Dv66oPSDrmiZCn_artists",
+  "fetchedAt": "2026-03-04T20:12:01.103Z",
+  "lastRefreshedAt": "2026-03-04T20:12:01.103Z",
+  "data": {
+    "artists": [
+      {
+        "id": "1mUl05hT77FrwVFW51wOlr",
+        "name": "JERRY"
+      }
+    ]
+  }
+}

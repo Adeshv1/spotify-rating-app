@@ -105,6 +105,7 @@
 .mainDashboard > .container {
   flex: 1 1 auto;
   min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -112,6 +113,7 @@
 .cardDashboard {
   flex: 1 1 auto;
   min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -321,6 +323,7 @@
 .dashboardColumns {
   margin-top: 0.5rem;
   display: flex;
+  width: 100%;
   gap: 1rem;
   align-items: stretch;
   flex: 1 1 auto;
@@ -337,8 +340,8 @@
 }
 
 .dashPanel {
+  min-width: 0;
   flex: 1 1 0;
-  min-width: 280px;
   min-height: 0;
   display: flex;
   flex-direction: column;

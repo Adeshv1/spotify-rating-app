@@ -3,12 +3,15 @@
 
 .dashboardPage .dashPanelBodyTight {
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dashboardPage .dashTable {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
-  table-layout: auto;
+  table-layout: fixed;
 }
 
 .dashboardPage .dashTable th,
@@ -16,9 +19,12 @@
   padding: 0.78rem 0.9rem;
   border-bottom: 1px solid var(--surface-border);
   vertical-align: middle;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .dashboardPage .dashTable th {
+  white-space: nowrap;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -56,26 +62,33 @@
 .dashboardPage .dashTable .cellTitle,
 .dashboardPage .dashTable .cellSub {
   display: block;
+  width: 100%;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
 }
 
-.dashboardPage .dashColIndex {
-  width: 56px;
+/* Column sizing: prefer fixed columns for numeric/actions so the text columns
+   can just soak up remaining space without forcing overflow in narrow panels. */
+.dashboardPage .dashTable col.dashColIndex {
+  width: clamp(2.25rem, 3.4vw, 3.1rem);
+}
+.dashboardPage .dashTable col.dashColElo {
+  width: clamp(3.9rem, 5vw, 5.25rem);
+}
+.dashboardPage .dashTable col.dashColPlay {
+  width: clamp(3.6rem, 4.7vw, 4.8rem);
 }
 
-.dashboardPage .dashColTracks {
-  width: 86px;
-}
-
-.dashboardPage .dashColElo {
-  width: 84px;
-}
-
-.dashboardPage .dashColPlay {
-  width: 76px;
+.dashboardPage div[aria-label="Top songs list"] .dashTable th:nth-child(5),
+.dashboardPage div[aria-label="Top songs list"] .dashTable td:nth-child(5),
+.dashboardPage div[aria-label="Top albums list"] .dashTable th:nth-child(5),
+.dashboardPage div[aria-label="Top albums list"] .dashTable td:nth-child(5) {
+  padding-left: 0.6rem;
+  padding-right: 0.65rem;
+  white-space: nowrap;
 }
 
 .dashboardPage .eloValue {

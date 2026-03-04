@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2nLNVBcAbuJcUGvGzXQrqw_artists",
+  "fetchedAt": "2026-03-04T20:11:58.977Z",
+  "lastRefreshedAt": "2026-03-04T20:11:58.977Z",
+  "data": {
+    "artists": [
+      {
+        "id": "0F4kRjMBP6NrjpEBEoL0Xb",
+        "name": "Kaptaan"
+      },
+      {
+        "id": "3PRoJjmSXXvUgafoufPXW1",
+        "name": "Ashu Sidhu"
+      },
+      {
+        "id": "1GvahiUEF452B16ZNYXQdo",
+        "name": "Navdeep Dhaliwal"
+      }
+    ]
+  }
+}

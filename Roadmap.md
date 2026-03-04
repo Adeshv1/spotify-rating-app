@@ -38,3 +38,4 @@
 + UI: header title + conditional nav buttons (implemented 2026-03-03)
 + UI: remove manual sync controls; keep autosync debounce (800ms) (implemented 2026-03-03)
 + UI: stabilize dashboard column layout (use CSS grid to avoid flex sizing issues) (implemented 2026-03-03)
++ Dashboard: fix table overflow + artist images/play buttons (implemented 2026-03-04)
