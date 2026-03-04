@@ -37,6 +37,10 @@ import {
 import { pickMatchup } from "./lib/matchup";
 import { readPlaylistRanking as readLegacyPlaylistRanking } from "./lib/playlistRankingStore";
 import { computeTopArtistsFromTracks } from "./lib/dashboardSelectors";
+import {
+  mergeArtistIdByNameCache,
+  readArtistIdByNameCache,
+} from "./lib/spotifyArtistIdCache";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -869,29 +873,106 @@ function DashboardPage({
   const [importError, setImportError] = useState(null);
   const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
   const [artistImagesById, setArtistImagesById] = useState(() => ({}));
-  const [resolvedArtistByName, setResolvedArtistByName] = useState(() => ({}));
+  const [resolvedArtistByName, setResolvedArtistByName] = useState(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    return next;
+  });
   const artistImageInFlight = useRef(new Map());
   const trackResolveInFlight = useRef(new Map());
   const initialArtistPrefetchDone = useRef(false);
+  const artistImagesByIdRef = useRef({});
+  const resolvedArtistByNameRef = useRef({});
+  const artistRetryTimers = useRef(new Map());
+  const ensureArtistImageForArtistRef = useRef(null);
 
   const normalizeArtistNameKey = useCallback(name => {
     if (typeof name !== "string") return "";
     return name.trim().toLowerCase().replaceAll(/\s+/g, " ");
   }, []);
 
+  useEffect(() => {
+    artistImagesByIdRef.current = artistImagesById || {};
+  }, [artistImagesById]);
+
+  useEffect(() => {
+    resolvedArtistByNameRef.current = resolvedArtistByName || {};
+  }, [resolvedArtistByName]);
+
+  useEffect(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    setResolvedArtistByName(next);
+  }, [userId]);
+
+  useEffect(() => {
+    const timers = artistRetryTimers.current;
+    return () => {
+      for (const t of timers.values()) clearTimeout(t);
+      timers.clear();
+    };
+  }, []);
+
+  const scheduleArtistRetry = useCallback((key, delayMs, artist) => {
+    if (!key) return;
+    const safeDelayMs = Math.max(250, Math.min(120_000, Number(delayMs) || 0));
+    if (!Number.isFinite(safeDelayMs) || safeDelayMs <= 0) return;
+    if (artistRetryTimers.current.has(key)) return;
+
+    const jitter = Math.floor(Math.random() * 350);
+    const timeoutId = window.setTimeout(() => {
+      artistRetryTimers.current.delete(key);
+      ensureArtistImageForArtistRef.current?.(artist);
+    }, safeDelayMs + jitter);
+
+    artistRetryTimers.current.set(key, timeoutId);
+  }, []);
+
   const ensureArtistImage = useCallback(async artistId => {
-    if (!artistId) return;
+    if (!artistId) return { ok: false, retryAfterMs: null };
+
+    const nowMs = Date.now();
+    const existing = artistImagesByIdRef.current?.[artistId] || null;
+    if (existing?.status === "loaded") return { ok: true, retryAfterMs: null };
+    if (existing?.status === "loading") {
+      const inflight = artistImageInFlight.current.get(artistId);
+      if (inflight) return inflight;
+      return { ok: true, retryAfterMs: null };
+    }
+    if (
+      existing?.status === "error" &&
+      Number.isFinite(existing?.nextRetryAtMs) &&
+      nowMs < existing.nextRetryAtMs
+    ) {
+      return { ok: false, retryAfterMs: existing.nextRetryAtMs - nowMs };
+    }
 
     setArtistImagesById(prev => {
       const existing = prev?.[artistId];
       if (
         existing &&
-        (existing.status === "loading" ||
-          existing.status === "loaded" ||
-          existing.status === "error")
+        (existing.status === "loading" || existing.status === "loaded")
       )
         return prev;
-      return { ...prev, [artistId]: { status: "loading", imageUrl: null } };
+      return {
+        ...prev,
+        [artistId]: {
+          status: "loading",
+          imageUrl: typeof existing?.imageUrl === "string" ? existing.imageUrl : null,
+        },
+      };
     });
 
     if (artistImageInFlight.current.has(artistId))
@@ -910,11 +991,19 @@ function DashboardPage({
         }
 
         if (!res.ok) {
+          const retryAfterSeconds = Number(data?.retryAfterSeconds);
+          const retryAfterMs = Number.isFinite(retryAfterSeconds)
+            ? retryAfterSeconds * 1000
+            : 60_000;
           setArtistImagesById(prev => ({
             ...prev,
-            [artistId]: { status: "error", imageUrl: null },
+            [artistId]: {
+              status: "error",
+              imageUrl: null,
+              nextRetryAtMs: Date.now() + retryAfterMs,
+            },
           }));
-          return;
+          return { ok: false, retryAfterMs };
         }
 
         const imageUrl =
@@ -923,11 +1012,18 @@ function DashboardPage({
           ...prev,
           [artistId]: { status: "loaded", imageUrl },
         }));
+        return { ok: true, retryAfterMs: null };
       } catch {
+        const retryAfterMs = 60_000;
         setArtistImagesById(prev => ({
           ...prev,
-          [artistId]: { status: "error", imageUrl: null },
+          [artistId]: {
+            status: "error",
+            imageUrl: null,
+            nextRetryAtMs: Date.now() + retryAfterMs,
+          },
         }));
+        return { ok: false, retryAfterMs };
       } finally {
         artistImageInFlight.current.delete(artistId);
       }
@@ -986,17 +1082,25 @@ function DashboardPage({
 
   const ensureArtistIdForName = useCallback(
     async ({ artistName, tracks }) => {
-      if (!artistName || artistName === "Unknown artist") return null;
+      if (!artistName || artistName === "Unknown artist")
+        return { artistId: null, retryAfterMs: null };
+      const artistKey = normalizeArtistNameKey(artistName);
+      if (!artistKey) return { artistId: null, retryAfterMs: 60_000 };
 
-      const existing = resolvedArtistByName?.[artistName];
-      if (existing?.status === "loaded") return existing.artistId || null;
-      if (existing?.status === "loading") return null;
+      const existing = resolvedArtistByNameRef.current?.[artistKey];
+      if (existing?.status === "loaded")
+        return { artistId: existing.artistId || null, retryAfterMs: null };
+      if (existing?.status === "loading")
+        return { artistId: null, retryAfterMs: null };
       if (
         existing?.status === "error" &&
         Number.isFinite(existing?.nextRetryAtMs) &&
         Date.now() < existing.nextRetryAtMs
       )
-        return null;
+        return {
+          artistId: null,
+          retryAfterMs: Math.max(250, existing.nextRetryAtMs - Date.now()),
+        };
 
       const candidateTrackKey =
         tracks
@@ -1006,20 +1110,21 @@ function DashboardPage({
         ? candidateTrackKey.slice("spid:".length)
         : null;
       if (!trackId) {
+        const retryAfterMs = 60_000;
         setResolvedArtistByName(prev => ({
           ...prev,
-          [artistName]: {
+          [artistKey]: {
             status: "error",
             artistId: null,
-            nextRetryAtMs: Date.now() + 60_000,
+            nextRetryAtMs: Date.now() + retryAfterMs,
           },
         }));
-        return null;
+        return { artistId: null, retryAfterMs };
       }
 
       setResolvedArtistByName(prev => ({
         ...prev,
-        [artistName]: { status: "loading", artistId: null },
+        [artistKey]: { status: "loading", artistId: null },
       }));
 
       const result = await ensureTrackArtists(trackId);
@@ -1029,13 +1134,13 @@ function DashboardPage({
           : 30_000;
         setResolvedArtistByName(prev => ({
           ...prev,
-          [artistName]: {
+          [artistKey]: {
             status: "error",
             artistId: null,
             nextRetryAtMs: Date.now() + retryAfterMs,
           },
         }));
-        return null;
+        return { artistId: null, retryAfterMs };
       }
 
       const artists = Array.isArray(result?.artists) ? result.artists : [];
@@ -1048,23 +1153,32 @@ function DashboardPage({
         ) || null;
       const artistId = typeof match?.id === "string" ? match.id : null;
 
+      const toCache = {};
+      for (const a of artists) {
+        const name = typeof a?.name === "string" ? a.name : null;
+        if (!name) continue;
+        const key = normalizeArtistNameKey(name);
+        if (!key) continue;
+        const id = typeof a?.id === "string" ? a.id : null;
+        if (id) toCache[key] = id;
+      }
+      if (artistId) toCache[artistKey] = artistId;
+
       setResolvedArtistByName(prev => {
         const next = { ...prev };
-        for (const a of artists) {
-          const name = typeof a?.name === "string" ? a.name : null;
-          if (!name) continue;
-          const id = typeof a?.id === "string" ? a.id : null;
-          const existing = next[name];
+        for (const [key, id] of Object.entries(toCache)) {
+          const existing = next[key];
           if (!existing || existing.status !== "loaded")
-            next[name] = { status: "loaded", artistId: id };
+            next[key] = { status: "loaded", artistId: id };
         }
-        next[artistName] = { status: "loaded", artistId };
+        next[artistKey] = { status: "loaded", artistId };
         return next;
       });
 
-      return artistId;
+      mergeArtistIdByNameCache(userId, toCache);
+      return { artistId, retryAfterMs: null };
     },
-    [ensureTrackArtists, normalizeArtistNameKey, resolvedArtistByName],
+    [ensureTrackArtists, normalizeArtistNameKey, userId],
   );
 
   const ensureArtistImageForArtist = useCallback(
@@ -1077,21 +1191,45 @@ function DashboardPage({
           : [];
       const directId =
         typeof artist?.artistId === "string" ? artist.artistId : null;
-      const resolvedId = artistName
-        ? resolvedArtistByName?.[artistName]?.artistId
+      const artistKey = artistName ? normalizeArtistNameKey(artistName) : "";
+      const resolvedId = artistKey
+        ? resolvedArtistByNameRef.current?.[artistKey]?.artistId
         : null;
       const artistId = directId || resolvedId || null;
 
       if (artistId) {
-        await ensureArtistImage(artistId);
+        const result = await ensureArtistImage(artistId);
+        if (!result?.ok && Number.isFinite(result?.retryAfterMs))
+          scheduleArtistRetry(artistId, result.retryAfterMs, artist);
         return;
       }
 
-      const nextId = await ensureArtistIdForName({ artistName, tracks });
-      if (nextId) await ensureArtistImage(nextId);
+      const resolved = await ensureArtistIdForName({ artistName, tracks });
+      const nextId = resolved?.artistId || null;
+      const retryAfterMs = resolved?.retryAfterMs ?? null;
+
+      if (nextId) {
+        const img = await ensureArtistImage(nextId);
+        if (!img?.ok && Number.isFinite(img?.retryAfterMs))
+          scheduleArtistRetry(nextId, img.retryAfterMs, artist);
+        return;
+      }
+
+      if (Number.isFinite(retryAfterMs) && retryAfterMs > 0) {
+        scheduleArtistRetry(artistKey || artistName || "artist", retryAfterMs, artist);
+      }
     },
-    [ensureArtistImage, ensureArtistIdForName, resolvedArtistByName],
+    [
+      ensureArtistIdForName,
+      ensureArtistImage,
+      normalizeArtistNameKey,
+      scheduleArtistRetry,
+    ],
   );
+
+  useEffect(() => {
+    ensureArtistImageForArtistRef.current = ensureArtistImageForArtist;
+  }, [ensureArtistImageForArtist]);
 
   function exportJson() {
     if (!ranking) return;
@@ -1296,8 +1434,9 @@ function DashboardPage({
     const list = computed?.topArtists;
     if (!Array.isArray(list) || list.length === 0) return;
     initialArtistPrefetchDone.current = true;
-    for (const a of list.slice(0, 12)) ensureArtistImageForArtist(a);
-  }, [computed, ensureArtistImageForArtist]);
+    const count = isOwnerUser ? 12 : 6;
+    for (const a of list.slice(0, count)) ensureArtistImageForArtist(a);
+  }, [computed, ensureArtistImageForArtist, isOwnerUser]);
 
   if (!userId) return <p className="meta">Loading…</p>;
   if (!ranking) return <p className="meta">Loading ranking…</p>;
@@ -1445,11 +1584,12 @@ function DashboardPage({
               {computed.topArtists.map(a => {
                 const artistName =
                   typeof a?.name === "string" ? a.name : "Unknown artist";
+                const artistKey = normalizeArtistNameKey(artistName);
                 const effectiveArtistId =
                   (typeof a?.artistId === "string" ? a.artistId : null) ||
-                  (typeof resolvedArtistByName?.[artistName]?.artistId ===
+                  (typeof resolvedArtistByName?.[artistKey]?.artistId ===
                   "string"
-                    ? resolvedArtistByName[artistName].artistId
+                    ? resolvedArtistByName[artistKey].artistId
                     : null) ||
                   null;
                 const imageState = effectiveArtistId
