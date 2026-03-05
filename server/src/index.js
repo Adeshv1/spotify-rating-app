@@ -381,7 +381,7 @@ const server = http.createServer((req, res) => {
       return
     }
 
-    /** @type {Map<string, {id:string, name:string|null, artists:string[], album:string|null}>} */
+    /** @type {Map<string, {id:string, name:string|null, artists:string[], artistsDetailed:Array<{id:string|null,name:string}>, album:string|null}>} */
     const trackMeta = new Map()
     /** @type {Array<{file:string, fetchedAt:string|null, lastRefreshedAt:string|null}>} */
     const sources = []
@@ -411,19 +411,79 @@ const server = http.createServer((req, res) => {
                 : null
           if (!entry || typeof entry.id !== 'string' || !entry.id) continue
 
-          const artists = Array.isArray(entry.artists) ? entry.artists.map((a) => a?.name).filter(Boolean) : []
+          const artistsRaw = Array.isArray(entry.artists) ? entry.artists : []
+          const artistsDetailed = artistsRaw
+            .map((a) => ({
+              id: typeof a?.id === 'string' ? a.id : null,
+              name: typeof a?.name === 'string' ? a.name : null,
+            }))
+            .filter((a) => a.name)
+          const artists = artistsDetailed.map((a) => a.name)
           const album = typeof entry.album?.name === 'string' ? entry.album.name : null
 
           trackMeta.set(entry.id, {
             id: entry.id,
             name: typeof entry.name === 'string' ? entry.name : null,
             artists,
+            artistsDetailed,
             album,
           })
         }
       }
     } catch {
       // ignore
+    }
+
+    function pushTopNByRating(list, item, maxN) {
+      list.push(item)
+      list.sort((a, b) => b.rating - a.rating)
+      if (list.length > maxN) list.length = maxN
+    }
+
+    function computeTopArtistsFromTracks(tracks, { maxSongsPerArtist = 5, maxArtists = Number.POSITIVE_INFINITY } = {}) {
+      const byArtist = new Map()
+      const idByArtist = new Map()
+
+      for (const t of tracks) {
+        const rating = Number(t?.rating)
+        if (!Number.isFinite(rating)) continue
+        const trackId = typeof t?.id === 'string' ? t.id : null
+        const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
+        if (!artists.length) continue
+
+        for (const artistName of artists) {
+          if (!idByArtist.has(artistName) && Array.isArray(t?.artistsDetailed)) {
+            const match = t.artistsDetailed.find((a) => a?.name === artistName && typeof a?.id === 'string' && a.id)
+            if (match?.id) idByArtist.set(artistName, match.id)
+          }
+
+          const existing = byArtist.get(artistName) || []
+          pushTopNByRating(
+            existing,
+            {
+              trackKey: typeof t?.trackKey === 'string' ? t.trackKey : trackId ? `spid:${trackId}` : null,
+              id: trackId,
+              name: typeof t?.name === 'string' ? t.name : null,
+              rating,
+            },
+            maxSongsPerArtist,
+          )
+          byArtist.set(artistName, existing)
+        }
+      }
+
+      const scored = []
+      for (const [name, topSongs] of byArtist.entries()) {
+        const n = topSongs.length
+        if (!n) continue
+        const avgRating = topSongs.reduce((sum, s) => sum + s.rating, 0) / n
+        const artistScore = avgRating * (n / maxSongsPerArtist)
+        const artistId = idByArtist.get(name) || null
+        scored.push({ name, artistId, n, avgRating, artistScore, topSongs, topTracks: topSongs })
+      }
+
+      scored.sort((a, b) => b.artistScore - a.artistScore)
+      return scored.slice(0, maxArtists)
     }
 
     const tracks = []
@@ -435,9 +495,11 @@ const server = http.createServer((req, res) => {
       if (!meta) continue
       const rating = Number(state?.rating)
       tracks.push({
+        trackKey: `spid:${id}`,
         id,
         name: meta.name,
         artists: meta.artists,
+        artistsDetailed: meta.artistsDetailed,
         album: meta.album,
         bucket: typeof state?.bucket === 'string' ? state.bucket : 'U',
         rating: Number.isFinite(rating) ? rating : 1000,
@@ -446,36 +508,42 @@ const server = http.createServer((req, res) => {
     }
 
     tracks.sort((a, b) => b.rating - a.rating)
-    const topSongs = tracks.slice(0, 25)
-
-    const artistAgg = new Map()
     const albumAgg = new Map()
 
     for (const t of tracks) {
-      for (const name of t.artists) {
-        const prev = artistAgg.get(name) || { name, tracks: 0, sumRating: 0 }
-        prev.tracks += 1
-        prev.sumRating += t.rating
-        artistAgg.set(name, prev)
-      }
-
       const album = t.album
       if (album) {
-        const prev = albumAgg.get(album) || { name: album, tracks: 0, sumRating: 0 }
+        const prev = albumAgg.get(album) || {
+          name: album,
+          tracks: 0,
+          sumRating: 0,
+          bestTrackId: null,
+          bestRating: -Infinity,
+        }
         prev.tracks += 1
         prev.sumRating += t.rating
+        if (t.id && t.rating > prev.bestRating) {
+          prev.bestRating = t.rating
+          prev.bestTrackId = t.id
+        }
         albumAgg.set(album, prev)
       }
     }
 
-    const topArtists = Array.from(artistAgg.values())
-      .sort((a, b) => b.sumRating - a.sumRating)
-      .slice(0, 15)
-      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+    const topSongs = tracks
+    const topArtists = computeTopArtistsFromTracks(tracks, {
+      maxSongsPerArtist: 5,
+      maxArtists: Number.POSITIVE_INFINITY,
+    }).map((a) => {
+      const imageUrl =
+        typeof a?.artistId === 'string' && a.artistId
+          ? (readSpotifyCacheRecord(userId, `artist_${a.artistId}_image`)?.data?.imageUrl ?? null)
+          : null
+      return { ...a, imageUrl }
+    })
 
     const topAlbums = Array.from(albumAgg.values())
       .sort((a, b) => b.sumRating - a.sumRating)
-      .slice(0, 15)
       .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
 
     sendJson(res, 200, {
@@ -768,7 +836,7 @@ const server = http.createServer((req, res) => {
     const all = url.searchParams.get('all') === '1'
 
     ;(async () => {
-      const canUseServerCache = Boolean(!owner && all && userId)
+      const canUseServerCache = Boolean(all && userId)
       const cacheKey = 'me_playlists_all'
       const nowMs = Date.now()
       let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
@@ -1312,7 +1380,7 @@ const server = http.createServer((req, res) => {
     const all = url.searchParams.get('all') === '1'
 
     ;(async () => {
-      const canUseServerCache = Boolean(!owner && all && userId)
+      const canUseServerCache = Boolean(all && userId)
       const cacheKey = `playlist_${playlistId}_tracks_all`
       const nowMs = Date.now()
       let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null

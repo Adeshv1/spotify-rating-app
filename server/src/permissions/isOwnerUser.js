@@ -1,9 +1,5 @@
 function getOwnerSpotifyUserId() {
-  const raw =
-    process.env.SPOTIFY_OWNER_USER_ID ??
-    process.env.OWNER_SPOTIFY_USER_ID ??
-    process.env.SPOTIFY_OWNER_ID ??
-    ''
+  const raw = process.env.SPOTIFY_OWNER_USER_ID ?? ''
 
   if (typeof raw !== 'string') return null
   const trimmed = raw.trim()
@@ -16,4 +12,3 @@ export function isOwnerUser(spotifyUserId) {
   if (typeof spotifyUserId !== 'string' || !spotifyUserId) return false
   return spotifyUserId === ownerId
 }
-

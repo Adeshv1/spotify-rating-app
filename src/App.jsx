@@ -81,11 +81,15 @@ function App() {
   const pendingSaveRef = useRef(false);
 
   const isDashboardRoute = routePath === "/app/dashboard";
+  const isPublicDashboardRoute = !loggedIn && routePath === "/";
+  const isDashboardLikeRoute = isDashboardRoute || isPublicDashboardRoute;
   const headerTitle = loggedIn
     ? isDashboardRoute
       ? "Dashboard"
       : "Playlists"
-    : "";
+    : isPublicDashboardRoute
+      ? "Dashboard"
+      : "";
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000);
@@ -426,8 +430,7 @@ function App() {
     if (cachedTracks) {
       setTracksCache(cachedTracks);
       setTracksSource("cache");
-      if (!isOwnerUser)
-        refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false });
+      refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false });
       return;
     }
 
@@ -670,9 +673,9 @@ function App() {
         </div>
       </header>
 
-      <main className={isDashboardRoute ? "main mainDashboard" : "main"}>
+      <main className={isDashboardLikeRoute ? "main mainDashboard" : "main"}>
         <div className="container">
-          <div className={isDashboardRoute ? "card cardDashboard" : "card"}>
+          <div className={isDashboardLikeRoute ? "card cardDashboard" : "card"}>
             {error ? <p className="error">{error}</p> : null}
 
             {!loggedIn ? (
@@ -1683,184 +1686,237 @@ function DashboardPage({
 }
 
 function LandingPage({ publicPreview }) {
+  const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
   const data = publicPreview?.data;
   const topSongs = Array.isArray(data?.topSongs) ? data.topSongs : [];
   const topArtists = Array.isArray(data?.topArtists) ? data.topArtists : [];
   const topAlbums = Array.isArray(data?.topAlbums) ? data.topAlbums : [];
 
   return (
-    <div className="section">
-      <h2>Rate your music with tiers + head-to-head</h2>
-
-      <p className="meta">
-        This app helps you seed songs into tiers (S/A/B/C/D), then refine
-        ordering with Elo-style head-to-head matchups. Your ranking syncs across
-        devices when you sign in.
-      </p>
-
-      <div className="controls">
-        <a
-          className="btn primary"
-          href="/auth/login"
-        >
-          Sign in with Spotify
-        </a>
+    <div className="section dashboardPage">
+      <div className="cardSub">
+        <h3>Rate your music with tiers + head-to-head</h3>
+        <p className="meta">
+          Seed songs into tiers (S/A/B/C/D), then refine ordering with Elo-style
+          head-to-head matchups. Your ranking syncs across devices when you sign
+          in.
+        </p>
+        <div className="controls">
+          <a
+            className="btn primary"
+            href="/auth/login"
+          >
+            Sign in with Spotify
+          </a>
+        </div>
+        <p className="meta">
+          Preview dashboard (read-only).{" "}
+          {publicPreview?.status === "loading"
+            ? "Loading…"
+            : publicPreview?.status === "error"
+              ? publicPreview.error || "Preview unavailable."
+              : publicPreview?.status === "ok"
+                ? `Updated ${
+                    data?.rankingUpdatedAt
+                      ? formatDateTime(data.rankingUpdatedAt)
+                      : "recently"
+                  }.`
+                : ""}
+        </p>
       </div>
 
-      <div className="cardSub">
-        <h3>Preview: Adesh’s dashboard (read-only)</h3>
-
-        {publicPreview?.status === "loading" ? (
-          <p className="meta">Loading preview…</p>
-        ) : null}
-        {publicPreview?.status === "error" ? (
-          <p className="meta">
-            {publicPreview.error || "Preview unavailable."}
-          </p>
-        ) : null}
-
-        {publicPreview?.status === "ok" ? (
-          <>
-            <p className="meta">
-              Updated{" "}
-              {data?.rankingUpdatedAt
-                ? formatDateTime(data.rankingUpdatedAt)
-                : "recently"}
-              .
-            </p>
-
+      {publicPreview?.status === "ok" ? (
+        <div
+          className="dashboardColumns"
+          role="region"
+          aria-label="Dashboard columns"
+        >
+          <div className="dashPanel">
+            <div className="dashPanelHeader">
+              <h3>Top songs ({topSongs.length})</h3>
+            </div>
             <div
-              className="tableWrap"
+              className="dashPanelBody dashPanelBodyTight"
               role="region"
-              aria-label="Top songs preview"
+              aria-label="Top songs list"
               tabIndex={0}
             >
-              <table className="table">
+              <table className="dashTable">
+                <colgroup>
+                  <col className="dashColIndex" />
+                  <col />
+                  <col className="dashColElo" />
+                  <col className="dashColPlay" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th className="right colIndex">#</th>
-                    <th className="colSong">Song</th>
-                    <th className="colArtist">Artist</th>
-                    <th className="colAlbum">Album</th>
-                    <th className="right colElo">Elo</th>
+                    <th className="right dashColIndex">#</th>
+                    <th>Song</th>
+                    <th className="right dashColElo">Elo</th>
+                    <th
+                      className="right dashColPlay"
+                      aria-label="Play column"
+                    />
                   </tr>
                 </thead>
                 <tbody>
-                  {topSongs.slice(0, 15).map((t, idx) => (
-                    <tr key={t.id || idx}>
+                  {topSongs.map((t, idx) => {
+                    const trackId =
+                      (typeof t?.id === "string" ? t.id : null) ||
+                      (typeof t?.trackKey === "string" &&
+                      t.trackKey.startsWith("spid:")
+                        ? t.trackKey.slice("spid:".length)
+                        : null);
+                    return (
+                      <tr
+                        key={t.trackKey || t.id || idx}
+                        className="dashTableRow"
+                      >
+                        <td className="right">
+                          <span className="cellSub">{idx + 1}</span>
+                        </td>
+                        <td>
+                          <div className="cellTitle">
+                            {t.name || t.id || t.trackKey}
+                          </div>
+                          <div className="cellSub">
+                            {Array.isArray(t.artists) && t.artists.length
+                              ? t.artists.join(", ")
+                              : "Unknown artist"}
+                          </div>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub eloValue">
+                            {Math.round(Number(t.rating) || 0)}
+                          </span>
+                        </td>
+                        <td className="right">
+                          {trackId ? (
+                            <button
+                              className="btn small rowPlayBtn"
+                              onClick={() => openTrackInSpotify(trackId)}
+                              title="Open in Spotify"
+                            >
+                              Play
+                            </button>
+                          ) : null}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="dashPanel dashPanelArtists">
+            <div className="dashPanelHeader">
+              <h3>Top artists ({topArtists.length})</h3>
+            </div>
+            <div
+              ref={setArtistCardsRootEl}
+              className="dashPanelBody"
+              role="region"
+              aria-label="Top artists list"
+              tabIndex={0}
+            >
+              <div
+                className="artistGrid"
+                role="list"
+                aria-label="Top artists cards"
+              >
+                {topArtists.map(a => {
+                  const artistId =
+                    typeof a?.artistId === "string" ? a.artistId : null;
+                  const imageUrl =
+                    typeof a?.imageUrl === "string" ? a.imageUrl : null;
+                  const imageState = imageUrl
+                    ? { status: "loaded", imageUrl }
+                    : null;
+                  return (
+                    <TopArtistCard
+                      key={a.name}
+                      artist={a}
+                      artistId={artistId}
+                      rootEl={artistCardsRootEl}
+                      imageState={imageState}
+                      onVisible={null}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="dashPanel">
+            <div className="dashPanelHeader">
+              <h3>Top albums ({topAlbums.length})</h3>
+            </div>
+            <div
+              className="dashPanelBody dashPanelBodyTight"
+              role="region"
+              aria-label="Top albums list"
+              tabIndex={0}
+            >
+              <table className="dashTable">
+                <colgroup>
+                  <col className="dashColIndex" />
+                  <col />
+                  <col className="dashColElo" />
+                  <col className="dashColPlay" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th className="right dashColIndex">#</th>
+                    <th>Album</th>
+                    <th className="right dashColElo">Elo</th>
+                    <th
+                      className="right dashColPlay"
+                      aria-label="Play column"
+                    />
+                  </tr>
+                </thead>
+                <tbody>
+                  {topAlbums.map((a, idx) => (
+                    <tr
+                      key={a.name || idx}
+                      className="dashTableRow"
+                    >
                       <td className="right">
                         <span className="cellSub">{idx + 1}</span>
                       </td>
                       <td>
-                        <div className="cellTitle">{t.name || t.id}</div>
-                      </td>
-                      <td>
+                        <div className="cellTitle">{a.name}</div>
                         <div className="cellSub">
-                          {Array.isArray(t.artists)
-                            ? t.artists.join(", ")
-                            : "Unknown artist"}
-                        </div>
-                      </td>
-                      <td>
-                        <div className="cellSub">
-                          {t.album || "Unknown album"}
+                          {Number(a.tracks) === 1
+                            ? "1 track"
+                            : `${Number(a.tracks) || 0} tracks`}
                         </div>
                       </td>
                       <td className="right">
-                        <span className="cellSub">
-                          {Math.round(Number(t.rating) || 0)}
+                        <span className="cellSub eloValue">
+                          {Math.round(Number(a.avgRating) || 0)}
                         </span>
+                      </td>
+                      <td className="right">
+                        {typeof a?.bestTrackId === "string" ? (
+                          <button
+                            className="btn small rowPlayBtn"
+                            onClick={() => openTrackInSpotify(a.bestTrackId)}
+                            title="Open a track from this album in Spotify"
+                          >
+                            Play
+                          </button>
+                        ) : null}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-
-            <div className="section">
-              <h3>Top artists</h3>
-              <div
-                className="tableWrap"
-                role="region"
-                aria-label="Top artists preview"
-                tabIndex={0}
-              >
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th className="right colIndex">#</th>
-                      <th className="colArtist">Artist</th>
-                      <th className="right colMatches">Tracks</th>
-                      <th className="right colElo">Avg Elo</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {topArtists.slice(0, 10).map((a, idx) => (
-                      <tr key={a.name || idx}>
-                        <td className="right">
-                          <span className="cellSub">{idx + 1}</span>
-                        </td>
-                        <td>
-                          <div className="cellTitle">{a.name}</div>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub">{a.tracks}</span>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub">
-                            {Math.round(Number(a.avgRating) || 0)}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div className="section">
-              <h3>Top albums</h3>
-              <div
-                className="tableWrap"
-                role="region"
-                aria-label="Top albums preview"
-                tabIndex={0}
-              >
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th className="right colIndex">#</th>
-                      <th className="colAlbum">Album</th>
-                      <th className="right colMatches">Tracks</th>
-                      <th className="right colElo">Avg Elo</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {topAlbums.slice(0, 10).map((a, idx) => (
-                      <tr key={a.name || idx}>
-                        <td className="right">
-                          <span className="cellSub">{idx + 1}</span>
-                        </td>
-                        <td>
-                          <div className="cellTitle">{a.name}</div>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub">{a.tracks}</span>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub">
-                            {Math.round(Number(a.avgRating) || 0)}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </>
-        ) : null}
-      </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

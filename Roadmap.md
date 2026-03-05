@@ -40,3 +40,5 @@
 + UI: stabilize dashboard column layout (use CSS grid to avoid flex sizing issues) (implemented 2026-03-03)
 + Dashboard: fix table overflow + artist images/play buttons (implemented 2026-03-04)
 + Dashboard: persist artist ID resolution + retry transient Spotify throttles (artist cards) (implemented 2026-03-04)
++ Landing: make public preview match dashboard layout (implemented 2026-03-04)
++ Landing: refresh server cache for public preview (owner cache enabled) (implemented 2026-03-05)

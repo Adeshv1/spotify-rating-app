@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "createdAt": "2026-03-03T07:07:44.488Z",
-  "updatedAt": "2026-03-04T21:56:24.943Z",
+  "updatedAt": "2026-03-05T20:24:48.960Z",
   "tracks": {
     "spid:4TEAN4lkqV5W3gkVsWuTXw": {
       "bucket": "U",
@@ -38,19 +38,19 @@
     },
     "spid:2PG8KMUDxTr5sDEB1Xn4So": {
       "bucket": "U",
-      "rating": 1012,
-      "games": 1,
-      "wins": 1,
+      "rating": 1000,
+      "games": 2,
+      "wins": 2,
       "losses": 0,
-      "lastComparedAt": "2026-03-03T21:39:46.853Z"
+      "lastComparedAt": "2026-03-05T19:48:59.168Z"
     },
     "spid:7vbA3HRdGmY2oFsDGCiS7W": {
       "bucket": "U",
       "rating": 1000,
-      "games": 0,
+      "games": 1,
       "wins": 0,
-      "losses": 0,
-      "lastComparedAt": null
+      "losses": 1,
+      "lastComparedAt": "2026-03-05T19:49:47.527Z"
     },
     "spid:2z93Ew2u4nDGsD3xJIDoDy": {
       "bucket": "U",
@@ -78,11 +78,11 @@
     },
     "spid:076OjFSrSNg1uwxNCuXbeM": {
       "bucket": "U",
-      "rating": 988,
+      "rating": 1000,
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastComparedAt": "2026-03-03T21:39:46.853Z"
+      "lastComparedAt": "2026-03-05T19:50:00.208Z"
     },
     "spid:5QcakoaIefSwMlOr04uhSO": {
       "bucket": "U",
@@ -1391,8 +1391,136 @@
           "lastComparedAt": "2026-03-03T21:39:46.853Z"
         }
       }
+    },
+    {
+      "at": "2026-03-05T19:48:44.360Z",
+      "type": "duel",
+      "leftKey": "spid:2PG8KMUDxTr5sDEB1Xn4So",
+      "rightKey": "spid:7vbA3HRdGmY2oFsDGCiS7W",
+      "winnerKey": "spid:2PG8KMUDxTr5sDEB1Xn4So",
+      "context": null,
+      "prev": {
+        "left": {
+          "bucket": "S",
+          "rating": 1012,
+          "games": 1,
+          "wins": 1,
+          "losses": 0,
+          "lastComparedAt": "2026-03-03T21:39:46.853Z"
+        },
+        "right": {
+          "bucket": "S",
+          "rating": 1000,
+          "games": 0,
+          "wins": 0,
+          "losses": 0,
+          "lastComparedAt": null
+        }
+      },
+      "next": {
+        "left": {
+          "bucket": "S",
+          "rating": 1023.5856994136229,
+          "games": 2,
+          "wins": 2,
+          "losses": 0,
+          "lastComparedAt": "2026-03-05T19:48:44.360Z"
+        },
+        "right": {
+          "bucket": "S",
+          "rating": 988.4143005863771,
+          "games": 1,
+          "wins": 0,
+          "losses": 1,
+          "lastComparedAt": "2026-03-05T19:48:44.360Z"
+        }
+      }
+    },
+    {
+      "at": "2026-03-05T19:48:59.168Z",
+      "type": "manual_elo",
+      "trackKey": "spid:2PG8KMUDxTr5sDEB1Xn4So",
+      "prev": {
+        "bucket": "U",
+        "rating": 1023.5856994136229,
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "lastComparedAt": "2026-03-05T19:48:44.360Z"
+      },
+      "next": {
+        "bucket": "U",
+        "rating": 1000,
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "lastComparedAt": "2026-03-05T19:48:59.168Z"
+      }
+    },
+    {
+      "at": "2026-03-05T19:49:11.868Z",
+      "type": "manual_elo",
+      "trackKey": "spid:7vbA3HRdGmY2oFsDGCiS7W",
+      "prev": {
+        "bucket": "U",
+        "rating": 988.4143005863771,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-05T19:48:44.360Z"
+      },
+      "next": {
+        "bucket": "U",
+        "rating": 100,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-05T19:49:11.868Z"
+      }
+    },
+    {
+      "at": "2026-03-05T19:49:47.527Z",
+      "type": "manual_elo",
+      "trackKey": "spid:7vbA3HRdGmY2oFsDGCiS7W",
+      "prev": {
+        "bucket": "U",
+        "rating": 100,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-05T19:49:11.868Z"
+      },
+      "next": {
+        "bucket": "U",
+        "rating": 1000,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-05T19:49:47.527Z"
+      }
+    },
+    {
+      "at": "2026-03-05T19:50:00.208Z",
+      "type": "manual_elo",
+      "trackKey": "spid:076OjFSrSNg1uwxNCuXbeM",
+      "prev": {
+        "bucket": "U",
+        "rating": 988,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-03T21:39:46.853Z"
+      },
+      "next": {
+        "bucket": "U",
+        "rating": 1000,
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "lastComparedAt": "2026-03-05T19:50:00.208Z"
+      }
     }
   ],
   "migratedPlaylists": {},
-  "serverSavedAt": "2026-03-04T21:56:26.257Z"
+  "serverSavedAt": "2026-03-05T20:24:50.271Z"
 }
