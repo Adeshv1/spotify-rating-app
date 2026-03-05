@@ -2075,8 +2075,8 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
   useEffect(() => {
     if (!activeKey) return;
-    if (orderedSet.has(activeKey)) setActiveKey(null);
-  }, [activeKey, orderedSet]);
+    if (!trackByKey.has(activeKey)) setActiveKey(null);
+  }, [activeKey, trackByKey]);
 
   useEffect(() => {
     if (!activeKey || !ranking) return;
@@ -2136,8 +2136,18 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
     [rankedRows],
   );
 
+  useEffect(() => {
+    if (activeKey) return;
+    if (rankedRows.length === 0) return;
+    if (unrankedRows.length === 0) return;
+    const pick =
+      unrankedRows[Math.floor(Math.random() * unrankedRows.length)]?.key ??
+      null;
+    if (pick) setActiveKey(pick);
+  }, [activeKey, rankedRows.length, unrankedRows.length, unrankedRows]);
+
   return (
-    <div className="section">
+    <div className="section dashboardPage rankSongsPage">
       <div className="cardSub">
         <h3>Rank Songs</h3>
         {!userId ? (
@@ -2157,7 +2167,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
       {!userId || uniqueTracks.length === 0 ? null : (
         <div
-          className="dashboardColumns"
+          className="dashboardColumns rankSongsColumns"
           role="region"
           aria-label="Rank songs columns"
         >
@@ -2166,7 +2176,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
               <h3>Unranked ({unrankedRows.length})</h3>
             </div>
             <div
-              className="dashPanelBody dashPanelBodyTight"
+              className="dashPanelBody dashPanelBodyTight rankSongsScroll"
               role="region"
               aria-label="Unranked songs list"
               tabIndex={0}
@@ -2198,7 +2208,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                       </td>
                       <td className="right">
                         <button
-                          className="btn small"
+                          className="btn"
                           onClick={() => setActiveKey(r.key)}
                           disabled={activeKey === r.key}
                           title="Rank this song"
@@ -2218,7 +2228,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
               <h3>Rank</h3>
             </div>
             <div
-              className="dashPanelBody"
+              className="dashPanelBody rankSongsCenter"
               role="region"
               aria-label="Ranking interface"
               tabIndex={0}
@@ -2239,7 +2249,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
               <h3>Ranked ({rankedRows.length})</h3>
             </div>
             <div
-              className="dashPanelBody dashPanelBodyTight"
+              className="dashPanelBody dashPanelBodyTight rankSongsScroll"
               role="region"
               aria-label="Ranked songs list"
               tabIndex={0}
@@ -2256,13 +2266,11 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                     <th className="right dashColIndex">#</th>
                     <th>Song</th>
                     <th className="right dashColElo">Elo</th>
-                    <th className="right dashColPlay" />
+                    <th className="right dashColPlay">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {rankedRows.map((r, idx) => {
-                    const trackId =
-                      typeof r?.track?.id === "string" ? r.track.id : null;
                     return (
                       <tr
                         key={r.key}
@@ -2287,15 +2295,13 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                           </span>
                         </td>
                         <td className="right">
-                          {trackId ? (
-                            <button
-                              className="btn small rowPlayBtn"
-                              onClick={() => openTrackInSpotify(trackId)}
-                              title="Open in Spotify"
-                            >
-                              Play
-                            </button>
-                          ) : null}
+                          <button
+                            className="btn"
+                            onClick={() => setActiveKey(r.key)}
+                            title="Re-rank this song"
+                          >
+                            Rank Again
+                          </button>
                         </td>
                       </tr>
                     );
@@ -2887,17 +2893,28 @@ function BinarySorter({
   }, [uniqueTracks]);
 
   const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
+  const baseOrder = useMemo(() => {
+    if (!activeKey) return orderedKeys;
+    return orderedKeys.filter(k => k !== activeKey);
+  }, [orderedKeys, activeKey]);
   useEffect(() => {
-    if (!activeKey || !ranking || orderedKeys.length === 0) {
+    if (!activeKey || !ranking) {
       lastActiveRef.current = activeKey;
       setSession(null);
       return;
     }
+    if (baseOrder.length === 0) {
+      onChange?.(rk => (rk ? applyOrderToRanking(rk, [activeKey]) : rk));
+      setSession(null);
+      onActiveKeyChange?.(null);
+      lastActiveRef.current = activeKey;
+      return;
+    }
     if (lastActiveRef.current !== activeKey) {
-      setSession({ key: activeKey, low: 0, high: orderedKeys.length });
+      setSession({ key: activeKey, low: 0, high: baseOrder.length });
       lastActiveRef.current = activeKey;
     }
-  }, [activeKey, orderedKeys.length, ranking]);
+  }, [activeKey, baseOrder.length, ranking, onActiveKeyChange, onChange]);
 
   const activeTrack =
     (activeKey && trackIndex?.get?.(activeKey)) ||
@@ -2905,10 +2922,10 @@ function BinarySorter({
     null;
 
   const midIndex =
-    session && orderedKeys.length
+    session && baseOrder.length
       ? Math.floor((session.low + session.high) / 2)
       : null;
-  const midKey = session && midIndex != null ? orderedKeys[midIndex] : null;
+  const midKey = session && midIndex != null ? baseOrder[midIndex] : null;
   const midTrack =
     (midKey && trackIndex?.get?.(midKey)) ||
     (midKey && trackByKey.get(midKey)) ||
@@ -2916,7 +2933,7 @@ function BinarySorter({
 
   function insertAt(position) {
     if (!ranking || !activeKey) return;
-    const nextOrder = orderedKeys.filter(k => k !== activeKey);
+    const nextOrder = baseOrder.slice();
     nextOrder.splice(position, 0, activeKey);
     onChange?.(rk => (rk ? applyOrderToRanking(rk, nextOrder) : rk));
     setSession(null);
@@ -2964,7 +2981,7 @@ function BinarySorter({
       <p className="meta">
         Ranked globally: {orderedKeys.length}.
         {session && midIndex != null
-          ? ` Comparing against rank ${midIndex + 1} of ${orderedKeys.length}.`
+          ? ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
           : activeKey
             ? " Ready to compare."
             : " Pick a song from the left to start."}

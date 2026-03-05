@@ -94,6 +94,7 @@
   max-width: 2200px;
   margin: 0 auto;
   padding: clamp(0.75rem, 1.8vw, 1.25rem) clamp(0.75rem, 2.4vw, 2rem) 2rem;
+  box-sizing: border-box;
 }
 
 .mainDashboard {
@@ -264,6 +265,7 @@
   border-radius: 16px;
   background: var(--surface);
   text-align: left;
+  box-sizing: border-box;
 }
 
 .section {
@@ -322,17 +324,22 @@
 
 .dashboardColumns {
   margin-top: 0.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns:
+    calc((100% - 2rem) * 0.31)
+    calc((100% - 2rem) * 0.38)
+    calc((100% - 2rem) * 0.31);
   width: 100%;
   gap: 1rem;
   align-items: stretch;
   flex: 1 1 auto;
   min-height: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1100px) {
   .dashboardColumns {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     height: auto;
     min-height: 0;
     flex: 0 0 auto;

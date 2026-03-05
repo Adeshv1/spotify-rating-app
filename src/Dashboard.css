@@ -208,3 +208,27 @@
     pointer-events: auto;
   }
 }
+
+/* Rank Songs three-column layout tweaks */
+.rankSongsPage {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.rankSongsPage .rankSongsColumns {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.rankSongsPage .cardSub {
+  flex: 0 0 auto;
+}
+
+.rankSongsPage .rankSongsScroll {
+  overflow-y: auto;
+}
+
+.rankSongsPage .rankSongsCenter {
+  overflow: hidden;
+}
