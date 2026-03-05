@@ -638,10 +638,6 @@
   width: 190px;
 }
 
-.colElo {
-  width: 120px;
-}
-
 .colTier {
   width: 280px;
 }
@@ -767,32 +763,6 @@
   font-size: 0.95em;
 }
 
-.eloEditor {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  justify-content: flex-end;
-}
-
-.eloEditBtn {
-  display: none;
-}
-
-.eloEditor:hover .eloEditBtn,
-.eloEditor:focus-within .eloEditBtn {
-  display: inline-flex;
-}
-
-.eloInput {
-  width: 6.5rem;
-  font: inherit;
-  padding: 0.35rem 0.55rem;
-  border-radius: 12px;
-  border: 1px solid var(--surface-border);
-  background: var(--surface-2);
-  color: inherit;
-  text-align: right;
-}
 
 .read-the-docs {
   color: var(--text-muted);

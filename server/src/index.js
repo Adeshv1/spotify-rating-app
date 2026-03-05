@@ -434,9 +434,9 @@ const server = http.createServer((req, res) => {
       // ignore
     }
 
-    function pushTopNByRating(list, item, maxN) {
+    function pushTopNByRank(list, item, maxN) {
       list.push(item)
-      list.sort((a, b) => b.rating - a.rating)
+      list.sort((a, b) => a.rank - b.rank)
       if (list.length > maxN) list.length = maxN
     }
 
@@ -445,8 +445,8 @@ const server = http.createServer((req, res) => {
       const idByArtist = new Map()
 
       for (const t of tracks) {
-        const rating = Number(t?.rating)
-        if (!Number.isFinite(rating)) continue
+        const rank = Number(t?.rank)
+        if (!Number.isFinite(rank)) continue
         const trackId = typeof t?.id === 'string' ? t.id : null
         const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
         if (!artists.length) continue
@@ -458,13 +458,13 @@ const server = http.createServer((req, res) => {
           }
 
           const existing = byArtist.get(artistName) || []
-          pushTopNByRating(
+          pushTopNByRank(
             existing,
             {
               trackKey: typeof t?.trackKey === 'string' ? t.trackKey : trackId ? `spid:${trackId}` : null,
               id: trackId,
               name: typeof t?.name === 'string' ? t.name : null,
-              rating,
+              rank,
             },
             maxSongsPerArtist,
           )
@@ -476,13 +476,13 @@ const server = http.createServer((req, res) => {
       for (const [name, topSongs] of byArtist.entries()) {
         const n = topSongs.length
         if (!n) continue
-        const avgRating = topSongs.reduce((sum, s) => sum + s.rating, 0) / n
-        const artistScore = avgRating * (n / maxSongsPerArtist)
+        const avgRank = topSongs.reduce((sum, s) => sum + s.rank, 0) / n
+        const adjustedAvgRank = avgRank * (maxSongsPerArtist / n)
         const artistId = idByArtist.get(name) || null
-        scored.push({ name, artistId, n, avgRating, artistScore, topSongs, topTracks: topSongs })
+        scored.push({ name, artistId, n, avgRank, adjustedAvgRank, topSongs, topTracks: topSongs })
       }
 
-      scored.sort((a, b) => b.artistScore - a.artistScore)
+      scored.sort((a, b) => a.adjustedAvgRank - b.adjustedAvgRank)
       return scored.slice(0, maxArtists)
     }
 
@@ -494,6 +494,12 @@ const server = http.createServer((req, res) => {
       const meta = trackMeta.get(id)
       if (!meta) continue
       const rating = Number(state?.rating)
+      const bucket = typeof state?.bucket === 'string' ? state.bucket : 'U'
+      const games = Number(state?.games) || 0
+      const isRanked = (bucket !== 'U' && bucket !== 'X') ||
+        (Number.isFinite(rating) && Math.round(rating) !== 1000) ||
+        games > 0
+      if (bucket === 'X' || !isRanked) continue
       tracks.push({
         trackKey: `spid:${id}`,
         id,
@@ -501,13 +507,16 @@ const server = http.createServer((req, res) => {
         artists: meta.artists,
         artistsDetailed: meta.artistsDetailed,
         album: meta.album,
-        bucket: typeof state?.bucket === 'string' ? state.bucket : 'U',
+        bucket,
         rating: Number.isFinite(rating) ? rating : 1000,
-        games: Number(state?.games) || 0,
+        games,
       })
     }
 
     tracks.sort((a, b) => b.rating - a.rating)
+    tracks.forEach((t, idx) => {
+      t.rank = idx + 1
+    })
     const albumAgg = new Map()
 
     for (const t of tracks) {
@@ -516,14 +525,14 @@ const server = http.createServer((req, res) => {
         const prev = albumAgg.get(album) || {
           name: album,
           tracks: 0,
-          sumRating: 0,
+          sumRank: 0,
           bestTrackId: null,
-          bestRating: -Infinity,
+          bestRank: Number.POSITIVE_INFINITY,
         }
         prev.tracks += 1
-        prev.sumRating += t.rating
-        if (t.id && t.rating > prev.bestRating) {
-          prev.bestRating = t.rating
+        prev.sumRank += t.rank
+        if (t.id && t.rank < prev.bestRank) {
+          prev.bestRank = t.rank
           prev.bestTrackId = t.id
         }
         albumAgg.set(album, prev)
@@ -543,8 +552,8 @@ const server = http.createServer((req, res) => {
     })
 
     const topAlbums = Array.from(albumAgg.values())
-      .sort((a, b) => b.sumRating - a.sumRating)
-      .map((a) => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }))
+      .map((a) => ({ ...a, avgRank: a.tracks ? a.sumRank / a.tracks : 0 }))
+      .sort((a, b) => a.avgRank - b.avgRank)
 
     sendJson(res, 200, {
       ok: true,

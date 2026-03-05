@@ -1,34 +1,34 @@
 // Dashboard selector helpers.
 //
 // Top Artists scoring:
-// - For each artist, take their top 5 rated songs (by Elo/rating).
-// - Let n be the number of songs available (1..5) and avg be the mean rating.
-// - artistScore = avg * (n / 5)
-//   This penalizes artists with fewer rated songs so 1 great song doesn't outrank
-//   an artist with many consistently high-rated songs.
+// - For each artist, take their top 5 songs by global rank (lower is better).
+// - Let n be the number of songs available (1..5) and avg be the mean rank.
+// - adjustedAvgRank = avg * (5 / n)
+//   This penalizes artists with fewer ranked songs so 1 great song doesn't outrank
+//   an artist with many consistently high-ranked songs.
 
-function pushTopNByRating(list, item, maxN) {
+function pushTopNByRank(list, item, maxN) {
   list.push(item)
-  list.sort((a, b) => b.rating - a.rating)
+  list.sort((a, b) => a.rank - b.rank)
   if (list.length > maxN) list.length = maxN
 }
 
 /**
- * @param {Array<{ trackKey: string, id?: string|null, name?: string|null, rating: number, artists: string[], artistsDetailed?: Array<{name:string, id:string|null}> }>} tracks
+ * @param {Array<{ trackKey: string, id?: string|null, name?: string|null, rank: number, artists: string[], artistsDetailed?: Array<{name:string, id:string|null}> }>} tracks
  * @param {{ maxSongsPerArtist?: number, maxArtists?: number }} [options]
  */
 export function computeTopArtistsFromTracks(tracks, options = {}) {
   const maxSongsPerArtist = Number(options.maxSongsPerArtist) || 5
   const maxArtists = Number(options.maxArtists) || 15
 
-  /** @type {Map<string, Array<{trackKey:string, id:string|null, name:string|null, rating:number}>>} */
+  /** @type {Map<string, Array<{trackKey:string, id:string|null, name:string|null, rank:number}>>} */
   const byArtist = new Map()
   /** @type {Map<string, string>} */
   const idByArtist = new Map()
 
   for (const t of tracks) {
-    const rating = Number(t?.rating)
-    if (!Number.isFinite(rating)) continue
+    const rank = Number(t?.rank)
+    if (!Number.isFinite(rank)) continue
     const trackId = typeof t?.id === 'string' ? t.id : null
     const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
     if (!artists.length) continue
@@ -40,9 +40,9 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
       }
 
       const existing = byArtist.get(artistName) || []
-      pushTopNByRating(
+      pushTopNByRank(
         existing,
-        { trackKey: t.trackKey, id: trackId, name: typeof t?.name === 'string' ? t.name : null, rating },
+        { trackKey: t.trackKey, id: trackId, name: typeof t?.name === 'string' ? t.name : null, rank },
         maxSongsPerArtist,
       )
       byArtist.set(artistName, existing)
@@ -53,12 +53,20 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
   for (const [name, topSongs] of byArtist.entries()) {
     const n = topSongs.length
     if (!n) continue
-    const avgRating = topSongs.reduce((sum, s) => sum + s.rating, 0) / n
-    const artistScore = avgRating * (n / maxSongsPerArtist)
+    const avgRank = topSongs.reduce((sum, s) => sum + s.rank, 0) / n
+    const adjustedAvgRank = avgRank * (maxSongsPerArtist / n)
     const artistId = idByArtist.get(name) || null
-    scored.push({ name, artistId, n, avgRating, artistScore, topSongs, topTracks: topSongs })
+    scored.push({
+      name,
+      artistId,
+      n,
+      avgRank,
+      adjustedAvgRank,
+      topSongs,
+      topTracks: topSongs,
+    })
   }
 
-  scored.sort((a, b) => b.artistScore - a.artistScore)
+  scored.sort((a, b) => a.adjustedAvgRank - b.adjustedAvgRank)
   return scored.slice(0, maxArtists)
 }

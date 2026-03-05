@@ -27,7 +27,6 @@ import {
   mergeLegacyPlaylistRanking,
   readUserRanking,
   recordDuel,
-  setTrackElo,
   trackKeyOfTrack,
   undoLast,
   mergeUserRankings,
@@ -897,11 +896,11 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
             </button>
           ) : null}
         </div>
-        {Number.isFinite(Number(artist?.artistScore)) ? (
+        {Number.isFinite(Number(artist?.adjustedAvgRank)) ? (
           <div className="artistCardScore">
-            <span className="artistCardScoreLabel">AVG ELO (Top 5):</span>{" "}
-            <span className="eloValue">
-              {Math.round(Number(artist.artistScore) || 0)}
+            <span className="artistCardScoreLabel">AVG RANK (Top 5):</span>{" "}
+            <span className="rankValue">
+              {Math.round(Number(artist.adjustedAvgRank) || 0)}
             </span>
           </div>
         ) : null}
@@ -918,8 +917,8 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
                 {s.name || s.trackKey}
               </span>
               <span className="artistCardTrackRight">
-                <span className="artistCardTrackScore eloValue">
-                  {Math.round(Number(s.rating) || 0)}
+                <span className="artistCardTrackScore rankValue">
+                  #{Math.round(Number(s.rank) || 0)}
                 </span>
                 {(() => {
                   const trackId =
@@ -1450,36 +1449,31 @@ function DashboardPage({
   const computed = useMemo(() => {
     if (!ranking) return null;
 
-    const entries = Object.entries(ranking?.tracks ?? {});
-    const rows = [];
+    const orderedKeys = buildOrderedKeys(ranking);
+    const rankByKey = new Map();
+    orderedKeys.forEach((key, idx) => rankByKey.set(key, idx + 1));
 
-    for (const [trackKey] of entries) {
-      const state = getTrackState(ranking, trackKey);
-      if (trackKey.startsWith("meta:")) continue;
-      if (state.bucket === "X") continue;
+    const rows = orderedKeys
+      .filter(trackKey => !trackKey.startsWith("meta:"))
+      .map(trackKey => {
+        const meta = trackIndex.get(trackKey) || null;
+        return {
+          trackKey,
+          id:
+            meta?.id ||
+            (trackKey.startsWith("spid:")
+              ? trackKey.slice("spid:".length)
+              : null),
+          name: meta?.name || null,
+          artists: meta?.artists || [],
+          artistsDetailed: meta?.artistsDetailed || [],
+          album: meta?.album || null,
+          rank: rankByKey.get(trackKey) || null,
+        };
+      })
+      .filter(r => Number.isFinite(Number(r.rank)));
 
-      const meta = trackIndex.get(trackKey) || null;
-      rows.push({
-        trackKey,
-        id:
-          meta?.id ||
-          (trackKey.startsWith("spid:")
-            ? trackKey.slice("spid:".length)
-            : null),
-        name: meta?.name || null,
-        artists: meta?.artists || [],
-        artistsDetailed: meta?.artistsDetailed || [],
-        album: meta?.album || null,
-        rating: state.rating,
-        games: state.games,
-        bucket: state.bucket,
-      });
-    }
-
-    const hasAnyRatings = rows.some(
-      r => r.bucket !== "U" || r.games > 0 || r.rating !== 1000,
-    );
-    rows.sort((a, b) => b.rating - a.rating);
+    const hasAnyRatings = rows.length > 0;
 
     const albumAgg = new Map();
 
@@ -1488,14 +1482,14 @@ function DashboardPage({
         const prev = albumAgg.get(r.album) || {
           name: r.album,
           tracks: 0,
-          sumRating: 0,
+          sumRank: 0,
           bestTrackId: null,
-          bestRating: -Infinity,
+          bestRank: Number.POSITIVE_INFINITY,
         };
         prev.tracks += 1;
-        prev.sumRating += r.rating;
-        if (r.id && r.rating > prev.bestRating) {
-          prev.bestRating = r.rating;
+        prev.sumRank += r.rank;
+        if (r.id && r.rank < prev.bestRank) {
+          prev.bestRank = r.rank;
           prev.bestTrackId = r.id;
         }
         albumAgg.set(r.album, prev);
@@ -1509,8 +1503,8 @@ function DashboardPage({
     });
 
     const topAlbums = Array.from(albumAgg.values())
-      .sort((a, b) => b.sumRating - a.sumRating)
-      .map(a => ({ ...a, avgRating: a.tracks ? a.sumRating / a.tracks : 0 }));
+      .map(a => ({ ...a, avgRank: a.tracks ? a.sumRank / a.tracks : 0 }))
+      .sort((a, b) => a.avgRank - b.avgRank);
 
     return { hasAnyRatings, topSongs, topArtists, topAlbums };
   }, [ranking, trackIndex]);
@@ -1518,7 +1512,7 @@ function DashboardPage({
   const topSongRanks = useMemo(
     () =>
       Array.isArray(computed?.topSongs)
-        ? getTiedRanks(computed.topSongs, t => t.rating)
+        ? getTiedRanks(computed.topSongs, t => t.rank)
         : [],
     [computed?.topSongs],
   );
@@ -1526,7 +1520,7 @@ function DashboardPage({
   const topAlbumRanks = useMemo(
     () =>
       Array.isArray(computed?.topAlbums)
-        ? getTiedRanks(computed.topAlbums, a => a.avgRating)
+        ? getTiedRanks(computed.topAlbums, a => a.avgRank)
         : [],
     [computed?.topAlbums],
   );
@@ -1603,14 +1597,12 @@ function DashboardPage({
               <colgroup>
                 <col className="dashColIndex" />
                 <col />
-                <col className="dashColElo" />
                 <col className="dashColPlay" />
               </colgroup>
               <thead>
                 <tr>
                   <th className="right dashColIndex">#</th>
                   <th>Song</th>
-                  <th className="right dashColElo">Elo</th>
                   <th
                     className="right dashColPlay"
                     aria-label="Play column"
@@ -1644,11 +1636,6 @@ function DashboardPage({
                             ? t.artists.join(", ")
                             : "Unknown artist"}
                         </div>
-                      </td>
-                      <td className="right">
-                        <span className="cellSub eloValue">
-                          {Math.round(Number(t.rating) || 0)}
-                        </span>
                       </td>
                       <td className="right">
                         {trackId ? (
@@ -1728,14 +1715,12 @@ function DashboardPage({
               <colgroup>
                 <col className="dashColIndex" />
                 <col />
-                <col className="dashColElo" />
                 <col className="dashColPlay" />
               </colgroup>
               <thead>
                 <tr>
                   <th className="right dashColIndex">#</th>
                   <th>Album</th>
-                  <th className="right dashColElo">Elo</th>
                   <th
                     className="right dashColPlay"
                     aria-label="Play column"
@@ -1760,15 +1745,10 @@ function DashboardPage({
                           ? "1 track"
                           : `${Number(a.tracks) || 0} tracks`}
                       </div>
-                    </td>
-                    <td className="right">
-                      <span className="cellSub eloValue">
-                        {Math.round(Number(a.avgRating) || 0)}
-                      </span>
-                    </td>
-                    <td className="right">
-                      {a?.bestTrackId ? (
-                        <button
+                      </td>
+                      <td className="right">
+                        {a?.bestTrackId ? (
+                          <button
                           className="btn small rowPlayBtn"
                           onClick={() => openTrackInSpotify(a.bestTrackId)}
                           title="Open a track from this album in Spotify"
@@ -1795,11 +1775,21 @@ function LandingPage({ publicPreview }) {
   const topArtists = Array.isArray(data?.topArtists) ? data.topArtists : [];
   const topAlbums = Array.isArray(data?.topAlbums) ? data.topAlbums : [];
   const topSongRanks = useMemo(
-    () => getTiedRanks(topSongs, t => t.rating),
+    () =>
+      topSongs.map((t, idx) => {
+        const rank = Number(t?.rank);
+        return Number.isFinite(rank) ? rank : idx + 1;
+      }),
     [topSongs],
   );
   const topAlbumRanks = useMemo(
-    () => getTiedRanks(topAlbums, a => a.avgRating),
+    () =>
+      topAlbums.map((a, idx) => {
+        const rank = Number(a?.rank);
+        if (Number.isFinite(rank)) return rank;
+        const avgRank = Number(a?.avgRank);
+        return Number.isFinite(avgRank) ? Math.round(avgRank) : idx + 1;
+      }),
     [topAlbums],
   );
 
@@ -1856,14 +1846,12 @@ function LandingPage({ publicPreview }) {
                 <colgroup>
                   <col className="dashColIndex" />
                   <col />
-                  <col className="dashColElo" />
                   <col className="dashColPlay" />
                 </colgroup>
                 <thead>
                   <tr>
                     <th className="right dashColIndex">#</th>
                     <th>Song</th>
-                    <th className="right dashColElo">Elo</th>
                     <th
                       className="right dashColPlay"
                       aria-label="Play column"
@@ -1897,11 +1885,6 @@ function LandingPage({ publicPreview }) {
                               ? t.artists.join(", ")
                               : "Unknown artist"}
                           </div>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub eloValue">
-                            {Math.round(Number(t.rating) || 0)}
-                          </span>
                         </td>
                         <td className="right">
                           {trackId ? (
@@ -1975,14 +1958,12 @@ function LandingPage({ publicPreview }) {
                 <colgroup>
                   <col className="dashColIndex" />
                   <col />
-                  <col className="dashColElo" />
                   <col className="dashColPlay" />
                 </colgroup>
                 <thead>
                   <tr>
                     <th className="right dashColIndex">#</th>
                     <th>Album</th>
-                    <th className="right dashColElo">Elo</th>
                     <th
                       className="right dashColPlay"
                       aria-label="Play column"
@@ -2007,11 +1988,6 @@ function LandingPage({ publicPreview }) {
                             ? "1 track"
                             : `${Number(a.tracks) || 0} tracks`}
                         </div>
-                      </td>
-                      <td className="right">
-                        <span className="cellSub eloValue">
-                          {Math.round(Number(a.avgRating) || 0)}
-                        </span>
                       </td>
                       <td className="right">
                         {typeof a?.bestTrackId === "string" ? (
@@ -2130,11 +2106,6 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
       })
       .filter(Boolean);
   }, [orderedKeys, ranking, trackByKey]);
-
-  const rankedRanks = useMemo(
-    () => getTiedRanks(rankedRows, r => r.state.rating),
-    [rankedRows],
-  );
 
   useEffect(() => {
     if (activeKey) return;
@@ -2258,14 +2229,12 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                 <colgroup>
                   <col className="dashColIndex" />
                   <col />
-                  <col className="dashColElo" />
                   <col className="dashColPlay" />
                 </colgroup>
                 <thead>
                   <tr>
                     <th className="right dashColIndex">#</th>
                     <th>Song</th>
-                    <th className="right dashColElo">Elo</th>
                     <th className="right dashColPlay">Action</th>
                   </tr>
                 </thead>
@@ -2277,9 +2246,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                         className="dashTableRow"
                       >
                         <td className="right">
-                          <span className="cellSub">
-                            {rankedRanks[idx] ?? idx + 1}
-                          </span>
+                          <span className="cellSub">{idx + 1}</span>
                         </td>
                         <td>
                           <div className="cellTitle">
@@ -2288,11 +2255,6 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                           <div className="cellSub">
                             {r.artists || "Unknown artist"}
                           </div>
-                        </td>
-                        <td className="right">
-                          <span className="cellSub eloValue">
-                            {Math.round(Number(r.state.rating) || 0)}
-                          </span>
                         </td>
                         <td className="right">
                           <button
@@ -2662,83 +2624,14 @@ function PlaylistView({
   );
 }
 
-function EloEditor({ rating, disabled = false, onSave }) {
-  const [editing, setEditing] = useState(false);
-  const [value, setValue] = useState(() =>
-    String(Math.round(Number.isFinite(rating) ? rating : 1000)),
-  );
-
-  function commit() {
-    const next = Number(value);
-    if (!Number.isFinite(next)) return;
-    onSave?.(next);
-    setEditing(false);
-  }
-
-  if (!editing) {
-    return (
-      <span className="eloEditor">
-        <span className="eloValue">
-          {Math.round(Number.isFinite(rating) ? rating : 1000)}
-        </span>
-        <button
-          className="btn small eloEditBtn"
-          onClick={() => {
-            setValue(
-              String(Math.round(Number.isFinite(rating) ? rating : 1000)),
-            );
-            setEditing(true);
-          }}
-          disabled={disabled}
-          title="Edit Elo"
-        >
-          Edit
-        </button>
-      </span>
-    );
-  }
-
-  return (
-    <span className="eloEditor">
-      <input
-        className="eloInput"
-        value={value}
-        onChange={e => setValue(e.target.value)}
-        disabled={disabled}
-        inputMode="numeric"
-        aria-label="Elo"
-        onKeyDown={e => {
-          if (e.key === "Enter") commit();
-          if (e.key === "Escape") setEditing(false);
-        }}
-      />
-      <button
-        className="btn small primary"
-        onClick={commit}
-        disabled={disabled}
-      >
-        Save
-      </button>
-      <button
-        className="btn small"
-        onClick={() => setEditing(false)}
-        disabled={disabled}
-      >
-        Cancel
-      </button>
-    </span>
-  );
-}
-
-function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
+function TracksTable({ uniqueTracks }) {
   const rows = useMemo(() => {
     return uniqueTracks.map(({ key, track }) => ({
       key,
       track,
-      state: ranking ? getTrackState(ranking, key) : null,
       artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
     }));
-  }, [uniqueTracks, ranking]);
+  }, [uniqueTracks]);
 
   if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
 
@@ -2756,7 +2649,6 @@ function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
               <th className="colSong">Song</th>
               <th className="colArtist">Artist</th>
               <th className="colAlbum">Album</th>
-              <th className="right colElo">Elo</th>
               <th className="right colActions">Actions</th>
             </tr>
           </thead>
@@ -2775,17 +2667,6 @@ function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
                   <div className="cellSub">
                     {r.track?.album || "Unknown album"}
                   </div>
-                </td>
-                <td className="right">
-                  <EloEditor
-                    rating={r.state?.rating}
-                    disabled={!ranking}
-                    onSave={next =>
-                      onChangeRanking?.(rk =>
-                        rk ? setTrackElo(rk, r.key, next) : rk,
-                      )
-                    }
-                  />
                 </td>
                 <td className="right">
                   <span className="btnRow">
@@ -3107,13 +2988,10 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
         const hay = `${r.track?.name ?? ""} ${r.artists}`.toLowerCase();
         return hay.includes(q);
       })
-      .sort((a, b) => b.state.rating - a.state.rating);
+    .sort((a, b) => b.state.rating - a.state.rating);
   }, [uniqueTracks, ranking, query]);
 
-  const ranks = useMemo(
-    () => getTiedRanks(rows, r => r.state.rating),
-    [rows],
-  );
+  const ranks = useMemo(() => rows.map((_, idx) => idx + 1), [rows]);
 
   return (
     <div className="cardSub">
@@ -3143,7 +3021,6 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
                 <th className="colSong">Song</th>
                 <th className="colArtist">Artist</th>
                 <th className="colAlbum">Album</th>
-                <th className="right colElo">Elo</th>
                 <th className="right colMatches">Matches</th>
                 <th className="right colActions">Actions</th>
               </tr>
@@ -3170,17 +3047,6 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
                     <div className="cellSub">
                       {r.track?.album || "Unknown album"}
                     </div>
-                  </td>
-                  <td className="right">
-                    <EloEditor
-                      rating={r.state.rating}
-                      disabled={!ranking}
-                      onSave={next =>
-                        onChange?.(rk =>
-                          rk ? setTrackElo(rk, r.key, next) : rk,
-                        )
-                      }
-                    />
                   </td>
                   <td className="right">
                     <span className="cellSub">{r.state.games}</span>
@@ -3280,7 +3146,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
         <button
           className="btn"
           onClick={() => setSessionDone(0)}
-          title="Resets the in-session counter only (does not affect ratings)."
+          title="Resets the in-session counter only (does not affect rankings)."
         >
           Reset session
         </button>
@@ -3336,20 +3202,6 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
                   <span className="cellSub">matches {leftState.games}</span>
                 </div>
               ) : null}
-              {leftState ? (
-                <div className="controls">
-                  <span className="cellSub">Elo</span>
-                  <EloEditor
-                    rating={leftState.rating}
-                    disabled={!ranking}
-                    onSave={next =>
-                      onChange?.(rk =>
-                        rk ? setTrackElo(rk, matchup.leftKey, next) : rk,
-                      )
-                    }
-                  />
-                </div>
-              ) : null}
               <div className="controls">
                 {leftTrack?.id ? (
                   <button
@@ -3388,20 +3240,6 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
               {rightState ? (
                 <div className="duelStats">
                   <span className="cellSub">matches {rightState.games}</span>
-                </div>
-              ) : null}
-              {rightState ? (
-                <div className="controls">
-                  <span className="cellSub">Elo</span>
-                  <EloEditor
-                    rating={rightState.rating}
-                    disabled={!ranking}
-                    onSave={next =>
-                      onChange?.(rk =>
-                        rk ? setTrackElo(rk, matchup.rightKey, next) : rk,
-                      )
-                    }
-                  />
                 </div>
               ) : null}
               <div className="controls">
