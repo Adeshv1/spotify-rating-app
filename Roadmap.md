@@ -48,3 +48,4 @@
 + Move ranking UI to Rank Songs tab (implemented 2026-03-05)
 + Rank Songs: three-column unranked/rank/ranked layout (implemented 2026-03-05)
 + Remove Elo UI; use rank-based artist scoring (implemented 2026-03-05)
++ Rank Songs: add refine mode + redo action (implemented 2026-03-05)

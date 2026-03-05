@@ -750,7 +750,15 @@ function App() {
         </div>
       </header>
 
-      <main className={isDashboardLikeRoute ? "main mainDashboard" : "main"}>
+      <main
+        className={
+          isDashboardLikeRoute
+            ? "main mainDashboard"
+            : isRankRoute
+              ? "main mainRank"
+              : "main"
+        }
+      >
         <div className="container">
           <div className={isDashboardLikeRoute ? "card cardDashboard" : "card"}>
             {error ? <p className="error">{error}</p> : null}
@@ -2014,6 +2022,7 @@ function LandingPage({ publicPreview }) {
 
 function RankSongsPage({ userId, ranking, onChangeRanking }) {
   const [activeKey, setActiveKey] = useState(null);
+  const [rankMode, setRankMode] = useState("binary");
 
   const globalSongs = useMemo(() => {
     if (!userId) return [];
@@ -2109,13 +2118,21 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
   useEffect(() => {
     if (activeKey) return;
+    if (rankMode !== "binary") return;
     if (rankedRows.length === 0) return;
     if (unrankedRows.length === 0) return;
     const pick =
       unrankedRows[Math.floor(Math.random() * unrankedRows.length)]?.key ??
       null;
     if (pick) setActiveKey(pick);
-  }, [activeKey, rankedRows.length, unrankedRows.length, unrankedRows]);
+  }, [activeKey, rankMode, rankedRows.length, unrankedRows.length, unrankedRows]);
+
+  useEffect(() => {
+    if (!activeKey) return;
+    if (rankMode !== "refine") return;
+    const isRanked = rankedRows.some(r => r.key === activeKey);
+    if (!isRanked) setActiveKey(null);
+  }, [activeKey, rankMode, rankedRows]);
 
   return (
     <div className="section dashboardPage rankSongsPage">
@@ -2180,7 +2197,10 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                       <td className="right">
                         <button
                           className="btn"
-                          onClick={() => setActiveKey(r.key)}
+                          onClick={() => {
+                            setRankMode("binary");
+                            setActiveKey(r.key);
+                          }}
                           disabled={activeKey === r.key}
                           title="Rank this song"
                         >
@@ -2196,7 +2216,9 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
           <div className="dashPanel">
             <div className="dashPanelHeader">
-              <h3>Rank</h3>
+              <h3>
+                Rank — {rankMode === "refine" ? "Refine" : "Binary"}
+              </h3>
             </div>
             <div
               className="dashPanelBody rankSongsCenter"
@@ -2204,6 +2226,20 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
               aria-label="Ranking interface"
               tabIndex={0}
             >
+              <div className="controls">
+                <button
+                  className={`btn ${rankMode === "binary" ? "active" : ""}`}
+                  onClick={() => setRankMode("binary")}
+                >
+                  Binary sort
+                </button>
+                <button
+                  className={`btn ${rankMode === "refine" ? "active" : ""}`}
+                  onClick={() => setRankMode("refine")}
+                >
+                  Refine
+                </button>
+              </div>
               <BinarySorter
                 uniqueTracks={uniqueTracks}
                 trackIndex={trackIndex}
@@ -2211,6 +2247,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                 onChange={onChangeRanking}
                 activeKey={activeKey}
                 onActiveKeyChange={setActiveKey}
+                mode={rankMode}
               />
             </div>
           </div>
@@ -2229,13 +2266,13 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                 <colgroup>
                   <col className="dashColIndex" />
                   <col />
-                  <col className="dashColPlay" />
+                  <col className="dashColActions" />
                 </colgroup>
                 <thead>
                   <tr>
                     <th className="right dashColIndex">#</th>
                     <th>Song</th>
-                    <th className="right dashColPlay">Action</th>
+                    <th className="right dashColActions">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2257,13 +2294,28 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                           </div>
                         </td>
                         <td className="right">
-                          <button
-                            className="btn"
-                            onClick={() => setActiveKey(r.key)}
-                            title="Re-rank this song"
-                          >
-                            Rank Again
-                          </button>
+                          <span className="btnRow">
+                            <button
+                              className="btn compact"
+                              onClick={() => {
+                                setRankMode("binary");
+                                setActiveKey(r.key);
+                              }}
+                              title="Redo the binary placement"
+                            >
+                              Redo
+                            </button>
+                            <button
+                              className="btn compact"
+                              onClick={() => {
+                                setRankMode("refine");
+                                setActiveKey(r.key);
+                              }}
+                              title="Refine within nearby ranks"
+                            >
+                              Refine
+                            </button>
+                          </span>
                         </td>
                       </tr>
                     );
@@ -2763,9 +2815,13 @@ function BinarySorter({
   onChange,
   activeKey,
   onActiveKeyChange,
+  mode = "binary",
 }) {
   const [session, setSession] = useState(null);
   const lastActiveRef = useRef(null);
+  const lastModeRef = useRef(mode);
+  const isRefine = mode === "refine";
+  const refineWindow = 6;
 
   const trackByKey = useMemo(() => {
     const map = new Map();
@@ -2778,9 +2834,28 @@ function BinarySorter({
     if (!activeKey) return orderedKeys;
     return orderedKeys.filter(k => k !== activeKey);
   }, [orderedKeys, activeKey]);
+  const activeIndex = useMemo(() => {
+    if (!activeKey) return -1;
+    return orderedKeys.indexOf(activeKey);
+  }, [orderedKeys, activeKey]);
+  const refineLow = useMemo(() => {
+    if (!isRefine || activeIndex < 0) return 0;
+    return Math.max(0, activeIndex - refineWindow);
+  }, [activeIndex, isRefine, refineWindow]);
+  const refineHigh = useMemo(() => {
+    if (!isRefine || activeIndex < 0) return baseOrder.length;
+    return Math.min(baseOrder.length, activeIndex + refineWindow);
+  }, [activeIndex, baseOrder.length, isRefine, refineWindow]);
   useEffect(() => {
     if (!activeKey || !ranking) {
       lastActiveRef.current = activeKey;
+      lastModeRef.current = mode;
+      setSession(null);
+      return;
+    }
+    if (isRefine && activeIndex < 0) {
+      lastActiveRef.current = activeKey;
+      lastModeRef.current = mode;
       setSession(null);
       return;
     }
@@ -2789,13 +2864,28 @@ function BinarySorter({
       setSession(null);
       onActiveKeyChange?.(null);
       lastActiveRef.current = activeKey;
+      lastModeRef.current = mode;
       return;
     }
-    if (lastActiveRef.current !== activeKey) {
-      setSession({ key: activeKey, low: 0, high: baseOrder.length });
+    if (lastActiveRef.current !== activeKey || lastModeRef.current !== mode) {
+      const low = isRefine ? refineLow : 0;
+      const high = isRefine ? refineHigh : baseOrder.length;
+      setSession({ key: activeKey, low, high, mode });
       lastActiveRef.current = activeKey;
+      lastModeRef.current = mode;
     }
-  }, [activeKey, baseOrder.length, ranking, onActiveKeyChange, onChange]);
+  }, [
+    activeKey,
+    activeIndex,
+    baseOrder.length,
+    isRefine,
+    mode,
+    refineHigh,
+    refineLow,
+    ranking,
+    onActiveKeyChange,
+    onChange,
+  ]);
 
   const activeTrack =
     (activeKey && trackIndex?.get?.(activeKey)) ||
@@ -2846,26 +2936,30 @@ function BinarySorter({
     onActiveKeyChange?.(null);
   }
 
-  function excludeMid() {
-    if (!midKey) return;
-    onChange?.(rk => (rk ? excludeTrack(rk, midKey) : rk));
-    setSession(null);
-  }
-
   return (
     <div className="cardSub">
       <p className="meta">
-        Pick a song from the Unranked list, then choose which is better against
-        the midpoint of your current global order.
+        Mode:{" "}
+        <strong>{isRefine ? "Refine (local)" : "Binary sort"}</strong>
+      </p>
+
+      <p className="meta">
+        {isRefine
+          ? "Pick a song from the Ranked list, then compare it within a nearby range."
+          : "Pick a song from the Unranked list, then compare it against the midpoint of your current global order."}
       </p>
 
       <p className="meta">
         Ranked globally: {orderedKeys.length}.
         {session && midIndex != null
-          ? ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
+          ? isRefine
+            ? ` Refine window: ranks ${session.low + 1}–${session.high} of ${baseOrder.length}. Comparing against rank ${midIndex + 1}.`
+            : ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
           : activeKey
             ? " Ready to compare."
-            : " Pick a song from the left to start."}
+            : isRefine
+              ? " Pick a song from the right to start."
+              : " Pick a song from the left to start."}
       </p>
 
       {!ranking ? (
@@ -2888,36 +2982,38 @@ function BinarySorter({
                 <span className="cellSub">{activeTrack.album}</span>
               </div>
             ) : null}
-            <div className="controls">
+            <div className="duelActions">
+              <button
+                className="btn primary duelPrimaryBtn"
+                onClick={() => compare("active")}
+              >
+                Better
+              </button>
               {activeTrack?.id ? (
                 <button
-                  className="btn"
+                  className="btn duelSecondaryBtn"
                   onClick={() => openTrackInSpotify(activeTrack.id)}
                   title="Play in Spotify"
                 >
                   Play
                 </button>
               ) : null}
-              <button
-                className="btn primary"
-                onClick={() => compare("active")}
-              >
-                Better
-              </button>
-              <button
-                className="btn"
-                onClick={skip}
-                title="Pick a different pending song"
-              >
-                Skip
-              </button>
-              <button
-                className="btn danger"
-                onClick={excludeActive}
-                title="Exclude this song from ranking"
-              >
-                Do not rate
-              </button>
+              <div className="duelActionsFooter">
+                <button
+                  className="btn"
+                  onClick={skip}
+                  title="Pick a different pending song"
+                >
+                  Skip
+                </button>
+                <button
+                  className="btn danger"
+                  onClick={excludeActive}
+                  title="Exclude this song from ranking"
+                >
+                  Do not rate
+                </button>
+              </div>
             </div>
           </div>
 
@@ -2935,30 +3031,22 @@ function BinarySorter({
                 <span className="cellSub">{midTrack.album}</span>
               </div>
             ) : null}
-            <div className="controls">
+            <div className="duelActions">
+              <button
+                className="btn primary duelPrimaryBtn"
+                onClick={() => compare("mid")}
+              >
+                Better
+              </button>
               {midTrack?.id ? (
                 <button
-                  className="btn"
+                  className="btn duelSecondaryBtn"
                   onClick={() => openTrackInSpotify(midTrack.id)}
                   title="Play in Spotify"
                 >
                   Play
                 </button>
               ) : null}
-              <button
-                className="btn primary"
-                onClick={() => compare("mid")}
-              >
-                Better
-              </button>
-              <button
-                className="btn danger"
-                onClick={excludeMid}
-                disabled={!midKey}
-                title="Exclude this song from ranking"
-              >
-                Do not rate
-              </button>
             </div>
           </div>
         </div>

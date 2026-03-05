@@ -111,6 +111,27 @@
   flex-direction: column;
 }
 
+.mainRank {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainRank > .container {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainRank > .container > .card {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .cardDashboard {
   flex: 1 1 auto;
   min-height: 0;
@@ -687,6 +708,11 @@
   font-size: 0.95rem;
 }
 
+.btn.compact {
+  padding: 0.3rem 0.55rem;
+  font-size: 0.92rem;
+}
+
 .filterRow {
   display: flex;
   flex-wrap: wrap;
@@ -743,24 +769,65 @@
   border-radius: 16px;
   padding: 1rem;
   background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.duelActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.duelPrimaryBtn {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.duelSecondaryBtn {
+  width: 100%;
+}
+
+.duelActionsFooter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.25rem;
 }
 
 .duelTitle {
   font-weight: 800;
   font-size: 1.05em;
   line-height: 1.2;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .duelMeta {
   margin-top: 0.25rem;
   color: var(--text-muted);
   font-size: 0.95em;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .duelStats {
   margin-top: 0.4rem;
   color: var(--text-muted-2);
   font-size: 0.95em;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 

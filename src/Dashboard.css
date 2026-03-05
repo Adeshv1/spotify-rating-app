@@ -79,6 +79,9 @@
 .dashboardPage .dashTable col.dashColPlay {
   width: clamp(3.6rem, 4.7vw, 4.8rem);
 }
+.dashboardPage .dashTable col.dashColActions {
+  width: clamp(7.2rem, 10vw, 9.5rem);
+}
 
 .dashboardPage .dashTable td:first-child .cellSub {
   white-space: nowrap;
@@ -211,6 +214,8 @@
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .rankSongsPage .rankSongsColumns {
