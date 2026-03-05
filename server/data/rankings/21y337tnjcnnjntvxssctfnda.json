@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
-  "createdAt": "2026-03-05T21:16:39.998Z",
-  "updatedAt": "2026-03-05T21:17:02.566Z",
+  "createdAt": "2026-03-05T22:10:31.637Z",
+  "updatedAt": "2026-03-05T22:11:26.190Z",
   "tracks": {
-    "spid:4TEAN4lkqV5W3gkVsWuTXw": {
-      "bucket": "U",
-      "rating": 1002,
-      "games": 0,
-      "wins": 0,
-      "losses": 0,
-      "lastComparedAt": "2026-03-05T21:17:02.566Z"
-    },
-    "spid:29InCgoMa4g3zQP53MoxSd": {
+    "spid:04Gyftm06xrJ48BvqhxhIy": {
       "bucket": "U",
       "rating": 1001,
       "games": 0,
       "wins": 0,
       "losses": 0,
-      "lastComparedAt": "2026-03-05T21:17:02.566Z"
+      "lastComparedAt": "2026-03-05T22:11:04.770Z"
+    },
+    "spid:74NglPivWzHd1NAsRPSABJ": {
+      "bucket": "U",
+      "rating": 1002,
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "lastComparedAt": "2026-03-05T22:11:04.770Z"
     }
   },
   "history": [],
   "migratedPlaylists": {},
-  "serverSavedAt": "2026-03-05T21:17:03.044Z"
+  "serverSavedAt": "2026-03-05T22:11:28.165Z"
 }

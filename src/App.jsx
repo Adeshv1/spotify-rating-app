@@ -8,6 +8,7 @@ import {
   getSpotifyCooldownUntil,
   readPlaylistsCache,
   setSpotifyCooldown,
+  setPlaylistIngestedAt,
   writePlaylistsCache,
 } from "./lib/spotifyPlaylistsCache";
 import {
@@ -39,6 +40,7 @@ import {
   mergeArtistIdByNameCache,
   readArtistIdByNameCache,
 } from "./lib/spotifyArtistIdCache";
+import { readGlobalSongs, upsertGlobalSongs } from "./lib/globalSongsStore";
 
 function normalizedRankValue(value) {
   const n = Number(value);
@@ -149,12 +151,15 @@ function App() {
   const pendingSaveRef = useRef(false);
 
   const isDashboardRoute = routePath === "/app/dashboard";
+  const isRankRoute = routePath === "/rank";
   const isPublicDashboardRoute = !loggedIn && routePath === "/";
   const isDashboardLikeRoute = isDashboardRoute || isPublicDashboardRoute;
   const headerTitle = loggedIn
     ? isDashboardRoute
       ? "Dashboard"
-      : "Playlists"
+      : isRankRoute
+        ? "Rank Songs"
+        : "Playlists"
     : isPublicDashboardRoute
       ? "Dashboard"
       : "";
@@ -213,7 +218,11 @@ function App() {
   useEffect(() => {
     if (loading) return;
     if (!loggedIn && routePath !== "/") navigate("/", { replace: true });
-    if (loggedIn && !routePath.startsWith("/app"))
+    if (
+      loggedIn &&
+      !routePath.startsWith("/app") &&
+      routePath !== "/rank"
+    )
       navigate("/app", { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, loggedIn, routePath]);
@@ -704,23 +713,24 @@ function App() {
           <div className="topActions">
             {loggedIn ? (
               <>
-                {isDashboardRoute ? (
-                  <button
-                    className="btn"
-                    onClick={() => navigate("/app", { replace: true })}
-                  >
-                    Playlists
-                  </button>
-                ) : (
-                  <button
-                    className="btn"
-                    onClick={() =>
-                      navigate("/app/dashboard", { replace: true })
-                    }
-                  >
-                    Dashboard
-                  </button>
-                )}
+                <button
+                  className="btn"
+                  onClick={() => navigate("/app/dashboard", { replace: true })}
+                >
+                  Dashboard
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => navigate("/app", { replace: true })}
+                >
+                  Playlists
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => navigate("/rank", { replace: true })}
+                >
+                  Rank Songs
+                </button>
                 {rankingSync.status === "error" ? (
                   <span
                     className="saveStatus err"
@@ -750,7 +760,13 @@ function App() {
               <LandingPage publicPreview={publicPreview} />
             ) : (
               <>
-                {routePath === "/app/dashboard" ? (
+                {routePath === "/rank" ? (
+                  <RankSongsPage
+                    userId={profile?.id}
+                    ranking={userRanking}
+                    onChangeRanking={setUserRanking}
+                  />
+                ) : routePath === "/app/dashboard" ? (
                   <DashboardPage
                     userId={profile?.id}
                     isOwnerUser={isOwnerUser}
@@ -761,10 +777,7 @@ function App() {
                 ) : selectedPlaylistId ? (
                   <PlaylistView
                     playlistsCache={playlistsCache}
-                    userId={profile?.id}
                     playlistId={selectedPlaylistId}
-                    ranking={userRanking}
-                    onChangeRanking={setUserRanking}
                     isOwnerUser={isOwnerUser}
                     cooldownUntilMs={cooldownUntilMs}
                     nowMs={nowMs}
@@ -796,6 +809,7 @@ function App() {
                     cooldownUntilMs={cooldownUntilMs}
                     nowMs={nowMs}
                     onRefresh={() => refreshPlaylistsCache({ force: true })}
+                    onUpdatePlaylistsCache={next => setPlaylistsCache(next)}
                     onSelect={playlistId => {
                       setSelectedPlaylistId(playlistId);
                       setTracksError(null);
@@ -2022,6 +2036,132 @@ function LandingPage({ publicPreview }) {
   );
 }
 
+function RankSongsPage({ userId, ranking, onChangeRanking }) {
+  const [view, setView] = useState("sort"); // sort | duel | leaderboard | tracks
+
+  const globalSongs = useMemo(() => {
+    if (!userId) return [];
+    const record = readGlobalSongs(userId);
+    const items = record?.items && typeof record.items === "object"
+      ? Object.values(record.items)
+      : [];
+    return items
+      .filter(Boolean)
+      .sort((a, b) =>
+        (a?.name || "").localeCompare(b?.name || "", "en", { numeric: true }),
+      );
+  }, [userId]);
+
+  const uniqueTracks = useMemo(() => {
+    const map = new Map();
+    for (const t of globalSongs) {
+      const key = trackKeyOfTrack(t);
+      if (!map.has(key)) map.set(key, { key, track: t, count: 1 });
+    }
+    return Array.from(map.values());
+  }, [globalSongs]);
+
+  const trackIndex = useMemo(() => {
+    const map = new Map();
+    for (const t of globalSongs) {
+      const key = trackKeyOfTrack(t);
+      if (!map.has(key)) {
+        const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : [];
+        map.set(key, {
+          id: typeof t?.id === "string" ? t.id : null,
+          name: typeof t?.name === "string" ? t.name : null,
+          artists,
+          album: typeof t?.album === "string" ? t.album : null,
+        });
+      }
+    }
+    return map;
+  }, [globalSongs]);
+
+  return (
+    <div className="section">
+      <div className="cardSub">
+        <h3>Rank Songs</h3>
+        {!userId ? (
+          <p className="meta">Loading…</p>
+        ) : uniqueTracks.length === 0 ? (
+          <p className="meta">
+            No songs in the ranking pool yet. Add playlists from the Playlists
+            page to populate this list.
+          </p>
+        ) : (
+          <>
+            <p className="meta">
+              Global pool size: {uniqueTracks.length}. Start ranking with binary
+              sort, then refine with head-to-head.
+            </p>
+            <div
+              className="tabs"
+              role="tablist"
+              aria-label="Rank songs views"
+            >
+              <button
+                className={`tab ${view === "sort" ? "active" : ""}`}
+                onClick={() => setView("sort")}
+              >
+                Binary sort
+              </button>
+              <button
+                className={`tab ${view === "duel" ? "active" : ""}`}
+                onClick={() => setView("duel")}
+              >
+                Refine (head-to-head)
+              </button>
+              <button
+                className={`tab ${view === "leaderboard" ? "active" : ""}`}
+                onClick={() => setView("leaderboard")}
+              >
+                Leaderboard (global)
+              </button>
+              <button
+                className={`tab ${view === "tracks" ? "active" : ""}`}
+                onClick={() => setView("tracks")}
+              >
+                Tracks
+              </button>
+            </div>
+
+            {view === "sort" ? (
+              <BinarySorter
+                uniqueTracks={uniqueTracks}
+                trackIndex={trackIndex}
+                ranking={ranking}
+                onChange={onChangeRanking}
+              />
+            ) : null}
+            {view === "duel" ? (
+              <HeadToHead
+                uniqueTracks={uniqueTracks}
+                ranking={ranking}
+                onChange={onChangeRanking}
+              />
+            ) : null}
+            {view === "leaderboard" ? (
+              <Leaderboard
+                uniqueTracks={uniqueTracks}
+                ranking={ranking}
+                onChange={onChangeRanking}
+              />
+            ) : null}
+            {view === "tracks" ? (
+              <TracksTable
+                uniqueTracks={uniqueTracks}
+                ranking={ranking}
+                onChangeRanking={onChangeRanking}
+              />
+            ) : null}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function PlaylistsView({
   profile,
   playlistsLoading,
@@ -2032,9 +2172,98 @@ function PlaylistsView({
   cooldownUntilMs,
   nowMs,
   onRefresh,
+  onUpdatePlaylistsCache,
   onSelect,
 }) {
-  const userId = profile?.id;
+  const userId = profile?.id ?? null;
+  const [ingestStateById, setIngestStateById] = useState({});
+  const [cooldownNowMs, setCooldownNowMs] = useState(() => Date.now());
+
+  useEffect(() => {
+    const id = setInterval(() => setCooldownNowMs(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  function updateIngestState(playlistId, patch) {
+    setIngestStateById(prev => ({
+      ...prev,
+      [playlistId]: { ...(prev?.[playlistId] ?? {}), ...patch },
+    }));
+  }
+
+  async function ingestPlaylist(playlistId) {
+    if (!userId || !playlistId) return;
+    const cooldownUntilMs = Date.now() + 10_000;
+    updateIngestState(playlistId, {
+      status: "fetching",
+      cooldownUntilMs,
+      error: null,
+    });
+
+    try {
+      const res = await fetch(
+        `/api/playlists/${encodeURIComponent(playlistId)}/tracks?all=1`,
+      );
+
+      let data = null;
+      try {
+        data = await res.json();
+      } catch {
+        data = null;
+      }
+
+      if (res.status === 429) {
+        const retryAfterSeconds = Number(data?.retryAfterSeconds);
+        const until = Number.isFinite(retryAfterSeconds)
+          ? Date.now() + retryAfterSeconds * 1000
+          : Date.now() + 60_000;
+        setSpotifyCooldown(userId, until);
+        updateIngestState(playlistId, {
+          status: "idle",
+          error: "Spotify rate limited this request.",
+        });
+        return;
+      }
+
+      if (!res.ok) {
+        const msg =
+          typeof data?.message === "string"
+            ? data.message
+            : typeof data?.error === "string"
+              ? data.error
+              : "Failed to fetch playlist tracks";
+        updateIngestState(playlistId, { status: "idle", error: msg });
+        return;
+      }
+
+      const fetchedAt = new Date().toISOString();
+      const apiItemsCount = Array.isArray(data?.items) ? data.items.length : 0;
+      const apiTotal = Number(data?.total) || apiItemsCount;
+      const isComplete = !data?.partial && apiItemsCount >= apiTotal;
+
+      writePlaylistTracksCache(userId, playlistId, data, {
+        fetchedAt,
+        isComplete,
+      });
+
+      const cachedTracks = readPlaylistTracksCache(userId, playlistId);
+      const tracks = Array.isArray(cachedTracks?.items)
+        ? cachedTracks.items
+        : [];
+      upsertGlobalSongs(userId, tracks);
+
+      const ingestedAt = new Date().toISOString();
+      const updated = setPlaylistIngestedAt(userId, playlistId, ingestedAt);
+      if (updated) onUpdatePlaylistsCache?.(updated);
+
+      updateIngestState(playlistId, { status: "idle", error: null });
+    } catch (err) {
+      updateIngestState(playlistId, {
+        status: "idle",
+        error: err?.message || "Ingestion failed",
+      });
+    }
+  }
   return (
     <div className="section">
       <h2>Your playlists</h2>
@@ -2075,70 +2304,112 @@ function PlaylistsView({
       )}
 
       {playlistsCache?.items?.length ? (
-        <ul className="list">
-          {playlistsCache.items.map(p => {
-            const tracksMeta =
-              userId && p.id ? readPlaylistTracksCacheMeta(userId, p.id) : null;
-            const hasTracksCache = Boolean(tracksMeta?.fetchedAt);
-            const snapshotMismatch =
-              hasTracksCache &&
-              typeof p.snapshotId === "string" &&
-              typeof tracksMeta?.snapshotId === "string" &&
-              p.snapshotId !== tracksMeta.snapshotId;
-            const ownedByUser = userId && p.owner?.id && p.owner.id === userId;
+        <div
+          className="tableWrap"
+          role="region"
+          aria-label="Playlists table"
+          tabIndex={0}
+        >
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Playlist</th>
+                <th>Owner</th>
+                <th>Status</th>
+                <th className="right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {playlistsCache.items.map(p => {
+                const tracksMeta =
+                  userId && p.id
+                    ? readPlaylistTracksCacheMeta(userId, p.id)
+                    : null;
+                const hasTracksCache = Boolean(tracksMeta?.fetchedAt);
+                const snapshotMismatch =
+                  hasTracksCache &&
+                  typeof p.snapshotId === "string" &&
+                  typeof tracksMeta?.snapshotId === "string" &&
+                  p.snapshotId !== tracksMeta.snapshotId;
+                const ownedByUser =
+                  userId && p.owner?.id && p.owner.id === userId;
+                const ingestState = p.id ? ingestStateById?.[p.id] : null;
+                const cooldownUntilMs =
+                  typeof ingestState?.cooldownUntilMs === "number"
+                    ? ingestState.cooldownUntilMs
+                    : null;
+                const cooldownRemaining =
+                  cooldownUntilMs && cooldownUntilMs > cooldownNowMs
+                    ? Math.ceil((cooldownUntilMs - cooldownNowMs) / 1000)
+                    : 0;
+                const isCooling = cooldownRemaining > 0;
+                const isFetching = ingestState?.status === "fetching";
+                const ingestedAt =
+                  typeof p?.ingestedAt === "string" ? p.ingestedAt : null;
+                const statusText = ingestedAt
+                  ? `Added: ${formatDateTime(ingestedAt)}`
+                  : "Not added";
+                const actionLabel = isFetching
+                  ? "Fetching..."
+                  : isCooling
+                    ? `Cooling down (${cooldownRemaining}s)`
+                    : ingestedAt
+                      ? "Refresh Playlist"
+                      : "Add to Rankings";
 
-            return (
-              <li key={p.id || p.name}>
-                <button
-                  className="linkButton"
-                  onClick={() => onSelect(p.id)}
-                  disabled={!p.id}
-                >
-                  {p.name || "(untitled playlist)"}
-                </button>
-                {p.externalUrl ? (
-                  <a
-                    className="subLink"
-                    href={p.externalUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    title="Open in Spotify"
-                  >
-                    open
-                  </a>
-                ) : null}
-                {typeof p.tracksTotal === "number" ? (
-                  <span className="sub"> · {p.tracksTotal} tracks</span>
-                ) : null}
-                {p.owner?.display_name ? (
-                  <span className="sub"> · by {p.owner.display_name}</span>
-                ) : null}
-                {typeof p.public === "boolean" ? (
-                  <span className="sub">
-                    {" "}
-                    · {p.public ? "public" : "private"}
-                  </span>
-                ) : null}
-                {ownedByUser ? (
-                  <span className="sub"> · owned by you</span>
-                ) : null}
-                {hasTracksCache ? (
-                  <span className="sub">
-                    {" "}
-                    · tracks cached{" "}
-                    {formatAge(nowMs - Date.parse(tracksMeta.fetchedAt))} ago
-                    {snapshotMismatch ? " (playlist changed)" : ""}
-                    {tracksMeta.latestAddedAt
-                      ? ` · newest added ${formatDateTime(tracksMeta.latestAddedAt)}`
-                      : ""}
-                  </span>
-                ) : (
-                  <span className="sub"> · tracks not cached</span>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+                return (
+                  <tr key={p.id || p.name}>
+                    <td>
+                      <button
+                        className="linkButton"
+                        onClick={() => onSelect(p.id)}
+                        disabled={!p.id}
+                      >
+                        {p.name || "(untitled playlist)"}
+                      </button>
+                      {p.externalUrl ? (
+                        <a
+                          className="subLink"
+                          href={p.externalUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          title="Open in Spotify"
+                        >
+                          open
+                        </a>
+                      ) : null}
+                      <div className="cellSub">
+                        {typeof p.tracksTotal === "number"
+                          ? `${p.tracksTotal} tracks`
+                          : "Unknown size"}
+                        {typeof p.public === "boolean"
+                          ? ` · ${p.public ? "public" : "private"}`
+                          : ""}
+                        {ownedByUser ? " · owned by you" : ""}
+                        {hasTracksCache
+                          ? ` · cached ${formatAge(
+                              nowMs - Date.parse(tracksMeta.fetchedAt),
+                            )} ago${snapshotMismatch ? " (playlist changed)" : ""}`
+                          : " · tracks not cached"}
+                      </div>
+                    </td>
+                    <td>{p.owner?.display_name || "Unknown"}</td>
+                    <td>{statusText}</td>
+                    <td className="right">
+                      <button
+                        className="btn"
+                        onClick={() => p.id && ingestPlaylist(p.id)}
+                        disabled={!p.id || isFetching || isCooling}
+                      >
+                        {actionLabel}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       ) : null}
     </div>
   );
@@ -2146,10 +2417,7 @@ function PlaylistsView({
 
 function PlaylistView({
   playlistsCache,
-  userId,
   playlistId,
-  ranking,
-  onChangeRanking,
   isOwnerUser,
   cooldownUntilMs,
   nowMs,
@@ -2171,8 +2439,6 @@ function PlaylistView({
     cachedSnapshotId &&
     playlistSnapshotId !== cachedSnapshotId;
 
-  const [view, setView] = useState("tracks"); // tracks | sort | duel | leaderboard
-
   const uniqueTracks = useMemo(() => {
     const items = Array.isArray(tracksCache?.items) ? tracksCache.items : [];
     const map = new Map();
@@ -2187,38 +2453,6 @@ function PlaylistView({
     }
     return Array.from(map.values());
   }, [tracksCache]);
-
-  const trackIndex = useMemo(() => {
-    const map = new Map();
-    if (!userId) return map;
-
-    const playlistIds = Array.isArray(playlistsCache?.items)
-      ? playlistsCache.items.map(p => p?.id).filter(Boolean)
-      : [];
-
-    for (const id of playlistIds) {
-      const cachedTracks = readPlaylistTracksCache(userId, id);
-      const items = Array.isArray(cachedTracks?.items) ? cachedTracks.items : [];
-      for (const t of items) {
-        const trackId = typeof t?.id === "string" ? t.id : null;
-        if (!trackId) continue;
-        const key = trackKeyOfTrack(t);
-        if (!map.has(key)) {
-          const artists = Array.isArray(t?.artists)
-            ? t.artists.filter(Boolean)
-            : [];
-          map.set(key, {
-            id: trackId,
-            name: typeof t?.name === "string" ? t.name : null,
-            artists,
-            album: typeof t?.album === "string" ? t.album : null,
-          });
-        }
-      }
-    }
-
-    return map;
-  }, [userId, playlistsCache]);
 
   return (
     <div className="section">
@@ -2245,37 +2479,6 @@ function PlaylistView({
 
       <h2>{playlist?.name || "Playlist"}</h2>
 
-      <div
-        className="tabs"
-        role="tablist"
-        aria-label="Playlist views"
-      >
-        <button
-          className={`tab ${view === "tracks" ? "active" : ""}`}
-          onClick={() => setView("tracks")}
-        >
-          Tracks
-        </button>
-        <button
-          className={`tab ${view === "sort" ? "active" : ""}`}
-          onClick={() => setView("sort")}
-        >
-          Binary sort
-        </button>
-        <button
-          className={`tab ${view === "duel" ? "active" : ""}`}
-          onClick={() => setView("duel")}
-        >
-          Refine (head-to-head)
-        </button>
-        <button
-          className={`tab ${view === "leaderboard" ? "active" : ""}`}
-          onClick={() => setView("leaderboard")}
-        >
-          Leaderboard (global)
-        </button>
-      </div>
-
       {tracksError ? <p className="error">{tracksError}</p> : null}
 
       {tracksCache ? (
@@ -2300,38 +2503,7 @@ function PlaylistView({
         <p className="meta">No track cache for this playlist yet.</p>
       )}
 
-      {view === "tracks" ? (
-        <TracksTable
-          uniqueTracks={uniqueTracks}
-          ranking={ranking}
-          onChangeRanking={onChangeRanking}
-        />
-      ) : null}
-
-      {view === "sort" ? (
-        <BinarySorter
-          uniqueTracks={uniqueTracks}
-          trackIndex={trackIndex}
-          ranking={ranking}
-          onChange={onChangeRanking}
-        />
-      ) : null}
-
-      {view === "duel" ? (
-        <HeadToHead
-          uniqueTracks={uniqueTracks}
-          ranking={ranking}
-          onChange={onChangeRanking}
-        />
-      ) : null}
-
-      {view === "leaderboard" ? (
-        <Leaderboard
-          uniqueTracks={uniqueTracks}
-          ranking={ranking}
-          onChange={onChangeRanking}
-        />
-      ) : null}
+      <PlaylistTracksTable uniqueTracks={uniqueTracks} />
     </div>
   );
 }
@@ -2406,15 +2578,12 @@ function EloEditor({ rating, disabled = false, onSave }) {
 
 function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
   const rows = useMemo(() => {
-    return uniqueTracks.map(({ key, track }) => {
-      const state = ranking ? getTrackState(ranking, key) : null;
-      return {
-        key,
-        track,
-        state,
-        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
-      };
-    });
+    return uniqueTracks.map(({ key, track }) => ({
+      key,
+      track,
+      state: ranking ? getTrackState(ranking, key) : null,
+      artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+    }));
   }, [uniqueTracks, ranking]);
 
   if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
@@ -2463,6 +2632,72 @@ function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
                       )
                     }
                   />
+                </td>
+                <td className="right">
+                  <span className="btnRow">
+                    {r.track?.id ? (
+                      <button
+                        className="btn small"
+                        onClick={() => openTrackInSpotify(r.track.id)}
+                        title="Play in Spotify"
+                      >
+                        Play
+                      </button>
+                    ) : null}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function PlaylistTracksTable({ uniqueTracks }) {
+  const rows = useMemo(() => {
+    return uniqueTracks.map(({ key, track }) => ({
+      key,
+      track,
+      artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+    }));
+  }, [uniqueTracks]);
+
+  if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
+
+  return (
+    <div className="cardSub">
+      <div
+        className="tableWrap"
+        role="region"
+        aria-label="Tracks table"
+        tabIndex={0}
+      >
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="colSong">Song</th>
+              <th className="colArtist">Artist</th>
+              <th className="colAlbum">Album</th>
+              <th className="right colActions">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(r => (
+              <tr key={r.key}>
+                <td>
+                  <div className="cellTitle">
+                    {r.track?.name || "(untitled track)"}
+                  </div>
+                </td>
+                <td>
+                  <div className="cellSub">{r.artists || "Unknown artist"}</div>
+                </td>
+                <td>
+                  <div className="cellSub">
+                    {r.track?.album || "Unknown album"}
+                  </div>
                 </td>
                 <td className="right">
                   <span className="btnRow">

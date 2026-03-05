@@ -50,7 +50,22 @@ export function readPlaylistsCache(userId) {
 export function writePlaylistsCache(userId, apiResponse, { fetchedAt = new Date().toISOString(), isComplete = false } = {}) {
   if (!userId) return
 
-  const items = Array.isArray(apiResponse?.items) ? apiResponse.items.map(pickPlaylist).filter(Boolean) : []
+  const existing = readPlaylistsCache(userId)
+  const ingestedById = new Map(
+    Array.isArray(existing?.items)
+      ? existing.items.map((p) => [p?.id, p?.ingestedAt]).filter(([id]) => id)
+      : [],
+  )
+
+  const items = Array.isArray(apiResponse?.items)
+    ? apiResponse.items
+        .map(pickPlaylist)
+        .filter(Boolean)
+        .map((p) => ({
+          ...p,
+          ingestedAt: ingestedById.get(p.id) ?? null,
+        }))
+    : []
   const total = Number(apiResponse?.total) || items.length
 
   const record = {
@@ -68,7 +83,12 @@ export function writePlaylistsCache(userId, apiResponse, { fetchedAt = new Date(
     // If storage quota is exceeded, fall back to caching a minimal subset (names/ids only).
     const minimal = {
       ...record,
-      items: items.map((p) => ({ id: p.id, name: p.name, externalUrl: p.externalUrl })),
+      items: items.map((p) => ({
+        id: p.id,
+        name: p.name,
+        externalUrl: p.externalUrl,
+        ingestedAt: p.ingestedAt ?? null,
+      })),
     }
     try {
       localStorage.setItem(keyForUserPlaylists(userId), JSON.stringify(minimal))
@@ -81,6 +101,23 @@ export function writePlaylistsCache(userId, apiResponse, { fetchedAt = new Date(
 export function clearPlaylistsCache(userId) {
   if (!userId) return
   localStorage.removeItem(keyForUserPlaylists(userId))
+}
+
+export function setPlaylistIngestedAt(userId, playlistId, ingestedAt) {
+  if (!userId || !playlistId) return null
+  const existing = readPlaylistsCache(userId)
+  if (!existing || !Array.isArray(existing.items)) return null
+
+  const nextItems = existing.items.map((p) =>
+    p?.id === playlistId ? { ...p, ingestedAt } : p,
+  )
+  const next = { ...existing, items: nextItems }
+  try {
+    localStorage.setItem(keyForUserPlaylists(userId), JSON.stringify(next))
+  } catch {
+    return null
+  }
+  return next
 }
 
 function getSpotifyCooldownKey(userId) {
