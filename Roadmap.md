@@ -46,3 +46,4 @@
 + Replace tier seeding with binary insertion sorting (implemented 2026-03-05)
 + Add Rank Songs route + playlist ingestion UI (implemented 2026-03-05)
 + Move ranking UI to Rank Songs tab (implemented 2026-03-05)
++ Rank Songs: three-column unranked/rank/ranked layout (implemented 2026-03-05)

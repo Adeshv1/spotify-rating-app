@@ -2037,7 +2037,7 @@ function LandingPage({ publicPreview }) {
 }
 
 function RankSongsPage({ userId, ranking, onChangeRanking }) {
-  const [view, setView] = useState("sort"); // sort | duel | leaderboard | tracks
+  const [activeKey, setActiveKey] = useState(null);
 
   const globalSongs = useMemo(() => {
     if (!userId) return [];
@@ -2052,6 +2052,15 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
       );
   }, [userId]);
 
+  const trackByKey = useMemo(() => {
+    const map = new Map();
+    for (const t of globalSongs) {
+      const key = trackKeyOfTrack(t);
+      if (!map.has(key)) map.set(key, t);
+    }
+    return map;
+  }, [globalSongs]);
+
   const uniqueTracks = useMemo(() => {
     const map = new Map();
     for (const t of globalSongs) {
@@ -2060,6 +2069,21 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
     }
     return Array.from(map.values());
   }, [globalSongs]);
+
+  const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
+  const orderedSet = useMemo(() => new Set(orderedKeys), [orderedKeys]);
+
+  useEffect(() => {
+    if (!activeKey) return;
+    if (orderedSet.has(activeKey)) setActiveKey(null);
+  }, [activeKey, orderedSet]);
+
+  useEffect(() => {
+    if (!activeKey || !ranking) return;
+    if (orderedKeys.length !== 0) return;
+    onChangeRanking?.(rk => (rk ? applyOrderToRanking(rk, [activeKey]) : rk));
+    setActiveKey(null);
+  }, [activeKey, orderedKeys.length, ranking, onChangeRanking]);
 
   const trackIndex = useMemo(() => {
     const map = new Map();
@@ -2078,6 +2102,40 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
     return map;
   }, [globalSongs]);
 
+  const unrankedRows = useMemo(() => {
+    if (!ranking) return [];
+    return uniqueTracks
+      .map(({ key, track }) => ({
+        key,
+        track,
+        state: getTrackState(ranking, key),
+        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+      }))
+      .filter(r => r.state.bucket !== "X")
+      .filter(r => !orderedSet.has(r.key));
+  }, [uniqueTracks, ranking, orderedSet]);
+
+  const rankedRows = useMemo(() => {
+    if (!ranking) return [];
+    return orderedKeys
+      .map(key => {
+        const track = trackByKey.get(key) || null;
+        if (!track) return null;
+        return {
+          key,
+          track,
+          state: getTrackState(ranking, key),
+          artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+        };
+      })
+      .filter(Boolean);
+  }, [orderedKeys, ranking, trackByKey]);
+
+  const rankedRanks = useMemo(
+    () => getTiedRanks(rankedRows, r => r.state.rating),
+    [rankedRows],
+  );
+
   return (
     <div className="section">
       <div className="cardSub">
@@ -2090,74 +2148,164 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
             page to populate this list.
           </p>
         ) : (
-          <>
-            <p className="meta">
-              Global pool size: {uniqueTracks.length}. Start ranking with binary
-              sort, then refine with head-to-head.
-            </p>
-            <div
-              className="tabs"
-              role="tablist"
-              aria-label="Rank songs views"
-            >
-              <button
-                className={`tab ${view === "sort" ? "active" : ""}`}
-                onClick={() => setView("sort")}
-              >
-                Binary sort
-              </button>
-              <button
-                className={`tab ${view === "duel" ? "active" : ""}`}
-                onClick={() => setView("duel")}
-              >
-                Refine (head-to-head)
-              </button>
-              <button
-                className={`tab ${view === "leaderboard" ? "active" : ""}`}
-                onClick={() => setView("leaderboard")}
-              >
-                Leaderboard (global)
-              </button>
-              <button
-                className={`tab ${view === "tracks" ? "active" : ""}`}
-                onClick={() => setView("tracks")}
-              >
-                Tracks
-              </button>
-            </div>
+          <p className="meta">
+            Global pool size: {uniqueTracks.length}. Unranked:{" "}
+            {unrankedRows.length}. Ranked: {rankedRows.length}.
+          </p>
+        )}
+      </div>
 
-            {view === "sort" ? (
+      {!userId || uniqueTracks.length === 0 ? null : (
+        <div
+          className="dashboardColumns"
+          role="region"
+          aria-label="Rank songs columns"
+        >
+          <div className="dashPanel">
+            <div className="dashPanelHeader">
+              <h3>Unranked ({unrankedRows.length})</h3>
+            </div>
+            <div
+              className="dashPanelBody dashPanelBodyTight"
+              role="region"
+              aria-label="Unranked songs list"
+              tabIndex={0}
+            >
+              <table className="dashTable">
+                <colgroup>
+                  <col />
+                  <col className="dashColPlay" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Song</th>
+                    <th className="right dashColPlay">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {unrankedRows.map(r => (
+                    <tr
+                      key={r.key}
+                      className="dashTableRow"
+                    >
+                      <td>
+                        <div className="cellTitle">
+                          {r.track?.name || r.key}
+                        </div>
+                        <div className="cellSub">
+                          {r.artists || "Unknown artist"}
+                        </div>
+                      </td>
+                      <td className="right">
+                        <button
+                          className="btn small"
+                          onClick={() => setActiveKey(r.key)}
+                          disabled={activeKey === r.key}
+                          title="Rank this song"
+                        >
+                          Rank
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="dashPanel">
+            <div className="dashPanelHeader">
+              <h3>Rank</h3>
+            </div>
+            <div
+              className="dashPanelBody"
+              role="region"
+              aria-label="Ranking interface"
+              tabIndex={0}
+            >
               <BinarySorter
                 uniqueTracks={uniqueTracks}
                 trackIndex={trackIndex}
                 ranking={ranking}
                 onChange={onChangeRanking}
+                activeKey={activeKey}
+                onActiveKeyChange={setActiveKey}
               />
-            ) : null}
-            {view === "duel" ? (
-              <HeadToHead
-                uniqueTracks={uniqueTracks}
-                ranking={ranking}
-                onChange={onChangeRanking}
-              />
-            ) : null}
-            {view === "leaderboard" ? (
-              <Leaderboard
-                uniqueTracks={uniqueTracks}
-                ranking={ranking}
-                onChange={onChangeRanking}
-              />
-            ) : null}
-            {view === "tracks" ? (
-              <TracksTable
-                uniqueTracks={uniqueTracks}
-                ranking={ranking}
-                onChangeRanking={onChangeRanking}
-              />
-            ) : null}
-          </>
-        )}
-      </div>
+            </div>
+          </div>
+
+          <div className="dashPanel">
+            <div className="dashPanelHeader">
+              <h3>Ranked ({rankedRows.length})</h3>
+            </div>
+            <div
+              className="dashPanelBody dashPanelBodyTight"
+              role="region"
+              aria-label="Ranked songs list"
+              tabIndex={0}
+            >
+              <table className="dashTable">
+                <colgroup>
+                  <col className="dashColIndex" />
+                  <col />
+                  <col className="dashColElo" />
+                  <col className="dashColPlay" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th className="right dashColIndex">#</th>
+                    <th>Song</th>
+                    <th className="right dashColElo">Elo</th>
+                    <th className="right dashColPlay" />
+                  </tr>
+                </thead>
+                <tbody>
+                  {rankedRows.map((r, idx) => {
+                    const trackId =
+                      typeof r?.track?.id === "string" ? r.track.id : null;
+                    return (
+                      <tr
+                        key={r.key}
+                        className="dashTableRow"
+                      >
+                        <td className="right">
+                          <span className="cellSub">
+                            {rankedRanks[idx] ?? idx + 1}
+                          </span>
+                        </td>
+                        <td>
+                          <div className="cellTitle">
+                            {r.track?.name || r.key}
+                          </div>
+                          <div className="cellSub">
+                            {r.artists || "Unknown artist"}
+                          </div>
+                        </td>
+                        <td className="right">
+                          <span className="cellSub eloValue">
+                            {Math.round(Number(r.state.rating) || 0)}
+                          </span>
+                        </td>
+                        <td className="right">
+                          {trackId ? (
+                            <button
+                              className="btn small rowPlayBtn"
+                              onClick={() => openTrackInSpotify(trackId)}
+                              title="Open in Spotify"
+                            >
+                              Play
+                            </button>
+                          ) : null}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -2721,9 +2869,16 @@ function PlaylistTracksTable({ uniqueTracks }) {
   );
 }
 
-function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
+function BinarySorter({
+  uniqueTracks,
+  trackIndex,
+  ranking,
+  onChange,
+  activeKey,
+  onActiveKeyChange,
+}) {
   const [session, setSession] = useState(null);
-  const [pendingIndex, setPendingIndex] = useState(0);
+  const lastActiveRef = useRef(null);
 
   const trackByKey = useMemo(() => {
     const map = new Map();
@@ -2732,33 +2887,17 @@ function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
   }, [uniqueTracks]);
 
   const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
-  const orderedSet = useMemo(() => new Set(orderedKeys), [orderedKeys]);
-
-  const pendingKeys = useMemo(
-    () =>
-      uniqueTracks
-        .map(u => u.key)
-        .filter(key => {
-          const state = ranking ? getTrackState(ranking, key) : null;
-          if (state?.bucket === "X") return false;
-          return !orderedSet.has(key);
-        }),
-    [uniqueTracks, ranking, orderedSet],
-  );
-
   useEffect(() => {
-    setPendingIndex(0);
-  }, [pendingKeys.join("|")]);
-
-  useEffect(() => {
-    if (session) setSession(null);
-  }, [ranking?.updatedAt]);
-
-  const activeKey = session?.key
-    ? session.key
-    : pendingKeys.length
-      ? pendingKeys[Math.min(pendingIndex, pendingKeys.length - 1)]
-      : null;
+    if (!activeKey || !ranking || orderedKeys.length === 0) {
+      lastActiveRef.current = activeKey;
+      setSession(null);
+      return;
+    }
+    if (lastActiveRef.current !== activeKey) {
+      setSession({ key: activeKey, low: 0, high: orderedKeys.length });
+      lastActiveRef.current = activeKey;
+    }
+  }, [activeKey, orderedKeys.length, ranking]);
 
   const activeTrack =
     (activeKey && trackIndex?.get?.(activeKey)) ||
@@ -2775,23 +2914,13 @@ function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
     (midKey && trackByKey.get(midKey)) ||
     null;
 
-  function startNext() {
-    if (!ranking) return;
-    const key = activeKey;
-    if (!key) return;
-    if (orderedKeys.length === 0) {
-      onChange?.(rk => (rk ? applyOrderToRanking(rk, [key]) : rk));
-      return;
-    }
-    setSession({ key, low: 0, high: orderedKeys.length });
-  }
-
   function insertAt(position) {
     if (!ranking || !activeKey) return;
     const nextOrder = orderedKeys.filter(k => k !== activeKey);
     nextOrder.splice(position, 0, activeKey);
     onChange?.(rk => (rk ? applyOrderToRanking(rk, nextOrder) : rk));
     setSession(null);
+    onActiveKeyChange?.(null);
   }
 
   function compare(better) {
@@ -2808,15 +2937,15 @@ function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
   }
 
   function skip() {
-    if (!pendingKeys.length) return;
     if (session) setSession(null);
-    setPendingIndex(i => (i + 1) % pendingKeys.length);
+    onActiveKeyChange?.(null);
   }
 
   function excludeActive() {
     if (!activeKey) return;
     onChange?.(rk => (rk ? excludeTrack(rk, activeKey) : rk));
     setSession(null);
+    onActiveKeyChange?.(null);
   }
 
   function excludeMid() {
@@ -2828,29 +2957,17 @@ function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
   return (
     <div className="cardSub">
       <p className="meta">
-        Binary insertion sorting: pick which song is better against the midpoint
-        of your current global order. Each choice places the song in the right
-        spot with O(log n) comparisons.
+        Pick a song from the Unranked list, then choose which is better against
+        the midpoint of your current global order.
       </p>
 
-      <div className="controls">
-        <button
-          className="btn primary"
-          onClick={startNext}
-          disabled={!ranking || !activeKey || Boolean(session)}
-        >
-          {orderedKeys.length === 0 ? "Start ranking" : "Start next insert"}
-        </button>
-      </div>
-
       <p className="meta">
-        Ranked globally: {orderedKeys.length}. Pending in this playlist:{" "}
-        {pendingKeys.length}.
-        {session
+        Ranked globally: {orderedKeys.length}.
+        {session && midIndex != null
           ? ` Comparing against rank ${midIndex + 1} of ${orderedKeys.length}.`
           : activeKey
-            ? " Select a song to insert."
-            : " No pending songs."}
+            ? " Ready to compare."
+            : " Pick a song from the left to start."}
       </p>
 
       {!ranking ? (
@@ -2947,6 +3064,8 @@ function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
             </div>
           </div>
         </div>
+      ) : activeKey ? (
+        <p className="meta">Pick a comparison to continue.</p>
       ) : null}
     </div>
   );
