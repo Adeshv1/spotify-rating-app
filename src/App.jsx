@@ -26,9 +26,7 @@ import {
   mergeLegacyPlaylistRanking,
   readUserRanking,
   recordDuel,
-  setTrackBucket,
   setTrackElo,
-  TIER_BUCKETS,
   trackKeyOfTrack,
   undoLast,
   mergeUserRankings,
@@ -41,6 +39,76 @@ import {
   mergeArtistIdByNameCache,
   readArtistIdByNameCache,
 } from "./lib/spotifyArtistIdCache";
+
+function normalizedRankValue(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? Math.round(n) : null;
+}
+
+function getTiedRanks(items, getScore) {
+  let lastScore = null;
+  let lastRank = 0;
+  return items.map((item, idx) => {
+    const score = normalizedRankValue(getScore(item));
+    if (idx === 0) {
+      lastRank = 1;
+      lastScore = score;
+      return lastRank;
+    }
+    if (score !== lastScore) {
+      lastRank = idx + 1;
+      lastScore = score;
+    }
+    return lastRank;
+  });
+}
+
+const ORDER_BASE_ELO = 1001;
+
+function isRankedState(state) {
+  if (!state || typeof state !== "object") return false;
+  if (state.bucket && state.bucket !== "U" && state.bucket !== "X") return true;
+  const rating = Number(state.rating);
+  if (Number.isFinite(rating) && Math.round(rating) !== 1000) return true;
+  if (Number(state.games) > 0) return true;
+  return typeof state.lastComparedAt === "string" && state.lastComparedAt;
+}
+
+function buildOrderedKeys(ranking) {
+  if (!ranking?.tracks || typeof ranking.tracks !== "object") return [];
+  const rows = [];
+  for (const [key] of Object.entries(ranking.tracks)) {
+    const state = getTrackState(ranking, key);
+    if (state.bucket === "X") continue;
+    if (!isRankedState(state)) continue;
+    rows.push({ key, rating: Number(state.rating) || 0 });
+  }
+  rows.sort(
+    (a, b) =>
+      b.rating - a.rating || a.key.localeCompare(b.key, "en", { numeric: true }),
+  );
+  return rows.map(r => r.key);
+}
+
+function applyOrderToRanking(ranking, orderedKeys) {
+  if (!ranking || !Array.isArray(orderedKeys)) return ranking;
+  const total = orderedKeys.length;
+  if (!total) return ranking;
+  const now = new Date().toISOString();
+  const nextTracks = { ...ranking.tracks };
+  for (let i = 0; i < total; i += 1) {
+    const key = orderedKeys[i];
+    const prev = getTrackState(ranking, key);
+    const rating = ORDER_BASE_ELO + (total - i - 1);
+    nextTracks[key] = {
+      ...prev,
+      rating,
+      bucket: prev.bucket === "X" ? "X" : "U",
+      lastComparedAt: now,
+    };
+  }
+  return { ...ranking, tracks: nextTracks, updatedAt: now };
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -621,7 +689,7 @@ function App() {
                     : "Signed in."}
                 </>
               ) : (
-                "Rank your songs with tiers + head-to-head."
+                "Rank your songs with binary sort + refine."
               )}
             </div>
           </div>
@@ -693,6 +761,7 @@ function App() {
                 ) : selectedPlaylistId ? (
                   <PlaylistView
                     playlistsCache={playlistsCache}
+                    userId={profile?.id}
                     playlistId={selectedPlaylistId}
                     ranking={userRanking}
                     onChangeRanking={setUserRanking}
@@ -1432,6 +1501,22 @@ function DashboardPage({
     return { hasAnyRatings, topSongs, topArtists, topAlbums };
   }, [ranking, trackIndex]);
 
+  const topSongRanks = useMemo(
+    () =>
+      Array.isArray(computed?.topSongs)
+        ? getTiedRanks(computed.topSongs, t => t.rating)
+        : [],
+    [computed?.topSongs],
+  );
+
+  const topAlbumRanks = useMemo(
+    () =>
+      Array.isArray(computed?.topAlbums)
+        ? getTiedRanks(computed.topAlbums, a => a.avgRating)
+        : [],
+    [computed?.topAlbums],
+  );
+
   useEffect(() => {
     if (initialArtistPrefetchDone.current) return;
     const list = computed?.topArtists;
@@ -1447,8 +1532,8 @@ function DashboardPage({
     return (
       <div className="section dashboardPage">
         <p className="meta">
-          No ratings yet. Seed some songs into tiers or do a few head-to-head
-          matchups first.
+          No rankings yet. Run a binary sort or do a few head-to-head
+          refinements first.
         </p>
       </div>
     );
@@ -1532,7 +1617,9 @@ function DashboardPage({
                       className="dashTableRow"
                     >
                       <td className="right">
-                        <span className="cellSub">{idx + 1}</span>
+                        <span className="cellSub">
+                          {topSongRanks[idx] ?? idx + 1}
+                        </span>
                       </td>
                       <td>
                         <div className="cellTitle">
@@ -1648,7 +1735,9 @@ function DashboardPage({
                     className="dashTableRow"
                   >
                     <td className="right">
-                      <span className="cellSub">{idx + 1}</span>
+                      <span className="cellSub">
+                        {topAlbumRanks[idx] ?? idx + 1}
+                      </span>
                     </td>
                     <td>
                       <div className="cellTitle">{a.name}</div>
@@ -1691,13 +1780,21 @@ function LandingPage({ publicPreview }) {
   const topSongs = Array.isArray(data?.topSongs) ? data.topSongs : [];
   const topArtists = Array.isArray(data?.topArtists) ? data.topArtists : [];
   const topAlbums = Array.isArray(data?.topAlbums) ? data.topAlbums : [];
+  const topSongRanks = useMemo(
+    () => getTiedRanks(topSongs, t => t.rating),
+    [topSongs],
+  );
+  const topAlbumRanks = useMemo(
+    () => getTiedRanks(topAlbums, a => a.avgRating),
+    [topAlbums],
+  );
 
   return (
     <div className="section dashboardPage">
       <div className="cardSub">
-        <h3>Rate your music with tiers + head-to-head</h3>
+        <h3>Rate your music with binary sort + refine</h3>
         <p className="meta">
-          Seed songs into tiers (S/A/B/C/D), then refine ordering with Elo-style
+          Build an initial global order with binary insertion, then refine with
           head-to-head matchups. Your ranking syncs across devices when you sign
           in.
         </p>
@@ -1773,7 +1870,9 @@ function LandingPage({ publicPreview }) {
                         className="dashTableRow"
                       >
                         <td className="right">
-                          <span className="cellSub">{idx + 1}</span>
+                          <span className="cellSub">
+                            {topSongRanks[idx] ?? idx + 1}
+                          </span>
                         </td>
                         <td>
                           <div className="cellTitle">
@@ -1883,7 +1982,9 @@ function LandingPage({ publicPreview }) {
                       className="dashTableRow"
                     >
                       <td className="right">
-                        <span className="cellSub">{idx + 1}</span>
+                        <span className="cellSub">
+                          {topAlbumRanks[idx] ?? idx + 1}
+                        </span>
                       </td>
                       <td>
                         <div className="cellTitle">{a.name}</div>
@@ -2045,6 +2146,7 @@ function PlaylistsView({
 
 function PlaylistView({
   playlistsCache,
+  userId,
   playlistId,
   ranking,
   onChangeRanking,
@@ -2069,7 +2171,7 @@ function PlaylistView({
     cachedSnapshotId &&
     playlistSnapshotId !== cachedSnapshotId;
 
-  const [view, setView] = useState("tracks"); // tracks | bucket | duel | leaderboard
+  const [view, setView] = useState("tracks"); // tracks | sort | duel | leaderboard
 
   const uniqueTracks = useMemo(() => {
     const items = Array.isArray(tracksCache?.items) ? tracksCache.items : [];
@@ -2085,6 +2187,38 @@ function PlaylistView({
     }
     return Array.from(map.values());
   }, [tracksCache]);
+
+  const trackIndex = useMemo(() => {
+    const map = new Map();
+    if (!userId) return map;
+
+    const playlistIds = Array.isArray(playlistsCache?.items)
+      ? playlistsCache.items.map(p => p?.id).filter(Boolean)
+      : [];
+
+    for (const id of playlistIds) {
+      const cachedTracks = readPlaylistTracksCache(userId, id);
+      const items = Array.isArray(cachedTracks?.items) ? cachedTracks.items : [];
+      for (const t of items) {
+        const trackId = typeof t?.id === "string" ? t.id : null;
+        if (!trackId) continue;
+        const key = trackKeyOfTrack(t);
+        if (!map.has(key)) {
+          const artists = Array.isArray(t?.artists)
+            ? t.artists.filter(Boolean)
+            : [];
+          map.set(key, {
+            id: trackId,
+            name: typeof t?.name === "string" ? t.name : null,
+            artists,
+            album: typeof t?.album === "string" ? t.album : null,
+          });
+        }
+      }
+    }
+
+    return map;
+  }, [userId, playlistsCache]);
 
   return (
     <div className="section">
@@ -2123,16 +2257,16 @@ function PlaylistView({
           Tracks
         </button>
         <button
-          className={`tab ${view === "bucket" ? "active" : ""}`}
-          onClick={() => setView("bucket")}
+          className={`tab ${view === "sort" ? "active" : ""}`}
+          onClick={() => setView("sort")}
         >
-          Seed tiers (global)
+          Binary sort
         </button>
         <button
           className={`tab ${view === "duel" ? "active" : ""}`}
           onClick={() => setView("duel")}
         >
-          Head-to-head
+          Refine (head-to-head)
         </button>
         <button
           className={`tab ${view === "leaderboard" ? "active" : ""}`}
@@ -2174,9 +2308,10 @@ function PlaylistView({
         />
       ) : null}
 
-      {view === "bucket" ? (
-        <BucketSeeder
+      {view === "sort" ? (
+        <BinarySorter
           uniqueTracks={uniqueTracks}
+          trackIndex={trackIndex}
           ranking={ranking}
           onChange={onChangeRanking}
         />
@@ -2351,203 +2486,238 @@ function TracksTable({ uniqueTracks, ranking, onChangeRanking }) {
   );
 }
 
-function BucketSeeder({ uniqueTracks, ranking, onChange }) {
-  const [query, setQuery] = useState("");
-  const [filterBuckets, setFilterBuckets] = useState([]);
+function BinarySorter({ uniqueTracks, trackIndex, ranking, onChange }) {
+  const [session, setSession] = useState(null);
+  const [pendingIndex, setPendingIndex] = useState(0);
 
-  function toggleFilter(bucket) {
-    setFilterBuckets(prev =>
-      prev.includes(bucket)
-        ? prev.filter(b => b !== bucket)
-        : prev.concat(bucket),
-    );
+  const trackByKey = useMemo(() => {
+    const map = new Map();
+    for (const u of uniqueTracks) map.set(u.key, u.track);
+    return map;
+  }, [uniqueTracks]);
+
+  const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
+  const orderedSet = useMemo(() => new Set(orderedKeys), [orderedKeys]);
+
+  const pendingKeys = useMemo(
+    () =>
+      uniqueTracks
+        .map(u => u.key)
+        .filter(key => {
+          const state = ranking ? getTrackState(ranking, key) : null;
+          if (state?.bucket === "X") return false;
+          return !orderedSet.has(key);
+        }),
+    [uniqueTracks, ranking, orderedSet],
+  );
+
+  useEffect(() => {
+    setPendingIndex(0);
+  }, [pendingKeys.join("|")]);
+
+  useEffect(() => {
+    if (session) setSession(null);
+  }, [ranking?.updatedAt]);
+
+  const activeKey = session?.key
+    ? session.key
+    : pendingKeys.length
+      ? pendingKeys[Math.min(pendingIndex, pendingKeys.length - 1)]
+      : null;
+
+  const activeTrack =
+    (activeKey && trackIndex?.get?.(activeKey)) ||
+    (activeKey && trackByKey.get(activeKey)) ||
+    null;
+
+  const midIndex =
+    session && orderedKeys.length
+      ? Math.floor((session.low + session.high) / 2)
+      : null;
+  const midKey = session && midIndex != null ? orderedKeys[midIndex] : null;
+  const midTrack =
+    (midKey && trackIndex?.get?.(midKey)) ||
+    (midKey && trackByKey.get(midKey)) ||
+    null;
+
+  function startNext() {
+    if (!ranking) return;
+    const key = activeKey;
+    if (!key) return;
+    if (orderedKeys.length === 0) {
+      onChange?.(rk => (rk ? applyOrderToRanking(rk, [key]) : rk));
+      return;
+    }
+    setSession({ key, low: 0, high: orderedKeys.length });
   }
 
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const filterSet = new Set(filterBuckets);
-    return uniqueTracks.filter(({ key, track }) => {
-      const state = ranking ? getTrackState(ranking, key) : null;
-      if (filterBuckets.length && state && !filterSet.has(state.bucket))
-        return false;
-      if (!q) return true;
-      const hay =
-        `${track?.name ?? ""} ${(track?.artists ?? []).join(" ")}`.toLowerCase();
-      return hay.includes(q);
-    });
-  }, [uniqueTracks, ranking, query, filterBuckets]);
+  function insertAt(position) {
+    if (!ranking || !activeKey) return;
+    const nextOrder = orderedKeys.filter(k => k !== activeKey);
+    nextOrder.splice(position, 0, activeKey);
+    onChange?.(rk => (rk ? applyOrderToRanking(rk, nextOrder) : rk));
+    setSession(null);
+  }
+
+  function compare(better) {
+    if (!session || midIndex == null) return;
+    let nextLow = session.low;
+    let nextHigh = session.high;
+    if (better === "active") nextHigh = midIndex;
+    else nextLow = midIndex + 1;
+    if (nextLow >= nextHigh) {
+      insertAt(nextLow);
+      return;
+    }
+    setSession({ ...session, low: nextLow, high: nextHigh });
+  }
+
+  function skip() {
+    if (!pendingKeys.length) return;
+    if (session) setSession(null);
+    setPendingIndex(i => (i + 1) % pendingKeys.length);
+  }
+
+  function excludeActive() {
+    if (!activeKey) return;
+    onChange?.(rk => (rk ? excludeTrack(rk, activeKey) : rk));
+    setSession(null);
+  }
+
+  function excludeMid() {
+    if (!midKey) return;
+    onChange?.(rk => (rk ? excludeTrack(rk, midKey) : rk));
+    setSession(null);
+  }
 
   return (
     <div className="cardSub">
       <p className="meta">
-        Fast seeding step (global per song): put favorites into{" "}
-        <strong>S</strong>, good songs into <strong>A</strong>, and leave the
-        rest <strong>unseeded</strong>. Head-to-head mostly happens within the
-        tier you pick, so you don’t have to grind through everything.
+        Binary insertion sorting: pick which song is better against the midpoint
+        of your current global order. Each choice places the song in the right
+        spot with O(log n) comparisons.
       </p>
 
       <div className="controls">
-        <input
-          className="textInput"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          placeholder="Search tracks…"
-          aria-label="Search tracks"
-        />
-        <div
-          className="filterRow"
-          aria-label="Tier filters"
+        <button
+          className="btn primary"
+          onClick={startNext}
+          disabled={!ranking || !activeKey || Boolean(session)}
         >
-          <button
-            className={`filterBtn ${filterBuckets.length === 0 ? "active" : ""}`}
-            onClick={() => setFilterBuckets([])}
-          >
-            All
-          </button>
-          {TIER_BUCKETS.map(b => (
-            <button
-              key={b}
-              className={`filterBtn ${filterBuckets.includes(b) ? "active" : ""}`}
-              onClick={() => toggleFilter(b)}
-            >
-              {b}
-            </button>
-          ))}
-          <button
-            className={`filterBtn ${filterBuckets.includes("U") ? "active" : ""}`}
-            onClick={() => toggleFilter("U")}
-          >
-            Unseeded
-          </button>
-          <button
-            className={`filterBtn ${filterBuckets.includes("X") ? "active" : ""}`}
-            onClick={() => toggleFilter("X")}
-          >
-            Do not rate
-          </button>
-        </div>
+          {orderedKeys.length === 0 ? "Start ranking" : "Start next insert"}
+        </button>
       </div>
 
-      <div
-        className="tableWrap"
-        role="region"
-        aria-label="Seeding table"
-        tabIndex={0}
-      >
-        <table className="table">
-          <thead>
-            <tr>
-              <th className="right colIndex">#</th>
-              <th className="colSong">Song</th>
-              <th className="colArtist">Artist</th>
-              <th className="colAlbum">Album</th>
-              <th className="right colElo">Elo</th>
-              <th className="right colTier">Tier</th>
-              <th className="right colActions">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered.map(({ key, track }, idx) => {
-              const state = ranking ? getTrackState(ranking, key) : null;
-              const bucket = state?.bucket ?? "U";
-              const artists = Array.isArray(track?.artists)
-                ? track.artists.join(", ")
-                : "";
-              return (
-                <tr key={key}>
-                  <td className="right">
-                    <span className="cellSub">{idx + 1}</span>
-                  </td>
-                  <td>
-                    <div className="cellTitle">
-                      {track?.name || "(untitled track)"}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="cellSub">{artists || "Unknown artist"}</div>
-                  </td>
-                  <td>
-                    <div className="cellSub">
-                      {track?.album || "Unknown album"}
-                    </div>
-                  </td>
-                  <td className="right">
-                    <EloEditor
-                      rating={state?.rating}
-                      disabled={!ranking}
-                      onSave={next =>
-                        onChange?.(rk => (rk ? setTrackElo(rk, key, next) : rk))
-                      }
-                    />
-                  </td>
-                  <td className="right">
-                    <span className="btnRow tierButtons">
-                      {TIER_BUCKETS.map(b => (
-                        <button
-                          key={b}
-                          className={`btn small ${bucket === b ? "active" : ""}`}
-                          onClick={() =>
-                            onChange?.(rk =>
-                              rk ? setTrackBucket(rk, key, b) : rk,
-                            )
-                          }
-                          disabled={!ranking}
-                          title={`Set tier ${b}`}
-                        >
-                          {b}
-                        </button>
-                      ))}
-                      <button
-                        className={`btn small ${bucket === "U" ? "active" : ""}`}
-                        onClick={() =>
-                          onChange?.(rk =>
-                            rk ? setTrackBucket(rk, key, "U") : rk,
-                          )
-                        }
-                        disabled={!ranking}
-                        title="Clear tier (unseeded)"
-                      >
-                        —
-                      </button>
-                      <button
-                        className={`btn small danger ${bucket === "X" ? "active" : ""}`}
-                        onClick={() =>
-                          onChange?.(rk =>
-                            rk ? setTrackBucket(rk, key, "X") : rk,
-                          )
-                        }
-                        disabled={!ranking}
-                        title="Do not rate (exclude)"
-                      >
-                        X
-                      </button>
-                    </span>
-                  </td>
-                  <td className="right">
-                    <span className="btnRow">
-                      {track?.id ? (
-                        <button
-                          className="btn small"
-                          onClick={() => openTrackInSpotify(track.id)}
-                          title="Play in Spotify"
-                        >
-                          Play
-                        </button>
-                      ) : null}
-                    </span>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <p className="meta">
+        Ranked globally: {orderedKeys.length}. Pending in this playlist:{" "}
+        {pendingKeys.length}.
+        {session
+          ? ` Comparing against rank ${midIndex + 1} of ${orderedKeys.length}.`
+          : activeKey
+            ? " Select a song to insert."
+            : " No pending songs."}
+      </p>
+
+      {!ranking ? (
+        <p className="meta">Loading ranking…</p>
+      ) : session && activeKey && midKey ? (
+        <div className="duelGrid">
+          <div className="duelCard">
+            <div className="duelTitle">
+              {activeTrack?.name || activeKey || "(untitled track)"}
+            </div>
+            {Array.isArray(activeTrack?.artists) && activeTrack.artists.length
+              ? (
+                  <div className="duelMeta">
+                    {activeTrack.artists.join(", ")}
+                  </div>
+                )
+              : null}
+            {activeTrack?.album ? (
+              <div className="duelStats">
+                <span className="cellSub">{activeTrack.album}</span>
+              </div>
+            ) : null}
+            <div className="controls">
+              {activeTrack?.id ? (
+                <button
+                  className="btn"
+                  onClick={() => openTrackInSpotify(activeTrack.id)}
+                  title="Play in Spotify"
+                >
+                  Play
+                </button>
+              ) : null}
+              <button
+                className="btn primary"
+                onClick={() => compare("active")}
+              >
+                Better
+              </button>
+              <button
+                className="btn"
+                onClick={skip}
+                title="Pick a different pending song"
+              >
+                Skip
+              </button>
+              <button
+                className="btn danger"
+                onClick={excludeActive}
+                title="Exclude this song from ranking"
+              >
+                Do not rate
+              </button>
+            </div>
+          </div>
+
+          <div className="duelVs">vs</div>
+
+          <div className="duelCard">
+            <div className="duelTitle">
+              {midTrack?.name || midKey || "(untitled track)"}
+            </div>
+            {Array.isArray(midTrack?.artists) && midTrack.artists.length ? (
+              <div className="duelMeta">{midTrack.artists.join(", ")}</div>
+            ) : null}
+            {midTrack?.album ? (
+              <div className="duelStats">
+                <span className="cellSub">{midTrack.album}</span>
+              </div>
+            ) : null}
+            <div className="controls">
+              {midTrack?.id ? (
+                <button
+                  className="btn"
+                  onClick={() => openTrackInSpotify(midTrack.id)}
+                  title="Play in Spotify"
+                >
+                  Play
+                </button>
+              ) : null}
+              <button
+                className="btn primary"
+                onClick={() => compare("mid")}
+              >
+                Better
+              </button>
+              <button
+                className="btn danger"
+                onClick={excludeMid}
+                disabled={!midKey}
+                title="Exclude this song from ranking"
+              >
+                Do not rate
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
 
 function Leaderboard({ uniqueTracks, ranking, onChange }) {
-  const [bucket, setBucket] = useState("S");
   const [query, setQuery] = useState("");
 
   const rows = useMemo(() => {
@@ -2561,16 +2731,18 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
         artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
       }))
       .filter(r => r.state.bucket !== "X")
-      .filter(r =>
-        bucket === "ALL" ? r.state.bucket !== "X" : r.state.bucket === bucket,
-      )
       .filter(r => {
         if (!q) return true;
         const hay = `${r.track?.name ?? ""} ${r.artists}`.toLowerCase();
         return hay.includes(q);
       })
       .sort((a, b) => b.state.rating - a.state.rating);
-  }, [uniqueTracks, ranking, bucket, query]);
+  }, [uniqueTracks, ranking, query]);
+
+  const ranks = useMemo(
+    () => getTiedRanks(rows, r => r.state.rating),
+    [rows],
+  );
 
   return (
     <div className="cardSub">
@@ -2582,24 +2754,6 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
           placeholder="Search leaderboard…"
           aria-label="Search leaderboard"
         />
-        <label className="inlineLabel">
-          Tier
-          <select
-            value={bucket}
-            onChange={e => setBucket(e.target.value)}
-          >
-            {TIER_BUCKETS.map(b => (
-              <option
-                key={b}
-                value={b}
-              >
-                {b}
-              </option>
-            ))}
-            <option value="U">Unseeded</option>
-            <option value="ALL">All (except excluded)</option>
-          </select>
-        </label>
       </div>
 
       {!ranking ? <p className="meta">Loading ranking…</p> : null}
@@ -2627,15 +2781,13 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
               {rows.slice(0, 250).map((r, idx) => (
                 <tr key={r.key}>
                   <td className="right">
-                    <span className="cellSub">{idx + 1}</span>
+                    <span className="cellSub">
+                      {ranks[idx] ?? idx + 1}
+                    </span>
                   </td>
                   <td>
                     <div className="cellTitle">
                       {r.track?.name || "(untitled track)"}
-                    </div>
-                    <div className="cellSub">
-                      tier{" "}
-                      {r.state.bucket === "U" ? "unseeded" : r.state.bucket}
                     </div>
                   </td>
                   <td>
@@ -2681,14 +2833,13 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
           </table>
         </div>
       ) : ranking ? (
-        <p className="meta">No tracks to show for this tier yet.</p>
+        <p className="meta">No tracks to show yet.</p>
       ) : null}
     </div>
   );
 }
 
 function HeadToHead({ uniqueTracks, ranking, onChange }) {
-  const [bucket, setBucket] = useState("AUTO");
   const [seed, setSeed] = useState(0);
   const [sessionTarget, setSessionTarget] = useState(25);
   const [sessionDone, setSessionDone] = useState(0);
@@ -2703,8 +2854,8 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
 
   const matchup = useMemo(() => {
     if (!ranking) return null;
-    return pickMatchup({ trackKeys, ranking, bucket, seed });
-  }, [ranking, trackKeys, bucket, seed]);
+    return pickMatchup({ trackKeys, ranking, seed });
+  }, [ranking, trackKeys, seed]);
 
   const leftTrack = matchup ? trackByKey.get(matchup.leftKey) : null;
   const rightTrack = matchup ? trackByKey.get(matchup.rightKey) : null;
@@ -2750,31 +2901,11 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
   return (
     <div className="cardSub">
       <p className="meta">
-        Tip: seed 10–30 favorites into <strong>S</strong>, set Tier to{" "}
-        <strong>S</strong>, and you’ll quickly get a Top list without comparing
-        every song. Everything is saved globally per song across playlists.
+        Use head-to-head comparisons to refine the global order once you’ve done
+        an initial binary sort.
       </p>
 
       <div className="controls">
-        <label className="inlineLabel">
-          Tier
-          <select
-            value={bucket}
-            onChange={e => setBucket(e.target.value)}
-          >
-            <option value="AUTO">Auto</option>
-            {TIER_BUCKETS.map(b => (
-              <option
-                key={b}
-                value={b}
-              >
-                {b}
-              </option>
-            ))}
-            <option value="U">Unseeded</option>
-          </select>
-        </label>
-
         <button
           className="btn"
           onClick={() => setSessionDone(0)}
@@ -2817,7 +2948,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
       ) : !matchup || !leftTrack || !rightTrack ? (
         <p className="meta">
           Not enough eligible tracks for a matchup yet. Add at least 2
-          non-excluded songs to the selected tier (or use Auto).
+          non-excluded songs.
         </p>
       ) : (
         <>
@@ -2831,11 +2962,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
               ) : null}
               {leftState ? (
                 <div className="duelStats">
-                  <span className="cellSub">
-                    tier{" "}
-                    {leftState.bucket === "U" ? "unseeded" : leftState.bucket}
-                  </span>
-                  <span className="cellSub"> · matches {leftState.games}</span>
+                  <span className="cellSub">matches {leftState.games}</span>
                 </div>
               ) : null}
               {leftState ? (
@@ -2889,11 +3016,7 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
               ) : null}
               {rightState ? (
                 <div className="duelStats">
-                  <span className="cellSub">
-                    tier{" "}
-                    {rightState.bucket === "U" ? "unseeded" : rightState.bucket}
-                  </span>
-                  <span className="cellSub"> · matches {rightState.games}</span>
+                  <span className="cellSub">matches {rightState.games}</span>
                 </div>
               ) : null}
               {rightState ? (
