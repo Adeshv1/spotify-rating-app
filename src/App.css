@@ -633,10 +633,32 @@
   text-align: right;
 }
 
+.center {
+  text-align: center;
+}
+
+.table th.center,
+.table td.center {
+  text-align: center;
+}
+
+.table td.center .cellSub {
+  text-align: center;
+}
+
+.globalRankValue {
+  font-weight: 700;
+}
+
 .btnRow {
   display: inline-flex;
   gap: 0.35rem;
   flex-wrap: wrap;
+}
+
+.btnRow.center {
+  justify-content: center;
+  width: 100%;
 }
 
 .btnRow.tierButtons {
@@ -645,6 +667,15 @@
 
 .colIndex {
   width: 72px;
+}
+
+.colRankCompact {
+  width: 35px;
+}
+
+.colRankTiny {
+  width: 1px;
+  background-color: red;
 }
 
 .colSong {
@@ -829,7 +860,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .read-the-docs {
   color: var(--text-muted);

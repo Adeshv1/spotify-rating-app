@@ -786,6 +786,7 @@ function App() {
                     playlistsCache={playlistsCache}
                     playlistId={selectedPlaylistId}
                     isOwnerUser={isOwnerUser}
+                    ranking={userRanking}
                     cooldownUntilMs={cooldownUntilMs}
                     nowMs={nowMs}
                     tracksLoading={tracksLoading}
@@ -2136,23 +2137,6 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
   return (
     <div className="section dashboardPage rankSongsPage">
-      <div className="cardSub">
-        <h3>Rank Songs</h3>
-        {!userId ? (
-          <p className="meta">Loading…</p>
-        ) : uniqueTracks.length === 0 ? (
-          <p className="meta">
-            No songs in the ranking pool yet. Add playlists from the Playlists
-            page to populate this list.
-          </p>
-        ) : (
-          <p className="meta">
-            Global pool size: {uniqueTracks.length}. Unranked:{" "}
-            {unrankedRows.length}. Ranked: {rankedRows.length}.
-          </p>
-        )}
-      </div>
-
       {!userId || uniqueTracks.length === 0 ? null : (
         <div
           className="dashboardColumns rankSongsColumns"
@@ -2587,6 +2571,7 @@ function PlaylistView({
   playlistsCache,
   playlistId,
   isOwnerUser,
+  ranking,
   cooldownUntilMs,
   nowMs,
   tracksLoading,
@@ -2621,6 +2606,16 @@ function PlaylistView({
     }
     return Array.from(map.values());
   }, [tracksCache]);
+
+  const globalRankByKey = useMemo(() => {
+    if (!ranking) return new Map();
+    const ordered = buildOrderedKeys(ranking);
+    const map = new Map();
+    ordered.forEach((key, idx) => {
+      map.set(key, idx + 1);
+    });
+    return map;
+  }, [ranking]);
 
   return (
     <div className="section">
@@ -2671,7 +2666,10 @@ function PlaylistView({
         <p className="meta">No track cache for this playlist yet.</p>
       )}
 
-      <PlaylistTracksTable uniqueTracks={uniqueTracks} />
+      <PlaylistTracksTable
+        uniqueTracks={uniqueTracks}
+        globalRankByKey={globalRankByKey}
+      />
     </div>
   );
 }
@@ -2742,14 +2740,29 @@ function TracksTable({ uniqueTracks }) {
   );
 }
 
-function PlaylistTracksTable({ uniqueTracks }) {
+function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
   const rows = useMemo(() => {
-    return uniqueTracks.map(({ key, track }) => ({
-      key,
-      track,
-      artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
-    }));
-  }, [uniqueTracks]);
+    const list = uniqueTracks.map(({ key, track }) => {
+      const globalRank = globalRankByKey?.get?.(key) ?? null;
+      return {
+        key,
+        track,
+        globalRank,
+        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+      };
+    });
+    list.sort((a, b) => {
+      const ar = Number(a.globalRank);
+      const br = Number(b.globalRank);
+      const aMissing = !Number.isFinite(ar);
+      const bMissing = !Number.isFinite(br);
+      if (aMissing && bMissing) return 0;
+      if (aMissing) return 1;
+      if (bMissing) return -1;
+      return ar - br;
+    });
+    return list;
+  }, [uniqueTracks, globalRankByKey]);
 
   if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
 
@@ -2764,15 +2777,28 @@ function PlaylistTracksTable({ uniqueTracks }) {
         <table className="table">
           <thead>
             <tr>
+              <th
+                className="center colRankTiny"
+                aria-label="Playlist rank"
+              />
+              <th className="center colRankCompact">Global Rank</th>
               <th className="colSong">Song</th>
               <th className="colArtist">Artist</th>
               <th className="colAlbum">Album</th>
-              <th className="right colActions">Actions</th>
+              <th className="center colActions">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map(r => (
+            {rows.map((r, idx) => (
               <tr key={r.key}>
+                <td className="center">
+                  <div className="cellSub">{idx + 1}</div>
+                </td>
+                <td className="center">
+                  <div className="cellSub globalRankValue">
+                    {r.globalRank ? r.globalRank : "—"}
+                  </div>
+                </td>
                 <td>
                   <div className="cellTitle">
                     {r.track?.name || "(untitled track)"}
@@ -2786,8 +2812,8 @@ function PlaylistTracksTable({ uniqueTracks }) {
                     {r.track?.album || "Unknown album"}
                   </div>
                 </td>
-                <td className="right">
-                  <span className="btnRow">
+                <td className="center">
+                  <span className="btnRow center">
                     {r.track?.id ? (
                       <button
                         className="btn small"
