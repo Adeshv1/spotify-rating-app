@@ -2754,8 +2754,8 @@ function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
     list.sort((a, b) => {
       const ar = Number(a.globalRank);
       const br = Number(b.globalRank);
-      const aMissing = !Number.isFinite(ar);
-      const bMissing = !Number.isFinite(br);
+      const aMissing = !Number.isFinite(ar) || ar <= 0;
+      const bMissing = !Number.isFinite(br) || br <= 0;
       if (aMissing && bMissing) return 0;
       if (aMissing) return 1;
       if (bMissing) return -1;
@@ -2991,8 +2991,9 @@ function BinarySorter({
       {!ranking ? (
         <p className="meta">Loading ranking…</p>
       ) : session && activeKey && midKey ? (
+        <>
         <div className="duelGrid">
-          <div className="duelCard">
+          <div className="duelCard duelCardLeft">
             <div className="duelTitle">
               {activeTrack?.name || activeKey || "(untitled track)"}
             </div>
@@ -3024,22 +3025,22 @@ function BinarySorter({
                   Play
                 </button>
               ) : null}
-              <div className="duelActionsFooter">
-                <button
-                  className="btn"
-                  onClick={skip}
-                  title="Pick a different pending song"
-                >
-                  Skip
-                </button>
-                <button
-                  className="btn danger"
-                  onClick={excludeActive}
-                  title="Exclude this song from ranking"
-                >
-                  Do not rate
-                </button>
-              </div>
+            </div>
+            <div className="duelActionsFooter">
+              <button
+                className="btn"
+                onClick={skip}
+                title="Pick a different pending song"
+              >
+                Skip
+              </button>
+              <button
+                className="btn danger"
+                onClick={excludeActive}
+                title="Exclude this song from ranking"
+              >
+                Do not rate
+              </button>
             </div>
           </div>
 
@@ -3076,6 +3077,7 @@ function BinarySorter({
             </div>
           </div>
         </div>
+        </>
       ) : activeKey ? (
         <p className="meta">Pick a comparison to continue.</p>
       ) : null}
