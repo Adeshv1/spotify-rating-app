@@ -231,6 +231,10 @@
   overflow-y: auto;
 }
 
+.rankSongsPage .dashPanelHeaderRow .textInput {
+  width: min(240px, 48%);
+}
+
 .rankSongsPage .rankSongsCenter {
   overflow: hidden;
 }

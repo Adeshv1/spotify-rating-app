@@ -86,7 +86,8 @@ function buildOrderedKeys(ranking) {
   }
   rows.sort(
     (a, b) =>
-      b.rating - a.rating || a.key.localeCompare(b.key, "en", { numeric: true }),
+      b.rating - a.rating ||
+      a.key.localeCompare(b.key, "en", { numeric: true }),
   );
   return rows.map(r => r.key);
 }
@@ -217,11 +218,7 @@ function App() {
   useEffect(() => {
     if (loading) return;
     if (!loggedIn && routePath !== "/") navigate("/", { replace: true });
-    if (
-      loggedIn &&
-      !routePath.startsWith("/app") &&
-      routePath !== "/rank"
-    )
+    if (loggedIn && !routePath.startsWith("/app") && routePath !== "/rank")
       navigate("/app", { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, loggedIn, routePath]);
@@ -1064,7 +1061,8 @@ function DashboardPage({
         ...prev,
         [artistId]: {
           status: "loading",
-          imageUrl: typeof existing?.imageUrl === "string" ? existing.imageUrl : null,
+          imageUrl:
+            typeof existing?.imageUrl === "string" ? existing.imageUrl : null,
         },
       };
     });
@@ -1310,7 +1308,11 @@ function DashboardPage({
       }
 
       if (Number.isFinite(retryAfterMs) && retryAfterMs > 0) {
-        scheduleArtistRetry(artistKey || artistName || "artist", retryAfterMs, artist);
+        scheduleArtistRetry(
+          artistKey || artistName || "artist",
+          retryAfterMs,
+          artist,
+        );
       }
     },
     [
@@ -1754,10 +1756,10 @@ function DashboardPage({
                           ? "1 track"
                           : `${Number(a.tracks) || 0} tracks`}
                       </div>
-                      </td>
-                      <td className="right">
-                        {a?.bestTrackId ? (
-                          <button
+                    </td>
+                    <td className="right">
+                      {a?.bestTrackId ? (
+                        <button
                           className="btn small rowPlayBtn"
                           onClick={() => openTrackInSpotify(a.bestTrackId)}
                           title="Open a track from this album in Spotify"
@@ -2024,13 +2026,17 @@ function LandingPage({ publicPreview }) {
 function RankSongsPage({ userId, ranking, onChangeRanking }) {
   const [activeKey, setActiveKey] = useState(null);
   const [rankMode, setRankMode] = useState("binary");
+  const [rankInfoOpen, setRankInfoOpen] = useState(false);
+  const [unrankedQuery, setUnrankedQuery] = useState("");
+  const [rankedQuery, setRankedQuery] = useState("");
 
   const globalSongs = useMemo(() => {
     if (!userId) return [];
     const record = readGlobalSongs(userId);
-    const items = record?.items && typeof record.items === "object"
-      ? Object.values(record.items)
-      : [];
+    const items =
+      record?.items && typeof record.items === "object"
+        ? Object.values(record.items)
+        : [];
     return items
       .filter(Boolean)
       .sort((a, b) =>
@@ -2076,7 +2082,9 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
     for (const t of globalSongs) {
       const key = trackKeyOfTrack(t);
       if (!map.has(key)) {
-        const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : [];
+        const artists = Array.isArray(t?.artists)
+          ? t.artists.filter(Boolean)
+          : [];
         map.set(key, {
           id: typeof t?.id === "string" ? t.id : null,
           name: typeof t?.name === "string" ? t.name : null,
@@ -2101,6 +2109,16 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
       .filter(r => !orderedSet.has(r.key));
   }, [uniqueTracks, ranking, orderedSet]);
 
+  const filteredUnrankedRows = useMemo(() => {
+    if (!unrankedQuery.trim()) return unrankedRows;
+    const q = unrankedQuery.trim().toLowerCase();
+    return unrankedRows.filter(r => {
+      const name = r.track?.name || "";
+      const artists = r.artists || "";
+      return `${name} ${artists}`.toLowerCase().includes(q);
+    });
+  }, [unrankedQuery, unrankedRows]);
+
   const rankedRows = useMemo(() => {
     if (!ranking) return [];
     return orderedKeys
@@ -2111,11 +2129,23 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
           key,
           track,
           state: getTrackState(ranking, key),
-          artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+          artists: Array.isArray(track?.artists)
+            ? track.artists.join(", ")
+            : "",
         };
       })
       .filter(Boolean);
   }, [orderedKeys, ranking, trackByKey]);
+
+  const filteredRankedRows = useMemo(() => {
+    if (!rankedQuery.trim()) return rankedRows;
+    const q = rankedQuery.trim().toLowerCase();
+    return rankedRows.filter(r => {
+      const name = r.track?.name || "";
+      const artists = r.artists || "";
+      return `${name} ${artists}`.toLowerCase().includes(q);
+    });
+  }, [rankedQuery, rankedRows]);
 
   useEffect(() => {
     if (activeKey) return;
@@ -2126,7 +2156,13 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
       unrankedRows[Math.floor(Math.random() * unrankedRows.length)]?.key ??
       null;
     if (pick) setActiveKey(pick);
-  }, [activeKey, rankMode, rankedRows.length, unrankedRows.length, unrankedRows]);
+  }, [
+    activeKey,
+    rankMode,
+    rankedRows.length,
+    unrankedRows.length,
+    unrankedRows,
+  ]);
 
   useEffect(() => {
     if (!activeKey) return;
@@ -2145,7 +2181,16 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
         >
           <div className="dashPanel">
             <div className="dashPanelHeader">
-              <h3>Unranked ({unrankedRows.length})</h3>
+              <div className="dashPanelHeaderRow">
+                <h3>Unranked ({unrankedRows.length})</h3>
+                <input
+                  className="textInput"
+                  value={unrankedQuery}
+                  onChange={e => setUnrankedQuery(e.target.value)}
+                  placeholder="Search unranked…"
+                  aria-label="Search unranked songs"
+                />
+              </div>
             </div>
             <div
               className="dashPanelBody dashPanelBodyTight rankSongsScroll"
@@ -2165,7 +2210,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {unrankedRows.map(r => (
+                  {filteredUnrankedRows.map(r => (
                     <tr
                       key={r.key}
                       className="dashTableRow"
@@ -2200,9 +2245,17 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
           <div className="dashPanel">
             <div className="dashPanelHeader">
-              <h3>
-                Rank — {rankMode === "refine" ? "Refine" : "Binary"}
-              </h3>
+              <div className="dashPanelHeaderRow">
+                <h3>Rank — {rankMode === "refine" ? "Refine" : "Binary"}</h3>
+                <button
+                  className="btn small"
+                  onClick={() => setRankInfoOpen(v => !v)}
+                  aria-expanded={rankInfoOpen}
+                  aria-label="Show ranking mode info"
+                >
+                  Info
+                </button>
+              </div>
             </div>
             <div
               className="dashPanelBody rankSongsCenter"
@@ -2224,6 +2277,30 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                   Refine
                 </button>
               </div>
+              {rankInfoOpen ? (
+                <div className="cardSub rankInfoPanel">
+                  <h4>How ranking works</h4>
+                  <p className="meta">
+                    <strong>Binary sort</strong> places a song into your global
+                    order using mid-point comparisons. Each pick narrows the
+                    range (like binary search), so it finds the right spot with
+                    far fewer comparisons than head-to-head across the whole
+                    list. Use this to get a strong baseline order quickly.
+                  </p>
+                  <p className="meta">
+                    <strong>Refine</strong> focuses on a local window around the
+                    song’s current rank. You compare it only against nearby
+                    ranks to tighten precision without disturbing the rest of
+                    the list. This is best once you already like the overall
+                    order but want to fine-tune individual songs.
+                  </p>
+                  <p className="meta">
+                    Tip: Use <strong>Redo</strong> for a full re-placement
+                    (global binary insert) and <strong>Refine</strong> to make
+                    smaller local adjustments.
+                  </p>
+                </div>
+              ) : null}
               <BinarySorter
                 uniqueTracks={uniqueTracks}
                 trackIndex={trackIndex}
@@ -2238,7 +2315,16 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
 
           <div className="dashPanel">
             <div className="dashPanelHeader">
-              <h3>Ranked ({rankedRows.length})</h3>
+              <div className="dashPanelHeaderRow">
+                <h3>Ranked ({rankedRows.length})</h3>
+                <input
+                  className="textInput"
+                  value={rankedQuery}
+                  onChange={e => setRankedQuery(e.target.value)}
+                  placeholder="Search ranked…"
+                  aria-label="Search ranked songs"
+                />
+              </div>
             </div>
             <div
               className="dashPanelBody dashPanelBodyTight rankSongsScroll"
@@ -2260,7 +2346,7 @@ function RankSongsPage({ userId, ranking, onChangeRanking }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {rankedRows.map((r, idx) => {
+                  {filteredRankedRows.map((r, idx) => {
                     return (
                       <tr
                         key={r.key}
@@ -2965,18 +3051,6 @@ function BinarySorter({
   return (
     <div className="cardSub">
       <p className="meta">
-        Mode:{" "}
-        <strong>{isRefine ? "Refine (local)" : "Binary sort"}</strong>
-      </p>
-
-      <p className="meta">
-        {isRefine
-          ? "Pick a song from the Ranked list, then compare it within a nearby range."
-          : "Pick a song from the Unranked list, then compare it against the midpoint of your current global order."}
-      </p>
-
-      <p className="meta">
-        Ranked globally: {orderedKeys.length}.
         {session && midIndex != null
           ? isRefine
             ? ` Refine window: ranks ${session.low + 1}–${session.high} of ${baseOrder.length}. Comparing against rank ${midIndex + 1}.`
@@ -2992,91 +3066,88 @@ function BinarySorter({
         <p className="meta">Loading ranking…</p>
       ) : session && activeKey && midKey ? (
         <>
-        <div className="duelGrid">
-          <div className="duelCard duelCardLeft">
-            <div className="duelTitle">
-              {activeTrack?.name || activeKey || "(untitled track)"}
-            </div>
-            {Array.isArray(activeTrack?.artists) && activeTrack.artists.length
-              ? (
-                  <div className="duelMeta">
-                    {activeTrack.artists.join(", ")}
-                  </div>
-                )
-              : null}
-            {activeTrack?.album ? (
-              <div className="duelStats">
-                <span className="cellSub">{activeTrack.album}</span>
+          <div className="duelGrid">
+            <div className="duelCard duelCardLeft">
+              <div className="duelTitle">
+                {activeTrack?.name || activeKey || "(untitled track)"}
               </div>
-            ) : null}
-            <div className="duelActions">
-              <button
-                className="btn primary duelPrimaryBtn"
-                onClick={() => compare("active")}
-              >
-                Better
-              </button>
-              {activeTrack?.id ? (
-                <button
-                  className="btn duelSecondaryBtn"
-                  onClick={() => openTrackInSpotify(activeTrack.id)}
-                  title="Play in Spotify"
-                >
-                  Play
-                </button>
+              {Array.isArray(activeTrack?.artists) &&
+              activeTrack.artists.length ? (
+                <div className="duelMeta">{activeTrack.artists.join(", ")}</div>
               ) : null}
+              {activeTrack?.album ? (
+                <div className="duelStats">
+                  <span className="cellSub">{activeTrack.album}</span>
+                </div>
+              ) : null}
+              <div className="duelActions">
+                <button
+                  className="btn primary duelPrimaryBtn"
+                  onClick={() => compare("active")}
+                >
+                  Better
+                </button>
+                {activeTrack?.id ? (
+                  <button
+                    className="btn duelSecondaryBtn"
+                    onClick={() => openTrackInSpotify(activeTrack.id)}
+                    title="Play in Spotify"
+                  >
+                    Play
+                  </button>
+                ) : null}
+              </div>
+              <div className="duelActionsFooter">
+                <button
+                  className="btn"
+                  onClick={skip}
+                  title="Pick a different pending song"
+                >
+                  Skip
+                </button>
+                <button
+                  className="btn danger"
+                  onClick={excludeActive}
+                  title="Exclude this song from ranking"
+                >
+                  Do not rate
+                </button>
+              </div>
             </div>
-            <div className="duelActionsFooter">
-              <button
-                className="btn"
-                onClick={skip}
-                title="Pick a different pending song"
-              >
-                Skip
-              </button>
-              <button
-                className="btn danger"
-                onClick={excludeActive}
-                title="Exclude this song from ranking"
-              >
-                Do not rate
-              </button>
+
+            <div className="duelVs">vs</div>
+
+            <div className="duelCard">
+              <div className="duelTitle">
+                {midTrack?.name || midKey || "(untitled track)"}
+              </div>
+              {Array.isArray(midTrack?.artists) && midTrack.artists.length ? (
+                <div className="duelMeta">{midTrack.artists.join(", ")}</div>
+              ) : null}
+              {midTrack?.album ? (
+                <div className="duelStats">
+                  <span className="cellSub">{midTrack.album}</span>
+                </div>
+              ) : null}
+              <div className="duelActions">
+                <button
+                  className="btn primary duelPrimaryBtn"
+                  onClick={() => compare("mid")}
+                >
+                  Better
+                </button>
+                {midTrack?.id ? (
+                  <button
+                    className="btn duelSecondaryBtn"
+                    onClick={() => openTrackInSpotify(midTrack.id)}
+                    title="Play in Spotify"
+                  >
+                    Play
+                  </button>
+                ) : null}
+              </div>
             </div>
           </div>
-
-          <div className="duelVs">vs</div>
-
-          <div className="duelCard">
-            <div className="duelTitle">
-              {midTrack?.name || midKey || "(untitled track)"}
-            </div>
-            {Array.isArray(midTrack?.artists) && midTrack.artists.length ? (
-              <div className="duelMeta">{midTrack.artists.join(", ")}</div>
-            ) : null}
-            {midTrack?.album ? (
-              <div className="duelStats">
-                <span className="cellSub">{midTrack.album}</span>
-              </div>
-            ) : null}
-            <div className="duelActions">
-              <button
-                className="btn primary duelPrimaryBtn"
-                onClick={() => compare("mid")}
-              >
-                Better
-              </button>
-              {midTrack?.id ? (
-                <button
-                  className="btn duelSecondaryBtn"
-                  onClick={() => openTrackInSpotify(midTrack.id)}
-                  title="Play in Spotify"
-                >
-                  Play
-                </button>
-              ) : null}
-            </div>
-          </div>
-        </div>
         </>
       ) : activeKey ? (
         <p className="meta">Pick a comparison to continue.</p>
@@ -3104,7 +3175,7 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
         const hay = `${r.track?.name ?? ""} ${r.artists}`.toLowerCase();
         return hay.includes(q);
       })
-    .sort((a, b) => b.state.rating - a.state.rating);
+      .sort((a, b) => b.state.rating - a.state.rating);
   }, [uniqueTracks, ranking, query]);
 
   const ranks = useMemo(() => rows.map((_, idx) => idx + 1), [rows]);
@@ -3145,9 +3216,7 @@ function Leaderboard({ uniqueTracks, ranking, onChange }) {
               {rows.slice(0, 250).map((r, idx) => (
                 <tr key={r.key}>
                   <td className="right">
-                    <span className="cellSub">
-                      {ranks[idx] ?? idx + 1}
-                    </span>
+                    <span className="cellSub">{ranks[idx] ?? idx + 1}</span>
                   </td>
                   <td>
                     <div className="cellTitle">
