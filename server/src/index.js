@@ -405,7 +405,7 @@ async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext })
                 'explicit',
                 'external_urls(spotify)',
                 'artists(id,name)',
-                'album(name)',
+                'album(id,name,total_tracks)',
               ].join(',') +
             ')',
           ].join(',') +
@@ -465,6 +465,90 @@ async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext })
   }
 
   return { ok: true, status: 200, data: { items, offset: 0, limit, total } }
+}
+
+async function fetchAlbumTracksAll({ albumId, accessToken, debugContext }) {
+  const limit = 50
+
+  const callPage = async ({ offset }) => {
+    const apiUrl = new URL(`https://api.spotify.com/v1/albums/${encodeURIComponent(albumId)}/tracks`)
+    apiUrl.searchParams.set('limit', String(limit))
+    apiUrl.searchParams.set('offset', String(offset))
+    apiUrl.searchParams.set('market', 'from_token')
+    apiUrl.searchParams.set(
+      'fields',
+      [
+        'href',
+        'limit',
+        'next',
+        'offset',
+        'previous',
+        'total',
+        'items(' +
+          [
+            'id',
+            'name',
+            'duration_ms',
+            'explicit',
+            'track_number',
+            'disc_number',
+            'external_urls(spotify)',
+            'artists(id,name)',
+          ].join(',') +
+        ')',
+      ].join(','),
+    )
+
+    const response = await spotifyFetch(apiUrl.toString(), {
+      label: '/v1/albums/:id/tracks',
+      debugContext,
+      headers: { authorization: `Bearer ${accessToken}` },
+    })
+
+    let data
+    try {
+      data = await response.json()
+    } catch {
+      data = null
+    }
+
+    const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+    if (!response.ok) {
+      logSpotifyFailure({
+        label: 'GET /v1/albums/:id/tracks',
+        url: apiUrl.toString(),
+        status: response.status,
+        retryAfterSeconds,
+        requestId: response.headers.get('x-request-id'),
+        context: debugContext,
+        data,
+      })
+    }
+
+    return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+  }
+
+  const first = await callPage({ offset: 0 })
+  if (!first.ok) return first
+
+  const items = Array.isArray(first.data?.items) ? first.data.items.slice() : []
+  const total = Number(first.data?.total) || items.length
+  let nextOffset = items.length
+  const maxPages = 20
+  let pagesFetched = 1
+
+  while (nextOffset < total) {
+    if (pagesFetched >= maxPages) break
+    const page = await callPage({ offset: nextOffset })
+    if (!page.ok) return { ...page, partial: { items, total, nextOffset } }
+    const pageItems = Array.isArray(page.data?.items) ? page.data.items : []
+    items.push(...pageItems)
+    if (pageItems.length === 0) break
+    nextOffset += pageItems.length
+    pagesFetched += 1
+  }
+
+  return { ok: true, status: 200, data: { items, offset: 0, limit, total, albumId } }
 }
 
 function readJsonFile(filePath) {
@@ -1480,7 +1564,10 @@ const server = http.createServer((req, res) => {
       if (cachedRecord) {
         res.setHeader('x-sp-cache', 'hit')
         res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
-        sendJson(res, 200, { artists: cachedRecord.data?.artists ?? [] })
+        sendJson(res, 200, {
+          artists: cachedRecord.data?.artists ?? [],
+          album: cachedRecord.data?.album ?? null,
+        })
         return
       }
 
@@ -1572,6 +1659,13 @@ const server = http.createServer((req, res) => {
             name: typeof a?.name === 'string' ? a.name : null,
           }))
           .filter((a) => a.id && a.name)
+        const album = result.data?.album && typeof result.data.album === 'object'
+          ? {
+              id: typeof result.data.album.id === 'string' ? result.data.album.id : null,
+              name: typeof result.data.album.name === 'string' ? result.data.album.name : null,
+              totalTracks: Number.isFinite(result.data.album.total_tracks) ? result.data.album.total_tracks : null,
+            }
+          : null
 
         const storedAt = new Date().toISOString()
         writeSpotifyCacheRecordAtomic(userId, cacheKey, {
@@ -1580,12 +1674,144 @@ const server = http.createServer((req, res) => {
           cacheKey,
           fetchedAt: storedAt,
           lastRefreshedAt: storedAt,
-          data: { artists },
+          data: { artists, album },
         })
 
         res.setHeader('x-sp-cache', 'miss_stored')
         res.setHeader('x-sp-cache-fetched-at', storedAt)
-        sendJson(res, 200, { artists })
+        sendJson(res, 200, { artists, album })
+      } finally {
+        if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
+      }
+    })()
+
+    return
+  }
+
+  if (req.method === 'GET' && url.pathname.startsWith('/api/albums/') && url.pathname.endsWith('/tracks')) {
+    const clientId = process.env.SPOTIFY_CLIENT_ID
+    const accessToken = cookies.sp_access
+    const refreshToken = cookies.sp_refresh
+    const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+
+    if (!clientId) {
+      sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
+      return
+    }
+    if (!accessToken || !userId) {
+      sendJson(res, 401, { error: 'not_logged_in' })
+      return
+    }
+
+    const parts = url.pathname.split('/').filter(Boolean)
+    const albumId = parts.length === 4 ? parts[2] : null
+    if (!albumId) {
+      sendJson(res, 400, { error: 'missing_album_id' })
+      return
+    }
+
+    ;(async () => {
+      const cacheKey = `album_${albumId}_tracks_all`
+      const nowMs = Date.now()
+      let cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      const lockKey = `${userId}:${cacheKey}`
+      let lockTaken = false
+
+      if (cachedRecord) {
+        const decision = shouldAttemptSpotifyRefresh({ record: cachedRecord, nowMs })
+        if (!decision.shouldRefresh) {
+          res.setHeader('x-sp-cache', decision.stale ? 'hit_throttled' : 'hit_fresh')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        if (spotifyRefreshInFlight.has(lockKey)) {
+          res.setHeader('x-sp-cache', 'hit_inflight')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+
+        spotifyRefreshInFlight.set(lockKey, true)
+        lockTaken = true
+
+        const attemptedAt = new Date(nowMs).toISOString()
+        cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+      }
+
+      let currentAccessToken = accessToken
+
+      const fetchWithRefresh = async () => {
+        let result = await fetchAlbumTracksAll({
+          albumId,
+          accessToken: currentAccessToken,
+          debugContext,
+        })
+
+        if (!result.ok && result.status === 401 && refreshToken) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, {
+              path: '/',
+              maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30),
+            })
+            currentAccessToken = refreshed.access_token
+            result = await fetchAlbumTracksAll({
+              albumId,
+              accessToken: currentAccessToken,
+              debugContext,
+            })
+          }
+        }
+
+        return result
+      }
+
+      try {
+        const result = await fetchWithRefresh()
+        if (!result.ok) {
+          if (cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_fallback')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+            sendJson(res, 200, cachedRecord.data)
+            return
+          }
+          sendJson(res, result.status, {
+            error: 'spotify_album_tracks_failed',
+            details: result.data,
+            retryAfterSeconds: result.retryAfterSeconds,
+          })
+          return
+        }
+
+        const storedAt = new Date().toISOString()
+        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+          schemaVersion: 1,
+          userId,
+          cacheKey,
+          fetchedAt: storedAt,
+          lastRefreshedAt: storedAt,
+          data: result.data,
+        })
+
+        res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
+        res.setHeader('x-sp-cache-fetched-at', storedAt)
+        res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+        sendJson(res, 200, result.data)
+      } catch (error) {
+        if (cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_fallback')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, cachedRecord.data)
+          return
+        }
+        sendJson(res, 500, { error: 'spotify_album_tracks_failed', message: error?.message })
       } finally {
         if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
       }
@@ -1853,7 +2079,7 @@ const server = http.createServer((req, res) => {
                     'explicit',
                   'external_urls(spotify)',
                     'artists(id,name)',
-                    'album(name)',
+                    'album(id,name,total_tracks)',
                   ].join(',') +
                 ')',
               ].join(',') +

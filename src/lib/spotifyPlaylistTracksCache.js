@@ -45,7 +45,9 @@ function pickTrackItem(item) {
     name: entry.name ?? null,
     artists: artistPairs.map((a) => a.name),
     artistIds: artistPairs.map((a) => a.id),
+    albumId: typeof entry.album?.id === 'string' ? entry.album.id : null,
     album: typeof entry.album?.name === 'string' ? entry.album.name : null,
+    albumTrackCount: Number.isFinite(entry.album?.total_tracks) ? entry.album.total_tracks : null,
     durationMs: typeof entry.duration_ms === 'number' ? entry.duration_ms : null,
     explicit: typeof entry.explicit === 'boolean' ? entry.explicit : null,
     externalUrl: entry.external_urls?.spotify ?? null,
@@ -147,7 +149,16 @@ export function writePlaylistTracksCache(
     // Quota fallback: cache only minimal fields.
     const minimal = {
       ...record,
-      items: items.map((t) => ({ addedAt: t.addedAt, id: t.id, name: t.name, artists: t.artists, artistIds: t.artistIds })),
+      items: items.map((t) => ({
+        addedAt: t.addedAt,
+        id: t.id,
+        name: t.name,
+        artists: t.artists,
+        artistIds: t.artistIds,
+        albumId: t.albumId,
+        album: t.album,
+        albumTrackCount: t.albumTrackCount,
+      })),
     }
     try {
       localStorage.setItem(keyForPlaylistTracks(userId, playlistId), JSON.stringify(minimal))

@@ -48,7 +48,13 @@ export function upsertGlobalSongs(userId, tracks) {
       id,
       name: typeof track?.name === 'string' ? track.name : null,
       artists: Array.isArray(track?.artists) ? track.artists.filter(Boolean) : [],
+      albumId: typeof track?.albumId === 'string' ? track.albumId : (typeof items[id]?.albumId === 'string' ? items[id].albumId : null),
       album: typeof track?.album === 'string' ? track.album : null,
+      albumTrackCount: Number.isFinite(track?.albumTrackCount)
+        ? track.albumTrackCount
+        : Number.isFinite(items[id]?.albumTrackCount)
+          ? items[id].albumTrackCount
+          : null,
       durationMs: Number.isFinite(track?.durationMs) ? track.durationMs : null,
       explicit: typeof track?.explicit === 'boolean' ? track.explicit : null,
       externalUrl: typeof track?.externalUrl === 'string' ? track.externalUrl : null,

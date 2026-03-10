@@ -91,11 +91,137 @@
 
 .dashboardPage div[aria-label="Top songs list"] .dashTable th:nth-child(3),
 .dashboardPage div[aria-label="Top songs list"] .dashTable td:nth-child(3),
-.dashboardPage div[aria-label="Top albums list"] .dashTable th:nth-child(3),
-.dashboardPage div[aria-label="Top albums list"] .dashTable td:nth-child(3) {
+.dashboardPage div[aria-label="Album progress list"] .dashTable th:nth-child(3),
+.dashboardPage div[aria-label="Album progress list"] .dashTable td:nth-child(3) {
   padding-left: 0.6rem;
   padding-right: 0.65rem;
   white-space: nowrap;
+}
+
+.dashboardPage .albumRowOpen td {
+  background: rgba(122, 162, 255, 0.08);
+}
+
+.dashboardPage .albumProgressValue {
+  font-weight: 700;
+}
+
+.dashboardPage .albumRowExpanded td {
+  background: rgba(14, 20, 44, 0.66);
+}
+
+.dashboardPage .albumExpandCell {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.dashboardPage .albumExpandHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.dashboardPage .albumPrompt {
+  margin: 0;
+}
+
+.dashboardPage .albumPromptGroup {
+  min-width: 0;
+}
+
+.dashboardPage .albumPromptSecondary {
+  margin: 0.28rem 0 0;
+}
+
+.dashboardPage .albumHeaderActions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.dashboardPage .albumExpandGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.dashboardPage .albumSection {
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.8rem;
+  min-width: 0;
+}
+
+.dashboardPage .albumSectionTitle {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.dashboardPage .albumTrackList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.dashboardPage .albumTrackRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.45rem;
+}
+
+.dashboardPage .albumTrackRow:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.dashboardPage .albumTrackMain {
+  min-width: 0;
+}
+
+.dashboardPage .albumTrackName,
+.dashboardPage .albumTrackMeta {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboardPage .albumTrackName {
+  font-weight: 600;
+}
+
+.dashboardPage .albumTrackMeta {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.dashboardPage .albumTrackActions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  min-width: 4.5rem;
+}
+
+@media (max-width: 980px) {
+  .dashboardPage .albumExpandGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardPage .albumExpandHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .dashboardPage .rankValue {

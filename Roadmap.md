@@ -52,3 +52,5 @@
 + Landing: switch public preview to Spotify playlist source + playlist-scored sections (implemented 2026-03-08)
 + Landing: decouple public preview artist cache from user cache; prime preview artists on login (implemented 2026-03-10)
 + Server: add concise per-request Spotify console logging (implemented 2026-03-10)
++ Dashboard: replace top albums with album progress + expandable rated/unrated lists (implemented 2026-03-10)
++ Dashboard: lazy-fetch full album tracklists for accurate album progress (implemented 2026-03-10)
