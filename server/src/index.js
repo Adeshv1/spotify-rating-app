@@ -55,6 +55,7 @@ const dataDir = path.join(process.cwd(), 'data')
 const rankingsDir = path.join(dataDir, 'rankings')
 const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
 const REFRESH_WINDOW_MS = 15 * 60 * 1000
+const PUBLIC_PREVIEW_PLAYLIST_ID = '5DBL17LWOZ1Yk87gan9wQq'
 const spotifyRefreshInFlight = new Map()
 const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
 const ARTIST_IMAGE_MISS_MAX_PER_WINDOW = 25
@@ -113,6 +114,251 @@ function shouldAttemptSpotifyRefresh({ record, nowMs }) {
   const stale = Number.isFinite(fetchedAtMs) ? nowMs - fetchedAtMs >= REFRESH_WINDOW_MS : true
   const throttled = Number.isFinite(lastRefreshedAtMs) ? nowMs - lastRefreshedAtMs < REFRESH_WINDOW_MS : false
   return { stale, throttled, shouldRefresh: stale && !throttled }
+}
+
+function pushTopNByRank(list, item, maxN) {
+  list.push(item)
+  list.sort((a, b) => a.rank - b.rank)
+  if (list.length > maxN) list.length = maxN
+}
+
+function normalizePlaylistTracks(items) {
+  const tracks = []
+  if (!Array.isArray(items)) return tracks
+  let position = 0
+
+  for (const row of items) {
+    const entry =
+      row?.item && typeof row.item === 'object'
+        ? row.item
+        : row?.track && typeof row.track === 'object'
+          ? row.track
+          : null
+    if (!entry || typeof entry.id !== 'string' || !entry.id) continue
+
+    position += 1
+    const artistsRaw = Array.isArray(entry.artists) ? entry.artists : []
+    const artistsDetailed = artistsRaw
+      .map((a) => ({
+        id: typeof a?.id === 'string' ? a.id : null,
+        name: typeof a?.name === 'string' ? a.name : null,
+      }))
+      .filter((a) => a.name)
+    const artists = artistsDetailed.map((a) => a.name)
+    const album = typeof entry.album?.name === 'string' ? entry.album.name : null
+
+    tracks.push({
+      trackKey: `spid:${entry.id}`,
+      id: entry.id,
+      name: typeof entry.name === 'string' ? entry.name : null,
+      artists,
+      artistsDetailed,
+      album,
+      rank: position,
+    })
+  }
+
+  return tracks
+}
+
+function computeTopArtistsFromPlaylist(tracks, { maxSongsPerArtist = 5, maxArtists = Number.POSITIVE_INFINITY } = {}) {
+  const total = tracks.length
+  const byArtist = new Map()
+
+  for (const track of tracks) {
+    const rank = Number(track?.rank)
+    if (!Number.isFinite(rank)) continue
+    const points = total - rank + 1
+    const artistsDetailed = Array.isArray(track?.artistsDetailed) ? track.artistsDetailed : []
+    const artistNames = Array.isArray(track?.artists) ? track.artists.filter(Boolean) : []
+    if (!artistNames.length) continue
+
+    for (const artistName of artistNames) {
+      const existing = byArtist.get(artistName) || {
+        name: artistName,
+        artistId: null,
+        points: 0,
+        topTracks: [],
+      }
+      if (!existing.artistId && artistsDetailed.length) {
+        const match = artistsDetailed.find((a) => a?.name === artistName && typeof a?.id === 'string' && a.id)
+        if (match?.id) existing.artistId = match.id
+      }
+      existing.points += points
+      pushTopNByRank(
+        existing.topTracks,
+        {
+          trackKey: typeof track?.trackKey === 'string' ? track.trackKey : null,
+          id: typeof track?.id === 'string' ? track.id : null,
+          name: typeof track?.name === 'string' ? track.name : null,
+          rank,
+        },
+        maxSongsPerArtist,
+      )
+      byArtist.set(artistName, existing)
+    }
+  }
+
+  const scored = Array.from(byArtist.values()).map((artist) => {
+    const topTracks = artist.topTracks
+    const n = topTracks.length || 0
+    const avgRank = n ? topTracks.reduce((sum, t) => sum + t.rank, 0) / n : null
+    const adjustedAvgRank = n ? avgRank * (maxSongsPerArtist / n) : null
+    return {
+      name: artist.name,
+      artistId: artist.artistId,
+      points: artist.points,
+      score: artist.points,
+      topTracks,
+      topSongs: topTracks,
+      avgRank,
+      adjustedAvgRank,
+    }
+  })
+
+  scored.sort((a, b) => b.points - a.points || String(a.name).localeCompare(String(b.name)))
+  return scored.slice(0, maxArtists).map((artist, idx) => ({ ...artist, rank: idx + 1 }))
+}
+
+function computeTopAlbumsFromPlaylist(tracks) {
+  const total = tracks.length
+  const byAlbum = new Map()
+
+  for (const track of tracks) {
+    const rank = Number(track?.rank)
+    if (!Number.isFinite(rank)) continue
+    const albumName = typeof track?.album === 'string' ? track.album : null
+    if (!albumName) continue
+    const points = total - rank + 1
+    const record = byAlbum.get(albumName) || {
+      name: albumName,
+      tracks: 0,
+      score: 0,
+      sumRank: 0,
+      bestTrackId: null,
+      bestRank: Number.POSITIVE_INFINITY,
+    }
+    record.tracks += 1
+    record.score += points
+    record.sumRank += rank
+    if (typeof track?.id === 'string' && rank < record.bestRank) {
+      record.bestRank = rank
+      record.bestTrackId = track.id
+    }
+    byAlbum.set(albumName, record)
+  }
+
+  return Array.from(byAlbum.values())
+    .map((album) => ({
+      ...album,
+      avgRank: album.tracks ? album.sumRank / album.tracks : null,
+    }))
+    .sort((a, b) => b.score - a.score || String(a.name).localeCompare(String(b.name)))
+    .map((album, idx) => ({ ...album, rank: idx + 1 }))
+}
+
+function hasPlaylistItems(record) {
+  const items = Array.isArray(record?.data?.items)
+    ? record.data.items
+    : Array.isArray(record?.data?.tracks?.items)
+      ? record.data.tracks.items
+      : []
+  if (items.length > 0) return true
+  const total = Number(record?.data?.total) || Number(record?.data?.tracks?.total) || 0
+  return total > 0
+}
+
+async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext }) {
+  const limit = 50
+
+  const callPage = async ({ offset }) => {
+    const apiUrl = new URL(`https://api.spotify.com/v1/playlists/${encodeURIComponent(playlistId)}/items`)
+    apiUrl.searchParams.set('limit', String(limit))
+    apiUrl.searchParams.set('offset', String(offset))
+    apiUrl.searchParams.set('market', 'from_token')
+    apiUrl.searchParams.set('additional_types', 'track')
+    apiUrl.searchParams.set(
+      'fields',
+      [
+        'href',
+        'limit',
+        'next',
+        'offset',
+        'previous',
+        'total',
+        'items(' +
+          [
+            'added_at',
+            'item(' +
+              [
+                'type',
+                'id',
+                'name',
+                'duration_ms',
+                'explicit',
+                'external_urls(spotify)',
+                'artists(id,name)',
+                'album(name)',
+              ].join(',') +
+            ')',
+          ].join(',') +
+        ')',
+      ].join(','),
+    )
+
+    const response = await fetch(apiUrl.toString(), {
+      headers: { authorization: `Bearer ${accessToken}` },
+    })
+
+    let data
+    try {
+      data = await response.json()
+    } catch {
+      data = null
+    }
+
+    const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+    const wwwAuthenticate = response.headers.get('www-authenticate')
+    const requestId = response.headers.get('x-request-id')
+    if (!response.ok) {
+      logSpotifyFailure({
+        label: 'GET /v1/playlists/:id/items',
+        url: apiUrl.toString(),
+        status: response.status,
+        retryAfterSeconds,
+        wwwAuthenticate,
+        requestId,
+        context: debugContext,
+        data,
+      })
+    }
+
+    return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+  }
+
+  const first = await callPage({ offset: 0 })
+  if (!first.ok) return first
+
+  const firstTracks = first.data?.tracks && typeof first.data.tracks === 'object' ? first.data.tracks : first.data
+  const items = Array.isArray(firstTracks?.items) ? firstTracks.items.slice() : []
+  const total = Number(firstTracks?.total) || items.length
+  let nextOffset = items.length
+  const maxPages = 50
+  let pagesFetched = 1
+
+  while (nextOffset < total) {
+    if (pagesFetched >= maxPages) break
+    const page = await callPage({ offset: nextOffset })
+    if (!page.ok) return { ...page, partial: { items, total, nextOffset } }
+    const pageTracks = page.data?.tracks && typeof page.data.tracks === 'object' ? page.data.tracks : page.data
+    const pageItems = Array.isArray(pageTracks?.items) ? pageTracks.items : []
+    items.push(...pageItems)
+    if (pageItems.length === 0) break
+    nextOffset += pageItems.length
+    pagesFetched += 1
+  }
+
+  return { ok: true, status: 200, data: { items, offset: 0, limit, total } }
 }
 
 function readJsonFile(filePath) {
@@ -355,216 +601,147 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/public/preview') {
-    const pickPreviewUserId = () => {
-      const envId = typeof process.env.SPOTIFY_OWNER_USER_ID === 'string' ? process.env.SPOTIFY_OWNER_USER_ID.trim() : ''
-      if (envId) return envId
-      try {
-        const files = fs.readdirSync(rankingsDir)
-        const jsonFiles = files.filter((f) => f.endsWith('.json'))
-        if (!jsonFiles.length) return null
-        jsonFiles.sort()
-        return jsonFiles[0].slice(0, -'.json'.length)
-      } catch {
-        return null
+    ;(async () => {
+      const clientId = process.env.SPOTIFY_CLIENT_ID
+      const accessToken = cookies.sp_access
+      const refreshToken = cookies.sp_refresh
+      const ownerUserId = typeof process.env.SPOTIFY_OWNER_USER_ID === 'string' ? process.env.SPOTIFY_OWNER_USER_ID.trim() : ''
+      const cacheUserId = 'public_preview'
+      const cacheKey = `playlist_${PUBLIC_PREVIEW_PLAYLIST_ID}_tracks_all`
+      let cachedRecord = readSpotifyCacheRecord(cacheUserId, cacheKey)
+      const cachedHasItems = cachedRecord ? hasPlaylistItems(cachedRecord) : false
+      if (cachedRecord && !cachedHasItems) cachedRecord = null
+
+      const buildPreviewPayload = (record) => {
+        const items = Array.isArray(record?.data?.items)
+          ? record.data.items
+          : Array.isArray(record?.data?.tracks?.items)
+            ? record.data.tracks.items
+            : []
+        const tracks = normalizePlaylistTracks(items)
+        const topSongs = tracks
+        const topArtists = computeTopArtistsFromPlaylist(tracks, {
+          maxSongsPerArtist: 5,
+          maxArtists: Number.POSITIVE_INFINITY,
+        }).map((artist) => {
+          const imageUrl =
+            ownerUserId && typeof artist?.artistId === 'string' && artist.artistId
+              ? (readSpotifyCacheRecord(ownerUserId, `artist_${artist.artistId}_image`)?.data?.imageUrl ?? null)
+              : null
+          return { ...artist, imageUrl }
+        })
+        const topAlbums = computeTopAlbumsFromPlaylist(tracks)
+
+        return {
+          ok: true,
+          source: 'spotify_playlist',
+          playlistId: PUBLIC_PREVIEW_PLAYLIST_ID,
+          updatedAt: typeof record?.fetchedAt === 'string' ? record.fetchedAt : new Date().toISOString(),
+          topSongs,
+          topArtists,
+          topAlbums,
+        }
       }
-    }
 
-    const userId = pickPreviewUserId()
-    if (!userId) {
-      sendJson(res, 404, { error: 'preview_unavailable' })
-      return
-    }
+      if (cachedRecord) {
+        res.setHeader('x-sp-cache', 'hit_permanent')
+        res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+        res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+        sendJson(res, 200, buildPreviewPayload(cachedRecord))
+        return
+      }
 
-    const ranking = readJsonFile(rankingFilePathForUser(userId))
-    if (!ranking) {
-      sendJson(res, 404, { error: 'preview_unavailable' })
-      return
-    }
+      let currentAccessToken = accessToken
 
-    /** @type {Map<string, {id:string, name:string|null, artists:string[], artistsDetailed:Array<{id:string|null,name:string}>, album:string|null}>} */
-    const trackMeta = new Map()
-    /** @type {Array<{file:string, fetchedAt:string|null, lastRefreshedAt:string|null}>} */
-    const sources = []
+      if (!currentAccessToken && refreshToken && clientId) {
+        try {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            currentAccessToken = refreshed.access_token
+            setCookie(res, 'sp_access', refreshed.access_token, { path: '/', maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30) })
+          }
+        } catch {
+          // ignore refresh failure; fall back to cache or empty state.
+        }
+      }
 
-    try {
-      const userCacheDir = path.join(spotifyCacheDir, safeFileComponent(userId))
-      const files = fs.readdirSync(userCacheDir)
-      for (const file of files) {
-        if (!file.endsWith('.json')) continue
-        if (!file.startsWith('playlist_') || !file.endsWith('_tracks_all.json')) continue
-        const record = readJsonFile(path.join(userCacheDir, file))
-        if (!record || typeof record !== 'object') continue
+      if (!currentAccessToken) {
+        if (cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_stale_no_token')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+          sendJson(res, 200, buildPreviewPayload(cachedRecord))
+          return
+        }
+        sendJson(res, 503, { error: 'preview_unavailable' })
+        return
+      }
 
-        sources.push({
-          file,
-          fetchedAt: typeof record.fetchedAt === 'string' ? record.fetchedAt : null,
-          lastRefreshedAt: typeof record.lastRefreshedAt === 'string' ? record.lastRefreshedAt : null,
+      const lockKey = `${cacheUserId}:${cacheKey}`
+      let lockTaken = false
+
+      if (spotifyRefreshInFlight.has(lockKey)) {
+        sendJson(res, 429, { error: 'inflight', retryAfterSeconds: 1 })
+        return
+      }
+
+      spotifyRefreshInFlight.set(lockKey, true)
+      lockTaken = true
+
+      try {
+        let result = await fetchPlaylistTracksAll({
+          playlistId: PUBLIC_PREVIEW_PLAYLIST_ID,
+          accessToken: currentAccessToken,
+          debugContext,
         })
 
-        const items = Array.isArray(record?.data?.items) ? record.data.items : []
-        for (const row of items) {
-          const entry =
-            row?.item && typeof row.item === 'object'
-              ? row.item
-              : row?.track && typeof row.track === 'object'
-                ? row.track
-                : null
-          if (!entry || typeof entry.id !== 'string' || !entry.id) continue
-
-          const artistsRaw = Array.isArray(entry.artists) ? entry.artists : []
-          const artistsDetailed = artistsRaw
-            .map((a) => ({
-              id: typeof a?.id === 'string' ? a.id : null,
-              name: typeof a?.name === 'string' ? a.name : null,
-            }))
-            .filter((a) => a.name)
-          const artists = artistsDetailed.map((a) => a.name)
-          const album = typeof entry.album?.name === 'string' ? entry.album.name : null
-
-          trackMeta.set(entry.id, {
-            id: entry.id,
-            name: typeof entry.name === 'string' ? entry.name : null,
-            artists,
-            artistsDetailed,
-            album,
-          })
-        }
-      }
-    } catch {
-      // ignore
-    }
-
-    function pushTopNByRank(list, item, maxN) {
-      list.push(item)
-      list.sort((a, b) => a.rank - b.rank)
-      if (list.length > maxN) list.length = maxN
-    }
-
-    function computeTopArtistsFromTracks(tracks, { maxSongsPerArtist = 5, maxArtists = Number.POSITIVE_INFINITY } = {}) {
-      const byArtist = new Map()
-      const idByArtist = new Map()
-
-      for (const t of tracks) {
-        const rank = Number(t?.rank)
-        if (!Number.isFinite(rank)) continue
-        const trackId = typeof t?.id === 'string' ? t.id : null
-        const artists = Array.isArray(t?.artists) ? t.artists.filter(Boolean) : []
-        if (!artists.length) continue
-
-        for (const artistName of artists) {
-          if (!idByArtist.has(artistName) && Array.isArray(t?.artistsDetailed)) {
-            const match = t.artistsDetailed.find((a) => a?.name === artistName && typeof a?.id === 'string' && a.id)
-            if (match?.id) idByArtist.set(artistName, match.id)
+        if (!result.ok && result.status === 401 && refreshToken && clientId) {
+          const refreshed = await spotifyRefresh({ refreshToken, clientId })
+          if (typeof refreshed.access_token === 'string') {
+            setCookie(res, 'sp_access', refreshed.access_token, { path: '/', maxAge: Math.max(0, (Number(refreshed.expires_in) || 3600) - 30) })
+            currentAccessToken = refreshed.access_token
+            result = await fetchPlaylistTracksAll({
+              playlistId: PUBLIC_PREVIEW_PLAYLIST_ID,
+              accessToken: currentAccessToken,
+              debugContext,
+            })
           }
-
-          const existing = byArtist.get(artistName) || []
-          pushTopNByRank(
-            existing,
-            {
-              trackKey: typeof t?.trackKey === 'string' ? t.trackKey : trackId ? `spid:${trackId}` : null,
-              id: trackId,
-              name: typeof t?.name === 'string' ? t.name : null,
-              rank,
-            },
-            maxSongsPerArtist,
-          )
-          byArtist.set(artistName, existing)
         }
-      }
 
-      const scored = []
-      for (const [name, topSongs] of byArtist.entries()) {
-        const n = topSongs.length
-        if (!n) continue
-        const avgRank = topSongs.reduce((sum, s) => sum + s.rank, 0) / n
-        const adjustedAvgRank = avgRank * (maxSongsPerArtist / n)
-        const artistId = idByArtist.get(name) || null
-        scored.push({ name, artistId, n, avgRank, adjustedAvgRank, topSongs, topTracks: topSongs })
-      }
-
-      scored.sort((a, b) => a.adjustedAvgRank - b.adjustedAvgRank)
-      return scored.slice(0, maxArtists)
-    }
-
-    const tracks = []
-    const states = ranking?.tracks && typeof ranking.tracks === 'object' ? ranking.tracks : {}
-    for (const [trackKey, state] of Object.entries(states)) {
-      if (typeof trackKey !== 'string' || !trackKey.startsWith('spid:')) continue
-      const id = trackKey.slice('spid:'.length)
-      const meta = trackMeta.get(id)
-      if (!meta) continue
-      const rating = Number(state?.rating)
-      const bucket = typeof state?.bucket === 'string' ? state.bucket : 'U'
-      const games = Number(state?.games) || 0
-      const isRanked = (bucket !== 'U' && bucket !== 'X') ||
-        (Number.isFinite(rating) && Math.round(rating) !== 1000) ||
-        games > 0
-      if (bucket === 'X' || !isRanked) continue
-      tracks.push({
-        trackKey: `spid:${id}`,
-        id,
-        name: meta.name,
-        artists: meta.artists,
-        artistsDetailed: meta.artistsDetailed,
-        album: meta.album,
-        bucket,
-        rating: Number.isFinite(rating) ? rating : 1000,
-        games,
-      })
-    }
-
-    tracks.sort((a, b) => b.rating - a.rating)
-    tracks.forEach((t, idx) => {
-      t.rank = idx + 1
-    })
-    const albumAgg = new Map()
-
-    for (const t of tracks) {
-      const album = t.album
-      if (album) {
-        const prev = albumAgg.get(album) || {
-          name: album,
-          tracks: 0,
-          sumRank: 0,
-          bestTrackId: null,
-          bestRank: Number.POSITIVE_INFINITY,
+        if (!result.ok) {
+          sendJson(res, result.status || 500, { error: 'preview_unavailable', details: result.data, retryAfterSeconds: result.retryAfterSeconds })
+          return
         }
-        prev.tracks += 1
-        prev.sumRank += t.rank
-        if (t.id && t.rank < prev.bestRank) {
-          prev.bestRank = t.rank
-          prev.bestTrackId = t.id
-        }
-        albumAgg.set(album, prev)
+
+        const storedAt = new Date().toISOString()
+        const payload = result.data
+        writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+          schemaVersion: 1,
+          userId: cacheUserId,
+          cacheKey,
+          fetchedAt: storedAt,
+          lastRefreshedAt: storedAt,
+          data: payload,
+        })
+
+        res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
+        res.setHeader('x-sp-cache-fetched-at', storedAt)
+        res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+        sendJson(
+          res,
+          200,
+          buildPreviewPayload({
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: payload,
+          }),
+        )
+      } catch (error) {
+        sendJson(res, 500, { error: 'preview_unavailable', message: error?.message })
+      } finally {
+        if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
       }
-    }
-
-    const topSongs = tracks
-    const topArtists = computeTopArtistsFromTracks(tracks, {
-      maxSongsPerArtist: 5,
-      maxArtists: Number.POSITIVE_INFINITY,
-    }).map((a) => {
-      const imageUrl =
-        typeof a?.artistId === 'string' && a.artistId
-          ? (readSpotifyCacheRecord(userId, `artist_${a.artistId}_image`)?.data?.imageUrl ?? null)
-          : null
-      return { ...a, imageUrl }
-    })
-
-    const topAlbums = Array.from(albumAgg.values())
-      .map((a) => ({ ...a, avgRank: a.tracks ? a.sumRank / a.tracks : 0 }))
-      .sort((a, b) => a.avgRank - b.avgRank)
-
-    sendJson(res, 200, {
-      ok: true,
-      userId,
-      generatedAt: new Date().toISOString(),
-      rankingUpdatedAt: typeof ranking?.updatedAt === 'string' ? ranking.updatedAt : null,
-      sources,
-      topSongs,
-      topArtists,
-      topAlbums,
-    })
+    })()
     return
   }
 
@@ -662,6 +839,34 @@ const server = http.createServer((req, res) => {
           if (me.ok && me.data && typeof me.data === 'object') {
             if (typeof me.data.id === 'string') setCookie(res, 'sp_user_id', me.data.id, { path: '/', maxAge: 30 * 24 * 60 * 60 })
             if (typeof me.data.display_name === 'string') setCookie(res, 'sp_user_name', me.data.display_name, { path: '/', maxAge: 30 * 24 * 60 * 60, httpOnly: false })
+          }
+        }
+
+        if (typeof accessToken === 'string') {
+          try {
+            const cacheUserId = 'public_preview'
+            const cacheKey = `playlist_${PUBLIC_PREVIEW_PLAYLIST_ID}_tracks_all`
+            const existing = readSpotifyCacheRecord(cacheUserId, cacheKey)
+            if (!existing || !hasPlaylistItems(existing)) {
+              const fetched = await fetchPlaylistTracksAll({
+                playlistId: PUBLIC_PREVIEW_PLAYLIST_ID,
+                accessToken,
+                debugContext,
+              })
+              if (fetched.ok) {
+                const storedAt = new Date().toISOString()
+                writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+                  schemaVersion: 1,
+                  userId: cacheUserId,
+                  cacheKey,
+                  fetchedAt: storedAt,
+                  lastRefreshedAt: storedAt,
+                  data: fetched.data,
+                })
+              }
+            }
+          } catch {
+            // ignore preview prime failures
           }
         }
 

@@ -1829,8 +1829,10 @@ function LandingPage({ publicPreview }) {
               ? publicPreview.error || "Preview unavailable."
               : publicPreview?.status === "ok"
                 ? `Updated ${
-                    data?.rankingUpdatedAt
-                      ? formatDateTime(data.rankingUpdatedAt)
+                    data?.updatedAt
+                      ? formatDateTime(data.updatedAt)
+                      : data?.rankingUpdatedAt
+                        ? formatDateTime(data.rankingUpdatedAt)
                       : "recently"
                   }.`
                 : ""}

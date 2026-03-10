@@ -2,11 +2,43 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-06T00:23:51.252Z",
-  "lastRefreshedAt": "2026-03-06T00:23:51.252Z",
+  "fetchedAt": "2026-03-08T22:27:24.641Z",
+  "lastRefreshedAt": "2026-03-08T22:27:24.641Z",
   "data": {
     "limit": 50,
     "items": [
+      {
+        "name": "Spotify App - Demo Playlist",
+        "id": "5DBL17LWOZ1Yk87gan9wQq",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "id": "21y337tnjcnnjntvxssctfnda"
+        },
+        "public": true,
+        "collaborative": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/5DBL17LWOZ1Yk87gan9wQq"
+        },
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 60
+          }
+        ],
+        "description": "",
+        "snapshot_id": "AAAABGcPcr6g8mJXgXANgAwPliwIX1T6"
+      },
       {
         "name": "All songs ever",
         "id": "1zhGT9u4JEkoqQbv38foOv",
@@ -1002,7 +1034,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c65731a5ed5a73789ba8c0142",
             "width": null
           }
         ],
@@ -1354,7 +1386,7 @@
     ],
     "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "next": null,
-    "total": 46,
+    "total": 47,
     "previous": null,
     "offset": 0
   }

@@ -1,0 +1,1162 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "playlist_5DBL17LWOZ1Yk87gan9wQq_tracks_all",
+  "fetchedAt": "2026-03-08T22:33:36.987Z",
+  "lastRefreshedAt": "2026-03-08T22:33:36.987Z",
+  "data": {
+    "items": [
+      {
+        "item": {
+          "album": {
+            "name": "DeBÍ TiRAR MáS FOToS"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3sK8wGT43QFpWrvNQsrQya"
+          },
+          "explicit": true,
+          "duration_ms": 237117,
+          "name": "DtMF",
+          "type": "track",
+          "id": "3sK8wGT43QFpWrvNQsrQya"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Fancy Some More?"
+          },
+          "artists": [
+            {
+              "name": "PinkPantheress",
+              "id": "78rUTD7y6Cy67W1RVzYs7t"
+            },
+            {
+              "name": "Zara Larsson",
+              "id": "1Xylc3o4UrD53lo9CvFvVg"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1DwscornXpj8fmOmYVlqZt"
+          },
+          "explicit": false,
+          "duration_ms": 184761,
+          "name": "Stateside + Zara Larsson",
+          "type": "track",
+          "id": "1DwscornXpj8fmOmYVlqZt"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Romantic"
+          },
+          "artists": [
+            {
+              "name": "Bruno Mars",
+              "id": "0du5cEVh5yTK9QJze8zA0C"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5y2ijHECwFYWqcAHKTZgzD"
+          },
+          "explicit": false,
+          "duration_ms": 204068,
+          "name": "Risk It All",
+          "type": "track",
+          "id": "5y2ijHECwFYWqcAHKTZgzD"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7gtG45ieyQzKtNKobfLd49"
+          },
+          "explicit": false,
+          "duration_ms": 213440,
+          "name": "American Girls",
+          "type": "track",
+          "id": "7gtG45ieyQzKtNKobfLd49"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "DECIDE"
+          },
+          "artists": [
+            {
+              "name": "Djo",
+              "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3qhlB30KknSejmIvZZLjOD"
+          },
+          "explicit": false,
+          "duration_ms": 159245,
+          "name": "End of Beginning",
+          "type": "track",
+          "id": "3qhlB30KknSejmIvZZLjOD"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Art of Loving"
+          },
+          "artists": [
+            {
+              "name": "Olivia Dean",
+              "id": "00x1fYSGhdqScXBRpSj3DW"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0mYXRQpTGjaLJt1l9MY4ps"
+          },
+          "explicit": false,
+          "duration_ms": 184000,
+          "name": "Man I Need",
+          "type": "track",
+          "id": "0mYXRQpTGjaLJt1l9MY4ps"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Art of Loving"
+          },
+          "artists": [
+            {
+              "name": "Olivia Dean",
+              "id": "00x1fYSGhdqScXBRpSj3DW"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397"
+          },
+          "explicit": false,
+          "duration_ms": 169000,
+          "name": "So Easy (To Fall In Love)",
+          "type": "track",
+          "id": "6sGIMrtIzQjdzNndVxe397"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Don't Forget About Me, Demos"
+          },
+          "artists": [
+            {
+              "name": "Dominic Fike",
+              "id": "6USv9qhCn6zfxlBQIYJ9qs"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7yNf9YjeO5JXUE3JEBgnYc"
+          },
+          "explicit": false,
+          "duration_ms": 97960,
+          "name": "Babydoll",
+          "type": "track",
+          "id": "7yNf9YjeO5JXUE3JEBgnYc"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Life of a Showgirl"
+          },
+          "artists": [
+            {
+              "name": "Taylor Swift",
+              "id": "06HL4z0CvFAxyc27GXpf02"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W"
+          },
+          "explicit": false,
+          "duration_ms": 226073,
+          "name": "The Fate of Ophelia",
+          "type": "track",
+          "id": "53iuhJlwXhSER5J2IYYv1W"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "DeBÍ TiRAR MáS FOToS"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2lTm559tuIvatlT1u0JYG2"
+          },
+          "explicit": true,
+          "duration_ms": 367725,
+          "name": "BAILE INoLVIDABLE",
+          "type": "track",
+          "id": "2lTm559tuIvatlT1u0JYG2"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "DeBÍ TiRAR MáS FOToS"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5TFD2bmFKGhoCRbX61nXY5"
+          },
+          "explicit": false,
+          "duration_ms": 183685,
+          "name": "NUEVAYoL",
+          "type": "track",
+          "id": "5TFD2bmFKGhoCRbX61nXY5"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "I Barely Know Her"
+          },
+          "artists": [
+            {
+              "name": "sombr",
+              "id": "4G9NDjRyZFDlJKMRL8hx3S"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7qjZnBKE73H4Oxkopwulqe"
+          },
+          "explicit": false,
+          "duration_ms": 199032,
+          "name": "back to friends",
+          "type": "track",
+          "id": "7qjZnBKE73H4Oxkopwulqe"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "WHERE IS MY HUSBAND!"
+          },
+          "artists": [
+            {
+              "name": "RAYE",
+              "id": "5KKpBU5eC2tJDzf0wmlRp2"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/55lijDD6OAjLFFUHU9tcDm"
+          },
+          "explicit": false,
+          "duration_ms": 196795,
+          "name": "WHERE IS MY HUSBAND!",
+          "type": "track",
+          "id": "55lijDD6OAjLFFUHU9tcDm"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "So Good"
+          },
+          "artists": [
+            {
+              "name": "Zara Larsson",
+              "id": "1Xylc3o4UrD53lo9CvFvVg"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1rIKgCH4H52lrvDcz50hS8"
+          },
+          "explicit": false,
+          "duration_ms": 200646,
+          "name": "Lush Life",
+          "type": "track",
+          "id": "1rIKgCH4H52lrvDcz50hS8"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Boy Who Played the Harp"
+          },
+          "artists": [
+            {
+              "name": "Dave",
+              "id": "6Ip8FS7vWT1uKkJSweANQK"
+            },
+            {
+              "name": "Tems",
+              "id": "687cZJR45JO7jhk1LHIbgq"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3oTuTpF1F3A7rEC6RKsMRz"
+          },
+          "explicit": false,
+          "duration_ms": 219743,
+          "name": "Raindance (feat. Tems)",
+          "type": "track",
+          "id": "3oTuTpF1F3A7rEC6RKsMRz"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1sA1DhT0bLyeICf8NalPS7"
+          },
+          "explicit": false,
+          "duration_ms": 311733,
+          "name": "Aperture",
+          "type": "track",
+          "id": "1sA1DhT0bLyeICf8NalPS7"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0i4qKfuKJ3juUsEwnJAxk3"
+          },
+          "explicit": false,
+          "duration_ms": 160400,
+          "name": "Ready, Steady, Go!",
+          "type": "track",
+          "id": "0i4qKfuKJ3juUsEwnJAxk3"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "You'll Be Alright, Kid (Chapter 1)"
+          },
+          "artists": [
+            {
+              "name": "Alex Warren",
+              "id": "0fTSzq9jAh4c36UVb4V7CB"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2RkZ5LkEzeHGRsmDqKwmaJ"
+          },
+          "explicit": false,
+          "duration_ms": 186964,
+          "name": "Ordinary",
+          "type": "track",
+          "id": "2RkZ5LkEzeHGRsmDqKwmaJ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Romantic"
+          },
+          "artists": [
+            {
+              "name": "Bruno Mars",
+              "id": "0du5cEVh5yTK9QJze8zA0C"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6f68Ac5tt5BQOpwr0BV9oN"
+          },
+          "explicit": false,
+          "duration_ms": 212973,
+          "name": "I Just Might",
+          "type": "track",
+          "id": "6f68Ac5tt5BQOpwr0BV9oN"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3xClevycpBON8bkyxFbAna"
+          },
+          "explicit": false,
+          "duration_ms": 221653,
+          "name": "Taste Back",
+          "type": "track",
+          "id": "3xClevycpBON8bkyxFbAna"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "KPop Demon Hunters (Soundtrack from the Netflix Film)"
+          },
+          "artists": [
+            {
+              "name": "HUNTR/X",
+              "id": "2yNNYQBChuox9A5Ka93BIn"
+            },
+            {
+              "name": "EJAE",
+              "id": "0RMJOzHDhAKY1o2j0W0vxY"
+            },
+            {
+              "name": "AUDREY NUNA",
+              "id": "0Wwji82sLA0Hcvtuak3omb"
+            },
+            {
+              "name": "REI AMI",
+              "id": "6U1dV7aL68N7Gb0Naq34V5"
+            },
+            {
+              "name": "KPop Demon Hunters Cast",
+              "id": "7mW7Tv7NvywKKXqafZo0Lc"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
+          },
+          "explicit": false,
+          "duration_ms": 194607,
+          "name": "Golden",
+          "type": "track",
+          "id": "1CPZ5BxNNd0n0nF4Orb9JS"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0QPdjsMOUhwouq1NS3HwfQ"
+          },
+          "explicit": false,
+          "duration_ms": 248866,
+          "name": "Coming Up Roses",
+          "type": "track",
+          "id": "0QPdjsMOUhwouq1NS3HwfQ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7s7v5EoNLD6TwDu4Nw51Oy"
+          },
+          "explicit": false,
+          "duration_ms": 192400,
+          "name": "Are You Listening Yet?",
+          "type": "track",
+          "id": "7s7v5EoNLD6TwDu4Nw51Oy"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Un Verano Sin Ti"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1IHWl5LamUGEuP4ozKQSXZ"
+          },
+          "explicit": true,
+          "duration_ms": 243716,
+          "name": "Tití Me Preguntó",
+          "type": "track",
+          "id": "1IHWl5LamUGEuP4ozKQSXZ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/028i7HBfp8uE5epmx5ieMA"
+          },
+          "explicit": false,
+          "duration_ms": 216026,
+          "name": "Pop",
+          "type": "track",
+          "id": "028i7HBfp8uE5epmx5ieMA"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "DeBÍ TiRAR MáS FOToS"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6J5kc12BW5HuP3d7C3vvx8"
+          },
+          "explicit": true,
+          "duration_ms": 204768,
+          "name": "EoO",
+          "type": "track",
+          "id": "6J5kc12BW5HuP3d7C3vvx8"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0tV6LXuVzJR4yifqwQuNwN"
+          },
+          "explicit": false,
+          "duration_ms": 169960,
+          "name": "The Waiting Game",
+          "type": "track",
+          "id": "0tV6LXuVzJR4yifqwQuNwN"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6GteP2UCnpHRWSZTL63QHe"
+          },
+          "explicit": false,
+          "duration_ms": 229560,
+          "name": "Season 2 Weight Loss",
+          "type": "track",
+          "id": "6GteP2UCnpHRWSZTL63QHe"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Die On This Hill"
+          },
+          "artists": [
+            {
+              "name": "SIENNA SPIRO",
+              "id": "02gSuSAWEdWa5UOvqzjX6v"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2gYTC8DsplN3RNdpdBcCOQ"
+          },
+          "explicit": false,
+          "duration_ms": 217008,
+          "name": "Die On This Hill",
+          "type": "track",
+          "id": "2gYTC8DsplN3RNdpdBcCOQ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0VV0AMmgLBUhzuFedr3F3e"
+          },
+          "explicit": false,
+          "duration_ms": 194880,
+          "name": "Dance No More",
+          "type": "track",
+          "id": "0VV0AMmgLBUhzuFedr3F3e"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "MAYHEM"
+          },
+          "artists": [
+            {
+              "name": "Lady Gaga",
+              "id": "1HY2Jd0NmPuamShAr6KMms"
+            },
+            {
+              "name": "Bruno Mars",
+              "id": "0du5cEVh5yTK9QJze8zA0C"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7so0lgd0zP2Sbgs2d7a1SZ"
+          },
+          "explicit": false,
+          "duration_ms": 251667,
+          "name": "Die With A Smile",
+          "type": "track",
+          "id": "7so0lgd0zP2Sbgs2d7a1SZ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Volume One"
+          },
+          "artists": [
+            {
+              "name": "She & Him",
+              "id": "3CIRif6ZAedT7kZSPvj2A4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0myRViRgmQ3J8izICXEAVO"
+          },
+          "explicit": false,
+          "duration_ms": 170333,
+          "name": "I Thought I Saw Your Face Today",
+          "type": "track",
+          "id": "0myRViRgmQ3J8izICXEAVO"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Dizzy up the Girl"
+          },
+          "artists": [
+            {
+              "name": "The Goo Goo Dolls",
+              "id": "2sil8z5kiy4r76CRTXxBCA"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs"
+          },
+          "explicit": false,
+          "duration_ms": 289533,
+          "name": "Iris",
+          "type": "track",
+          "id": "6Qyc6fS4DsZjB2mRW9DsQs"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Bird's Eye"
+          },
+          "artists": [
+            {
+              "name": "Ravyn Lenae",
+              "id": "5RTLRtXjbXI2lSXc6jxlAz"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
+          },
+          "explicit": false,
+          "duration_ms": 213466,
+          "name": "Love Me Not",
+          "type": "track",
+          "id": "4WFgvKVfEhb3IUAFGrutTR"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "HIT ME HARD AND SOFT"
+          },
+          "artists": [
+            {
+              "name": "Billie Eilish",
+              "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
+          },
+          "explicit": false,
+          "duration_ms": 210373,
+          "name": "BIRDS OF A FEATHER",
+          "type": "track",
+          "id": "6dOtVTDdiauQNBQEDOtlAB"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "iloveitiloveitiloveit"
+          },
+          "artists": [
+            {
+              "name": "Bella Kay",
+              "id": "4Z8MrrKMBHMPa8d04Ivur8"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5IMpnpD0tQVcqWlVIgtAtV"
+          },
+          "explicit": true,
+          "duration_ms": 183237,
+          "name": "iloveitiloveitiloveit",
+          "type": "track",
+          "id": "5IMpnpD0tQVcqWlVIgtAtV"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3QuRLv8zkIYH31O5VgEpmo"
+          },
+          "explicit": false,
+          "duration_ms": 253653,
+          "name": "Carla's Song",
+          "type": "track",
+          "id": "3QuRLv8zkIYH31O5VgEpmo"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Synchronicity (Remastered 2003)"
+          },
+          "artists": [
+            {
+              "name": "The Police",
+              "id": "5NGO30tJxFlKixkPSgXcFE"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
+          },
+          "explicit": false,
+          "duration_ms": 253920,
+          "name": "Every Breath You Take",
+          "type": "track",
+          "id": "1JSTJqkT5qHq8MDJnJbRE1"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "At The Beach, In Every Life"
+          },
+          "artists": [
+            {
+              "name": "Gigi Perez",
+              "id": "1iCnM8foFssWlPRLfAbIwo"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/21IYMdzTrzSe191Cy5eMap"
+          },
+          "explicit": false,
+          "duration_ms": 211978,
+          "name": "Sailor Song",
+          "type": "track",
+          "id": "21IYMdzTrzSe191Cy5eMap"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "I Barely Know Her"
+          },
+          "artists": [
+            {
+              "name": "sombr",
+              "id": "4G9NDjRyZFDlJKMRL8hx3S"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/05od2qm2MTSKCHxy1GBp5W"
+          },
+          "explicit": false,
+          "duration_ms": 242903,
+          "name": "12 to 12",
+          "type": "track",
+          "id": "05od2qm2MTSKCHxy1GBp5W"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Man’s Best Friend"
+          },
+          "artists": [
+            {
+              "name": "Sabrina Carpenter",
+              "id": "74KM79TiuVKeVCqs8QtB0B"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2BwO5K8Q7EPAJSGze3AAh9"
+          },
+          "explicit": true,
+          "duration_ms": 213645,
+          "name": "Manchild",
+          "type": "track",
+          "id": "2BwO5K8Q7EPAJSGze3AAh9"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "FEVER DREAM"
+          },
+          "artists": [
+            {
+              "name": "Alex Warren",
+              "id": "0fTSzq9jAh4c36UVb4V7CB"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7ogpGbKc4Io6NCU6ydxXwZ"
+          },
+          "explicit": false,
+          "duration_ms": 153430,
+          "name": "FEVER DREAM",
+          "type": "track",
+          "id": "7ogpGbKc4Io6NCU6ydxXwZ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Kiss All The Time. Disco, Occasionally."
+          },
+          "artists": [
+            {
+              "name": "Harry Styles",
+              "id": "6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/56k68P3bFQvnKw89hizJFZ"
+          },
+          "explicit": false,
+          "duration_ms": 147013,
+          "name": "Paint By Numbers",
+          "type": "track",
+          "id": "56k68P3bFQvnKw89hizJFZ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "I Love You."
+          },
+          "artists": [
+            {
+              "name": "The Neighbourhood",
+              "id": "77SW9BnxLY8rJ0RciFqkHh"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2QjOHCTQ1Jl3zawyYOpxh6"
+          },
+          "explicit": false,
+          "duration_ms": 240400,
+          "name": "Sweater Weather",
+          "type": "track",
+          "id": "2QjOHCTQ1Jl3zawyYOpxh6"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Homewrecker"
+          },
+          "artists": [
+            {
+              "name": "sombr",
+              "id": "4G9NDjRyZFDlJKMRL8hx3S"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7tICCrK3CcyRFKza7yrR0z"
+          },
+          "explicit": false,
+          "duration_ms": 209066,
+          "name": "Homewrecker",
+          "type": "track",
+          "id": "7tICCrK3CcyRFKza7yrR0z"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "No Broke Boys"
+          },
+          "artists": [
+            {
+              "name": "Disco Lines",
+              "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+            },
+            {
+              "name": "Tinashe",
+              "id": "0NIIxcxNHmOoyBx03SfTCD"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
+          },
+          "explicit": true,
+          "duration_ms": 163994,
+          "name": "No Broke Boys",
+          "type": "track",
+          "id": "3cZajhyr8LmtPfHZ9296tj"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "The Life of a Showgirl"
+          },
+          "artists": [
+            {
+              "name": "Taylor Swift",
+              "id": "06HL4z0CvFAxyc27GXpf02"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3yWuTOYDztXjZxdE2cIRUa"
+          },
+          "explicit": false,
+          "duration_ms": 235355,
+          "name": "Opalite",
+          "type": "track",
+          "id": "3yWuTOYDztXjZxdE2cIRUa"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "DeBÍ TiRAR MáS FOToS"
+          },
+          "artists": [
+            {
+              "name": "Bad Bunny",
+              "id": "4q3ewBCX7sLwd24euuV69X"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/59D4DOkspUbWyMmbAPQkxZ"
+          },
+          "explicit": true,
+          "duration_ms": 156364,
+          "name": "VOY A LLeVARTE PA PR",
+          "type": "track",
+          "id": "59D4DOkspUbWyMmbAPQkxZ"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "(When You Gonna) Give It Up to Me"
+          },
+          "artists": [
+            {
+              "name": "Sean Paul",
+              "id": "3Isy6kedDrgPYoTS1dazA9"
+            },
+            {
+              "name": "Keyshia Cole",
+              "id": "1vfezMIyCr4XUdYRaKIKi3"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5nEdwtSv0qqeE0l4o1lR4q"
+          },
+          "explicit": false,
+          "duration_ms": 243880,
+          "name": "(When You Gonna) Give It Up to Me - Radio Version",
+          "type": "track",
+          "id": "5nEdwtSv0qqeE0l4o1lR4q"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Cuando No Era Cantante (Remix)"
+          },
+          "artists": [
+            {
+              "name": "El Bogueto",
+              "id": "3S9Hg7sRKhmtWunFZ2yAYP"
+            },
+            {
+              "name": "Anuel AA",
+              "id": "2R21vXR83lH98kGeO99Y66"
+            },
+            {
+              "name": "Fuerza Regida",
+              "id": "0ys2OFYzWYB5hRDLCsBqxt"
+            },
+            {
+              "name": "Yung Beef",
+              "id": "1rTUwYS38LkQTlT2fhikch"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2pbSCYzxrG0wa6qcj8IyiE"
+          },
+          "explicit": true,
+          "duration_ms": 327488,
+          "name": "Cuando No Era Cantante - Remix",
+          "type": "track",
+          "id": "2pbSCYzxrG0wa6qcj8IyiE"
+        },
+        "added_at": "2026-03-08T22:22:30Z"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 50
+  }
+}
