@@ -1,4 +1,11 @@
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import "./App.css";
 import "./Dashboard.css";
 import {
@@ -1501,7 +1508,9 @@ function DashboardPage({
         trackKey: trackKeyOfTrack(track),
         id: typeof track?.id === "string" ? track.id : null,
         name: typeof track?.name === "string" ? track.name : null,
-        artists: Array.isArray(track?.artists) ? track.artists.filter(Boolean) : [],
+        artists: Array.isArray(track?.artists)
+          ? track.artists.filter(Boolean)
+          : [],
         albumId: typeof track?.albumId === "string" ? track.albumId : null,
         album: typeof track?.album === "string" ? track.album : null,
         albumTrackCount: Number.isFinite(track?.albumTrackCount)
@@ -1612,13 +1621,9 @@ function DashboardPage({
         }
 
         const fetchedAt = new Date().toISOString();
-        const record = writeAlbumTracksCache(
-          userId,
-          albumId,
-          albumName,
-          data,
-          { fetchedAt },
-        );
+        const record = writeAlbumTracksCache(userId, albumId, albumName, data, {
+          fetchedAt,
+        });
         const nextRecord = record || readAlbumTracksCache(userId, albumId);
         if (nextRecord?.items?.length) {
           upsertGlobalSongs(userId, nextRecord.items);
@@ -1676,7 +1681,9 @@ function DashboardPage({
 
     for (const track of globalTracks) {
       if (!track?.album) continue;
-      const albumKey = track.albumId ? `album:${track.albumId}` : `name:${track.album}`;
+      const albumKey = track.albumId
+        ? `album:${track.albumId}`
+        : `name:${track.album}`;
       const prev = albumAgg.get(albumKey) || {
         key: albumKey,
         name: track.album,
@@ -1717,12 +1724,11 @@ function DashboardPage({
     });
 
     const topAlbums = Array.from(albumAgg.values())
-      .map((album) => {
-        const cachedAlbumTracks =
-          album.albumId
-            ? albumTracksById?.[album.albumId] ||
-              readAlbumTracksCache(userId, album.albumId)
-            : null;
+      .map(album => {
+        const cachedAlbumTracks = album.albumId
+          ? albumTracksById?.[album.albumId] ||
+            readAlbumTracksCache(userId, album.albumId)
+          : null;
 
         let ratedTracks = album.observedRatedTracks.slice();
         let unratedTracks = album.observedUnratedTracks.slice();
@@ -1776,7 +1782,10 @@ function DashboardPage({
           }),
         );
 
-        const unratedCount = Math.max(totalTracks - ratedCount, unratedTracks.length);
+        const unratedCount = Math.max(
+          totalTracks - ratedCount,
+          unratedTracks.length,
+        );
         const avgRank = ratedCount ? sumRank / ratedCount : null;
 
         return {
@@ -2018,7 +2027,7 @@ function DashboardPage({
               <thead>
                 <tr>
                   <th>Album</th>
-                  <th>Progress</th>
+                  <th>Avg Rank</th>
                   <th className="right dashColPlay">Action</th>
                 </tr>
               </thead>
@@ -2026,7 +2035,6 @@ function DashboardPage({
                 {computed.topAlbums.map(a => {
                   const expanded = expandedAlbumKey === a.key;
                   const nextTrackToRate = a.unratedTracks[0]?.trackKey || null;
-                  const percent = Math.round((Number(a.completion) || 0) * 100);
                   const albumLoadState =
                     a.albumId && albumLoadStateById?.[a.albumId]
                       ? albumLoadStateById[a.albumId]
@@ -2040,20 +2048,16 @@ function DashboardPage({
                           <div className="cellTitle">{a.name}</div>
                           <div className="cellSub">
                             {a.totalTracks} songs total
-                            {Number.isFinite(a.avgRank)
-                              ? ` · avg rated rank ${Math.round(a.avgRank)}`
-                              : " · no songs rated yet"}
                           </div>
                         </td>
                         <td>
                           <div className="cellTitle albumProgressValue">
-                            {a.ratedCount} / {a.totalTracks} rated
+                            {Number.isFinite(a.avgRank)
+                              ? ` ${Math.round(a.avgRank)}`
+                              : "-"}
                           </div>
                           <div className="cellSub">
-                            {percent}% complete
-                            {a.unratedCount > 0
-                              ? ` · ${a.unratedCount} left to rate`
-                              : " · complete"}
+                            {a.ratedCount} / {a.totalTracks} rated
                           </div>
                         </td>
                         <td className="right">
@@ -2071,16 +2075,16 @@ function DashboardPage({
                                 await ensureAlbumTracks(a);
                               }
                             }}
-                            title={expanded ? "Hide album songs" : "Show album songs"}
+                            title={
+                              expanded ? "Hide album songs" : "Show album songs"
+                            }
                           >
                             {expanded ? "Hide" : "Show"}
                           </button>
                         </td>
                       </tr>
                       {expanded ? (
-                        <tr
-                          className="albumRowExpanded"
-                        >
+                        <tr className="albumRowExpanded">
                           <td
                             className="albumExpandCell"
                             colSpan={3}
@@ -2090,8 +2094,8 @@ function DashboardPage({
                                 {a.unratedCount > 0 ? (
                                   <p className="meta albumPrompt">
                                     {a.unratedCount} song
-                                    {a.unratedCount === 1 ? "" : "s"} still
-                                    need ranking. Finish this album from here.
+                                    {a.unratedCount === 1 ? "" : "s"} still need
+                                    ranking. Finish this album from here.
                                   </p>
                                 ) : (
                                   <p className="meta albumPrompt">
@@ -2100,7 +2104,8 @@ function DashboardPage({
                                 )}
                                 {!a.albumTracksLoaded &&
                                 a.totalTracks >
-                                  a.ratedTracks.length + a.unratedTracks.length ? (
+                                  a.ratedTracks.length +
+                                    a.unratedTracks.length ? (
                                   <p className="meta albumPromptSecondary">
                                     {albumLoadState?.status === "loading"
                                       ? "Loading full album tracklist…"
@@ -2114,7 +2119,9 @@ function DashboardPage({
                                 {a.albumId ? (
                                   <button
                                     className="btn small"
-                                    onClick={() => openAlbumInSpotify(a.albumId)}
+                                    onClick={() =>
+                                      openAlbumInSpotify(a.albumId)
+                                    }
                                   >
                                     Open album
                                   </button>
@@ -2296,7 +2303,7 @@ function LandingPage({ publicPreview }) {
                       ? formatDateTime(data.updatedAt)
                       : data?.rankingUpdatedAt
                         ? formatDateTime(data.rankingUpdatedAt)
-                      : "recently"
+                        : "recently"
                   }.`
                 : ""}
         </p>
