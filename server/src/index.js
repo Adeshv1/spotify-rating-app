@@ -257,6 +257,113 @@ function computeTopAlbumsFromPlaylist(tracks) {
     .map((album, idx) => ({ ...album, rank: idx + 1 }))
 }
 
+function shouldRefreshArtistImageRecord(record, nowMs) {
+  const fetchedAtMs = record ? Date.parse(record.fetchedAt) : NaN
+  const cachedImageUrl = record?.data?.imageUrl ?? null
+  return (
+    !record ||
+    !Number.isFinite(fetchedAtMs) ||
+    nowMs - fetchedAtMs >= ARTIST_IMAGE_REFRESH_MS ||
+    (!cachedImageUrl && Number.isFinite(fetchedAtMs) && nowMs - fetchedAtMs >= ARTIST_IMAGE_NULL_RETRY_MS)
+  )
+}
+
+function extractArtistIdsFromPlaylistPayload(payload) {
+  const items = Array.isArray(payload?.items)
+    ? payload.items
+    : Array.isArray(payload?.tracks?.items)
+      ? payload.tracks.items
+      : []
+
+  const artistIds = new Set()
+  const tracks = normalizePlaylistTracks(items)
+  for (const track of tracks) {
+    const artistsDetailed = Array.isArray(track?.artistsDetailed) ? track.artistsDetailed : []
+    for (const artist of artistsDetailed) {
+      if (typeof artist?.id === 'string' && artist.id) artistIds.add(artist.id)
+    }
+  }
+
+  return Array.from(artistIds)
+}
+
+async function fetchSpotifyArtistById({ artistId, accessToken, debugContext }) {
+  const apiUrl = `https://api.spotify.com/v1/artists/${encodeURIComponent(artistId)}`
+
+  const response = await spotifyFetch(apiUrl, {
+    label: '/v1/artists/:id',
+    debugContext,
+    headers: { authorization: `Bearer ${accessToken}` },
+  })
+
+  let data
+  try {
+    data = await response.json()
+  } catch {
+    data = null
+  }
+
+  const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+  if (!response.ok) {
+    logSpotifyFailure({
+      label: 'GET /v1/artists/:id',
+      url: apiUrl,
+      status: response.status,
+      retryAfterSeconds,
+      requestId: response.headers.get('x-request-id'),
+      context: debugContext,
+      data,
+    })
+  }
+
+  return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+}
+
+async function primeArtistImageCacheForPlaylist({ cacheUserId, playlistPayload, accessToken, debugContext }) {
+  if (!cacheUserId || !accessToken) return
+
+  const artistIds = extractArtistIdsFromPlaylistPayload(playlistPayload)
+  if (!artistIds.length) return
+
+  const nowMs = Date.now()
+  const idsToRefresh = artistIds.filter((artistId) =>
+    shouldRefreshArtistImageRecord(readSpotifyCacheRecord(cacheUserId, `artist_${artistId}_image`), nowMs),
+  )
+  if (!idsToRefresh.length) return
+
+  const chunkSize = 5
+  for (let i = 0; i < idsToRefresh.length; i += chunkSize) {
+    const chunk = idsToRefresh.slice(i, i + chunkSize)
+    const results = await Promise.all(
+      chunk.map((artistId) =>
+        fetchSpotifyArtistById({
+          artistId,
+          accessToken,
+          debugContext,
+        }),
+      ),
+    )
+
+    for (const result of results) {
+      if (!result.ok) continue
+      const artistId = typeof result.data?.id === 'string' ? result.data.id : null
+      if (!artistId) continue
+      const images = Array.isArray(result.data?.images) ? result.data.images : []
+      const imageUrl = typeof images?.[0]?.url === 'string' ? images[0].url : null
+      const cacheKey = `artist_${artistId}_image`
+      const storedAt = new Date().toISOString()
+      writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+        schemaVersion: 1,
+        userId: cacheUserId,
+        cacheKey,
+        fetchedAt: storedAt,
+        lastRefreshedAt: storedAt,
+        data: { imageUrl },
+      })
+    }
+  }
+}
+
 function hasPlaylistItems(record) {
   const items = Array.isArray(record?.data?.items)
     ? record.data.items
@@ -306,7 +413,9 @@ async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext })
       ].join(','),
     )
 
-    const response = await fetch(apiUrl.toString(), {
+    const response = await spotifyFetch(apiUrl.toString(), {
+      label: '/v1/playlists/:id/items',
+      debugContext,
       headers: { authorization: `Bearer ${accessToken}` },
     })
 
@@ -318,16 +427,13 @@ async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext })
     }
 
     const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-    const wwwAuthenticate = response.headers.get('www-authenticate')
-    const requestId = response.headers.get('x-request-id')
     if (!response.ok) {
       logSpotifyFailure({
         label: 'GET /v1/playlists/:id/items',
         url: apiUrl.toString(),
         status: response.status,
         retryAfterSeconds,
-        wwwAuthenticate,
-        requestId,
+        requestId: response.headers.get('x-request-id'),
         context: debugContext,
         data,
       })
@@ -467,13 +573,12 @@ function sendPartialJson(res, body) {
   sendJson(res, 206, body)
 }
 
-function logSpotifyFailure({ label, url, status, retryAfterSeconds, wwwAuthenticate, requestId, context, data }) {
+function logSpotifyFailure({ label, url, status, retryAfterSeconds, requestId, context, data }) {
   const summary = {
     label,
     status,
     url,
     retryAfterSeconds: retryAfterSeconds ?? null,
-    wwwAuthenticate: wwwAuthenticate ?? null,
     requestId: requestId ?? null,
     context: context ?? null,
     error: data?.error ?? data ?? null,
@@ -481,8 +586,68 @@ function logSpotifyFailure({ label, url, status, retryAfterSeconds, wwwAuthentic
   console.error('[spotify] request failed', JSON.stringify(summary, null, 2))
 }
 
+function logSpotifyRequest({ label, method = 'GET', status, ok, durationMs, retryAfterSeconds, context, error }) {
+  const parts = [
+    '[spotify]',
+    ok ? 'ok' : 'fail',
+    method,
+    label,
+    String(status),
+    `${Math.max(0, Math.round(durationMs || 0))}ms`,
+  ]
+  if (typeof context?.userId === 'string' && context.userId) parts.push(`user=${context.userId}`)
+  if (Number.isFinite(retryAfterSeconds)) parts.push(`retryAfter=${retryAfterSeconds}s`)
+  if (!ok) {
+    const message =
+      typeof error?.message === 'string'
+        ? error.message
+        : typeof error?.error_description === 'string'
+          ? error.error_description
+          : typeof error?.error === 'string'
+            ? error.error
+            : null
+    if (message) parts.push(`message=${JSON.stringify(message)}`)
+  }
+  console.log(parts.join(' '))
+}
+
+async function spotifyFetch(url, { label, debugContext, method = 'GET', ...options } = {}) {
+  const startedAt = Date.now()
+  try {
+    const response = await fetch(url, {
+      method,
+      ...options,
+    })
+    if (response.ok) {
+      logSpotifyRequest({
+        label,
+        method,
+        status: response.status,
+        ok: response.ok,
+        durationMs: Date.now() - startedAt,
+        retryAfterSeconds: getRetryAfterSeconds(response.headers),
+        context: debugContext,
+      })
+    }
+    return response
+  } catch (error) {
+    logSpotifyRequest({
+      label,
+      method,
+      status: 0,
+      ok: false,
+      durationMs: Date.now() - startedAt,
+      context: debugContext,
+      error,
+    })
+    throw error
+  }
+}
+
 async function spotifyMe({ accessToken }) {
-  const response = await fetch('https://api.spotify.com/v1/me', {
+  const response = await spotifyFetch('https://api.spotify.com/v1/me', {
+    label: '/v1/me',
+    debugContext: null,
     headers: { authorization: `Bearer ${accessToken}` },
   })
 
@@ -494,18 +659,16 @@ async function spotifyMe({ accessToken }) {
   }
 
   const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-  const wwwAuthenticate = response.headers.get('www-authenticate')
   const requestId = response.headers.get('x-request-id')
-
   if (!response.ok) {
     logSpotifyFailure({
       label: 'GET /v1/me (callback)',
       url: 'https://api.spotify.com/v1/me',
       status: response.status,
       retryAfterSeconds,
-      wwwAuthenticate,
-      data,
       requestId,
+      context: null,
+      data,
     })
   }
 
@@ -538,8 +701,10 @@ async function spotifyTokenExchange({ code, codeVerifier, redirectUri, clientId 
     code_verifier: codeVerifier,
   })
 
-  const response = await fetch('https://accounts.spotify.com/api/token', {
+  const response = await spotifyFetch('https://accounts.spotify.com/api/token', {
+    label: '/api/token auth_code',
     method: 'POST',
+    debugContext: null,
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
     },
@@ -548,6 +713,15 @@ async function spotifyTokenExchange({ code, codeVerifier, redirectUri, clientId 
 
   const data = await response.json()
   if (!response.ok) {
+    logSpotifyFailure({
+      label: 'POST /api/token (auth_code)',
+      url: 'https://accounts.spotify.com/api/token',
+      status: response.status,
+      retryAfterSeconds: getRetryAfterSeconds(response.headers),
+      requestId: response.headers.get('x-request-id'),
+      context: null,
+      data,
+    })
     const message = typeof data?.error_description === 'string' ? data.error_description : 'token_exchange_failed'
     const error = new Error(message)
     error.statusCode = response.status
@@ -565,8 +739,10 @@ async function spotifyRefresh({ refreshToken, clientId }) {
     refresh_token: refreshToken,
   })
 
-  const response = await fetch('https://accounts.spotify.com/api/token', {
+  const response = await spotifyFetch('https://accounts.spotify.com/api/token', {
+    label: '/api/token refresh',
     method: 'POST',
+    debugContext: null,
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
     },
@@ -575,6 +751,15 @@ async function spotifyRefresh({ refreshToken, clientId }) {
 
   const data = await response.json()
   if (!response.ok) {
+    logSpotifyFailure({
+      label: 'POST /api/token (refresh)',
+      url: 'https://accounts.spotify.com/api/token',
+      status: response.status,
+      retryAfterSeconds: getRetryAfterSeconds(response.headers),
+      requestId: response.headers.get('x-request-id'),
+      context: null,
+      data,
+    })
     const message = typeof data?.error_description === 'string' ? data.error_description : 'refresh_failed'
     const error = new Error(message)
     error.statusCode = response.status
@@ -605,7 +790,6 @@ const server = http.createServer((req, res) => {
       const clientId = process.env.SPOTIFY_CLIENT_ID
       const accessToken = cookies.sp_access
       const refreshToken = cookies.sp_refresh
-      const ownerUserId = typeof process.env.SPOTIFY_OWNER_USER_ID === 'string' ? process.env.SPOTIFY_OWNER_USER_ID.trim() : ''
       const cacheUserId = 'public_preview'
       const cacheKey = `playlist_${PUBLIC_PREVIEW_PLAYLIST_ID}_tracks_all`
       let cachedRecord = readSpotifyCacheRecord(cacheUserId, cacheKey)
@@ -625,8 +809,8 @@ const server = http.createServer((req, res) => {
           maxArtists: Number.POSITIVE_INFINITY,
         }).map((artist) => {
           const imageUrl =
-            ownerUserId && typeof artist?.artistId === 'string' && artist.artistId
-              ? (readSpotifyCacheRecord(ownerUserId, `artist_${artist.artistId}_image`)?.data?.imageUrl ?? null)
+            typeof artist?.artistId === 'string' && artist.artistId
+              ? (readSpotifyCacheRecord(cacheUserId, `artist_${artist.artistId}_image`)?.data?.imageUrl ?? null)
               : null
           return { ...artist, imageUrl }
         })
@@ -715,6 +899,12 @@ const server = http.createServer((req, res) => {
 
         const storedAt = new Date().toISOString()
         const payload = result.data
+        await primeArtistImageCacheForPlaylist({
+          cacheUserId,
+          playlistPayload: payload,
+          accessToken: currentAccessToken,
+          debugContext,
+        })
         writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
           schemaVersion: 1,
           userId: cacheUserId,
@@ -846,8 +1036,8 @@ const server = http.createServer((req, res) => {
           try {
             const cacheUserId = 'public_preview'
             const cacheKey = `playlist_${PUBLIC_PREVIEW_PLAYLIST_ID}_tracks_all`
-            const existing = readSpotifyCacheRecord(cacheUserId, cacheKey)
-            if (!existing || !hasPlaylistItems(existing)) {
+            let previewPayload = readSpotifyCacheRecord(cacheUserId, cacheKey)?.data ?? null
+            if (!previewPayload || !hasPlaylistItems({ data: previewPayload })) {
               const fetched = await fetchPlaylistTracksAll({
                 playlistId: PUBLIC_PREVIEW_PLAYLIST_ID,
                 accessToken,
@@ -855,15 +1045,25 @@ const server = http.createServer((req, res) => {
               })
               if (fetched.ok) {
                 const storedAt = new Date().toISOString()
+                previewPayload = fetched.data
                 writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
                   schemaVersion: 1,
                   userId: cacheUserId,
                   cacheKey,
                   fetchedAt: storedAt,
                   lastRefreshedAt: storedAt,
-                  data: fetched.data,
+                  data: previewPayload,
                 })
               }
+            }
+
+            if (previewPayload) {
+              await primeArtistImageCacheForPlaylist({
+                cacheUserId,
+                playlistPayload: previewPayload,
+                accessToken,
+                debugContext,
+              })
             }
           } catch {
             // ignore preview prime failures
@@ -978,21 +1178,20 @@ const server = http.createServer((req, res) => {
 
     ;(async () => {
       const callMe = async (token) => {
-        const response = await fetch('https://api.spotify.com/v1/me', {
+        const response = await spotifyFetch('https://api.spotify.com/v1/me', {
+          label: '/v1/me',
+          debugContext,
           headers: { authorization: `Bearer ${token}` },
         })
         const data = await response.json()
         const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-        const wwwAuthenticate = response.headers.get('www-authenticate')
-        const requestId = response.headers.get('x-request-id')
         if (!response.ok) {
           logSpotifyFailure({
             label: 'GET /v1/me',
             url: 'https://api.spotify.com/v1/me',
             status: response.status,
             retryAfterSeconds,
-            wwwAuthenticate,
-            requestId,
+            requestId: response.headers.get('x-request-id'),
             context: debugContext,
             data,
           })
@@ -1118,7 +1317,9 @@ const server = http.createServer((req, res) => {
           ].join(','),
         )
 
-        const response = await fetch(apiUrl.toString(), {
+        const response = await spotifyFetch(apiUrl.toString(), {
+          label: '/v1/me/playlists',
+          debugContext,
           headers: { authorization: `Bearer ${token}` },
         })
 
@@ -1130,16 +1331,13 @@ const server = http.createServer((req, res) => {
         }
 
         const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-        const wwwAuthenticate = response.headers.get('www-authenticate')
-        const requestId = response.headers.get('x-request-id')
         if (!response.ok) {
           logSpotifyFailure({
             label: 'GET /v1/me/playlists',
             url: apiUrl.toString(),
             status: response.status,
             retryAfterSeconds,
-            wwwAuthenticate,
-            requestId,
+            requestId: response.headers.get('x-request-id'),
             context: debugContext,
             data,
           })
@@ -1313,7 +1511,11 @@ const server = http.createServer((req, res) => {
 
       const callTrack = async (token) => {
         const apiUrl = `https://api.spotify.com/v1/tracks/${encodeURIComponent(trackId)}?market=from_token`
-        const response = await fetch(apiUrl, { headers: { authorization: `Bearer ${token}` } })
+        const response = await spotifyFetch(apiUrl, {
+          label: '/v1/tracks/:id',
+          debugContext,
+          headers: { authorization: `Bearer ${token}` },
+        })
 
         let data
         try {
@@ -1323,16 +1525,13 @@ const server = http.createServer((req, res) => {
         }
 
         const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-        const wwwAuthenticate = response.headers.get('www-authenticate')
-        const requestId = response.headers.get('x-request-id')
         if (!response.ok) {
           logSpotifyFailure({
             label: 'GET /v1/tracks/:id',
             url: apiUrl,
             status: response.status,
             retryAfterSeconds,
-            wwwAuthenticate,
-            requestId,
+            requestId: response.headers.get('x-request-id'),
             context: debugContext,
             data,
           })
@@ -1420,15 +1619,9 @@ const server = http.createServer((req, res) => {
     ;(async () => {
       const cacheKey = `artist_${artistId}_image`
       const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
-      const cachedFetchedAtMs = cachedRecord ? Date.parse(cachedRecord.fetchedAt) : NaN
       const cachedImageUrl = cachedRecord?.data?.imageUrl ?? null
       const nowMs = Date.now()
-
-      const isStale =
-        !cachedRecord ||
-        !Number.isFinite(cachedFetchedAtMs) ||
-        nowMs - cachedFetchedAtMs >= ARTIST_IMAGE_REFRESH_MS ||
-        (!cachedImageUrl && Number.isFinite(cachedFetchedAtMs) && nowMs - cachedFetchedAtMs >= ARTIST_IMAGE_NULL_RETRY_MS)
+      const isStale = shouldRefreshArtistImageRecord(cachedRecord, nowMs)
 
       if (cachedRecord && !isStale) {
         res.setHeader('x-sp-cache', 'hit')
@@ -1475,7 +1668,11 @@ const server = http.createServer((req, res) => {
 
       const callArtist = async (token) => {
         const apiUrl = `https://api.spotify.com/v1/artists/${encodeURIComponent(artistId)}`
-        const response = await fetch(apiUrl, { headers: { authorization: `Bearer ${token}` } })
+        const response = await spotifyFetch(apiUrl, {
+          label: '/v1/artists/:id',
+          debugContext,
+          headers: { authorization: `Bearer ${token}` },
+        })
 
         let data
         try {
@@ -1485,16 +1682,13 @@ const server = http.createServer((req, res) => {
         }
 
         const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-        const wwwAuthenticate = response.headers.get('www-authenticate')
-        const requestId = response.headers.get('x-request-id')
         if (!response.ok) {
           logSpotifyFailure({
             label: 'GET /v1/artists/:id',
             url: apiUrl,
             status: response.status,
             retryAfterSeconds,
-            wwwAuthenticate,
-            requestId,
+            requestId: response.headers.get('x-request-id'),
             context: debugContext,
             data,
           })
@@ -1667,7 +1861,9 @@ const server = http.createServer((req, res) => {
           ].join(','),
         )
 
-        const response = await fetch(apiUrl.toString(), {
+        const response = await spotifyFetch(apiUrl.toString(), {
+          label: '/v1/playlists/:id/items',
+          debugContext,
           headers: { authorization: `Bearer ${token}` },
         })
 
@@ -1679,16 +1875,13 @@ const server = http.createServer((req, res) => {
         }
 
         const retryAfterSeconds = getRetryAfterSeconds(response.headers)
-        const wwwAuthenticate = response.headers.get('www-authenticate')
-        const requestId = response.headers.get('x-request-id')
         if (!response.ok) {
           logSpotifyFailure({
             label: 'GET /v1/playlists/:id/items',
             url: apiUrl.toString(),
             status: response.status,
             retryAfterSeconds,
-            wwwAuthenticate,
-            requestId,
+            requestId: response.headers.get('x-request-id'),
             context: debugContext,
             data,
           })

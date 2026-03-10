@@ -50,3 +50,5 @@
 + Remove Elo UI; use rank-based artist scoring (implemented 2026-03-05)
 + Rank Songs: add refine mode + redo action (implemented 2026-03-05)
 + Landing: switch public preview to Spotify playlist source + playlist-scored sections (implemented 2026-03-08)
++ Landing: decouple public preview artist cache from user cache; prime preview artists on login (implemented 2026-03-10)
++ Server: add concise per-request Spotify console logging (implemented 2026-03-10)
