@@ -2129,7 +2129,7 @@ function DashboardPage({
           albumTracksLoaded: Boolean(cachedAlbumTracks?.items?.length),
         });
       })
-      .filter(a => a.totalTracks >= 2);
+      .filter(a => a.totalTracks >= 2 && a.ratedCount > 0);
 
     const albumsByIdentityWithId = new Map();
     for (const album of rawTopAlbums) {
@@ -2176,6 +2176,14 @@ function DashboardPage({
         ? getTiedRanks(computed.topSongs, t => t.rank)
         : [],
     [computed?.topSongs],
+  );
+
+  const topAlbumRanks = useMemo(
+    () =>
+      Array.isArray(computed?.topAlbums)
+        ? getTiedRanks(computed.topAlbums, a => a.avgRank)
+        : [],
+    [computed?.topAlbums],
   );
 
   useEffect(() => {
@@ -2372,19 +2380,21 @@ function DashboardPage({
           >
             <table className="dashTable">
               <colgroup>
+                <col className="dashColIndex" />
                 <col />
                 <col className="dashColActions" />
                 <col className="dashColPlay" />
               </colgroup>
               <thead>
                 <tr>
+                  <th className="right dashColIndex">#</th>
                   <th>Album</th>
                   <th>Avg Rank</th>
                   <th className="right dashColPlay">Action</th>
                 </tr>
               </thead>
               <tbody>
-                {computed.topAlbums.map(a => {
+                {computed.topAlbums.map((a, idx) => {
                   const expanded = expandedAlbumKey === a.key;
                   const nextTrackToRate = a.unratedTracks[0]?.trackKey || null;
                   const hasPendingAlbumTracks =
@@ -2398,6 +2408,11 @@ function DashboardPage({
                       <tr
                         className={`dashTableRow ${expanded ? "albumRowOpen" : ""}`}
                       >
+                        <td className="right">
+                          <span className="cellSub">
+                            {topAlbumRanks[idx] ?? idx + 1}
+                          </span>
+                        </td>
                         <td>
                           <div className="cellTitle">{a.name}</div>
                           <div className="cellSub">{a.artistLabel}</div>
@@ -2439,7 +2454,7 @@ function DashboardPage({
                         <tr className="albumRowExpanded">
                           <td
                             className="albumExpandCell"
-                            colSpan={3}
+                            colSpan={4}
                           >
                             <div className="albumExpandHeader">
                               <div className="albumPromptGroup">
