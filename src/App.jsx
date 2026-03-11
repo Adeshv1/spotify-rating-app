@@ -40,10 +40,12 @@ import {
   createEmptyUserRanking,
   getTrackState,
   mergeLegacyPlaylistRanking,
+  reconcileRankingTrackKeys,
   readUserRanking,
   recordDuel,
   resetTrackState,
   setTrackBucket,
+  songIdentityOfTrack,
   trackKeyOfTrack,
   undoLast,
   mergeUserRankings,
@@ -361,6 +363,50 @@ function isRankedState(state) {
   return typeof state.lastComparedAt === "string" && state.lastComparedAt;
 }
 
+function compareTrackKeysForCanonical(leftKey, rightKey, ranking) {
+  const leftState = getTrackState(ranking, leftKey);
+  const rightState = getTrackState(ranking, rightKey);
+  const leftRanked = isRankedState(leftState);
+  const rightRanked = isRankedState(rightState);
+  if (leftRanked !== rightRanked) return leftRanked ? -1 : 1;
+
+  const leftExcluded = leftState.bucket === "X";
+  const rightExcluded = rightState.bucket === "X";
+  if (leftExcluded !== rightExcluded) return leftExcluded ? -1 : 1;
+
+  const leftHasState = leftExcluded || leftRanked;
+  const rightHasState = rightExcluded || rightRanked;
+  if (leftHasState !== rightHasState) return leftHasState ? -1 : 1;
+
+  const leftSpid = leftKey.startsWith("spid:");
+  const rightSpid = rightKey.startsWith("spid:");
+  if (leftSpid !== rightSpid) return leftSpid ? -1 : 1;
+
+  return leftKey.localeCompare(rightKey, "en", { numeric: true });
+}
+
+function mergeAlbumMembershipLists(tracks) {
+  const map = new Map();
+  for (const track of tracks) {
+    for (const membership of getTrackAlbumMemberships(track)) {
+      const key = membership.albumId
+        ? `id:${membership.albumId}`
+        : `name:${membership.album}`;
+      const existing = map.get(key) || null;
+      map.set(key, {
+        albumId: membership.albumId || existing?.albumId || null,
+        album: membership.album || existing?.album || null,
+        albumTrackCount: Number.isFinite(membership?.albumTrackCount)
+          ? membership.albumTrackCount
+          : Number.isFinite(existing?.albumTrackCount)
+            ? existing.albumTrackCount
+            : null,
+      });
+    }
+  }
+  return Array.from(map.values());
+}
+
 function buildOrderedKeys(ranking) {
   if (!ranking?.tracks || typeof ranking.tracks !== "object") return [];
   const rows = [];
@@ -396,6 +442,38 @@ function applyOrderToRanking(ranking, orderedKeys) {
     };
   }
   return { ...ranking, tracks: nextTracks, updatedAt: now };
+}
+
+function moveOrderedKey(orderedKeys, trackKey, direction) {
+  if (!Array.isArray(orderedKeys) || !trackKey) return orderedKeys;
+  const index = orderedKeys.indexOf(trackKey);
+  if (index < 0) return orderedKeys;
+  const target = index + direction;
+  if (target < 0 || target >= orderedKeys.length) return orderedKeys;
+  const nextOrder = orderedKeys.slice();
+  [nextOrder[index], nextOrder[target]] = [nextOrder[target], nextOrder[index]];
+  return nextOrder;
+}
+
+function loadLocalRankingWithLegacy(userId) {
+  if (!userId) return null;
+  let local = readUserRanking(userId) ?? createEmptyUserRanking({ userId });
+  const legacyPrefix = `sp_rank_v1_${userId}_`;
+
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const k = localStorage.key(i);
+      if (!k || !k.startsWith(legacyPrefix)) continue;
+      const playlistId = k.slice(legacyPrefix.length);
+      if (!playlistId) continue;
+      const legacy = readLegacyPlaylistRanking(userId, playlistId);
+      if (legacy) local = mergeLegacyPlaylistRanking(local, legacy, playlistId);
+    }
+  } catch {
+    // ignore
+  }
+
+  return local;
 }
 
 function App() {
@@ -657,14 +735,14 @@ function App() {
     if (cached) {
       setPlaylistsCache(cached);
       setPlaylistsSource("cache");
-      if (!isOwnerUser) refreshPlaylistsCache({ force: false });
+      refreshPlaylistsCache({ force: false });
       return;
     }
 
     // No cache yet: do a fetch to seed the cache.
     refreshPlaylistsCache({ force: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn, profile?.id, isOwnerUser]);
+  }, [loggedIn, profile?.id]);
 
   async function refreshPlaylistTracks({ playlistId, force = false } = {}) {
     if (!loggedIn || !profile?.id || !playlistId) return;
@@ -796,16 +874,14 @@ function App() {
 
     if (!ownedByUser) {
       setTracksError(
-        isOwnerUser
-          ? "Spotify may forbid reading items for playlists you do not own (even if they appear in your list). Click “Refresh playlist cache” to try anyway."
-          : "Spotify may forbid reading items for playlists you do not own (even if they appear in your list).",
+        "Spotify may forbid reading items for playlists you do not own (even if they appear in your list).",
       );
       return;
     }
 
     refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache, isOwnerUser]);
+  }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache]);
 
   async function logout() {
     await fetch("/auth/logout", { method: "POST" });
@@ -816,31 +892,26 @@ function App() {
     async ({ force = false } = {}) => {
       if (!loggedIn || !profile?.id) return;
       const userId = profile.id;
+      const local = loadLocalRankingWithLegacy(userId);
+
+      setUserRanking(local);
+      writeUserRanking(userId, local);
+
+      if (!isOwnerUser) {
+        pendingSaveRef.current = false;
+        setRankingSync({
+          status: "idle",
+          lastSyncedAt: null,
+          message: null,
+        });
+        return;
+      }
 
       setRankingSync(s => ({
         status: "syncing",
         lastSyncedAt: s.lastSyncedAt,
         message: null,
       }));
-
-      let local = readUserRanking(userId) ?? createEmptyUserRanking({ userId });
-
-      const legacyPrefix = `sp_rank_v1_${userId}_`;
-      try {
-        for (let i = 0; i < localStorage.length; i += 1) {
-          const k = localStorage.key(i);
-          if (!k || !k.startsWith(legacyPrefix)) continue;
-          const playlistId = k.slice(legacyPrefix.length);
-          if (!playlistId) continue;
-          const legacy = readLegacyPlaylistRanking(userId, playlistId);
-          if (legacy)
-            local = mergeLegacyPlaylistRanking(local, legacy, playlistId);
-        }
-      } catch {
-        // ignore
-      }
-
-      setUserRanking(local);
 
       try {
         const res = await fetch("/api/ranking");
@@ -884,7 +955,7 @@ function App() {
         }));
       }
     },
-    [loggedIn, profile?.id],
+    [isOwnerUser, loggedIn, profile?.id],
   );
 
   useEffect(() => {
@@ -900,7 +971,7 @@ function App() {
   }, [loggedIn, profile?.id, userRanking]);
 
   useEffect(() => {
-    if (!loggedIn || !profile?.id || !userRanking) return;
+    if (!isOwnerUser || !loggedIn || !profile?.id || !userRanking) return;
     if (rankingSync.status === "syncing") return;
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
 
@@ -932,10 +1003,10 @@ function App() {
     return () => {
       if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     };
-  }, [loggedIn, profile?.id, userRanking, rankingSync.status]);
+  }, [isOwnerUser, loggedIn, profile?.id, userRanking, rankingSync.status]);
 
   useEffect(() => {
-    if (!loggedIn || !profile?.id) return;
+    if (!isOwnerUser || !loggedIn || !profile?.id) return;
 
     const onBeforeUnload = () => {
       if (!pendingSaveRef.current) return;
@@ -953,7 +1024,7 @@ function App() {
 
     window.addEventListener("beforeunload", onBeforeUnload);
     return () => window.removeEventListener("beforeunload", onBeforeUnload);
-  }, [loggedIn, profile?.id, userRanking]);
+  }, [isOwnerUser, loggedIn, profile?.id, userRanking]);
 
   if (loading) {
     return (
@@ -981,7 +1052,7 @@ function App() {
                     : "Signed in."}
                 </>
               ) : (
-                "Rank your songs with binary sort + refine."
+                  "Rank your songs with binary sort and quick reordering."
               )}
             </div>
           </div>
@@ -1062,7 +1133,6 @@ function App() {
                 ) : routePath === "/app/dashboard" ? (
                   <DashboardPage
                     userId={profile?.id}
-                    isOwnerUser={isOwnerUser}
                     ranking={userRanking}
                     playlistsCache={playlistsCache}
                     onOverwriteRanking={next => setUserRanking(next)}
@@ -1085,7 +1155,6 @@ function App() {
                   <PlaylistView
                     playlistsCache={playlistsCache}
                     playlistId={selectedPlaylistId}
-                    isOwnerUser={isOwnerUser}
                     ranking={userRanking}
                     cooldownUntilMs={cooldownUntilMs}
                     nowMs={nowMs}
@@ -1093,18 +1162,15 @@ function App() {
                     tracksError={tracksError}
                     tracksCache={tracksCache}
                     tracksSource={tracksSource}
+                    onObservedTracks={tracks =>
+                      setUserRanking(rk => reconcileRankingTrackKeys(rk, tracks))
+                    }
                     onBack={() => {
                       setSelectedPlaylistId(null);
                       setTracksError(null);
                       setTracksCache(null);
                       setTracksSource(null);
                     }}
-                    onRefresh={() =>
-                      refreshPlaylistTracks({
-                        playlistId: selectedPlaylistId,
-                        force: true,
-                      })
-                    }
                   />
                 ) : (
                   <PlaylistsView
@@ -1113,10 +1179,8 @@ function App() {
                     playlistsError={playlistsError}
                     playlistsCache={playlistsCache}
                     playlistsSource={playlistsSource}
-                    isOwnerUser={isOwnerUser}
                     cooldownUntilMs={cooldownUntilMs}
                     nowMs={nowMs}
-                    onRefresh={() => refreshPlaylistsCache({ force: true })}
                     onUpdatePlaylistsCache={next => setPlaylistsCache(next)}
                     onSelect={playlistId => {
                       setSelectedPlaylistId(playlistId);
@@ -1258,7 +1322,6 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
 
 function DashboardPage({
   userId,
-  isOwnerUser,
   ranking,
   playlistsCache,
   onOverwriteRanking,
@@ -1710,7 +1773,7 @@ function DashboardPage({
     importedState.userId = userId;
 
     const ok = window.confirm(
-      "Import will overwrite your current ranking on this device (and sync to the server). Continue?",
+      "Import will overwrite your current ranking on this device. Continue?",
     );
     if (!ok) return;
 
@@ -1813,6 +1876,42 @@ function DashboardPage({
         };
       });
   }, [trackIndex, userId]);
+
+  useEffect(() => {
+    if (!ranking || globalTracks.length === 0) return;
+    onOverwriteRanking?.(rk => reconcileRankingTrackKeys(rk, globalTracks));
+  }, [globalTracks, onOverwriteRanking, ranking]);
+
+  const canonicalGlobalTracks = useMemo(() => {
+    const groups = new Map();
+    for (const track of globalTracks) {
+      const identity = songIdentityOfTrack(track);
+      const group = groups.get(identity) || [];
+      group.push(track);
+      groups.set(identity, group);
+    }
+
+    return Array.from(groups.values()).map(group => {
+      const canonicalKey = group
+        .map(track => track.trackKey)
+        .sort((left, right) => compareTrackKeysForCanonical(left, right, ranking))[0];
+      const representative =
+        group.find(track => track.trackKey === canonicalKey) || group[0];
+      return {
+        ...representative,
+        trackKey: canonicalKey,
+        albumMemberships: mergeAlbumMembershipLists(group),
+      };
+    });
+  }, [globalTracks, ranking]);
+
+  const canonicalTrackKeyByIdentity = useMemo(() => {
+    const map = new Map();
+    for (const track of canonicalGlobalTracks) {
+      map.set(songIdentityOfTrack(track), track.trackKey);
+    }
+    return map;
+  }, [canonicalGlobalTracks]);
 
   const ensureAlbumTracks = useCallback(
     async album => {
@@ -2005,7 +2104,7 @@ function DashboardPage({
 
     const albumAgg = new Map();
 
-    for (const track of globalTracks) {
+    for (const track of canonicalGlobalTracks) {
       const state = getTrackState(ranking, track.trackKey);
       const rank = rankByKey.get(track.trackKey) || null;
       const item = {
@@ -2084,7 +2183,9 @@ function DashboardPage({
           sumRank = 0;
 
           for (const track of cachedAlbumTracks.items) {
-            const trackKey = trackKeyOfTrack(track);
+            const trackKey =
+              canonicalTrackKeyByIdentity.get(songIdentityOfTrack(track)) ||
+              trackKeyOfTrack(track);
             const rank = rankByKey.get(trackKey) || null;
             const item = {
               trackKey,
@@ -2168,7 +2269,7 @@ function DashboardPage({
       );
 
     return { hasAnyRatings, topSongs, topArtists, topAlbums };
-  }, [albumTracksById, globalTracks, ranking, trackIndex, userId]);
+  }, [albumTracksById, canonicalGlobalTracks, canonicalTrackKeyByIdentity, ranking, trackIndex, userId]);
 
   const topSongRanks = useMemo(
     () =>
@@ -2197,9 +2298,9 @@ function DashboardPage({
     const list = computed?.topArtists;
     if (!Array.isArray(list) || list.length === 0) return;
     initialArtistPrefetchDone.current = true;
-    const count = isOwnerUser ? 12 : 6;
+    const count = 6;
     for (const a of list.slice(0, count)) ensureArtistImageForArtist(a);
-  }, [computed, ensureArtistImageForArtist, isOwnerUser]);
+  }, [computed, ensureArtistImageForArtist]);
 
   if (!userId) return <p className="meta">Loading…</p>;
   if (!ranking) return <p className="meta">Loading ranking…</p>;
@@ -2208,7 +2309,7 @@ function DashboardPage({
       <div className="section dashboardPage">
         <p className="meta">
           No rankings yet. Run a binary sort or do a few head-to-head
-          refinements first.
+          matchups first.
         </p>
       </div>
     );
@@ -2216,34 +2317,32 @@ function DashboardPage({
 
   return (
     <div className="section dashboardPage">
-      {!isOwnerUser ? (
-        <div className="cardSub">
-          <h3>Export / Import</h3>
-          <div className="controls">
-            <button
-              className="btn"
-              onClick={exportJson}
-              disabled={!ranking}
-            >
-              Export JSON
-            </button>
-            <button
-              className="btn"
-              onClick={() => importInputRef.current?.click()}
-            >
-              Import JSON
-            </button>
-            <input
-              ref={importInputRef}
-              type="file"
-              accept="application/json"
-              onChange={onPickImportFile}
-              style={{ display: "none" }}
-            />
-          </div>
-          {importError ? <p className="error">{importError}</p> : null}
+      <div className="cardSub">
+        <h3>Export / Import</h3>
+        <div className="controls">
+          <button
+            className="btn"
+            onClick={exportJson}
+            disabled={!ranking}
+          >
+            Export JSON
+          </button>
+          <button
+            className="btn"
+            onClick={() => importInputRef.current?.click()}
+          >
+            Import JSON
+          </button>
+          <input
+            ref={importInputRef}
+            type="file"
+            accept="application/json"
+            onChange={onPickImportFile}
+            style={{ display: "none" }}
+          />
         </div>
-      ) : null}
+        {importError ? <p className="error">{importError}</p> : null}
+      </div>
 
       <div
         className="dashboardColumns"
@@ -2705,11 +2804,11 @@ function LandingPage({ publicPreview }) {
   return (
     <div className="section dashboardPage">
       <div className="cardSub">
-        <h3>Rate your music with binary sort + refine</h3>
+        <h3>Rate your music with binary sort</h3>
         <p className="meta">
-          Build an initial global order with binary insertion, then refine with
-          head-to-head matchups. Your ranking syncs across devices when you sign
-          in.
+          Build an initial global order with binary insertion, then make quick
+          one-step adjustments from the ranked list. Rankings are stored
+          locally, and the owner account also gets a server backup.
         </p>
         <div className="controls">
           <a
@@ -2931,7 +3030,6 @@ function RankSongsPage({
   onTrackRequestHandled,
 }) {
   const [activeKey, setActiveKey] = useState(null);
-  const [rankMode, setRankMode] = useState("binary");
   const [rankInfoOpen, setRankInfoOpen] = useState(false);
   const [unrankedQuery, setUnrankedQuery] = useState("");
   const [rankedQuery, setRankedQuery] = useState("");
@@ -2951,31 +3049,72 @@ function RankSongsPage({
       );
   }, [userId]);
 
-  const trackByKey = useMemo(() => {
+  useEffect(() => {
+    if (!ranking || globalSongs.length === 0) return;
+    onChangeRanking?.(rk => reconcileRankingTrackKeys(rk, globalSongs));
+  }, [globalSongs, onChangeRanking, ranking]);
+
+  const groupedSongs = useMemo(() => {
+    const groups = new Map();
+    for (const track of globalSongs) {
+      const identity = songIdentityOfTrack(track);
+      const group = groups.get(identity) || [];
+      group.push(track);
+      groups.set(identity, group);
+    }
+
+    return Array.from(groups.values()).map(group => {
+      const canonicalKey = group
+        .map(track => trackKeyOfTrack(track))
+        .sort((left, right) => compareTrackKeysForCanonical(left, right, ranking))[0];
+      const representative =
+        group.find(track => trackKeyOfTrack(track) === canonicalKey) || group[0];
+      return {
+        key: canonicalKey,
+        track: representative,
+        aliases: group.map(track => trackKeyOfTrack(track)),
+      };
+    });
+  }, [globalSongs, ranking]);
+
+  const canonicalKeyByObservedKey = useMemo(() => {
     const map = new Map();
-    for (const t of globalSongs) {
-      const key = trackKeyOfTrack(t);
-      if (!map.has(key)) map.set(key, t);
+    for (const group of groupedSongs) {
+      map.set(group.key, group.key);
+      for (const alias of group.aliases) {
+        if (!map.has(alias)) map.set(alias, group.key);
+      }
     }
     return map;
-  }, [globalSongs]);
+  }, [groupedSongs]);
+
+  const trackByKey = useMemo(() => {
+    const map = new Map();
+    for (const group of groupedSongs) {
+      map.set(group.key, group.track);
+      for (const alias of group.aliases) {
+        if (!map.has(alias)) map.set(alias, group.track);
+      }
+    }
+    return map;
+  }, [groupedSongs]);
 
   useEffect(() => {
     if (!trackRequest?.trackKey) return;
-    if (!trackByKey.has(trackRequest.trackKey)) return;
-    setRankMode(trackRequest?.mode === "refine" ? "refine" : "binary");
-    setActiveKey(trackRequest.trackKey);
+    const canonicalKey =
+      canonicalKeyByObservedKey.get(trackRequest.trackKey) || trackRequest.trackKey;
+    if (!trackByKey.has(canonicalKey)) return;
+    setActiveKey(canonicalKey);
     onTrackRequestHandled?.();
-  }, [trackByKey, trackRequest, onTrackRequestHandled]);
+  }, [canonicalKeyByObservedKey, trackByKey, trackRequest, onTrackRequestHandled]);
 
   const uniqueTracks = useMemo(() => {
-    const map = new Map();
-    for (const t of globalSongs) {
-      const key = trackKeyOfTrack(t);
-      if (!map.has(key)) map.set(key, { key, track: t, count: 1 });
-    }
-    return Array.from(map.values());
-  }, [globalSongs]);
+    return groupedSongs.map(group => ({
+      key: group.key,
+      track: group.track,
+      count: group.aliases.length,
+    }));
+  }, [groupedSongs]);
 
   const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
   const orderedSet = useMemo(() => new Set(orderedKeys), [orderedKeys]);
@@ -3103,9 +3242,29 @@ function RankSongsPage({
     });
   }, [rankedQuery, rankedRows]);
 
+  const orderedIndexByKey = useMemo(() => {
+    const map = new Map();
+    orderedKeys.forEach((key, idx) => map.set(key, idx));
+    return map;
+  }, [orderedKeys]);
+
+  const moveRankedTrack = useCallback(
+    (trackKey, direction) => {
+      if (!trackKey || !Number.isInteger(direction) || direction === 0) return;
+      setActiveKey(current => (current === trackKey ? null : current));
+      onChangeRanking?.(rk => {
+        if (!rk) return rk;
+        const ordered = buildOrderedKeys(rk);
+        const nextOrder = moveOrderedKey(ordered, trackKey, direction);
+        if (!nextOrder || nextOrder === ordered) return rk;
+        return applyOrderToRanking(rk, nextOrder);
+      });
+    },
+    [onChangeRanking],
+  );
+
   useEffect(() => {
     if (activeKey) return;
-    if (rankMode !== "binary") return;
     if (trackRequest?.trackKey) return;
     if (rankedRows.length === 0) return;
     if (unrankedRows.length === 0) return;
@@ -3115,19 +3274,11 @@ function RankSongsPage({
     if (pick) setActiveKey(pick);
   }, [
     activeKey,
-    rankMode,
     trackRequest,
     rankedRows.length,
     unrankedRows.length,
     unrankedRows,
   ]);
-
-  useEffect(() => {
-    if (!activeKey) return;
-    if (rankMode !== "refine") return;
-    const isRanked = rankedRows.some(r => r.key === activeKey);
-    if (!isRanked) setActiveKey(null);
-  }, [activeKey, rankMode, rankedRows]);
 
   return (
     <div className="section dashboardPage rankSongsPage">
@@ -3160,12 +3311,12 @@ function RankSongsPage({
                 <table className="dashTable">
                   <colgroup>
                     <col />
-                    <col className="dashColPlay" />
+                    <col className="dashColActions" />
                   </colgroup>
                   <thead>
                     <tr>
                       <th>Song</th>
-                      <th className="right dashColPlay">Action</th>
+                      <th className="right dashColActions">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -3195,17 +3346,25 @@ function RankSongsPage({
                           </div>
                         </td>
                         <td className="right">
-                          <button
-                            className="btn"
-                            onClick={() => {
-                              setRankMode("binary");
-                              setActiveKey(r.key);
-                            }}
-                            disabled={activeKey === r.key}
-                            title="Rank this song"
-                          >
-                            Rank
-                          </button>
+                          <span className="btnRow">
+                            <button
+                              className="btn"
+                              onClick={() => setActiveKey(r.key)}
+                              disabled={activeKey === r.key}
+                              title="Rank this song"
+                            >
+                              Rank
+                            </button>
+                            {typeof r.track?.id === "string" ? (
+                              <button
+                                className="btn compact"
+                                onClick={() => openTrackInSpotify(r.track.id)}
+                                title="Play in Spotify"
+                              >
+                                Play
+                              </button>
+                            ) : null}
+                          </span>
                         </td>
                       </tr>
                     ))}
@@ -3269,7 +3428,7 @@ function RankSongsPage({
           <div className="dashPanel">
             <div className="dashPanelHeader">
               <div className="dashPanelHeaderRow">
-                <h3>Rank — {rankMode === "refine" ? "Refine" : "Binary"}</h3>
+                <h3>Rank</h3>
                 <button
                   className="btn small"
                   onClick={() => setRankInfoOpen(v => !v)}
@@ -3286,20 +3445,6 @@ function RankSongsPage({
               aria-label="Ranking interface"
               tabIndex={0}
             >
-              <div className="controls">
-                <button
-                  className={`btn ${rankMode === "binary" ? "active" : ""}`}
-                  onClick={() => setRankMode("binary")}
-                >
-                  Binary sort
-                </button>
-                <button
-                  className={`btn ${rankMode === "refine" ? "active" : ""}`}
-                  onClick={() => setRankMode("refine")}
-                >
-                  Refine
-                </button>
-              </div>
               {rankInfoOpen ? (
                 <div className="cardSub rankInfoPanel">
                   <h4>How ranking works</h4>
@@ -3311,16 +3456,10 @@ function RankSongsPage({
                     list. Use this to get a strong baseline order quickly.
                   </p>
                   <p className="meta">
-                    <strong>Refine</strong> focuses on a local window around the
-                    song’s current rank. You compare it only against nearby
-                    ranks to tighten precision without disturbing the rest of
-                    the list. This is best once you already like the overall
-                    order but want to fine-tune individual songs.
-                  </p>
-                  <p className="meta">
                     Tip: Use <strong>Reset</strong> to move a song back to
-                    Unranked and place it from scratch again, and{" "}
-                    <strong>Refine</strong> to make smaller local adjustments.
+                    Unranked and place it from scratch again. Use the{" "}
+                    <strong>up</strong> and <strong>down</strong> arrows in the
+                    ranked list to nudge a song one position at a time.
                   </p>
                 </div>
               ) : null}
@@ -3331,7 +3470,6 @@ function RankSongsPage({
                 onChange={onChangeRanking}
                 activeKey={activeKey}
                 onActiveKeyChange={setActiveKey}
-                mode={rankMode}
               />
             </div>
           </div>
@@ -3375,8 +3513,22 @@ function RankSongsPage({
                         key={r.key}
                         className="dashTableRow"
                       >
-                        <td className="right">
-                          <span className="cellSub">{idx + 1}</span>
+                        <td className="right rankSongsRankCell">
+                          <span className="rankSongsRankSwap">
+                            <span className="cellSub rankSongsRankValue">
+                              {idx + 1}
+                            </span>
+                            {typeof r.track?.id === "string" ? (
+                              <button
+                                className="btn small rowPlayBtn rankSongsHoverPlay"
+                                onClick={() => openTrackInSpotify(r.track.id)}
+                                title="Play in Spotify"
+                                aria-label={`Play ${r.track?.name || r.key}`}
+                              >
+                                Play
+                              </button>
+                            ) : null}
+                          </span>
                         </td>
                         <td>
                           <div className="cellTitle">
@@ -3390,6 +3542,27 @@ function RankSongsPage({
                           <span className="btnRow">
                             <button
                               className="btn compact"
+                              onClick={() => moveRankedTrack(r.key, -1)}
+                              disabled={(orderedIndexByKey.get(r.key) ?? idx) <= 0}
+                              title="Move this song up one position"
+                              aria-label={`Move ${r.track?.name || r.key} up one position`}
+                            >
+                              ↑
+                            </button>
+                            <button
+                              className="btn compact"
+                              onClick={() => moveRankedTrack(r.key, 1)}
+                              disabled={
+                                (orderedIndexByKey.get(r.key) ?? idx) >=
+                                orderedKeys.length - 1
+                              }
+                              title="Move this song down one position"
+                              aria-label={`Move ${r.track?.name || r.key} down one position`}
+                            >
+                              ↓
+                            </button>
+                            <button
+                              className="btn compact"
                               onClick={() => {
                                 setActiveKey(null);
                                 onChangeRanking?.(rk =>
@@ -3399,16 +3572,6 @@ function RankSongsPage({
                               title="Move this song back to unranked"
                             >
                               Reset
-                            </button>
-                            <button
-                              className="btn compact"
-                              onClick={() => {
-                                setRankMode("refine");
-                                setActiveKey(r.key);
-                              }}
-                              title="Refine within nearby ranks"
-                            >
-                              Refine
                             </button>
                           </span>
                         </td>
@@ -3431,10 +3594,9 @@ function PlaylistsView({
   playlistsError,
   playlistsCache,
   playlistsSource,
-  isOwnerUser,
   cooldownUntilMs,
   nowMs,
-  onRefresh,
+  onObservedTracks,
   onUpdatePlaylistsCache,
   onSelect,
 }) {
@@ -3514,6 +3676,7 @@ function PlaylistsView({
         ? cachedTracks.items
         : [];
       upsertGlobalSongs(userId, tracks);
+      onObservedTracks?.(tracks);
 
       const ingestedAt = new Date().toISOString();
       const updated = setPlaylistIngestedAt(userId, playlistId, ingestedAt);
@@ -3530,21 +3693,6 @@ function PlaylistsView({
   return (
     <div className="section">
       <h2>Your playlists</h2>
-
-      <div className="controls">
-        {isOwnerUser ? (
-          <button
-            className="btn"
-            onClick={onRefresh}
-            disabled={
-              playlistsLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)
-            }
-            title="Re-fetches playlists from Spotify and overwrites the local cache."
-          >
-            Refresh playlists cache
-          </button>
-        ) : null}
-      </div>
 
       {playlistsError ? <p className="error">{playlistsError}</p> : null}
 
@@ -3681,16 +3829,13 @@ function PlaylistsView({
 function PlaylistView({
   playlistsCache,
   playlistId,
-  isOwnerUser,
   ranking,
-  cooldownUntilMs,
   nowMs,
   tracksLoading,
   tracksError,
   tracksCache,
   tracksSource,
   onBack,
-  onRefresh,
 }) {
   const playlist =
     playlistsCache?.items?.find(p => p?.id === playlistId) || null;
@@ -3737,18 +3882,6 @@ function PlaylistView({
         >
           ← Back
         </button>
-        {isOwnerUser ? (
-          <button
-            className="btn"
-            onClick={onRefresh}
-            disabled={
-              tracksLoading || (cooldownUntilMs && nowMs < cooldownUntilMs)
-            }
-            title="Re-fetches playlist tracks from Spotify and overwrites the local cache for this playlist."
-          >
-            Refresh playlist cache
-          </button>
-        ) : null}
       </div>
 
       <h2>{playlist?.name || "Playlist"}</h2>
@@ -3952,13 +4085,9 @@ function BinarySorter({
   onChange,
   activeKey,
   onActiveKeyChange,
-  mode = "binary",
 }) {
   const [session, setSession] = useState(null);
   const lastActiveRef = useRef(null);
-  const lastModeRef = useRef(mode);
-  const isRefine = mode === "refine";
-  const refineWindow = 6;
 
   const trackByKey = useMemo(() => {
     const map = new Map();
@@ -3971,28 +4100,9 @@ function BinarySorter({
     if (!activeKey) return orderedKeys;
     return orderedKeys.filter(k => k !== activeKey);
   }, [orderedKeys, activeKey]);
-  const activeIndex = useMemo(() => {
-    if (!activeKey) return -1;
-    return orderedKeys.indexOf(activeKey);
-  }, [orderedKeys, activeKey]);
-  const refineLow = useMemo(() => {
-    if (!isRefine || activeIndex < 0) return 0;
-    return Math.max(0, activeIndex - refineWindow);
-  }, [activeIndex, isRefine, refineWindow]);
-  const refineHigh = useMemo(() => {
-    if (!isRefine || activeIndex < 0) return baseOrder.length;
-    return Math.min(baseOrder.length, activeIndex + refineWindow);
-  }, [activeIndex, baseOrder.length, isRefine, refineWindow]);
   useEffect(() => {
     if (!activeKey || !ranking) {
       lastActiveRef.current = activeKey;
-      lastModeRef.current = mode;
-      setSession(null);
-      return;
-    }
-    if (isRefine && activeIndex < 0) {
-      lastActiveRef.current = activeKey;
-      lastModeRef.current = mode;
       setSession(null);
       return;
     }
@@ -4001,24 +4111,15 @@ function BinarySorter({
       setSession(null);
       onActiveKeyChange?.(null);
       lastActiveRef.current = activeKey;
-      lastModeRef.current = mode;
       return;
     }
-    if (lastActiveRef.current !== activeKey || lastModeRef.current !== mode) {
-      const low = isRefine ? refineLow : 0;
-      const high = isRefine ? refineHigh : baseOrder.length;
-      setSession({ key: activeKey, low, high, mode });
+    if (lastActiveRef.current !== activeKey) {
+      setSession({ key: activeKey, low: 0, high: baseOrder.length });
       lastActiveRef.current = activeKey;
-      lastModeRef.current = mode;
     }
   }, [
     activeKey,
-    activeIndex,
     baseOrder.length,
-    isRefine,
-    mode,
-    refineHigh,
-    refineLow,
     ranking,
     onActiveKeyChange,
     onChange,
@@ -4077,14 +4178,10 @@ function BinarySorter({
     <div className="cardSub">
       <p className="meta">
         {session && midIndex != null
-          ? isRefine
-            ? ` Refine window: ranks ${session.low + 1}–${session.high} of ${baseOrder.length}. Comparing against rank ${midIndex + 1}.`
-            : ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
+          ? ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
           : activeKey
             ? " Ready to compare."
-            : isRefine
-              ? " Pick a song from the right to start."
-              : " Pick a song from the left to start."}
+            : " Pick a song from the left to start."}
       </p>
 
       {!ranking ? (
@@ -4348,8 +4445,8 @@ function HeadToHead({ uniqueTracks, ranking, onChange }) {
   return (
     <div className="cardSub">
       <p className="meta">
-        Use head-to-head comparisons to refine the global order once you’ve done
-        an initial binary sort.
+        Use head-to-head comparisons to fine-tune the global order once you’ve
+        done an initial binary sort.
       </p>
 
       <div className="controls">

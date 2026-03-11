@@ -23,16 +23,28 @@ function normalizeString(value) {
   return value.trim().replaceAll(/\s+/g, ' ')
 }
 
+function metaTrackKeyOfTrack(track, albumOverride = null) {
+  const name = normalizeString(track?.name)
+  const artists = Array.isArray(track?.artists) ? track.artists.map(normalizeString).filter(Boolean).join(',') : ''
+  const album = albumOverride === null ? normalizeString(track?.album) : normalizeString(albumOverride)
+  const duration = Number.isFinite(track?.durationMs) ? String(track.durationMs) : ''
+  const seed = [name, artists, album, duration].join('|')
+  return `meta:${seed || 'unknown'}`
+}
+
+export function songIdentityOfTrack(track) {
+  const name = normalizeString(track?.name).toLowerCase()
+  const artists = Array.isArray(track?.artists) ? track.artists.map(normalizeString).filter(Boolean).join(',').toLowerCase() : ''
+  const durationSeconds = Number.isFinite(track?.durationMs) ? String(Math.round(track.durationMs / 1000)) : ''
+  const seed = [name, artists].filter(Boolean).join('|') || [name, artists, durationSeconds].join('|')
+  return seed ? `song:${seed}` : trackKeyOfTrack(track)
+}
+
 export function trackKeyOfTrack(track) {
   const id = typeof track?.id === 'string' ? track.id : null
   if (id) return `spid:${id}`
 
-  const name = normalizeString(track?.name)
-  const artists = Array.isArray(track?.artists) ? track.artists.map(normalizeString).filter(Boolean).join(',') : ''
-  const album = normalizeString(track?.album)
-  const duration = Number.isFinite(track?.durationMs) ? String(track.durationMs) : ''
-  const seed = [name, artists, album, duration].join('|')
-  return `meta:${seed || 'unknown'}`
+  return metaTrackKeyOfTrack(track)
 }
 
 export function createEmptyUserRanking({ userId }) {
@@ -75,6 +87,26 @@ function defaultTrackState() {
   return { bucket: 'U', rating: 1000, games: 0, wins: 0, losses: 0, lastComparedAt: null }
 }
 
+function isDefaultTrackState(state) {
+  return (
+    state?.bucket === 'U' &&
+    Math.round(Number(state?.rating) || 0) === 1000 &&
+    Number(state?.games) === 0 &&
+    Number(state?.wins) === 0 &&
+    Number(state?.losses) === 0 &&
+    state?.lastComparedAt === null
+  )
+}
+
+function isRankedTrackState(state) {
+  if (!state || typeof state !== 'object') return false
+  if (state.bucket && state.bucket !== 'U' && state.bucket !== 'X') return true
+  const rating = Number(state.rating)
+  if (Number.isFinite(rating) && Math.round(rating) !== 1000) return true
+  if (Number(state.games) > 0) return true
+  return typeof state.lastComparedAt === 'string' && Boolean(state.lastComparedAt)
+}
+
 export function getTrackState(ranking, trackKey) {
   const existing = ranking?.tracks?.[trackKey]
   if (!existing || typeof existing !== 'object') return defaultTrackState()
@@ -89,6 +121,183 @@ export function getTrackState(ranking, trackKey) {
 
 function withUpdatedAt(ranking) {
   return { ...ranking, updatedAt: new Date().toISOString() }
+}
+
+function trackMetaAliasesOfTrack(track) {
+  const aliases = new Set()
+  aliases.add(metaTrackKeyOfTrack(track))
+  aliases.add(metaTrackKeyOfTrack(track, ''))
+
+  const memberships = Array.isArray(track?.albumMemberships) ? track.albumMemberships : []
+  for (const membership of memberships) {
+    if (typeof membership?.album !== 'string') continue
+    aliases.add(metaTrackKeyOfTrack(track, membership.album))
+  }
+
+  return Array.from(aliases).filter(Boolean)
+}
+
+function newerTimestamp(a, b) {
+  if (a && b) return Date.parse(a) >= Date.parse(b) ? a : b
+  return a ?? b ?? null
+}
+
+function mergeTrackStates(current, incoming) {
+  const a = current || defaultTrackState()
+  const b = incoming || defaultTrackState()
+  const aRanked = isRankedTrackState(a)
+  const bRanked = isRankedTrackState(b)
+
+  if (isDefaultTrackState(a)) return { ...b }
+  if (isDefaultTrackState(b)) return { ...a }
+
+  if (b.games > a.games) {
+    return {
+      ...b,
+      bucket: aRanked || bRanked ? (b.bucket === 'X' ? 'U' : b.bucket || 'U') : a.bucket === 'X' || b.bucket === 'X' ? 'X' : b.bucket !== 'U' ? b.bucket : a.bucket,
+      lastComparedAt: newerTimestamp(a.lastComparedAt, b.lastComparedAt),
+    }
+  }
+
+  if (a.games > b.games) {
+    return {
+      ...a,
+      bucket: aRanked || bRanked ? (a.bucket === 'X' ? 'U' : a.bucket || 'U') : a.bucket === 'X' || b.bucket === 'X' ? 'X' : a.bucket !== 'U' ? a.bucket : b.bucket,
+      lastComparedAt: newerTimestamp(a.lastComparedAt, b.lastComparedAt),
+    }
+  }
+
+  return {
+    ...a,
+    bucket:
+      aRanked || bRanked
+        ? aRanked && a.bucket !== 'X'
+          ? a.bucket
+          : bRanked && b.bucket !== 'X'
+            ? b.bucket
+            : 'U'
+        : a.bucket === 'X' || b.bucket === 'X'
+          ? 'X'
+          : a.bucket !== 'U'
+            ? a.bucket
+            : b.bucket !== 'U'
+              ? b.bucket
+              : 'U',
+    rating: Math.max(a.rating, b.rating),
+    wins: Math.max(a.wins, b.wins),
+    losses: Math.max(a.losses, b.losses),
+    lastComparedAt: newerTimestamp(a.lastComparedAt, b.lastComparedAt),
+  }
+}
+
+function remapHistoryItem(item, keyMap) {
+  if (!item || typeof item !== 'object') return item
+
+  if (item.type === 'duel') {
+    const leftKey = keyMap.get(item.leftKey) || item.leftKey
+    const rightKey = keyMap.get(item.rightKey) || item.rightKey
+    const winnerKey = keyMap.get(item.winnerKey) || item.winnerKey
+    if (!leftKey || !rightKey || leftKey === rightKey) return null
+    return { ...item, leftKey, rightKey, winnerKey }
+  }
+
+  if (item.type === 'manual_elo') {
+    const trackKey = keyMap.get(item.trackKey) || item.trackKey
+    if (!trackKey) return null
+    return { ...item, trackKey }
+  }
+
+  return item
+}
+
+export function reconcileRankingTrackKeys(ranking, tracks) {
+  if (!ranking || typeof ranking !== 'object') return ranking
+  if (!Array.isArray(tracks) || tracks.length === 0) return ranking
+  if (!ranking?.tracks || typeof ranking.tracks !== 'object') return ranking
+
+  const nextTracks = { ...ranking.tracks }
+  const keyMap = new Map()
+  const groups = new Map()
+  let changed = false
+
+  for (const track of tracks) {
+    const canonicalKey = trackKeyOfTrack(track)
+    if (!canonicalKey) continue
+    const identity = songIdentityOfTrack(track)
+    const group = groups.get(identity) || new Set()
+    group.add(canonicalKey)
+    for (const aliasKey of trackMetaAliasesOfTrack(track)) {
+      if (aliasKey) group.add(aliasKey)
+    }
+    groups.set(identity, group)
+  }
+
+  for (const keys of groups.values()) {
+    const observedKeys = Array.from(keys).filter(Boolean)
+    if (!observedKeys.length) continue
+
+    const presentKeys = observedKeys.filter(trackKey => Object.hasOwn(nextTracks, trackKey))
+    if (presentKeys.length === 0) continue
+
+    const canonicalKey = observedKeys
+      .slice()
+      .sort((left, right) => {
+        const leftState = Object.hasOwn(nextTracks, left) ? getTrackState({ tracks: nextTracks, history: [] }, left) : null
+        const rightState = Object.hasOwn(nextTracks, right) ? getTrackState({ tracks: nextTracks, history: [] }, right) : null
+        const leftRanked = isRankedTrackState(leftState)
+        const rightRanked = isRankedTrackState(rightState)
+        if (leftRanked !== rightRanked) return leftRanked ? -1 : 1
+        const leftExcluded = leftState?.bucket === 'X'
+        const rightExcluded = rightState?.bucket === 'X'
+        if (leftExcluded !== rightExcluded) return leftExcluded ? -1 : 1
+        const leftHasState = Object.hasOwn(nextTracks, left) && !isDefaultTrackState(leftState)
+        const rightHasState = Object.hasOwn(nextTracks, right) && !isDefaultTrackState(rightState)
+        if (leftHasState !== rightHasState) return leftHasState ? -1 : 1
+        const leftSpid = left.startsWith('spid:')
+        const rightSpid = right.startsWith('spid:')
+        if (leftSpid !== rightSpid) return leftSpid ? -1 : 1
+        return left.localeCompare(right, 'en', { numeric: true })
+      })[0]
+
+    let mergedState = null
+    for (const trackKey of presentKeys) {
+      const state = getTrackState({ tracks: nextTracks, history: [] }, trackKey)
+      mergedState = mergedState ? mergeTrackStates(mergedState, state) : state
+    }
+
+    if (!mergedState) continue
+
+    for (const trackKey of presentKeys) {
+      if (trackKey === canonicalKey) continue
+      delete nextTracks[trackKey]
+      keyMap.set(trackKey, canonicalKey)
+      changed = true
+    }
+
+    const currentCanonicalState = Object.hasOwn(nextTracks, canonicalKey)
+      ? getTrackState({ tracks: nextTracks, history: [] }, canonicalKey)
+      : null
+    const nextCanonicalState = currentCanonicalState
+      ? mergeTrackStates(currentCanonicalState, mergedState)
+      : mergedState
+
+    if (!currentCanonicalState || JSON.stringify(currentCanonicalState) !== JSON.stringify(nextCanonicalState)) {
+      nextTracks[canonicalKey] = nextCanonicalState
+      changed = true
+    }
+  }
+
+  if (!changed) return ranking
+
+  const history = Array.isArray(ranking.history)
+    ? ranking.history.map(item => remapHistoryItem(item, keyMap)).filter(Boolean)
+    : []
+
+  return withUpdatedAt({
+    ...ranking,
+    tracks: nextTracks,
+    history,
+  })
 }
 
 export function setTrackBucket(ranking, trackKey, bucket) {

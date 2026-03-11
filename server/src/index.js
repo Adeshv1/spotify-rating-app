@@ -1313,7 +1313,6 @@ const server = http.createServer((req, res) => {
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
-    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
@@ -1541,7 +1540,6 @@ const server = http.createServer((req, res) => {
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
-    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
@@ -1571,19 +1569,17 @@ const server = http.createServer((req, res) => {
         return
       }
 
-      if (!owner) {
-        const nowMs = Date.now()
-        const existing = trackResolveMissesByUser.get(userId) || []
-        const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
-        if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
-          const oldest = Math.min(...pruned)
-          const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
-          sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
-          return
-        }
-        pruned.push(nowMs)
-        trackResolveMissesByUser.set(userId, pruned)
+      const nowMs = Date.now()
+      const existing = trackResolveMissesByUser.get(userId) || []
+      const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
+      if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
+        const oldest = Math.min(...pruned)
+        const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
+        sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
+        return
       }
+      pruned.push(nowMs)
+      trackResolveMissesByUser.set(userId, pruned)
 
       const lockKey = `${userId}:${cacheKey}`
       let lockTaken = false
@@ -1825,7 +1821,6 @@ const server = http.createServer((req, res) => {
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
-    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })
@@ -1856,24 +1851,22 @@ const server = http.createServer((req, res) => {
         return
       }
 
-      if (!owner) {
-        const existing = artistImageMissesByUser.get(userId) || []
-        const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
-        if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
-          const oldest = Math.min(...pruned)
-          const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
-          if (cachedRecord) {
-            res.setHeader('x-sp-cache', 'hit_stale_throttled')
-            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
-            sendJson(res, 200, { imageUrl: cachedImageUrl })
-          } else {
-            sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
-          }
-          return
+      const existing = artistImageMissesByUser.get(userId) || []
+      const pruned = existing.filter((t) => nowMs - t < ARTIST_IMAGE_MISS_WINDOW_MS)
+      if (pruned.length >= ARTIST_IMAGE_MISS_MAX_PER_WINDOW) {
+        const oldest = Math.min(...pruned)
+        const retryAfterMs = Math.max(0, ARTIST_IMAGE_MISS_WINDOW_MS - (nowMs - oldest))
+        if (cachedRecord) {
+          res.setHeader('x-sp-cache', 'hit_stale_throttled')
+          res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+          sendJson(res, 200, { imageUrl: cachedImageUrl })
+        } else {
+          sendJson(res, 429, { error: 'rate_limited', retryAfterSeconds: Math.ceil(retryAfterMs / 1000) })
         }
-        pruned.push(nowMs)
-        artistImageMissesByUser.set(userId, pruned)
+        return
       }
+      pruned.push(nowMs)
+      artistImageMissesByUser.set(userId, pruned)
 
       const lockKey = `${userId}:${cacheKey}`
       let lockTaken = false
@@ -1987,7 +1980,6 @@ const server = http.createServer((req, res) => {
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
-    const owner = userId ? isOwnerUser(userId) : false
 
     if (!clientId) {
       sendJson(res, 500, { error: 'missing_env', missing: ['SPOTIFY_CLIENT_ID'] })

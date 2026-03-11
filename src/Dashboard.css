@@ -570,3 +570,28 @@
 .rankSongsPage .rankSongsCenter {
   overflow: hidden;
 }
+
+.rankSongsPage .rankSongsRankCell {
+  white-space: nowrap;
+}
+
+.rankSongsPage .rankSongsRankSwap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 3rem;
+}
+
+.rankSongsPage .rankSongsHoverPlay {
+  display: none;
+}
+
+.rankSongsPage .dashTableRow:hover .rankSongsHoverPlay,
+.rankSongsPage .dashTableRow:focus-within .rankSongsHoverPlay {
+  display: inline-flex;
+}
+
+.rankSongsPage .dashTableRow:hover .rankSongsRankValue,
+.rankSongsPage .dashTableRow:focus-within .rankSongsRankValue {
+  display: none;
+}
