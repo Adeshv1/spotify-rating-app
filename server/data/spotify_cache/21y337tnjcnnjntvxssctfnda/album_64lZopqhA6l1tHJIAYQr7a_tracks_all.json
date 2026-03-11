@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_64lZopqhA6l1tHJIAYQr7a_tracks_all",
+  "fetchedAt": "2026-03-11T20:24:57.578Z",
+  "lastRefreshedAt": "2026-03-11T20:24:57.578Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Jxggi",
+            "id": "3fD8S8sslhiMSVOdXv8yuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ZOsrYqlmDHtEHQT3hKBrM"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 150927,
+        "name": "That's All I Know",
+        "disc_number": 1,
+        "id": "0ZOsrYqlmDHtEHQT3hKBrM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jxggi",
+            "id": "3fD8S8sslhiMSVOdXv8yuG"
+          },
+          {
+            "name": "Dishant",
+            "id": "03NjaVnVwllxUUcSUDglNJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/285YOhGpgXRFVz1XcmEXct"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 125071,
+        "name": "Even Flow",
+        "disc_number": 1,
+        "id": "285YOhGpgXRFVz1XcmEXct"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jxggi",
+            "id": "3fD8S8sslhiMSVOdXv8yuG"
+          },
+          {
+            "name": "AR Paisley",
+            "id": "4CqzwlyoNSvoGeMk7NiMhd"
+          },
+          {
+            "name": "Sickboi",
+            "id": "2RSjOH1tYnTgkpkz81WICb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WDYgN0xM5CZNwuylJC9gY"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 208163,
+        "name": "Why Me?",
+        "disc_number": 1,
+        "id": "1WDYgN0xM5CZNwuylJC9gY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jxggi",
+            "id": "3fD8S8sslhiMSVOdXv8yuG"
+          },
+          {
+            "name": "Dishant",
+            "id": "03NjaVnVwllxUUcSUDglNJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/24KW1TDWYQHmvtiFN9E7dD"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 144543,
+        "name": "Ask Them",
+        "disc_number": 1,
+        "id": "24KW1TDWYQHmvtiFN9E7dD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 4,
+    "albumId": "64lZopqhA6l1tHJIAYQr7a"
+  }
+}

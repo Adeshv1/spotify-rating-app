@@ -107,6 +107,20 @@ export function excludeTrack(ranking, trackKey) {
   return setTrackBucket(ranking, trackKey, 'X')
 }
 
+export function resetTrackState(ranking, trackKey) {
+  if (!trackKey) return ranking
+  if (!ranking?.tracks || typeof ranking.tracks !== 'object') return ranking
+  if (!Object.hasOwn(ranking.tracks, trackKey)) return ranking
+
+  const nextTracks = { ...ranking.tracks }
+  delete nextTracks[trackKey]
+
+  return withUpdatedAt({
+    ...ranking,
+    tracks: nextTracks,
+  })
+}
+
 export function recordDuel(ranking, { leftKey, rightKey, winnerKey, kFactor = 24, context = null } = {}) {
   if (!leftKey || !rightKey || leftKey === rightKey) return ranking
   const at = new Date().toISOString()

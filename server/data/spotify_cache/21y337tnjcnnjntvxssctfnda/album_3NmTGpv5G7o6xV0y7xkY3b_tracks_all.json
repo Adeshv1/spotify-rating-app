@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3NmTGpv5G7o6xV0y7xkY3b_tracks_all",
+  "fetchedAt": "2026-03-11T20:24:49.220Z",
+  "lastRefreshedAt": "2026-03-11T20:24:49.220Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0MiXsSfKaDj3FwbOpTuvS7"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 190400,
+        "name": "LMK",
+        "disc_number": 1,
+        "id": "0MiXsSfKaDj3FwbOpTuvS7"
+      },
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bjhzIIOueAdQFdJqPzq7B"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 186260,
+        "name": "THE COME UP STORY",
+        "disc_number": 1,
+        "id": "4bjhzIIOueAdQFdJqPzq7B"
+      },
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6N36CAotAK2yNvYr0U9SQV"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 186818,
+        "name": "IT'S HARD",
+        "disc_number": 1,
+        "id": "6N36CAotAK2yNvYr0U9SQV"
+      },
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/04Gyftm06xrJ48BvqhxhIy"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 183300,
+        "name": "4PF",
+        "disc_number": 1,
+        "id": "04Gyftm06xrJ48BvqhxhIy"
+      },
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2J38fKqIcAKJdgmQLXMsbw"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 213000,
+        "name": "WAY UP",
+        "disc_number": 1,
+        "id": "2J38fKqIcAKJdgmQLXMsbw"
+      },
+      {
+        "artists": [
+          {
+            "name": "BIG KAY SMG",
+            "id": "0z4Mzficie9vUzDmz4Hy9G"
+          },
+          {
+            "name": "Baggh-e SMG",
+            "id": "4eu7AyzvnafwOygTQlfAMu"
+          },
+          {
+            "name": "Farmaan SMG",
+            "id": "3yXzSYXBOTZ0m1QAfjlzKK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1BseOUHVOSTPs3e0WUjNNb"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 180000,
+        "name": "VELVET RAGE",
+        "disc_number": 1,
+        "id": "1BseOUHVOSTPs3e0WUjNNb"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 6,
+    "albumId": "3NmTGpv5G7o6xV0y7xkY3b"
+  }
+}

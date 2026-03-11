@@ -359,6 +359,17 @@
 }
 
 @media (max-width: 1100px) {
+  .mainDashboard {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .mainDashboard > .container,
+  .cardDashboard,
+  .dashboardPage {
+    min-height: auto;
+  }
+
   .dashboardColumns {
     grid-template-columns: 1fr;
     height: auto;

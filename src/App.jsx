@@ -42,6 +42,8 @@ import {
   mergeLegacyPlaylistRanking,
   readUserRanking,
   recordDuel,
+  resetTrackState,
+  setTrackBucket,
   trackKeyOfTrack,
   undoLast,
   mergeUserRankings,
@@ -896,8 +898,13 @@ function App() {
                     ranking={userRanking}
                     playlistsCache={playlistsCache}
                     onOverwriteRanking={next => setUserRanking(next)}
-                    onStartRankingTrack={trackKey => {
+                    onStartRankingTrack={(trackKey, options = {}) => {
                       if (!trackKey) return;
+                      if (options?.restoreExcluded) {
+                        setUserRanking(rk =>
+                          rk ? setTrackBucket(rk, trackKey, "U") : rk,
+                        );
+                      }
                       setRankTrackRequest({
                         trackKey,
                         mode: "binary",
@@ -1811,6 +1818,7 @@ function DashboardPage({
         sumRankObserved: 0,
         observedRatedTracks: [],
         observedUnratedTracks: [],
+        observedDoNotRateTracks: [],
       };
       const state = getTrackState(ranking, track.trackKey);
       const rank = rankByKey.get(track.trackKey) || null;
@@ -1822,7 +1830,9 @@ function DashboardPage({
         rank,
       };
 
-      if (Number.isFinite(Number(rank)) && isRankedState(state)) {
+      if (state.bucket === "X") {
+        prev.observedDoNotRateTracks.push(item);
+      } else if (Number.isFinite(Number(rank)) && isRankedState(state)) {
         prev.sumRankObserved += Number(rank);
         prev.observedRatedTracks.push(item);
       } else {
@@ -1831,7 +1841,9 @@ function DashboardPage({
       prev.totalTracksHint = Math.max(
         prev.totalTracksHint,
         Number.isFinite(track?.albumTrackCount) ? track.albumTrackCount : 0,
-        prev.observedRatedTracks.length + prev.observedUnratedTracks.length,
+        prev.observedRatedTracks.length +
+          prev.observedUnratedTracks.length +
+          prev.observedDoNotRateTracks.length,
       );
       albumAgg.set(albumKey, prev);
     }
@@ -1851,16 +1863,19 @@ function DashboardPage({
 
         let ratedTracks = album.observedRatedTracks.slice();
         let unratedTracks = album.observedUnratedTracks.slice();
+        let doNotRateTracks = album.observedDoNotRateTracks.slice();
         let ratedCount = ratedTracks.length;
+        let doNotRateCount = doNotRateTracks.length;
         let sumRank = album.sumRankObserved;
         let totalTracks = Math.max(
           album.totalTracksHint,
-          ratedTracks.length + unratedTracks.length,
+          ratedTracks.length + unratedTracks.length + doNotRateTracks.length,
         );
 
         if (cachedAlbumTracks?.items?.length) {
           ratedTracks = [];
           unratedTracks = [];
+          doNotRateTracks = [];
           sumRank = 0;
 
           for (const track of cachedAlbumTracks.items) {
@@ -1875,10 +1890,13 @@ function DashboardPage({
                 : [],
               rank,
             };
+            const state = getTrackState(ranking, trackKey);
 
-            if (
+            if (state.bucket === "X") {
+              doNotRateTracks.push(item);
+            } else if (
               Number.isFinite(Number(rank)) &&
-              isRankedState(getTrackState(ranking, trackKey))
+              isRankedState(state)
             ) {
               ratedTracks.push(item);
               sumRank += Number(rank);
@@ -1888,9 +1906,10 @@ function DashboardPage({
           }
 
           ratedCount = ratedTracks.length;
+          doNotRateCount = doNotRateTracks.length;
           totalTracks = Math.max(
             Number(cachedAlbumTracks.total) || 0,
-            ratedTracks.length + unratedTracks.length,
+            ratedTracks.length + unratedTracks.length + doNotRateTracks.length,
           );
         }
 
@@ -1900,15 +1919,21 @@ function DashboardPage({
             numeric: true,
           }),
         );
+        doNotRateTracks.sort((left, right) =>
+          (left.name || "").localeCompare(right.name || "", "en", {
+            numeric: true,
+          }),
+        );
 
         const unratedCount = Math.max(
-          totalTracks - ratedCount,
+          totalTracks - ratedCount - doNotRateCount,
           unratedTracks.length,
         );
         const avgRank = ratedCount ? sumRank / ratedCount : null;
         const artistLabel = pickAlbumArtistLabel([
           ...ratedTracks,
           ...unratedTracks,
+          ...doNotRateTracks,
         ]);
 
         return {
@@ -1919,10 +1944,15 @@ function DashboardPage({
           totalTracks,
           ratedCount,
           unratedCount,
+          doNotRateCount,
           avgRank,
-          completion: totalTracks > 0 ? ratedCount / totalTracks : 0,
+          completion:
+            totalTracks > 0
+              ? (ratedCount + doNotRateCount) / totalTracks
+              : 0,
           ratedTracks,
           unratedTracks,
+          doNotRateTracks,
           albumTracksLoaded: Boolean(cachedAlbumTracks?.items?.length),
         };
       })
@@ -2219,6 +2249,12 @@ function DashboardPage({
                                     {a.unratedCount === 1 ? "" : "s"} still need
                                     ranking. Finish this album from here.
                                   </p>
+                                ) : a.doNotRateCount > 0 ? (
+                                  <p className="meta albumPrompt">
+                                    {a.doNotRateCount} song
+                                    {a.doNotRateCount === 1 ? "" : "s"} marked
+                                    Do not rate for this album.
+                                  </p>
                                 ) : (
                                   <p className="meta albumPrompt">
                                     All songs from this album are rated.
@@ -2227,7 +2263,8 @@ function DashboardPage({
                                 {!a.albumTracksLoaded &&
                                 a.totalTracks >
                                   a.ratedTracks.length +
-                                    a.unratedTracks.length ? (
+                                    a.unratedTracks.length +
+                                    a.doNotRateTracks.length ? (
                                   <p className="meta albumPromptSecondary">
                                     {albumLoadState?.status === "loading"
                                       ? "Loading full album tracklist…"
@@ -2357,6 +2394,51 @@ function DashboardPage({
                                   ) : (
                                     <p className="meta">
                                       Nothing left to rate.
+                                    </p>
+                                  )}
+                                </div>
+                              ) : null}
+                              {a.doNotRateCount > 0 ? (
+                                <div className="albumSection">
+                                  <div className="albumSectionTitle">
+                                    DO NOT RATE ({a.doNotRateCount})
+                                  </div>
+                                  {a.doNotRateTracks.length ? (
+                                    <ul className="albumTrackList">
+                                      {a.doNotRateTracks.map(track => (
+                                        <li
+                                          key={track.trackKey}
+                                          className="albumTrackRow"
+                                        >
+                                          <div className="albumTrackMain">
+                                            <span className="albumTrackName">
+                                              {track.name || track.trackKey}
+                                            </span>
+                                            <span className="albumTrackMeta">
+                                              {track.artists?.length
+                                                ? track.artists.join(", ")
+                                                : "Unknown artist"}
+                                            </span>
+                                          </div>
+                                          <span className="albumTrackActions">
+                                            <button
+                                              className="btn small compact"
+                                              onClick={() =>
+                                                onStartRankingTrack?.(
+                                                  track.trackKey,
+                                                  { restoreExcluded: true },
+                                                )
+                                              }
+                                            >
+                                              Rate
+                                            </button>
+                                          </span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : (
+                                    <p className="meta">
+                                      No songs are marked Do not rate.
                                     </p>
                                   )}
                                 </div>
@@ -2635,6 +2717,7 @@ function RankSongsPage({
   const [rankInfoOpen, setRankInfoOpen] = useState(false);
   const [unrankedQuery, setUnrankedQuery] = useState("");
   const [rankedQuery, setRankedQuery] = useState("");
+  const [excludedOpen, setExcludedOpen] = useState(false);
 
   const globalSongs = useMemo(() => {
     if (!userId) return [];
@@ -2733,6 +2816,47 @@ function RankSongsPage({
     });
   }, [unrankedQuery, unrankedRows]);
 
+  const excludedRows = useMemo(() => {
+    if (!ranking) return [];
+    return uniqueTracks
+      .map(({ key, track }) => ({
+        key,
+        track,
+        state: getTrackState(ranking, key),
+        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+      }))
+      .filter(r => r.state.bucket === "X");
+  }, [uniqueTracks, ranking]);
+
+  const filteredExcludedRows = useMemo(() => {
+    if (!unrankedQuery.trim()) return excludedRows;
+    const q = unrankedQuery.trim().toLowerCase();
+    return excludedRows.filter(r => {
+      const name = r.track?.name || "";
+      const artists = r.artists || "";
+      return `${name} ${artists}`.toLowerCase().includes(q);
+    });
+  }, [excludedRows, unrankedQuery]);
+
+  const moveTrackToExcluded = useCallback(
+    trackKey => {
+      if (!trackKey) return;
+      onChangeRanking?.(rk => (rk ? excludeTrack(rk, trackKey) : rk));
+      if (activeKey === trackKey) setActiveKey(null);
+    },
+    [activeKey, onChangeRanking],
+  );
+
+  const restoreExcludedTrack = useCallback(
+    trackKey => {
+      if (!trackKey) return;
+      onChangeRanking?.(rk =>
+        rk ? setTrackBucket(rk, trackKey, "U") : rk,
+      );
+    },
+    [onChangeRanking],
+  );
+
   const rankedRows = useMemo(() => {
     if (!ranking) return [];
     return orderedKeys
@@ -2814,48 +2938,113 @@ function RankSongsPage({
               aria-label="Unranked songs list"
               tabIndex={0}
             >
-              <table className="dashTable">
-                <colgroup>
-                  <col />
-                  <col className="dashColPlay" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>Song</th>
-                    <th className="right dashColPlay">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredUnrankedRows.map(r => (
-                    <tr
-                      key={r.key}
-                      className="dashTableRow"
-                    >
-                      <td>
-                        <div className="cellTitle">
-                          {r.track?.name || r.key}
-                        </div>
-                        <div className="cellSub">
-                          {r.artists || "Unknown artist"}
-                        </div>
-                      </td>
-                      <td className="right">
-                        <button
-                          className="btn"
-                          onClick={() => {
-                            setRankMode("binary");
-                            setActiveKey(r.key);
-                          }}
-                          disabled={activeKey === r.key}
-                          title="Rank this song"
-                        >
-                          Rank
-                        </button>
-                      </td>
+              <div className="rankSongsListStack">
+                <table className="dashTable">
+                  <colgroup>
+                    <col />
+                    <col className="dashColPlay" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Song</th>
+                      <th className="right dashColPlay">Action</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {filteredUnrankedRows.map(r => (
+                      <tr
+                        key={r.key}
+                        className="dashTableRow"
+                      >
+                        <td className="rankSongsCellWithCornerAction">
+                          <div className="rankSongsCellTitle rankSongsCellTitleWithCornerAction">
+                            <button
+                              className="rankSongsExcludeBtn"
+                              onClick={() => moveTrackToExcluded(r.key)}
+                              title="Move to Do not rate"
+                              aria-label={`Move ${r.track?.name || r.key} to Do not rate`}
+                            >
+                              ×
+                            </button>
+                            <div className="rankSongsCellText">
+                              <div className="cellTitle">
+                                {r.track?.name || r.key}
+                              </div>
+                              <div className="cellSub">
+                                {r.artists || "Unknown artist"}
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="right">
+                          <button
+                            className="btn"
+                            onClick={() => {
+                              setRankMode("binary");
+                              setActiveKey(r.key);
+                            }}
+                            disabled={activeKey === r.key}
+                            title="Rank this song"
+                          >
+                            Rank
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+
+                <div className="rankSongsExcludedPanel">
+                  <button
+                    className="rankSongsExcludedToggle"
+                    onClick={() => setExcludedOpen(open => !open)}
+                    aria-expanded={excludedOpen}
+                    aria-controls="excluded-songs-list"
+                  >
+                    <span>Do not rate ({excludedRows.length})</span>
+                    <span className="rankSongsExcludedCaret">
+                      {excludedOpen ? "Hide" : "Show"}
+                    </span>
+                  </button>
+                  {excludedOpen ? (
+                    <div
+                      id="excluded-songs-list"
+                      className="rankSongsExcludedBody"
+                    >
+                      {filteredExcludedRows.length ? (
+                        <ul className="rankSongsExcludedList">
+                          {filteredExcludedRows.map(r => (
+                            <li
+                              key={r.key}
+                              className="rankSongsExcludedRow"
+                            >
+                              <div className="rankSongsExcludedMain">
+                                <div className="cellTitle">
+                                  {r.track?.name || r.key}
+                                </div>
+                                <div className="cellSub">
+                                  {r.artists || "Unknown artist"}
+                                </div>
+                              </div>
+                              <button
+                                className="btn compact"
+                                onClick={() => restoreExcludedTrack(r.key)}
+                                title="Add this song back to ranking"
+                              >
+                                Add to Ranking
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="meta rankSongsExcludedEmpty">
+                          No songs are in Do not rate.
+                        </p>
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2911,9 +3100,9 @@ function RankSongsPage({
                     order but want to fine-tune individual songs.
                   </p>
                   <p className="meta">
-                    Tip: Use <strong>Redo</strong> for a full re-placement
-                    (global binary insert) and <strong>Refine</strong> to make
-                    smaller local adjustments.
+                    Tip: Use <strong>Reset</strong> to move a song back to
+                    Unranked and place it from scratch again, and{" "}
+                    <strong>Refine</strong> to make smaller local adjustments.
                   </p>
                 </div>
               ) : null}
@@ -2984,12 +3173,14 @@ function RankSongsPage({
                             <button
                               className="btn compact"
                               onClick={() => {
-                                setRankMode("binary");
-                                setActiveKey(r.key);
+                                setActiveKey(null);
+                                onChangeRanking?.(rk =>
+                                  rk ? resetTrackState(rk, r.key) : rk,
+                                );
                               }}
-                              title="Redo the binary placement"
+                              title="Move this song back to unranked"
                             >
-                              Redo
+                              Reset
                             </button>
                             <button
                               className="btn compact"
