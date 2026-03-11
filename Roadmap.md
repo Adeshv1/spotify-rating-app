@@ -54,3 +54,8 @@
 + Server: add concise per-request Spotify console logging (implemented 2026-03-10)
 + Dashboard: replace top albums with album progress + expandable rated/unrated lists (implemented 2026-03-10)
 + Dashboard: lazy-fetch full album tracklists for accurate album progress (implemented 2026-03-10)
++ Dashboard: show artist names in album progress rows (implemented 2026-03-11)
++ Dashboard: hydrate top-song metadata from album caches (implemented 2026-03-11)
++ Rank Songs: preserve explicitly requested album track when opening binary sort (implemented 2026-03-11)
++ Dashboard: hide empty unrated album column when an album is fully rated (implemented 2026-03-11)
++ Dashboard: expand rated album card to full width when no unrated songs remain (implemented 2026-03-11)

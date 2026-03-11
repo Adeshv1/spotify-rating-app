@@ -163,6 +163,10 @@
   gap: 0.9rem;
 }
 
+.dashboardPage .albumExpandGridSingle {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .dashboardPage .albumSection {
   border: 1px solid var(--surface-border);
   border-radius: 14px;

@@ -79,6 +79,107 @@ function getTiedRanks(items, getScore) {
   });
 }
 
+function pickAlbumArtistLabel(tracks) {
+  const counts = new Map();
+  for (const track of tracks || []) {
+    const label = Array.isArray(track?.artists)
+      ? track.artists.filter(Boolean).join(", ")
+      : "";
+    if (!label) continue;
+    counts.set(label, (counts.get(label) || 0) + 1);
+  }
+
+  let bestLabel = null;
+  let bestCount = 0;
+  for (const [label, count] of counts.entries()) {
+    if (
+      count > bestCount ||
+      (count === bestCount &&
+        bestLabel &&
+        label.localeCompare(bestLabel, "en", { numeric: true }) < 0) ||
+      !bestLabel
+    ) {
+      bestLabel = label;
+      bestCount = count;
+    }
+  }
+
+  return bestLabel || "Unknown artist";
+}
+
+function normalizeTrackName(name, id = null) {
+  if (typeof name !== "string") return null;
+  const trimmed = name.trim();
+  if (!trimmed) return null;
+  if (id && trimmed === id) return null;
+  return trimmed;
+}
+
+function mergeTrackIndexEntry(existing, track) {
+  const incomingId = typeof track?.id === "string" ? track.id : null;
+  const existingId = typeof existing?.id === "string" ? existing.id : null;
+  const id = existingId || incomingId;
+
+  const incomingArtists = Array.isArray(track?.artists)
+    ? track.artists.filter(Boolean)
+    : [];
+  const incomingArtistIds = Array.isArray(track?.artistIds)
+    ? track.artistIds.map(value =>
+        typeof value === "string" ? value : null,
+      )
+    : [];
+  const incomingArtistsDetailed = incomingArtists.map((name, idx) => ({
+    name,
+    id: typeof incomingArtistIds?.[idx] === "string"
+      ? incomingArtistIds[idx]
+      : null,
+  }));
+
+  const existingArtists = Array.isArray(existing?.artists)
+    ? existing.artists.filter(Boolean)
+    : [];
+  const existingArtistIds = Array.isArray(existing?.artistIds)
+    ? existing.artistIds
+    : [];
+  const existingArtistsDetailed = Array.isArray(existing?.artistsDetailed)
+    ? existing.artistsDetailed
+    : [];
+
+  return {
+    id,
+    name:
+      normalizeTrackName(track?.name, id) ||
+      normalizeTrackName(existing?.name, id) ||
+      null,
+    artists: incomingArtists.length ? incomingArtists : existingArtists,
+    artistIds: incomingArtistIds.length ? incomingArtistIds : existingArtistIds,
+    artistsDetailed: incomingArtistsDetailed.length
+      ? incomingArtistsDetailed
+      : existingArtistsDetailed,
+    albumId:
+      (typeof track?.albumId === "string" ? track.albumId : null) ||
+      (typeof existing?.albumId === "string" ? existing.albumId : null),
+    album:
+      (typeof track?.album === "string" && track.album.trim()
+        ? track.album
+        : null) ||
+      (typeof existing?.album === "string" && existing.album.trim()
+        ? existing.album
+        : null),
+    albumTrackCount: Number.isFinite(track?.albumTrackCount)
+      ? track.albumTrackCount
+      : Number.isFinite(existing?.albumTrackCount)
+        ? existing.albumTrackCount
+        : null,
+  };
+}
+
+function mergeTrackIntoIndex(map, track) {
+  if (!track || typeof track !== "object") return;
+  const key = trackKeyOfTrack(track);
+  map.set(key, mergeTrackIndexEntry(map.get(key) || null, track));
+}
+
 const ORDER_BASE_ELO = 1001;
 
 function isRankedState(state) {
@@ -1457,9 +1558,18 @@ function DashboardPage({
     const map = new Map();
     if (!userId) return map;
 
+    const globalSongItems = readGlobalSongs(userId)?.items;
+    const globalTracks = globalSongItems && typeof globalSongItems === "object"
+      ? Object.values(globalSongItems).filter(Boolean)
+      : [];
+
     const playlistIds = Array.isArray(playlistsCache?.items)
       ? playlistsCache.items.map(p => p?.id).filter(Boolean)
       : [];
+
+    for (const track of globalTracks) {
+      mergeTrackIntoIndex(map, track);
+    }
 
     for (const playlistId of playlistIds) {
       const cachedTracks = readPlaylistTracksCache(userId, playlistId);
@@ -1467,31 +1577,28 @@ function DashboardPage({
         ? cachedTracks.items
         : [];
       for (const t of items) {
-        const id = typeof t?.id === "string" ? t.id : null;
-        if (!id) continue;
-        const key = trackKeyOfTrack(t);
-        if (!map.has(key)) {
-          const artistNames = Array.isArray(t?.artists)
-            ? t.artists.filter(Boolean)
-            : [];
-          const artistIds = Array.isArray(t?.artistIds) ? t.artistIds : [];
-          const artistsDetailed = artistNames.map((name, idx) => ({
-            name,
-            id: typeof artistIds?.[idx] === "string" ? artistIds[idx] : null,
-          }));
-          map.set(key, {
-            id,
-            name: typeof t?.name === "string" ? t.name : null,
-            artists: artistNames,
-            artistIds,
-            artistsDetailed,
-            albumId: typeof t?.albumId === "string" ? t.albumId : null,
-            album: typeof t?.album === "string" ? t.album : null,
-            albumTrackCount: Number.isFinite(t?.albumTrackCount)
-              ? t.albumTrackCount
-              : null,
-          });
-        }
+        mergeTrackIntoIndex(map, t);
+      }
+    }
+
+    const albumIds = new Set(
+      globalTracks
+        .map(track =>
+          typeof track?.albumId === "string" ? track.albumId : null,
+        )
+        .filter(Boolean),
+    );
+
+    for (const albumId of Object.keys(albumTracksById || {})) {
+      if (albumId) albumIds.add(albumId);
+    }
+
+    for (const albumId of albumIds) {
+      const cachedAlbum =
+        albumTracksById?.[albumId] || readAlbumTracksCache(userId, albumId);
+      const items = Array.isArray(cachedAlbum?.items) ? cachedAlbum.items : [];
+      for (const track of items) {
+        mergeTrackIntoIndex(map, track);
       }
     }
 
@@ -1504,20 +1611,32 @@ function DashboardPage({
     if (!items || typeof items !== "object") return [];
     return Object.values(items)
       .filter(Boolean)
-      .map(track => ({
-        trackKey: trackKeyOfTrack(track),
-        id: typeof track?.id === "string" ? track.id : null,
-        name: typeof track?.name === "string" ? track.name : null,
-        artists: Array.isArray(track?.artists)
-          ? track.artists.filter(Boolean)
-          : [],
-        albumId: typeof track?.albumId === "string" ? track.albumId : null,
-        album: typeof track?.album === "string" ? track.album : null,
-        albumTrackCount: Number.isFinite(track?.albumTrackCount)
-          ? track.albumTrackCount
-          : null,
-      }));
-  }, [userId, playlistsCache]);
+      .map(track => {
+        const trackKey = trackKeyOfTrack(track);
+        const meta = trackIndex.get(trackKey) || null;
+        const id =
+          meta?.id || (typeof track?.id === "string" ? track.id : null);
+        return {
+          trackKey,
+          id,
+          name: meta?.name || normalizeTrackName(track?.name, id),
+          artists:
+            meta?.artists ||
+            (Array.isArray(track?.artists) ? track.artists.filter(Boolean) : []),
+          albumId:
+            meta?.albumId ||
+            (typeof track?.albumId === "string" ? track.albumId : null),
+          album:
+            meta?.album ||
+            (typeof track?.album === "string" ? track.album : null),
+          albumTrackCount: Number.isFinite(meta?.albumTrackCount)
+            ? meta.albumTrackCount
+            : Number.isFinite(track?.albumTrackCount)
+              ? track.albumTrackCount
+              : null,
+        };
+      });
+  }, [trackIndex, userId]);
 
   const ensureAlbumTracks = useCallback(
     async album => {
@@ -1787,10 +1906,15 @@ function DashboardPage({
           unratedTracks.length,
         );
         const avgRank = ratedCount ? sumRank / ratedCount : null;
+        const artistLabel = pickAlbumArtistLabel([
+          ...ratedTracks,
+          ...unratedTracks,
+        ]);
 
         return {
           key: album.key,
           name: album.name,
+          artistLabel,
           albumId: album.albumId,
           totalTracks,
           ratedCount,
@@ -2046,9 +2170,7 @@ function DashboardPage({
                       >
                         <td>
                           <div className="cellTitle">{a.name}</div>
-                          <div className="cellSub">
-                            {a.totalTracks} songs total
-                          </div>
+                          <div className="cellSub">{a.artistLabel}</div>
                         </td>
                         <td>
                           <div className="cellTitle albumProgressValue">
@@ -2138,7 +2260,9 @@ function DashboardPage({
                                 ) : null}
                               </span>
                             </div>
-                            <div className="albumExpandGrid">
+                            <div
+                              className={`albumExpandGrid ${a.unratedCount > 0 ? "" : "albumExpandGridSingle"}`.trim()}
+                            >
                               <div className="albumSection">
                                 <div className="albumSectionTitle">
                                   Rated ({a.ratedCount})
@@ -2193,46 +2317,50 @@ function DashboardPage({
                                   <p className="meta">No rated songs yet.</p>
                                 )}
                               </div>
-                              <div className="albumSection">
-                                <div className="albumSectionTitle">
-                                  Unrated ({a.unratedCount})
+                              {a.unratedCount > 0 ? (
+                                <div className="albumSection">
+                                  <div className="albumSectionTitle">
+                                    Unrated ({a.unratedCount})
+                                  </div>
+                                  {a.unratedTracks.length ? (
+                                    <ul className="albumTrackList">
+                                      {a.unratedTracks.map(track => (
+                                        <li
+                                          key={track.trackKey}
+                                          className="albumTrackRow"
+                                        >
+                                          <div className="albumTrackMain">
+                                            <span className="albumTrackName">
+                                              {track.name || track.trackKey}
+                                            </span>
+                                            <span className="albumTrackMeta">
+                                              {track.artists?.length
+                                                ? track.artists.join(", ")
+                                                : "Unknown artist"}
+                                            </span>
+                                          </div>
+                                          <span className="albumTrackActions">
+                                            <button
+                                              className="btn small compact"
+                                              onClick={() =>
+                                                onStartRankingTrack?.(
+                                                  track.trackKey,
+                                                )
+                                              }
+                                            >
+                                              Rate
+                                            </button>
+                                          </span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : (
+                                    <p className="meta">
+                                      Nothing left to rate.
+                                    </p>
+                                  )}
                                 </div>
-                                {a.unratedTracks.length ? (
-                                  <ul className="albumTrackList">
-                                    {a.unratedTracks.map(track => (
-                                      <li
-                                        key={track.trackKey}
-                                        className="albumTrackRow"
-                                      >
-                                        <div className="albumTrackMain">
-                                          <span className="albumTrackName">
-                                            {track.name || track.trackKey}
-                                          </span>
-                                          <span className="albumTrackMeta">
-                                            {track.artists?.length
-                                              ? track.artists.join(", ")
-                                              : "Unknown artist"}
-                                          </span>
-                                        </div>
-                                        <span className="albumTrackActions">
-                                          <button
-                                            className="btn small compact"
-                                            onClick={() =>
-                                              onStartRankingTrack?.(
-                                                track.trackKey,
-                                              )
-                                            }
-                                          >
-                                            Rate
-                                          </button>
-                                        </span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                ) : (
-                                  <p className="meta">Nothing left to rate.</p>
-                                )}
-                              </div>
+                              ) : null}
                             </div>
                           </td>
                         </tr>
@@ -2636,6 +2764,7 @@ function RankSongsPage({
   useEffect(() => {
     if (activeKey) return;
     if (rankMode !== "binary") return;
+    if (trackRequest?.trackKey) return;
     if (rankedRows.length === 0) return;
     if (unrankedRows.length === 0) return;
     const pick =
@@ -2645,6 +2774,7 @@ function RankSongsPage({
   }, [
     activeKey,
     rankMode,
+    trackRequest,
     rankedRows.length,
     unrankedRows.length,
     unrankedRows,
