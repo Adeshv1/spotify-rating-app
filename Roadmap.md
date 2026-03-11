@@ -72,3 +72,6 @@
 + Dashboard: split album progress into Unrated and DO NOT RATE sections for excluded songs (implemented 2026-03-11)
 + Rank Songs: add direct Rate action for songs in the Do not rate list (implemented 2026-03-11)
 + Rank Songs: remove redundant Rate action from the Do not rate list (implemented 2026-03-11)
++ Dashboard: place DO NOT RATE songs under the Unrated album section instead of a separate column (implemented 2026-03-11)
++ Dashboard: merge split album-progress rows when some tracks resolve album IDs later (implemented 2026-03-11)
++ Data model: keep one ranked song identity with multiple album memberships for shared Spotify tracks (implemented 2026-03-11)

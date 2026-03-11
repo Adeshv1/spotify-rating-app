@@ -159,7 +159,7 @@
 
 .dashboardPage .albumExpandGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
@@ -176,6 +176,17 @@
 }
 
 .dashboardPage .albumSectionTitle {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.dashboardPage .albumSectionDivider {
+  height: 1px;
+  margin: 0.8rem 0 0.7rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dashboardPage .albumSectionSubTitle {
   font-weight: 700;
   margin-bottom: 0.6rem;
 }

@@ -2,14 +2,16 @@
   "schemaVersion": 1,
   "userId": "public_preview",
   "cacheKey": "playlist_5DBL17LWOZ1Yk87gan9wQq_tracks_all",
-  "fetchedAt": "2026-03-08T22:33:36.987Z",
-  "lastRefreshedAt": "2026-03-08T22:33:36.987Z",
+  "fetchedAt": "2026-03-11T20:41:10.679Z",
+  "lastRefreshedAt": "2026-03-11T20:41:10.679Z",
   "data": {
     "items": [
       {
         "item": {
           "album": {
-            "name": "DeBÍ TiRAR MáS FOToS"
+            "name": "DeBÍ TiRAR MáS FOToS",
+            "total_tracks": 17,
+            "id": "5K79FLRUCSysQnVESLcTdb"
           },
           "artists": [
             {
@@ -31,7 +33,9 @@
       {
         "item": {
           "album": {
-            "name": "Fancy Some More?"
+            "name": "Fancy Some More?",
+            "total_tracks": 31,
+            "id": "12Lig9oAX9nvpWHft5cHgF"
           },
           "artists": [
             {
@@ -57,7 +61,9 @@
       {
         "item": {
           "album": {
-            "name": "The Romantic"
+            "name": "The Romantic",
+            "total_tracks": 9,
+            "id": "7vI4iTxDmgEN63liQHPEX1"
           },
           "artists": [
             {
@@ -79,7 +85,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -101,7 +109,9 @@
       {
         "item": {
           "album": {
-            "name": "DECIDE"
+            "name": "DECIDE",
+            "total_tracks": 13,
+            "id": "4JDXBZdRPId4devseaAOKH"
           },
           "artists": [
             {
@@ -123,7 +133,9 @@
       {
         "item": {
           "album": {
-            "name": "The Art of Loving"
+            "name": "The Art of Loving",
+            "total_tracks": 12,
+            "id": "0l8zYqoUeBYg47Gmevq9HZ"
           },
           "artists": [
             {
@@ -145,7 +157,9 @@
       {
         "item": {
           "album": {
-            "name": "The Art of Loving"
+            "name": "The Art of Loving",
+            "total_tracks": 12,
+            "id": "0l8zYqoUeBYg47Gmevq9HZ"
           },
           "artists": [
             {
@@ -167,7 +181,9 @@
       {
         "item": {
           "album": {
-            "name": "Don't Forget About Me, Demos"
+            "name": "Don't Forget About Me, Demos",
+            "total_tracks": 8,
+            "id": "05jbNkYoEQdjVDHEHtg1gY"
           },
           "artists": [
             {
@@ -189,7 +205,9 @@
       {
         "item": {
           "album": {
-            "name": "The Life of a Showgirl"
+            "name": "The Life of a Showgirl",
+            "total_tracks": 12,
+            "id": "4a6NzYL1YHRUgx9e3YZI6I"
           },
           "artists": [
             {
@@ -211,7 +229,9 @@
       {
         "item": {
           "album": {
-            "name": "DeBÍ TiRAR MáS FOToS"
+            "name": "DeBÍ TiRAR MáS FOToS",
+            "total_tracks": 17,
+            "id": "5K79FLRUCSysQnVESLcTdb"
           },
           "artists": [
             {
@@ -233,7 +253,9 @@
       {
         "item": {
           "album": {
-            "name": "DeBÍ TiRAR MáS FOToS"
+            "name": "DeBÍ TiRAR MáS FOToS",
+            "total_tracks": 17,
+            "id": "5K79FLRUCSysQnVESLcTdb"
           },
           "artists": [
             {
@@ -255,7 +277,9 @@
       {
         "item": {
           "album": {
-            "name": "I Barely Know Her"
+            "name": "I Barely Know Her",
+            "total_tracks": 10,
+            "id": "7mvXPtV4jvA1hp5Wx2FAJA"
           },
           "artists": [
             {
@@ -277,7 +301,9 @@
       {
         "item": {
           "album": {
-            "name": "WHERE IS MY HUSBAND!"
+            "name": "WHERE IS MY HUSBAND!",
+            "total_tracks": 1,
+            "id": "01sqwTOTrN9gaYQc1rr6Zw"
           },
           "artists": [
             {
@@ -299,7 +325,9 @@
       {
         "item": {
           "album": {
-            "name": "So Good"
+            "name": "So Good",
+            "total_tracks": 15,
+            "id": "5YLRVHDVRw3QqWbeTGpC5B"
           },
           "artists": [
             {
@@ -321,7 +349,9 @@
       {
         "item": {
           "album": {
-            "name": "The Boy Who Played the Harp"
+            "name": "The Boy Who Played the Harp",
+            "total_tracks": 10,
+            "id": "24f1GFXCkViGoRpmGqlSSl"
           },
           "artists": [
             {
@@ -347,7 +377,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -369,7 +401,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -391,7 +425,9 @@
       {
         "item": {
           "album": {
-            "name": "You'll Be Alright, Kid (Chapter 1)"
+            "name": "You'll Be Alright, Kid (Chapter 1)",
+            "total_tracks": 11,
+            "id": "1eCGY9WJpYgtaFh1Lk2KNo"
           },
           "artists": [
             {
@@ -413,7 +449,9 @@
       {
         "item": {
           "album": {
-            "name": "The Romantic"
+            "name": "The Romantic",
+            "total_tracks": 9,
+            "id": "7vI4iTxDmgEN63liQHPEX1"
           },
           "artists": [
             {
@@ -435,7 +473,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -457,7 +497,9 @@
       {
         "item": {
           "album": {
-            "name": "KPop Demon Hunters (Soundtrack from the Netflix Film)"
+            "name": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+            "total_tracks": 12,
+            "id": "14JkAa6IiFaOh5s0nMyMU9"
           },
           "artists": [
             {
@@ -495,7 +537,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -517,7 +561,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -539,7 +585,9 @@
       {
         "item": {
           "album": {
-            "name": "Un Verano Sin Ti"
+            "name": "Un Verano Sin Ti",
+            "total_tracks": 23,
+            "id": "3RQQmkQEvNCY4prGKE6oc5"
           },
           "artists": [
             {
@@ -561,7 +609,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -583,7 +633,9 @@
       {
         "item": {
           "album": {
-            "name": "DeBÍ TiRAR MáS FOToS"
+            "name": "DeBÍ TiRAR MáS FOToS",
+            "total_tracks": 17,
+            "id": "5K79FLRUCSysQnVESLcTdb"
           },
           "artists": [
             {
@@ -605,7 +657,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -627,7 +681,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -649,7 +705,9 @@
       {
         "item": {
           "album": {
-            "name": "Die On This Hill"
+            "name": "Die On This Hill",
+            "total_tracks": 4,
+            "id": "7GS4aKISJ2KgAm4aBhkzng"
           },
           "artists": [
             {
@@ -671,7 +729,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -693,7 +753,9 @@
       {
         "item": {
           "album": {
-            "name": "MAYHEM"
+            "name": "MAYHEM",
+            "total_tracks": 14,
+            "id": "2MHUaRi9OCyTN02SoyRRBJ"
           },
           "artists": [
             {
@@ -719,7 +781,9 @@
       {
         "item": {
           "album": {
-            "name": "Volume One"
+            "name": "Volume One",
+            "total_tracks": 13,
+            "id": "4eeQtydrFe5HEIgzNkX4S7"
           },
           "artists": [
             {
@@ -741,7 +805,9 @@
       {
         "item": {
           "album": {
-            "name": "Dizzy up the Girl"
+            "name": "Dizzy up the Girl",
+            "total_tracks": 13,
+            "id": "4UMjBXcRqIgMZ1XumU2x5T"
           },
           "artists": [
             {
@@ -763,7 +829,9 @@
       {
         "item": {
           "album": {
-            "name": "Bird's Eye"
+            "name": "Bird's Eye",
+            "total_tracks": 11,
+            "id": "1uE3dRPe3SrGdNhd1nWlSa"
           },
           "artists": [
             {
@@ -785,7 +853,9 @@
       {
         "item": {
           "album": {
-            "name": "HIT ME HARD AND SOFT"
+            "name": "HIT ME HARD AND SOFT",
+            "total_tracks": 10,
+            "id": "7aJuG4TFXa2hmE4z1yxc3n"
           },
           "artists": [
             {
@@ -807,7 +877,9 @@
       {
         "item": {
           "album": {
-            "name": "iloveitiloveitiloveit"
+            "name": "iloveitiloveitiloveit",
+            "total_tracks": 1,
+            "id": "6XxrC3tz3EuqoW5RMbYzaF"
           },
           "artists": [
             {
@@ -829,7 +901,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -851,7 +925,9 @@
       {
         "item": {
           "album": {
-            "name": "Synchronicity (Remastered 2003)"
+            "name": "Synchronicity (Remastered 2003)",
+            "total_tracks": 11,
+            "id": "5W9OT0a5iZlBr83a9WMKFY"
           },
           "artists": [
             {
@@ -873,7 +949,9 @@
       {
         "item": {
           "album": {
-            "name": "At The Beach, In Every Life"
+            "name": "At The Beach, In Every Life",
+            "total_tracks": 12,
+            "id": "58vZavXqh1P5uoTXteudWl"
           },
           "artists": [
             {
@@ -895,7 +973,9 @@
       {
         "item": {
           "album": {
-            "name": "I Barely Know Her"
+            "name": "I Barely Know Her",
+            "total_tracks": 10,
+            "id": "7mvXPtV4jvA1hp5Wx2FAJA"
           },
           "artists": [
             {
@@ -917,7 +997,9 @@
       {
         "item": {
           "album": {
-            "name": "Man’s Best Friend"
+            "name": "Man’s Best Friend",
+            "total_tracks": 12,
+            "id": "1aqg30bNvLSWgShZgX4oop"
           },
           "artists": [
             {
@@ -939,7 +1021,9 @@
       {
         "item": {
           "album": {
-            "name": "FEVER DREAM"
+            "name": "FEVER DREAM",
+            "total_tracks": 1,
+            "id": "1tJQ5Mp1XSf7waZzH6KhlJ"
           },
           "artists": [
             {
@@ -961,7 +1045,9 @@
       {
         "item": {
           "album": {
-            "name": "Kiss All The Time. Disco, Occasionally."
+            "name": "Kiss All The Time. Disco, Occasionally.",
+            "total_tracks": 12,
+            "id": "69BqE1V8Bzb9GCyeP1fFeR"
           },
           "artists": [
             {
@@ -983,7 +1069,9 @@
       {
         "item": {
           "album": {
-            "name": "I Love You."
+            "name": "I Love You.",
+            "total_tracks": 11,
+            "id": "4xkM0BwLM9H2IUcbYzpcBI"
           },
           "artists": [
             {
@@ -1005,7 +1093,9 @@
       {
         "item": {
           "album": {
-            "name": "Homewrecker"
+            "name": "Homewrecker",
+            "total_tracks": 1,
+            "id": "5KzDGTJ3sGlfuwSryRB4p4"
           },
           "artists": [
             {
@@ -1027,7 +1117,9 @@
       {
         "item": {
           "album": {
-            "name": "No Broke Boys"
+            "name": "No Broke Boys",
+            "total_tracks": 1,
+            "id": "520FALYwo6yPbp5kBchA8N"
           },
           "artists": [
             {
@@ -1053,7 +1145,9 @@
       {
         "item": {
           "album": {
-            "name": "The Life of a Showgirl"
+            "name": "The Life of a Showgirl",
+            "total_tracks": 12,
+            "id": "4a6NzYL1YHRUgx9e3YZI6I"
           },
           "artists": [
             {
@@ -1075,7 +1169,9 @@
       {
         "item": {
           "album": {
-            "name": "DeBÍ TiRAR MáS FOToS"
+            "name": "DeBÍ TiRAR MáS FOToS",
+            "total_tracks": 17,
+            "id": "5K79FLRUCSysQnVESLcTdb"
           },
           "artists": [
             {
@@ -1097,7 +1193,9 @@
       {
         "item": {
           "album": {
-            "name": "(When You Gonna) Give It Up to Me"
+            "name": "(When You Gonna) Give It Up to Me",
+            "total_tracks": 3,
+            "id": "25eRITKk6jXXJLAxA3M5b3"
           },
           "artists": [
             {
@@ -1123,7 +1221,9 @@
       {
         "item": {
           "album": {
-            "name": "Cuando No Era Cantante (Remix)"
+            "name": "Cuando No Era Cantante (Remix)",
+            "total_tracks": 1,
+            "id": "544ufGb3kucRiYrB93cteJ"
           },
           "artists": [
             {
