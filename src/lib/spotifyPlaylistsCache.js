@@ -47,7 +47,16 @@ export function readPlaylistsCache(userId) {
   return parsed
 }
 
-export function writePlaylistsCache(userId, apiResponse, { fetchedAt = new Date().toISOString(), isComplete = false } = {}) {
+export function writePlaylistsCache(
+  userId,
+  apiResponse,
+  {
+    fetchedAt = new Date().toISOString(),
+    isComplete = false,
+    spotifyFetchedAt = null,
+    spotifyLastRefreshedAt = null,
+  } = {},
+) {
   if (!userId) return
 
   const existing = readPlaylistsCache(userId)
@@ -71,6 +80,13 @@ export function writePlaylistsCache(userId, apiResponse, { fetchedAt = new Date(
   const record = {
     schemaVersion: SCHEMA_VERSION,
     fetchedAt,
+    spotifyFetchedAt: typeof spotifyFetchedAt === 'string' ? spotifyFetchedAt : fetchedAt,
+    spotifyLastRefreshedAt:
+      typeof spotifyLastRefreshedAt === 'string'
+        ? spotifyLastRefreshedAt
+        : typeof spotifyFetchedAt === 'string'
+          ? spotifyFetchedAt
+          : fetchedAt,
     source: 'spotify_api',
     total,
     isComplete: Boolean(isComplete),

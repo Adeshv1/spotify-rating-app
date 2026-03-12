@@ -2,6 +2,10 @@
 
 Vite + React frontend with a minimal Node backend used for Spotify OAuth.
 
+## Docs
+
+- [User Guide](./USER_GUIDE.md)
+
 ## Dev setup
 
 1. Create a Spotify app in the Spotify Developer Dashboard.

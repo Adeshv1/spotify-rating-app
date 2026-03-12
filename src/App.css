@@ -151,6 +151,37 @@
   margin-top: 0;
 }
 
+.pageEmptyStateWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.pageEmptyStateCard {
+  width: min(680px, 100%);
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top, rgba(122, 162, 255, 0.12), transparent 58%),
+    var(--surface);
+  text-align: center;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+}
+
+.pageEmptyStateCard h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.pageEmptyStateCard .meta {
+  margin: 0;
+  font-size: 1rem;
+}
+
 .topBar {
   position: sticky;
   top: 0;
@@ -180,23 +211,87 @@
   margin: 0 auto;
 }
 
-.headerTitle {
-  justify-self: center;
-  font-size: 2rem;
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.92);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: min(52vw, 560px);
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.topBarCenter {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  justify-content: center;
+}
+
+.headerNav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  animation: headerNavFloatIn 360ms ease-out both;
+}
+
+.headerNav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.08), transparent 80%);
+  opacity: 0.6;
   pointer-events: none;
 }
 
+.headerNavBtn {
+  position: relative;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  font-size: 0.98rem;
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    font-size 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.headerNavBtn:hover {
+  color: rgba(255, 255, 255, 0.96);
+  transform: translateY(-1px);
+}
+
+.headerNavBtn.active {
+  color: #fff;
+  font-size: 1.12rem;
+  background: linear-gradient(180deg, rgba(122, 162, 255, 0.96), rgba(79, 141, 255, 0.84));
+  box-shadow:
+    0 10px 24px rgba(47, 109, 255, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  animation: headerNavActivePulse 420ms ease-out both;
+}
+
 @media (prefers-color-scheme: light) {
-  .headerTitle {
-    color: rgba(17, 24, 39, 0.9);
+  .headerNav {
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .headerNavBtn:hover {
+    color: rgba(17, 24, 39, 0.94);
   }
 }
 
@@ -227,6 +322,112 @@
   justify-self: end;
 }
 
+.headerUtilityActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.headerDataMenu {
+  position: relative;
+}
+
+.headerDataMenu summary {
+  list-style: none;
+}
+
+.headerDataMenu summary::-webkit-details-marker {
+  display: none;
+}
+
+.headerDataMenuPanel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 0;
+  z-index: 20;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(10, 18, 45, 0.96), rgba(17, 26, 56, 0.94));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  animation: headerDataMenuIn 180ms ease-out both;
+}
+
+.headerDataMenuPanel .btn {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.headerDataMenuTitle {
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted-2);
+}
+
+.headerDataDropzone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem;
+  border: 1px dashed rgba(122, 162, 255, 0.4);
+  border-radius: 14px;
+  background: rgba(122, 162, 255, 0.08);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.headerDataDropzone:hover,
+.headerDataDropzone.active {
+  border-color: rgba(122, 162, 255, 0.85);
+  background: rgba(122, 162, 255, 0.16);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(47, 109, 255, 0.18);
+}
+
+.headerDataDropzoneTitle {
+  font-weight: 750;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.headerDataDropzoneMeta {
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.headerDataDropzoneHint {
+  align-self: flex-start;
+  margin-top: 0.15rem;
+  padding: 0.24rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.headerDataFileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .saveStatus {
   font-size: 0.92rem;
   color: var(--text-muted);
@@ -247,14 +448,66 @@
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .headerTitle {
-    justify-self: start;
-    max-width: 100%;
-    pointer-events: auto;
-  }
+  .topBarLeft,
+  .topBarCenter,
   .topActions {
     justify-self: start;
+  }
+  .topBarLeft,
+  .topBarCenter {
+    width: 100%;
+  }
+  .topBarLeft {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topBarCenter {
+    align-items: flex-start;
+  }
+  .headerNav {
+    width: 100%;
     justify-content: flex-start;
+  }
+  .topActions {
+    justify-content: flex-start;
+  }
+  .headerDataMenuPanel {
+    left: 0;
+    right: auto;
+    min-width: 260px;
+  }
+}
+
+@keyframes headerNavFloatIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes headerNavActivePulse {
+  from {
+    transform: translateY(3px) scale(0.96);
+    filter: saturate(0.9);
+  }
+  to {
+    transform: translateY(0) scale(1);
+    filter: saturate(1);
+  }
+}
+
+@keyframes headerDataMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -923,6 +1176,107 @@
   margin-left: 0.5rem;
   color: var(--text-muted-2);
   font-size: 0.95em;
+}
+
+.playlistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.playlistCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.playlistCardArt {
+  appearance: none;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  background: linear-gradient(180deg, rgba(124, 156, 255, 0.2), rgba(16, 23, 49, 0.5));
+  cursor: pointer;
+}
+
+.playlistCardArt:disabled {
+  cursor: default;
+}
+
+.playlistCardArt img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playlistCardPlaceholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.playlistCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.playlistCardTitleRow {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.playlistCardTitle {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.playlistCardTitle:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.playlistCardMeta,
+.playlistCardStatus,
+.playlistCardCache {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.playlistCardActions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  .playlistGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .sub {

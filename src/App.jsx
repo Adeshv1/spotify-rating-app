@@ -65,6 +65,13 @@ function normalizedRankValue(value) {
   return Number.isFinite(n) ? Math.round(n) : null;
 }
 
+function formatFutureRelativeAge(targetMs, nowMs) {
+  if (!Number.isFinite(targetMs)) return "not scheduled";
+  const remainingMs = targetMs - nowMs;
+  if (remainingMs <= 15_000) return "soon";
+  return `in ${formatAge(remainingMs)}`;
+}
+
 function getTiedRanks(items, getScore) {
   let lastScore = null;
   let lastRank = 0;
@@ -476,6 +483,244 @@ function loadLocalRankingWithLegacy(userId) {
   return local;
 }
 
+function sanitizeImportedRankingState(state, userId) {
+  const next = state && typeof state === "object" ? { ...state } : null;
+  if (!next) return null;
+  if (typeof next.schemaVersion !== "number") next.schemaVersion = 1;
+  if (typeof next.userId !== "string") next.userId = userId;
+  if (typeof next.createdAt !== "string")
+    next.createdAt = new Date().toISOString();
+  if (typeof next.updatedAt !== "string")
+    next.updatedAt = new Date().toISOString();
+  if (!next.tracks || typeof next.tracks !== "object") next.tracks = {};
+  if (!Array.isArray(next.history)) next.history = [];
+  if (!next.migratedPlaylists || typeof next.migratedPlaylists !== "object")
+    next.migratedPlaylists = {};
+  return next;
+}
+
+function safeJsonParse(value) {
+  try {
+    return JSON.parse(value);
+  } catch {
+    return null;
+  }
+}
+
+function userStorageKeys(userId) {
+  return {
+    ranking: `sp_rank_v1_user_${userId}`,
+    legacyPlaylistRankingPrefix: `sp_rank_v1_${userId}_`,
+    playlists: `sp_cache_v1_me_playlists_${userId}`,
+    cooldown: `sp_cache_v1_cooldown_${userId}`,
+    playlistTracksPrefix: `sp_cache_v1_playlist_tracks_${userId}_`,
+    playlistTracksMetaPrefix: `sp_cache_v1_playlist_tracks_meta_${userId}_`,
+    playlistTracksErrorPrefix: `sp_cache_v1_playlist_tracks_error_${userId}_`,
+    albumTracksPrefix: `sp_cache_v1_album_tracks_${userId}_`,
+    artistIdsByName: `sp_cache_v1_artist_ids_by_name_${userId}`,
+    globalSongs: `sp_global_songs_v1_${userId}`,
+  };
+}
+
+function collectStorageRecordsByPrefix(prefix) {
+  const items = {};
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i);
+    if (!key || !key.startsWith(prefix)) continue;
+    const suffix = key.slice(prefix.length);
+    if (!suffix) continue;
+    const raw = localStorage.getItem(key);
+    if (raw == null) continue;
+    items[suffix] = safeJsonParse(raw) ?? raw;
+  }
+  return items;
+}
+
+function clearUserLocalAppData(userId) {
+  if (!userId) return;
+  const keys = userStorageKeys(userId);
+  const toRemove = [];
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (
+      key === keys.ranking ||
+      key === keys.playlists ||
+      key === keys.cooldown ||
+      key === keys.artistIdsByName ||
+      key === keys.globalSongs ||
+      key.startsWith(keys.legacyPlaylistRankingPrefix) ||
+      key.startsWith(keys.playlistTracksPrefix) ||
+      key.startsWith(keys.playlistTracksMetaPrefix) ||
+      key.startsWith(keys.playlistTracksErrorPrefix) ||
+      key.startsWith(keys.albumTracksPrefix)
+    ) {
+      toRemove.push(key);
+    }
+  }
+  toRemove.forEach(key => localStorage.removeItem(key));
+}
+
+function writeStorageJson(key, value) {
+  if (!key || value == null) return;
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function collectFullUserExport(userId, ranking, profile, uiSnapshot = {}) {
+  if (!userId) return null;
+  const keys = userStorageKeys(userId);
+  const rankingState = ranking ?? readUserRanking(userId) ?? createEmptyUserRanking({ userId });
+  const playlistsCache = readPlaylistsCache(userId);
+  const globalSongs = readGlobalSongs(userId);
+  const artistIdByNameCache = readArtistIdByNameCache(userId);
+  const cooldownUntilMs = getSpotifyCooldownUntil(userId);
+
+  const rawLocalStorage = {};
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (
+      key === keys.ranking ||
+      key === keys.playlists ||
+      key === keys.cooldown ||
+      key === keys.artistIdsByName ||
+      key === keys.globalSongs ||
+      key.startsWith(keys.legacyPlaylistRankingPrefix) ||
+      key.startsWith(keys.playlistTracksPrefix) ||
+      key.startsWith(keys.playlistTracksMetaPrefix) ||
+      key.startsWith(keys.playlistTracksErrorPrefix) ||
+      key.startsWith(keys.albumTracksPrefix)
+    ) {
+      const raw = localStorage.getItem(key);
+      if (raw != null) rawLocalStorage[key] = raw;
+    }
+  }
+
+  return {
+    version: 2,
+    exportedAt: new Date().toISOString(),
+    exportedForUserId: userId,
+    profileSnapshot:
+      profile && typeof profile === "object"
+        ? {
+            id: typeof profile.id === "string" ? profile.id : null,
+            display_name:
+              typeof profile.display_name === "string"
+                ? profile.display_name
+                : null,
+          }
+        : null,
+    uiSnapshot,
+    appData: {
+      ranking: rankingState,
+      playlistsCache,
+      globalSongs,
+      artistIdByNameCache,
+      cooldownUntilMs: Number.isFinite(cooldownUntilMs) ? cooldownUntilMs : null,
+      playlistTracksById: collectStorageRecordsByPrefix(keys.playlistTracksPrefix),
+      playlistTrackMetaById: collectStorageRecordsByPrefix(keys.playlistTracksMetaPrefix),
+      playlistTrackErrorsById: collectStorageRecordsByPrefix(keys.playlistTracksErrorPrefix),
+      albumTracksById: collectStorageRecordsByPrefix(keys.albumTracksPrefix),
+      legacyPlaylistRankingsById: collectStorageRecordsByPrefix(
+        keys.legacyPlaylistRankingPrefix,
+      ),
+    },
+    rawLocalStorage,
+  };
+}
+
+function restoreFullUserImport(parsed, userId) {
+  if (!parsed || typeof parsed !== "object" || !userId) return false;
+  const keys = userStorageKeys(userId);
+  const appData =
+    parsed?.appData && typeof parsed.appData === "object" ? parsed.appData : {};
+
+  clearUserLocalAppData(userId);
+
+  const ranking = sanitizeImportedRankingState(appData.ranking, userId);
+  if (ranking) {
+    ranking.userId = userId;
+    writeStorageJson(keys.ranking, ranking);
+  }
+
+  if (appData.playlistsCache && typeof appData.playlistsCache === "object") {
+    writeStorageJson(keys.playlists, appData.playlistsCache);
+  }
+
+  if (Number.isFinite(appData.cooldownUntilMs)) {
+    writeStorageJson(keys.cooldown, {
+      cooldownUntilMs: Number(appData.cooldownUntilMs),
+    });
+  }
+
+  if (appData.globalSongs && typeof appData.globalSongs === "object") {
+    writeStorageJson(keys.globalSongs, appData.globalSongs);
+  }
+
+  if (
+    appData.artistIdByNameCache &&
+    typeof appData.artistIdByNameCache === "object"
+  ) {
+    writeStorageJson(keys.artistIdsByName, {
+      ...appData.artistIdByNameCache,
+      userId,
+    });
+  }
+
+  for (const [playlistId, record] of Object.entries(
+    appData.playlistTracksById || {},
+  )) {
+    if (!playlistId || !record || typeof record !== "object") continue;
+    writeStorageJson(`${keys.playlistTracksPrefix}${playlistId}`, {
+      ...record,
+      playlistId,
+    });
+  }
+
+  for (const [playlistId, record] of Object.entries(
+    appData.playlistTrackMetaById || {},
+  )) {
+    if (!playlistId || !record || typeof record !== "object") continue;
+    writeStorageJson(`${keys.playlistTracksMetaPrefix}${playlistId}`, {
+      ...record,
+      playlistId,
+    });
+  }
+
+  for (const [playlistId, record] of Object.entries(
+    appData.playlistTrackErrorsById || {},
+  )) {
+    if (!playlistId || !record || typeof record !== "object") continue;
+    writeStorageJson(`${keys.playlistTracksErrorPrefix}${playlistId}`, {
+      ...record,
+      playlistId,
+    });
+  }
+
+  for (const [albumId, record] of Object.entries(appData.albumTracksById || {})) {
+    if (!albumId || !record || typeof record !== "object") continue;
+    writeStorageJson(`${keys.albumTracksPrefix}${albumId}`, {
+      ...record,
+      albumId,
+    });
+  }
+
+  for (const [playlistId, record] of Object.entries(
+    appData.legacyPlaylistRankingsById || {},
+  )) {
+    if (!playlistId || !record || typeof record !== "object") continue;
+    writeStorageJson(`${keys.legacyPlaylistRankingPrefix}${playlistId}`, {
+      ...record,
+      userId,
+      playlistId,
+    });
+  }
+
+  return true;
+}
+
+const PLAYLIST_AUTO_REFRESH_MS = 5 * 60 * 1000;
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
@@ -498,12 +743,18 @@ function App() {
   const [playlistsCache, setPlaylistsCache] = useState(null);
   const [playlistsSource, setPlaylistsSource] = useState(null); // 'cache' | 'api'
   const [cooldownUntilMs, setCooldownUntilMs] = useState(null);
+  const [nextPlaylistsRefreshAt, setNextPlaylistsRefreshAt] = useState(null);
 
   const [selectedPlaylistId, setSelectedPlaylistId] = useState(null);
   const [tracksLoading, setTracksLoading] = useState(false);
   const [tracksError, setTracksError] = useState(null);
   const [tracksCache, setTracksCache] = useState(null);
   const [tracksSource, setTracksSource] = useState(null); // 'cache' | 'api'
+  const importInputRef = useRef(null);
+  const dataMenuRef = useRef(null);
+  const [dashboardImportError, setDashboardImportError] = useState(null);
+  const [dataImportDragActive, setDataImportDragActive] = useState(false);
+  const [localDataRevision, setLocalDataRevision] = useState(0);
 
   const [rankingSync, setRankingSync] = useState({
     status: "idle",
@@ -519,15 +770,6 @@ function App() {
   const isRankRoute = routePath === "/rank";
   const isPublicDashboardRoute = !loggedIn && routePath === "/";
   const isDashboardLikeRoute = isDashboardRoute || isPublicDashboardRoute;
-  const headerTitle = loggedIn
-    ? isDashboardRoute
-      ? "Dashboard"
-      : isRankRoute
-        ? "Rank Songs"
-        : "Playlists"
-    : isPublicDashboardRoute
-      ? "Dashboard"
-      : "";
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000);
@@ -634,13 +876,15 @@ function App() {
       setTracksCache(null);
       setTracksError(null);
       setTracksSource(null);
+      setNextPlaylistsRefreshAt(null);
       setUserRanking(null);
+      setDashboardImportError(null);
       setRankingSync({ status: "idle", lastSyncedAt: null, message: null });
       setIsOwnerUser(false);
     }
   }, [loggedIn]);
 
-  async function refreshPlaylistsCache({ force = false } = {}) {
+  const refreshPlaylistsCache = useCallback(async ({ force = false } = {}) => {
     if (!loggedIn || !profile?.id) return;
 
     const userId = profile.id;
@@ -709,11 +953,20 @@ function App() {
       }
 
       const fetchedAt = new Date().toISOString();
+      const spotifyFetchedAt =
+        res.headers.get("x-sp-cache-fetched-at") || fetchedAt;
+      const spotifyLastRefreshedAt =
+        res.headers.get("x-sp-cache-last-refreshed-at") || spotifyFetchedAt;
       const apiItemsCount = Array.isArray(data?.items) ? data.items.length : 0;
       const apiTotal = Number(data?.total) || apiItemsCount;
       const isComplete = !data?.partial && apiItemsCount >= apiTotal;
 
-      writePlaylistsCache(userId, data, { fetchedAt, isComplete });
+      writePlaylistsCache(userId, data, {
+        fetchedAt,
+        isComplete,
+        spotifyFetchedAt,
+        spotifyLastRefreshedAt,
+      });
       const cached = readPlaylistsCache(userId);
       setPlaylistsCache(cached);
       setPlaylistsSource("api");
@@ -723,7 +976,7 @@ function App() {
     } finally {
       setPlaylistsLoading(false);
     }
-  }
+  }, [loggedIn, profile?.id]);
 
   useEffect(() => {
     if (!loggedIn || !profile?.id) return;
@@ -741,8 +994,22 @@ function App() {
 
     // No cache yet: do a fetch to seed the cache.
     refreshPlaylistsCache({ force: false });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn, profile?.id]);
+  }, [loggedIn, profile?.id, refreshPlaylistsCache]);
+
+  useEffect(() => {
+    if (!loggedIn || !profile?.id) {
+      setNextPlaylistsRefreshAt(null);
+      return;
+    }
+
+    setNextPlaylistsRefreshAt(Date.now() + PLAYLIST_AUTO_REFRESH_MS);
+    const id = window.setInterval(() => {
+      setNextPlaylistsRefreshAt(Date.now() + PLAYLIST_AUTO_REFRESH_MS);
+      refreshPlaylistsCache({ force: false });
+    }, PLAYLIST_AUTO_REFRESH_MS);
+
+    return () => window.clearInterval(id);
+  }, [loggedIn, profile?.id, refreshPlaylistsCache]);
 
   async function refreshPlaylistTracks({ playlistId, force = false } = {}) {
     if (!loggedIn || !profile?.id || !playlistId) return;
@@ -887,6 +1154,170 @@ function App() {
     await fetch("/auth/logout", { method: "POST" });
     window.location.href = "/";
   }
+
+  const exportDashboardJson = useCallback(() => {
+    const userId = profile?.id ?? null;
+    if (!userId) return;
+    const payload = collectFullUserExport(userId, userRanking, profile, {
+      routePath,
+      selectedPlaylistId,
+    });
+    if (!payload) return;
+    const blob = new Blob([JSON.stringify(payload, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `spotify-rating-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    if (dataMenuRef.current) dataMenuRef.current.open = false;
+  }, [dataMenuRef, profile, routePath, selectedPlaylistId, userRanking]);
+
+  const importDashboardFromText = useCallback(
+    text => {
+      setDashboardImportError(null);
+      let parsed;
+      try {
+        parsed = JSON.parse(text);
+      } catch {
+        setDashboardImportError("Invalid JSON.");
+        return;
+      }
+
+      if (!parsed || typeof parsed !== "object") {
+        setDashboardImportError("Invalid export format.");
+        return;
+      }
+
+      if (![1, 2].includes(parsed.version)) {
+        setDashboardImportError("Unsupported export version.");
+        return;
+      }
+
+      const userId = profile?.id ?? null;
+      const ok = window.confirm(
+        parsed.version === 2
+          ? "Import will overwrite your local ranking and cached app data on this device. Continue?"
+          : "Import will overwrite your current ranking on this device. Continue?",
+      );
+      if (!ok) return;
+
+      if (parsed.version === 2) {
+        if (!userId) {
+          setDashboardImportError("You must be signed in to import.");
+          return;
+        }
+        const restored = restoreFullUserImport(parsed, userId);
+        if (!restored) {
+          setDashboardImportError("Import data could not be restored.");
+          return;
+        }
+
+        const nextPlaylistsCache = readPlaylistsCache(userId);
+        const nextRanking = loadLocalRankingWithLegacy(userId);
+        const currentPlaylistStillExists = Boolean(
+          selectedPlaylistId &&
+            nextPlaylistsCache?.items?.some(p => p?.id === selectedPlaylistId),
+        );
+
+        setUserRanking(nextRanking);
+        setPlaylistsCache(nextPlaylistsCache);
+        setPlaylistsSource(nextPlaylistsCache ? "cache" : null);
+        setPlaylistsError(null);
+        setCooldownUntilMs(getSpotifyCooldownUntil(userId));
+        setTracksError(null);
+        if (currentPlaylistStillExists) {
+          const nextTracks = readPlaylistTracksCache(userId, selectedPlaylistId);
+          const nextTracksError = readPlaylistTracksErrorCache(
+            userId,
+            selectedPlaylistId,
+          );
+          setTracksCache(nextTracks);
+          setTracksSource(nextTracks ? "cache" : null);
+          setTracksError(
+            nextTracksError
+              ? nextTracksError.message ||
+                  `Playlist tracks previously failed (HTTP ${nextTracksError.status}).`
+              : null,
+          );
+        } else {
+          setSelectedPlaylistId(null);
+          setTracksCache(null);
+          setTracksSource(null);
+        }
+        setLocalDataRevision(value => value + 1);
+        if (dataMenuRef.current) dataMenuRef.current.open = false;
+        return;
+      }
+
+      const importedState = sanitizeImportedRankingState(parsed.state, userId);
+      if (!importedState) {
+        setDashboardImportError("Missing state.");
+        return;
+      }
+
+      if (importedState.schemaVersion !== 1) {
+        setDashboardImportError("Unsupported state schemaVersion.");
+        return;
+      }
+
+      if (userId) importedState.userId = userId;
+
+      setUserRanking(importedState);
+      if (dataMenuRef.current) dataMenuRef.current.open = false;
+    },
+    [dataMenuRef, profile?.id, selectedPlaylistId],
+  );
+
+  const importDashboardFile = useCallback(
+    async file => {
+      if (!file) return;
+      try {
+        const text = await file.text();
+        importDashboardFromText(text);
+      } catch (err) {
+        setDashboardImportError(err?.message || "Failed to read file.");
+      }
+    },
+    [importDashboardFromText],
+  );
+
+  const onPickDashboardImportFile = useCallback(
+    async e => {
+      const file = e.target.files?.[0];
+      e.target.value = "";
+      await importDashboardFile(file);
+    },
+    [importDashboardFile],
+  );
+
+  const onDataImportDragOver = useCallback(e => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.dataTransfer) e.dataTransfer.dropEffect = "copy";
+    setDataImportDragActive(true);
+  }, []);
+
+  const onDataImportDragLeave = useCallback(e => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDataImportDragActive(false);
+  }, []);
+
+  const onDataImportDrop = useCallback(
+    async e => {
+      e.preventDefault();
+      e.stopPropagation();
+      setDataImportDragActive(false);
+      const file = e.dataTransfer?.files?.[0];
+      await importDashboardFile(file);
+    },
+    [importDashboardFile],
+  );
 
   const syncRankings = useCallback(
     async ({ force = false } = {}) => {
@@ -1042,49 +1473,103 @@ function App() {
     <div className="appShell">
       <header className="topBar">
         <div className="topBarInner">
-          <div className="brand">
-            <div className="brandTitle">Spotify Rating App</div>
-            <div className="brandSub">
-              {loggedIn ? (
-                <>
-                  {profile?.display_name
-                    ? `Signed in as ${profile.display_name}.`
-                    : "Signed in."}
-                </>
-              ) : (
-                  "Rank your songs with binary sort and quick reordering."
-              )}
+          <div className="topBarLeft">
+            <div className="brand">
+              <div className="brandTitle">Spotify Rating App</div>
+              <div className="brandSub">
+                {loggedIn ? (
+                  <>
+                    {profile?.display_name
+                      ? `Signed in as ${profile.display_name}.`
+                      : "Signed in."}
+                  </>
+                ) : (
+                    "Rank your songs with binary sort and quick reordering."
+                )}
+              </div>
             </div>
-          </div>
-
-          <div
-            className="headerTitle"
-            aria-label="Page title"
-          >
-            {headerTitle}
-          </div>
-
-          <div className="topActions">
             {loggedIn ? (
-              <>
-                <button
-                  className="btn"
-                  onClick={() => navigate("/app/dashboard", { replace: true })}
+              <div className="headerUtilityActions">
+                <details
+                  ref={dataMenuRef}
+                  className="headerDataMenu"
                 >
-                  Dashboard
-                </button>
+                  <summary className="btn small">Export / Import</summary>
+                  <div className="headerDataMenuPanel">
+                    <div className="headerDataMenuTitle">Data backup</div>
+                    <button
+                      className="btn small"
+                      onClick={exportDashboardJson}
+                    >
+                      Export Data
+                    </button>
+                    <label
+                      className={`headerDataDropzone ${dataImportDragActive ? "active" : ""}`.trim()}
+                      onDragEnter={onDataImportDragOver}
+                      onDragOver={onDataImportDragOver}
+                      onDragLeave={onDataImportDragLeave}
+                      onDrop={onDataImportDrop}
+                    >
+                      <span className="headerDataDropzoneTitle">
+                        Import Backup
+                      </span>
+                      <span className="headerDataDropzoneMeta">
+                        Drag and drop a JSON backup here or click to browse.
+                      </span>
+                      <span className="headerDataDropzoneHint">Choose file</span>
+                      <input
+                        ref={importInputRef}
+                        type="file"
+                        accept="application/json"
+                        onChange={onPickDashboardImportFile}
+                        className="headerDataFileInput"
+                      />
+                    </label>
+                  </div>
+                </details>
+              </div>
+            ) : null}
+          </div>
+
+          <div className="topBarCenter">
+            {loggedIn ? (
+              <nav
+                className="headerNav"
+                aria-label="Primary"
+              >
                 <button
-                  className="btn"
+                  className={`headerNavBtn ${routePath === "/app" ? "active" : ""}`.trim()}
                   onClick={() => navigate("/app", { replace: true })}
                 >
                   Playlists
                 </button>
                 <button
-                  className="btn"
+                  className={`headerNavBtn ${isRankRoute ? "active" : ""}`.trim()}
                   onClick={() => navigate("/rank", { replace: true })}
                 >
                   Rank Songs
                 </button>
+                <button
+                  className={`headerNavBtn ${isDashboardRoute ? "active" : ""}`.trim()}
+                  onClick={() => navigate("/app/dashboard", { replace: true })}
+                >
+                  Dashboard
+                </button>
+              </nav>
+            ) : null}
+          </div>
+
+          <div className="topActions">
+            {loggedIn && dashboardImportError ? (
+              <span
+                className="saveStatus err"
+                title={dashboardImportError}
+              >
+                {dashboardImportError}
+              </span>
+            ) : null}
+            {loggedIn ? (
+              <>
                 {rankingSync.status === "error" ? (
                   <span
                     className="saveStatus err"
@@ -1126,6 +1611,7 @@ function App() {
                   <RankSongsPage
                     userId={profile?.id}
                     ranking={userRanking}
+                    localDataRevision={localDataRevision}
                     onChangeRanking={setUserRanking}
                     trackRequest={rankTrackRequest}
                     onTrackRequestHandled={() => setRankTrackRequest(null)}
@@ -1134,6 +1620,7 @@ function App() {
                   <DashboardPage
                     userId={profile?.id}
                     ranking={userRanking}
+                    localDataRevision={localDataRevision}
                     playlistsCache={playlistsCache}
                     onOverwriteRanking={next => setUserRanking(next)}
                     onStartRankingTrack={(trackKey, options = {}) => {
@@ -1178,8 +1665,8 @@ function App() {
                     playlistsLoading={playlistsLoading}
                     playlistsError={playlistsError}
                     playlistsCache={playlistsCache}
-                    playlistsSource={playlistsSource}
                     cooldownUntilMs={cooldownUntilMs}
+                    nextPlaylistsRefreshAt={nextPlaylistsRefreshAt}
                     nowMs={nowMs}
                     onUpdatePlaylistsCache={next => setPlaylistsCache(next)}
                     onSelect={playlistId => {
@@ -1323,12 +1810,11 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
 function DashboardPage({
   userId,
   ranking,
+  localDataRevision,
   playlistsCache,
   onOverwriteRanking,
   onStartRankingTrack,
 }) {
-  const importInputRef = useRef(null);
-  const [importError, setImportError] = useState(null);
   const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
   const [expandedAlbumKey, setExpandedAlbumKey] = useState(null);
   const [albumTracksById, setAlbumTracksById] = useState(() => ({}));
@@ -1703,95 +2189,6 @@ function DashboardPage({
     ensureArtistImageForArtistRef.current = ensureArtistImageForArtist;
   }, [ensureArtistImageForArtist]);
 
-  function exportJson() {
-    if (!ranking) return;
-    const payload = {
-      version: 1,
-      exportedAt: new Date().toISOString(),
-      state: ranking,
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `spotify-rating-export-${new Date().toISOString().slice(0, 10)}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
-  }
-
-  function sanitizeImportedState(state) {
-    const next = state && typeof state === "object" ? { ...state } : null;
-    if (!next) return null;
-    if (typeof next.schemaVersion !== "number") next.schemaVersion = 1;
-    if (typeof next.userId !== "string") next.userId = userId;
-    if (typeof next.createdAt !== "string")
-      next.createdAt = new Date().toISOString();
-    if (typeof next.updatedAt !== "string")
-      next.updatedAt = new Date().toISOString();
-    if (!next.tracks || typeof next.tracks !== "object") next.tracks = {};
-    if (!Array.isArray(next.history)) next.history = [];
-    if (!next.migratedPlaylists || typeof next.migratedPlaylists !== "object")
-      next.migratedPlaylists = {};
-    return next;
-  }
-
-  function importFromText(text) {
-    setImportError(null);
-    let parsed;
-    try {
-      parsed = JSON.parse(text);
-    } catch {
-      setImportError("Invalid JSON.");
-      return;
-    }
-
-    if (!parsed || typeof parsed !== "object") {
-      setImportError("Invalid export format.");
-      return;
-    }
-
-    if (parsed.version !== 1) {
-      setImportError("Unsupported export version.");
-      return;
-    }
-
-    const importedState = sanitizeImportedState(parsed.state);
-    if (!importedState) {
-      setImportError("Missing state.");
-      return;
-    }
-
-    if (importedState.schemaVersion !== 1) {
-      setImportError("Unsupported state schemaVersion.");
-      return;
-    }
-
-    importedState.userId = userId;
-
-    const ok = window.confirm(
-      "Import will overwrite your current ranking on this device. Continue?",
-    );
-    if (!ok) return;
-
-    onOverwriteRanking?.(importedState);
-  }
-
-  async function onPickImportFile(e) {
-    const file = e.target.files?.[0];
-    e.target.value = "";
-    if (!file) return;
-    try {
-      const text = await file.text();
-      importFromText(text);
-    } catch (err) {
-      setImportError(err?.message || "Failed to read file.");
-    }
-  }
-
   const trackIndex = useMemo(() => {
     const map = new Map();
     if (!userId) return map;
@@ -1841,7 +2238,7 @@ function DashboardPage({
     }
 
     return map;
-  }, [albumTracksById, userId, playlistsCache]);
+  }, [albumTracksById, localDataRevision, userId, playlistsCache]);
 
   const globalTracks = useMemo(() => {
     if (!userId) return [];
@@ -1875,7 +2272,7 @@ function DashboardPage({
               : null,
         };
       });
-  }, [trackIndex, userId]);
+  }, [localDataRevision, trackIndex, userId]);
 
   useEffect(() => {
     if (!ranking || globalTracks.length === 0) return;
@@ -2306,44 +2703,20 @@ function DashboardPage({
   if (!ranking) return <p className="meta">Loading ranking…</p>;
   if (!computed?.hasAnyRatings) {
     return (
-      <div className="section dashboardPage">
-        <p className="meta">
-          No rankings yet. Run a binary sort or do a few head-to-head
-          matchups first.
-        </p>
+      <div className="section dashboardPage pageEmptyStateWrap">
+        <div className="pageEmptyStateCard">
+          <h3>Dashboard is empty</h3>
+          <p className="meta">
+            Open <strong>Playlists</strong> to add music, then use{" "}
+            <strong>Rank Songs</strong> to build your first ranking.
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="section dashboardPage">
-      <div className="cardSub">
-        <h3>Export / Import</h3>
-        <div className="controls">
-          <button
-            className="btn"
-            onClick={exportJson}
-            disabled={!ranking}
-          >
-            Export JSON
-          </button>
-          <button
-            className="btn"
-            onClick={() => importInputRef.current?.click()}
-          >
-            Import JSON
-          </button>
-          <input
-            ref={importInputRef}
-            type="file"
-            accept="application/json"
-            onChange={onPickImportFile}
-            style={{ display: "none" }}
-          />
-        </div>
-        {importError ? <p className="error">{importError}</p> : null}
-      </div>
-
       <div
         className="dashboardColumns"
         role="region"
@@ -3025,6 +3398,7 @@ function LandingPage({ publicPreview }) {
 function RankSongsPage({
   userId,
   ranking,
+  localDataRevision,
   onChangeRanking,
   trackRequest,
   onTrackRequestHandled,
@@ -3047,7 +3421,7 @@ function RankSongsPage({
       .sort((a, b) =>
         (a?.name || "").localeCompare(b?.name || "", "en", { numeric: true }),
       );
-  }, [userId]);
+  }, [localDataRevision, userId]);
 
   useEffect(() => {
     if (!ranking || globalSongs.length === 0) return;
@@ -3282,7 +3656,17 @@ function RankSongsPage({
 
   return (
     <div className="section dashboardPage rankSongsPage">
-      {!userId || uniqueTracks.length === 0 ? null : (
+      {!userId ? null : uniqueTracks.length === 0 ? (
+        <div className="pageEmptyStateWrap">
+          <div className="pageEmptyStateCard">
+            <h3>No songs to rank yet</h3>
+            <p className="meta">
+              Open <strong>Playlists</strong> and add a playlist to start building
+              your ranking.
+            </p>
+          </div>
+        </div>
+      ) : (
         <div
           className="dashboardColumns rankSongsColumns"
           role="region"
@@ -3593,8 +3977,8 @@ function PlaylistsView({
   playlistsLoading,
   playlistsError,
   playlistsCache,
-  playlistsSource,
   cooldownUntilMs,
+  nextPlaylistsRefreshAt,
   nowMs,
   onObservedTracks,
   onUpdatePlaylistsCache,
@@ -3603,6 +3987,7 @@ function PlaylistsView({
   const userId = profile?.id ?? null;
   const [ingestStateById, setIngestStateById] = useState({});
   const [cooldownNowMs, setCooldownNowMs] = useState(() => Date.now());
+  const [playlistQuery, setPlaylistQuery] = useState("");
 
   useEffect(() => {
     const id = setInterval(() => setCooldownNowMs(Date.now()), 1000);
@@ -3615,6 +4000,38 @@ function PlaylistsView({
       [playlistId]: { ...(prev?.[playlistId] ?? {}), ...patch },
     }));
   }
+
+  const filteredPlaylists = useMemo(() => {
+    const items = Array.isArray(playlistsCache?.items) ? playlistsCache.items : [];
+    const q = playlistQuery.trim().toLowerCase();
+    if (!q) return items;
+    return items.filter(p => {
+      const name = typeof p?.name === "string" ? p.name : "";
+      const owner =
+        typeof p?.owner?.display_name === "string" ? p.owner.display_name : "";
+      return `${name} ${owner}`.toLowerCase().includes(q);
+    });
+  }, [playlistQuery, playlistsCache?.items]);
+
+  const spotifyFetchedAt =
+    typeof playlistsCache?.spotifyFetchedAt === "string"
+      ? playlistsCache.spotifyFetchedAt
+      : typeof playlistsCache?.fetchedAt === "string"
+        ? playlistsCache.fetchedAt
+        : null;
+  const spotifyFetchedLabel = spotifyFetchedAt
+    ? formatDateTime(spotifyFetchedAt)
+    : "unknown";
+  const spotifyFetchedAgeLabel = spotifyFetchedAt
+    ? formatAge(nowMs - Date.parse(spotifyFetchedAt))
+    : "unknown";
+  const spotifyFetchedAgeText =
+    spotifyFetchedAgeLabel === "unknown"
+      ? "time unknown"
+      : `${spotifyFetchedAgeLabel} ago`;
+  const nextPlaylistsRefreshLabel = Number.isFinite(nextPlaylistsRefreshAt)
+    ? formatDateTime(nextPlaylistsRefreshAt)
+    : "not scheduled";
 
   async function ingestPlaylist(playlistId) {
     if (!userId || !playlistId) return;
@@ -3698,12 +4115,10 @@ function PlaylistsView({
 
       {playlistsCache ? (
         <p className="meta">
-          Loaded from{" "}
-          <strong>
-            {playlistsSource === "cache" ? "cache" : "Spotify API"}
-          </strong>
-          . Cached at {formatDateTime(playlistsCache.fetchedAt)} (
-          {formatAge(nowMs - Date.parse(playlistsCache.fetchedAt))} ago).{" "}
+          Last retrieved from Spotify{" "}
+          <strong>{spotifyFetchedLabel}</strong> ({spotifyFetchedAgeText}).
+          Next fetch scheduled for <strong>{nextPlaylistsRefreshLabel}</strong>{" "}
+          ({formatFutureRelativeAge(nextPlaylistsRefreshAt, nowMs)}).{" "}
           {playlistsCache.isComplete
             ? `All ${playlistsCache.total} playlist(s) cached.`
             : `Showing ${playlistsCache.items.length} of ${playlistsCache.total} (partial).`}
@@ -3715,64 +4130,86 @@ function PlaylistsView({
       )}
 
       {playlistsCache?.items?.length ? (
-        <div
-          className="tableWrap"
-          role="region"
-          aria-label="Playlists table"
-          tabIndex={0}
-        >
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Playlist</th>
-                <th>Owner</th>
-                <th>Status</th>
-                <th className="right">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {playlistsCache.items.map(p => {
-                const tracksMeta =
-                  userId && p.id
-                    ? readPlaylistTracksCacheMeta(userId, p.id)
-                    : null;
-                const hasTracksCache = Boolean(tracksMeta?.fetchedAt);
-                const snapshotMismatch =
-                  hasTracksCache &&
-                  typeof p.snapshotId === "string" &&
-                  typeof tracksMeta?.snapshotId === "string" &&
-                  p.snapshotId !== tracksMeta.snapshotId;
-                const ownedByUser =
-                  userId && p.owner?.id && p.owner.id === userId;
-                const ingestState = p.id ? ingestStateById?.[p.id] : null;
-                const cooldownUntilMs =
-                  typeof ingestState?.cooldownUntilMs === "number"
-                    ? ingestState.cooldownUntilMs
-                    : null;
-                const cooldownRemaining =
-                  cooldownUntilMs && cooldownUntilMs > cooldownNowMs
-                    ? Math.ceil((cooldownUntilMs - cooldownNowMs) / 1000)
-                    : 0;
-                const isCooling = cooldownRemaining > 0;
-                const isFetching = ingestState?.status === "fetching";
-                const ingestedAt =
-                  typeof p?.ingestedAt === "string" ? p.ingestedAt : null;
-                const statusText = ingestedAt
-                  ? `Added: ${formatDateTime(ingestedAt)}`
-                  : "Not added";
-                const actionLabel = isFetching
-                  ? "Fetching..."
-                  : isCooling
-                    ? `Cooling down (${cooldownRemaining}s)`
-                    : ingestedAt
-                      ? "Refresh Playlist"
-                      : "Add to Rankings";
+        <Fragment>
+          <div className="controls">
+            <input
+              className="textInput"
+              value={playlistQuery}
+              onChange={e => setPlaylistQuery(e.target.value)}
+              placeholder="Search playlists…"
+              aria-label="Search playlists"
+            />
+          </div>
 
-                return (
-                  <tr key={p.id || p.name}>
-                    <td>
+          <div
+            className="playlistGrid"
+            role="region"
+            aria-label="Playlists"
+          >
+            {filteredPlaylists.map(p => {
+              const tracksMeta =
+                userId && p.id ? readPlaylistTracksCacheMeta(userId, p.id) : null;
+              const hasTracksCache = Boolean(tracksMeta?.fetchedAt);
+              const snapshotMismatch =
+                hasTracksCache &&
+                typeof p.snapshotId === "string" &&
+                typeof tracksMeta?.snapshotId === "string" &&
+                p.snapshotId !== tracksMeta.snapshotId;
+              const ownedByUser =
+                userId && p.owner?.id && p.owner.id === userId;
+              const ingestState = p.id ? ingestStateById?.[p.id] : null;
+              const cooldownUntilMs =
+                typeof ingestState?.cooldownUntilMs === "number"
+                  ? ingestState.cooldownUntilMs
+                  : null;
+              const cooldownRemaining =
+                cooldownUntilMs && cooldownUntilMs > cooldownNowMs
+                  ? Math.ceil((cooldownUntilMs - cooldownNowMs) / 1000)
+                  : 0;
+              const isCooling = cooldownRemaining > 0;
+              const isFetching = ingestState?.status === "fetching";
+              const ingestedAt =
+                typeof p?.ingestedAt === "string" ? p.ingestedAt : null;
+              const actionLabel = isFetching
+                ? "Fetching..."
+                : isCooling
+                  ? `Cooling down (${cooldownRemaining}s)`
+                  : ingestedAt
+                    ? "Refresh Playlist"
+                    : "Add to Rankings";
+              const imageUrl =
+                Array.isArray(p?.images) && typeof p.images?.[0]?.url === "string"
+                  ? p.images[0].url
+                  : null;
+
+              return (
+                <article
+                  key={p.id || p.name}
+                  className="playlistCard"
+                >
+                  <button
+                    className="playlistCardArt"
+                    onClick={() => onSelect(p.id)}
+                    disabled={!p.id}
+                    aria-label={`Open ${p.name || "playlist"}`}
+                  >
+                    {imageUrl ? (
+                      <img
+                        src={imageUrl}
+                        alt=""
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="playlistCardPlaceholder" aria-hidden="true">
+                        {(p.name || "?").slice(0, 1).toUpperCase()}
+                      </span>
+                    )}
+                  </button>
+
+                  <div className="playlistCardBody">
+                    <div className="playlistCardTitleRow">
                       <button
-                        className="linkButton"
+                        className="playlistCardTitle"
                         onClick={() => onSelect(p.id)}
                         disabled={!p.id}
                       >
@@ -3789,24 +4226,28 @@ function PlaylistsView({
                           open
                         </a>
                       ) : null}
-                      <div className="cellSub">
-                        {typeof p.tracksTotal === "number"
-                          ? `${p.tracksTotal} tracks`
-                          : "Unknown size"}
-                        {typeof p.public === "boolean"
-                          ? ` · ${p.public ? "public" : "private"}`
-                          : ""}
-                        {ownedByUser ? " · owned by you" : ""}
-                        {hasTracksCache
-                          ? ` · cached ${formatAge(
-                              nowMs - Date.parse(tracksMeta.fetchedAt),
-                            )} ago${snapshotMismatch ? " (playlist changed)" : ""}`
-                          : " · tracks not cached"}
-                      </div>
-                    </td>
-                    <td>{p.owner?.display_name || "Unknown"}</td>
-                    <td>{statusText}</td>
-                    <td className="right">
+                    </div>
+
+                    <div className="playlistCardMeta">
+                      {p.owner?.display_name || "Unknown"}
+                      {ownedByUser ? " · owned by you" : ""}
+                      {typeof p.public === "boolean"
+                        ? ` · ${p.public ? "public" : "private"}`
+                        : ""}
+                    </div>
+
+                    <div className="playlistCardStatus">
+                      {ingestedAt ? `Added ${formatDateTime(ingestedAt)}` : "Not added"}
+                    </div>
+                    <div className="playlistCardCache">
+                      {hasTracksCache
+                        ? `Tracks cached ${formatAge(
+                            nowMs - Date.parse(tracksMeta.fetchedAt),
+                          )} ago${snapshotMismatch ? " (playlist changed)" : ""}`
+                        : "Tracks not cached"}
+                    </div>
+
+                    <div className="playlistCardActions">
                       <button
                         className="btn"
                         onClick={() => p.id && ingestPlaylist(p.id)}
@@ -3814,13 +4255,17 @@ function PlaylistsView({
                       >
                         {actionLabel}
                       </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          {filteredPlaylists.length === 0 ? (
+            <p className="meta">No playlists match that search.</p>
+          ) : null}
+        </Fragment>
       ) : null}
     </div>
   );

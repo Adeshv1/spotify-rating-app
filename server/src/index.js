@@ -55,6 +55,7 @@ const dataDir = path.join(process.cwd(), 'data')
 const rankingsDir = path.join(dataDir, 'rankings')
 const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
 const REFRESH_WINDOW_MS = 15 * 60 * 1000
+const PLAYLISTS_REFRESH_WINDOW_MS = 5 * 60 * 1000
 const PUBLIC_PREVIEW_PLAYLIST_ID = '5DBL17LWOZ1Yk87gan9wQq'
 const spotifyRefreshInFlight = new Map()
 const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
@@ -107,12 +108,14 @@ function writeSpotifyCacheRecordAtomic(userId, cacheKey, record) {
   writeJsonFileAtomic(filePath, record)
 }
 
-function shouldAttemptSpotifyRefresh({ record, nowMs }) {
+function shouldAttemptSpotifyRefresh({ record, nowMs, refreshWindowMs = REFRESH_WINDOW_MS }) {
   if (!record) return { stale: true, throttled: false, shouldRefresh: true }
   const fetchedAtMs = Date.parse(record.fetchedAt)
   const lastRefreshedAtMs = Date.parse(record.lastRefreshedAt)
-  const stale = Number.isFinite(fetchedAtMs) ? nowMs - fetchedAtMs >= REFRESH_WINDOW_MS : true
-  const throttled = Number.isFinite(lastRefreshedAtMs) ? nowMs - lastRefreshedAtMs < REFRESH_WINDOW_MS : false
+  const stale = Number.isFinite(fetchedAtMs) ? nowMs - fetchedAtMs >= refreshWindowMs : true
+  const throttled = Number.isFinite(lastRefreshedAtMs)
+    ? nowMs - lastRefreshedAtMs < refreshWindowMs
+    : false
   return { stale, throttled, shouldRefresh: stale && !throttled }
 }
 
@@ -1340,7 +1343,11 @@ const server = http.createServer((req, res) => {
       let lockTaken = false
 
       if (canUseServerCache && cachedRecord) {
-        const decision = shouldAttemptSpotifyRefresh({ record: cachedRecord, nowMs })
+        const decision = shouldAttemptSpotifyRefresh({
+          record: cachedRecord,
+          nowMs,
+          refreshWindowMs: PLAYLISTS_REFRESH_WINDOW_MS,
+        })
         if (!decision.shouldRefresh) {
           res.setHeader('x-sp-cache', decision.stale ? 'hit_throttled' : 'hit_fresh')
           res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
