@@ -720,6 +720,36 @@ function restoreFullUserImport(parsed, userId) {
 }
 
 const PLAYLIST_AUTO_REFRESH_MS = 5 * 60 * 1000;
+const HOW_TO_USE_STEPS = [
+  "Open Playlists and add one or more Spotify playlists into your ranking pool.",
+  "Go to Rank Songs and place unranked songs with the binary compare flow.",
+  "Use Do not rate for songs you do not want in the final ranking.",
+  "Open Dashboard to review top songs, top artists, and album progress.",
+];
+
+const HOW_TO_USE_PAGES = [
+  {
+    title: "Playlists",
+    description:
+      "Browse your Spotify playlists, search by name or owner, and import tracks with Add to Rankings.",
+  },
+  {
+    title: "Rank Songs",
+    description:
+      "Work through the Unranked list, compare songs in the center column, and fine-tune order from Ranked.",
+  },
+  {
+    title: "Dashboard",
+    description:
+      "See your global ranking as top songs, artist summaries, and album progress with quick Rate next song actions.",
+  },
+];
+
+const HOW_TO_USE_RULES = [
+  "Your ranking is global, so the same song only needs to be ranked once even if it appears in multiple playlists.",
+  "Do not rate removes a song from ranking until you restore it.",
+  "Export / Import lets you back up or restore your data on this device.",
+];
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -754,6 +784,7 @@ function App() {
   const dataMenuRef = useRef(null);
   const [dashboardImportError, setDashboardImportError] = useState(null);
   const [dataImportDragActive, setDataImportDragActive] = useState(false);
+  const [isHowToUseOpen, setIsHowToUseOpen] = useState(false);
   const [localDataRevision, setLocalDataRevision] = useState(0);
 
   const [rankingSync, setRankingSync] = useState({
@@ -1149,6 +1180,22 @@ function App() {
     refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache]);
+
+  useEffect(() => {
+    if (loggedIn) return;
+    setIsHowToUseOpen(false);
+  }, [loggedIn]);
+
+  useEffect(() => {
+    if (!isHowToUseOpen) return;
+
+    const onKeyDown = e => {
+      if (e.key === "Escape") setIsHowToUseOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isHowToUseOpen]);
 
   async function logout() {
     await fetch("/auth/logout", { method: "POST" });
@@ -1579,6 +1626,12 @@ function App() {
                   </span>
                 ) : null}
                 <button
+                  className="btn"
+                  onClick={() => setIsHowToUseOpen(true)}
+                >
+                  How to use
+                </button>
+                <button
                   className="btn danger"
                   onClick={logout}
                 >
@@ -1682,6 +1735,73 @@ function App() {
           </div>
         </div>
       </main>
+
+      {loggedIn && isHowToUseOpen ? (
+        <div
+          className="helpOverlay"
+          role="presentation"
+          onClick={() => setIsHowToUseOpen(false)}
+        >
+          <section
+            className="helpDialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="how-to-use-title"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="helpDialogHeader">
+              <div>
+                <div className="helpDialogEyebrow">How it works</div>
+                <h2 id="how-to-use-title">How to use Spotify Rating App</h2>
+              </div>
+              <button
+                type="button"
+                className="btn small"
+                onClick={() => setIsHowToUseOpen(false)}
+                aria-label="Close how to use dialog"
+              >
+                Close
+              </button>
+            </div>
+
+            <p className="helpDialogIntro">
+              Add playlists from Spotify, rank songs into one global order, then
+              use the dashboard to review your best songs, artists, and albums.
+            </p>
+
+            <div className="helpDialogGrid">
+              <section className="helpCard">
+                <h3>Recommended flow</h3>
+                <ol className="helpList helpOrderedList">
+                  {HOW_TO_USE_STEPS.map(step => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ol>
+              </section>
+
+              <section className="helpCard">
+                <h3>Main pages</h3>
+                <ul className="helpList">
+                  {HOW_TO_USE_PAGES.map(page => (
+                    <li key={page.title}>
+                      <strong>{page.title}:</strong> {page.description}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+
+            <section className="helpCard helpCardWide">
+              <h3>Important rules</h3>
+              <ul className="helpList">
+                {HOW_TO_USE_RULES.map(rule => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+            </section>
+          </section>
+        </div>
+      ) : null}
     </div>
   );
 }
