@@ -29,6 +29,7 @@ import {
 import {
   openAlbumInSpotify,
   openArtistInSpotify,
+  openPlaylistInSpotify,
   openTrackInSpotify,
 } from "./lib/openInSpotify";
 import {
@@ -65,11 +66,18 @@ function normalizedRankValue(value) {
   return Number.isFinite(n) ? Math.round(n) : null;
 }
 
-function formatFutureRelativeAge(targetMs, nowMs) {
-  if (!Number.isFinite(targetMs)) return "not scheduled";
-  const remainingMs = targetMs - nowMs;
-  if (remainingMs <= 15_000) return "soon";
-  return `in ${formatAge(remainingMs)}`;
+function formatCountdown(targetMs, nowMs) {
+  if (!Number.isFinite(targetMs) || !Number.isFinite(nowMs)) return "not scheduled";
+  const totalSeconds = Math.max(0, Math.ceil((targetMs - nowMs) / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
 }
 
 function getTiedRanks(items, getScore) {
@@ -1720,7 +1728,6 @@ function App() {
                     playlistsCache={playlistsCache}
                     cooldownUntilMs={cooldownUntilMs}
                     nextPlaylistsRefreshAt={nextPlaylistsRefreshAt}
-                    nowMs={nowMs}
                     onUpdatePlaylistsCache={next => setPlaylistsCache(next)}
                     onSelect={playlistId => {
                       setSelectedPlaylistId(playlistId);
@@ -1817,6 +1824,11 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
       : [];
   const imageUrl =
     typeof imageState?.imageUrl === "string" ? imageState.imageUrl : null;
+  const rankedTrackCount = Number.isFinite(Number(artist?.totalTracks))
+    ? Number(artist.totalTracks)
+    : Number.isFinite(Number(artist?.n))
+      ? Number(artist.n)
+      : null;
 
   useEffect(() => {
     if (!cardRef.current) return;
@@ -1882,6 +1894,11 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
             <span className="rankValue">
               {Math.round(Number(artist.adjustedAvgRank) || 0)}
             </span>
+          </div>
+        ) : null}
+        {rankedTrackCount ? (
+          <div className="artistCardTrackCount">
+            {rankedTrackCount} ranked track{rankedTrackCount === 1 ? "" : "s"}
           </div>
         ) : null}
         <ul
@@ -4099,7 +4116,6 @@ function PlaylistsView({
   playlistsCache,
   cooldownUntilMs,
   nextPlaylistsRefreshAt,
-  nowMs,
   onObservedTracks,
   onUpdatePlaylistsCache,
   onSelect,
@@ -4139,19 +4155,13 @@ function PlaylistsView({
       : typeof playlistsCache?.fetchedAt === "string"
         ? playlistsCache.fetchedAt
         : null;
-  const spotifyFetchedLabel = spotifyFetchedAt
+  const updatedText = spotifyFetchedAt
     ? formatDateTime(spotifyFetchedAt)
     : "unknown";
-  const spotifyFetchedAgeLabel = spotifyFetchedAt
-    ? formatAge(nowMs - Date.parse(spotifyFetchedAt))
-    : "unknown";
-  const spotifyFetchedAgeText =
-    spotifyFetchedAgeLabel === "unknown"
-      ? "time unknown"
-      : `${spotifyFetchedAgeLabel} ago`;
-  const nextPlaylistsRefreshLabel = Number.isFinite(nextPlaylistsRefreshAt)
-    ? formatDateTime(nextPlaylistsRefreshAt)
-    : "not scheduled";
+  const nextRefreshCountdown = formatCountdown(
+    nextPlaylistsRefreshAt,
+    cooldownNowMs,
+  );
 
   async function ingestPlaylist(playlistId) {
     if (!userId || !playlistId) return;
@@ -4234,14 +4244,18 @@ function PlaylistsView({
       {playlistsError ? <p className="error">{playlistsError}</p> : null}
 
       {playlistsCache ? (
-        <p className="meta">
-          Last retrieved from Spotify{" "}
-          <strong>{spotifyFetchedLabel}</strong> ({spotifyFetchedAgeText}).
-          Next fetch scheduled for <strong>{nextPlaylistsRefreshLabel}</strong>{" "}
-          ({formatFutureRelativeAge(nextPlaylistsRefreshAt, nowMs)}).{" "}
-          {playlistsCache.isComplete
-            ? `All ${playlistsCache.total} playlist(s) cached.`
-            : `Showing ${playlistsCache.items.length} of ${playlistsCache.total} (partial).`}
+        <p className="meta playlistStatusMeta">
+          <span>
+            Updated <strong>{updatedText}</strong>
+          </span>
+          <span>
+            Next update{" "}
+            <strong>
+              {Number.isFinite(nextPlaylistsRefreshAt)
+                ? `in ${nextRefreshCountdown}`
+                : "not scheduled"}
+            </strong>
+          </span>
         </p>
       ) : playlistsLoading ? (
         <p className="meta">Fetching playlists…</p>
@@ -4269,14 +4283,11 @@ function PlaylistsView({
             {filteredPlaylists.map(p => {
               const tracksMeta =
                 userId && p.id ? readPlaylistTracksCacheMeta(userId, p.id) : null;
-              const hasTracksCache = Boolean(tracksMeta?.fetchedAt);
               const snapshotMismatch =
-                hasTracksCache &&
+                Boolean(tracksMeta?.fetchedAt) &&
                 typeof p.snapshotId === "string" &&
                 typeof tracksMeta?.snapshotId === "string" &&
                 p.snapshotId !== tracksMeta.snapshotId;
-              const ownedByUser =
-                userId && p.owner?.id && p.owner.id === userId;
               const ingestState = p.id ? ingestStateById?.[p.id] : null;
               const cooldownUntilMs =
                 typeof ingestState?.cooldownUntilMs === "number"
@@ -4290,13 +4301,31 @@ function PlaylistsView({
               const isFetching = ingestState?.status === "fetching";
               const ingestedAt =
                 typeof p?.ingestedAt === "string" ? p.ingestedAt : null;
+              const inGlobalRankingPool = Boolean(ingestedAt);
+              const lastSyncedAt =
+                typeof tracksMeta?.fetchedAt === "string"
+                  ? tracksMeta.fetchedAt
+                  : ingestedAt;
+              const visibilityLabel =
+                typeof p.public === "boolean"
+                  ? p.public
+                    ? "Public"
+                    : "Private"
+                  : null;
+              const trackCount = Number(p?.tracksTotal);
+              const trackCountLabel = Number.isFinite(trackCount)
+                ? `${trackCount} track${trackCount === 1 ? "" : "s"}`
+                : null;
+              const subtitle = [visibilityLabel, trackCountLabel]
+                .filter(Boolean)
+                .join(" · ");
               const actionLabel = isFetching
-                ? "Fetching..."
+                ? "Syncing..."
                 : isCooling
-                  ? `Cooling down (${cooldownRemaining}s)`
-                  : ingestedAt
-                    ? "Refresh Playlist"
-                    : "Add to Rankings";
+                  ? `Sync in ${cooldownRemaining}s`
+                  : inGlobalRankingPool
+                    ? "Sync"
+                    : "Add to Global Ranking";
               const imageUrl =
                 Array.isArray(p?.images) && typeof p.images?.[0]?.url === "string"
                   ? p.images[0].url
@@ -4307,24 +4336,43 @@ function PlaylistsView({
                   key={p.id || p.name}
                   className="playlistCard"
                 >
-                  <button
-                    className="playlistCardArt"
-                    onClick={() => onSelect(p.id)}
-                    disabled={!p.id}
-                    aria-label={`Open ${p.name || "playlist"}`}
-                  >
-                    {imageUrl ? (
-                      <img
-                        src={imageUrl}
-                        alt=""
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span className="playlistCardPlaceholder" aria-hidden="true">
-                        {(p.name || "?").slice(0, 1).toUpperCase()}
+                  <div className="playlistCardMedia">
+                    <button
+                      className="playlistCardArt"
+                      onClick={() => onSelect(p.id)}
+                      disabled={!p.id}
+                      aria-label={`Open ${p.name || "playlist"}`}
+                    >
+                      {imageUrl ? (
+                        <img
+                          src={imageUrl}
+                          alt=""
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span className="playlistCardPlaceholder" aria-hidden="true">
+                          {(p.name || "?").slice(0, 1).toUpperCase()}
+                        </span>
+                      )}
+                    </button>
+
+                    {inGlobalRankingPool ? (
+                      <span className="playlistCardPoolBadge" aria-label="In global ranking pool">
+                        ✓ In pool
                       </span>
-                    )}
-                  </button>
+                    ) : null}
+
+                    {p.id ? (
+                      <button
+                        type="button"
+                        className="btn small playlistCardSpotifyBtn"
+                        onClick={() => openPlaylistInSpotify(p.id)}
+                        title="Open playlist in Spotify"
+                      >
+                        Play
+                      </button>
+                    ) : null}
+                  </div>
 
                   <div className="playlistCardBody">
                     <div className="playlistCardTitleRow">
@@ -4335,37 +4383,24 @@ function PlaylistsView({
                       >
                         {p.name || "(untitled playlist)"}
                       </button>
-                      {p.externalUrl ? (
-                        <a
-                          className="subLink"
-                          href={p.externalUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          title="Open in Spotify"
-                        >
-                          open
-                        </a>
-                      ) : null}
                     </div>
 
-                    <div className="playlistCardMeta">
-                      {p.owner?.display_name || "Unknown"}
-                      {ownedByUser ? " · owned by you" : ""}
-                      {typeof p.public === "boolean"
-                        ? ` · ${p.public ? "public" : "private"}`
-                        : ""}
-                    </div>
+                    {subtitle ? <div className="playlistCardMeta">{subtitle}</div> : null}
 
-                    <div className="playlistCardStatus">
-                      {ingestedAt ? `Added ${formatDateTime(ingestedAt)}` : "Not added"}
-                    </div>
-                    <div className="playlistCardCache">
-                      {hasTracksCache
-                        ? `Tracks cached ${formatAge(
-                            nowMs - Date.parse(tracksMeta.fetchedAt),
-                          )} ago${snapshotMismatch ? " (playlist changed)" : ""}`
-                        : "Tracks not cached"}
-                    </div>
+                    {!inGlobalRankingPool ? (
+                      <div className="playlistCardStatus">
+                        Playlist songs not in global ranking pool
+                      </div>
+                    ) : null}
+                    {inGlobalRankingPool ? (
+                      <div className="playlistCardCache">
+                        {lastSyncedAt
+                          ? `Last synced ${formatDateTime(lastSyncedAt)}${
+                              snapshotMismatch ? " · playlist changed on Spotify" : ""
+                            }`
+                          : "Ready to sync"}
+                      </div>
+                    ) : null}
 
                     <div className="playlistCardActions">
                       <button

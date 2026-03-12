@@ -92,3 +92,8 @@
 + Data backup/UI: rename the header menu to Export / Import and add a drag-and-drop import dropzone alongside file browsing (implemented 2026-03-11)
 + Playlists: auto-refresh the Spotify playlist list every 5 minutes and show last-retrieved/next-scheduled timing under Your playlists (implemented 2026-03-11)
 + Header/UI: add a How to use button beside Log out with an in-app workflow guide modal (implemented 2026-03-12)
++ Playlists/Dashboard UI: simplify playlist cards, add in-pool indicators + Spotify play button, and show ranked track counts on artist cards (implemented 2026-03-12)
++ Playlists/UI: center the bottom card action button so Sync and Add to Global Ranking align consistently (implemented 2026-03-12)
++ Playlists/UI: stretch card bodies so bottom actions align vertically and remove redundant in-pool body text (implemented 2026-03-12)
++ Playlists/UI: replace the verbose refresh metadata with a compact updated/next-update countdown row (implemented 2026-03-12)
++ Playlists/UI: show the last playlist refresh as a concrete date/time instead of relative text (implemented 2026-03-12)

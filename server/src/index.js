@@ -181,6 +181,7 @@ function computeTopArtistsFromPlaylist(tracks, { maxSongsPerArtist = 5, maxArtis
         name: artistName,
         artistId: null,
         points: 0,
+        totalTracks: 0,
         topTracks: [],
       }
       if (!existing.artistId && artistsDetailed.length) {
@@ -188,6 +189,7 @@ function computeTopArtistsFromPlaylist(tracks, { maxSongsPerArtist = 5, maxArtis
         if (match?.id) existing.artistId = match.id
       }
       existing.points += points
+      existing.totalTracks += 1
       pushTopNByRank(
         existing.topTracks,
         {
@@ -212,6 +214,7 @@ function computeTopArtistsFromPlaylist(tracks, { maxSongsPerArtist = 5, maxArtis
       artistId: artist.artistId,
       points: artist.points,
       score: artist.points,
+      totalTracks: artist.totalTracks,
       topTracks,
       topSongs: topTracks,
       avgRank,

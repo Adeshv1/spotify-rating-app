@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-12T20:41:04.489Z",
-  "lastRefreshedAt": "2026-03-12T20:41:04.489Z",
+  "fetchedAt": "2026-03-12T21:53:22.782Z",
+  "lastRefreshedAt": "2026-03-12T21:53:22.782Z",
   "data": {
     "limit": 50,
     "items": [
@@ -788,7 +788,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f4e0c95c8825f5311866abdd",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f4e0c95c8825f5311866abdd",
             "width": null
           }
         ],
@@ -1034,7 +1034,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
             "width": null
           }
         ],

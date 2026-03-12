@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "playlist_44wO2spZ46mKOKOQTloMs4_tracks_all",
+  "fetchedAt": "2026-03-12T21:07:40.825Z",
+  "lastRefreshedAt": "2026-03-12T21:07:40.825Z",
+  "data": {
+    "limit": 50,
+    "items": [
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2261000,
+          "name": "Chapter 01 - THE OTHER MINISTER",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:11Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2357000,
+          "name": "Chapter 02 - SPINNER'S END",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:34Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2197000,
+          "name": "Chapter 03 - WILL AND WON'T",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:40Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2697000,
+          "name": "Chapter 04 - HORACE SLUGHORN",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:45Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2628000,
+          "name": "Chapter 05 - AN EXCESS OF PHLEGM",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:50Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2510000,
+          "name": "Chapter 06 - DRACO'S DETOUR",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:34:55Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2685000,
+          "name": "Chapter 07 - THE SLUG CLUB",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:01Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 1772000,
+          "name": "Chapter 08 - SNAPE VICTORIOUS",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:05Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2526000,
+          "name": "Chapter 09 - THE HALF-BLOOD PRINCE",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:09Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2654000,
+          "name": "Chapter 10 - THE HOUSE OF GAUNT",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:15Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2129000,
+          "name": "Chapter 11 - HERMIONE'S HELPING HAND",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:19Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2274000,
+          "name": "Chapter 12 - SILVER AND OPALS",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:26Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 3622000,
+          "name": "Chapter 13 - THE SECRET RIDDLE",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:32Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2795000,
+          "name": "Chapter 14 - FELIX FELICIS",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:37Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2567000,
+          "name": "Chapter 15 - THE UNBREAKABLE VOW",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:41Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2629000,
+          "name": "Chapter 16 - A VERY FROSTY CHRISTMAS",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:45Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2738000,
+          "name": "Chapter 17 - A SLUGGISH MEMORY",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:49Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2872000,
+          "name": "Chapter 18 - BIRTHDAY SURPRISES",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:53Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2586000,
+          "name": "Chapter 19 - ELF TAILS",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:35:57Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2897000,
+          "name": "Chapter 20 - LORD VOLDEMORT'S REQUEST",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:06Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2373000,
+          "name": "Chapter 21 - THE UNKNOWABLE ROOM",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:11Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2664000,
+          "name": "Chapter 22 - AFTER THE BURIAL",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:14Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2589000,
+          "name": "Chapter 23 - HORCRUXES",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:19Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2587000,
+          "name": "Chapter 24 - SECTUMSEMPRA",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:23Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2140000,
+          "name": "Chapter 25 - THE SEER OVERHEARD",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:27Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2787000,
+          "name": "Chapter 26 - CAVE",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:31Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2026000,
+          "name": "Chapter 27 - LIGHTNING-STRUCK TOWER",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:36Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 1595000,
+          "name": "Chapter 28 - FLIGHT OF THE PRINCE",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:41Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2491000,
+          "name": "Chapter 29 - THE PHOENIX LAMENT",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:46Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Harry Potter and the Half-Blood Prince",
+            "id": null
+          },
+          "artists": [
+            {
+              "name": "Stephen Fry",
+              "id": null
+            }
+          ],
+          "external_urls": {},
+          "explicit": false,
+          "duration_ms": 2490000,
+          "name": "Chapter 30 - THE WHITE TOMB",
+          "type": "track",
+          "id": null
+        },
+        "added_at": "2025-10-05T07:36:50Z"
+      }
+    ],
+    "href": "https://api.spotify.com/v1/playlists/44wO2spZ46mKOKOQTloMs4/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(id,name),album(id,name,total_tracks)))&locale=*",
+    "next": null,
+    "total": 30,
+    "previous": null,
+    "offset": 0
+  }
+}

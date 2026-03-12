@@ -23,6 +23,8 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
 
   /** @type {Map<string, Array<{trackKey:string, id:string|null, name:string|null, rank:number}>>} */
   const byArtist = new Map()
+  /** @type {Map<string, number>} */
+  const totalTracksByArtist = new Map()
   /** @type {Map<string, string>} */
   const idByArtist = new Map()
 
@@ -46,6 +48,7 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
         maxSongsPerArtist,
       )
       byArtist.set(artistName, existing)
+      totalTracksByArtist.set(artistName, (totalTracksByArtist.get(artistName) || 0) + 1)
     }
   }
 
@@ -60,6 +63,7 @@ export function computeTopArtistsFromTracks(tracks, options = {}) {
       name,
       artistId,
       n,
+      totalTracks: totalTracksByArtist.get(name) || n,
       avgRank,
       adjustedAvgRank,
       topSongs,
