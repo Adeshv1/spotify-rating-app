@@ -97,3 +97,7 @@
 + Playlists/UI: stretch card bodies so bottom actions align vertically and remove redundant in-pool body text (implemented 2026-03-12)
 + Playlists/UI: replace the verbose refresh metadata with a compact updated/next-update countdown row (implemented 2026-03-12)
 + Playlists/UI: show the last playlist refresh as a concrete date/time instead of relative text (implemented 2026-03-12)
++ Playlists/Global pool: add hover-to-remove controls with confirmation and hide removed-playlist songs from the main ranking/dashboard surfaces while preserving rankings (implemented 2026-03-12)
++ Playlists/UI: replace the browser remove confirmation with an in-app modal that matches the site styling (implemented 2026-03-12)
++ Playlists/Spotify safety: make Add to Global Ranking and Sync share one 5-second cooldown across the whole playlist grid (implemented 2026-03-12)
++ Playlists/UI: stop rendering unknown playlist sizes as `0 tracks` and preserve track totals in the compact cache fallback (implemented 2026-03-12)

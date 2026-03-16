@@ -514,6 +514,17 @@
   margin-top: 1rem;
 }
 
+.confirmDialog {
+  width: min(680px, 100%);
+}
+
+.confirmDialogActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
 .helpCard h3 {
   margin: 0 0 0.7rem;
   font-size: 1rem;
@@ -597,6 +608,11 @@
 
   .helpDialogGrid {
     grid-template-columns: 1fr;
+  }
+
+  .confirmDialogActions {
+    flex-direction: column-reverse;
+    align-items: stretch;
   }
 }
 
@@ -1388,7 +1404,8 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
-.playlistCardPoolBadge {
+.playlistCardPoolAction {
+  appearance: none;
   position: absolute;
   top: 0.8rem;
   left: 0.8rem;
@@ -1401,10 +1418,66 @@
   border: 1px solid rgba(74, 222, 128, 0.34);
   background: rgba(18, 90, 48, 0.82);
   color: #d8ffe8;
+  cursor: pointer;
+  font: inherit;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.01em;
-  pointer-events: none;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.playlistCardPoolAction:hover {
+  border-color: rgba(248, 113, 113, 0.48);
+}
+
+.playlistCardPoolActionDefault,
+.playlistCardPoolActionHover {
+  white-space: nowrap;
+}
+
+.playlistCardPoolActionHover {
+  display: none;
+}
+
+@media (hover: hover) {
+  .playlistCard:hover .playlistCardPoolAction,
+  .playlistCard:focus-within .playlistCardPoolAction {
+    border-color: rgba(248, 113, 113, 0.52);
+    background: rgba(126, 18, 18, 0.88);
+    color: #ffe1e1;
+    box-shadow: 0 12px 26px rgba(127, 29, 29, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .playlistCard:hover .playlistCardPoolActionDefault,
+  .playlistCard:focus-within .playlistCardPoolActionDefault {
+    display: none;
+  }
+
+  .playlistCard:hover .playlistCardPoolActionHover,
+  .playlistCard:focus-within .playlistCardPoolActionHover {
+    display: inline;
+  }
+}
+
+.playlistCardPoolAction:disabled {
+  cursor: wait;
+  opacity: 0.9;
+}
+
+@media (prefers-color-scheme: light) and (hover: hover) {
+  .playlistCard:hover .playlistCardPoolAction,
+  .playlistCard:focus-within .playlistCardPoolAction {
+    border-color: rgba(220, 38, 38, 0.46);
+    background: rgba(220, 38, 38, 0.16);
+    color: #8a0d0d;
+    box-shadow: 0 10px 22px rgba(220, 38, 38, 0.14);
+  }
 }
 
 .playlistCardSpotifyBtn {

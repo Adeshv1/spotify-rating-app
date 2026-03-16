@@ -59,7 +59,11 @@ import {
   mergeArtistIdByNameCache,
   readArtistIdByNameCache,
 } from "./lib/spotifyArtistIdCache";
-import { readGlobalSongs, upsertGlobalSongs } from "./lib/globalSongsStore";
+import {
+  readGlobalSongs,
+  replaceGlobalSongs,
+  upsertGlobalSongs,
+} from "./lib/globalSongsStore";
 
 function normalizedRankValue(value) {
   const n = Number(value);
@@ -78,6 +82,99 @@ function formatCountdown(targetMs, nowMs) {
   }
 
   return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+const PLAYLIST_ACTION_COOLDOWN_MS = 5_000;
+
+function getIngestedPlaylistIds(playlistsCache) {
+  return Array.isArray(playlistsCache?.items)
+    ? playlistsCache.items
+        .filter(playlist => typeof playlist?.ingestedAt === "string" && playlist.ingestedAt)
+        .map(playlist => playlist?.id)
+        .filter(Boolean)
+    : [];
+}
+
+function rebuildGlobalSongsFromIngestedPlaylists(userId, playlistsCache) {
+  if (!userId) return { total: 0 };
+
+  const existingItems = readGlobalSongs(userId)?.items;
+  const existingById =
+    existingItems && typeof existingItems === "object" ? existingItems : {};
+  const nextTracks = [];
+
+  for (const playlistId of getIngestedPlaylistIds(playlistsCache)) {
+    const cachedTracks = readPlaylistTracksCache(userId, playlistId);
+    const items = Array.isArray(cachedTracks?.items) ? cachedTracks.items : [];
+
+    for (const track of items) {
+      const trackId = typeof track?.id === "string" ? track.id : null;
+      if (!trackId) continue;
+      const existingTrack = existingById[trackId] || null;
+      nextTracks.push({
+        id: trackId,
+        name:
+          typeof track?.name === "string"
+            ? track.name
+            : typeof existingTrack?.name === "string"
+              ? existingTrack.name
+              : null,
+        artists: Array.isArray(track?.artists)
+          ? track.artists.filter(Boolean)
+          : Array.isArray(existingTrack?.artists)
+            ? existingTrack.artists
+            : [],
+        albumMemberships: Array.isArray(existingTrack?.albumMemberships)
+          ? existingTrack.albumMemberships
+          : undefined,
+        albumId:
+          typeof track?.albumId === "string"
+            ? track.albumId
+            : typeof existingTrack?.albumId === "string"
+              ? existingTrack.albumId
+              : null,
+        album:
+          typeof track?.album === "string"
+            ? track.album
+            : typeof existingTrack?.album === "string"
+              ? existingTrack.album
+              : null,
+        albumTrackCount: Number.isFinite(track?.albumTrackCount)
+          ? track.albumTrackCount
+          : Number.isFinite(existingTrack?.albumTrackCount)
+            ? existingTrack.albumTrackCount
+            : null,
+        durationMs: Number.isFinite(track?.durationMs)
+          ? track.durationMs
+          : Number.isFinite(existingTrack?.durationMs)
+            ? existingTrack.durationMs
+            : null,
+        explicit:
+          typeof track?.explicit === "boolean"
+            ? track.explicit
+            : typeof existingTrack?.explicit === "boolean"
+              ? existingTrack.explicit
+              : null,
+        externalUrl:
+          typeof track?.externalUrl === "string"
+            ? track.externalUrl
+            : typeof existingTrack?.externalUrl === "string"
+              ? existingTrack.externalUrl
+              : null,
+        sourcePlaylistIds: [playlistId],
+      });
+    }
+  }
+
+  return replaceGlobalSongs(userId, nextTracks);
+}
+
+function readVisibleGlobalTracks(userId) {
+  if (!userId) return [];
+  const items = readGlobalSongs(userId)?.items;
+  return items && typeof items === "object"
+    ? Object.values(items).filter(Boolean)
+    : [];
 }
 
 function getTiedRanks(items, getScore) {
@@ -1728,6 +1825,9 @@ function App() {
                     playlistsCache={playlistsCache}
                     cooldownUntilMs={cooldownUntilMs}
                     nextPlaylistsRefreshAt={nextPlaylistsRefreshAt}
+                    onGlobalSongsChanged={() =>
+                      setLocalDataRevision(value => value + 1)
+                    }
                     onUpdatePlaylistsCache={next => setPlaylistsCache(next)}
                     onSelect={playlistId => {
                       setSelectedPlaylistId(playlistId);
@@ -2543,7 +2643,7 @@ function DashboardPage({
       const cached = readAlbumTracksCache(userId, albumId);
       if (cached?.items?.length) {
         setAlbumTracksById(prev => ({ ...prev, [albumId]: cached }));
-        upsertGlobalSongs(userId, cached.items);
+        upsertGlobalSongs(userId, cached.items, { onlyExisting: true });
         return cached;
       }
 
@@ -2585,7 +2685,7 @@ function DashboardPage({
         });
         const nextRecord = record || readAlbumTracksCache(userId, albumId);
         if (nextRecord?.items?.length) {
-          upsertGlobalSongs(userId, nextRecord.items);
+          upsertGlobalSongs(userId, nextRecord.items, { onlyExisting: true });
           setAlbumTracksById(prev => ({ ...prev, [albumId]: nextRecord }));
         }
         setAlbumLoadStateById(prev => ({
@@ -2614,25 +2714,26 @@ function DashboardPage({
     const rankByKey = new Map();
     orderedKeys.forEach((key, idx) => rankByKey.set(key, idx + 1));
 
-    const rows = orderedKeys
-      .filter(trackKey => !trackKey.startsWith("meta:"))
-      .map(trackKey => {
-        const meta = trackIndex.get(trackKey) || null;
+    const rows = canonicalGlobalTracks
+      .map(track => {
+        const meta = trackIndex.get(track.trackKey) || null;
         return {
-          trackKey,
+          trackKey: track.trackKey,
           id:
             meta?.id ||
-            (trackKey.startsWith("spid:")
-              ? trackKey.slice("spid:".length)
+            track.id ||
+            (track.trackKey.startsWith("spid:")
+              ? track.trackKey.slice("spid:".length)
               : null),
-          name: meta?.name || null,
-          artists: meta?.artists || [],
+          name: track.name || meta?.name || null,
+          artists: track.artists || meta?.artists || [],
           artistsDetailed: meta?.artistsDetailed || [],
-          album: meta?.album || null,
-          rank: rankByKey.get(trackKey) || null,
+          album: track.album || meta?.album || null,
+          rank: rankByKey.get(track.trackKey) || null,
         };
       })
-      .filter(r => Number.isFinite(Number(r.rank)));
+      .filter(r => Number.isFinite(Number(r.rank)))
+      .sort((left, right) => left.rank - right.rank);
 
     const hasAnyRatings = rows.length > 0;
 
@@ -4116,6 +4217,7 @@ function PlaylistsView({
   playlistsCache,
   cooldownUntilMs,
   nextPlaylistsRefreshAt,
+  onGlobalSongsChanged,
   onObservedTracks,
   onUpdatePlaylistsCache,
   onSelect,
@@ -4123,18 +4225,60 @@ function PlaylistsView({
   const userId = profile?.id ?? null;
   const [ingestStateById, setIngestStateById] = useState({});
   const [cooldownNowMs, setCooldownNowMs] = useState(() => Date.now());
+  const [globalActionCooldownUntilMs, setGlobalActionCooldownUntilMs] = useState(null);
   const [playlistQuery, setPlaylistQuery] = useState("");
+  const [playlistPendingRemoval, setPlaylistPendingRemoval] = useState(null);
 
   useEffect(() => {
     const id = setInterval(() => setCooldownNowMs(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (!playlistPendingRemoval) return;
+
+    const onKeyDown = event => {
+      if (event.key === "Escape") setPlaylistPendingRemoval(null);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [playlistPendingRemoval]);
+
   function updateIngestState(playlistId, patch) {
     setIngestStateById(prev => ({
       ...prev,
       [playlistId]: { ...(prev?.[playlistId] ?? {}), ...patch },
     }));
+  }
+
+  function startGlobalActionCooldown() {
+    setGlobalActionCooldownUntilMs(Date.now() + PLAYLIST_ACTION_COOLDOWN_MS);
+  }
+
+  async function confirmRemovePlaylistFromPool() {
+    const playlist = playlistPendingRemoval;
+    const playlistId =
+      typeof playlist?.id === "string" && playlist.id ? playlist.id : null;
+    if (!userId || !playlistId) return;
+
+    updateIngestState(playlistId, { status: "removing", error: null });
+    try {
+      const updated = setPlaylistIngestedAt(userId, playlistId, null);
+      if (updated) {
+        rebuildGlobalSongsFromIngestedPlaylists(userId, updated);
+        onObservedTracks?.(readVisibleGlobalTracks(userId));
+        onGlobalSongsChanged?.();
+        onUpdatePlaylistsCache?.(updated);
+      }
+      setPlaylistPendingRemoval(null);
+      updateIngestState(playlistId, { status: "idle", error: null });
+    } catch (error) {
+      updateIngestState(playlistId, {
+        status: "idle",
+        error: error?.message || "Removal failed",
+      });
+    }
   }
 
   const filteredPlaylists = useMemo(() => {
@@ -4162,15 +4306,20 @@ function PlaylistsView({
     nextPlaylistsRefreshAt,
     cooldownNowMs,
   );
+  const globalActionCooldownRemaining =
+    Number.isFinite(globalActionCooldownUntilMs) &&
+    globalActionCooldownUntilMs > cooldownNowMs
+      ? Math.ceil((globalActionCooldownUntilMs - cooldownNowMs) / 1000)
+      : 0;
+  const isGlobalActionCooling = globalActionCooldownRemaining > 0;
 
   async function ingestPlaylist(playlistId) {
-    if (!userId || !playlistId) return;
-    const cooldownUntilMs = Date.now() + 10_000;
+    if (!userId || !playlistId || isGlobalActionCooling) return;
     updateIngestState(playlistId, {
       status: "fetching",
-      cooldownUntilMs,
       error: null,
     });
+    startGlobalActionCooldown();
 
     try {
       const res = await fetch(
@@ -4222,12 +4371,18 @@ function PlaylistsView({
       const tracks = Array.isArray(cachedTracks?.items)
         ? cachedTracks.items
         : [];
-      upsertGlobalSongs(userId, tracks);
-      onObservedTracks?.(tracks);
-
       const ingestedAt = new Date().toISOString();
       const updated = setPlaylistIngestedAt(userId, playlistId, ingestedAt);
-      if (updated) onUpdatePlaylistsCache?.(updated);
+      if (updated) {
+        rebuildGlobalSongsFromIngestedPlaylists(userId, updated);
+        onObservedTracks?.(readVisibleGlobalTracks(userId));
+        onGlobalSongsChanged?.();
+        onUpdatePlaylistsCache?.(updated);
+      } else {
+        upsertGlobalSongs(userId, tracks, { sourcePlaylistId: playlistId });
+        onObservedTracks?.(readVisibleGlobalTracks(userId));
+        onGlobalSongsChanged?.();
+      }
 
       updateIngestState(playlistId, { status: "idle", error: null });
     } catch (err) {
@@ -4289,16 +4444,8 @@ function PlaylistsView({
                 typeof tracksMeta?.snapshotId === "string" &&
                 p.snapshotId !== tracksMeta.snapshotId;
               const ingestState = p.id ? ingestStateById?.[p.id] : null;
-              const cooldownUntilMs =
-                typeof ingestState?.cooldownUntilMs === "number"
-                  ? ingestState.cooldownUntilMs
-                  : null;
-              const cooldownRemaining =
-                cooldownUntilMs && cooldownUntilMs > cooldownNowMs
-                  ? Math.ceil((cooldownUntilMs - cooldownNowMs) / 1000)
-                  : 0;
-              const isCooling = cooldownRemaining > 0;
               const isFetching = ingestState?.status === "fetching";
+              const isRemoving = ingestState?.status === "removing";
               const ingestedAt =
                 typeof p?.ingestedAt === "string" ? p.ingestedAt : null;
               const inGlobalRankingPool = Boolean(ingestedAt);
@@ -4312,7 +4459,10 @@ function PlaylistsView({
                     ? "Public"
                     : "Private"
                   : null;
-              const trackCount = Number(p?.tracksTotal);
+              const trackCount =
+                Number.isFinite(p?.tracksTotal) && p?.tracksTotal >= 0
+                  ? Number(p.tracksTotal)
+                  : null;
               const trackCountLabel = Number.isFinite(trackCount)
                 ? `${trackCount} track${trackCount === 1 ? "" : "s"}`
                 : null;
@@ -4321,8 +4471,10 @@ function PlaylistsView({
                 .join(" · ");
               const actionLabel = isFetching
                 ? "Syncing..."
-                : isCooling
-                  ? `Sync in ${cooldownRemaining}s`
+                : isGlobalActionCooling
+                  ? `Wait ${globalActionCooldownRemaining}s`
+                  : isRemoving
+                    ? "Removing..."
                   : inGlobalRankingPool
                     ? "Sync"
                     : "Add to Global Ranking";
@@ -4357,9 +4509,18 @@ function PlaylistsView({
                     </button>
 
                     {inGlobalRankingPool ? (
-                      <span className="playlistCardPoolBadge" aria-label="In global ranking pool">
-                        ✓ In pool
-                      </span>
+                      <button
+                        type="button"
+                        className="playlistCardPoolAction"
+                        onClick={() => setPlaylistPendingRemoval(p)}
+                        disabled={isRemoving || isFetching}
+                        title="Remove playlist songs from the global pool"
+                      >
+                        <span className="playlistCardPoolActionDefault">✓ In pool</span>
+                        <span className="playlistCardPoolActionHover">
+                          {isRemoving ? "Removing..." : "Remove from Pool"}
+                        </span>
+                      </button>
                     ) : null}
 
                     {p.id ? (
@@ -4406,7 +4567,7 @@ function PlaylistsView({
                       <button
                         className="btn"
                         onClick={() => p.id && ingestPlaylist(p.id)}
-                        disabled={!p.id || isFetching || isCooling}
+                        disabled={!p.id || isFetching || isGlobalActionCooling || isRemoving}
                       >
                         {actionLabel}
                       </button>
@@ -4421,6 +4582,76 @@ function PlaylistsView({
             <p className="meta">No playlists match that search.</p>
           ) : null}
         </Fragment>
+      ) : null}
+
+      {playlistPendingRemoval ? (
+        <div
+          className="helpOverlay"
+          role="presentation"
+          onClick={() => setPlaylistPendingRemoval(null)}
+        >
+          <section
+            className="helpDialog confirmDialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="remove-from-pool-title"
+            onClick={event => event.stopPropagation()}
+          >
+            <div className="helpDialogHeader">
+              <div>
+                <div className="helpDialogEyebrow">Confirm action</div>
+                <h2 id="remove-from-pool-title">Remove from Global Pool</h2>
+              </div>
+              <button
+                type="button"
+                className="btn small"
+                onClick={() => setPlaylistPendingRemoval(null)}
+                aria-label="Close remove from pool dialog"
+              >
+                Close
+              </button>
+            </div>
+
+            <p className="helpDialogIntro">
+              Remove{" "}
+              <strong>
+                {playlistPendingRemoval?.name || "this playlist"}
+              </strong>{" "}
+              from the global pool?
+            </p>
+
+            <section className="helpCard helpCardWide">
+              <ul className="helpList">
+                <li>Any songs you already rated keep their ranking forever.</li>
+                <li>
+                  Songs that only came from this playlist will disappear from
+                  Dashboard and Rank Songs.
+                </li>
+                <li>
+                  If you sync another playlist containing those songs later,
+                  they will become visible in the global pool again.
+                </li>
+              </ul>
+            </section>
+
+            <div className="confirmDialogActions">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => setPlaylistPendingRemoval(null)}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="btn danger"
+                onClick={confirmRemovePlaylistFromPool}
+              >
+                Remove from Pool
+              </button>
+            </div>
+          </section>
+        </div>
       ) : null}
     </div>
   );

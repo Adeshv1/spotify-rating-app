@@ -96,12 +96,14 @@ export function writePlaylistsCache(
   try {
     localStorage.setItem(keyForUserPlaylists(userId), JSON.stringify(record))
   } catch {
-    // If storage quota is exceeded, fall back to caching a minimal subset (names/ids only).
+    // If storage quota is exceeded, fall back to a compact subset that still preserves card metadata.
     const minimal = {
       ...record,
       items: items.map((p) => ({
         id: p.id,
         name: p.name,
+        tracksTotal: Number.isFinite(p?.tracksTotal) ? p.tracksTotal : null,
+        public: typeof p?.public === 'boolean' ? p.public : null,
         externalUrl: p.externalUrl,
         ingestedAt: p.ingestedAt ?? null,
       })),
