@@ -2,23 +2,70 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-16T18:00:15.663Z",
-  "lastRefreshedAt": "2026-03-16T18:00:15.663Z",
+  "fetchedAt": "2026-03-17T23:08:43.019Z",
+  "lastRefreshedAt": "2026-03-17T23:08:43.019Z",
   "data": {
+    "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "limit": 50,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 48,
     "items": [
       {
-        "name": "Spotify App - Demo Playlist",
-        "id": "5DBL17LWOZ1Yk87gan9wQq",
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4j8kEJ1ifY5t1vsdSOabrW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4j8kEJ1ifY5t1vsdSOabrW",
+        "id": "4j8kEJ1ifY5t1vsdSOabrW",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e027b1b6f41c1645af9757d5616ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e027b1b6f41c1645af9757d5616ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e027b1b6f41c1645af9757d5616ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "width": 60
+          }
+        ],
+        "name": "March 17, 2026 Top 50 Global",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAA1aGREC3shWwNHrlBC4md/75X+XW",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4j8kEJ1ifY5t1vsdSOabrW/items",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4j8kEJ1ifY5t1vsdSOabrW"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/5DBL17LWOZ1Yk87gan9wQq"
         },
+        "href": "https://api.spotify.com/v1/playlists/5DBL17LWOZ1Yk87gan9wQq",
+        "id": "5DBL17LWOZ1Yk87gan9wQq",
         "images": [
           {
             "height": 640,
@@ -36,21 +83,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABGcPcr6g8mJXgXANgAwPliwIX1T6"
-      },
-      {
-        "name": "All songs ever",
-        "id": "1zhGT9u4JEkoqQbv38foOv",
+        "name": "Spotify App - Demo Playlist",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABGcPcr6g8mJXgXANgAwPliwIX1T6",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/5DBL17LWOZ1Yk87gan9wQq/items",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5DBL17LWOZ1Yk87gan9wQq"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1zhGT9u4JEkoqQbv38foOv"
         },
+        "href": "https://api.spotify.com/v1/playlists/1zhGT9u4JEkoqQbv38foOv",
+        "id": "1zhGT9u4JEkoqQbv38foOv",
         "images": [
           {
             "height": 640,
@@ -68,21 +129,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAgm8E+hlNp1WGaTdjAVMUe81FIUz2"
-      },
-      {
-        "name": "Riaaaz",
-        "id": "6zNrcAH0P5Qk9i53KWPJCV",
+        "name": "All songs ever",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAgm8E+hlNp1WGaTdjAVMUe81FIUz2",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1zhGT9u4JEkoqQbv38foOv/items",
+          "total": 1453
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1zhGT9u4JEkoqQbv38foOv"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/6zNrcAH0P5Qk9i53KWPJCV"
         },
+        "href": "https://api.spotify.com/v1/playlists/6zNrcAH0P5Qk9i53KWPJCV",
+        "id": "6zNrcAH0P5Qk9i53KWPJCV",
         "images": [
           {
             "height": null,
@@ -90,21 +165,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABcYo9CtabPeAcHphazSUizzQF3DF"
-      },
-      {
-        "name": "Punjabi Drill",
-        "id": "4uiAJG1CeJlyrr6Hy3lHhF",
+        "name": "Riaaaz",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABcYo9CtabPeAcHphazSUizzQF3DF",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/6zNrcAH0P5Qk9i53KWPJCV/items",
+          "total": 2
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6zNrcAH0P5Qk9i53KWPJCV"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4uiAJG1CeJlyrr6Hy3lHhF"
         },
+        "href": "https://api.spotify.com/v1/playlists/4uiAJG1CeJlyrr6Hy3lHhF",
+        "id": "4uiAJG1CeJlyrr6Hy3lHhF",
         "images": [
           {
             "height": 640,
@@ -122,69 +211,125 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAReNFSJlp1QDeUCqgcEKhWx/pUElE"
-      },
-      {
-        "name": "Harry Potter - Deathly Hallows",
-        "id": "0YA4nQ3ckDHDv2vgaCf5gx",
+        "name": "Punjabi Drill",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
-        "public": false,
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAR3gm/uV9f3M5Qhda4gsCsDQjnBA1",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4uiAJG1CeJlyrr6Hy3lHhF/items",
+          "total": 37
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4uiAJG1CeJlyrr6Hy3lHhF"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0YA4nQ3ckDHDv2vgaCf5gx"
         },
+        "href": "https://api.spotify.com/v1/playlists/0YA4nQ3ckDHDv2vgaCf5gx",
+        "id": "0YA4nQ3ckDHDv2vgaCf5gx",
         "images": null,
-        "description": "",
-        "snapshot_id": "AAAAJj76BLEUVrhfjF2HiKup/b8RofOf"
-      },
-      {
-        "name": "Harry Potter - Half-Blood Prince",
-        "id": "44wO2spZ46mKOKOQTloMs4",
+        "name": "Harry Potter - Deathly Hallows",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": false,
+        "snapshot_id": "AAAAJj76BLEUVrhfjF2HiKup/b8RofOf",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0YA4nQ3ckDHDv2vgaCf5gx/items",
+          "total": 37
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0YA4nQ3ckDHDv2vgaCf5gx"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/44wO2spZ46mKOKOQTloMs4"
         },
+        "href": "https://api.spotify.com/v1/playlists/44wO2spZ46mKOKOQTloMs4",
+        "id": "44wO2spZ46mKOKOQTloMs4",
         "images": null,
-        "description": "",
-        "snapshot_id": "AAAAIETOfsgtmzZqMX5rx5LQ+reD88D9"
-      },
-      {
-        "name": "Harry Potter - Order of the phoenix",
-        "id": "3DttJNGktjVGA5xjWkC1Kf",
+        "name": "Harry Potter - Half-Blood Prince",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": false,
+        "snapshot_id": "AAAAIETOfsgtmzZqMX5rx5LQ+reD88D9",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/44wO2spZ46mKOKOQTloMs4/items",
+          "total": 30
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:44wO2spZ46mKOKOQTloMs4"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3DttJNGktjVGA5xjWkC1Kf"
         },
+        "href": "https://api.spotify.com/v1/playlists/3DttJNGktjVGA5xjWkC1Kf",
+        "id": "3DttJNGktjVGA5xjWkC1Kf",
         "images": null,
-        "description": "",
-        "snapshot_id": "AAAAKnKTn8Yfpyo5di5bJQE5lNKsbPkJ"
-      },
-      {
-        "name": "Nastaljia",
-        "id": "0jf9KAqXyJYSOzHUsnXMN5",
+        "name": "Harry Potter - Order of the phoenix",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
-        "public": true,
+        "primary_color": null,
+        "public": false,
+        "snapshot_id": "AAAAKnKTn8Yfpyo5di5bJQE5lNKsbPkJ",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3DttJNGktjVGA5xjWkC1Kf/items",
+          "total": 38
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3DttJNGktjVGA5xjWkC1Kf"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0jf9KAqXyJYSOzHUsnXMN5"
         },
+        "href": "https://api.spotify.com/v1/playlists/0jf9KAqXyJYSOzHUsnXMN5",
+        "id": "0jf9KAqXyJYSOzHUsnXMN5",
         "images": [
           {
             "height": 640,
@@ -202,21 +347,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAHXUg81nFC3wYoOVIdvhFmUdTUvoK"
-      },
-      {
-        "name": "Kirtan",
-        "id": "5FNo8euhfg8yGQBf02tO7z",
+        "name": "Nastaljia",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAHXUg81nFC3wYoOVIdvhFmUdTUvoK",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0jf9KAqXyJYSOzHUsnXMN5/items",
+          "total": 26
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0jf9KAqXyJYSOzHUsnXMN5"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/5FNo8euhfg8yGQBf02tO7z"
         },
+        "href": "https://api.spotify.com/v1/playlists/5FNo8euhfg8yGQBf02tO7z",
+        "id": "5FNo8euhfg8yGQBf02tO7z",
         "images": [
           {
             "height": null,
@@ -224,21 +383,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABOXlUnZKusIGUlqaY+knF7JyEGoB"
-      },
-      {
-        "name": "2025 Jhota",
-        "id": "14mUb6lFnrV176g2z2ZKKw",
+        "name": "Kirtan",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABOXlUnZKusIGUlqaY+knF7JyEGoB",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/5FNo8euhfg8yGQBf02tO7z/items",
+          "total": 2
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5FNo8euhfg8yGQBf02tO7z"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/14mUb6lFnrV176g2z2ZKKw"
         },
+        "href": "https://api.spotify.com/v1/playlists/14mUb6lFnrV176g2z2ZKKw",
+        "id": "14mUb6lFnrV176g2z2ZKKw",
         "images": [
           {
             "height": null,
@@ -246,21 +419,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABAgPEZSl3CY7rxmGEPEiljlkH+xl"
+        "name": "2025 Jhota",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAABAgPEZSl3CY7rxmGEPEiljlkH+xl",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/14mUb6lFnrV176g2z2ZKKw/items",
+          "total": 2
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:14mUb6lFnrV176g2z2ZKKw"
       },
       {
-        "name": "Old Hindi songs ",
-        "id": "1HhyXOhzwyNlEsqGekNAMK",
-        "owner": {
-          "display_name": "Rav",
-          "id": "83jnmnj7f8xxxsukgqo3w96m6"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1HhyXOhzwyNlEsqGekNAMK"
         },
+        "href": "https://api.spotify.com/v1/playlists/1HhyXOhzwyNlEsqGekNAMK",
+        "id": "1HhyXOhzwyNlEsqGekNAMK",
         "images": [
           {
             "height": 640,
@@ -278,21 +465,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAATJjEePCWkspsuzyUH+c4Tyg3gtzf"
-      },
-      {
-        "name": "Hindi Sufi ",
-        "id": "6oilff35ulmJeD35OslwPy",
+        "name": "Old Hindi songs ",
         "owner": {
           "display_name": "Rav",
-          "id": "83jnmnj7f8xxxsukgqo3w96m6"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/83jnmnj7f8xxxsukgqo3w96m6"
+          },
+          "href": "https://api.spotify.com/v1/users/83jnmnj7f8xxxsukgqo3w96m6",
+          "id": "83jnmnj7f8xxxsukgqo3w96m6",
+          "type": "user",
+          "uri": "spotify:user:83jnmnj7f8xxxsukgqo3w96m6"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAATJjEePCWkspsuzyUH+c4Tyg3gtzf",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1HhyXOhzwyNlEsqGekNAMK/items",
+          "total": 68
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1HhyXOhzwyNlEsqGekNAMK"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/6oilff35ulmJeD35OslwPy"
         },
+        "href": "https://api.spotify.com/v1/playlists/6oilff35ulmJeD35OslwPy",
+        "id": "6oilff35ulmJeD35OslwPy",
         "images": [
           {
             "height": 640,
@@ -310,21 +511,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAnC3FNlD/fMNqvrP73iSYWgfp6YR8"
+        "name": "Hindi Sufi ",
+        "owner": {
+          "display_name": "Rav",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/83jnmnj7f8xxxsukgqo3w96m6"
+          },
+          "href": "https://api.spotify.com/v1/users/83jnmnj7f8xxxsukgqo3w96m6",
+          "id": "83jnmnj7f8xxxsukgqo3w96m6",
+          "type": "user",
+          "uri": "spotify:user:83jnmnj7f8xxxsukgqo3w96m6"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAnC3FNlD/fMNqvrP73iSYWgfp6YR8",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/6oilff35ulmJeD35OslwPy/items",
+          "total": 147
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6oilff35ulmJeD35OslwPy"
       },
       {
-        "name": "Patander",
-        "id": "0DFuELi4DNUAV3Nzkb0fNf",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0DFuELi4DNUAV3Nzkb0fNf"
         },
+        "href": "https://api.spotify.com/v1/playlists/0DFuELi4DNUAV3Nzkb0fNf",
+        "id": "0DFuELi4DNUAV3Nzkb0fNf",
         "images": [
           {
             "height": null,
@@ -332,21 +547,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAACCQZ7Zm6vWQ02t49obB2VBgZENpE"
-      },
-      {
-        "name": "Jeep",
-        "id": "0SlK1V7e3OyYyVV9HxndVQ",
+        "name": "Patander",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAACCQZ7Zm6vWQ02t49obB2VBgZENpE",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0DFuELi4DNUAV3Nzkb0fNf/items",
+          "total": 10
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0DFuELi4DNUAV3Nzkb0fNf"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0SlK1V7e3OyYyVV9HxndVQ"
         },
+        "href": "https://api.spotify.com/v1/playlists/0SlK1V7e3OyYyVV9HxndVQ",
+        "id": "0SlK1V7e3OyYyVV9HxndVQ",
         "images": [
           {
             "height": 640,
@@ -364,21 +593,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAI4pPCick+5mQ+TknFb5tLlJcq5Df"
-      },
-      {
-        "name": "My Playlist #25",
-        "id": "2mo3Q1gFvaAsSXHDx4vr3B",
+        "name": "Jeep",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAI4pPCick+5mQ+TknFb5tLlJcq5Df",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0SlK1V7e3OyYyVV9HxndVQ/items",
+          "total": 32
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0SlK1V7e3OyYyVV9HxndVQ"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/2mo3Q1gFvaAsSXHDx4vr3B"
         },
+        "href": "https://api.spotify.com/v1/playlists/2mo3Q1gFvaAsSXHDx4vr3B",
+        "id": "2mo3Q1gFvaAsSXHDx4vr3B",
         "images": [
           {
             "height": 640,
@@ -396,21 +639,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAApmp4qTR/+s6LnX0dPoPDA7dYQAT"
-      },
-      {
-        "name": "Word for word bar for bar",
-        "id": "0DZSEbjtKVtbWmnBw9Xmmr",
+        "name": "My Playlist #25",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAApmp4qTR/+s6LnX0dPoPDA7dYQAT",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/2mo3Q1gFvaAsSXHDx4vr3B/items",
+          "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2mo3Q1gFvaAsSXHDx4vr3B"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0DZSEbjtKVtbWmnBw9Xmmr"
         },
+        "href": "https://api.spotify.com/v1/playlists/0DZSEbjtKVtbWmnBw9Xmmr",
+        "id": "0DZSEbjtKVtbWmnBw9Xmmr",
         "images": [
           {
             "height": 640,
@@ -428,21 +685,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABdCgzHtK5AxrfYVhSTXVIPCq+5uA"
-      },
-      {
-        "name": "Top 100",
-        "id": "7vXThCWg6sLDsnOSOfORMn",
+        "name": "Word for word bar for bar",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABdCgzHtK5AxrfYVhSTXVIPCq+5uA",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0DZSEbjtKVtbWmnBw9Xmmr/items",
+          "total": 4
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0DZSEbjtKVtbWmnBw9Xmmr"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/7vXThCWg6sLDsnOSOfORMn"
         },
+        "href": "https://api.spotify.com/v1/playlists/7vXThCWg6sLDsnOSOfORMn",
+        "id": "7vXThCWg6sLDsnOSOfORMn",
         "images": [
           {
             "height": 640,
@@ -460,21 +731,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAEoIwIS4nQSJuWQql0cwo7F/A1SKj"
-      },
-      {
-        "name": "Youtube Playlist",
-        "id": "1VztsuQGfbXSY65JjRQQ6O",
+        "name": "Top 100",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAEoIwIS4nQSJuWQql0cwo7F/A1SKj",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/7vXThCWg6sLDsnOSOfORMn/items",
+          "total": 17
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7vXThCWg6sLDsnOSOfORMn"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1VztsuQGfbXSY65JjRQQ6O"
         },
+        "href": "https://api.spotify.com/v1/playlists/1VztsuQGfbXSY65JjRQQ6O",
+        "id": "1VztsuQGfbXSY65JjRQQ6O",
         "images": [
           {
             "height": 640,
@@ -492,21 +777,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAFuZo0cde2zacks9qua68H5GwCEz4"
-      },
-      {
-        "name": "MP ganne",
-        "id": "3FR3KFmc9V8LBtGbCD3xUz",
+        "name": "Youtube Playlist",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAFuZo0cde2zacks9qua68H5GwCEz4",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1VztsuQGfbXSY65JjRQQ6O/items",
+          "total": 20
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1VztsuQGfbXSY65JjRQQ6O"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3FR3KFmc9V8LBtGbCD3xUz"
         },
+        "href": "https://api.spotify.com/v1/playlists/3FR3KFmc9V8LBtGbCD3xUz",
+        "id": "3FR3KFmc9V8LBtGbCD3xUz",
         "images": [
           {
             "height": 640,
@@ -524,21 +823,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAHrwV1Waa7PHzgbprhjKUNuuZATgW"
+        "name": "MP ganne",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAHrwV1Waa7PHzgbprhjKUNuuZATgW",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3FR3KFmc9V8LBtGbCD3xUz/items",
+          "total": 21
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3FR3KFmc9V8LBtGbCD3xUz"
       },
       {
-        "name": "12021",
-        "id": "0pfCfJMB4keQ6j1Yp0Ivb7",
-        "owner": {
-          "display_name": "Navyyc",
-          "id": "fatleopard"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0pfCfJMB4keQ6j1Yp0Ivb7"
         },
+        "href": "https://api.spotify.com/v1/playlists/0pfCfJMB4keQ6j1Yp0Ivb7",
+        "id": "0pfCfJMB4keQ6j1Yp0Ivb7",
         "images": [
           {
             "height": 640,
@@ -556,21 +869,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAMlF/mN67kggg0uS77YkS5kYELb+T"
-      },
-      {
-        "name": "Punjabi rap",
-        "id": "1sZL1p2pBAOb0kT2keYUN7",
+        "name": "12021",
         "owner": {
           "display_name": "Navyyc",
-          "id": "fatleopard"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAMlF/mN67kggg0uS77YkS5kYELb+T",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0pfCfJMB4keQ6j1Yp0Ivb7/items",
+          "total": 47
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0pfCfJMB4keQ6j1Yp0Ivb7"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1sZL1p2pBAOb0kT2keYUN7"
         },
+        "href": "https://api.spotify.com/v1/playlists/1sZL1p2pBAOb0kT2keYUN7",
+        "id": "1sZL1p2pBAOb0kT2keYUN7",
         "images": [
           {
             "height": 640,
@@ -588,21 +915,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAUDcv+/0xcFhvwBThFxoMlhg8tXpQ"
-      },
-      {
-        "name": "All Old punjabi",
-        "id": "7pzlX054DC3km0iTXrdcMs",
+        "name": "Punjabi rap",
         "owner": {
           "display_name": "Navyyc",
-          "id": "fatleopard"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAUDcv+/0xcFhvwBThFxoMlhg8tXpQ",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1sZL1p2pBAOb0kT2keYUN7/items",
+          "total": 59
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1sZL1p2pBAOb0kT2keYUN7"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/7pzlX054DC3km0iTXrdcMs"
         },
+        "href": "https://api.spotify.com/v1/playlists/7pzlX054DC3km0iTXrdcMs",
+        "id": "7pzlX054DC3km0iTXrdcMs",
         "images": [
           {
             "height": 640,
@@ -620,21 +961,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAdUi2PEIanmNNT+OcWJDXpu/7M4fc"
-      },
-      {
-        "name": "Drive n Vibe",
-        "id": "1wcpsWMhNq1fj68sehvt2h",
+        "name": "All Old punjabi",
         "owner": {
           "display_name": "Navyyc",
-          "id": "fatleopard"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAdUi2PEIanmNNT+OcWJDXpu/7M4fc",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/7pzlX054DC3km0iTXrdcMs/items",
+          "total": 115
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7pzlX054DC3km0iTXrdcMs"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1wcpsWMhNq1fj68sehvt2h"
         },
+        "href": "https://api.spotify.com/v1/playlists/1wcpsWMhNq1fj68sehvt2h",
+        "id": "1wcpsWMhNq1fj68sehvt2h",
         "images": [
           {
             "height": 640,
@@ -652,21 +1007,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAbclgbUW8CtBNM/jGxrYWybLRHhRa"
-      },
-      {
-        "name": "1top Punjabi",
-        "id": "4zXQnYLUhsl4nq0kUK9emr",
+        "name": "Drive n Vibe",
         "owner": {
           "display_name": "Navyyc",
-          "id": "fatleopard"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAbclgbUW8CtBNM/jGxrYWybLRHhRa",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1wcpsWMhNq1fj68sehvt2h/items",
+          "total": 151
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1wcpsWMhNq1fj68sehvt2h"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4zXQnYLUhsl4nq0kUK9emr"
         },
+        "href": "https://api.spotify.com/v1/playlists/4zXQnYLUhsl4nq0kUK9emr",
+        "id": "4zXQnYLUhsl4nq0kUK9emr",
         "images": [
           {
             "height": 640,
@@ -684,21 +1053,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAABGdhocO4pFDUDoVgqx/LMBbg6t91Q"
+        "name": "1top Punjabi",
+        "owner": {
+          "display_name": "Navyyc",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAABGdhocO4pFDUDoVgqx/LMBbg6t91Q",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4zXQnYLUhsl4nq0kUK9emr/items",
+          "total": 417
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4zXQnYLUhsl4nq0kUK9emr"
       },
       {
-        "name": "Down Bad Hoge",
-        "id": "26H4LF3HuyotrrZ2K1usnR",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/26H4LF3HuyotrrZ2K1usnR"
         },
+        "href": "https://api.spotify.com/v1/playlists/26H4LF3HuyotrrZ2K1usnR",
+        "id": "26H4LF3HuyotrrZ2K1usnR",
         "images": [
           {
             "height": 640,
@@ -716,21 +1099,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAOxptlW8fwIZd2sJUM4H6E8clGLeB"
-      },
-      {
-        "name": "Jhota Chaal",
-        "id": "3XAqqglJPsk6KaaBRcdgy7",
+        "name": "Down Bad Hoge",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAOxptlW8fwIZd2sJUM4H6E8clGLeB",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/26H4LF3HuyotrrZ2K1usnR/items",
+          "total": 46
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:26H4LF3HuyotrrZ2K1usnR"
+      },
+      {
         "collaborative": false,
+        "description": "IM HIM",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3XAqqglJPsk6KaaBRcdgy7"
         },
+        "href": "https://api.spotify.com/v1/playlists/3XAqqglJPsk6KaaBRcdgy7",
+        "id": "3XAqqglJPsk6KaaBRcdgy7",
         "images": [
           {
             "height": 640,
@@ -748,21 +1145,35 @@
             "width": 60
           }
         ],
-        "description": "IM HIM",
-        "snapshot_id": "AAAAeMBD4V+2a36I77ozWJf21FVN/7dU"
-      },
-      {
-        "name": "LISTEN ON REPEAT",
-        "id": "4XYZIjxJDGwj2JymFgWgO1",
+        "name": "Jhota Chaal",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAeMBD4V+2a36I77ozWJf21FVN/7dU",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3XAqqglJPsk6KaaBRcdgy7/items",
+          "total": 46
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3XAqqglJPsk6KaaBRcdgy7"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4XYZIjxJDGwj2JymFgWgO1"
         },
+        "href": "https://api.spotify.com/v1/playlists/4XYZIjxJDGwj2JymFgWgO1",
+        "id": "4XYZIjxJDGwj2JymFgWgO1",
         "images": [
           {
             "height": null,
@@ -770,21 +1181,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAABI7Q8aGMQAWWBzogM3HPW+xqsxVkG"
+        "name": "LISTEN ON REPEAT",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAABI7Q8aGMQAWWBzogM3HPW+xqsxVkG",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4XYZIjxJDGwj2JymFgWgO1/items",
+          "total": 3
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4XYZIjxJDGwj2JymFgWgO1"
       },
       {
-        "name": "NitiBangers",
-        "id": "3gVC4XaBefLZXceWrTjqUL",
-        "owner": {
-          "display_name": "Nitish Bhanot",
-          "id": "nitish_21"
-        },
-        "public": true,
         "collaborative": true,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3gVC4XaBefLZXceWrTjqUL"
         },
+        "href": "https://api.spotify.com/v1/playlists/3gVC4XaBefLZXceWrTjqUL",
+        "id": "3gVC4XaBefLZXceWrTjqUL",
         "images": [
           {
             "height": null,
@@ -792,21 +1217,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAA3V8zcGWrfPQUC4bFFXU9jMbmonjA"
+        "name": "NitiBangers",
+        "owner": {
+          "display_name": "Nitish Bhanot",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/nitish_21"
+          },
+          "href": "https://api.spotify.com/v1/users/nitish_21",
+          "id": "nitish_21",
+          "type": "user",
+          "uri": "spotify:user:nitish_21"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAA3V8zcGWrfPQUC4bFFXU9jMbmonjA",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3gVC4XaBefLZXceWrTjqUL/items",
+          "total": 179
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3gVC4XaBefLZXceWrTjqUL"
       },
       {
-        "name": "Beebay Gaane",
-        "id": "2R7FhKrsXRWBmKSbTopy0V",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/2R7FhKrsXRWBmKSbTopy0V"
         },
+        "href": "https://api.spotify.com/v1/playlists/2R7FhKrsXRWBmKSbTopy0V",
+        "id": "2R7FhKrsXRWBmKSbTopy0V",
         "images": [
           {
             "height": 640,
@@ -824,21 +1263,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAANRpZ7jLl/c0cno+Vm4Ea21rFlIBM"
-      },
-      {
-        "name": "Hype Gaane ",
-        "id": "7uU1pnX07ajS5LEVghZJfp",
+        "name": "Beebay Gaane",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAANRpZ7jLl/c0cno+Vm4Ea21rFlIBM",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/2R7FhKrsXRWBmKSbTopy0V/items",
+          "total": 43
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2R7FhKrsXRWBmKSbTopy0V"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/7uU1pnX07ajS5LEVghZJfp"
         },
+        "href": "https://api.spotify.com/v1/playlists/7uU1pnX07ajS5LEVghZJfp",
+        "id": "7uU1pnX07ajS5LEVghZJfp",
         "images": [
           {
             "height": 640,
@@ -856,21 +1309,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAABHuHqIg89dt4Nxgqlusf5MrL70Xkn"
-      },
-      {
-        "name": "NotHype Gaane",
-        "id": "2RQUJr8vF49vbO4AVueDMZ",
+        "name": "Hype Gaane ",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAABHuHqIg89dt4Nxgqlusf5MrL70Xkn",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/7uU1pnX07ajS5LEVghZJfp/items",
+          "total": 154
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7uU1pnX07ajS5LEVghZJfp"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/2RQUJr8vF49vbO4AVueDMZ"
         },
+        "href": "https://api.spotify.com/v1/playlists/2RQUJr8vF49vbO4AVueDMZ",
+        "id": "2RQUJr8vF49vbO4AVueDMZ",
         "images": [
           {
             "height": 640,
@@ -888,21 +1355,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAS7crDn3EhKw8dTDHOBKiDq11gXWC"
-      },
-      {
-        "name": "These Gaane",
-        "id": "0He2UAFEQ1NlFNx1EMql6o",
+        "name": "NotHype Gaane",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAS7crDn3EhKw8dTDHOBKiDq11gXWC",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/2RQUJr8vF49vbO4AVueDMZ/items",
+          "total": 51
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2RQUJr8vF49vbO4AVueDMZ"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0He2UAFEQ1NlFNx1EMql6o"
         },
+        "href": "https://api.spotify.com/v1/playlists/0He2UAFEQ1NlFNx1EMql6o",
+        "id": "0He2UAFEQ1NlFNx1EMql6o",
         "images": [
           {
             "height": 640,
@@ -920,21 +1401,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAKjJtaaQHD6q3Y6xiieF3vDK+Q7nG"
-      },
-      {
-        "name": "Senti Gaane",
-        "id": "3MvOuD5b3mxCNNeQfy06lo",
+        "name": "These Gaane",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAKjJtaaQHD6q3Y6xiieF3vDK+Q7nG",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0He2UAFEQ1NlFNx1EMql6o/items",
+          "total": 32
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0He2UAFEQ1NlFNx1EMql6o"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3MvOuD5b3mxCNNeQfy06lo"
         },
+        "href": "https://api.spotify.com/v1/playlists/3MvOuD5b3mxCNNeQfy06lo",
+        "id": "3MvOuD5b3mxCNNeQfy06lo",
         "images": [
           {
             "height": 640,
@@ -952,21 +1447,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAGExC2Sa6jmoEBEB+G7dDb9hL4tmH"
-      },
-      {
-        "name": "SLEEPJA",
-        "id": "2zwCzsgEmxFkqzfuN0uMTH",
+        "name": "Senti Gaane",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAGExC2Sa6jmoEBEB+G7dDb9hL4tmH",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3MvOuD5b3mxCNNeQfy06lo/items",
+          "total": 13
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3MvOuD5b3mxCNNeQfy06lo"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/2zwCzsgEmxFkqzfuN0uMTH"
         },
+        "href": "https://api.spotify.com/v1/playlists/2zwCzsgEmxFkqzfuN0uMTH",
+        "id": "2zwCzsgEmxFkqzfuN0uMTH",
         "images": [
           {
             "height": 640,
@@ -984,21 +1493,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABgIxE4rX+hVuBNGE0qiUTasqitOn"
-      },
-      {
-        "name": "Gym",
-        "id": "4KFOCKKa9IWVGB9XZn5ii0",
+        "name": "SLEEPJA",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABgIxE4rX+hVuBNGE0qiUTasqitOn",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/2zwCzsgEmxFkqzfuN0uMTH/items",
+          "total": 7
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2zwCzsgEmxFkqzfuN0uMTH"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4KFOCKKa9IWVGB9XZn5ii0"
         },
+        "href": "https://api.spotify.com/v1/playlists/4KFOCKKa9IWVGB9XZn5ii0",
+        "id": "4KFOCKKa9IWVGB9XZn5ii0",
         "images": [
           {
             "height": 640,
@@ -1016,43 +1539,71 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAACUnryx/hrAKhBQTj6obKdPhdI0+t"
+        "name": "Gym",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAACUnryx/hrAKhBQTj6obKdPhdI0+t",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4KFOCKKa9IWVGB9XZn5ii0/items",
+          "total": 8
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4KFOCKKa9IWVGB9XZn5ii0"
       },
       {
-        "name": "Sidhu Moose Wala ",
-        "id": "3tJ3XRJ0syfKpZWDz3g8jP",
-        "owner": {
-          "display_name": "tss13",
-          "id": "tss2122"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/3tJ3XRJ0syfKpZWDz3g8jP"
         },
+        "href": "https://api.spotify.com/v1/playlists/3tJ3XRJ0syfKpZWDz3g8jP",
+        "id": "3tJ3XRJ0syfKpZWDz3g8jP",
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c65731a5ed5a73789ba8c0142",
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAABgcG/5FZmgDGuTxBVJT16b8JwXmf8"
+        "name": "Sidhu Moose Wala ",
+        "owner": {
+          "display_name": "tss13",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/tss2122"
+          },
+          "href": "https://api.spotify.com/v1/users/tss2122",
+          "id": "tss2122",
+          "type": "user",
+          "uri": "spotify:user:tss2122"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAABgcG/5FZmgDGuTxBVJT16b8JwXmf8",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3tJ3XRJ0syfKpZWDz3g8jP/items",
+          "total": 248
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3tJ3XRJ0syfKpZWDz3g8jP"
       },
       {
-        "name": "Moose hype",
-        "id": "4xMbQD5HTR9MkGi7hUJad4",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4xMbQD5HTR9MkGi7hUJad4"
         },
+        "href": "https://api.spotify.com/v1/playlists/4xMbQD5HTR9MkGi7hUJad4",
+        "id": "4xMbQD5HTR9MkGi7hUJad4",
         "images": [
           {
             "height": 640,
@@ -1070,21 +1621,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAMqCoH0ou2DTh56BPJZlrzpBU6b8Q"
-      },
-      {
-        "name": "IDK Gaane",
-        "id": "5JAuvULOIm9U0AnYNhlPNu",
+        "name": "Moose hype",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAMqCoH0ou2DTh56BPJZlrzpBU6b8Q",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4xMbQD5HTR9MkGi7hUJad4/items",
+          "total": 47
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4xMbQD5HTR9MkGi7hUJad4"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/5JAuvULOIm9U0AnYNhlPNu"
         },
+        "href": "https://api.spotify.com/v1/playlists/5JAuvULOIm9U0AnYNhlPNu",
+        "id": "5JAuvULOIm9U0AnYNhlPNu",
         "images": [
           {
             "height": 640,
@@ -1102,21 +1667,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAGjj1rbMYkImOFD86qTnOoQJZpHJ7"
-      },
-      {
-        "name": "song",
-        "id": "4k3nSJzx8j5Iex2ULoTjuK",
+        "name": "IDK Gaane",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAGjj1rbMYkImOFD86qTnOoQJZpHJ7",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/5JAuvULOIm9U0AnYNhlPNu/items",
+          "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5JAuvULOIm9U0AnYNhlPNu"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4k3nSJzx8j5Iex2ULoTjuK"
         },
+        "href": "https://api.spotify.com/v1/playlists/4k3nSJzx8j5Iex2ULoTjuK",
+        "id": "4k3nSJzx8j5Iex2ULoTjuK",
         "images": [
           {
             "height": 640,
@@ -1134,21 +1713,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAABS4zIy43ti1VLzFG2QmE/oxvzHUMT"
-      },
-      {
-        "name": "senti hoge :(",
-        "id": "5Kts9QyM4m8JRBjTdGJshf",
+        "name": "song",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAABS4zIy43ti1VLzFG2QmE/oxvzHUMT",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4k3nSJzx8j5Iex2ULoTjuK/items",
+          "total": 259
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4k3nSJzx8j5Iex2ULoTjuK"
+      },
+      {
         "collaborative": false,
+        "description": "JATT IS NEVER SENTI(sometimes)",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/5Kts9QyM4m8JRBjTdGJshf"
         },
+        "href": "https://api.spotify.com/v1/playlists/5Kts9QyM4m8JRBjTdGJshf",
+        "id": "5Kts9QyM4m8JRBjTdGJshf",
         "images": [
           {
             "height": 640,
@@ -1166,21 +1759,35 @@
             "width": 60
           }
         ],
-        "description": "JATT IS NEVER SENTI(sometimes)",
-        "snapshot_id": "AAAAWAU7DKAFdHoA42EAcBe+yCYpmrID"
-      },
-      {
-        "name": "Post",
-        "id": "1WYIcFpEFnQyFpjXeugKPm",
+        "name": "senti hoge :(",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAWAU7DKAFdHoA42EAcBe+yCYpmrID",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/5Kts9QyM4m8JRBjTdGJshf/items",
+          "total": 67
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5Kts9QyM4m8JRBjTdGJshf"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/1WYIcFpEFnQyFpjXeugKPm"
         },
+        "href": "https://api.spotify.com/v1/playlists/1WYIcFpEFnQyFpjXeugKPm",
+        "id": "1WYIcFpEFnQyFpjXeugKPm",
         "images": [
           {
             "height": null,
@@ -1188,21 +1795,35 @@
             "width": null
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAB9oJno3FS0Ch0r/byb9ygU4AwHaP"
-      },
-      {
-        "name": "english",
-        "id": "4bIaoNHYTomfjFyJ1oGMpx",
+        "name": "Post",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAB9oJno3FS0Ch0r/byb9ygU4AwHaP",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/1WYIcFpEFnQyFpjXeugKPm/items",
+          "total": 18
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1WYIcFpEFnQyFpjXeugKPm"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4bIaoNHYTomfjFyJ1oGMpx"
         },
+        "href": "https://api.spotify.com/v1/playlists/4bIaoNHYTomfjFyJ1oGMpx",
+        "id": "4bIaoNHYTomfjFyJ1oGMpx",
         "images": [
           {
             "height": 640,
@@ -1220,21 +1841,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAMIwox/bpOlwOO24D994BYsBcDwCD"
+        "name": "english",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAMIwox/bpOlwOO24D994BYsBcDwCD",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4bIaoNHYTomfjFyJ1oGMpx/items",
+          "total": 41
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4bIaoNHYTomfjFyJ1oGMpx"
       },
       {
-        "name": "not hype ",
-        "id": "2sxlQX2zZ0qMdOIZy23JrP",
-        "owner": {
-          "display_name": "Navyyc",
-          "id": "fatleopard"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/2sxlQX2zZ0qMdOIZy23JrP"
         },
+        "href": "https://api.spotify.com/v1/playlists/2sxlQX2zZ0qMdOIZy23JrP",
+        "id": "2sxlQX2zZ0qMdOIZy23JrP",
         "images": [
           {
             "height": 640,
@@ -1252,21 +1887,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAg+qhzENCiGgNTnERmOAwdXOPbM+p"
+        "name": "not hype ",
+        "owner": {
+          "display_name": "Navyyc",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAg+qhzENCiGgNTnERmOAwdXOPbM+p",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/2sxlQX2zZ0qMdOIZy23JrP/items",
+          "total": 178
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2sxlQX2zZ0qMdOIZy23JrP"
       },
       {
-        "name": "PEGG PARTY",
-        "id": "4IT1aKP0bhadjderNUplp5",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
-        },
-        "public": true,
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/4IT1aKP0bhadjderNUplp5"
         },
+        "href": "https://api.spotify.com/v1/playlists/4IT1aKP0bhadjderNUplp5",
+        "id": "4IT1aKP0bhadjderNUplp5",
         "images": [
           {
             "height": 640,
@@ -1284,21 +1933,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAABGNxrdCE4g1PLLLmtaCmGjtOiuLK"
-      },
-      {
-        "name": "Slow English Songs",
-        "id": "0hFxHRLfXql8J3YFOqdOl8",
+        "name": "PEGG PARTY",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAABGNxrdCE4g1PLLLmtaCmGjtOiuLK",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4IT1aKP0bhadjderNUplp5/items",
+          "total": 52
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4IT1aKP0bhadjderNUplp5"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0hFxHRLfXql8J3YFOqdOl8"
         },
+        "href": "https://api.spotify.com/v1/playlists/0hFxHRLfXql8J3YFOqdOl8",
+        "id": "0hFxHRLfXql8J3YFOqdOl8",
         "images": [
           {
             "height": 640,
@@ -1316,21 +1979,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAGgWepPkIZZgJjaCty+FgtJ03/Yyn"
-      },
-      {
-        "name": "ਗਾਣੇ",
-        "id": "0U6DhvxWtjDucrchU9ufM0",
+        "name": "Slow English Songs",
         "owner": {
           "display_name": "Adesh Virk",
-          "id": "21y337tnjcnnjntvxssctfnda"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
         },
+        "primary_color": null,
         "public": true,
+        "snapshot_id": "AAAAGgWepPkIZZgJjaCty+FgtJ03/Yyn",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0hFxHRLfXql8J3YFOqdOl8/items",
+          "total": 49
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0hFxHRLfXql8J3YFOqdOl8"
+      },
+      {
         "collaborative": false,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/0U6DhvxWtjDucrchU9ufM0"
         },
+        "href": "https://api.spotify.com/v1/playlists/0U6DhvxWtjDucrchU9ufM0",
+        "id": "0U6DhvxWtjDucrchU9ufM0",
         "images": [
           {
             "height": 640,
@@ -1348,21 +2025,35 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAxJS9xXeiyd0/XcLkP5S6uqQbOLnx"
+        "name": "ਗਾਣੇ",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAxJS9xXeiyd0/XcLkP5S6uqQbOLnx",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0U6DhvxWtjDucrchU9ufM0/items",
+          "total": 181
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0U6DhvxWtjDucrchU9ufM0"
       },
       {
-        "name": "not hype suggestions",
-        "id": "7u9bBLX7L1wwlgcX3OTYHY",
-        "owner": {
-          "display_name": "Navyyc",
-          "id": "fatleopard"
-        },
-        "public": true,
         "collaborative": true,
+        "description": "",
         "external_urls": {
           "spotify": "https://open.spotify.com/playlist/7u9bBLX7L1wwlgcX3OTYHY"
         },
+        "href": "https://api.spotify.com/v1/playlists/7u9bBLX7L1wwlgcX3OTYHY",
+        "id": "7u9bBLX7L1wwlgcX3OTYHY",
         "images": [
           {
             "height": 640,
@@ -1380,14 +2071,27 @@
             "width": 60
           }
         ],
-        "description": "",
-        "snapshot_id": "AAAAGkhOC+LcgLLXmSg0rDQHNQcOpROj"
+        "name": "not hype suggestions",
+        "owner": {
+          "display_name": "Navyyc",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/fatleopard"
+          },
+          "href": "https://api.spotify.com/v1/users/fatleopard",
+          "id": "fatleopard",
+          "type": "user",
+          "uri": "spotify:user:fatleopard"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAGkhOC+LcgLLXmSg0rDQHNQcOpROj",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/7u9bBLX7L1wwlgcX3OTYHY/items",
+          "total": 24
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7u9bBLX7L1wwlgcX3OTYHY"
       }
-    ],
-    "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
-    "next": null,
-    "total": 47,
-    "previous": null,
-    "offset": 0
+    ]
   }
 }

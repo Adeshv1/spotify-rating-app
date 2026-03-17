@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "userId": "22vn5a6to7d6mmwi5v673opqq",
+  "cacheKey": "playlist_5i53DZIGzrdxl2RdUxnT5e_tracks_all",
+  "fetchedAt": "2026-03-17T22:59:52.516Z",
+  "lastRefreshedAt": "2026-03-17T22:59:52.516Z",
+  "data": {
+    "limit": 50,
+    "items": [
+      {
+        "item": {
+          "album": {
+            "name": "Kamikaze",
+            "total_tracks": 13,
+            "id": "3HNnxK7NgLXbDoxRZxNWiR"
+          },
+          "artists": [
+            {
+              "name": "Eminem",
+              "id": "7dGJo4pcD2V6oG8kP0tJRR"
+            },
+            {
+              "name": "Jessie Reyez",
+              "id": "3KedxarmBCyFBevnqQHy3P"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/09FfQO3PqHO4HIJL511Ksi"
+          },
+          "explicit": true,
+          "duration_ms": 150801,
+          "name": "Nice Guy (with Jessie Reyez)",
+          "type": "track",
+          "id": "09FfQO3PqHO4HIJL511Ksi"
+        },
+        "added_at": "2018-09-01T17:38:28Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "BINGE",
+            "total_tracks": 9,
+            "id": "5YuscmEJSgkwWzBafTBKse"
+          },
+          "artists": [
+            {
+              "name": "mgk",
+              "id": "6TIYQ3jFPwQSRmorSezPxX"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/43TP6JCWXgkc2D7Xjz5hBr"
+          },
+          "explicit": true,
+          "duration_ms": 281586,
+          "name": "RAP DEVIL",
+          "type": "track",
+          "id": "43TP6JCWXgkc2D7Xjz5hBr"
+        },
+        "added_at": "2026-03-17T22:41:00Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Recovery",
+            "total_tracks": 17,
+            "id": "47BiFcV59TQi2s9SkBo2pb"
+          },
+          "artists": [
+            {
+              "name": "Eminem",
+              "id": "7dGJo4pcD2V6oG8kP0tJRR"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6HLZaECJKDjNE0jiGBeqxz"
+          },
+          "explicit": true,
+          "duration_ms": 213493,
+          "name": "On Fire",
+          "type": "track",
+          "id": "6HLZaECJKDjNE0jiGBeqxz"
+        },
+        "added_at": "2026-03-17T22:41:01Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "YSIV",
+            "total_tracks": 14,
+            "id": "1lyjkFTJ6yxUyNYysWVBo9"
+          },
+          "artists": [
+            {
+              "name": "Logic",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            {
+              "name": "Jaden",
+              "id": "0xOeVMOz2fVg5BJY3N6akT"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1FmdAhS8FqRoEJ4jcSfuKZ"
+          },
+          "explicit": true,
+          "duration_ms": 298133,
+          "name": "ICONIC (ft. Jaden Smith)",
+          "type": "track",
+          "id": "1FmdAhS8FqRoEJ4jcSfuKZ"
+        },
+        "added_at": "2026-03-17T22:41:02Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "ADHD",
+            "total_tracks": 18,
+            "id": "5qkWpkGMULLVnSHb3Sej4X"
+          },
+          "artists": [
+            {
+              "name": "Joyner Lucas",
+              "id": "6C1ohJrd5VydigQtaGy5Wa"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5cEqfElQEKHTsZsoMaYRWB"
+          },
+          "explicit": true,
+          "duration_ms": 210064,
+          "name": "I Love",
+          "type": "track",
+          "id": "5cEqfElQEKHTsZsoMaYRWB"
+        },
+        "added_at": "2026-03-17T22:41:02Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Between Somewhere",
+            "total_tracks": 17,
+            "id": "4tk6dZh4gfDgWd6rwcv4Vb"
+          },
+          "artists": [
+            {
+              "name": "Token",
+              "id": "4cUfFbVZGSsJWdbfmkdxYq"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1Hvdfqeirb2tmAmuedqoVz"
+          },
+          "explicit": true,
+          "duration_ms": 167445,
+          "name": "Mom Would Agree",
+          "type": "track",
+          "id": "1Hvdfqeirb2tmAmuedqoVz"
+        },
+        "added_at": "2026-03-17T22:41:02Z"
+      }
+    ],
+    "href": "https://api.spotify.com/v1/playlists/5i53DZIGzrdxl2RdUxnT5e/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(id,name),album(id,name,total_tracks)))&locale=*",
+    "next": null,
+    "total": 6,
+    "previous": null,
+    "offset": 0
+  }
+}

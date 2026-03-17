@@ -378,7 +378,7 @@ function hasPlaylistItems(record) {
       : []
   if (items.length > 0) return true
   const total = Number(record?.data?.total) || Number(record?.data?.tracks?.total) || 0
-  return total > 0
+  return total === 0
 }
 
 async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext }) {
@@ -646,6 +646,14 @@ function clearCookie(res, name, options = {}) {
   setCookie(res, name, '', { ...options, maxAge: 0 })
 }
 
+function clearSpotifyAuthCookies(res) {
+  clearCookie(res, 'sp_access', { path: '/' })
+  clearCookie(res, 'sp_refresh', { path: '/' })
+  clearCookie(res, 'sp_scope', { path: '/' })
+  clearCookie(res, 'sp_user_id', { path: '/' })
+  clearCookie(res, 'sp_user_name', { path: '/' })
+}
+
 function sendJson(res, statusCode, body) {
   res.statusCode = statusCode
   res.setHeader('content-type', 'application/json; charset=utf-8')
@@ -699,6 +707,15 @@ function logSpotifyRequest({ label, method = 'GET', status, ok, durationMs, retr
     if (message) parts.push(`message=${JSON.stringify(message)}`)
   }
   console.log(parts.join(' '))
+}
+
+function redirectWithAuthError(res, code, status) {
+  const location = new URL('http://localhost/')
+  location.searchParams.set('auth_error', code)
+  if (Number.isFinite(status)) location.searchParams.set('auth_status', String(status))
+  res.statusCode = 302
+  res.setHeader('location', `${location.pathname}${location.search}`)
+  res.end()
 }
 
 async function spotifyFetch(url, { label, debugContext, method = 'GET', ...options } = {}) {
@@ -1103,6 +1120,29 @@ const server = http.createServer((req, res) => {
         const expiresIn = token.expires_in
         const scope = token.scope
 
+        let me = null
+        if (typeof accessToken === 'string') {
+          me = await spotifyMe({ accessToken })
+        }
+
+        if (me && !me.ok) {
+          clearSpotifyAuthCookies(res)
+          if (me.status === 403) {
+            redirectWithAuthError(res, 'spotify_profile_forbidden', me.status)
+            return
+          }
+          const message =
+            typeof me.data?.error?.message === 'string'
+              ? me.data.error.message
+              : typeof me.data?.error_description === 'string'
+                ? me.data.error_description
+                : 'spotify_profile_failed'
+          const error = new Error(message)
+          error.statusCode = me.status || 500
+          error.data = me.data
+          throw error
+        }
+
         if (typeof accessToken === 'string') {
           setCookie(res, 'sp_access', accessToken, { path: '/', maxAge: Math.max(0, (Number(expiresIn) || 3600) - 30) })
         }
@@ -1112,14 +1152,9 @@ const server = http.createServer((req, res) => {
         if (typeof scope === 'string') {
           setCookie(res, 'sp_scope', scope, { path: '/', maxAge: 30 * 24 * 60 * 60 })
         }
-
-        // Helpful for debugging + client cache keying without extra calls on every page load.
-        if (typeof accessToken === 'string') {
-          const me = await spotifyMe({ accessToken })
-          if (me.ok && me.data && typeof me.data === 'object') {
-            if (typeof me.data.id === 'string') setCookie(res, 'sp_user_id', me.data.id, { path: '/', maxAge: 30 * 24 * 60 * 60 })
-            if (typeof me.data.display_name === 'string') setCookie(res, 'sp_user_name', me.data.display_name, { path: '/', maxAge: 30 * 24 * 60 * 60, httpOnly: false })
-          }
+        if (me?.data && typeof me.data === 'object') {
+          if (typeof me.data.id === 'string') setCookie(res, 'sp_user_id', me.data.id, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+          if (typeof me.data.display_name === 'string') setCookie(res, 'sp_user_name', me.data.display_name, { path: '/', maxAge: 30 * 24 * 60 * 60, httpOnly: false })
         }
 
         if (typeof accessToken === 'string') {
@@ -1164,6 +1199,7 @@ const server = http.createServer((req, res) => {
         res.setHeader('location', '/')
         res.end()
       } catch (error) {
+        clearSpotifyAuthCookies(res)
         sendJson(res, Number(error?.statusCode) || 500, { error: 'spotify_callback_failed', message: error?.message })
       }
     })()
@@ -1172,11 +1208,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'POST' && url.pathname === '/auth/logout') {
-    clearCookie(res, 'sp_access', { path: '/' })
-    clearCookie(res, 'sp_refresh', { path: '/' })
-    clearCookie(res, 'sp_scope', { path: '/' })
-    clearCookie(res, 'sp_user_id', { path: '/' })
-    clearCookie(res, 'sp_user_name', { path: '/' })
+    clearSpotifyAuthCookies(res)
     sendJson(res, 200, { ok: true })
     return
   }
@@ -1336,16 +1368,24 @@ const server = http.createServer((req, res) => {
     const limit = Math.min(50, Math.max(1, Number.isFinite(rawLimit) ? rawLimit : 50))
     const offset = Math.max(0, Number.isFinite(rawOffset) ? rawOffset : 0)
     const all = url.searchParams.get('all') === '1'
+    const forceRefresh = url.searchParams.get('force') === '1'
 
     ;(async () => {
+      const hasUsablePlaylistPage = (payload) => {
+        const items = Array.isArray(payload?.items) ? payload.items : null
+        const total = Number(payload?.total) || 0
+        return Boolean(items) && (total === 0 || items.length > 0)
+      }
+
       const canUseServerCache = Boolean(all && userId)
       const cacheKey = 'me_playlists_all'
       const nowMs = Date.now()
       let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
+      if (cachedRecord && !hasUsablePlaylistPage(cachedRecord.data)) cachedRecord = null
       const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
       let lockTaken = false
 
-      if (canUseServerCache && cachedRecord) {
+      if (canUseServerCache && cachedRecord && !forceRefresh) {
         const decision = shouldAttemptSpotifyRefresh({
           record: cachedRecord,
           nowMs,
@@ -1384,31 +1424,6 @@ const server = http.createServer((req, res) => {
         const apiUrl = new URL('https://api.spotify.com/v1/me/playlists')
         apiUrl.searchParams.set('limit', String(limit))
         apiUrl.searchParams.set('offset', String(pageOffset))
-        apiUrl.searchParams.set(
-          'fields',
-          [
-            'href',
-            'limit',
-            'next',
-            'offset',
-            'previous',
-            'total',
-            'items(' +
-              [
-                'id',
-                'name',
-                'description',
-                'images',
-                'owner(id,display_name)',
-                'tracks(total)',
-                'public',
-                'collaborative',
-                'external_urls(spotify)',
-                'snapshot_id',
-              ].join(',') +
-            ')',
-          ].join(','),
-        )
 
         const response = await spotifyFetch(apiUrl.toString(), {
           label: '/v1/me/playlists',
@@ -1478,8 +1493,42 @@ const server = http.createServer((req, res) => {
           return
         }
 
-        const items = Array.isArray(first.data?.items) ? first.data.items.slice() : []
+        const firstItems = Array.isArray(first.data?.items) ? first.data.items : null
+        const items = firstItems ? firstItems.slice() : []
         const total = Number(first.data?.total) || items.length
+        if (total > 0 && items.length === 0) {
+          console.error(
+            '[spotify] invalid /v1/me/playlists payload: total > 0 but first page had no items',
+            JSON.stringify(
+              {
+                total,
+                offset: Number(first.data?.offset) || 0,
+                limit: Number(first.data?.limit) || limit,
+                href: typeof first.data?.href === 'string' ? first.data.href : null,
+                context: debugContext,
+              },
+              null,
+              2,
+            ),
+          )
+          if (canUseServerCache && cachedRecord) {
+            res.setHeader('x-sp-cache', 'hit_fallback')
+            res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+            res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+            sendJson(res, 200, cachedRecord.data)
+            return
+          }
+          sendJson(res, 502, {
+            error: 'spotify_playlists_incomplete',
+            message: 'Spotify returned a playlist total but no playlist items on the first page.',
+            details: {
+              total,
+              offset: Number(first.data?.offset) || 0,
+              limit: Number(first.data?.limit) || limit,
+            },
+          })
+          return
+        }
         let nextOffset = items.length
 
         const maxPages = 200
@@ -1505,6 +1554,39 @@ const server = http.createServer((req, res) => {
           }
 
           const pageItems = Array.isArray(page.data?.items) ? page.data.items : []
+          if (nextOffset < total && pageItems.length === 0) {
+            console.error(
+              '[spotify] invalid /v1/me/playlists pagination payload: expected more items but received an empty page',
+              JSON.stringify(
+                {
+                  total,
+                  offset: nextOffset,
+                  limit,
+                  href: typeof page.data?.href === 'string' ? page.data.href : null,
+                  context: debugContext,
+                },
+                null,
+                2,
+              ),
+            )
+            if (canUseServerCache && cachedRecord) {
+              res.setHeader('x-sp-cache', 'hit_fallback')
+              res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
+              res.setHeader('x-sp-cache-last-refreshed-at', cachedRecord.lastRefreshedAt)
+              sendJson(res, 200, cachedRecord.data)
+              return
+            }
+            sendJson(res, 502, {
+              error: 'spotify_playlists_incomplete',
+              message: 'Spotify returned an empty playlist page before the reported total was reached.',
+              details: {
+                total,
+                offset: nextOffset,
+                limit,
+              },
+            })
+            return
+          }
           items.push(...pageItems)
           if (pageItems.length === 0) break
           nextOffset += pageItems.length
@@ -2014,6 +2096,7 @@ const server = http.createServer((req, res) => {
     const limit = Math.min(50, Math.max(1, Number.isFinite(rawLimit) ? rawLimit : 50))
     const offset = Math.max(0, Number.isFinite(rawOffset) ? rawOffset : 0)
     const all = url.searchParams.get('all') === '1'
+    const forceRefresh = url.searchParams.get('force') === '1'
 
     ;(async () => {
       const canUseServerCache = Boolean(all && userId)
@@ -2023,7 +2106,7 @@ const server = http.createServer((req, res) => {
       const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
       let lockTaken = false
 
-      if (canUseServerCache && cachedRecord) {
+      if (canUseServerCache && cachedRecord && !forceRefresh) {
         const decision = shouldAttemptSpotifyRefresh({ record: cachedRecord, nowMs })
         if (!decision.shouldRefresh) {
           res.setHeader('x-sp-cache', decision.stale ? 'hit_throttled' : 'hit_fresh')

@@ -101,3 +101,6 @@
 + Playlists/UI: replace the browser remove confirmation with an in-app modal that matches the site styling (implemented 2026-03-12)
 + Playlists/Spotify safety: make Add to Global Ranking and Sync share one 5-second cooldown across the whole playlist grid (implemented 2026-03-12)
 + Playlists/UI: stop rendering unknown playlist sizes as `0 tracks` and preserve track totals in the compact cache fallback (implemented 2026-03-12)
++ Spotify auth: handle callback `/v1/me` 403 restrictions by clearing partial sessions and surfacing a clear login error (implemented 2026-03-16; build passed, repo lint still has unrelated existing failures in `src/App.jsx`)
++ Playlists/API: stop caching malformed `/v1/me/playlists` responses where Spotify reports a total but omits the page items, and fetch the full playlist payload without a restrictive `fields` filter (implemented 2026-03-17)
++ Playlists/Sync: make user-triggered Sync bypass server-side Spotify cache for playlists and playlist tracks so manual sync fetches current Spotify state (implemented 2026-03-17)

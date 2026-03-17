@@ -856,6 +856,34 @@ const HOW_TO_USE_RULES = [
   "Export / Import lets you back up or restore your data on this device.",
 ];
 
+function readAuthErrorFromLocation() {
+  const params = new URLSearchParams(window.location.search || "");
+  const authError = params.get("auth_error");
+  if (!authError) return null;
+
+  const authStatus = params.get("auth_status");
+  const statusText = authStatus ? ` (Spotify ${authStatus})` : "";
+
+  let message = "Spotify login failed.";
+  if (authError === "spotify_profile_forbidden") {
+    message =
+      "Spotify blocked this account right after login" +
+      `${statusText}. ` +
+      "For Development Mode apps, this usually means the account is not eligible: it may need Spotify Premium and may also need to be added to the app's user allowlist in the Spotify Developer Dashboard.";
+  }
+
+  params.delete("auth_error");
+  params.delete("auth_status");
+  const nextSearch = params.toString();
+  const nextUrl =
+    window.location.pathname +
+    (nextSearch ? `?${nextSearch}` : "") +
+    window.location.hash;
+  window.history.replaceState(null, "", nextUrl);
+
+  return message;
+}
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
@@ -926,6 +954,11 @@ function App() {
   }
 
   useEffect(() => {
+    const authError = readAuthErrorFromLocation();
+    if (authError) setError(authError);
+  }, []);
+
+  useEffect(() => {
     (async () => {
       try {
         const sessionRes = await fetch("/api/session");
@@ -939,6 +972,7 @@ function App() {
 
         setLoggedIn(true);
         setIsOwnerUser(Boolean(session?.isOwnerUser));
+        setError(null);
 
         if (session?.user && typeof session.user === "object") {
           setProfile(session.user);
@@ -949,7 +983,30 @@ function App() {
         if (meRes.ok) {
           const me = await meRes.json();
           setProfile(me);
+          setError(null);
+          return;
         }
+
+        const meData = await meRes.json().catch(() => null);
+        const meMessage =
+          typeof meData?.details?.error?.message === "string"
+            ? meData.details.error.message
+            : typeof meData?.message === "string"
+              ? meData.message
+              : typeof meData?.error === "string"
+                ? meData.error
+                : null;
+        if (meRes.status === 401 || meRes.status === 403) {
+          await fetch("/auth/logout", { method: "POST" }).catch(() => null);
+          setLoggedIn(false);
+          setProfile(null);
+          setIsOwnerUser(false);
+        }
+        setError(
+          meRes.status === 403
+            ? "Spotify denied access to this account after login (Spotify 403). For Development Mode apps, the account may need Spotify Premium and may also need to be allowlisted in the Spotify Developer Dashboard."
+            : meMessage || "Failed to load your Spotify profile",
+        );
       } catch (e) {
         setError(e?.message || "Something went wrong");
       } finally {
@@ -1044,7 +1101,9 @@ function App() {
     setPlaylistsError(null);
 
     try {
-      const res = await fetch("/api/me/playlists?all=1");
+      const params = new URLSearchParams({ all: "1" });
+      if (force) params.set("force", "1");
+      const res = await fetch(`/api/me/playlists?${params.toString()}`);
 
       let data = null;
       try {
@@ -1172,8 +1231,10 @@ function App() {
     setTracksError(null);
 
     try {
+      const params = new URLSearchParams({ all: "1" });
+      if (force) params.set("force", "1");
       const res = await fetch(
-        `/api/playlists/${encodeURIComponent(playlistId)}/tracks?all=1`,
+        `/api/playlists/${encodeURIComponent(playlistId)}/tracks?${params.toString()}`,
       );
 
       let data = null;
@@ -4323,7 +4384,7 @@ function PlaylistsView({
 
     try {
       const res = await fetch(
-        `/api/playlists/${encodeURIComponent(playlistId)}/tracks?all=1`,
+        `/api/playlists/${encodeURIComponent(playlistId)}/tracks?all=1&force=1`,
       );
 
       let data = null;
