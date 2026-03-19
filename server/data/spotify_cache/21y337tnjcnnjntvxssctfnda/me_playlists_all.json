@@ -2,16 +2,200 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-17T23:08:43.019Z",
-  "lastRefreshedAt": "2026-03-17T23:08:43.019Z",
+  "fetchedAt": "2026-03-19T22:07:06.960Z",
+  "lastRefreshedAt": "2026-03-19T22:07:06.960Z",
   "data": {
     "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "limit": 50,
-    "next": null,
+    "next": "https://api.spotify.com/v1/me/playlists?offset=50&limit=50&locale=*",
     "offset": 0,
     "previous": null,
-    "total": 48,
+    "total": 52,
     "items": [
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/0skZPa2R7gdmrUHTAo7hYb"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0skZPa2R7gdmrUHTAo7hYb",
+        "id": "0skZPa2R7gdmrUHTAo7hYb",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e029416ed64daf84936d89e671cab67616d00001e02a9f6c04ba168640b48aa5795ab67616d00001e02ce159a3ba2096e13fa9d4b4cab67616d00001e02deec12a28d1e336c5052e9aa",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e029416ed64daf84936d89e671cab67616d00001e02a9f6c04ba168640b48aa5795ab67616d00001e02ce159a3ba2096e13fa9d4b4cab67616d00001e02deec12a28d1e336c5052e9aa",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e029416ed64daf84936d89e671cab67616d00001e02a9f6c04ba168640b48aa5795ab67616d00001e02ce159a3ba2096e13fa9d4b4cab67616d00001e02deec12a28d1e336c5052e9aa",
+            "width": 60
+          }
+        ],
+        "name": "All out 2010s",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA/PZd5pTMuHBj/co4W7P9Weib1dB",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0skZPa2R7gdmrUHTAo7hYb/items",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0skZPa2R7gdmrUHTAo7hYb"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4Asx6gqYElg3Y9yXOLyOGH"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4Asx6gqYElg3Y9yXOLyOGH",
+        "id": "4Asx6gqYElg3Y9yXOLyOGH",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e028fa6406a49d75a50bc8741a8ab67616d00001e02b9cfcb8963f05335a2d42fffab67616d00001e02bc5c02266d20753c79831747ab67616d00001e02fe21fcbd774b6a2b8a6891d0",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e028fa6406a49d75a50bc8741a8ab67616d00001e02b9cfcb8963f05335a2d42fffab67616d00001e02bc5c02266d20753c79831747ab67616d00001e02fe21fcbd774b6a2b8a6891d0",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e028fa6406a49d75a50bc8741a8ab67616d00001e02b9cfcb8963f05335a2d42fffab67616d00001e02bc5c02266d20753c79831747ab67616d00001e02fe21fcbd774b6a2b8a6891d0",
+            "width": 60
+          }
+        ],
+        "name": "Peaceful Piano",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAwzKpmbbpbyQRwbduMr0nDqNYcyr",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/4Asx6gqYElg3Y9yXOLyOGH/items",
+          "total": 128
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4Asx6gqYElg3Y9yXOLyOGH"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/3cC5l1hBHylTYRXTL2pL3O"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3cC5l1hBHylTYRXTL2pL3O",
+        "id": "3cC5l1hBHylTYRXTL2pL3O",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e0208a27a15cf37664f0dab6ab7ab67616d00001e0225c28f3c9fbdbab1a88dd619ab67616d00001e0280788f104c780412212e97e3ab67616d00001e02be35d523672e13da3debc413",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e0208a27a15cf37664f0dab6ab7ab67616d00001e0225c28f3c9fbdbab1a88dd619ab67616d00001e0280788f104c780412212e97e3ab67616d00001e02be35d523672e13da3debc413",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e0208a27a15cf37664f0dab6ab7ab67616d00001e0225c28f3c9fbdbab1a88dd619ab67616d00001e0280788f104c780412212e97e3ab67616d00001e02be35d523672e13da3debc413",
+            "width": 60
+          }
+        ],
+        "name": "Rap Caviar",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAwW6JAbavspLRGPvppdUqINm17hn",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/3cC5l1hBHylTYRXTL2pL3O/items",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3cC5l1hBHylTYRXTL2pL3O"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/0Xbg4lYWUfBcr6VFdTD9cO"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0Xbg4lYWUfBcr6VFdTD9cO",
+        "id": "0Xbg4lYWUfBcr6VFdTD9cO",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411ab67616d00001e02e3d69e17dde129037a1f09e2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411ab67616d00001e02e3d69e17dde129037a1f09e2",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411ab67616d00001e02e3d69e17dde129037a1f09e2",
+            "width": 60
+          }
+        ],
+        "name": "Today's Top Hits",
+        "owner": {
+          "display_name": "Adesh Virk",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
+          },
+          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
+          "id": "21y337tnjcnnjntvxssctfnda",
+          "type": "user",
+          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAzR/Cy7xDz3q4/U6C2T6EkeoMgtt",
+        "items": {
+          "href": "https://api.spotify.com/v1/playlists/0Xbg4lYWUfBcr6VFdTD9cO/items",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0Xbg4lYWUfBcr6VFdTD9cO"
+      },
       {
         "collaborative": false,
         "description": "",
@@ -37,7 +221,7 @@
             "width": 60
           }
         ],
-        "name": "March 17, 2026 Top 50 Global",
+        "name": "Top 50 Global",
         "owner": {
           "display_name": "Adesh Virk",
           "external_urls": {
@@ -50,7 +234,7 @@
         },
         "primary_color": null,
         "public": true,
-        "snapshot_id": "AAAAA1aGREC3shWwNHrlBC4md/75X+XW",
+        "snapshot_id": "AAAABOOl/X4c+zZMpQy6EVAmAS8ECzdU",
         "items": {
           "href": "https://api.spotify.com/v1/playlists/4j8kEJ1ifY5t1vsdSOabrW/items",
           "total": 50
@@ -1571,7 +1755,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c65731a5ed5a73789ba8c0142",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
             "width": null
           }
         ],

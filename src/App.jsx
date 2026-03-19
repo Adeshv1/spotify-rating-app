@@ -893,12 +893,6 @@ function App() {
   const [routePath, setRoutePath] = useState(
     () => window.location.pathname || "/",
   );
-  const [publicPreview, setPublicPreview] = useState({
-    status: "idle",
-    data: null,
-    error: null,
-  });
-
   const [nowMs, setNowMs] = useState(() => Date.now());
 
   const [playlistsLoading, setPlaylistsLoading] = useState(false);
@@ -932,8 +926,7 @@ function App() {
 
   const isDashboardRoute = routePath === "/app/dashboard";
   const isRankRoute = routePath === "/rank";
-  const isPublicDashboardRoute = !loggedIn && routePath === "/";
-  const isDashboardLikeRoute = isDashboardRoute || isPublicDashboardRoute;
+  const isDashboardLikeRoute = isDashboardRoute;
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000);
@@ -1022,42 +1015,6 @@ function App() {
       navigate("/app", { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, loggedIn, routePath]);
-
-  useEffect(() => {
-    if (loggedIn) return;
-    let cancelled = false;
-
-    setPublicPreview(s =>
-      s.status === "ok" ? s : { status: "loading", data: null, error: null },
-    );
-    (async () => {
-      try {
-        const res = await fetch("/api/public/preview");
-        const data = await res.json().catch(() => null);
-        if (cancelled) return;
-        if (!res.ok || !data?.ok) {
-          setPublicPreview({
-            status: "error",
-            data: null,
-            error: data?.error || "Preview unavailable",
-          });
-          return;
-        }
-        setPublicPreview({ status: "ok", data, error: null });
-      } catch (e) {
-        if (cancelled) return;
-        setPublicPreview({
-          status: "error",
-          data: null,
-          error: e?.message || "Preview unavailable",
-        });
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [loggedIn]);
 
   useEffect(() => {
     if (!loggedIn) {
@@ -1811,19 +1768,29 @@ function App() {
 
       <main
         className={
-          isDashboardLikeRoute
+          !loggedIn
+            ? "main mainLanding"
+            : isDashboardLikeRoute
             ? "main mainDashboard"
             : isRankRoute
               ? "main mainRank"
               : "main"
         }
       >
-        <div className="container">
-          <div className={isDashboardLikeRoute ? "card cardDashboard" : "card"}>
+        <div className={`container ${!loggedIn ? "containerLanding" : ""}`.trim()}>
+          <div
+            className={
+              !loggedIn
+                ? "card cardLanding"
+                : isDashboardLikeRoute
+                  ? "card cardDashboard"
+                  : "card"
+            }
+          >
             {error ? <p className="error">{error}</p> : null}
 
             {!loggedIn ? (
-              <LandingPage publicPreview={publicPreview} />
+              <LandingPage />
             ) : (
               <>
                 {routePath === "/rank" ? (
@@ -3448,249 +3415,37 @@ function DashboardPage({
   );
 }
 
-function LandingPage({ publicPreview }) {
-  const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
-  const data = publicPreview?.data;
-  const topSongs = Array.isArray(data?.topSongs) ? data.topSongs : [];
-  const topArtists = Array.isArray(data?.topArtists) ? data.topArtists : [];
-  const topAlbums = Array.isArray(data?.topAlbums) ? data.topAlbums : [];
-  const topSongRanks = useMemo(
-    () =>
-      topSongs.map((t, idx) => {
-        const rank = Number(t?.rank);
-        return Number.isFinite(rank) ? rank : idx + 1;
-      }),
-    [topSongs],
-  );
-  const topAlbumRanks = useMemo(
-    () =>
-      topAlbums.map((a, idx) => {
-        const rank = Number(a?.rank);
-        if (Number.isFinite(rank)) return rank;
-        const avgRank = Number(a?.avgRank);
-        return Number.isFinite(avgRank) ? Math.round(avgRank) : idx + 1;
-      }),
-    [topAlbums],
-  );
-
+function LandingPage() {
   return (
-    <div className="section dashboardPage">
-      <div className="cardSub">
-        <h3>Rate your music with binary sort</h3>
-        <p className="meta">
-          Build an initial global order with binary insertion, then make quick
-          one-step adjustments from the ranked list. Rankings are stored
-          locally, and the owner account also gets a server backup.
+    <section className="section landingPage">
+      <div className="landingContent">
+        <h1>Rank your Spotify songs.</h1>
+        <p className="landingLead">
+          Build a global ranking of your music using fast binary comparisons.
+          Import playlists, compare songs, and see your top songs, artists, and
+          albums automatically.
         </p>
-        <div className="controls">
+        <div className="landingActions">
           <a
             className="btn primary"
             href="/auth/login"
           >
             Sign in with Spotify
           </a>
+          <a
+            className="btn"
+            href="mailto:adeshvirk1@gmail.com?subject=Spotify%20Rating%20App%20Demo%20Access"
+          >
+            Try Demo
+          </a>
         </div>
-        <p className="meta">
-          Preview dashboard (read-only).{" "}
-          {publicPreview?.status === "loading"
-            ? "Loading…"
-            : publicPreview?.status === "error"
-              ? publicPreview.error || "Preview unavailable."
-              : publicPreview?.status === "ok"
-                ? `Updated ${
-                    data?.updatedAt
-                      ? formatDateTime(data.updatedAt)
-                      : data?.rankingUpdatedAt
-                        ? formatDateTime(data.rankingUpdatedAt)
-                        : "recently"
-                  }.`
-                : ""}
+        <p className="landingAccessNote">
+          Spotify requires apps in development to manually approve users. To get
+          access, email:{" "}
+          <a href="mailto:adeshvirk1@gmail.com">adeshvirk1@gmail.com</a>
         </p>
       </div>
-
-      {publicPreview?.status === "ok" ? (
-        <div
-          className="dashboardColumns"
-          role="region"
-          aria-label="Dashboard columns"
-        >
-          <div className="dashPanel">
-            <div className="dashPanelHeader">
-              <h3>Top songs ({topSongs.length})</h3>
-            </div>
-            <div
-              className="dashPanelBody dashPanelBodyTight"
-              role="region"
-              aria-label="Top songs list"
-              tabIndex={0}
-            >
-              <table className="dashTable">
-                <colgroup>
-                  <col className="dashColIndex" />
-                  <col />
-                  <col className="dashColPlay" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th className="right dashColIndex">#</th>
-                    <th>Song</th>
-                    <th
-                      className="right dashColPlay"
-                      aria-label="Play column"
-                    />
-                  </tr>
-                </thead>
-                <tbody>
-                  {topSongs.map((t, idx) => {
-                    const trackId =
-                      (typeof t?.id === "string" ? t.id : null) ||
-                      (typeof t?.trackKey === "string" &&
-                      t.trackKey.startsWith("spid:")
-                        ? t.trackKey.slice("spid:".length)
-                        : null);
-                    return (
-                      <tr
-                        key={t.trackKey || t.id || idx}
-                        className="dashTableRow"
-                      >
-                        <td className="right">
-                          <span className="cellSub">
-                            {topSongRanks[idx] ?? idx + 1}
-                          </span>
-                        </td>
-                        <td>
-                          <div className="cellTitle">
-                            {t.name || t.id || t.trackKey}
-                          </div>
-                          <div className="cellSub">
-                            {Array.isArray(t.artists) && t.artists.length
-                              ? t.artists.join(", ")
-                              : "Unknown artist"}
-                          </div>
-                        </td>
-                        <td className="right">
-                          {trackId ? (
-                            <button
-                              className="btn small rowPlayBtn"
-                              onClick={() => openTrackInSpotify(trackId)}
-                              title="Open in Spotify"
-                            >
-                              Play
-                            </button>
-                          ) : null}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="dashPanel dashPanelArtists">
-            <div className="dashPanelHeader">
-              <h3>Top artists ({topArtists.length})</h3>
-            </div>
-            <div
-              ref={setArtistCardsRootEl}
-              className="dashPanelBody"
-              role="region"
-              aria-label="Top artists list"
-              tabIndex={0}
-            >
-              <div
-                className="artistGrid"
-                role="list"
-                aria-label="Top artists cards"
-              >
-                {topArtists.map(a => {
-                  const artistId =
-                    typeof a?.artistId === "string" ? a.artistId : null;
-                  const imageUrl =
-                    typeof a?.imageUrl === "string" ? a.imageUrl : null;
-                  const imageState = imageUrl
-                    ? { status: "loaded", imageUrl }
-                    : null;
-                  return (
-                    <TopArtistCard
-                      key={a.name}
-                      artist={a}
-                      artistId={artistId}
-                      rootEl={artistCardsRootEl}
-                      imageState={imageState}
-                      onVisible={null}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="dashPanel">
-            <div className="dashPanelHeader">
-              <h3>Top albums ({topAlbums.length})</h3>
-            </div>
-            <div
-              className="dashPanelBody dashPanelBodyTight"
-              role="region"
-              aria-label="Top albums list"
-              tabIndex={0}
-            >
-              <table className="dashTable">
-                <colgroup>
-                  <col className="dashColIndex" />
-                  <col />
-                  <col className="dashColPlay" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th className="right dashColIndex">#</th>
-                    <th>Album</th>
-                    <th
-                      className="right dashColPlay"
-                      aria-label="Play column"
-                    />
-                  </tr>
-                </thead>
-                <tbody>
-                  {topAlbums.map((a, idx) => (
-                    <tr
-                      key={a.name || idx}
-                      className="dashTableRow"
-                    >
-                      <td className="right">
-                        <span className="cellSub">
-                          {topAlbumRanks[idx] ?? idx + 1}
-                        </span>
-                      </td>
-                      <td>
-                        <div className="cellTitle">{a.name}</div>
-                        <div className="cellSub">
-                          {Number(a.tracks) === 1
-                            ? "1 track"
-                            : `${Number(a.tracks) || 0} tracks`}
-                        </div>
-                      </td>
-                      <td className="right">
-                        {typeof a?.bestTrackId === "string" ? (
-                          <button
-                            className="btn small rowPlayBtn"
-                            onClick={() => openTrackInSpotify(a.bestTrackId)}
-                            title="Open a track from this album in Spotify"
-                          >
-                            Play
-                          </button>
-                        ) : null}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      ) : null}
-    </div>
+    </section>
   );
 }
 

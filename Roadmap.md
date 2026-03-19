@@ -104,3 +104,6 @@
 + Spotify auth: handle callback `/v1/me` 403 restrictions by clearing partial sessions and surfacing a clear login error (implemented 2026-03-16; build passed, repo lint still has unrelated existing failures in `src/App.jsx`)
 + Playlists/API: stop caching malformed `/v1/me/playlists` responses where Spotify reports a total but omits the page items, and fetch the full playlist payload without a restrictive `fields` filter (implemented 2026-03-17)
 + Playlists/Sync: make user-triggered Sync bypass server-side Spotify cache for playlists and playlist tracks so manual sync fetches current Spotify state (implemented 2026-03-17)
++ Landing: replace the public preview dashboard with manual-access instructions and contact details for Spotify allowlisting requests (implemented 2026-03-17)
++ Landing: refocus the homepage on product value with workflow cards, a static dashboard preview, and a smaller developer-preview access note (implemented 2026-03-17)
++ Landing: redesign the public homepage around the real post-login flow with playlist, rank-songs, and dashboard previews (implemented 2026-03-19)

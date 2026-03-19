@@ -132,12 +132,41 @@
   flex-direction: column;
 }
 
+.mainLanding {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLanding > .container {
+  flex: 1 1 auto;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .cardDashboard {
   flex: 1 1 auto;
   min-height: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.containerLanding {
+  flex: 1 1 auto;
+  min-height: 100%;
+  padding: 1.2% 1.5% 1.5%;
+}
+
+.cardLanding {
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  padding: 2% 2.5%;
+  overflow: visible;
 }
 
 .dashboardPage {
@@ -543,6 +572,74 @@
   padding-left: 1.25rem;
 }
 
+.landingPage {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin-top: 0;
+  display: block;
+  padding: 4% 0 2%;
+  box-sizing: border-box;
+}
+
+.landingContent {
+  width: 46%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.landingContent h1 {
+  margin: 0;
+  max-width: 11ch;
+  font-size: clamp(2.65rem, 6vw, 4.9rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.landingLead {
+  margin: 1.15rem 0 0;
+  max-width: 34rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 1.02rem;
+}
+
+.landingActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.75rem;
+}
+
+.landingActions .btn {
+  min-width: 12rem;
+  text-decoration: none;
+}
+
+.landingAccessNote {
+  margin: 1.15rem 0 0;
+  max-width: 30rem;
+  color: var(--text-muted-2);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.landingAccessNote a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.landingAccessNote a:hover {
+  color: #fff;
+}
+
 @media (prefers-color-scheme: light) {
   .helpOverlay {
     background: rgba(231, 238, 255, 0.68);
@@ -556,6 +653,12 @@
 
   .helpCard {
     background: rgba(255, 255, 255, 0.72);
+  }
+}
+
+@media (max-width: 1100px) {
+  .landingContent {
+    width: 58%;
   }
 }
 
@@ -586,6 +689,32 @@
   }
   .topActions {
     justify-content: flex-start;
+  }
+  .containerLanding {
+    padding: 1.5% 2% 2%;
+  }
+  .cardLanding {
+    padding: 4% 5%;
+  }
+  .landingPage {
+    height: auto;
+    padding: 8% 0 4%;
+  }
+  .landingContent {
+    width: 100%;
+  }
+  .landingLead,
+  .landingAccessNote {
+    max-width: none;
+  }
+  .landingActions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .landingActions .btn {
+    width: 100%;
+    min-width: 0;
   }
   .headerDataMenuPanel {
     left: 0;
