@@ -57,6 +57,15 @@ const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
 const REFRESH_WINDOW_MS = 15 * 60 * 1000
 const PLAYLISTS_REFRESH_WINDOW_MS = 5 * 60 * 1000
 const PUBLIC_PREVIEW_PLAYLIST_ID = '5DBL17LWOZ1Yk87gan9wQq'
+const MOCK_DEMO_CACHE_USER_ID = 'mock_demo'
+const MOCK_DEMO_PLAYLIST_IDS = [
+  '4j8kEJ1ifY5t1vsdSOabrW',
+  '0Xbg4lYWUfBcr6VFdTD9cO',
+  '3cC5l1hBHylTYRXTL2pL3O',
+  '4Asx6gqYElg3Y9yXOLyOGH',
+  '0skZPa2R7gdmrUHTAo7hYb',
+]
+const MOCK_DEMO_PLAYLIST_ID_SET = new Set(MOCK_DEMO_PLAYLIST_IDS)
 const spotifyRefreshInFlight = new Map()
 const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
 const ARTIST_IMAGE_MISS_MAX_PER_WINDOW = 25
@@ -106,6 +115,22 @@ function writeSpotifyCacheRecordAtomic(userId, cacheKey, record) {
   if (!userId || !cacheKey) return
   const filePath = spotifyCacheFilePathForUserKey(userId, cacheKey)
   writeJsonFileAtomic(filePath, record)
+}
+
+function writeSpotifyCacheDataRecord(userId, cacheKey, data, storedAt = new Date().toISOString()) {
+  writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+    schemaVersion: 1,
+    userId,
+    cacheKey,
+    fetchedAt: storedAt,
+    lastRefreshedAt: storedAt,
+    data,
+  })
+}
+
+function getPersistentSpotifyCacheUserId(userId) {
+  if (!isOwnerUser(userId)) return null
+  return userId
 }
 
 function shouldAttemptSpotifyRefresh({ record, nowMs, refreshWindowMs = REFRESH_WINDOW_MS }) {
@@ -381,6 +406,33 @@ function hasPlaylistItems(record) {
   return total === 0
 }
 
+function hasUsablePlaylistPagePayload(payload) {
+  const items = Array.isArray(payload?.items) ? payload.items : null
+  const total = Number(payload?.total) || 0
+  return Boolean(items) && (total === 0 || items.length > 0)
+}
+
+function playlistPageContainsAllIds(payload, playlistIds) {
+  const items = Array.isArray(payload?.items) ? payload.items : []
+  if (!items.length || !Array.isArray(playlistIds) || !playlistIds.length) return false
+  const availableIds = new Set(items.map((item) => (typeof item?.id === 'string' ? item.id : null)).filter(Boolean))
+  return playlistIds.every((playlistId) => availableIds.has(playlistId))
+}
+
+function filterPlaylistPageByIds(payload, allowedIds) {
+  if (!allowedIds || typeof allowedIds.has !== 'function') return null
+  const items = Array.isArray(payload?.items) ? payload.items.filter((item) => allowedIds.has(item?.id)) : []
+  return {
+    href: typeof payload?.href === 'string' ? payload.href : null,
+    limit: Math.max(items.length || 0, Number(payload?.limit) || 0, 1),
+    next: null,
+    offset: 0,
+    previous: null,
+    total: items.length,
+    items,
+  }
+}
+
 async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext }) {
   const limit = 50
 
@@ -471,6 +523,112 @@ async function fetchPlaylistTracksAll({ playlistId, accessToken, debugContext })
   }
 
   return { ok: true, status: 200, data: { items, offset: 0, limit, total } }
+}
+
+async function fetchCurrentUserPlaylistsAll({ accessToken, debugContext }) {
+  const limit = 50
+
+  const callPage = async ({ offset }) => {
+    const apiUrl = new URL('https://api.spotify.com/v1/me/playlists')
+    apiUrl.searchParams.set('limit', String(limit))
+    apiUrl.searchParams.set('offset', String(offset))
+
+    const response = await spotifyFetch(apiUrl.toString(), {
+      label: '/v1/me/playlists',
+      debugContext,
+      headers: { authorization: `Bearer ${accessToken}` },
+    })
+
+    let data
+    try {
+      data = await response.json()
+    } catch {
+      data = null
+    }
+
+    const retryAfterSeconds = getRetryAfterSeconds(response.headers)
+    if (!response.ok) {
+      logSpotifyFailure({
+        label: 'GET /v1/me/playlists',
+        url: apiUrl.toString(),
+        status: response.status,
+        retryAfterSeconds,
+        requestId: response.headers.get('x-request-id'),
+        context: debugContext,
+        data,
+      })
+    }
+
+    return { ok: response.ok, status: response.status, data, retryAfterSeconds }
+  }
+
+  const first = await callPage({ offset: 0 })
+  if (!first.ok) return first
+
+  const items = Array.isArray(first.data?.items) ? first.data.items.slice() : []
+  const total = Number(first.data?.total) || items.length
+  let nextOffset = items.length
+  const maxPages = 50
+  let pagesFetched = 1
+
+  while (nextOffset < total) {
+    if (pagesFetched >= maxPages) break
+    const page = await callPage({ offset: nextOffset })
+    if (!page.ok) return { ...page, partial: { items, total, nextOffset } }
+    const pageItems = Array.isArray(page.data?.items) ? page.data.items : []
+    items.push(...pageItems)
+    if (pageItems.length === 0) break
+    nextOffset += pageItems.length
+    pagesFetched += 1
+  }
+
+  return {
+    ok: true,
+    status: 200,
+    data: {
+      href: typeof first.data?.href === 'string' ? first.data.href : null,
+      items,
+      limit,
+      next: null,
+      offset: 0,
+      previous: null,
+      total,
+    },
+  }
+}
+
+async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugContext }) {
+  if (!sourceUserId || !accessToken || !isOwnerUser(sourceUserId)) return
+
+  let playlistPayload = readSpotifyCacheRecord(sourceUserId, 'me_playlists_all')?.data ?? null
+  if (!hasUsablePlaylistPagePayload(playlistPayload) || !playlistPageContainsAllIds(playlistPayload, MOCK_DEMO_PLAYLIST_IDS)) {
+    const fetchedPlaylists = await fetchCurrentUserPlaylistsAll({ accessToken, debugContext })
+    if (!fetchedPlaylists.ok || !hasUsablePlaylistPagePayload(fetchedPlaylists.data)) return
+    playlistPayload = fetchedPlaylists.data
+    writeSpotifyCacheDataRecord(sourceUserId, 'me_playlists_all', playlistPayload)
+  }
+
+  const demoPlaylistsPayload = filterPlaylistPageByIds(playlistPayload, MOCK_DEMO_PLAYLIST_ID_SET)
+  if (!Array.isArray(demoPlaylistsPayload?.items) || demoPlaylistsPayload.items.length === 0) return
+  writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, 'me_playlists_all', demoPlaylistsPayload)
+
+  for (const playlistId of MOCK_DEMO_PLAYLIST_IDS) {
+    const cacheKey = `playlist_${playlistId}_tracks_all`
+    let playlistTracksPayload = readSpotifyCacheRecord(sourceUserId, cacheKey)?.data ?? null
+
+    if (!hasPlaylistItems({ data: playlistTracksPayload })) {
+      const fetchedTracks = await fetchPlaylistTracksAll({
+        playlistId,
+        accessToken,
+        debugContext,
+      })
+      if (!fetchedTracks.ok || !hasPlaylistItems({ data: fetchedTracks.data })) continue
+      playlistTracksPayload = fetchedTracks.data
+      writeSpotifyCacheDataRecord(sourceUserId, cacheKey, playlistTracksPayload)
+    }
+
+    writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey, playlistTracksPayload)
+  }
 }
 
 async function fetchAlbumTracksAll({ albumId, accessToken, debugContext }) {
@@ -1159,6 +1317,14 @@ const server = http.createServer((req, res) => {
 
         if (typeof accessToken === 'string') {
           try {
+            if (typeof me?.data?.id === 'string' && me.data.id) {
+              await seedMockDemoPlaylistCache({
+                sourceUserId: me.data.id,
+                accessToken,
+                debugContext,
+              })
+            }
+
             const cacheUserId = 'public_preview'
             const cacheKey = `playlist_${PUBLIC_PREVIEW_PLAYLIST_ID}_tracks_all`
             let previewPayload = readSpotifyCacheRecord(cacheUserId, cacheKey)?.data ?? null
@@ -1377,12 +1543,13 @@ const server = http.createServer((req, res) => {
         return Boolean(items) && (total === 0 || items.length > 0)
       }
 
-      const canUseServerCache = Boolean(all && userId)
+      const cacheUserId = all ? getPersistentSpotifyCacheUserId(userId) : null
+      const canUseServerCache = Boolean(all && cacheUserId)
       const cacheKey = 'me_playlists_all'
       const nowMs = Date.now()
-      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
+      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(cacheUserId, cacheKey) : null
       if (cachedRecord && !hasUsablePlaylistPage(cachedRecord.data)) cachedRecord = null
-      const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
+      const lockKey = canUseServerCache ? `${cacheUserId}:${cacheKey}` : null
       let lockTaken = false
 
       if (canUseServerCache && cachedRecord && !forceRefresh) {
@@ -1415,7 +1582,7 @@ const server = http.createServer((req, res) => {
         // Mark a refresh attempt so we don't keep hammering Spotify if it fails.
         const attemptedAt = new Date(nowMs).toISOString()
         cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+        writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, cachedRecord)
       }
 
       let currentAccessToken = accessToken
@@ -1596,9 +1763,9 @@ const server = http.createServer((req, res) => {
         const payload = { ...first.data, items, offset: 0, limit, total }
         if (canUseServerCache) {
           const storedAt = new Date().toISOString()
-          writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+          writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
             schemaVersion: 1,
-            userId,
+            userId: cacheUserId,
             cacheKey,
             fetchedAt: storedAt,
             lastRefreshedAt: storedAt,
@@ -1649,8 +1816,9 @@ const server = http.createServer((req, res) => {
     }
 
     ;(async () => {
+      const cacheUserId = getPersistentSpotifyCacheUserId(userId)
       const cacheKey = `track_${trackId}_artists`
-      const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      const cachedRecord = cacheUserId ? readSpotifyCacheRecord(cacheUserId, cacheKey) : null
       if (cachedRecord) {
         res.setHeader('x-sp-cache', 'hit')
         res.setHeader('x-sp-cache-fetched-at', cachedRecord.fetchedAt)
@@ -1756,17 +1924,19 @@ const server = http.createServer((req, res) => {
           : null
 
         const storedAt = new Date().toISOString()
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
-          schemaVersion: 1,
-          userId,
-          cacheKey,
-          fetchedAt: storedAt,
-          lastRefreshedAt: storedAt,
-          data: { artists, album },
-        })
+        if (cacheUserId) {
+          writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+            schemaVersion: 1,
+            userId: cacheUserId,
+            cacheKey,
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: { artists, album },
+          })
 
-        res.setHeader('x-sp-cache', 'miss_stored')
-        res.setHeader('x-sp-cache-fetched-at', storedAt)
+          res.setHeader('x-sp-cache', 'miss_stored')
+          res.setHeader('x-sp-cache-fetched-at', storedAt)
+        }
         sendJson(res, 200, { artists, album })
       } finally {
         if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
@@ -1799,9 +1969,10 @@ const server = http.createServer((req, res) => {
     }
 
     ;(async () => {
+      const cacheUserId = getPersistentSpotifyCacheUserId(userId)
       const cacheKey = `album_${albumId}_tracks_all`
       const nowMs = Date.now()
-      let cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      let cachedRecord = cacheUserId ? readSpotifyCacheRecord(cacheUserId, cacheKey) : null
       const lockKey = `${userId}:${cacheKey}`
       let lockTaken = false
 
@@ -1828,7 +1999,7 @@ const server = http.createServer((req, res) => {
 
         const attemptedAt = new Date(nowMs).toISOString()
         cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+        writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, cachedRecord)
       }
 
       let currentAccessToken = accessToken
@@ -1878,18 +2049,20 @@ const server = http.createServer((req, res) => {
         }
 
         const storedAt = new Date().toISOString()
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
-          schemaVersion: 1,
-          userId,
-          cacheKey,
-          fetchedAt: storedAt,
-          lastRefreshedAt: storedAt,
-          data: result.data,
-        })
+        if (cacheUserId) {
+          writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+            schemaVersion: 1,
+            userId: cacheUserId,
+            cacheKey,
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: result.data,
+          })
 
-        res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
-        res.setHeader('x-sp-cache-fetched-at', storedAt)
-        res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+          res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_refreshed')
+          res.setHeader('x-sp-cache-fetched-at', storedAt)
+          res.setHeader('x-sp-cache-last-refreshed-at', storedAt)
+        }
         sendJson(res, 200, result.data)
       } catch (error) {
         if (cachedRecord) {
@@ -1930,8 +2103,9 @@ const server = http.createServer((req, res) => {
     }
 
     ;(async () => {
+      const cacheUserId = getPersistentSpotifyCacheUserId(userId)
       const cacheKey = `artist_${artistId}_image`
-      const cachedRecord = readSpotifyCacheRecord(userId, cacheKey)
+      const cachedRecord = cacheUserId ? readSpotifyCacheRecord(cacheUserId, cacheKey) : null
       const cachedImageUrl = cachedRecord?.data?.imageUrl ?? null
       const nowMs = Date.now()
       const isStale = shouldRefreshArtistImageRecord(cachedRecord, nowMs)
@@ -2047,17 +2221,19 @@ const server = http.createServer((req, res) => {
         const imageUrl = typeof images?.[0]?.url === 'string' ? images[0].url : null
 
         const storedAt = new Date().toISOString()
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, {
-          schemaVersion: 1,
-          userId,
-          cacheKey,
-          fetchedAt: storedAt,
-          lastRefreshedAt: storedAt,
-          data: { imageUrl },
-        })
+        if (cacheUserId) {
+          writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+            schemaVersion: 1,
+            userId: cacheUserId,
+            cacheKey,
+            fetchedAt: storedAt,
+            lastRefreshedAt: storedAt,
+            data: { imageUrl },
+          })
 
-        res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_stored')
-        res.setHeader('x-sp-cache-fetched-at', storedAt)
+          res.setHeader('x-sp-cache', cachedRecord ? 'refreshed' : 'miss_stored')
+          res.setHeader('x-sp-cache-fetched-at', storedAt)
+        }
         sendJson(res, 200, { imageUrl })
       } finally {
         if (lockTaken) spotifyRefreshInFlight.delete(lockKey)
@@ -2099,11 +2275,12 @@ const server = http.createServer((req, res) => {
     const forceRefresh = url.searchParams.get('force') === '1'
 
     ;(async () => {
-      const canUseServerCache = Boolean(all && userId)
+      const cacheUserId = all ? getPersistentSpotifyCacheUserId(userId) : null
+      const canUseServerCache = Boolean(all && cacheUserId)
       const cacheKey = `playlist_${playlistId}_tracks_all`
       const nowMs = Date.now()
-      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(userId, cacheKey) : null
-      const lockKey = canUseServerCache ? `${userId}:${cacheKey}` : null
+      let cachedRecord = canUseServerCache ? readSpotifyCacheRecord(cacheUserId, cacheKey) : null
+      const lockKey = canUseServerCache ? `${cacheUserId}:${cacheKey}` : null
       let lockTaken = false
 
       if (canUseServerCache && cachedRecord && !forceRefresh) {
@@ -2131,7 +2308,7 @@ const server = http.createServer((req, res) => {
 
         const attemptedAt = new Date(nowMs).toISOString()
         cachedRecord = { ...cachedRecord, lastRefreshedAt: attemptedAt }
-        writeSpotifyCacheRecordAtomic(userId, cacheKey, cachedRecord)
+        writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, cachedRecord)
       }
 
       let currentAccessToken = accessToken
@@ -2275,9 +2452,9 @@ const server = http.createServer((req, res) => {
         const payload = { ...first.data, items, offset: 0, limit, total }
         if (canUseServerCache) {
           const storedAt = new Date().toISOString()
-          writeSpotifyCacheRecordAtomic(userId, cacheKey, {
+          writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
             schemaVersion: 1,
-            userId,
+            userId: cacheUserId,
             cacheKey,
             fetchedAt: storedAt,
             lastRefreshedAt: storedAt,

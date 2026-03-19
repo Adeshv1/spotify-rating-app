@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-19T22:50:46.360Z",
-  "lastRefreshedAt": "2026-03-19T22:50:46.360Z",
+  "fetchedAt": "2026-03-19T23:48:16.169Z",
+  "lastRefreshedAt": "2026-03-19T23:48:16.169Z",
   "data": {
     "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "limit": 50,
     "next": "https://api.spotify.com/v1/me/playlists?offset=50&limit=50&locale=*",
     "offset": 0,
     "previous": null,
-    "total": 52,
+    "total": 51,
     "items": [
       {
         "collaborative": false,
@@ -241,52 +241,6 @@
         },
         "type": "playlist",
         "uri": "spotify:playlist:4j8kEJ1ifY5t1vsdSOabrW"
-      },
-      {
-        "collaborative": false,
-        "description": "",
-        "external_urls": {
-          "spotify": "https://open.spotify.com/playlist/5DBL17LWOZ1Yk87gan9wQq"
-        },
-        "href": "https://api.spotify.com/v1/playlists/5DBL17LWOZ1Yk87gan9wQq",
-        "id": "5DBL17LWOZ1Yk87gan9wQq",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://mosaic.scdn.co/640/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://mosaic.scdn.co/300/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
-            "width": 300
-          },
-          {
-            "height": 60,
-            "url": "https://mosaic.scdn.co/60/ab67616d00001e021cc6f24606517f854014ca69ab67616d00001e02684ecc5bc1b724d0106ad694ab67616d00001e0274959140f550b11049c18a38ab67616d00001e02bbd45c8d36e0e045ef640411",
-            "width": 60
-          }
-        ],
-        "name": "Spotify App - Demo Playlist",
-        "owner": {
-          "display_name": "Adesh Virk",
-          "external_urls": {
-            "spotify": "https://open.spotify.com/user/21y337tnjcnnjntvxssctfnda"
-          },
-          "href": "https://api.spotify.com/v1/users/21y337tnjcnnjntvxssctfnda",
-          "id": "21y337tnjcnnjntvxssctfnda",
-          "type": "user",
-          "uri": "spotify:user:21y337tnjcnnjntvxssctfnda"
-        },
-        "primary_color": null,
-        "public": true,
-        "snapshot_id": "AAAABGcPcr6g8mJXgXANgAwPliwIX1T6",
-        "items": {
-          "href": "https://api.spotify.com/v1/playlists/5DBL17LWOZ1Yk87gan9wQq/items",
-          "total": 50
-        },
-        "type": "playlist",
-        "uri": "spotify:playlist:5DBL17LWOZ1Yk87gan9wQq"
       },
       {
         "collaborative": false,
@@ -1755,7 +1709,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465731a5ed5a73789ba8c0142",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c65731a5ed5a73789ba8c0142",
             "width": null
           }
         ],

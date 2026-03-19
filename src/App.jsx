@@ -195,6 +195,17 @@ function getTiedRanks(items, getScore) {
   });
 }
 
+function getAlbumAvgRankSortValue(album) {
+  return Number.isFinite(album?.avgRank)
+    ? Number(album.avgRank)
+    : Number.POSITIVE_INFINITY;
+}
+
+function getAlbumRatedShare(album) {
+  const totalTracks = Number(album?.totalTracks) || 0;
+  return totalTracks > 0 ? (Number(album?.ratedCount) || 0) / totalTracks : 0;
+}
+
 function pickAlbumArtistLabel(tracks) {
   const counts = new Map();
   for (const track of tracks || []) {
@@ -525,8 +536,12 @@ function buildOrderedKeys(ranking) {
   for (const [key] of Object.entries(ranking.tracks)) {
     const state = getTrackState(ranking, key);
     if (state.bucket === "X") continue;
-    if (!isRankedState(state)) continue;
-    rows.push({ key, rating: Number(state.rating) || 0 });
+    const rating = Number(state.rating);
+    const hasExplicitOrder =
+      (state.bucket && state.bucket !== "U" && state.bucket !== "X") ||
+      (Number.isFinite(rating) && Math.round(rating) !== 1000);
+    if (!hasExplicitOrder) continue;
+    rows.push({ key, rating: Number.isFinite(rating) ? rating : 0 });
   }
   rows.sort(
     (a, b) =>
@@ -2087,6 +2102,7 @@ function DashboardPage({
 }) {
   const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
   const [expandedAlbumKey, setExpandedAlbumKey] = useState(null);
+  const [albumProgressInfoOpen, setAlbumProgressInfoOpen] = useState(false);
   const [albumTracksById, setAlbumTracksById] = useState(() => ({}));
   const [albumLoadStateById, setAlbumLoadStateById] = useState(() => ({}));
   const [artistImagesById, setArtistImagesById] = useState(() => ({}));
@@ -2144,6 +2160,7 @@ function DashboardPage({
 
   useEffect(() => {
     setExpandedAlbumKey(null);
+    setAlbumProgressInfoOpen(false);
     setAlbumTracksById({});
     setAlbumLoadStateById({});
   }, [userId]);
@@ -2676,7 +2693,7 @@ function DashboardPage({
       const cached = readAlbumTracksCache(userId, albumId);
       if (cached?.items?.length) {
         setAlbumTracksById(prev => ({ ...prev, [albumId]: cached }));
-        upsertGlobalSongs(userId, cached.items, { onlyExisting: true });
+        upsertGlobalSongs(userId, cached.items);
         return cached;
       }
 
@@ -2718,7 +2735,7 @@ function DashboardPage({
         });
         const nextRecord = record || readAlbumTracksCache(userId, albumId);
         if (nextRecord?.items?.length) {
-          upsertGlobalSongs(userId, nextRecord.items, { onlyExisting: true });
+          upsertGlobalSongs(userId, nextRecord.items);
           setAlbumTracksById(prev => ({ ...prev, [albumId]: nextRecord }));
         }
         setAlbumLoadStateById(prev => ({
@@ -2762,10 +2779,10 @@ function DashboardPage({
           artists: track.artists || meta?.artists || [],
           artistsDetailed: meta?.artistsDetailed || [],
           album: track.album || meta?.album || null,
-          rank: rankByKey.get(track.trackKey) || null,
+          rank: rankByKey.get(track.trackKey) ?? null,
         };
       })
-      .filter(r => Number.isFinite(Number(r.rank)))
+      .filter(r => Number.isFinite(r.rank))
       .sort((left, right) => left.rank - right.rank);
 
     const hasAnyRatings = rows.length > 0;
@@ -2774,7 +2791,7 @@ function DashboardPage({
 
     for (const track of canonicalGlobalTracks) {
       const state = getTrackState(ranking, track.trackKey);
-      const rank = rankByKey.get(track.trackKey) || null;
+      const rank = rankByKey.get(track.trackKey) ?? null;
       const item = {
         trackKey: track.trackKey,
         id: track.id,
@@ -2801,7 +2818,7 @@ function DashboardPage({
 
         if (state.bucket === "X") {
           prev.observedDoNotRateTracks.push(item);
-        } else if (Number.isFinite(Number(rank)) && isRankedState(state)) {
+        } else if (Number.isFinite(rank) && isRankedState(state)) {
           prev.sumRankObserved += Number(rank);
           prev.observedRatedTracks.push(item);
         } else {
@@ -2854,7 +2871,7 @@ function DashboardPage({
             const trackKey =
               canonicalTrackKeyByIdentity.get(songIdentityOfTrack(track)) ||
               trackKeyOfTrack(track);
-            const rank = rankByKey.get(trackKey) || null;
+            const rank = rankByKey.get(trackKey) ?? null;
             const item = {
               trackKey,
               id: typeof track?.id === "string" ? track.id : null,
@@ -2868,10 +2885,7 @@ function DashboardPage({
 
             if (state.bucket === "X") {
               doNotRateTracks.push(item);
-            } else if (
-              Number.isFinite(Number(rank)) &&
-              isRankedState(state)
-            ) {
+            } else if (Number.isFinite(rank) && isRankedState(state)) {
               ratedTracks.push(item);
               sumRank += Number(rank);
             } else {
@@ -2926,13 +2940,8 @@ function DashboardPage({
     const topAlbums = Array.from(mergedTopAlbums.values())
       .sort(
         (a, b) =>
-          b.completion - a.completion ||
-          b.ratedCount - a.ratedCount ||
-          (Number.isFinite(a.avgRank) ? a.avgRank : Number.POSITIVE_INFINITY) -
-            (Number.isFinite(b.avgRank)
-              ? b.avgRank
-              : Number.POSITIVE_INFINITY) ||
-          b.totalTracks - a.totalTracks ||
+          getAlbumRatedShare(b) - getAlbumRatedShare(a) ||
+          getAlbumAvgRankSortValue(a) - getAlbumAvgRankSortValue(b) ||
           a.name.localeCompare(b.name, "en", { numeric: true }),
       );
 
@@ -2945,14 +2954,6 @@ function DashboardPage({
         ? getTiedRanks(computed.topSongs, t => t.rank)
         : [],
     [computed?.topSongs],
-  );
-
-  const topAlbumRanks = useMemo(
-    () =>
-      Array.isArray(computed?.topAlbums)
-        ? getTiedRanks(computed.topAlbums, a => a.avgRank)
-        : [],
-    [computed?.topAlbums],
   );
 
   useEffect(() => {
@@ -3113,7 +3114,20 @@ function DashboardPage({
 
         <div className="dashPanel">
           <div className="dashPanelHeader">
-            <h3>Album progress ({computed.topAlbums.length})</h3>
+            <div className="dashPanelHeaderRow">
+              <h3>Album progress ({computed.topAlbums.length})</h3>
+              <button
+                className="albumProgressInfoButton"
+                type="button"
+                onClick={() => setAlbumProgressInfoOpen(v => !v)}
+                aria-expanded={albumProgressInfoOpen}
+                aria-controls="album-progress-info"
+                aria-label="Show album progress sorting info"
+                title="How album progress is sorted"
+              >
+                i
+              </button>
+            </div>
           </div>
           <div
             className="dashPanelBody dashPanelBodyTight"
@@ -3121,6 +3135,18 @@ function DashboardPage({
             aria-label="Album progress list"
             tabIndex={0}
           >
+            {albumProgressInfoOpen ? (
+              <div
+                id="album-progress-info"
+                className="albumProgressInfoPanel"
+              >
+                <p className="meta">
+                  Album progress is sorted by <strong>percent of the album rated</strong> first.
+                  Albums with the same completion percent are then sorted by{" "}
+                  <strong>average rank</strong>, where a lower average rank places higher.
+                </p>
+              </div>
+            ) : null}
             <table className="dashTable">
               <colgroup>
                 <col className="dashColIndex" />
@@ -3153,7 +3179,7 @@ function DashboardPage({
                       >
                         <td className="right">
                           <span className="cellSub">
-                            {topAlbumRanks[idx] ?? idx + 1}
+                            {idx + 1}
                           </span>
                         </td>
                         <td>
