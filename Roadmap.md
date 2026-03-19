@@ -107,3 +107,5 @@
 + Landing: replace the public preview dashboard with manual-access instructions and contact details for Spotify allowlisting requests (implemented 2026-03-17)
 + Landing: refocus the homepage on product value with workflow cards, a static dashboard preview, and a smaller developer-preview access note (implemented 2026-03-17)
 + Landing: redesign the public homepage around the real post-login flow with playlist, rank-songs, and dashboard previews (implemented 2026-03-19)
++ Landing: polish the simplified public homepage with a cleaner navbar, tighter hero spacing, clearer CTA hierarchy, and subtle credibility details (implemented 2026-03-19)
++ Landing: widen and rebalance the minimal hero with tighter spacing and a more intentional public navbar link treatment (implemented 2026-03-19)

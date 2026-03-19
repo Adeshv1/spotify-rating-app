@@ -162,8 +162,9 @@
 }
 
 .cardLanding {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 100%;
+  height: auto;
   display: flex;
   padding: 2% 2.5%;
   overflow: visible;
@@ -220,6 +221,11 @@
   border-bottom: 1px solid var(--surface-border);
 }
 
+.topBarPublic {
+  background: rgba(7, 12, 27, 0.76);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
 @media (prefers-color-scheme: light) {
   .topBar {
     background: linear-gradient(
@@ -238,6 +244,26 @@
   padding: 1rem 1rem;
   max-width: 2200px;
   margin: 0 auto;
+}
+
+.topBarInnerPublic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  min-height: 3.35rem;
+  padding: 0.5rem clamp(0.9rem, 2.4vw, 2.1rem);
+  box-sizing: border-box;
+}
+
+.topBarInnerPublic .topBarCenter {
+  display: none;
+}
+
+.topBarInnerPublic .topBarLeft,
+.topBarInnerPublic .topActions {
+  flex: 0 0 auto;
 }
 
 .topBarLeft {
@@ -335,6 +361,36 @@
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+.navbarLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 1.95rem;
+  padding: 0.26rem 0.66rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 650;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.navbarLink:hover {
+  color: rgba(255, 255, 255, 0.98);
+  border-color: rgba(122, 162, 255, 0.24);
+  background: rgba(122, 162, 255, 0.08);
+  box-shadow: 0 8px 18px rgba(47, 109, 255, 0.12);
+  transform: translateY(-1px);
 }
 
 .brandSub {
@@ -578,14 +634,13 @@
   min-height: 100%;
   height: auto;
   margin-top: 0;
-  display: block;
-  padding: 4% 0 2%;
+  display: flex;
+  padding: 1.45rem 0 0.85rem;
   box-sizing: border-box;
 }
 
 .landingContent {
-  width: 46%;
-  max-width: 100%;
+  width: min(52rem, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -595,44 +650,87 @@
 
 .landingContent h1 {
   margin: 0;
-  max-width: 11ch;
-  font-size: clamp(2.65rem, 6vw, 4.9rem);
-  line-height: 0.94;
+  max-width: 15ch;
+  font-size: clamp(3.64rem, 6.305vw, 6.11rem);
+  line-height: 0.95;
   letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
 .landingLead {
-  margin: 1.15rem 0 0;
-  max-width: 34rem;
+  margin: 0.72rem 0 0;
+  max-width: 47rem;
   color: var(--text-muted);
-  line-height: 1.65;
-  font-size: 1.02rem;
+  line-height: 1.56;
+  font-size: 1.33rem;
+}
+
+.landingCredibility {
+  margin: 1.6rem 0 0;
+  color: var(--text-muted-2);
+  font-size: 1.14rem;
+  line-height: 1.45;
 }
 
 .landingActions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.8rem;
-  margin-top: 1.75rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
 }
 
 .landingActions .btn {
-  min-width: 12rem;
   text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    filter 180ms ease;
+}
+
+.landingActions .btn:hover {
+  transform: translateY(-2px);
+}
+
+.landingActions .btn.primary {
+  min-width: 13rem;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  font-size: 1.24rem;
+  box-shadow: 0 12px 26px rgba(79, 141, 255, 0.2);
+}
+
+.landingActions .btn.primary:hover {
+  box-shadow: 0 16px 34px rgba(79, 141, 255, 0.28);
+  filter: brightness(1.05);
+}
+
+.landingActions .btn:not(.primary) {
+  min-width: 10.5rem;
+  padding: 0.48rem 0.85rem;
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.14rem;
 }
 
 .landingAccessNote {
-  margin: 1.15rem 0 0;
+  margin: 0.72rem 0 0;
   max-width: 30rem;
-  color: var(--text-muted-2);
-  font-size: 0.92rem;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.04rem;
+  line-height: 1.55;
+}
+
+.landingAccessNote span {
+  display: block;
 }
 
 .landingAccessNote a {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
 }
 
@@ -658,7 +756,7 @@
 
 @media (max-width: 1100px) {
   .landingContent {
-    width: 58%;
+    width: min(48rem, 100%);
   }
 }
 
@@ -694,27 +792,35 @@
     padding: 1.5% 2% 2%;
   }
   .cardLanding {
-    padding: 4% 5%;
+    padding: 3.5% 4.5%;
+  }
+  .topBarInnerPublic {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0.9rem;
+  }
+  .topBarInnerPublic .topBarLeft,
+  .topBarInnerPublic .topActions {
+    width: auto;
+    justify-self: auto;
+  }
+  .topBarInnerPublic .topBarLeft {
+    flex-direction: row;
+    align-items: center;
+  }
+  .topBarInnerPublic .topActions {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
   }
   .landingPage {
     height: auto;
-    padding: 8% 0 4%;
+    padding: 6% 0 3%;
   }
   .landingContent {
-    width: 100%;
-  }
-  .landingLead,
-  .landingAccessNote {
-    max-width: none;
-  }
-  .landingActions {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .landingActions .btn {
-    width: 100%;
-    min-width: 0;
+    width: min(48rem, 100%);
   }
   .headerDataMenuPanel {
     left: 0;
@@ -742,6 +848,28 @@
   .confirmDialogActions {
     flex-direction: column-reverse;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  .landingContent {
+    width: 100%;
+  }
+
+  .landingLead,
+  .landingAccessNote {
+    max-width: none;
+  }
+
+  .landingActions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .landingActions .btn {
+    width: 100%;
+    min-width: 0;
   }
 }
 

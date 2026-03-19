@@ -1641,22 +1641,18 @@ function App() {
 
   return (
     <div className="appShell">
-      <header className="topBar">
-        <div className="topBarInner">
+      <header className={`topBar ${!loggedIn ? "topBarPublic" : ""}`.trim()}>
+        <div className={`topBarInner ${!loggedIn ? "topBarInnerPublic" : ""}`.trim()}>
           <div className="topBarLeft">
             <div className="brand">
               <div className="brandTitle">Spotify Rating App</div>
-              <div className="brandSub">
-                {loggedIn ? (
-                  <>
-                    {profile?.display_name
-                      ? `Signed in as ${profile.display_name}.`
-                      : "Signed in."}
-                  </>
-                ) : (
-                    "Rank your songs with binary sort and quick reordering."
-                )}
-              </div>
+              {loggedIn ? (
+                <div className="brandSub">
+                  {profile?.display_name
+                    ? `Signed in as ${profile.display_name}.`
+                    : "Signed in."}
+                </div>
+              ) : null}
             </div>
             {loggedIn ? (
               <div className="headerUtilityActions">
@@ -1761,7 +1757,16 @@ function App() {
                   Log out
                 </button>
               </>
-            ) : null}
+            ) : (
+              <a
+                className="navbarLink"
+                href="https://github.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            )}
           </div>
         </div>
       </header>
@@ -3440,9 +3445,14 @@ function LandingPage() {
           </a>
         </div>
         <p className="landingAccessNote">
-          Spotify requires apps in development to manually approve users. To get
-          access, email:{" "}
-          <a href="mailto:adeshvirk1@gmail.com">adeshvirk1@gmail.com</a>
+          <span>Spotify requires manual approval for new users.</span>
+          <span>
+            To get access, email:{" "}
+            <a href="mailto:adeshvirk1@gmail.com">adeshvirk1@gmail.com</a>
+          </span>
+        </p>
+        <p className="landingCredibility">
+          Built with React, Node.js, and the Spotify API.
         </p>
       </div>
     </section>
