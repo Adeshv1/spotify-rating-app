@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4XF98HJsL7ue3NksOvebiJ_profile",
+  "fetchedAt": "2026-03-20T00:29:20.361Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.361Z",
+  "data": {
+    "id": "4XF98HJsL7ue3NksOvebiJ",
+    "name": "Aquilegia",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d91289f96a8a92ced682c53c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d91289f96a8a92ced682c53c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d91289f96a8a92ced682c53c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d91289f96a8a92ced682c53c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4XF98HJsL7ue3NksOvebiJ",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

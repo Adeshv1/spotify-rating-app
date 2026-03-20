@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4JDXBZdRPId4devseaAOKH_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:21.084Z",
+  "lastRefreshedAt": "2026-03-20T00:41:21.084Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1OwPxTeIwz4wxdvDSnysgm"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 258803,
+        "name": "Runner",
+        "disc_number": 1,
+        "id": "1OwPxTeIwz4wxdvDSnysgm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6L8JVXMBLDZeyhBKr0lrj8"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 120808,
+        "name": "Gloom",
+        "disc_number": 1,
+        "id": "6L8JVXMBLDZeyhBKr0lrj8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4szyAOmCAqa39n9zAuLgYn"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 227702,
+        "name": "Half Life",
+        "disc_number": 1,
+        "id": "4szyAOmCAqa39n9zAuLgYn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/56sDw3DIGcUStBO5SguYPK"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 114742,
+        "name": "Fool",
+        "disc_number": 1,
+        "id": "56sDw3DIGcUStBO5SguYPK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Q0ruF0jZSAfnBVXK1DuF3"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 243397,
+        "name": "On and On",
+        "disc_number": 1,
+        "id": "4Q0ruF0jZSAfnBVXK1DuF3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3qhlB30KknSejmIvZZLjOD"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 159245,
+        "name": "End of Beginning",
+        "disc_number": 1,
+        "id": "3qhlB30KknSejmIvZZLjOD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KnGAY27aFqgiYySwt7yg5"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 128438,
+        "name": "I Want Your Video",
+        "disc_number": 1,
+        "id": "7KnGAY27aFqgiYySwt7yg5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3F1rA5PQBwtgiCo9mVlL2k"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 235696,
+        "name": "Climax",
+        "disc_number": 1,
+        "id": "3F1rA5PQBwtgiCo9mVlL2k"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1yQkAv4xtapCBCzI8q1QGF"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 177641,
+        "name": "Change",
+        "disc_number": 1,
+        "id": "1yQkAv4xtapCBCzI8q1QGF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/196guQJEBBLCO9X9NLrqmR"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 20876,
+        "name": "Is That All It Takes",
+        "disc_number": 1,
+        "id": "196guQJEBBLCO9X9NLrqmR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0MUAB4NiqM91Ndm7Tz3kEQ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 181353,
+        "name": "Go For It",
+        "disc_number": 1,
+        "id": "0MUAB4NiqM91Ndm7Tz3kEQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TorufIR9E06RXo3VhZaae"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 184314,
+        "name": "Figure You Out",
+        "disc_number": 1,
+        "id": "6TorufIR9E06RXo3VhZaae"
+      },
+      {
+        "artists": [
+          {
+            "name": "Djo",
+            "id": "5p9HO3XC5P3BLxJs5Mtrhm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4zzwmX1ntxHBaFWJahkVTx"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 110820,
+        "name": "Slither",
+        "disc_number": 1,
+        "id": "4zzwmX1ntxHBaFWJahkVTx"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "4JDXBZdRPId4devseaAOKH"
+  }
+}

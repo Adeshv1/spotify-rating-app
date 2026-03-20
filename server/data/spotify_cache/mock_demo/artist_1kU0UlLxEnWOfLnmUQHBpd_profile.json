@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1kU0UlLxEnWOfLnmUQHBpd_profile",
+  "fetchedAt": "2026-03-20T00:29:23.390Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.390Z",
+  "data": {
+    "id": "1kU0UlLxEnWOfLnmUQHBpd",
+    "name": "Etienne Balestre",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27323a2918971cc2a6051e24315",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27323a2918971cc2a6051e24315",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0223a2918971cc2a6051e24315",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485123a2918971cc2a6051e24315",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1kU0UlLxEnWOfLnmUQHBpd",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

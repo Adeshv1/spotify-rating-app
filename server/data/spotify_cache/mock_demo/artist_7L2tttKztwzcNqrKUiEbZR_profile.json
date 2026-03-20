@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7L2tttKztwzcNqrKUiEbZR_profile",
+  "fetchedAt": "2026-03-20T00:29:19.498Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.498Z",
+  "data": {
+    "id": "7L2tttKztwzcNqrKUiEbZR",
+    "name": "BAK Jay",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb7f6823cfc8828c121f1d40b7",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb7f6823cfc8828c121f1d40b7",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051747f6823cfc8828c121f1d40b7",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1787f6823cfc8828c121f1d40b7",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7L2tttKztwzcNqrKUiEbZR",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

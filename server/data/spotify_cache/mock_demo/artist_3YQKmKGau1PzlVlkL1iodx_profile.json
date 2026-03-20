@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3YQKmKGau1PzlVlkL1iodx_profile",
+  "fetchedAt": "2026-03-20T00:29:16.668Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.668Z",
+  "data": {
+    "id": "3YQKmKGau1PzlVlkL1iodx",
+    "name": "Twenty One Pilots",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb61a7ea26d33ded218cd1e59d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb61a7ea26d33ded218cd1e59d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517461a7ea26d33ded218cd1e59d",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17861a7ea26d33ded218cd1e59d",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

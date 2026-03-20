@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_4Z8MrrKMBHMPa8d04Ivur8_profile",
+  "fetchedAt": "2026-03-20T00:34:27.089Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.089Z",
+  "data": {
+    "id": "4Z8MrrKMBHMPa8d04Ivur8",
+    "name": "Bella Kay",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb961f7d53d55f126b339e1659",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb961f7d53d55f126b339e1659",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174961f7d53d55f126b339e1659",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178961f7d53d55f126b339e1659",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4Z8MrrKMBHMPa8d04Ivur8",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

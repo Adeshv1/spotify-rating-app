@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0EyhkwP3UnwGFBy6xwKjSy_profile",
+  "fetchedAt": "2026-03-20T00:29:17.354Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.354Z",
+  "data": {
+    "id": "0EyhkwP3UnwGFBy6xwKjSy",
+    "name": "EsDeeKid",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebfe6d53e126b70d1c2594b434",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebfe6d53e126b70d1c2594b434",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174fe6d53e126b70d1c2594b434",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178fe6d53e126b70d1c2594b434",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

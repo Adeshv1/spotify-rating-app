@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6U1dV7aL68N7Gb0Naq34V5_profile",
+  "fetchedAt": "2026-03-20T00:29:15.159Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.159Z",
+  "data": {
+    "id": "6U1dV7aL68N7Gb0Naq34V5",
+    "name": "REI AMI",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebeb39ded0900c3e50e3d7ba68",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebeb39ded0900c3e50e3d7ba68",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174eb39ded0900c3e50e3d7ba68",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178eb39ded0900c3e50e3d7ba68",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6U1dV7aL68N7Gb0Naq34V5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

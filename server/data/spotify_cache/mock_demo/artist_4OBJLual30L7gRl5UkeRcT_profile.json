@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4OBJLual30L7gRl5UkeRcT_profile",
+  "fetchedAt": "2026-03-20T00:29:17.838Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.838Z",
+  "data": {
+    "id": "4OBJLual30L7gRl5UkeRcT",
+    "name": "T.I.",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb12057d342f33c61b3768f2bc",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb12057d342f33c61b3768f2bc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517412057d342f33c61b3768f2bc",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17812057d342f33c61b3768f2bc",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4OBJLual30L7gRl5UkeRcT",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

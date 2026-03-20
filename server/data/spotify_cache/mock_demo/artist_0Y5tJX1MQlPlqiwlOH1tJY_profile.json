@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0Y5tJX1MQlPlqiwlOH1tJY_profile",
+  "fetchedAt": "2026-03-20T00:29:25.188Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.188Z",
+  "data": {
+    "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+    "name": "Travis Scott",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517419c2790744c792d05570bb71",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17819c2790744c792d05570bb71",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

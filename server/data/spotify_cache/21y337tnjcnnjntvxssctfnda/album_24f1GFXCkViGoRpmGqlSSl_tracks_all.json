@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_24f1GFXCkViGoRpmGqlSSl_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:21.963Z",
+  "lastRefreshedAt": "2026-03-20T00:41:21.963Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "James Blake",
+            "id": "53KwLdlmrlCelAZMaLVZqU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6OakIaj4T039vJ8V2AJiWa"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 246960,
+        "name": "History (feat. James Blake)",
+        "disc_number": 1,
+        "id": "6OakIaj4T039vJ8V2AJiWa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7HkOwm4wmvTsKbe405RhE3"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 274000,
+        "name": "175 Months",
+        "disc_number": 1,
+        "id": "7HkOwm4wmvTsKbe405RhE3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "Jim Legxacy",
+            "id": "7IrBqZo6diq3hV3GpUhrs2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/064NMVv1SUTN1e2fbG4MKt"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 198256,
+        "name": "No Weapons (feat. Jim Legxacy)",
+        "disc_number": 1,
+        "id": "064NMVv1SUTN1e2fbG4MKt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "Kano",
+            "id": "50nN8IFD4xA67fI4jYbLV4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Vn4C8zBO7b2pZPQ8L0oZO"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 380816,
+        "name": "Chapter 16 (feat. Kano)",
+        "disc_number": 1,
+        "id": "1Vn4C8zBO7b2pZPQ8L0oZO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "Tems",
+            "id": "687cZJR45JO7jhk1LHIbgq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oTuTpF1F3A7rEC6RKsMRz"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 219743,
+        "name": "Raindance (feat. Tems)",
+        "disc_number": 1,
+        "id": "3oTuTpF1F3A7rEC6RKsMRz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "James Blake",
+            "id": "53KwLdlmrlCelAZMaLVZqU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lhOzoYujY5YD3anyw68hp"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 271898,
+        "name": "Selfish (feat. James Blake)",
+        "disc_number": 1,
+        "id": "4lhOzoYujY5YD3anyw68hp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7AXHZylhc2mgBKchDEJ1XL"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 471666,
+        "name": "My 27th Birthday",
+        "disc_number": 1,
+        "id": "7AXHZylhc2mgBKchDEJ1XL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0BiXEKLDn6bG3OgZcwNYuM"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 181050,
+        "name": "Marvellous",
+        "disc_number": 1,
+        "id": "0BiXEKLDn6bG3OgZcwNYuM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          },
+          {
+            "name": "Nicole Blakk",
+            "id": "5HnkBZ2fxKMj6yE2DagFiP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4crUyIrhzkiaBIbM4LjUFX"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 346506,
+        "name": "Fairchild",
+        "disc_number": 1,
+        "id": "4crUyIrhzkiaBIbM4LjUFX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dave",
+            "id": "6Ip8FS7vWT1uKkJSweANQK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3qpbRVi19oJw1jMRSaNFPN"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 277765,
+        "name": "The Boy Who Played the Harp",
+        "disc_number": 1,
+        "id": "3qpbRVi19oJw1jMRSaNFPN"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "24f1GFXCkViGoRpmGqlSSl"
+  }
+}

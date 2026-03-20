@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6M2wZ9GZgrQXHCFfjv46we_profile",
+  "fetchedAt": "2026-03-20T00:29:25.012Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.012Z",
+  "data": {
+    "id": "6M2wZ9GZgrQXHCFfjv46we",
+    "name": "Dua Lipa",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb0c68f6c95232e716f0abee8d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb0c68f6c95232e716f0abee8d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051740c68f6c95232e716f0abee8d",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1780c68f6c95232e716f0abee8d",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

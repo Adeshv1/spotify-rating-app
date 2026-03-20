@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0PRccyeXfXZBxi8dkIv17c_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:23.698Z",
+  "lastRefreshedAt": "2026-03-20T00:41:23.698Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ViLKrbyL3HD6wsq3AB9eI"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 144101,
+        "name": "White Keys",
+        "disc_number": 1,
+        "id": "5ViLKrbyL3HD6wsq3AB9eI"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0PRccyeXfXZBxi8dkIv17c"
+  }
+}

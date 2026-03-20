@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3qiHUAX7zY4Qnjx8TNUzVx_profile",
+  "fetchedAt": "2026-03-20T00:29:17.837Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.837Z",
+  "data": {
+    "id": "3qiHUAX7zY4Qnjx8TNUzVx",
+    "name": "Yeat",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebbcb7b5ea25215172d09d4e2e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebbcb7b5ea25215172d09d4e2e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174bcb7b5ea25215172d09d4e2e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178bcb7b5ea25215172d09d4e2e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3qiHUAX7zY4Qnjx8TNUzVx",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

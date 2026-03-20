@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2HITDeV1KHvOpkWy95Rv9t_profile",
+  "fetchedAt": "2026-03-20T00:29:21.314Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.314Z",
+  "data": {
+    "id": "2HITDeV1KHvOpkWy95Rv9t",
+    "name": "Felix Brightwood",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e07adc28cefd26442bb34cbb",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e07adc28cefd26442bb34cbb",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e07adc28cefd26442bb34cbb",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e07adc28cefd26442bb34cbb",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2HITDeV1KHvOpkWy95Rv9t",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

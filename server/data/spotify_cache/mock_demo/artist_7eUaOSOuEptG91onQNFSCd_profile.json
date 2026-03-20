@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7eUaOSOuEptG91onQNFSCd_profile",
+  "fetchedAt": "2026-03-20T00:29:21.685Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.685Z",
+  "data": {
+    "id": "7eUaOSOuEptG91onQNFSCd",
+    "name": "Arlo Thiem",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731e18fb2133f26445e03e6bad",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2731e18fb2133f26445e03e6bad",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e021e18fb2133f26445e03e6bad",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511e18fb2133f26445e03e6bad",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7eUaOSOuEptG91onQNFSCd",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

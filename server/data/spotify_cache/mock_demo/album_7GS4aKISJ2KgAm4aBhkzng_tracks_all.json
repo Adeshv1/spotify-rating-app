@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7GS4aKISJ2KgAm4aBhkzng_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.671Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.671Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "SIENNA SPIRO",
+            "id": "02gSuSAWEdWa5UOvqzjX6v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2gYTC8DsplN3RNdpdBcCOQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 217008,
+        "name": "Die On This Hill",
+        "disc_number": 1,
+        "id": "2gYTC8DsplN3RNdpdBcCOQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "SIENNA SPIRO",
+            "id": "02gSuSAWEdWa5UOvqzjX6v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62gBvs83UzqEmHr17OZ69g"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 235395,
+        "name": "MAYBE.",
+        "disc_number": 1,
+        "id": "62gBvs83UzqEmHr17OZ69g"
+      },
+      {
+        "artists": [
+          {
+            "name": "SIENNA SPIRO",
+            "id": "02gSuSAWEdWa5UOvqzjX6v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4JQDlUXsAAjv9J7I5zC3tN"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 207191,
+        "name": "You Stole The Show",
+        "disc_number": 1,
+        "id": "4JQDlUXsAAjv9J7I5zC3tN"
+      },
+      {
+        "artists": [
+          {
+            "name": "SIENNA SPIRO",
+            "id": "02gSuSAWEdWa5UOvqzjX6v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28dklcm3EJZdGoO3ctUppc"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 190436,
+        "name": "Dream Police",
+        "disc_number": 1,
+        "id": "28dklcm3EJZdGoO3ctUppc"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 4,
+    "albumId": "7GS4aKISJ2KgAm4aBhkzng"
+  }
+}

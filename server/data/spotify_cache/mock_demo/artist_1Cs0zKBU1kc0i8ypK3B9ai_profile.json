@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1Cs0zKBU1kc0i8ypK3B9ai_profile",
+  "fetchedAt": "2026-03-20T00:34:25.466Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.466Z",
+  "data": {
+    "id": "1Cs0zKBU1kc0i8ypK3B9ai",
+    "name": "David Guetta",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf150017ca69c8793503c2d4f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf150017ca69c8793503c2d4f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f150017ca69c8793503c2d4f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f150017ca69c8793503c2d4f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1Cs0zKBU1kc0i8ypK3B9ai",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

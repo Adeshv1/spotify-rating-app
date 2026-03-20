@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3OTNDa1tTW4HSiGfxZuJkI_profile",
+  "fetchedAt": "2026-03-20T00:29:18.228Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.228Z",
+  "data": {
+    "id": "3OTNDa1tTW4HSiGfxZuJkI",
+    "name": "Yung Hood",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb96c83fd668cf1d1ab7717583",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb96c83fd668cf1d1ab7717583",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517496c83fd668cf1d1ab7717583",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17896c83fd668cf1d1ab7717583",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3OTNDa1tTW4HSiGfxZuJkI",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

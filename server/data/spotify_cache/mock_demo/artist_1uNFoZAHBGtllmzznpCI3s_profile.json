@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1uNFoZAHBGtllmzznpCI3s_profile",
+  "fetchedAt": "2026-03-20T00:29:16.484Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.484Z",
+  "data": {
+    "id": "1uNFoZAHBGtllmzznpCI3s",
+    "name": "Justin Bieber",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebaf20f7db5288bce9beede034",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebaf20f7db5288bce9beede034",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174af20f7db5288bce9beede034",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178af20f7db5288bce9beede034",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

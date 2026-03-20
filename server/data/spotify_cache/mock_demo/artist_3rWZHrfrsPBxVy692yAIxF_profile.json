@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3rWZHrfrsPBxVy692yAIxF_profile",
+  "fetchedAt": "2026-03-20T00:34:24.792Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.792Z",
+  "data": {
+    "id": "3rWZHrfrsPBxVy692yAIxF",
+    "name": "WILLOW",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb945c7dd5f0ca173c79fb58ab",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb945c7dd5f0ca173c79fb58ab",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174945c7dd5f0ca173c79fb58ab",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178945c7dd5f0ca173c79fb58ab",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3rWZHrfrsPBxVy692yAIxF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

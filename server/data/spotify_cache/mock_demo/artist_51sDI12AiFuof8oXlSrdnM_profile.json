@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_51sDI12AiFuof8oXlSrdnM_profile",
+  "fetchedAt": "2026-03-20T00:29:23.192Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.192Z",
+  "data": {
+    "id": "51sDI12AiFuof8oXlSrdnM",
+    "name": "Reinhard Krause",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273086119191d5369e14149ecb6",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273086119191d5369e14149ecb6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02086119191d5369e14149ecb6",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851086119191d5369e14149ecb6",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/51sDI12AiFuof8oXlSrdnM",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

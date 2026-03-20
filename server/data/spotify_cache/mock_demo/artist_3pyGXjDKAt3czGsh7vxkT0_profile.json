@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3pyGXjDKAt3czGsh7vxkT0_profile",
+  "fetchedAt": "2026-03-20T00:29:23.525Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.525Z",
+  "data": {
+    "id": "3pyGXjDKAt3czGsh7vxkT0",
+    "name": "Sarah Watson",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd809dc9f97784b6ce6c0f93c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd809dc9f97784b6ce6c0f93c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d809dc9f97784b6ce6c0f93c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d809dc9f97784b6ce6c0f93c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3pyGXjDKAt3czGsh7vxkT0",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3pcerTbRFAPvWWtAfySFWB_profile",
+  "fetchedAt": "2026-03-20T00:29:19.192Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.192Z",
+  "data": {
+    "id": "3pcerTbRFAPvWWtAfySFWB",
+    "name": "Bino Rideaux",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb585375be382c4690166687e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb585375be382c4690166687e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174b585375be382c4690166687e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178b585375be382c4690166687e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3pcerTbRFAPvWWtAfySFWB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

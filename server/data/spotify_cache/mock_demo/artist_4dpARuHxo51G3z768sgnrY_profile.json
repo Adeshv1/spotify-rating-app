@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4dpARuHxo51G3z768sgnrY_profile",
+  "fetchedAt": "2026-03-20T00:29:24.467Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.467Z",
+  "data": {
+    "id": "4dpARuHxo51G3z768sgnrY",
+    "name": "Adele",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb68f6e5892075d7f22615bd17",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb68f6e5892075d7f22615bd17",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517468f6e5892075d7f22615bd17",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17868f6e5892075d7f22615bd17",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1zNqDE7qDGCsyzJwohVaoX_profile",
+  "fetchedAt": "2026-03-20T00:29:26.705Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.705Z",
+  "data": {
+    "id": "1zNqDE7qDGCsyzJwohVaoX",
+    "name": "Anne-Marie",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf94a7e185158d0950f07310b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf94a7e185158d0950f07310b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f94a7e185158d0950f07310b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f94a7e185158d0950f07310b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1zNqDE7qDGCsyzJwohVaoX",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

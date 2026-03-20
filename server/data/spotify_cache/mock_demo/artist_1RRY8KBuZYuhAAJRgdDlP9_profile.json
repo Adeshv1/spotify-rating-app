@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1RRY8KBuZYuhAAJRgdDlP9_profile",
+  "fetchedAt": "2026-03-20T00:34:22.679Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.679Z",
+  "data": {
+    "id": "1RRY8KBuZYuhAAJRgdDlP9",
+    "name": "Ole-Bjørn Talstad",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8bd703c434812d1377722975",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8bd703c434812d1377722975",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748bd703c434812d1377722975",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788bd703c434812d1377722975",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1RRY8KBuZYuhAAJRgdDlP9",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

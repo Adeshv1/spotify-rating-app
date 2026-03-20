@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3AQRLZ9PuTAozP28Skbq8V_profile",
+  "fetchedAt": "2026-03-20T00:29:27.043Z",
+  "lastRefreshedAt": "2026-03-20T00:29:27.043Z",
+  "data": {
+    "id": "3AQRLZ9PuTAozP28Skbq8V",
+    "name": "The Script",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4a0b21cd87d8a8752fd32e94",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb4a0b21cd87d8a8752fd32e94",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051744a0b21cd87d8a8752fd32e94",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1784a0b21cd87d8a8752fd32e94",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3AQRLZ9PuTAozP28Skbq8V",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

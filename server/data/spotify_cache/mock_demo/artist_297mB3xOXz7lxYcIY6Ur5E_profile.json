@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_297mB3xOXz7lxYcIY6Ur5E_profile",
+  "fetchedAt": "2026-03-20T00:29:20.519Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.519Z",
+  "data": {
+    "id": "297mB3xOXz7lxYcIY6Ur5E",
+    "name": "Henry Flower",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273465b7c7f945983ed671e1943",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273465b7c7f945983ed671e1943",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02465b7c7f945983ed671e1943",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851465b7c7f945983ed671e1943",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/297mB3xOXz7lxYcIY6Ur5E",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

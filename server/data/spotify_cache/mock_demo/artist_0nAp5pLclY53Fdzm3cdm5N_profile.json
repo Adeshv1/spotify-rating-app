@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0nAp5pLclY53Fdzm3cdm5N_profile",
+  "fetchedAt": "2026-03-20T00:29:20.352Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.352Z",
+  "data": {
+    "id": "0nAp5pLclY53Fdzm3cdm5N",
+    "name": "Saverio Lobeone",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf3ae30e2ec976a260e84369b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf3ae30e2ec976a260e84369b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f3ae30e2ec976a260e84369b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f3ae30e2ec976a260e84369b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0nAp5pLclY53Fdzm3cdm5N",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

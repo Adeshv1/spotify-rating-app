@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2sil8z5kiy4r76CRTXxBCA_profile",
+  "fetchedAt": "2026-03-20T00:29:15.357Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.357Z",
+  "data": {
+    "id": "2sil8z5kiy4r76CRTXxBCA",
+    "name": "The Goo Goo Dolls",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe7b66b8c4ba729848574df7a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe7b66b8c4ba729848574df7a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e7b66b8c4ba729848574df7a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e7b66b8c4ba729848574df7a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2sil8z5kiy4r76CRTXxBCA",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

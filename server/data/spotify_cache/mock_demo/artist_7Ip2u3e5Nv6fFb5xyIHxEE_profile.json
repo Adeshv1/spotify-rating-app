@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7Ip2u3e5Nv6fFb5xyIHxEE_profile",
+  "fetchedAt": "2026-03-20T00:34:25.828Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.828Z",
+  "data": {
+    "id": "7Ip2u3e5Nv6fFb5xyIHxEE",
+    "name": "DEV",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc1556217dcbb25d0ce624e1c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc1556217dcbb25d0ce624e1c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174c1556217dcbb25d0ce624e1c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178c1556217dcbb25d0ce624e1c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7Ip2u3e5Nv6fFb5xyIHxEE",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

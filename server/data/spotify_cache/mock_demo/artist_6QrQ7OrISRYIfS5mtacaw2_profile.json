@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6QrQ7OrISRYIfS5mtacaw2_profile",
+  "fetchedAt": "2026-03-20T00:34:24.387Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.387Z",
+  "data": {
+    "id": "6QrQ7OrISRYIfS5mtacaw2",
+    "name": "Jaymes Young",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb87528aedec4b8d5586768014",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb87528aedec4b8d5586768014",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517487528aedec4b8d5586768014",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17887528aedec4b8d5586768014",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6QrQ7OrISRYIfS5mtacaw2",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

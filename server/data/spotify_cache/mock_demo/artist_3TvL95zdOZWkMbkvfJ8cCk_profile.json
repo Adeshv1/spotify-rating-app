@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3TvL95zdOZWkMbkvfJ8cCk_profile",
+  "fetchedAt": "2026-03-20T00:29:18.497Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.497Z",
+  "data": {
+    "id": "3TvL95zdOZWkMbkvfJ8cCk",
+    "name": "H3adband",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27324a23ff32aa4eee3f779a46a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27324a23ff32aa4eee3f779a46a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0224a23ff32aa4eee3f779a46a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485124a23ff32aa4eee3f779a46a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3TvL95zdOZWkMbkvfJ8cCk",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

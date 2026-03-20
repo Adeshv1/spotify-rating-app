@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0NIIxcxNHmOoyBx03SfTCD_profile",
+  "fetchedAt": "2026-03-20T00:29:16.842Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.842Z",
+  "data": {
+    "id": "0NIIxcxNHmOoyBx03SfTCD",
+    "name": "Tinashe",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba669f860c74c9007934d2cb6",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba669f860c74c9007934d2cb6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a669f860c74c9007934d2cb6",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a669f860c74c9007934d2cb6",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0NIIxcxNHmOoyBx03SfTCD",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

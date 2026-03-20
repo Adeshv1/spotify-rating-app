@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2RmYJmReQsQT4GoNEKMWC2_profile",
+  "fetchedAt": "2026-03-20T00:34:22.896Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.896Z",
+  "data": {
+    "id": "2RmYJmReQsQT4GoNEKMWC2",
+    "name": "Sulman Indigo",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27317dc8eda68e09c24dc0a810c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27317dc8eda68e09c24dc0a810c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0217dc8eda68e09c24dc0a810c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485117dc8eda68e09c24dc0a810c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2RmYJmReQsQT4GoNEKMWC2",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

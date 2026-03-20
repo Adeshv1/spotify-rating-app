@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5mZJerulcERBZV7xnhrVp1_profile",
+  "fetchedAt": "2026-03-20T00:34:25.661Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.661Z",
+  "data": {
+    "id": "5mZJerulcERBZV7xnhrVp1",
+    "name": "Ryan Lewis",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732a6b364528b128a4a17d100d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732a6b364528b128a4a17d100d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022a6b364528b128a4a17d100d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512a6b364528b128a4a17d100d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5mZJerulcERBZV7xnhrVp1",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

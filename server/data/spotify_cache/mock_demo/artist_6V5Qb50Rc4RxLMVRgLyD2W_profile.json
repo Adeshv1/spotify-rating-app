@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6V5Qb50Rc4RxLMVRgLyD2W_profile",
+  "fetchedAt": "2026-03-20T00:29:22.211Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.211Z",
+  "data": {
+    "id": "6V5Qb50Rc4RxLMVRgLyD2W",
+    "name": "Ferragno",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734bb7ce89d588fdcd687a555d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2734bb7ce89d588fdcd687a555d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e024bb7ce89d588fdcd687a555d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048514bb7ce89d588fdcd687a555d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6V5Qb50Rc4RxLMVRgLyD2W",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

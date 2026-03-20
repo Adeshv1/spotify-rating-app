@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1CvuYflvQR5lwg1WzrhKAm_profile",
+  "fetchedAt": "2026-03-20T00:29:20.777Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.777Z",
+  "data": {
+    "id": "1CvuYflvQR5lwg1WzrhKAm",
+    "name": "Lexi Bradley",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273fe158776bfadfbae1e9ebbd6",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273fe158776bfadfbae1e9ebbd6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02fe158776bfadfbae1e9ebbd6",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851fe158776bfadfbae1e9ebbd6",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1CvuYflvQR5lwg1WzrhKAm",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

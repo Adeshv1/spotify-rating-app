@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4G9NDjRyZFDlJKMRL8hx3S_profile",
+  "fetchedAt": "2026-03-20T00:29:14.707Z",
+  "lastRefreshedAt": "2026-03-20T00:29:14.707Z",
+  "data": {
+    "id": "4G9NDjRyZFDlJKMRL8hx3S",
+    "name": "sombr",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb78edaa6468cae153565c2c97",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb78edaa6468cae153565c2c97",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517478edaa6468cae153565c2c97",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17878edaa6468cae153565c2c97",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4G9NDjRyZFDlJKMRL8hx3S",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4gKgtmTsn635GvNGL8EXh8_profile",
+  "fetchedAt": "2026-03-20T00:29:20.135Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.135Z",
+  "data": {
+    "id": "4gKgtmTsn635GvNGL8EXh8",
+    "name": "Lorenzo Fiore",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4c5f74b90fda5d8da275160a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb4c5f74b90fda5d8da275160a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051744c5f74b90fda5d8da275160a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1784c5f74b90fda5d8da275160a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4gKgtmTsn635GvNGL8EXh8",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

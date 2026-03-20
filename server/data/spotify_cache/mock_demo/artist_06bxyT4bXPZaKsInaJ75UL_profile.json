@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_06bxyT4bXPZaKsInaJ75UL_profile",
+  "fetchedAt": "2026-03-20T00:29:23.381Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.381Z",
+  "data": {
+    "id": "06bxyT4bXPZaKsInaJ75UL",
+    "name": "Carluccio",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba3399f989a55f5f08849a85b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba3399f989a55f5f08849a85b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a3399f989a55f5f08849a85b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a3399f989a55f5f08849a85b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/06bxyT4bXPZaKsInaJ75UL",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

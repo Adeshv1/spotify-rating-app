@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0C8ZW7ezQVs4URX5aX7Kqx_profile",
+  "fetchedAt": "2026-03-20T00:29:25.629Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.629Z",
+  "data": {
+    "id": "0C8ZW7ezQVs4URX5aX7Kqx",
+    "name": "Selena Gomez",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb815e520e3ce7fe210046ba66",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb815e520e3ce7fe210046ba66",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174815e520e3ce7fe210046ba66",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178815e520e3ce7fe210046ba66",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0C8ZW7ezQVs4URX5aX7Kqx",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3pbi8H08p95NUZ7m6ybxUV_profile",
+  "fetchedAt": "2026-03-20T00:29:19.196Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.196Z",
+  "data": {
+    "id": "3pbi8H08p95NUZ7m6ybxUV",
+    "name": "Static Major",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5ccc476e8b18673e01d87420",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb5ccc476e8b18673e01d87420",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051745ccc476e8b18673e01d87420",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1785ccc476e8b18673e01d87420",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3pbi8H08p95NUZ7m6ybxUV",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

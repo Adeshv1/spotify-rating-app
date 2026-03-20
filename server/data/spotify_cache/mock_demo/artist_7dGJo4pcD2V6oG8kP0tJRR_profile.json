@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7dGJo4pcD2V6oG8kP0tJRR_profile",
+  "fetchedAt": "2026-03-20T00:34:25.012Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.012Z",
+  "data": {
+    "id": "7dGJo4pcD2V6oG8kP0tJRR",
+    "name": "Eminem",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a00b11c129b27a88fc72f36b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

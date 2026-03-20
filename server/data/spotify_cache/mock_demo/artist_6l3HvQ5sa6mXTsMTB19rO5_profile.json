@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6l3HvQ5sa6mXTsMTB19rO5_profile",
+  "fetchedAt": "2026-03-20T00:29:17.356Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.356Z",
+  "data": {
+    "id": "6l3HvQ5sa6mXTsMTB19rO5",
+    "name": "J. Cole",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb492b7b1b9abaa9bb393ab317",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb492b7b1b9abaa9bb393ab317",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174492b7b1b9abaa9bb393ab317",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178492b7b1b9abaa9bb393ab317",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6l3HvQ5sa6mXTsMTB19rO5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

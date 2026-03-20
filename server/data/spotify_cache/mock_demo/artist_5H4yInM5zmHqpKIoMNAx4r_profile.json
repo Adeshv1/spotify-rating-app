@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5H4yInM5zmHqpKIoMNAx4r_profile",
+  "fetchedAt": "2026-03-20T00:29:17.694Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.694Z",
+  "data": {
+    "id": "5H4yInM5zmHqpKIoMNAx4r",
+    "name": "Central Cee",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf6469f2cbf0a7e78744a3173",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf6469f2cbf0a7e78744a3173",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f6469f2cbf0a7e78744a3173",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f6469f2cbf0a7e78744a3173",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5H4yInM5zmHqpKIoMNAx4r",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

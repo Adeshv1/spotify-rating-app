@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6C1ohJrd5VydigQtaGy5Wa_profile",
+  "fetchedAt": "2026-03-20T00:29:18.490Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.490Z",
+  "data": {
+    "id": "6C1ohJrd5VydigQtaGy5Wa",
+    "name": "Joyner Lucas",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf94c47d61b62caf79c57b091",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf94c47d61b62caf79c57b091",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f94c47d61b62caf79c57b091",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f94c47d61b62caf79c57b091",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6C1ohJrd5VydigQtaGy5Wa",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

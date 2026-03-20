@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0cGUm45nv7Z6M6qdXYQGTX_profile",
+  "fetchedAt": "2026-03-20T00:29:16.294Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.294Z",
+  "data": {
+    "id": "0cGUm45nv7Z6M6qdXYQGTX",
+    "name": "Kehlani",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcf865d7d399a41e1bd036149",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebcf865d7d399a41e1bd036149",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174cf865d7d399a41e1bd036149",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178cf865d7d399a41e1bd036149",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0cGUm45nv7Z6M6qdXYQGTX",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

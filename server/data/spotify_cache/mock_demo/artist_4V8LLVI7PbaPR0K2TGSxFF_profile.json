@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4V8LLVI7PbaPR0K2TGSxFF_profile",
+  "fetchedAt": "2026-03-20T00:34:23.670Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.670Z",
+  "data": {
+    "id": "4V8LLVI7PbaPR0K2TGSxFF",
+    "name": "Tyler, The Creator",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebdf2728294ff77dd11eeb18fb",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebdf2728294ff77dd11eeb18fb",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174df2728294ff77dd11eeb18fb",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178df2728294ff77dd11eeb18fb",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

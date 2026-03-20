@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5bv5RplEOwdCvhq0EILh9E_profile",
+  "fetchedAt": "2026-03-20T00:29:25.922Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.922Z",
+  "data": {
+    "id": "5bv5RplEOwdCvhq0EILh9E",
+    "name": "Lucenzo",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb265dde2b466a2e476b1c2b61",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb265dde2b466a2e476b1c2b61",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174265dde2b466a2e476b1c2b61",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178265dde2b466a2e476b1c2b61",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5bv5RplEOwdCvhq0EILh9E",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

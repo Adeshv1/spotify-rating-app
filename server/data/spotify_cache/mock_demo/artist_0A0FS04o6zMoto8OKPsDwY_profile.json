@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0A0FS04o6zMoto8OKPsDwY_profile",
+  "fetchedAt": "2026-03-20T00:29:18.221Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.221Z",
+  "data": {
+    "id": "0A0FS04o6zMoto8OKPsDwY",
+    "name": "YG",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb29831a7ff6177ec357478850",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb29831a7ff6177ec357478850",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517429831a7ff6177ec357478850",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17829831a7ff6177ec357478850",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0A0FS04o6zMoto8OKPsDwY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

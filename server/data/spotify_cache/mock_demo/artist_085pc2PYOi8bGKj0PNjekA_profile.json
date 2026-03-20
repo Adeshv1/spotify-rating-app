@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_085pc2PYOi8bGKj0PNjekA_profile",
+  "fetchedAt": "2026-03-20T00:34:23.309Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.309Z",
+  "data": {
+    "id": "085pc2PYOi8bGKj0PNjekA",
+    "name": "will.i.am",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb7226c1f8cb3827c6dc6ab865",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb7226c1f8cb3827c6dc6ab865",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051747226c1f8cb3827c6dc6ab865",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1787226c1f8cb3827c6dc6ab865",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/085pc2PYOi8bGKj0PNjekA",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

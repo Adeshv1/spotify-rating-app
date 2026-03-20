@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1eCGY9WJpYgtaFh1Lk2KNo_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.564Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.564Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2RkZ5LkEzeHGRsmDqKwmaJ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 186964,
+        "name": "Ordinary",
+        "disc_number": 1,
+        "id": "2RkZ5LkEzeHGRsmDqKwmaJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6aybzjLxocD14YySwF3aus"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 179437,
+        "name": "Burning Down",
+        "disc_number": 1,
+        "id": "6aybzjLxocD14YySwF3aus"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4aha3sFO6kTx0Jq4Fp5b3y"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 192892,
+        "name": "Catch My Breath",
+        "disc_number": 1,
+        "id": "4aha3sFO6kTx0Jq4Fp5b3y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1wOp7yTVyH176bW1z9WAiv"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 166880,
+        "name": "Carry You Home",
+        "disc_number": 1,
+        "id": "1wOp7yTVyH176bW1z9WAiv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1aOdsNEQP9wVJEN9a73GRf"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 197775,
+        "name": "Troubled Waters",
+        "disc_number": 1,
+        "id": "1aOdsNEQP9wVJEN9a73GRf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4CeXqDnd36kBb2j88h67it"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 202434,
+        "name": "Heaven Without You",
+        "disc_number": 1,
+        "id": "4CeXqDnd36kBb2j88h67it"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/792FHkvZbBQuWWM1a4TfL8"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 176178,
+        "name": "Before You Leave Me",
+        "disc_number": 1,
+        "id": "792FHkvZbBQuWWM1a4TfL8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TdacYZkgRxz8ZvHUtpimP"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 197573,
+        "name": "Save You a Seat",
+        "disc_number": 1,
+        "id": "0TdacYZkgRxz8ZvHUtpimP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3KLQCsKrZSResAeGxkx9n0"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 164027,
+        "name": "Chasing Shadows",
+        "disc_number": 1,
+        "id": "3KLQCsKrZSResAeGxkx9n0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2XZ9uajzTcPdawYfVadFWa"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 174196,
+        "name": "Yard Sale",
+        "disc_number": 1,
+        "id": "2XZ9uajzTcPdawYfVadFWa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2PDmHLLdndbk64Nj75cMxZ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 149446,
+        "name": "You’ll Be Alright, Kid",
+        "disc_number": 1,
+        "id": "2PDmHLLdndbk64Nj75cMxZ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "1eCGY9WJpYgtaFh1Lk2KNo"
+  }
+}

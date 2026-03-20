@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_6Ip8FS7vWT1uKkJSweANQK_profile",
+  "fetchedAt": "2026-03-20T00:34:26.584Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.584Z",
+  "data": {
+    "id": "6Ip8FS7vWT1uKkJSweANQK",
+    "name": "Dave",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb2f23c7e361cef62490f44057",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb2f23c7e361cef62490f44057",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051742f23c7e361cef62490f44057",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1782f23c7e361cef62490f44057",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6Ip8FS7vWT1uKkJSweANQK",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

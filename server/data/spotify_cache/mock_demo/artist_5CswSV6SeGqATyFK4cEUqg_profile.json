@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5CswSV6SeGqATyFK4cEUqg_profile",
+  "fetchedAt": "2026-03-20T00:29:22.697Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.697Z",
+  "data": {
+    "id": "5CswSV6SeGqATyFK4cEUqg",
+    "name": "Novo Alonso",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f139bc1bc67a6a28b0ee9a2f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273f139bc1bc67a6a28b0ee9a2f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a7e5df0d9c969a6a23ca7f6a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a7e5df0d9c969a6a23ca7f6a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5CswSV6SeGqATyFK4cEUqg",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

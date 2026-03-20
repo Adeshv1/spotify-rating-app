@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_27DGFhdWUeudNFbPJROkWF_profile",
+  "fetchedAt": "2026-03-20T00:29:23.748Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.748Z",
+  "data": {
+    "id": "27DGFhdWUeudNFbPJROkWF",
+    "name": "Comet Blue",
+    "imageUrl": "https://i.scdn.co/image/b2c598b916f2485e0570dbb5ac7a87f1ec3b6a1b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/b2c598b916f2485e0570dbb5ac7a87f1ec3b6a1b",
+        "height": 840,
+        "width": 840
+      },
+      {
+        "url": "https://i.scdn.co/image/353054605d920ef56cb34f4613253e923d8f0b39",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/4cb10bc53e447e1165a3243eb7c15768dc7c2bfd",
+        "height": 200,
+        "width": 200
+      },
+      {
+        "url": "https://i.scdn.co/image/0cffefa6f07f64e0c437c8ee9e2496876212c144",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/27DGFhdWUeudNFbPJROkWF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

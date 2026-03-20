@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_300oLKNAaJNFP04XeswaAG_profile",
+  "fetchedAt": "2026-03-20T00:29:23.036Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.036Z",
+  "data": {
+    "id": "300oLKNAaJNFP04XeswaAG",
+    "name": "Korey Banks",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731087ddf9f26839d92eae12a8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2731087ddf9f26839d92eae12a8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e021087ddf9f26839d92eae12a8",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511087ddf9f26839d92eae12a8",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/300oLKNAaJNFP04XeswaAG",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

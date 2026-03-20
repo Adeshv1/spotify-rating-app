@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7mvXPtV4jvA1hp5Wx2FAJA_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:21.705Z",
+  "lastRefreshedAt": "2026-03-20T00:41:21.705Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pQoErkcTbLdQLnUtMYvuZ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 207334,
+        "name": "crushing",
+        "disc_number": 1,
+        "id": "2pQoErkcTbLdQLnUtMYvuZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05od2qm2MTSKCHxy1GBp5W"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 242903,
+        "name": "12 to 12",
+        "disc_number": 1,
+        "id": "05od2qm2MTSKCHxy1GBp5W"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Lfdb0KKLWKEns27p20uYt"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 232375,
+        "name": "i wish i knew how to quit you",
+        "disc_number": 1,
+        "id": "5Lfdb0KKLWKEns27p20uYt"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7qjZnBKE73H4Oxkopwulqe"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 199032,
+        "name": "back to friends",
+        "disc_number": 1,
+        "id": "7qjZnBKE73H4Oxkopwulqe"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0KtV18BLmyIOYHCSISmVl9"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 302408,
+        "name": "canal street",
+        "disc_number": 1,
+        "id": "0KtV18BLmyIOYHCSISmVl9"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1GxLgrcumcN3TpWnrYQ9pV"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 225988,
+        "name": "dime",
+        "disc_number": 1,
+        "id": "1GxLgrcumcN3TpWnrYQ9pV"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TFTAtCYhp2tQ9KcJIZb55"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 182088,
+        "name": "undressed",
+        "disc_number": 1,
+        "id": "0TFTAtCYhp2tQ9KcJIZb55"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/261jWBGVjAGH4SuOEVLlvO"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 194004,
+        "name": "come closer",
+        "disc_number": 1,
+        "id": "261jWBGVjAGH4SuOEVLlvO"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0t1fdMrn7JOg9DDsT95bxt"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 196931,
+        "name": "we never dated",
+        "disc_number": 1,
+        "id": "0t1fdMrn7JOg9DDsT95bxt"
+      },
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3t6vhRYuIpX4zlHCTC2h1d"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 284642,
+        "name": "under the mat",
+        "disc_number": 1,
+        "id": "3t6vhRYuIpX4zlHCTC2h1d"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "7mvXPtV4jvA1hp5Wx2FAJA"
+  }
+}

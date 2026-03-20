@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_77efGNIP8xtX0iCb5RCHCG_profile",
+  "fetchedAt": "2026-03-20T00:29:20.129Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.129Z",
+  "data": {
+    "id": "77efGNIP8xtX0iCb5RCHCG",
+    "name": "Eternalistic",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb776aa98ac5679c845d935f77",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb776aa98ac5679c845d935f77",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174776aa98ac5679c845d935f77",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178776aa98ac5679c845d935f77",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/77efGNIP8xtX0iCb5RCHCG",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3DbwFQlvLxRSi2uX8mf81A_profile",
+  "fetchedAt": "2026-03-20T00:29:18.974Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.974Z",
+  "data": {
+    "id": "3DbwFQlvLxRSi2uX8mf81A",
+    "name": "Sexyy Red",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd341871daa2c688ea24dcf02",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd341871daa2c688ea24dcf02",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d341871daa2c688ea24dcf02",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d341871daa2c688ea24dcf02",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3DbwFQlvLxRSi2uX8mf81A",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_3S9Hg7sRKhmtWunFZ2yAYP_profile",
+  "fetchedAt": "2026-03-20T00:34:27.375Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.375Z",
+  "data": {
+    "id": "3S9Hg7sRKhmtWunFZ2yAYP",
+    "name": "El Bogueto",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8c7112b91dd09cf575f3fba5",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8c7112b91dd09cf575f3fba5",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748c7112b91dd09cf575f3fba5",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788c7112b91dd09cf575f3fba5",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3S9Hg7sRKhmtWunFZ2yAYP",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6X9fOKgbMi7PCa7ZuB7ktE_profile",
+  "fetchedAt": "2026-03-20T00:29:24.250Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.250Z",
+  "data": {
+    "id": "6X9fOKgbMi7PCa7ZuB7ktE",
+    "name": "Davignon",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb0b6452b0495ac7dcac642eba",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb0b6452b0495ac7dcac642eba",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051740b6452b0495ac7dcac642eba",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1780b6452b0495ac7dcac642eba",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6X9fOKgbMi7PCa7ZuB7ktE",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

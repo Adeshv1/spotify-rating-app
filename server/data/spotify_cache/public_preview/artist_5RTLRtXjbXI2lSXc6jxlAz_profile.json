@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_5RTLRtXjbXI2lSXc6jxlAz_profile",
+  "fetchedAt": "2026-03-20T00:34:26.949Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.949Z",
+  "data": {
+    "id": "5RTLRtXjbXI2lSXc6jxlAz",
+    "name": "Ravyn Lenae",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb138d70fe372dedacdca53b61",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb138d70fe372dedacdca53b61",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174138d70fe372dedacdca53b61",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178138d70fe372dedacdca53b61",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5RTLRtXjbXI2lSXc6jxlAz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

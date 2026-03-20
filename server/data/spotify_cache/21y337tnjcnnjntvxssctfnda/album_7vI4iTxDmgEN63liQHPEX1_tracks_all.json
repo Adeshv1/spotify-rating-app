@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7vI4iTxDmgEN63liQHPEX1_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:20.710Z",
+  "lastRefreshedAt": "2026-03-20T00:41:20.710Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5y2ijHECwFYWqcAHKTZgzD"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 204068,
+        "name": "Risk It All",
+        "disc_number": 1,
+        "id": "5y2ijHECwFYWqcAHKTZgzD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6QletrrmpkUpeJkipX9pgf"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 236559,
+        "name": "Cha Cha Cha",
+        "disc_number": 1,
+        "id": "6QletrrmpkUpeJkipX9pgf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6f68Ac5tt5BQOpwr0BV9oN"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 212973,
+        "name": "I Just Might",
+        "disc_number": 1,
+        "id": "6f68Ac5tt5BQOpwr0BV9oN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1sVBT215CDmVJvfy1E2OCU"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 211063,
+        "name": "God Was Showing Off",
+        "disc_number": 1,
+        "id": "1sVBT215CDmVJvfy1E2OCU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Ac4AjYkqsvop2ydbSAhTX"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 254360,
+        "name": "Why You Wanna Fight?",
+        "disc_number": 1,
+        "id": "3Ac4AjYkqsvop2ydbSAhTX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4i4BVY2JiH4mDSLIBdNGKD"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 174676,
+        "name": "On My Soul",
+        "disc_number": 1,
+        "id": "4i4BVY2JiH4mDSLIBdNGKD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0PV4VQCmE6Ujssr1bnswdF"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 166458,
+        "name": "Something Serious",
+        "disc_number": 1,
+        "id": "0PV4VQCmE6Ujssr1bnswdF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Sq6JK9kyC4MQa3KrJj5CB"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 214748,
+        "name": "Nothing Left",
+        "disc_number": 1,
+        "id": "0Sq6JK9kyC4MQa3KrJj5CB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1myZ6GQewhAzMH2dKtKSWK"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 219287,
+        "name": "Dance With Me",
+        "disc_number": 1,
+        "id": "1myZ6GQewhAzMH2dKtKSWK"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "7vI4iTxDmgEN63liQHPEX1"
+  }
+}

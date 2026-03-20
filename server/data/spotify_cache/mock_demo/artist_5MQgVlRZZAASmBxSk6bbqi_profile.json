@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5MQgVlRZZAASmBxSk6bbqi_profile",
+  "fetchedAt": "2026-03-20T00:29:21.483Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.483Z",
+  "data": {
+    "id": "5MQgVlRZZAASmBxSk6bbqi",
+    "name": "Harmonic Reverie",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736a86c5db140303b258636a53",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736a86c5db140303b258636a53",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026a86c5db140303b258636a53",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516a86c5db140303b258636a53",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5MQgVlRZZAASmBxSk6bbqi",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

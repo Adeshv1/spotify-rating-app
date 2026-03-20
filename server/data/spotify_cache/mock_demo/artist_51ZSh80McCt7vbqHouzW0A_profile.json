@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_51ZSh80McCt7vbqHouzW0A_profile",
+  "fetchedAt": "2026-03-20T00:29:17.079Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.079Z",
+  "data": {
+    "id": "51ZSh80McCt7vbqHouzW0A",
+    "name": "Yahritza Y Su Esencia",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb89724ca81bce76187970c0f9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb89724ca81bce76187970c0f9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517489724ca81bce76187970c0f9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17889724ca81bce76187970c0f9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/51ZSh80McCt7vbqHouzW0A",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

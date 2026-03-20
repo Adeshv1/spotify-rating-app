@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_25eRITKk6jXXJLAxA3M5b3_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:24.913Z",
+  "lastRefreshedAt": "2026-03-20T00:41:24.913Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Keyshia Cole",
+            "id": "1vfezMIyCr4XUdYRaKIKi3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5nEdwtSv0qqeE0l4o1lR4q"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 243880,
+        "name": "(When You Gonna) Give It Up to Me - Radio Version",
+        "disc_number": 1,
+        "id": "5nEdwtSv0qqeE0l4o1lR4q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1HcdaOefiDae61Wc9klETB"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 254146,
+        "name": "Give It Up to Me - Radio Edit",
+        "disc_number": 1,
+        "id": "1HcdaOefiDae61Wc9klETB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4dB4RsJ4O83aE3g2DzOW7q"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 165306,
+        "name": "Get Busy - Live from Sessions@AOL",
+        "disc_number": 1,
+        "id": "4dB4RsJ4O83aE3g2DzOW7q"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 3,
+    "albumId": "25eRITKk6jXXJLAxA3M5b3"
+  }
+}

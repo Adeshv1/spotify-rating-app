@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7GPrD3dPYED5wENCMHirj7_profile",
+  "fetchedAt": "2026-03-20T00:29:20.774Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.774Z",
+  "data": {
+    "id": "7GPrD3dPYED5wENCMHirj7",
+    "name": "Mijongya",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a449e6c99a3d0c1d97f7b9d1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a449e6c99a3d0c1d97f7b9d1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a449e6c99a3d0c1d97f7b9d1",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a449e6c99a3d0c1d97f7b9d1",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7GPrD3dPYED5wENCMHirj7",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

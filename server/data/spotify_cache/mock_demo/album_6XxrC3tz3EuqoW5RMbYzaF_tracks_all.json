@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6XxrC3tz3EuqoW5RMbYzaF_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.190Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.190Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bella Kay",
+            "id": "4Z8MrrKMBHMPa8d04Ivur8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5IMpnpD0tQVcqWlVIgtAtV"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 183237,
+        "name": "iloveitiloveitiloveit",
+        "disc_number": 1,
+        "id": "5IMpnpD0tQVcqWlVIgtAtV"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6XxrC3tz3EuqoW5RMbYzaF"
+  }
+}

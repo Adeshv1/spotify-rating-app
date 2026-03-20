@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1iCnM8foFssWlPRLfAbIwo_profile",
+  "fetchedAt": "2026-03-20T00:29:15.361Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.361Z",
+  "data": {
+    "id": "1iCnM8foFssWlPRLfAbIwo",
+    "name": "Gigi Perez",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd58f13475be93b37bb63893f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd58f13475be93b37bb63893f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d58f13475be93b37bb63893f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d58f13475be93b37bb63893f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1iCnM8foFssWlPRLfAbIwo",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_27KwvdCscr3IQtSbnyAZpo_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.984Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.984Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Twenty One Pilots",
+            "id": "3YQKmKGau1PzlVlkL1iodx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TlcczkVTGpinpkGJpT81L"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 224000,
+        "name": "Drag Path",
+        "disc_number": 1,
+        "id": "0TlcczkVTGpinpkGJpT81L"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "27KwvdCscr3IQtSbnyAZpo"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_34v5MVKeQnIo0CWYMbbrPf_profile",
+  "fetchedAt": "2026-03-20T00:34:24.373Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.373Z",
+  "data": {
+    "id": "34v5MVKeQnIo0CWYMbbrPf",
+    "name": "John Newman",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba6c9028658d202663fc1bbec",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba6c9028658d202663fc1bbec",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a6c9028658d202663fc1bbec",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a6c9028658d202663fc1bbec",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/34v5MVKeQnIo0CWYMbbrPf",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

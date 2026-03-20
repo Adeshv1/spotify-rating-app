@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4Ga1P7PMIsmqEZqhYZQgDo_profile",
+  "fetchedAt": "2026-03-20T00:29:24.855Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.855Z",
+  "data": {
+    "id": "4Ga1P7PMIsmqEZqhYZQgDo",
+    "name": "Lil Tecca",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5433d9d8519ad0635d8bd869",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb5433d9d8519ad0635d8bd869",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051745433d9d8519ad0635d8bd869",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1785433d9d8519ad0635d8bd869",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4Ga1P7PMIsmqEZqhYZQgDo",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

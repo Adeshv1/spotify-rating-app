@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_26VFTg2z8YR0cCuwLzESi2_profile",
+  "fetchedAt": "2026-03-20T00:29:24.634Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.634Z",
+  "data": {
+    "id": "26VFTg2z8YR0cCuwLzESi2",
+    "name": "Halsey",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb15136101a0f63f0b2800b9dc",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb15136101a0f63f0b2800b9dc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517415136101a0f63f0b2800b9dc",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17815136101a0f63f0b2800b9dc",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/26VFTg2z8YR0cCuwLzESi2",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

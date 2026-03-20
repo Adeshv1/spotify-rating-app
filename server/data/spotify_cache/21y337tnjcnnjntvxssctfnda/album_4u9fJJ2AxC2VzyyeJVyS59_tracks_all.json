@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4u9fJJ2AxC2VzyyeJVyS59_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:26.379Z",
+  "lastRefreshedAt": "2026-03-20T00:41:26.379Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tyla",
+            "id": "3SozjO3Lat463tQICI9LcE"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4VxTzYm00mg82MuoT35Ja7"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 188059,
+        "name": "CHANEL",
+        "disc_number": 1,
+        "id": "4VxTzYm00mg82MuoT35Ja7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4u9fJJ2AxC2VzyyeJVyS59"
+  }
+}

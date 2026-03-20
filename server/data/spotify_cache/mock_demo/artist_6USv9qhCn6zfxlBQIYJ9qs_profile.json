@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6USv9qhCn6zfxlBQIYJ9qs_profile",
+  "fetchedAt": "2026-03-20T00:29:14.434Z",
+  "lastRefreshedAt": "2026-03-20T00:29:14.434Z",
+  "data": {
+    "id": "6USv9qhCn6zfxlBQIYJ9qs",
+    "name": "Dominic Fike",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf2903326ec44d5ecb37dcad9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf2903326ec44d5ecb37dcad9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f2903326ec44d5ecb37dcad9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f2903326ec44d5ecb37dcad9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6USv9qhCn6zfxlBQIYJ9qs",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

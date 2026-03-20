@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_20B8Ga2HfEUNJBAbZsJU2c_image",
+  "fetchedAt": "2026-03-20T00:29:17.689Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.689Z",
+  "data": {
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb10e42e2eb1e887a8944d6dda"
+  }
+}

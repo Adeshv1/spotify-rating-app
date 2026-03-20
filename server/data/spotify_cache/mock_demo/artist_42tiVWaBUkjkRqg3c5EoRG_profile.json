@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_42tiVWaBUkjkRqg3c5EoRG_profile",
+  "fetchedAt": "2026-03-20T00:29:22.705Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.705Z",
+  "data": {
+    "id": "42tiVWaBUkjkRqg3c5EoRG",
+    "name": "Rhian Cadogan",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27372632947689c31fdb2acbc1d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27372632947689c31fdb2acbc1d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0272632947689c31fdb2acbc1d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485172632947689c31fdb2acbc1d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/42tiVWaBUkjkRqg3c5EoRG",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

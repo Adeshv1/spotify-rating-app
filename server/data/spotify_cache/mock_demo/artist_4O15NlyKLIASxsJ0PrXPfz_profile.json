@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4O15NlyKLIASxsJ0PrXPfz_profile",
+  "fetchedAt": "2026-03-20T00:29:16.843Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.843Z",
+  "data": {
+    "id": "4O15NlyKLIASxsJ0PrXPfz",
+    "name": "Lil Uzi Vert",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb62c272d76220f2e9dad56704",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb62c272d76220f2e9dad56704",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517462c272d76220f2e9dad56704",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17862c272d76220f2e9dad56704",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4O15NlyKLIASxsJ0PrXPfz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

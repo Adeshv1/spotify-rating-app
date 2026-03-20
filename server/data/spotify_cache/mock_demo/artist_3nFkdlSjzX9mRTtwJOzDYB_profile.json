@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3nFkdlSjzX9mRTtwJOzDYB_profile",
+  "fetchedAt": "2026-03-20T00:29:25.349Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.349Z",
+  "data": {
+    "id": "3nFkdlSjzX9mRTtwJOzDYB",
+    "name": "JAŸ-Z",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb219724d177787df4dc9d8614",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb219724d177787df4dc9d8614",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174219724d177787df4dc9d8614",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178219724d177787df4dc9d8614",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

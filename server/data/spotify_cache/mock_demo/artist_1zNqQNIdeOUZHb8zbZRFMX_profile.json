@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1zNqQNIdeOUZHb8zbZRFMX_profile",
+  "fetchedAt": "2026-03-20T00:29:18.495Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.495Z",
+  "data": {
+    "id": "1zNqQNIdeOUZHb8zbZRFMX",
+    "name": "Swae Lee",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebbccdbb98ab5d54454cd0fe85",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebbccdbb98ab5d54454cd0fe85",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174bccdbb98ab5d54454cd0fe85",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178bccdbb98ab5d54454cd0fe85",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1zNqQNIdeOUZHb8zbZRFMX",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

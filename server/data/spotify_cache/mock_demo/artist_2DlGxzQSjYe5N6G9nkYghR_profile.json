@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2DlGxzQSjYe5N6G9nkYghR_profile",
+  "fetchedAt": "2026-03-20T00:29:25.014Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.014Z",
+  "data": {
+    "id": "2DlGxzQSjYe5N6G9nkYghR",
+    "name": "Jennifer Lopez",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb3b564455dec95d51176e8a1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb3b564455dec95d51176e8a1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174b3b564455dec95d51176e8a1",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178b3b564455dec95d51176e8a1",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

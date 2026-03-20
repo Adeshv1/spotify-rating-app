@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5AlAiT9n6MGUG2Lron7jB1_profile",
+  "fetchedAt": "2026-03-20T00:29:20.354Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.354Z",
+  "data": {
+    "id": "5AlAiT9n6MGUG2Lron7jB1",
+    "name": "Tankeflukt",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebad5997fbe96c11d9901b217c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebad5997fbe96c11d9901b217c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ad5997fbe96c11d9901b217c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ad5997fbe96c11d9901b217c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5AlAiT9n6MGUG2Lron7jB1",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

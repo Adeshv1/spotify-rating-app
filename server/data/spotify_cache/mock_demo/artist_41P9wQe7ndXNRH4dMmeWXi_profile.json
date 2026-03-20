@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_41P9wQe7ndXNRH4dMmeWXi_profile",
+  "fetchedAt": "2026-03-20T00:29:23.760Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.760Z",
+  "data": {
+    "id": "41P9wQe7ndXNRH4dMmeWXi",
+    "name": "Josephe Burke",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c2cd282353c50d4df2e4b3d8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273c2cd282353c50d4df2e4b3d8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02c2cd282353c50d4df2e4b3d8",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851c2cd282353c50d4df2e4b3d8",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/41P9wQe7ndXNRH4dMmeWXi",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

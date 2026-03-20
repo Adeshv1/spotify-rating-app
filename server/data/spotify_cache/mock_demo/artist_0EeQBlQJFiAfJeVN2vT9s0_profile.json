@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0EeQBlQJFiAfJeVN2vT9s0_profile",
+  "fetchedAt": "2026-03-20T00:29:19.191Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.191Z",
+  "data": {
+    "id": "0EeQBlQJFiAfJeVN2vT9s0",
+    "name": "Nipsey Hussle",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe9edae8fe232af1d2995c991",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe9edae8fe232af1d2995c991",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e9edae8fe232af1d2995c991",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e9edae8fe232af1d2995c991",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0EeQBlQJFiAfJeVN2vT9s0",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

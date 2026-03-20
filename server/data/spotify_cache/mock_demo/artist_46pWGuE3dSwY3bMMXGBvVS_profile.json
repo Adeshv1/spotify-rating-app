@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_46pWGuE3dSwY3bMMXGBvVS_profile",
+  "fetchedAt": "2026-03-20T00:29:17.686Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.686Z",
+  "data": {
+    "id": "46pWGuE3dSwY3bMMXGBvVS",
+    "name": "Rema",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcd9d661b6955241f33ef8a0a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebcd9d661b6955241f33ef8a0a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174cd9d661b6955241f33ef8a0a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178cd9d661b6955241f33ef8a0a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/46pWGuE3dSwY3bMMXGBvVS",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

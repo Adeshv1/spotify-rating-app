@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6tskJzai4ETnMp76lomMzr_profile",
+  "fetchedAt": "2026-03-20T00:29:21.105Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.105Z",
+  "data": {
+    "id": "6tskJzai4ETnMp76lomMzr",
+    "name": "Sorellien",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273815df4615cf4c0d6986bfc2b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273815df4615cf4c0d6986bfc2b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02815df4615cf4c0d6986bfc2b",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851815df4615cf4c0d6986bfc2b",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6tskJzai4ETnMp76lomMzr",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4kYSro6naA4h99UJvo89HB_profile",
+  "fetchedAt": "2026-03-20T00:29:25.912Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.912Z",
+  "data": {
+    "id": "4kYSro6naA4h99UJvo89HB",
+    "name": "Cardi B",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba23286f24edd4a7dbdc6311d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba23286f24edd4a7dbdc6311d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a23286f24edd4a7dbdc6311d",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a23286f24edd4a7dbdc6311d",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4kYSro6naA4h99UJvo89HB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4tuJ0bMpJh08umKkEXKUI5_profile",
+  "fetchedAt": "2026-03-20T00:29:17.082Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.082Z",
+  "data": {
+    "id": "4tuJ0bMpJh08umKkEXKUI5",
+    "name": "Gracie Abrams",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf6d51e6f5342d2d363220920",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf6d51e6f5342d2d363220920",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f6d51e6f5342d2d363220920",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f6d51e6f5342d2d363220920",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4tuJ0bMpJh08umKkEXKUI5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

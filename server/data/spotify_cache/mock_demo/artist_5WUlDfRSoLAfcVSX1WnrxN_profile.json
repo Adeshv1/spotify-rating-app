@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5WUlDfRSoLAfcVSX1WnrxN_profile",
+  "fetchedAt": "2026-03-20T00:29:25.633Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.633Z",
+  "data": {
+    "id": "5WUlDfRSoLAfcVSX1WnrxN",
+    "name": "Sia",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcc1806f0a2f6c9e449de9d3c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebcc1806f0a2f6c9e449de9d3c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174cc1806f0a2f6c9e449de9d3c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178cc1806f0a2f6c9e449de9d3c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

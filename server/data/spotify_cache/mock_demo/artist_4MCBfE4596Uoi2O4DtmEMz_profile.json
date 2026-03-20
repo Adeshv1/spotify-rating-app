@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4MCBfE4596Uoi2O4DtmEMz_profile",
+  "fetchedAt": "2026-03-20T00:29:19.655Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.655Z",
+  "data": {
+    "id": "4MCBfE4596Uoi2O4DtmEMz",
+    "name": "Juice WRLD",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb23a60030944f7853c21565ef",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb23a60030944f7853c21565ef",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517423a60030944f7853c21565ef",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17823a60030944f7853c21565ef",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1vyhD5VmyZ7KMfW5gqLgo5_profile",
+  "fetchedAt": "2026-03-20T00:29:26.874Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.874Z",
+  "data": {
+    "id": "1vyhD5VmyZ7KMfW5gqLgo5",
+    "name": "J Balvin",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb0405b03342c2e56751b9923d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb0405b03342c2e56751b9923d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051740405b03342c2e56751b9923d",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1780405b03342c2e56751b9923d",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

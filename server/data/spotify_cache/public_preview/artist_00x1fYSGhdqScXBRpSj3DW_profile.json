@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_00x1fYSGhdqScXBRpSj3DW_profile",
+  "fetchedAt": "2026-03-20T00:34:26.326Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.326Z",
+  "data": {
+    "id": "00x1fYSGhdqScXBRpSj3DW",
+    "name": "Olivia Dean",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5c7577ad44daeb7ce4b941a1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb5c7577ad44daeb7ce4b941a1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051745c7577ad44daeb7ce4b941a1",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1785c7577ad44daeb7ce4b941a1",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/00x1fYSGhdqScXBRpSj3DW",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

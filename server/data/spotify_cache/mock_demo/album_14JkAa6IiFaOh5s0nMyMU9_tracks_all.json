@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_14JkAa6IiFaOh5s0nMyMU9_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.080Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.080Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "TWICE",
+            "id": "7n2Ycct7Beij7Dj7meI4X0"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1rKQjUhF9zFJmuUotr3VkV"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 181192,
+        "name": "TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)",
+        "disc_number": 1,
+        "id": "1rKQjUhF9zFJmuUotr3VkV"
+      },
+      {
+        "artists": [
+          {
+            "name": "HUNTR/X",
+            "id": "2yNNYQBChuox9A5Ka93BIn"
+          },
+          {
+            "name": "EJAE",
+            "id": "0RMJOzHDhAKY1o2j0W0vxY"
+          },
+          {
+            "name": "AUDREY NUNA",
+            "id": "0Wwji82sLA0Hcvtuak3omb"
+          },
+          {
+            "name": "REI AMI",
+            "id": "6U1dV7aL68N7Gb0Naq34V5"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RXUgPNIbUgFxsDWuBQEt6"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 176059,
+        "name": "How It’s Done",
+        "disc_number": 1,
+        "id": "3RXUgPNIbUgFxsDWuBQEt6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Saja Boys",
+            "id": "0BJ2EjOqcfgFvlZXNKrNbE"
+          },
+          {
+            "name": "Andrew Choi",
+            "id": "7JBaynR7JFeniONqbnn1U4"
+          },
+          {
+            "name": "Neckwav",
+            "id": "5bXNU0MAF2HSqyFPhYtscH"
+          },
+          {
+            "name": "Danny Chung",
+            "id": "11pXvO7wYuzRWYONDOBd33"
+          },
+          {
+            "name": "KEVIN WOO",
+            "id": "2RYonYiVhhzBz82UFXOvEN"
+          },
+          {
+            "name": "samUIL Lee",
+            "id": "1eDupbD9kIx8UaZlzcBG5r"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02sy7FAs8dkDNYsHp4Ul3f"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 150686,
+        "name": "Soda Pop",
+        "disc_number": 1,
+        "id": "02sy7FAs8dkDNYsHp4Ul3f"
+      },
+      {
+        "artists": [
+          {
+            "name": "HUNTR/X",
+            "id": "2yNNYQBChuox9A5Ka93BIn"
+          },
+          {
+            "name": "EJAE",
+            "id": "0RMJOzHDhAKY1o2j0W0vxY"
+          },
+          {
+            "name": "AUDREY NUNA",
+            "id": "0Wwji82sLA0Hcvtuak3omb"
+          },
+          {
+            "name": "REI AMI",
+            "id": "6U1dV7aL68N7Gb0Naq34V5"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 194607,
+        "name": "Golden",
+        "disc_number": 1,
+        "id": "1CPZ5BxNNd0n0nF4Orb9JS"
+      },
+      {
+        "artists": [
+          {
+            "name": "TWICE",
+            "id": "7n2Ycct7Beij7Dj7meI4X0"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Q3lFQgpvhA9VApFKLFZtZ"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 168645,
+        "name": "Strategy",
+        "disc_number": 1,
+        "id": "6Q3lFQgpvhA9VApFKLFZtZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "HUNTR/X",
+            "id": "2yNNYQBChuox9A5Ka93BIn"
+          },
+          {
+            "name": "EJAE",
+            "id": "0RMJOzHDhAKY1o2j0W0vxY"
+          },
+          {
+            "name": "AUDREY NUNA",
+            "id": "0Wwji82sLA0Hcvtuak3omb"
+          },
+          {
+            "name": "REI AMI",
+            "id": "6U1dV7aL68N7Gb0Naq34V5"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0MHStU0muAIEMbwdnebYu2"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 182016,
+        "name": "Takedown",
+        "disc_number": 1,
+        "id": "0MHStU0muAIEMbwdnebYu2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Saja Boys",
+            "id": "0BJ2EjOqcfgFvlZXNKrNbE"
+          },
+          {
+            "name": "Andrew Choi",
+            "id": "7JBaynR7JFeniONqbnn1U4"
+          },
+          {
+            "name": "Neckwav",
+            "id": "5bXNU0MAF2HSqyFPhYtscH"
+          },
+          {
+            "name": "Danny Chung",
+            "id": "11pXvO7wYuzRWYONDOBd33"
+          },
+          {
+            "name": "KEVIN WOO",
+            "id": "2RYonYiVhhzBz82UFXOvEN"
+          },
+          {
+            "name": "samUIL Lee",
+            "id": "1eDupbD9kIx8UaZlzcBG5r"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1I37Zz2g3hk9eWxaNkj031"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 191537,
+        "name": "Your Idol",
+        "disc_number": 1,
+        "id": "1I37Zz2g3hk9eWxaNkj031"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rumi",
+            "id": "2DSE0PhxKUmTPLfZm13sup"
+          },
+          {
+            "name": "Jinu",
+            "id": "0rIiNDJUesrgFPkYesJmKl"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          },
+          {
+            "name": "EJAE",
+            "id": "0RMJOzHDhAKY1o2j0W0vxY"
+          },
+          {
+            "name": "Andrew Choi",
+            "id": "7JBaynR7JFeniONqbnn1U4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DxDLsW6PsLz5gkwC7Mk5S"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 187963,
+        "name": "Free",
+        "disc_number": 1,
+        "id": "5DxDLsW6PsLz5gkwC7Mk5S"
+      },
+      {
+        "artists": [
+          {
+            "name": "HUNTR/X",
+            "id": "2yNNYQBChuox9A5Ka93BIn"
+          },
+          {
+            "name": "EJAE",
+            "id": "0RMJOzHDhAKY1o2j0W0vxY"
+          },
+          {
+            "name": "AUDREY NUNA",
+            "id": "0Wwji82sLA0Hcvtuak3omb"
+          },
+          {
+            "name": "REI AMI",
+            "id": "6U1dV7aL68N7Gb0Naq34V5"
+          },
+          {
+            "name": "KPop Demon Hunters Cast",
+            "id": "7mW7Tv7NvywKKXqafZo0Lc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5sBDrrtLGbV64QJnEqfjer"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 250268,
+        "name": "What It Sounds Like",
+        "disc_number": 1,
+        "id": "5sBDrrtLGbV64QJnEqfjer"
+      },
+      {
+        "artists": [
+          {
+            "name": "MeloMance",
+            "id": "6k4r73Wq8nhkCDoUsECL1e"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KU3A1fotuV0GXY1doHFT8"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 185653,
+        "name": "사랑인가 봐 Love, Maybe",
+        "disc_number": 1,
+        "id": "7KU3A1fotuV0GXY1doHFT8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jokers",
+            "id": "0RM1II8zWIoFb32PXO1RaR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5weiiKJieLj9jOL9u2F34z"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 221805,
+        "name": "오솔길 Path",
+        "disc_number": 1,
+        "id": "5weiiKJieLj9jOL9u2F34z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Marcelo Zarvos",
+            "id": "0qDZ7wym9Vg843lDKkzmoR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/734WuFbTDxTPMU1lBP6e0M"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 180000,
+        "name": "Score Suite",
+        "disc_number": 1,
+        "id": "734WuFbTDxTPMU1lBP6e0M"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "14JkAa6IiFaOh5s0nMyMU9"
+  }
+}

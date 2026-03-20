@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_09L72oOms1QBoALUSLqx8u_profile",
+  "fetchedAt": "2026-03-20T00:29:23.751Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.751Z",
+  "data": {
+    "id": "09L72oOms1QBoALUSLqx8u",
+    "name": "Ron Adelaar",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb491c0fcb932fc2070636aa56",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb491c0fcb932fc2070636aa56",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174491c0fcb932fc2070636aa56",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178491c0fcb932fc2070636aa56",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/09L72oOms1QBoALUSLqx8u",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6LuN9FCkKOj5PcnpouEgny_profile",
+  "fetchedAt": "2026-03-20T00:29:24.850Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.850Z",
+  "data": {
+    "id": "6LuN9FCkKOj5PcnpouEgny",
+    "name": "Khalid",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8f77c3eddc1869e9542b04bc",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8f77c3eddc1869e9542b04bc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748f77c3eddc1869e9542b04bc",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788f77c3eddc1869e9542b04bc",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

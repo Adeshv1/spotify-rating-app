@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7n2wHs1TKAczGzO7Dd2rGr_profile",
+  "fetchedAt": "2026-03-20T00:34:25.226Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.226Z",
+  "data": {
+    "id": "7n2wHs1TKAczGzO7Dd2rGr",
+    "name": "Shawn Mendes",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb58b4b9419486550f6fda0535",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb58b4b9419486550f6fda0535",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517458b4b9419486550f6fda0535",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17858b4b9419486550f6fda0535",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

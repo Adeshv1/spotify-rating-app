@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1tJQ5Mp1XSf7waZzH6KhlJ_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.432Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.432Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ogpGbKc4Io6NCU6ydxXwZ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 153430,
+        "name": "FEVER DREAM",
+        "disc_number": 1,
+        "id": "7ogpGbKc4Io6NCU6ydxXwZ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1tJQ5Mp1XSf7waZzH6KhlJ"
+  }
+}

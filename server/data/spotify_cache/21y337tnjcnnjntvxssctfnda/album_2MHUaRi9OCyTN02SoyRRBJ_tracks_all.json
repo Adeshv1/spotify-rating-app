@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2MHUaRi9OCyTN02SoyRRBJ_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.929Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.929Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0T3Hw3kPj9T2E4UoaSXmfn"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 229997,
+        "name": "Disease",
+        "disc_number": 1,
+        "id": "0T3Hw3kPj9T2E4UoaSXmfn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 223398,
+        "name": "Abracadabra",
+        "disc_number": 1,
+        "id": "2LHNTC9QZxsL3nWpt8iaSR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4mUR5Tv0CvJtpmnUtzeIgd"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 239720,
+        "name": "Garden Of Eden",
+        "disc_number": 1,
+        "id": "4mUR5Tv0CvJtpmnUtzeIgd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Tqn5Th0wk55eLdga96vZM"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 229252,
+        "name": "Perfect Celebrity",
+        "disc_number": 1,
+        "id": "0Tqn5Th0wk55eLdga96vZM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5IoPnNiYAOvHHJpz13wzRL"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 244915,
+        "name": "Vanish Into You",
+        "disc_number": 1,
+        "id": "5IoPnNiYAOvHHJpz13wzRL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          },
+          {
+            "name": "Gesaffelstein",
+            "id": "3hteYQFiMFbJY7wS0xDymP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4pNzBbGcqXofx8mLBPTeih"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 210651,
+        "name": "Killah (feat. Gesaffelstein)",
+        "disc_number": 1,
+        "id": "4pNzBbGcqXofx8mLBPTeih"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ElVpg9XIswx3XWs6kUj6a"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 213337,
+        "name": "Zombieboy",
+        "disc_number": 1,
+        "id": "0ElVpg9XIswx3XWs6kUj6a"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3hcivoswCVR8LZkHR8MYA5"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 193232,
+        "name": "LoveDrug",
+        "disc_number": 1,
+        "id": "3hcivoswCVR8LZkHR8MYA5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2rvd6akG8qEtBNUvQpN7iY"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 238886,
+        "name": "How Bad Do U Want Me",
+        "disc_number": 1,
+        "id": "2rvd6akG8qEtBNUvQpN7iY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0uoWOZeZZiC90RMNDQBqj4"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 225804,
+        "name": "Don't Call Tonight",
+        "disc_number": 1,
+        "id": "0uoWOZeZZiC90RMNDQBqj4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6OC87jHRiovNPEUrgaqFSu"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 199723,
+        "name": "Shadow Of A Man",
+        "disc_number": 1,
+        "id": "6OC87jHRiovNPEUrgaqFSu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/08svDlp6TNFlfMIgjjZlYI"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 234280,
+        "name": "The Beast",
+        "disc_number": 1,
+        "id": "08svDlp6TNFlfMIgjjZlYI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xIoinMSiwIp5BWR7toO1O"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 257006,
+        "name": "Blade Of Grass",
+        "disc_number": 1,
+        "id": "7xIoinMSiwIp5BWR7toO1O"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          },
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7so0lgd0zP2Sbgs2d7a1SZ"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 251667,
+        "name": "Die With A Smile",
+        "disc_number": 1,
+        "id": "7so0lgd0zP2Sbgs2d7a1SZ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "2MHUaRi9OCyTN02SoyRRBJ"
+  }
+}

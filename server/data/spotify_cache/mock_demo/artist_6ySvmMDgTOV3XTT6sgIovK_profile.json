@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6ySvmMDgTOV3XTT6sgIovK_profile",
+  "fetchedAt": "2026-03-20T00:29:20.131Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.131Z",
+  "data": {
+    "id": "6ySvmMDgTOV3XTT6sgIovK",
+    "name": "Nascondiglio",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba02021ca08371aaa63ad901f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba02021ca08371aaa63ad901f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a02021ca08371aaa63ad901f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a02021ca08371aaa63ad901f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6ySvmMDgTOV3XTT6sgIovK",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

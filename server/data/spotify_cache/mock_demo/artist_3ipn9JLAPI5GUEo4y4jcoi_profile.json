@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3ipn9JLAPI5GUEo4y4jcoi_profile",
+  "fetchedAt": "2026-03-20T00:29:25.340Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.340Z",
+  "data": {
+    "id": "3ipn9JLAPI5GUEo4y4jcoi",
+    "name": "Ludacris",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb870a5c56dd011578e5e74f85",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb870a5c56dd011578e5e74f85",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174870a5c56dd011578e5e74f85",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178870a5c56dd011578e5e74f85",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3ipn9JLAPI5GUEo4y4jcoi",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

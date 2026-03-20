@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7p0rpxmlHJrDNXr8CP2JhW_profile",
+  "fetchedAt": "2026-03-20T00:29:22.699Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.699Z",
+  "data": {
+    "id": "7p0rpxmlHJrDNXr8CP2JhW",
+    "name": "Mes Croquis",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5b891fef83769bbc79027792",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb5b891fef83769bbc79027792",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051745b891fef83769bbc79027792",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1785b891fef83769bbc79027792",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7p0rpxmlHJrDNXr8CP2JhW",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

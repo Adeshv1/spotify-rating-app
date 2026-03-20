@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_687cZJR45JO7jhk1LHIbgq_profile",
+  "fetchedAt": "2026-03-20T00:29:14.987Z",
+  "lastRefreshedAt": "2026-03-20T00:29:14.987Z",
+  "data": {
+    "id": "687cZJR45JO7jhk1LHIbgq",
+    "name": "Tems",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb22d7d6f8981c7a27bf68a382",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb22d7d6f8981c7a27bf68a382",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517422d7d6f8981c7a27bf68a382",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17822d7d6f8981c7a27bf68a382",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/687cZJR45JO7jhk1LHIbgq",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7c0XG5cIJTrrAgEC3ULPiq_profile",
+  "fetchedAt": "2026-03-20T00:34:24.160Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.160Z",
+  "data": {
+    "id": "7c0XG5cIJTrrAgEC3ULPiq",
+    "name": "Ty Dolla $ign",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebda8c189e3196e1f391568d1f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebda8c189e3196e1f391568d1f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174da8c189e3196e1f391568d1f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178da8c189e3196e1f391568d1f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

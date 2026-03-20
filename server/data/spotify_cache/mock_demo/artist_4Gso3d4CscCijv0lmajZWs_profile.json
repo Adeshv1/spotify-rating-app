@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4Gso3d4CscCijv0lmajZWs_profile",
+  "fetchedAt": "2026-03-20T00:29:16.084Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.084Z",
+  "data": {
+    "id": "4Gso3d4CscCijv0lmajZWs",
+    "name": "Don Toliver",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc52b798deb89eb8414a51b7b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc52b798deb89eb8414a51b7b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174c52b798deb89eb8414a51b7b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178c52b798deb89eb8414a51b7b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

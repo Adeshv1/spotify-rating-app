@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4eeQtydrFe5HEIgzNkX4S7_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:23.995Z",
+  "lastRefreshedAt": "2026-03-20T00:41:23.995Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/58fVOKgrlG5YR3GL1Fh8fP"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 156093,
+        "name": "Sentimental Heart",
+        "disc_number": 1,
+        "id": "58fVOKgrlG5YR3GL1Fh8fP"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MgEZRmIQ3DEmQYT9Gv7MM"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 150506,
+        "name": "Why Do You Let Me Stay Here?",
+        "disc_number": 1,
+        "id": "1MgEZRmIQ3DEmQYT9Gv7MM"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5luDcWKO7e35jH9ekE0w0v"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 210666,
+        "name": "This Is Not a Test",
+        "disc_number": 1,
+        "id": "5luDcWKO7e35jH9ekE0w0v"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0sdst45n5G3VzfwldmClC0"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 183160,
+        "name": "Change Is Hard",
+        "disc_number": 1,
+        "id": "0sdst45n5G3VzfwldmClC0"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0myRViRgmQ3J8izICXEAVO"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 170333,
+        "name": "I Thought I Saw Your Face Today",
+        "disc_number": 1,
+        "id": "0myRViRgmQ3J8izICXEAVO"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/41PeEqKytfuiA8qBe9WthK"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 157066,
+        "name": "Take It Back",
+        "disc_number": 1,
+        "id": "41PeEqKytfuiA8qBe9WthK"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wP8svOtJ9RpkmDdNGowKY"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 150933,
+        "name": "I Was Made for You",
+        "disc_number": 1,
+        "id": "0wP8svOtJ9RpkmDdNGowKY"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/31M8Wh2RrCVtXgGdxF6bAN"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 239173,
+        "name": "You Really Got a Hold on Me",
+        "disc_number": 1,
+        "id": "31M8Wh2RrCVtXgGdxF6bAN"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72lkfHU4gbWx6eeFI4UC8R"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 132333,
+        "name": "Black Hole",
+        "disc_number": 1,
+        "id": "72lkfHU4gbWx6eeFI4UC8R"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KouNdkaMDqGB79F6kQjv1"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 165826,
+        "name": "Got Me",
+        "disc_number": 1,
+        "id": "1KouNdkaMDqGB79F6kQjv1"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1vIUdv2wFbJg73NDLV3PrR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 218666,
+        "name": "I Should Have Known Better",
+        "disc_number": 1,
+        "id": "1vIUdv2wFbJg73NDLV3PrR"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3yXLj3VpLCQ2hWdHzb66VL"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 160666,
+        "name": "Sweet Darlin'",
+        "disc_number": 1,
+        "id": "3yXLj3VpLCQ2hWdHzb66VL"
+      },
+      {
+        "artists": [
+          {
+            "name": "She & Him",
+            "id": "3CIRif6ZAedT7kZSPvj2A4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5EOQ6VHryV6JKU7LHAP27F"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 96973,
+        "name": "Swing Low Sweet Chariot",
+        "disc_number": 1,
+        "id": "5EOQ6VHryV6JKU7LHAP27F"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "4eeQtydrFe5HEIgzNkX4S7"
+  }
+}

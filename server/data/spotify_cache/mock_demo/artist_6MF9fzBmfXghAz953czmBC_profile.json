@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6MF9fzBmfXghAz953czmBC_profile",
+  "fetchedAt": "2026-03-20T00:34:25.207Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.207Z",
+  "data": {
+    "id": "6MF9fzBmfXghAz953czmBC",
+    "name": "Taio Cruz",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb153171480a6f22912253b9f1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb153171480a6f22912253b9f1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174153171480a6f22912253b9f1",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178153171480a6f22912253b9f1",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6MF9fzBmfXghAz953czmBC",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

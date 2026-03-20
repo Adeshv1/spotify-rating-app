@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_78bpIziExqiI9qztvNFlQu_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.149Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.149Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5FVd6KXrgO9B3JPmC8OPst"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 272394,
+        "name": "Do I Wanna Know?",
+        "disc_number": 1,
+        "id": "5FVd6KXrgO9B3JPmC8OPst"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2AT8iROs4FQueDv2c8q2KE"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 201726,
+        "name": "R U Mine?",
+        "disc_number": 1,
+        "id": "2AT8iROs4FQueDv2c8q2KE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wNUBZNWFxdUGof6vkaykE"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 206051,
+        "name": "One For The Road",
+        "disc_number": 1,
+        "id": "6wNUBZNWFxdUGof6vkaykE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7nzsY8vlnKdvGOEE0rjAXZ"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 207356,
+        "name": "Arabella",
+        "disc_number": 1,
+        "id": "7nzsY8vlnKdvGOEE0rjAXZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1j9rezdE3YeC7yktZXC1em"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 185406,
+        "name": "I Want It All",
+        "disc_number": 1,
+        "id": "1j9rezdE3YeC7yktZXC1em"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5TTGoX70AFrTvuEtqHK37S"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 243131,
+        "name": "No. 1 Party Anthem",
+        "disc_number": 1,
+        "id": "5TTGoX70AFrTvuEtqHK37S"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75n7mraeMycQOl2sDGYaTe"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 215011,
+        "name": "Mad Sounds",
+        "disc_number": 1,
+        "id": "75n7mraeMycQOl2sDGYaTe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4atMrAadB7dS8xn9vfk9PQ"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 181049,
+        "name": "Fireside",
+        "disc_number": 1,
+        "id": "4atMrAadB7dS8xn9vfk9PQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/086myS9r57YsLbJpU0TgK9"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 161123,
+        "name": "Why'd You Only Call Me When You're High?",
+        "disc_number": 1,
+        "id": "086myS9r57YsLbJpU0TgK9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0NdTUS4UiNYCNn5FgVqKQY"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 193030,
+        "name": "Snap Out Of It",
+        "disc_number": 1,
+        "id": "0NdTUS4UiNYCNn5FgVqKQY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2LGdO5MtFdyphi2EihANZG"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 257563,
+        "name": "Knee Socks",
+        "disc_number": 1,
+        "id": "2LGdO5MtFdyphi2EihANZG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Arctic Monkeys",
+            "id": "7Ln80lUS6He07XvHI8qqHH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 183956,
+        "name": "I Wanna Be Yours",
+        "disc_number": 1,
+        "id": "5XeFesFbtLpXzIVDNQP22n"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "78bpIziExqiI9qztvNFlQu"
+  }
+}

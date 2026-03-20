@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1vYrIm6O7VtBGszIWe75mB_profile",
+  "fetchedAt": "2026-03-20T00:29:23.754Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.754Z",
+  "data": {
+    "id": "1vYrIm6O7VtBGszIWe75mB",
+    "name": "Gabríel Ólafs",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb078b77503f0709b9c69b010e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb078b77503f0709b9c69b010e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174078b77503f0709b9c69b010e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178078b77503f0709b9c69b010e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1vYrIm6O7VtBGszIWe75mB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

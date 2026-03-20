@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6RIbBV3sHhVlLi2mPPMjbN_profile",
+  "fetchedAt": "2026-03-20T00:29:23.196Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.196Z",
+  "data": {
+    "id": "6RIbBV3sHhVlLi2mPPMjbN",
+    "name": "Ivan Vladusic",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebef1ea87117f2e9f59d590805",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebef1ea87117f2e9f59d590805",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ef1ea87117f2e9f59d590805",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ef1ea87117f2e9f59d590805",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6RIbBV3sHhVlLi2mPPMjbN",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

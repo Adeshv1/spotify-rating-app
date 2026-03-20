@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_61cavYEyS6y1T99hc6gjYI_profile",
+  "fetchedAt": "2026-03-20T00:34:23.116Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.116Z",
+  "data": {
+    "id": "61cavYEyS6y1T99hc6gjYI",
+    "name": "Arata Rin",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb27838dfa6faf3e06bb87a09a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb27838dfa6faf3e06bb87a09a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517427838dfa6faf3e06bb87a09a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17827838dfa6faf3e06bb87a09a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/61cavYEyS6y1T99hc6gjYI",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

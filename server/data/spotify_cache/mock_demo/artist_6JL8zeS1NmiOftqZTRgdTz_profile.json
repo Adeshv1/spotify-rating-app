@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6JL8zeS1NmiOftqZTRgdTz_profile",
+  "fetchedAt": "2026-03-20T00:34:25.834Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.834Z",
+  "data": {
+    "id": "6JL8zeS1NmiOftqZTRgdTz",
+    "name": "Meghan Trainor",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb240d44db603d49305d3d7b56",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb240d44db603d49305d3d7b56",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174240d44db603d49305d3d7b56",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178240d44db603d49305d3d7b56",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6JL8zeS1NmiOftqZTRgdTz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

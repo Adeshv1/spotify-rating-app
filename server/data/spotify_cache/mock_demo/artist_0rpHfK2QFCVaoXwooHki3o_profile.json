@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0rpHfK2QFCVaoXwooHki3o_profile",
+  "fetchedAt": "2026-03-20T00:29:23.517Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.517Z",
+  "data": {
+    "id": "0rpHfK2QFCVaoXwooHki3o",
+    "name": "Oscar Mallen",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb829014ba30af7e87e7b19e04",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb829014ba30af7e87e7b19e04",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174829014ba30af7e87e7b19e04",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178829014ba30af7e87e7b19e04",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0rpHfK2QFCVaoXwooHki3o",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

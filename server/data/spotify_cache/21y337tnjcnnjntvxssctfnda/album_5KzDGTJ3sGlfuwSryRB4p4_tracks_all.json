@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5KzDGTJ3sGlfuwSryRB4p4_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:24.787Z",
+  "lastRefreshedAt": "2026-03-20T00:41:24.787Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7tICCrK3CcyRFKza7yrR0z"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 209066,
+        "name": "Homewrecker",
+        "disc_number": 1,
+        "id": "7tICCrK3CcyRFKza7yrR0z"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5KzDGTJ3sGlfuwSryRB4p4"
+  }
+}

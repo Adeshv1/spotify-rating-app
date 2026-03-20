@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0RESbWvOMyua0yuyVrztJ5_profile",
+  "fetchedAt": "2026-03-20T00:29:17.691Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.691Z",
+  "data": {
+    "id": "0RESbWvOMyua0yuyVrztJ5",
+    "name": "Key Glock",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb491b2242456d456e76cd0c58",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb491b2242456d456e76cd0c58",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174491b2242456d456e76cd0c58",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178491b2242456d456e76cd0c58",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0RESbWvOMyua0yuyVrztJ5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

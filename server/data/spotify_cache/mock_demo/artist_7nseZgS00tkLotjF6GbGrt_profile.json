@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7nseZgS00tkLotjF6GbGrt_profile",
+  "fetchedAt": "2026-03-20T00:29:20.356Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.356Z",
+  "data": {
+    "id": "7nseZgS00tkLotjF6GbGrt",
+    "name": "Eigil Leuc",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebfba880292b3816798c2cdafd",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebfba880292b3816798c2cdafd",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174fba880292b3816798c2cdafd",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178fba880292b3816798c2cdafd",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7nseZgS00tkLotjF6GbGrt",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

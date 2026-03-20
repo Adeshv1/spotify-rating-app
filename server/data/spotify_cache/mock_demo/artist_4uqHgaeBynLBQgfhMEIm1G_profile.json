@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4uqHgaeBynLBQgfhMEIm1G_profile",
+  "fetchedAt": "2026-03-20T00:29:19.654Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.654Z",
+  "data": {
+    "id": "4uqHgaeBynLBQgfhMEIm1G",
+    "name": "PLUTO",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb944fb9982803205799529e5b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb944fb9982803205799529e5b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174944fb9982803205799529e5b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178944fb9982803205799529e5b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4uqHgaeBynLBQgfhMEIm1G",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

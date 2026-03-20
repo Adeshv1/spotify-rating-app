@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0hBRqPYPXhr1RkTDG3n4Mk_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.702Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.702Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5bjB0xPlN7fR1roEedzQvg"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 164693,
+        "name": "Felt Good About You",
+        "disc_number": 1,
+        "id": "5bjB0xPlN7fR1roEedzQvg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KJUSJHXRrTjSMpi9PzjEy"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 191586,
+        "name": "Risk",
+        "disc_number": 1,
+        "id": "6KJUSJHXRrTjSMpi9PzjEy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7yjPDFhCUFGa90GKORcUTY"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 232280,
+        "name": "Blowing Smoke",
+        "disc_number": 1,
+        "id": "7yjPDFhCUFGa90GKORcUTY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5W4FHsvv4PwqC5gYzXyrLI"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 157146,
+        "name": "I Love You, I'm Sorry",
+        "disc_number": 1,
+        "id": "5W4FHsvv4PwqC5gYzXyrLI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          },
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5WcsxoURbNjQPQvzKpHUMn"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 242666,
+        "name": "us. (feat. Taylor Swift)",
+        "disc_number": 1,
+        "id": "5WcsxoURbNjQPQvzKpHUMn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3aGv9jITId050BkCMddYOX"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 260946,
+        "name": "Let It Happen",
+        "disc_number": 1,
+        "id": "3aGv9jITId050BkCMddYOX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eqpaZGKGBdhcKzRKyKnyC"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 169146,
+        "name": "Tough Love",
+        "disc_number": 1,
+        "id": "2eqpaZGKGBdhcKzRKyKnyC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zVDbw7EEqN1FMTQOfLS2p"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 252920,
+        "name": "I Knew It, I Know You",
+        "disc_number": 1,
+        "id": "7zVDbw7EEqN1FMTQOfLS2p"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GaLluiRWvNfhayWKIZ9Xt"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 269280,
+        "name": "Gave You I Gave You I",
+        "disc_number": 1,
+        "id": "7GaLluiRWvNfhayWKIZ9Xt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ZCsCQrtEUJUJAylu9TDjY"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 242480,
+        "name": "Normal Thing",
+        "disc_number": 1,
+        "id": "5ZCsCQrtEUJUJAylu9TDjY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3aO5affZSi1dOB3LMmP9mO"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 236480,
+        "name": "Good Luck Charlie",
+        "disc_number": 1,
+        "id": "3aO5affZSi1dOB3LMmP9mO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49vuwo7SLmzO207Z7djITp"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 214080,
+        "name": "Free Now",
+        "disc_number": 1,
+        "id": "49vuwo7SLmzO207Z7djITp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3c5VB77JWXirY1jP2do3oS"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 225973,
+        "name": "Close To You",
+        "disc_number": 1,
+        "id": "3c5VB77JWXirY1jP2do3oS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/256nKlwQdp2GE6DYGvTDoG"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 229162,
+        "name": "Cool",
+        "disc_number": 1,
+        "id": "256nKlwQdp2GE6DYGvTDoG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 166300,
+        "name": "That’s So True",
+        "disc_number": 1,
+        "id": "7ne4VBA60CxGM75vw0EYad"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5V6mK1pEu22104f22m8KkX"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 221207,
+        "name": "I Told You Things",
+        "disc_number": 1,
+        "id": "5V6mK1pEu22104f22m8KkX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0D89q3d3eclowHBcDQZ4qn"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 164109,
+        "name": "Packing It Up",
+        "disc_number": 1,
+        "id": "0D89q3d3eclowHBcDQZ4qn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Ova4U0AcZrDqTaP0BWDjg"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 204165,
+        "name": "I Love You, I'm Sorry - Live From Vevo",
+        "disc_number": 1,
+        "id": "6Ova4U0AcZrDqTaP0BWDjg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76qpEmu2bVlYCCz5IUcZw1"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 256868,
+        "name": "I Knew It, I Know You - Live From Vevo",
+        "disc_number": 1,
+        "id": "76qpEmu2bVlYCCz5IUcZw1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gracie Abrams",
+            "id": "4tuJ0bMpJh08umKkEXKUI5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0DNJj91kvOUXQrgQj7wosE"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 240323,
+        "name": "Free Now - Live From Vevo",
+        "disc_number": 1,
+        "id": "0DNJj91kvOUXQrgQj7wosE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 20,
+    "albumId": "0hBRqPYPXhr1RkTDG3n4Mk"
+  }
+}

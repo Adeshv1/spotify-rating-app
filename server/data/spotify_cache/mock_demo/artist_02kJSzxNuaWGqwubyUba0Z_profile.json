@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_02kJSzxNuaWGqwubyUba0Z_profile",
+  "fetchedAt": "2026-03-20T00:34:25.231Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.231Z",
+  "data": {
+    "id": "02kJSzxNuaWGqwubyUba0Z",
+    "name": "G-Eazy",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd0f55babbbdcfab188016110",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd0f55babbbdcfab188016110",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d0f55babbbdcfab188016110",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d0f55babbbdcfab188016110",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/02kJSzxNuaWGqwubyUba0Z",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

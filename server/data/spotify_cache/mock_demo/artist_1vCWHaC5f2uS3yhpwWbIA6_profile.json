@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1vCWHaC5f2uS3yhpwWbIA6_profile",
+  "fetchedAt": "2026-03-20T00:34:24.383Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.383Z",
+  "data": {
+    "id": "1vCWHaC5f2uS3yhpwWbIA6",
+    "name": "Avicii",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebae07171f989fb39736674113",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebae07171f989fb39736674113",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ae07171f989fb39736674113",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ae07171f989fb39736674113",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1URnnhqYAYcrqrcwql10ft_profile",
+  "fetchedAt": "2026-03-20T00:29:25.186Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.186Z",
+  "data": {
+    "id": "1URnnhqYAYcrqrcwql10ft",
+    "name": "21 Savage",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4f8f76117470957c0e81e5b2",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb4f8f76117470957c0e81e5b2",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051744f8f76117470957c0e81e5b2",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1784f8f76117470957c0e81e5b2",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1URnnhqYAYcrqrcwql10ft",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

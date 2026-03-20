@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2TrTb21wiXbwQohvN1UfFV_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.383Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.383Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "sombr",
+            "id": "4G9NDjRyZFDlJKMRL8hx3S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6MrLkXsMmHaYt680fhJUAq"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 242903,
+        "name": "12 to 12",
+        "disc_number": 1,
+        "id": "6MrLkXsMmHaYt680fhJUAq"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2TrTb21wiXbwQohvN1UfFV"
+  }
+}

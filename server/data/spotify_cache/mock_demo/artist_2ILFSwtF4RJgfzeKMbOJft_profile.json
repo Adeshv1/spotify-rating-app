@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2ILFSwtF4RJgfzeKMbOJft_profile",
+  "fetchedAt": "2026-03-20T00:34:23.304Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.304Z",
+  "data": {
+    "id": "2ILFSwtF4RJgfzeKMbOJft",
+    "name": "Niamh Shona",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2730749bd1e7842b89bcfdce825",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2730749bd1e7842b89bcfdce825",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e020749bd1e7842b89bcfdce825",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048510749bd1e7842b89bcfdce825",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2ILFSwtF4RJgfzeKMbOJft",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5INjqkS1o8h1imAzPqGZBb_profile",
+  "fetchedAt": "2026-03-20T00:29:15.887Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.887Z",
+  "data": {
+    "id": "5INjqkS1o8h1imAzPqGZBb",
+    "name": "Tame Impala",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e412a782245eb20d9626c601",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e412a782245eb20d9626c601",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

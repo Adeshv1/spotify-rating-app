@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2v3FBpuuu8EdWvmS8OOctA_profile",
+  "fetchedAt": "2026-03-20T00:34:23.108Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.108Z",
+  "data": {
+    "id": "2v3FBpuuu8EdWvmS8OOctA",
+    "name": "Li Zemin",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ad1a460c3a0158a3e931af22",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ad1a460c3a0158a3e931af22",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d6169bcf81de2e1f8e44b228",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d6169bcf81de2e1f8e44b228",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2v3FBpuuu8EdWvmS8OOctA",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

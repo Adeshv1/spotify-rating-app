@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3GsfhG02GtXyYPOoc5QRa8_profile",
+  "fetchedAt": "2026-03-20T00:29:21.321Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.321Z",
+  "data": {
+    "id": "3GsfhG02GtXyYPOoc5QRa8",
+    "name": "Eldur Hættu",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731736d8697acc8a003f1c8f8d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2731736d8697acc8a003f1c8f8d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e021736d8697acc8a003f1c8f8d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511736d8697acc8a003f1c8f8d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3GsfhG02GtXyYPOoc5QRa8",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

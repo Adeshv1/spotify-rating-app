@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5vD5M5VW62LL78Ko8x0CVZ_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:26.767Z",
+  "lastRefreshedAt": "2026-03-20T00:41:26.767Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72PVbRKkUimweUPV0nKAPs"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 247546,
+        "name": "ALL I CAN TAKE",
+        "disc_number": 1,
+        "id": "72PVbRKkUimweUPV0nKAPs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5BZsQlgw21vDOAjoqkNgKb"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 176453,
+        "name": "DAISIES",
+        "disc_number": 1,
+        "id": "5BZsQlgw21vDOAjoqkNgKb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/29iva9idM6rFCPUlu7Rhxl"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 163866,
+        "name": "YUKON",
+        "disc_number": 1,
+        "id": "29iva9idM6rFCPUlu7Rhxl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01p5urrGw5fuFCcfT7PBgc"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 194760,
+        "name": "GO BABY",
+        "disc_number": 1,
+        "id": "01p5urrGw5fuFCcfT7PBgc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1j8TmNa6vaFAEAws43kP0Q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 108386,
+        "name": "THINGS YOU DO",
+        "disc_number": 1,
+        "id": "1j8TmNa6vaFAEAws43kP0Q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5cfsQZEFf1IpQr8F9vI9le"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 193525,
+        "name": "BUTTERFLIES",
+        "disc_number": 1,
+        "id": "5cfsQZEFf1IpQr8F9vI9le"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Gunna",
+            "id": "2hlmm7s2ICUX0LVIhVFlZQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1r3uOHPoiIv89Xb6K9bDH4"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 195319,
+        "name": "WAY IT IS",
+        "disc_number": 1,
+        "id": "1r3uOHPoiIv89Xb6K9bDH4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ZZJ7S4Z1pEIvTUgN1oRzS"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 200400,
+        "name": "FIRST PLACE",
+        "disc_number": 1,
+        "id": "4ZZJ7S4Z1pEIvTUgN1oRzS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Druski",
+            "id": "4QXUDhKn7oIyfnaNEBkrkY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5PAKAADzrSpMDxcaRpSDCm"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 36666,
+        "name": "SOULFUL",
+        "disc_number": 1,
+        "id": "5PAKAADzrSpMDxcaRpSDCm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LutvoC2HqCfnaRSjrhtzo"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 244013,
+        "name": "WALKING AWAY",
+        "disc_number": 1,
+        "id": "0LutvoC2HqCfnaRSjrhtzo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7H6hs7WkNG48fS3agm63MR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 84506,
+        "name": "GLORY VOICE MEMO",
+        "disc_number": 1,
+        "id": "7H6hs7WkNG48fS3agm63MR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Dijon",
+            "id": "0knGpCTbmG4ctl1wzYRZs4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4uyBm26e7ElRigCH6vRbpc"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 234400,
+        "name": "DEVOTION",
+        "disc_number": 1,
+        "id": "4uyBm26e7ElRigCH6vRbpc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Lil B",
+            "id": "4bbjivSh1oG4NOc7uYHfw5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qqylaMQ54zfveakMkDULI"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 145133,
+        "name": "DADZ LOVE",
+        "disc_number": 1,
+        "id": "2qqylaMQ54zfveakMkDULI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Druski",
+            "id": "4QXUDhKn7oIyfnaNEBkrkY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7tZlvvEpX3FEFoYsOI55FB"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 78840,
+        "name": "THERAPY SESSION",
+        "disc_number": 1,
+        "id": "7tZlvvEpX3FEFoYsOI55FB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Sexyy Red",
+            "id": "3DbwFQlvLxRSi2uX8mf81A"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6AX3i1TluzbvpJpKrY7NoD"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 185213,
+        "name": "SWEET SPOT",
+        "disc_number": 1,
+        "id": "6AX3i1TluzbvpJpKrY7NoD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Druski",
+            "id": "4QXUDhKn7oIyfnaNEBkrkY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5YiIOND9ZK72GaknWgiGqh"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 50329,
+        "name": "STANDING ON BUSINESS",
+        "disc_number": 1,
+        "id": "5YiIOND9ZK72GaknWgiGqh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7gCautqfD7CCdrN33GrRd8"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 212960,
+        "name": "405",
+        "disc_number": 1,
+        "id": "7gCautqfD7CCdrN33GrRd8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Cash Cobain",
+            "id": "2R0CFyeMDiRbfkhkIMbyl1"
+          },
+          {
+            "name": "Eddie Benjamin",
+            "id": "1AaSeUFzwt47HhkGtWE1xn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3WQ5w7ruC3c861lHXF9Gs2"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 150239,
+        "name": "SWAG",
+        "disc_number": 1,
+        "id": "3WQ5w7ruC3c861lHXF9Gs2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xytfOwki3uHqzhvMWI6HN"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 83226,
+        "name": "ZUMA HOUSE",
+        "disc_number": 1,
+        "id": "3xytfOwki3uHqzhvMWI6HN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/422PeUrBywndaCCxL6bDBj"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 184573,
+        "name": "TOO LONG",
+        "disc_number": 1,
+        "id": "422PeUrBywndaCCxL6bDBj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Marvin Winans",
+            "id": "2QuleHm5yBUYv3vjqWTM79"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1U6lXyWjfpeKHkiPnpy7Qu"
+        },
+        "track_number": 21,
+        "explicit": false,
+        "duration_ms": 90600,
+        "name": "FORGIVENESS",
+        "disc_number": 1,
+        "id": "1U6lXyWjfpeKHkiPnpy7Qu"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 21,
+    "albumId": "5vD5M5VW62LL78Ko8x0CVZ"
+  }
+}

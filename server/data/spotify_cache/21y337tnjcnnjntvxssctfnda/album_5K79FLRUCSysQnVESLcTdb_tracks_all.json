@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5K79FLRUCSysQnVESLcTdb_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:20.844Z",
+  "lastRefreshedAt": "2026-03-20T00:41:20.844Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5TFD2bmFKGhoCRbX61nXY5"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 183685,
+        "name": "NUEVAYoL",
+        "disc_number": 1,
+        "id": "5TFD2bmFKGhoCRbX61nXY5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/59D4DOkspUbWyMmbAPQkxZ"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 156364,
+        "name": "VOY A LLeVARTE PA PR",
+        "disc_number": 1,
+        "id": "59D4DOkspUbWyMmbAPQkxZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2lTm559tuIvatlT1u0JYG2"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 367725,
+        "name": "BAILE INoLVIDABLE",
+        "disc_number": 1,
+        "id": "2lTm559tuIvatlT1u0JYG2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          },
+          {
+            "name": "RaiNao",
+            "id": "42LEQxfXLEuzdqorKBbUVN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Q9Efnm5csdCMFynISxL2x"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 200680,
+        "name": "PERFuMITO NUEVO",
+        "disc_number": 1,
+        "id": "1Q9Efnm5csdCMFynISxL2x"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          },
+          {
+            "name": "Chuwi",
+            "id": "6wF1Cz760dpdbX9RJIDpQW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5WEF0icHWmAZBBMglBd599"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 187507,
+        "name": "WELTiTA",
+        "disc_number": 1,
+        "id": "5WEF0icHWmAZBBMglBd599"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          },
+          {
+            "name": "Omar Courtz",
+            "id": "3E12tRURRvPfHz0hAMCFYc"
+          },
+          {
+            "name": "Dei V",
+            "id": "2YRyPiW98bpkARAS4B3OQP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7d6yK8v8J484SWH5prIQiE"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 235336,
+        "name": "VeLDÁ",
+        "disc_number": 1,
+        "id": "7d6yK8v8J484SWH5prIQiE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0iKo4pNNjHHdKUcFARlfCa"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 222568,
+        "name": "EL CLúB",
+        "disc_number": 1,
+        "id": "0iKo4pNNjHHdKUcFARlfCa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4c2Pc0NrfkesPR0jff6q3F"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 250789,
+        "name": "KETU TeCRÉ",
+        "disc_number": 1,
+        "id": "4c2Pc0NrfkesPR0jff6q3F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/79x7xtoCLpf6l32Zz6mWo4"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 215983,
+        "name": "BOKeTE",
+        "disc_number": 1,
+        "id": "79x7xtoCLpf6l32Zz6mWo4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4MUrUT38U98olfnyzMBCzm"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 199114,
+        "name": "KLOuFRENS",
+        "disc_number": 1,
+        "id": "4MUrUT38U98olfnyzMBCzm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7tCuCjhxzjX2XCz4JiiAsp"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 190028,
+        "name": "TURiSTA",
+        "disc_number": 1,
+        "id": "7tCuCjhxzjX2XCz4JiiAsp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          },
+          {
+            "name": "Los Pleneros de la Cresta",
+            "id": "1uZVxckdGGKhFMpCnupXmP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6VNXmo59yDYgcwLS17UNAW"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 228836,
+        "name": "CAFé CON RON",
+        "disc_number": 1,
+        "id": "6VNXmo59yDYgcwLS17UNAW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/14QaXYIK3K3QPtezqxRRPN"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 206627,
+        "name": "PIToRRO DE COCO",
+        "disc_number": 1,
+        "id": "14QaXYIK3K3QPtezqxRRPN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Hg0e997pObvZ91w1FCPFk"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 229381,
+        "name": "LO QUE LE PASÓ A HAWAii",
+        "disc_number": 1,
+        "id": "1Hg0e997pObvZ91w1FCPFk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6J5kc12BW5HuP3d7C3vvx8"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 204768,
+        "name": "EoO",
+        "disc_number": 1,
+        "id": "6J5kc12BW5HuP3d7C3vvx8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3sK8wGT43QFpWrvNQsrQya"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 237117,
+        "name": "DtMF",
+        "disc_number": 1,
+        "id": "3sK8wGT43QFpWrvNQsrQya"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3G7agPwWfcORnWCAGMDOpm"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 213010,
+        "name": "LA MuDANZA",
+        "disc_number": 1,
+        "id": "3G7agPwWfcORnWCAGMDOpm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "5K79FLRUCSysQnVESLcTdb"
+  }
+}

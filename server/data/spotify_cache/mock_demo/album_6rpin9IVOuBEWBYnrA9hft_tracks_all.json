@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6rpin9IVOuBEWBYnrA9hft_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:26.877Z",
+  "lastRefreshedAt": "2026-03-20T00:41:26.877Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "KATSEYE",
+            "id": "3c0gDdb9lhnHGFtP4prQpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1xOqGUkyxGQRdCvGpvWKmL"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 197226,
+        "name": "Gabriela",
+        "disc_number": 1,
+        "id": "1xOqGUkyxGQRdCvGpvWKmL"
+      },
+      {
+        "artists": [
+          {
+            "name": "KATSEYE",
+            "id": "3c0gDdb9lhnHGFtP4prQpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42CJ1ZgN2p6ZginhEgiO6g"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 137316,
+        "name": "Gnarly",
+        "disc_number": 1,
+        "id": "42CJ1ZgN2p6ZginhEgiO6g"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 2,
+    "albumId": "6rpin9IVOuBEWBYnrA9hft"
+  }
+}

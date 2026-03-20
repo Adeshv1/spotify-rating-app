@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1Ld0guzIxggCOIbkE319nz_profile",
+  "fetchedAt": "2026-03-20T00:29:20.515Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.515Z",
+  "data": {
+    "id": "1Ld0guzIxggCOIbkE319nz",
+    "name": "Domi Nova",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bb0e5122eb52de8ef0ba8d78",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273bb0e5122eb52de8ef0ba8d78",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02bb0e5122eb52de8ef0ba8d78",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851bb0e5122eb52de8ef0ba8d78",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1Ld0guzIxggCOIbkE319nz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

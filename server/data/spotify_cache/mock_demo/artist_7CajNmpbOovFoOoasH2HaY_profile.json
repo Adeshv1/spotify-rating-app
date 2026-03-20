@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7CajNmpbOovFoOoasH2HaY_profile",
+  "fetchedAt": "2026-03-20T00:34:24.006Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.006Z",
+  "data": {
+    "id": "7CajNmpbOovFoOoasH2HaY",
+    "name": "Calvin Harris",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8ebba5e60113b48de8c11f6b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8ebba5e60113b48de8c11f6b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748ebba5e60113b48de8c11f6b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788ebba5e60113b48de8c11f6b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7CajNmpbOovFoOoasH2HaY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

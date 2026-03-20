@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_738wLrAtLtCtFOLvQBXOXp_profile",
+  "fetchedAt": "2026-03-20T00:34:24.797Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.797Z",
+  "data": {
+    "id": "738wLrAtLtCtFOLvQBXOXp",
+    "name": "Major Lazer",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd18eac6f1e653551fd05a793",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd18eac6f1e653551fd05a793",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d18eac6f1e653551fd05a793",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d18eac6f1e653551fd05a793",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/738wLrAtLtCtFOLvQBXOXp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3AVfmawzu83sp94QW7CEGm_profile",
+  "fetchedAt": "2026-03-20T00:29:25.009Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.009Z",
+  "data": {
+    "id": "3AVfmawzu83sp94QW7CEGm",
+    "name": "Astrid S",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba0afba2d87ea2c5adb0c90e3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba0afba2d87ea2c5adb0c90e3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a0afba2d87ea2c5adb0c90e3",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a0afba2d87ea2c5adb0c90e3",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3AVfmawzu83sp94QW7CEGm",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

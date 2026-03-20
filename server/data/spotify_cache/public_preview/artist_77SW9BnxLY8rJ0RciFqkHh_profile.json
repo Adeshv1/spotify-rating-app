@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_77SW9BnxLY8rJ0RciFqkHh_profile",
+  "fetchedAt": "2026-03-20T00:34:27.089Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.089Z",
+  "data": {
+    "id": "77SW9BnxLY8rJ0RciFqkHh",
+    "name": "The Neighbourhood",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebdf0b5ac84376a0a4b2166816",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebdf0b5ac84376a0a4b2166816",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174df0b5ac84376a0a4b2166816",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178df0b5ac84376a0a4b2166816",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/77SW9BnxLY8rJ0RciFqkHh",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

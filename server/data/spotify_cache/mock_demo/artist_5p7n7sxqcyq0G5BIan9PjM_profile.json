@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5p7n7sxqcyq0G5BIan9PjM_profile",
+  "fetchedAt": "2026-03-20T00:29:20.781Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.781Z",
+  "data": {
+    "id": "5p7n7sxqcyq0G5BIan9PjM",
+    "name": "Rowan Elyse",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27328a669240bef6125d864e6e1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27328a669240bef6125d864e6e1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0228a669240bef6125d864e6e1",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511a8152a432088df940201341",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5p7n7sxqcyq0G5BIan9PjM",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

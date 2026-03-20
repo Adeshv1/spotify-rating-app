@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5W982ShqwBuQZHoATVqi4q_profile",
+  "fetchedAt": "2026-03-20T00:29:22.708Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.708Z",
+  "data": {
+    "id": "5W982ShqwBuQZHoATVqi4q",
+    "name": "Florentin Davies",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf61141e65c0e3c957d1d8984",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf61141e65c0e3c957d1d8984",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f61141e65c0e3c957d1d8984",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f61141e65c0e3c957d1d8984",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5W982ShqwBuQZHoATVqi4q",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

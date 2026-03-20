@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_10FLjwfpbxLmW8c25Xyc2N_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.268Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.268Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lady Gaga",
+            "id": "1HY2Jd0NmPuamShAr6KMms"
+          },
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 251667,
+        "name": "Die With A Smile",
+        "disc_number": 1,
+        "id": "2plbrEY59IikOBgBGLjaoe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "10FLjwfpbxLmW8c25Xyc2N"
+  }
+}

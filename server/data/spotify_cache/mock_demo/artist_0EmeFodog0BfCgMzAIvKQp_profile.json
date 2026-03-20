@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0EmeFodog0BfCgMzAIvKQp_profile",
+  "fetchedAt": "2026-03-20T00:34:23.322Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.322Z",
+  "data": {
+    "id": "0EmeFodog0BfCgMzAIvKQp",
+    "name": "Shakira",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb2a24b7e572e325c4b550af12",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb2a24b7e572e325c4b550af12",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051742a24b7e572e325c4b550af12",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1782a24b7e572e325c4b550af12",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_67FB4n52MgexGQIG8s0yUH_profile",
+  "fetchedAt": "2026-03-20T00:29:16.669Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.669Z",
+  "data": {
+    "id": "67FB4n52MgexGQIG8s0yUH",
+    "name": "Lola Young",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb0d191f6192fd3690e7aefcc3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb0d191f6192fd3690e7aefcc3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051740d191f6192fd3690e7aefcc3",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1780d191f6192fd3690e7aefcc3",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/67FB4n52MgexGQIG8s0yUH",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

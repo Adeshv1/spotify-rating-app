@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6sacEP77oivRMuZRlOuSCr_profile",
+  "fetchedAt": "2026-03-20T00:29:18.225Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.225Z",
+  "data": {
+    "id": "6sacEP77oivRMuZRlOuSCr",
+    "name": "Ro$ama",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb33f62dba76b8145d50e17a74",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb33f62dba76b8145d50e17a74",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517433f62dba76b8145d50e17a74",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17833f62dba76b8145d50e17a74",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6sacEP77oivRMuZRlOuSCr",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_72lKRBDN7nlWA93GIjn7KW_profile",
+  "fetchedAt": "2026-03-20T00:29:22.885Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.885Z",
+  "data": {
+    "id": "72lKRBDN7nlWA93GIjn7KW",
+    "name": "Lakes of Lagan",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27391854cc8e75cd257560b5722",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27391854cc8e75cd257560b5722",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0291854cc8e75cd257560b5722",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485191854cc8e75cd257560b5722",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/72lKRBDN7nlWA93GIjn7KW",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

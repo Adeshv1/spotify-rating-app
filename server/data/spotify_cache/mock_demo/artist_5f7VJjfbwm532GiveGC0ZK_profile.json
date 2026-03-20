@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5f7VJjfbwm532GiveGC0ZK_profile",
+  "fetchedAt": "2026-03-20T00:29:18.493Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.493Z",
+  "data": {
+    "id": "5f7VJjfbwm532GiveGC0ZK",
+    "name": "Lil Baby",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb514da623c55dc9d2155705dd",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb514da623c55dc9d2155705dd",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174514da623c55dc9d2155705dd",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178514da623c55dc9d2155705dd",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5f7VJjfbwm532GiveGC0ZK",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

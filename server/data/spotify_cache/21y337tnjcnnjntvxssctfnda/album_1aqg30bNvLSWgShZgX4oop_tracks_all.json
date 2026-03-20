@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1aqg30bNvLSWgShZgX4oop_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:23.887Z",
+  "lastRefreshedAt": "2026-03-20T00:41:23.887Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2BwO5K8Q7EPAJSGze3AAh9"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 213645,
+        "name": "Manchild",
+        "disc_number": 1,
+        "id": "2BwO5K8Q7EPAJSGze3AAh9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42VUCXerQ5qTr4Qp6PhKo4"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 160183,
+        "name": "Tears",
+        "disc_number": 1,
+        "id": "42VUCXerQ5qTr4Qp6PhKo4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3EMfeKtNK4q4k3sVjwg5Yy"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 197817,
+        "name": "My Man on Willpower",
+        "disc_number": 1,
+        "id": "3EMfeKtNK4q4k3sVjwg5Yy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5B3GZOZYXNzWpUXQC42hxZ"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 183770,
+        "name": "Sugar Talking",
+        "disc_number": 1,
+        "id": "5B3GZOZYXNzWpUXQC42hxZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wkYQMrFfb0huLB5Qn19Iv"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 203378,
+        "name": "We Almost Broke Up Again Last Night",
+        "disc_number": 1,
+        "id": "6wkYQMrFfb0huLB5Qn19Iv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SRShYMtFIGgnOU7iBicMH"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 182576,
+        "name": "Nobody’s Son",
+        "disc_number": 1,
+        "id": "4SRShYMtFIGgnOU7iBicMH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1PdUyYYw9sGU0yhLrpeHKt"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 208211,
+        "name": "Never Getting Laid",
+        "disc_number": 1,
+        "id": "1PdUyYYw9sGU0yhLrpeHKt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0je57Uq5eTk1wrPzn9sWbl"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 145398,
+        "name": "When Did You Get Hot?",
+        "disc_number": 1,
+        "id": "0je57Uq5eTk1wrPzn9sWbl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1qyw5wSUkEvH8DtaCdx7Lg"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 193315,
+        "name": "Go Go Juice",
+        "disc_number": 1,
+        "id": "1qyw5wSUkEvH8DtaCdx7Lg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/21IVPfi81m6ywNgOvqTj1i"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 222320,
+        "name": "Don’t Worry I’ll Make You Worry",
+        "disc_number": 1,
+        "id": "21IVPfi81m6ywNgOvqTj1i"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/25jgQBxuUkGDdCG1WGKKN9"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 169214,
+        "name": "House Tour",
+        "disc_number": 1,
+        "id": "25jgQBxuUkGDdCG1WGKKN9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4tVVmShMF2PYdLqcejrsy2"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 225084,
+        "name": "Goodbye",
+        "disc_number": 1,
+        "id": "4tVVmShMF2PYdLqcejrsy2"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "1aqg30bNvLSWgShZgX4oop"
+  }
+}

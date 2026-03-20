@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7C64wNX3howEFZjAYRKsfP_profile",
+  "fetchedAt": "2026-03-20T00:34:25.824Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.824Z",
+  "data": {
+    "id": "7C64wNX3howEFZjAYRKsfP",
+    "name": "The Cataracs",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba5c43ff223776f945c2cc7d4",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba5c43ff223776f945c2cc7d4",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a5c43ff223776f945c2cc7d4",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a5c43ff223776f945c2cc7d4",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7C64wNX3howEFZjAYRKsfP",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

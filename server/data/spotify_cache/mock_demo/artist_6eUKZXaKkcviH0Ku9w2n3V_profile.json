@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6eUKZXaKkcviH0Ku9w2n3V_profile",
+  "fetchedAt": "2026-03-20T00:34:25.018Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.018Z",
+  "data": {
+    "id": "6eUKZXaKkcviH0Ku9w2n3V",
+    "name": "Ed Sheeran",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd55c95ad400aed87da52daec",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd55c95ad400aed87da52daec",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d55c95ad400aed87da52daec",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d55c95ad400aed87da52daec",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

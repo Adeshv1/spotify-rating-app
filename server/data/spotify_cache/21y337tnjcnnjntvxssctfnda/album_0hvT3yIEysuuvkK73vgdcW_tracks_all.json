@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0hvT3yIEysuuvkK73vgdcW_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.668Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.668Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5gOfC9UzZQzTyShqPMrpjT"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 317092,
+        "name": "wacced out murals",
+        "disc_number": 1,
+        "id": "5gOfC9UzZQzTyShqPMrpjT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 157992,
+        "name": "squabble up",
+        "disc_number": 1,
+        "id": "0nj9Bq5sHDiTxSHunhgkFb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 177598,
+        "name": "luther (with sza)",
+        "disc_number": 1,
+        "id": "45J4avUb9Ni0bnETYaYFVJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ho7VSXSmI2KM2nDjcnLyz"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 233173,
+        "name": "man at the garden",
+        "disc_number": 1,
+        "id": "5ho7VSXSmI2KM2nDjcnLyz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Dody6",
+            "id": "4VHa48wXlsDA2vWfgIi7cX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5S8VwnB4sLi6W0lYTWYylu"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 217478,
+        "name": "hey now (feat. dody6)",
+        "disc_number": 1,
+        "id": "5S8VwnB4sLi6W0lYTWYylu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0RgjEkSbeuStKfT2Pa4Zai"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 275740,
+        "name": "reincarnated",
+        "disc_number": 1,
+        "id": "0RgjEkSbeuStKfT2Pa4Zai"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Lefty Gunplay",
+            "id": "1jiZvw42D4oquLl24x2VWV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 220690,
+        "name": "tv off (feat. lefty gunplay)",
+        "disc_number": 1,
+        "id": "0aB0v4027ukVziUGwVGYpG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Wallie the Sensei",
+            "id": "6cUpFVxDYWed9WxtC4QgC5"
+          },
+          {
+            "name": "Siete7x",
+            "id": "7J5UWTbsUFjoSQZQCQCqbQ"
+          },
+          {
+            "name": "Roddy Ricch",
+            "id": "757aE44tKEUQEqRuT6GnEB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4K1Pg0FLno1ltzX3jeqT83"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 131240,
+        "name": "dodger blue (feat. wallie the sensei, siete7x, roddy ricch)",
+        "disc_number": 1,
+        "id": "4K1Pg0FLno1ltzX3jeqT83"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "AZ Chike",
+            "id": "6fqjJNsLs7g6F3PXy01Xnw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Uts1QFB4u2YNIMiqcb4de"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 155917,
+        "name": "peekaboo (feat. azchike)",
+        "disc_number": 1,
+        "id": "2Uts1QFB4u2YNIMiqcb4de"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1SGvjfc85yzqKXsfKcCxn2"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 292461,
+        "name": "heart pt. 6",
+        "disc_number": 1,
+        "id": "1SGvjfc85yzqKXsfKcCxn2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Hitta J3",
+            "id": "50DchbKTiJU56SYmIRSJCI"
+          },
+          {
+            "name": "YoungThreat",
+            "id": "1q2nUylEqrRJkiDkXa39Mw"
+          },
+          {
+            "name": "Peysoh",
+            "id": "27OdVby2oeFjM1C5XvC3hC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3aZptNYC6Z1YoumeqZcDcQ"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 193539,
+        "name": "gnx (feat. hitta j3, youngthreat, peysoh)",
+        "disc_number": 1,
+        "id": "3aZptNYC6Z1YoumeqZcDcQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wgOhYnqZKjOHr6bmdz0aN"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 287522,
+        "name": "gloria (with sza)",
+        "disc_number": 1,
+        "id": "0wgOhYnqZKjOHr6bmdz0aN"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "0hvT3yIEysuuvkK73vgdcW"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_0RMJOzHDhAKY1o2j0W0vxY_profile",
+  "fetchedAt": "2026-03-20T00:34:26.817Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.817Z",
+  "data": {
+    "id": "0RMJOzHDhAKY1o2j0W0vxY",
+    "name": "EJAE",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb126261d917be27ceaf9046e3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb126261d917be27ceaf9046e3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174126261d917be27ceaf9046e3",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178126261d917be27ceaf9046e3",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0RMJOzHDhAKY1o2j0W0vxY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

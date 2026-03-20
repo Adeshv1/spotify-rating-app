@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2hlmm7s2ICUX0LVIhVFlZQ_profile",
+  "fetchedAt": "2026-03-20T00:29:24.454Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.454Z",
+  "data": {
+    "id": "2hlmm7s2ICUX0LVIhVFlZQ",
+    "name": "Gunna",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba998bc86f87b9fe7e2466110",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba998bc86f87b9fe7e2466110",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a998bc86f87b9fe7e2466110",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a998bc86f87b9fe7e2466110",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2hlmm7s2ICUX0LVIhVFlZQ",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

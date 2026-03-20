@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_1HY2Jd0NmPuamShAr6KMms_profile",
+  "fetchedAt": "2026-03-20T00:34:26.949Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.949Z",
+  "data": {
+    "id": "1HY2Jd0NmPuamShAr6KMms",
+    "name": "Lady Gaga",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebaadc18cac8d48124357c38e6",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebaadc18cac8d48124357c38e6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174aadc18cac8d48124357c38e6",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178aadc18cac8d48124357c38e6",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

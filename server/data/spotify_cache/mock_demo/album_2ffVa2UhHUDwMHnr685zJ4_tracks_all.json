@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2ffVa2UhHUDwMHnr685zJ4_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.411Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.411Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Q9kIg9o8w1XKepXWmDUmT"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 152495,
+        "name": "New York",
+        "disc_number": 1,
+        "id": "0Q9kIg9o8w1XKepXWmDUmT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ouhsRJ7gExB7LCYjITk4Y"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 169697,
+        "name": "Diet Pepsi",
+        "disc_number": 1,
+        "id": "6ouhsRJ7gExB7LCYjITk4Y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yKuz6SU0TN3ViDaydV9ti"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 122579,
+        "name": "Money is Everything",
+        "disc_number": 1,
+        "id": "0yKuz6SU0TN3ViDaydV9ti"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3kDO0ttXrVCWbKCS3sQeC1"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 162814,
+        "name": "Aquamarine",
+        "disc_number": 1,
+        "id": "3kDO0ttXrVCWbKCS3sQeC1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3EYDZ99D1QHq2QoBBjJu22"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 48347,
+        "name": "Lost & Found",
+        "disc_number": 1,
+        "id": "3EYDZ99D1QHq2QoBBjJu22"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KwPWmB1gA9zRubseJ7OB2"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 198172,
+        "name": "High Fashion",
+        "disc_number": 1,
+        "id": "7KwPWmB1gA9zRubseJ7OB2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RbbysHL9wr8gTRhBlYBbq"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 227735,
+        "name": "Summer Forever",
+        "disc_number": 1,
+        "id": "6RbbysHL9wr8gTRhBlYBbq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3UDqYP3Sa9phBFAATXOixA"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 213960,
+        "name": "In The Rain",
+        "disc_number": 1,
+        "id": "3UDqYP3Sa9phBFAATXOixA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7B3BwNecBhKvNwSMOOl7Gk"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 183237,
+        "name": "Fame is a Gun",
+        "disc_number": 1,
+        "id": "7B3BwNecBhKvNwSMOOl7Gk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01fzY6YKwKQ3LxCpIP6buB"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 232597,
+        "name": "Times Like These",
+        "disc_number": 1,
+        "id": "01fzY6YKwKQ3LxCpIP6buB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ZgUTCrKgFkIsobRRoroFr"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 57013,
+        "name": "Life's No Fun Through Clear Waters",
+        "disc_number": 1,
+        "id": "6ZgUTCrKgFkIsobRRoroFr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Addison Rae",
+            "id": "4gvjmrtzydbMpyJaXUtwvP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3H6xZgwRZx8McVUJzmMxWe"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 240308,
+        "name": "Headphones On",
+        "disc_number": 1,
+        "id": "3H6xZgwRZx8McVUJzmMxWe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "2ffVa2UhHUDwMHnr685zJ4"
+  }
+}

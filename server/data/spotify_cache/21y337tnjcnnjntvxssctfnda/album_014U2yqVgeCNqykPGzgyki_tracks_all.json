@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_014U2yqVgeCNqykPGzgyki_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.246Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.246Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Zara Larsson",
+            "id": "1Xylc3o4UrD53lo9CvFvVg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/37UCSVSqiPGdR1DijOFyYY"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 189898,
+        "name": "Midnight Sun",
+        "disc_number": 1,
+        "id": "37UCSVSqiPGdR1DijOFyYY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Zara Larsson",
+            "id": "1Xylc3o4UrD53lo9CvFvVg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3H0lXqOT1AgEX6E6kDDPex"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 158696,
+        "name": "Pretty Ugly",
+        "disc_number": 1,
+        "id": "3H0lXqOT1AgEX6E6kDDPex"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 2,
+    "albumId": "014U2yqVgeCNqykPGzgyki"
+  }
+}

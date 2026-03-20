@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0pLJCdOvfghIEinnPXIqIx_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:26.542Z",
+  "lastRefreshedAt": "2026-03-20T00:41:26.542Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/45Z3m6yazmAi4jZuW0tzW0"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 311733,
+        "name": "Aperture",
+        "disc_number": 1,
+        "id": "45Z3m6yazmAi4jZuW0tzW0"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0pLJCdOvfghIEinnPXIqIx"
+  }
+}

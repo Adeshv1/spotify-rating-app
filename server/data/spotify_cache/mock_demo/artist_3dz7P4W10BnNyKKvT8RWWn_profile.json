@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3dz7P4W10BnNyKKvT8RWWn_profile",
+  "fetchedAt": "2026-03-20T00:29:23.980Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.980Z",
+  "data": {
+    "id": "3dz7P4W10BnNyKKvT8RWWn",
+    "name": "Fernando Alegre",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ad03502ad0f4736b73ba4563",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ad03502ad0f4736b73ba4563",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ad03502ad0f4736b73ba4563",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ad03502ad0f4736b73ba4563",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3dz7P4W10BnNyKKvT8RWWn",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

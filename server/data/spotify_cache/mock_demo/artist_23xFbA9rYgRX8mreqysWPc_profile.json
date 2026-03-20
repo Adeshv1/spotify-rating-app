@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_23xFbA9rYgRX8mreqysWPc_profile",
+  "fetchedAt": "2026-03-20T00:29:18.067Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.067Z",
+  "data": {
+    "id": "23xFbA9rYgRX8mreqysWPc",
+    "name": "BossMan Dlow",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcaf6fb1684bd8bb4ece8d096",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebcaf6fb1684bd8bb4ece8d096",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174caf6fb1684bd8bb4ece8d096",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178caf6fb1684bd8bb4ece8d096",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/23xFbA9rYgRX8mreqysWPc",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_1Xylc3o4UrD53lo9CvFvVg_profile",
+  "fetchedAt": "2026-03-20T00:34:26.112Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.112Z",
+  "data": {
+    "id": "1Xylc3o4UrD53lo9CvFvVg",
+    "name": "Zara Larsson",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb11be9310ef4b23734c13b5c8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb11be9310ef4b23734c13b5c8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517411be9310ef4b23734c13b5c8",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17811be9310ef4b23734c13b5c8",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1Xylc3o4UrD53lo9CvFvVg",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

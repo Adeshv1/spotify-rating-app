@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7IbxsPdlYelceWNyHAor55_profile",
+  "fetchedAt": "2026-03-20T00:29:15.673Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.673Z",
+  "data": {
+    "id": "7IbxsPdlYelceWNyHAor55",
+    "name": "Banjaare",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb46914914e8dabd2c39a69a76",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb46914914e8dabd2c39a69a76",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517446914914e8dabd2c39a69a76",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17846914914e8dabd2c39a69a76",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7IbxsPdlYelceWNyHAor55",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

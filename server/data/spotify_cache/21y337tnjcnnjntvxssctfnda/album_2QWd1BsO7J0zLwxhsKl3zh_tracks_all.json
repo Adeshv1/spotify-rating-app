@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2QWd1BsO7J0zLwxhsKl3zh_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.138Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.138Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3SKH53SPQbEnZR4cJPVaz2"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 284068,
+        "name": "Messy",
+        "disc_number": 1,
+        "id": "3SKH53SPQbEnZR4cJPVaz2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BRsguLm6SNR1ioWgF2uYY"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 164034,
+        "name": "Fuck",
+        "disc_number": 1,
+        "id": "7BRsguLm6SNR1ioWgF2uYY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1V0aSXzy2kwiGan8GbNBL1"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 218469,
+        "name": "Big Brown Eyes",
+        "disc_number": 1,
+        "id": "1V0aSXzy2kwiGan8GbNBL1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XLd9ZNWz1u4EmWQgcpePX"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 151235,
+        "name": "Intrusive Thoughts",
+        "disc_number": 1,
+        "id": "4XLd9ZNWz1u4EmWQgcpePX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nn6f1AFxYens3fVqhix9B"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 194069,
+        "name": "Wish You Were Dead",
+        "disc_number": 1,
+        "id": "0nn6f1AFxYens3fVqhix9B"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lola Young",
+            "id": "67FB4n52MgexGQIG8s0yUH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/699RAGIr3np062zBxd5SDH"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 239451,
+        "name": "Conceited",
+        "disc_number": 1,
+        "id": "699RAGIr3np062zBxd5SDH"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 6,
+    "albumId": "2QWd1BsO7J0zLwxhsKl3zh"
+  }
+}

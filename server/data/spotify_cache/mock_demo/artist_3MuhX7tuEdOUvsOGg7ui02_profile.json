@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3MuhX7tuEdOUvsOGg7ui02_profile",
+  "fetchedAt": "2026-03-20T00:29:23.396Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.396Z",
+  "data": {
+    "id": "3MuhX7tuEdOUvsOGg7ui02",
+    "name": "Barry Hudson-Taylor",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb14e4997bcdf0f2097e63960c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb14e4997bcdf0f2097e63960c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517414e4997bcdf0f2097e63960c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17814e4997bcdf0f2097e63960c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3MuhX7tuEdOUvsOGg7ui02",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

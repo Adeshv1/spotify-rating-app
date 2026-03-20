@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4gB2Nnsapxi4chX9f5zgku_profile",
+  "fetchedAt": "2026-03-20T00:29:19.500Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.500Z",
+  "data": {
+    "id": "4gB2Nnsapxi4chX9f5zgku",
+    "name": "Skooly",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebbc7e80ac0836ca7a6d3b5d73",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebbc7e80ac0836ca7a6d3b5d73",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174bc7e80ac0836ca7a6d3b5d73",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178bc7e80ac0836ca7a6d3b5d73",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4gB2Nnsapxi4chX9f5zgku",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

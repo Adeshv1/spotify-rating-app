@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0X2BH1fck6amBIoJhDVmmJ_profile",
+  "fetchedAt": "2026-03-20T00:29:26.870Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.870Z",
+  "data": {
+    "id": "0X2BH1fck6amBIoJhDVmmJ",
+    "name": "Ellie Goulding",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb69266d088d2ab5c74e028863",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb69266d088d2ab5c74e028863",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517469266d088d2ab5c74e028863",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17869266d088d2ab5c74e028863",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0X2BH1fck6amBIoJhDVmmJ",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

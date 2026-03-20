@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1qw4AAqrPMSwFoEc1RBRLU_profile",
+  "fetchedAt": "2026-03-20T00:29:23.033Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.033Z",
+  "data": {
+    "id": "1qw4AAqrPMSwFoEc1RBRLU",
+    "name": "Will Kaufman",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273831b21d9f0e917623e9f20a1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273831b21d9f0e917623e9f20a1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02831b21d9f0e917623e9f20a1",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851831b21d9f0e917623e9f20a1",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1qw4AAqrPMSwFoEc1RBRLU",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

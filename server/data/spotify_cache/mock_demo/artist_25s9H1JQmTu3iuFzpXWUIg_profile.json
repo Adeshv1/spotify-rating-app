@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_25s9H1JQmTu3iuFzpXWUIg_profile",
+  "fetchedAt": "2026-03-20T00:29:22.455Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.455Z",
+  "data": {
+    "id": "25s9H1JQmTu3iuFzpXWUIg",
+    "name": "Stephan Moccio",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebfa4ca51d01300a07e40e169b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebfa4ca51d01300a07e40e169b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174fa4ca51d01300a07e40e169b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178fa4ca51d01300a07e40e169b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/25s9H1JQmTu3iuFzpXWUIg",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

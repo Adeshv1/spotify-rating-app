@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3ppQEG71r7jVpI8RudzycF_profile",
+  "fetchedAt": "2026-03-20T00:29:18.752Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.752Z",
+  "data": {
+    "id": "3ppQEG71r7jVpI8RudzycF",
+    "name": "OHGEESY",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba49f73d3a15c13d140f9862e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba49f73d3a15c13d140f9862e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a49f73d3a15c13d140f9862e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a49f73d3a15c13d140f9862e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3ppQEG71r7jVpI8RudzycF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

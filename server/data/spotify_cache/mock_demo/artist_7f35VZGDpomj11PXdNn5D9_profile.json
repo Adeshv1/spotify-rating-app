@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7f35VZGDpomj11PXdNn5D9_profile",
+  "fetchedAt": "2026-03-20T00:29:18.064Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.064Z",
+  "data": {
+    "id": "7f35VZGDpomj11PXdNn5D9",
+    "name": "Max B",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd506af2354c75870a686bbcf",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd506af2354c75870a686bbcf",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d506af2354c75870a686bbcf",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d506af2354c75870a686bbcf",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7f35VZGDpomj11PXdNn5D9",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

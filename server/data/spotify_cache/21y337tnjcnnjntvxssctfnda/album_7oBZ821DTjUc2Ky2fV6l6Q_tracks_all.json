@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7oBZ821DTjUc2Ky2fV6l6Q_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.469Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.469Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4pMRw05NXRMuO6EYfXWsf1"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 132313,
+        "name": "white noise.",
+        "disc_number": 1,
+        "id": "4pMRw05NXRMuO6EYfXWsf1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yYTRodDOWqZZ0AWa2qxHH"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 223621,
+        "name": "wrong faces.",
+        "disc_number": 1,
+        "id": "0yYTRodDOWqZZ0AWa2qxHH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GApeoo08HHJ70980XyPZz"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 207023,
+        "name": "have to.",
+        "disc_number": 1,
+        "id": "7GApeoo08HHJ70980XyPZz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jyyma8YdFC4S4llusSFRu"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 248297,
+        "name": "butterflies.",
+        "disc_number": 1,
+        "id": "4jyyma8YdFC4S4llusSFRu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2iZ9yiTcL1iywzSUZxlJrZ"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 195015,
+        "name": "other side.",
+        "disc_number": 1,
+        "id": "2iZ9yiTcL1iywzSUZxlJrZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2zsqco8LaRPjSJ2K8KbyDZ"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 196697,
+        "name": "strangers.",
+        "disc_number": 1,
+        "id": "2zsqco8LaRPjSJ2K8KbyDZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61LIrROTdBzB2wOsgFNODa"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 245384,
+        "name": "world is yours.",
+        "disc_number": 1,
+        "id": "61LIrROTdBzB2wOsgFNODa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6WH9AlBNORcBiQywNCIblE"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 185813,
+        "name": "four seasons.",
+        "disc_number": 1,
+        "id": "6WH9AlBNORcBiQywNCIblE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ST33QbyCHtNq6sGVEjgZO"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 240013,
+        "name": "pure fantasy.",
+        "disc_number": 1,
+        "id": "3ST33QbyCHtNq6sGVEjgZO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/48MdaprisCULgR80rGs8cb"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 143832,
+        "name": "vanilla sky.",
+        "disc_number": 1,
+        "id": "48MdaprisCULgR80rGs8cb"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "7oBZ821DTjUc2Ky2fV6l6Q"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7iZtZyCzp3LItcw1wtPI3D_profile",
+  "fetchedAt": "2026-03-20T00:29:26.714Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.714Z",
+  "data": {
+    "id": "7iZtZyCzp3LItcw1wtPI3D",
+    "name": "Rae Sremmurd",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebca1568791bf7ac0cf34dbc66",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebca1568791bf7ac0cf34dbc66",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ca1568791bf7ac0cf34dbc66",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ca1568791bf7ac0cf34dbc66",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7iZtZyCzp3LItcw1wtPI3D",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

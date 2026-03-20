@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_42vzUzUtpdNGFYxqgVcXl1_profile",
+  "fetchedAt": "2026-03-20T00:29:21.694Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.694Z",
+  "data": {
+    "id": "42vzUzUtpdNGFYxqgVcXl1",
+    "name": "Christian Janssen",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb9f337ea5746bfba9657aff2f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb9f337ea5746bfba9657aff2f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051749f337ea5746bfba9657aff2f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1789f337ea5746bfba9657aff2f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/42vzUzUtpdNGFYxqgVcXl1",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

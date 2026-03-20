@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5BZjycpMPqgrPbJJq43szv_profile",
+  "fetchedAt": "2026-03-20T00:29:20.521Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.521Z",
+  "data": {
+    "id": "5BZjycpMPqgrPbJJq43szv",
+    "name": "Joseph Fina",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735167cb90a48460e07f7d6661",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735167cb90a48460e07f7d6661",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025167cb90a48460e07f7d6661",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515167cb90a48460e07f7d6661",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5BZjycpMPqgrPbJJq43szv",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

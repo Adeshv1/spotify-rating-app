@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0yjBkHJA6pxZL5FYccrwwa_profile",
+  "fetchedAt": "2026-03-20T00:34:22.690Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.690Z",
+  "data": {
+    "id": "0yjBkHJA6pxZL5FYccrwwa",
+    "name": "Jeremy Mayfield",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebadbec0176a6702e514ab9b36",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebadbec0176a6702e514ab9b36",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174adbec0176a6702e514ab9b36",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178adbec0176a6702e514ab9b36",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0yjBkHJA6pxZL5FYccrwwa",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

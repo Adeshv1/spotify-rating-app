@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0Bv6OJO0L5gcf20DMww54a_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:20.943Z",
+  "lastRefreshedAt": "2026-03-20T00:41:20.943Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 184000,
+        "name": "Man I Need",
+        "disc_number": 1,
+        "id": "1qbmS6ep2hbBRaEZFpn7BX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3D9Y8HQDJtu7g18KC60mQI"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 209000,
+        "name": "Nice To Each Other",
+        "disc_number": 1,
+        "id": "3D9Y8HQDJtu7g18KC60mQI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1cTyjhfHUncimwNj3nmqhO"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 209000,
+        "name": "Lady Lady",
+        "disc_number": 1,
+        "id": "1cTyjhfHUncimwNj3nmqhO"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 3,
+    "albumId": "0Bv6OJO0L5gcf20DMww54a"
+  }
+}

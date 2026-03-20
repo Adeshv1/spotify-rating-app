@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6KGVoP7dCFZ2FILUCCj4rn_profile",
+  "fetchedAt": "2026-03-20T00:29:20.511Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.511Z",
+  "data": {
+    "id": "6KGVoP7dCFZ2FILUCCj4rn",
+    "name": "Samuel Kees",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738cdfcc4eb6a93ab15a277227",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738cdfcc4eb6a93ab15a277227",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028cdfcc4eb6a93ab15a277227",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518cdfcc4eb6a93ab15a277227",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6KGVoP7dCFZ2FILUCCj4rn",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

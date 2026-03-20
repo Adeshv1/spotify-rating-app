@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7aJuG4TFXa2hmE4z1yxc3n_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:24.260Z",
+  "lastRefreshedAt": "2026-03-20T00:41:24.260Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CsMKhwEmNnmvHUuO5nryA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 219733,
+        "name": "SKINNY",
+        "disc_number": 1,
+        "id": "1CsMKhwEmNnmvHUuO5nryA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/629DixmZGHc7ILtEntuiWE"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 179586,
+        "name": "LUNCH",
+        "disc_number": 1,
+        "id": "629DixmZGHc7ILtEntuiWE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BRD7x5pt8Lqa1eGYC4dzj"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 303440,
+        "name": "CHIHIRO",
+        "disc_number": 1,
+        "id": "7BRD7x5pt8Lqa1eGYC4dzj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 210373,
+        "name": "BIRDS OF A FEATHER",
+        "disc_number": 1,
+        "id": "6dOtVTDdiauQNBQEDOtlAB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QaPy1KgI7nu9FJEQUgn6h"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 261466,
+        "name": "WILDFLOWER",
+        "disc_number": 1,
+        "id": "3QaPy1KgI7nu9FJEQUgn6h"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TGd66r0nlPaYm3KIoI7ET"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 293840,
+        "name": "THE GREATEST",
+        "disc_number": 1,
+        "id": "6TGd66r0nlPaYm3KIoI7ET"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6fPan2saHdFaIHuTSatORv"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 333986,
+        "name": "L’AMOUR DE MA VIE",
+        "disc_number": 1,
+        "id": "6fPan2saHdFaIHuTSatORv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LLUoftvmTjVNBHZoQyveF"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 186346,
+        "name": "THE DINER",
+        "disc_number": 1,
+        "id": "1LLUoftvmTjVNBHZoQyveF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7DpUoxGSdlDHfqCYj0otzU"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 298440,
+        "name": "BITTERSUITE",
+        "disc_number": 1,
+        "id": "7DpUoxGSdlDHfqCYj0otzU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2prqm9sPLj10B4Wg0wE5x9"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 343120,
+        "name": "BLUE",
+        "disc_number": 1,
+        "id": "2prqm9sPLj10B4Wg0wE5x9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "7aJuG4TFXa2hmE4z1yxc3n"
+  }
+}

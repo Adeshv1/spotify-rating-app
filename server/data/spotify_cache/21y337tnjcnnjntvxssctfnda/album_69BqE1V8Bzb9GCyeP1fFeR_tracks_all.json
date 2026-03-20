@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_69BqE1V8Bzb9GCyeP1fFeR_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:21.579Z",
+  "lastRefreshedAt": "2026-03-20T00:41:21.579Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1sA1DhT0bLyeICf8NalPS7"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 311733,
+        "name": "Aperture",
+        "disc_number": 1,
+        "id": "1sA1DhT0bLyeICf8NalPS7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7gtG45ieyQzKtNKobfLd49"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 213440,
+        "name": "American Girls",
+        "disc_number": 1,
+        "id": "7gtG45ieyQzKtNKobfLd49"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0i4qKfuKJ3juUsEwnJAxk3"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 160400,
+        "name": "Ready, Steady, Go!",
+        "disc_number": 1,
+        "id": "0i4qKfuKJ3juUsEwnJAxk3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7s7v5EoNLD6TwDu4Nw51Oy"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 192400,
+        "name": "Are You Listening Yet?",
+        "disc_number": 1,
+        "id": "7s7v5EoNLD6TwDu4Nw51Oy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xClevycpBON8bkyxFbAna"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 221653,
+        "name": "Taste Back",
+        "disc_number": 1,
+        "id": "3xClevycpBON8bkyxFbAna"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0tV6LXuVzJR4yifqwQuNwN"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 169960,
+        "name": "The Waiting Game",
+        "disc_number": 1,
+        "id": "0tV6LXuVzJR4yifqwQuNwN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GteP2UCnpHRWSZTL63QHe"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 229560,
+        "name": "Season 2 Weight Loss",
+        "disc_number": 1,
+        "id": "6GteP2UCnpHRWSZTL63QHe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0QPdjsMOUhwouq1NS3HwfQ"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 248866,
+        "name": "Coming Up Roses",
+        "disc_number": 1,
+        "id": "0QPdjsMOUhwouq1NS3HwfQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/028i7HBfp8uE5epmx5ieMA"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 216026,
+        "name": "Pop",
+        "disc_number": 1,
+        "id": "028i7HBfp8uE5epmx5ieMA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0VV0AMmgLBUhzuFedr3F3e"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 194880,
+        "name": "Dance No More",
+        "disc_number": 1,
+        "id": "0VV0AMmgLBUhzuFedr3F3e"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/56k68P3bFQvnKw89hizJFZ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 147013,
+        "name": "Paint By Numbers",
+        "disc_number": 1,
+        "id": "56k68P3bFQvnKw89hizJFZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Harry Styles",
+            "id": "6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QuRLv8zkIYH31O5VgEpmo"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 253653,
+        "name": "Carla's Song",
+        "disc_number": 1,
+        "id": "3QuRLv8zkIYH31O5VgEpmo"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "69BqE1V8Bzb9GCyeP1fFeR"
+  }
+}

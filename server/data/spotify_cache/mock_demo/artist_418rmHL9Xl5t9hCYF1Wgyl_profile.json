@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_418rmHL9Xl5t9hCYF1Wgyl_profile",
+  "fetchedAt": "2026-03-20T00:29:22.889Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.889Z",
+  "data": {
+    "id": "418rmHL9Xl5t9hCYF1Wgyl",
+    "name": "Dwight Rivera",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebefbc691b327ed0f075544452",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebefbc691b327ed0f075544452",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174efbc691b327ed0f075544452",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178efbc691b327ed0f075544452",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/418rmHL9Xl5t9hCYF1Wgyl",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

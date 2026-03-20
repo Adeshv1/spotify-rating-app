@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0MiPwC4KkJlyM17wLHZViw_profile",
+  "fetchedAt": "2026-03-20T00:29:21.325Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.325Z",
+  "data": {
+    "id": "0MiPwC4KkJlyM17wLHZViw",
+    "name": "Waylen Orson",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb9846ee434d20a00d13251b39",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb9846ee434d20a00d13251b39",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051749846ee434d20a00d13251b39",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1789846ee434d20a00d13251b39",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0MiPwC4KkJlyM17wLHZViw",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

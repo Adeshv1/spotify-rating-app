@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_520FALYwo6yPbp5kBchA8N_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.528Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.528Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Disco Lines",
+            "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+          },
+          {
+            "name": "Tinashe",
+            "id": "0NIIxcxNHmOoyBx03SfTCD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 163994,
+        "name": "No Broke Boys",
+        "disc_number": 1,
+        "id": "3cZajhyr8LmtPfHZ9296tj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "520FALYwo6yPbp5kBchA8N"
+  }
+}

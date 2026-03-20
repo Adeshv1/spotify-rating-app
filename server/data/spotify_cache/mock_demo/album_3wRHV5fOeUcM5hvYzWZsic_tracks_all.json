@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3wRHV5fOeUcM5hvYzWZsic_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.807Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.807Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sabrina Carpenter",
+            "id": "74KM79TiuVKeVCqs8QtB0B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42UBPzRMh5yyz0EDPr6fr1"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 213645,
+        "name": "Manchild",
+        "disc_number": 1,
+        "id": "42UBPzRMh5yyz0EDPr6fr1"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3wRHV5fOeUcM5hvYzWZsic"
+  }
+}

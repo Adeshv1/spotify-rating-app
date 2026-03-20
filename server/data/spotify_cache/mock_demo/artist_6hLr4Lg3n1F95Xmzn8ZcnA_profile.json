@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6hLr4Lg3n1F95Xmzn8ZcnA_profile",
+  "fetchedAt": "2026-03-20T00:34:22.685Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.685Z",
+  "data": {
+    "id": "6hLr4Lg3n1F95Xmzn8ZcnA",
+    "name": "Skaresnø",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8165fe268cec0e7b1b960fe8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8165fe268cec0e7b1b960fe8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748165fe268cec0e7b1b960fe8",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788165fe268cec0e7b1b960fe8",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6hLr4Lg3n1F95Xmzn8ZcnA",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

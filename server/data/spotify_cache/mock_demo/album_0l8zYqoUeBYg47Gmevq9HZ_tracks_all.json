@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0l8zYqoUeBYg47Gmevq9HZ_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:21.222Z",
+  "lastRefreshedAt": "2026-03-20T00:41:21.222Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1TZgdopOZCUxpS5bp1i0Zz"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 40500,
+        "name": "The Art of Loving (Intro)",
+        "disc_number": 1,
+        "id": "1TZgdopOZCUxpS5bp1i0Zz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7qEiBWlztvDFrILdizFULx"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 209000,
+        "name": "Nice To Each Other",
+        "disc_number": 1,
+        "id": "7qEiBWlztvDFrILdizFULx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2dmBAIjIfisvCG7G9YEh0g"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 209000,
+        "name": "Lady Lady",
+        "disc_number": 1,
+        "id": "2dmBAIjIfisvCG7G9YEh0g"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/15yaPgTazHHemSnHYYl8HO"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 195000,
+        "name": "Close Up",
+        "disc_number": 1,
+        "id": "15yaPgTazHHemSnHYYl8HO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 169000,
+        "name": "So Easy (To Fall In Love)",
+        "disc_number": 1,
+        "id": "6sGIMrtIzQjdzNndVxe397"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Vd4fHzwS6pBS3muymjiDi"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 186000,
+        "name": "Let Alone The One You Love",
+        "disc_number": 1,
+        "id": "3Vd4fHzwS6pBS3muymjiDi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mYXRQpTGjaLJt1l9MY4ps"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 184000,
+        "name": "Man I Need",
+        "disc_number": 1,
+        "id": "0mYXRQpTGjaLJt1l9MY4ps"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28HadeGsalBfbVfMEkCcF7"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 152000,
+        "name": "Something Inbetween",
+        "disc_number": 1,
+        "id": "28HadeGsalBfbVfMEkCcF7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bUpRf4GN6SV6ejgQ4IQxT"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 184000,
+        "name": "Loud",
+        "disc_number": 1,
+        "id": "3bUpRf4GN6SV6ejgQ4IQxT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5SruEBX3KpgpDvEcIuN53P"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 197000,
+        "name": "Baby Steps",
+        "disc_number": 1,
+        "id": "5SruEBX3KpgpDvEcIuN53P"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/312z6PZ8wwREck8613PkJk"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 212000,
+        "name": "A Couple Minutes",
+        "disc_number": 1,
+        "id": "312z6PZ8wwREck8613PkJk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tHVEMyRfxGgQuXRzl2yOF"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 126000,
+        "name": "I've Seen It",
+        "disc_number": 1,
+        "id": "6tHVEMyRfxGgQuXRzl2yOF"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "0l8zYqoUeBYg47Gmevq9HZ"
+  }
+}

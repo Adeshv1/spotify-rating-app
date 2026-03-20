@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_05jbNkYoEQdjVDHEHtg1gY_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:20.559Z",
+  "lastRefreshedAt": "2026-03-20T00:41:20.559Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0uI7yAKUf52Cn7y3sYyjiX"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 177666,
+        "name": "3 Nights",
+        "disc_number": 1,
+        "id": "0uI7yAKUf52Cn7y3sYyjiX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0IajnzlicUA89rZSkqfLPS"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 133560,
+        "name": "She Wants My Money",
+        "disc_number": 1,
+        "id": "0IajnzlicUA89rZSkqfLPS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7yNf9YjeO5JXUE3JEBgnYc"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 97960,
+        "name": "Babydoll",
+        "disc_number": 1,
+        "id": "7yNf9YjeO5JXUE3JEBgnYc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7rNun2AyLu4u4rQpRt0iS9"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 107280,
+        "name": "Westcoast Collective",
+        "disc_number": 1,
+        "id": "7rNun2AyLu4u4rQpRt0iS9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05fTCmfInpZXpb5Xn1GKGs"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 131173,
+        "name": "Socks",
+        "disc_number": 1,
+        "id": "05fTCmfInpZXpb5Xn1GKGs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0lO1yt6M1l1OAs80M3vEfM"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 194360,
+        "name": "King of Everything",
+        "disc_number": 1,
+        "id": "0lO1yt6M1l1OAs80M3vEfM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Q09JEsHAZhHOIPTqDGeB2"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 108533,
+        "name": "Falling Asleep",
+        "disc_number": 2,
+        "id": "4Q09JEsHAZhHOIPTqDGeB2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75adejSrOgdhLRTOhUkuX2"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 103066,
+        "name": "Batshit",
+        "disc_number": 2,
+        "id": "75adejSrOgdhLRTOhUkuX2"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 8,
+    "albumId": "05jbNkYoEQdjVDHEHtg1gY"
+  }
+}

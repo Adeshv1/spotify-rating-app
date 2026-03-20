@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3ZIsrV7xUXWX4tR0vk1CGF_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:24.383Z",
+  "lastRefreshedAt": "2026-03-20T00:41:24.383Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Banjaare",
+            "id": "7IbxsPdlYelceWNyHAor55"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0RsH8g8DxdYZgdGcod5I36"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 150857,
+        "name": "Bairan",
+        "disc_number": 1,
+        "id": "0RsH8g8DxdYZgdGcod5I36"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3ZIsrV7xUXWX4tR0vk1CGF"
+  }
+}

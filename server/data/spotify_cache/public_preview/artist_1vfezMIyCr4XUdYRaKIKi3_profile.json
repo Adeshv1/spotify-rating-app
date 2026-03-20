@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_1vfezMIyCr4XUdYRaKIKi3_profile",
+  "fetchedAt": "2026-03-20T00:34:27.375Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.375Z",
+  "data": {
+    "id": "1vfezMIyCr4XUdYRaKIKi3",
+    "name": "Keyshia Cole",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb432cb55e0b82419302f7cc5a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb432cb55e0b82419302f7cc5a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174432cb55e0b82419302f7cc5a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178432cb55e0b82419302f7cc5a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1vfezMIyCr4XUdYRaKIKi3",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

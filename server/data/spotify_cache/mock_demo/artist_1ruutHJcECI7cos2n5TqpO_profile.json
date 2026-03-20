@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1ruutHJcECI7cos2n5TqpO_profile",
+  "fetchedAt": "2026-03-20T00:34:24.591Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.591Z",
+  "data": {
+    "id": "1ruutHJcECI7cos2n5TqpO",
+    "name": "Nayer",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba1edc9fd294dc2da62aa4544",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba1edc9fd294dc2da62aa4544",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a1edc9fd294dc2da62aa4544",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a1edc9fd294dc2da62aa4544",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1ruutHJcECI7cos2n5TqpO",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0GZHuvPr2iFDH4BQFLOrEp_profile",
+  "fetchedAt": "2026-03-20T00:29:21.902Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.902Z",
+  "data": {
+    "id": "0GZHuvPr2iFDH4BQFLOrEp",
+    "name": "Polly Carter",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb95d77f02ca614d7301242b08",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb95d77f02ca614d7301242b08",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517495d77f02ca614d7301242b08",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17895d77f02ca614d7301242b08",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0GZHuvPr2iFDH4BQFLOrEp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

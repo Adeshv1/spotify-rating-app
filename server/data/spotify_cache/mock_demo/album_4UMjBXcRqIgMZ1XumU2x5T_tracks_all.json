@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4UMjBXcRqIgMZ1XumU2x5T_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.781Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.781Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Gj2FtTNmem7NGEOYJs812"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 161066,
+        "name": "Dizzy",
+        "disc_number": 1,
+        "id": "4Gj2FtTNmem7NGEOYJs812"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nnwn7LWHCAu09jfuH1xTA"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 212066,
+        "name": "Slide",
+        "disc_number": 1,
+        "id": "0nnwn7LWHCAu09jfuH1xTA"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0RZuCBV900eNA2FXCQ3uUM"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 238533,
+        "name": "Broadway",
+        "disc_number": 1,
+        "id": "0RZuCBV900eNA2FXCQ3uUM"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2QQ2BHrWAPVQz1LZOesXp8"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 164600,
+        "name": "January Friend",
+        "disc_number": 1,
+        "id": "2QQ2BHrWAPVQz1LZOesXp8"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5zmaypMaWb21FUGBxbw8hT"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 249533,
+        "name": "Black Balloon",
+        "disc_number": 1,
+        "id": "5zmaypMaWb21FUGBxbw8hT"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lxfAcX2LexWmrcaS6rnK5"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 277506,
+        "name": "Bullet Proof",
+        "disc_number": 1,
+        "id": "4lxfAcX2LexWmrcaS6rnK5"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4E41Y3AvscAx1bdlSINuDU"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 195626,
+        "name": "Amigone",
+        "disc_number": 1,
+        "id": "4E41Y3AvscAx1bdlSINuDU"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6cBoE74D5BsIfHVIm2e7vj"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 237733,
+        "name": "All Eyes on Me",
+        "disc_number": 1,
+        "id": "6cBoE74D5BsIfHVIm2e7vj"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Gqfcg7Ve6mVepAlYZ5yP3"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 171733,
+        "name": "Full Forever",
+        "disc_number": 1,
+        "id": "4Gqfcg7Ve6mVepAlYZ5yP3"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1RC9slv335IfLce5vt9KTW"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 116573,
+        "name": "Acoustic #3",
+        "disc_number": 1,
+        "id": "1RC9slv335IfLce5vt9KTW"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 289533,
+        "name": "Iris",
+        "disc_number": 1,
+        "id": "6Qyc6fS4DsZjB2mRW9DsQs"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0YvcKhj7sM23fCldiiDkJc"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 130666,
+        "name": "Extra Pale",
+        "disc_number": 1,
+        "id": "0YvcKhj7sM23fCldiiDkJc"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Goo Goo Dolls",
+            "id": "2sil8z5kiy4r76CRTXxBCA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pGhWehNgJ3BYbGBWmTV2B"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 264000,
+        "name": "Hate This Place",
+        "disc_number": 1,
+        "id": "2pGhWehNgJ3BYbGBWmTV2B"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "4UMjBXcRqIgMZ1XumU2x5T"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_614WSOcC6h559Do1UR6k97_profile",
+  "fetchedAt": "2026-03-20T00:29:19.909Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.909Z",
+  "data": {
+    "id": "614WSOcC6h559Do1UR6k97",
+    "name": "Xaverius Love",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb88befa62d8cc279c2afe1ced",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb88befa62d8cc279c2afe1ced",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517488befa62d8cc279c2afe1ced",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17888befa62d8cc279c2afe1ced",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/614WSOcC6h559Do1UR6k97",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

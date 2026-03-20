@@ -2,9 +2,10 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "playlist_0Xbg4lYWUfBcr6VFdTD9cO_tracks_all",
-  "fetchedAt": "2026-03-20T00:18:02.676Z",
-  "lastRefreshedAt": "2026-03-20T00:18:02.676Z",
+  "fetchedAt": "2026-03-20T00:46:47.739Z",
+  "lastRefreshedAt": "2026-03-20T00:46:47.739Z",
   "data": {
+    "limit": 50,
     "items": [
       {
         "item": {
@@ -1259,8 +1260,10 @@
         "added_at": "2026-03-17T23:10:28Z"
       }
     ],
-    "offset": 0,
-    "limit": 50,
-    "total": 50
+    "href": "https://api.spotify.com/v1/playlists/0Xbg4lYWUfBcr6VFdTD9cO/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(id,name),album(id,name,total_tracks)))&locale=*",
+    "next": null,
+    "total": 50,
+    "previous": null,
+    "offset": 0
   }
 }

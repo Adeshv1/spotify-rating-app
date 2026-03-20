@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5SXuuuRpukkTvsLuUknva1_profile",
+  "fetchedAt": "2026-03-20T00:29:17.357Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.357Z",
+  "data": {
+    "id": "5SXuuuRpukkTvsLuUknva1",
+    "name": "Baby Keem",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe45a6e4cee2ef5f4c0fec713",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe45a6e4cee2ef5f4c0fec713",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e45a6e4cee2ef5f4c0fec713",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e45a6e4cee2ef5f4c0fec713",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5SXuuuRpukkTvsLuUknva1",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_5KKpBU5eC2tJDzf0wmlRp2_profile",
+  "fetchedAt": "2026-03-20T00:34:26.584Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.584Z",
+  "data": {
+    "id": "5KKpBU5eC2tJDzf0wmlRp2",
+    "name": "RAYE",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebde2e2ac1d53fdf9518354798",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebde2e2ac1d53fdf9518354798",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174de2e2ac1d53fdf9518354798",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178de2e2ac1d53fdf9518354798",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5KKpBU5eC2tJDzf0wmlRp2",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

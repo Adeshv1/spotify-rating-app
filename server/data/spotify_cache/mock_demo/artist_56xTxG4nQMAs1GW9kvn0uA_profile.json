@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_56xTxG4nQMAs1GW9kvn0uA_profile",
+  "fetchedAt": "2026-03-20T00:34:25.666Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.666Z",
+  "data": {
+    "id": "56xTxG4nQMAs1GW9kvn0uA",
+    "name": "Wanz",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb12149c88d09db865891ffd0e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb12149c88d09db865891ffd0e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517412149c88d09db865891ffd0e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17812149c88d09db865891ffd0e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/56xTxG4nQMAs1GW9kvn0uA",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

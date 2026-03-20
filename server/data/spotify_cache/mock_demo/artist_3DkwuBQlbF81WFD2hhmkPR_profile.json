@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3DkwuBQlbF81WFD2hhmkPR_profile",
+  "fetchedAt": "2026-03-20T00:34:22.698Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.698Z",
+  "data": {
+    "id": "3DkwuBQlbF81WFD2hhmkPR",
+    "name": "M. Ljungström",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d083d1dd0f5d82fecd7061f1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d083d1dd0f5d82fecd7061f1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d083d1dd0f5d82fecd7061f1",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d083d1dd0f5d82fecd7061f1",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3DkwuBQlbF81WFD2hhmkPR",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

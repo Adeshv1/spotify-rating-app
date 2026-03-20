@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7AcV1lk8Zrgo1691PDWEle_profile",
+  "fetchedAt": "2026-03-20T00:34:23.512Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.512Z",
+  "data": {
+    "id": "7AcV1lk8Zrgo1691PDWEle",
+    "name": "Freshlyground",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebedaab5b648def5339e16d539",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebedaab5b648def5339e16d539",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174edaab5b648def5339e16d539",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178edaab5b648def5339e16d539",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7AcV1lk8Zrgo1691PDWEle",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

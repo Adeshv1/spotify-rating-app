@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6S2OmqARrzebs0tKUEyXyp_profile",
+  "fetchedAt": "2026-03-20T00:34:25.671Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.671Z",
+  "data": {
+    "id": "6S2OmqARrzebs0tKUEyXyp",
+    "name": "Demi Lovato",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb42d7061876b87861d7c8f3fb",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb42d7061876b87861d7c8f3fb",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517442d7061876b87861d7c8f3fb",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17842d7061876b87861d7c8f3fb",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6S2OmqARrzebs0tKUEyXyp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3MZsBdqDrRTJihTHQrO6Dq_profile",
+  "fetchedAt": "2026-03-20T00:34:25.216Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.216Z",
+  "data": {
+    "id": "3MZsBdqDrRTJihTHQrO6Dq",
+    "name": "Joji",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb6d7836808e8b99fc8c7aadc",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb6d7836808e8b99fc8c7aadc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174b6d7836808e8b99fc8c7aadc",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178b6d7836808e8b99fc8c7aadc",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3MZsBdqDrRTJihTHQrO6Dq",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

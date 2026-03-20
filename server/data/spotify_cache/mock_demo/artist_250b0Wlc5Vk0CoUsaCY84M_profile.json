@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_250b0Wlc5Vk0CoUsaCY84M_profile",
+  "fetchedAt": "2026-03-20T00:29:15.889Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.889Z",
+  "data": {
+    "id": "250b0Wlc5Vk0CoUsaCY84M",
+    "name": "JENNIE",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba8e3627e392a1d8f539cb575",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba8e3627e392a1d8f539cb575",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a8e3627e392a1d8f539cb575",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a8e3627e392a1d8f539cb575",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/250b0Wlc5Vk0CoUsaCY84M",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

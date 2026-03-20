@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_06HL4z0CvFAxyc27GXpf02_profile",
+  "fetchedAt": "2026-03-20T00:34:26.327Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.327Z",
+  "data": {
+    "id": "06HL4z0CvFAxyc27GXpf02",
+    "name": "Taylor Swift",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe2e8e7ff002a4afda1c7147e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe2e8e7ff002a4afda1c7147e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e2e8e7ff002a4afda1c7147e",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e2e8e7ff002a4afda1c7147e",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

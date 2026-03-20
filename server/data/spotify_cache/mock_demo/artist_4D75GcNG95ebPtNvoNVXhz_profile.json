@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4D75GcNG95ebPtNvoNVXhz_profile",
+  "fetchedAt": "2026-03-20T00:34:24.581Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.581Z",
+  "data": {
+    "id": "4D75GcNG95ebPtNvoNVXhz",
+    "name": "AFROJACK",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb78484e23002e1607039af9b9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb78484e23002e1607039af9b9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517478484e23002e1607039af9b9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17878484e23002e1607039af9b9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4D75GcNG95ebPtNvoNVXhz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

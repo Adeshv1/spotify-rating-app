@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3tVQdUvClmAT7URs9V3rsp_profile",
+  "fetchedAt": "2026-03-20T00:29:24.460Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.460Z",
+  "data": {
+    "id": "3tVQdUvClmAT7URs9V3rsp",
+    "name": "Wizkid",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe6ef803356b45ee5a9fa7a8a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe6ef803356b45ee5a9fa7a8a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e6ef803356b45ee5a9fa7a8a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e6ef803356b45ee5a9fa7a8a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3tVQdUvClmAT7URs9V3rsp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

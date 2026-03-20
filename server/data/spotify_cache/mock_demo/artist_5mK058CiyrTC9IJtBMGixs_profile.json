@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5mK058CiyrTC9IJtBMGixs_profile",
+  "fetchedAt": "2026-03-20T00:29:20.783Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.783Z",
+  "data": {
+    "id": "5mK058CiyrTC9IJtBMGixs",
+    "name": "Sigrid Vega",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2730a832c2f2fe3daadec658d73",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2730a832c2f2fe3daadec658d73",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e020a832c2f2fe3daadec658d73",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048510a832c2f2fe3daadec658d73",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5mK058CiyrTC9IJtBMGixs",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

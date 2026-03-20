@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6qxpnaukVayrQn6ViNvu9I_profile",
+  "fetchedAt": "2026-03-20T00:29:18.223Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.223Z",
+  "data": {
+    "id": "6qxpnaukVayrQn6ViNvu9I",
+    "name": "BigXthaPlug",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd6453796533f46670f34ceb8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd6453796533f46670f34ceb8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d6453796533f46670f34ceb8",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d6453796533f46670f34ceb8",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6qxpnaukVayrQn6ViNvu9I",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

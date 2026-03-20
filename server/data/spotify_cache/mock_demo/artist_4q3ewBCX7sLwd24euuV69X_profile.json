@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4q3ewBCX7sLwd24euuV69X_profile",
+  "fetchedAt": "2026-03-20T00:29:14.436Z",
+  "lastRefreshedAt": "2026-03-20T00:29:14.436Z",
+  "data": {
+    "id": "4q3ewBCX7sLwd24euuV69X",
+    "name": "Bad Bunny",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb81f47f44084e0a09b5f0fa13",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb81f47f44084e0a09b5f0fa13",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517481f47f44084e0a09b5f0fa13",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17881f47f44084e0a09b5f0fa13",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0lAWpj5szCSwM4rUMHYmrr_profile",
+  "fetchedAt": "2026-03-20T00:34:25.476Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.476Z",
+  "data": {
+    "id": "0lAWpj5szCSwM4rUMHYmrr",
+    "name": "Måneskin",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517446d0db8a86fda630ec12401f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17846d0db8a86fda630ec12401f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0lAWpj5szCSwM4rUMHYmrr",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

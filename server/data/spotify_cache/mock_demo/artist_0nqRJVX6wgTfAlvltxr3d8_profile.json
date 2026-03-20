@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0nqRJVX6wgTfAlvltxr3d8_profile",
+  "fetchedAt": "2026-03-20T00:29:21.490Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.490Z",
+  "data": {
+    "id": "0nqRJVX6wgTfAlvltxr3d8",
+    "name": "Adrien Anviér",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d8de2a7b039117b093304bbe",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d8de2a7b039117b093304bbe",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d8de2a7b039117b093304bbe",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d8de2a7b039117b093304bbe",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0nqRJVX6wgTfAlvltxr3d8",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6OjtkJDlAZzlzAydEn78cK_profile",
+  "fetchedAt": "2026-03-20T00:29:18.069Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.069Z",
+  "data": {
+    "id": "6OjtkJDlAZzlzAydEn78cK",
+    "name": "BKTHERULA",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb226c7cc474178456ec709615",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb226c7cc474178456ec709615",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174226c7cc474178456ec709615",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178226c7cc474178456ec709615",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6OjtkJDlAZzlzAydEn78cK",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

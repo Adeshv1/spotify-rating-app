@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_25uiPmTg16RbhZWAqwLBy5_profile",
+  "fetchedAt": "2026-03-20T00:29:25.006Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.006Z",
+  "data": {
+    "id": "25uiPmTg16RbhZWAqwLBy5",
+    "name": "Charli xcx",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebdaa727dd396963ba92dd6377",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebdaa727dd396963ba92dd6377",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174daa727dd396963ba92dd6377",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178daa727dd396963ba92dd6377",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/25uiPmTg16RbhZWAqwLBy5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

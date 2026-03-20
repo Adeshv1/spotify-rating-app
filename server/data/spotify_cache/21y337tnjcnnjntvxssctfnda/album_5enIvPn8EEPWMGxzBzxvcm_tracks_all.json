@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5enIvPn8EEPWMGxzBzxvcm_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:26.273Z",
+  "lastRefreshedAt": "2026-03-20T00:41:26.273Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0bxPRWprUVpQK0UFcddkrA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 238120,
+        "name": "Folded",
+        "disc_number": 1,
+        "id": "0bxPRWprUVpQK0UFcddkrA"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5enIvPn8EEPWMGxzBzxvcm"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4E2rKHVDssGJm2SCDOMMJB_profile",
+  "fetchedAt": "2026-03-20T00:29:18.745Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.745Z",
+  "data": {
+    "id": "4E2rKHVDssGJm2SCDOMMJB",
+    "name": "Doechii",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebca2fee52c41d3f58ceb6474b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebca2fee52c41d3f58ceb6474b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ca2fee52c41d3f58ceb6474b",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ca2fee52c41d3f58ceb6474b",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4E2rKHVDssGJm2SCDOMMJB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

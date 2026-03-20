@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5ndkK3dpZLKtBklKjxNQwT_profile",
+  "fetchedAt": "2026-03-20T00:29:24.626Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.626Z",
+  "data": {
+    "id": "5ndkK3dpZLKtBklKjxNQwT",
+    "name": "B.o.B",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc9a97fba42e640d955fedf46",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc9a97fba42e640d955fedf46",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174c9a97fba42e640d955fedf46",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178c9a97fba42e640d955fedf46",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5ndkK3dpZLKtBklKjxNQwT",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

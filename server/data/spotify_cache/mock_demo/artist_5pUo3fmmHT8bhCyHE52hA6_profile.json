@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5pUo3fmmHT8bhCyHE52hA6_profile",
+  "fetchedAt": "2026-03-20T00:34:23.998Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.998Z",
+  "data": {
+    "id": "5pUo3fmmHT8bhCyHE52hA6",
+    "name": "Liam Payne",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4b2a3fffa1076ea1c920dcb2",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb4b2a3fffa1076ea1c920dcb2",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051744b2a3fffa1076ea1c920dcb2",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1784b2a3fffa1076ea1c920dcb2",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5pUo3fmmHT8bhCyHE52hA6",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

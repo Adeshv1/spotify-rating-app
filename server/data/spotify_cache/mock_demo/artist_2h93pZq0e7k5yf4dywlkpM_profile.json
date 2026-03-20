@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2h93pZq0e7k5yf4dywlkpM_profile",
+  "fetchedAt": "2026-03-20T00:29:25.637Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.637Z",
+  "data": {
+    "id": "2h93pZq0e7k5yf4dywlkpM",
+    "name": "Frank Ocean",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ee3123e593174208f9754fab",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ee3123e593174208f9754fab",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

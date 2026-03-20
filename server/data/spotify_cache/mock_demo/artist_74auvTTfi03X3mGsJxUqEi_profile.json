@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_74auvTTfi03X3mGsJxUqEi_profile",
+  "fetchedAt": "2026-03-20T00:29:21.327Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.327Z",
+  "data": {
+    "id": "74auvTTfi03X3mGsJxUqEi",
+    "name": "Cole Neumann",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2737458ad75fde2286a026a435d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2737458ad75fde2286a026a435d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e027458ad75fde2286a026a435d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048517458ad75fde2286a026a435d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/74auvTTfi03X3mGsJxUqEi",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

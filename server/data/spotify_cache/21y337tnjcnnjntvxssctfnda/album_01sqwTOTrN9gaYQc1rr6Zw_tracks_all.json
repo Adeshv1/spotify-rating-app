@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_01sqwTOTrN9gaYQc1rr6Zw_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:22.316Z",
+  "lastRefreshedAt": "2026-03-20T00:41:22.316Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "RAYE",
+            "id": "5KKpBU5eC2tJDzf0wmlRp2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55lijDD6OAjLFFUHU9tcDm"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 196795,
+        "name": "WHERE IS MY HUSBAND!",
+        "disc_number": 1,
+        "id": "55lijDD6OAjLFFUHU9tcDm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "01sqwTOTrN9gaYQc1rr6Zw"
+  }
+}

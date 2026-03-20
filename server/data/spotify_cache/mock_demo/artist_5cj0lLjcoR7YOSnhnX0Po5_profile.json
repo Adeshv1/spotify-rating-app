@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5cj0lLjcoR7YOSnhnX0Po5_profile",
+  "fetchedAt": "2026-03-20T00:29:25.645Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.645Z",
+  "data": {
+    "id": "5cj0lLjcoR7YOSnhnX0Po5",
+    "name": "Doja Cat",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8a0644455ebfa7d3976f5101",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8a0644455ebfa7d3976f5101",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748a0644455ebfa7d3976f5101",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788a0644455ebfa7d3976f5101",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5cj0lLjcoR7YOSnhnX0Po5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

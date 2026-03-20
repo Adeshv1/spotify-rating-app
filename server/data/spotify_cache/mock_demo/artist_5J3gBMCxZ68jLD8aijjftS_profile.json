@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5J3gBMCxZ68jLD8aijjftS_profile",
+  "fetchedAt": "2026-03-20T00:34:22.883Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.883Z",
+  "data": {
+    "id": "5J3gBMCxZ68jLD8aijjftS",
+    "name": "Emile Cerise",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27332e6a5eacc68471b001b9de3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27332e6a5eacc68471b001b9de3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0232e6a5eacc68471b001b9de3",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485132e6a5eacc68471b001b9de3",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5J3gBMCxZ68jLD8aijjftS",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

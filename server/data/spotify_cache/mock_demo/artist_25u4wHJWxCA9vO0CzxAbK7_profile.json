@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_25u4wHJWxCA9vO0CzxAbK7_profile",
+  "fetchedAt": "2026-03-20T00:34:25.027Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.027Z",
+  "data": {
+    "id": "25u4wHJWxCA9vO0CzxAbK7",
+    "name": "Lukas Graham",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba74cfdcc8251c711227bb0e5",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba74cfdcc8251c711227bb0e5",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a74cfdcc8251c711227bb0e5",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a74cfdcc8251c711227bb0e5",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/25u4wHJWxCA9vO0CzxAbK7",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

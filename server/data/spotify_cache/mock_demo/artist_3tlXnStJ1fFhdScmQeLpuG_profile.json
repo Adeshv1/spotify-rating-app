@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3tlXnStJ1fFhdScmQeLpuG_profile",
+  "fetchedAt": "2026-03-20T00:29:17.082Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.082Z",
+  "data": {
+    "id": "3tlXnStJ1fFhdScmQeLpuG",
+    "name": "Brent Faiyaz",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb582fbf712f5b6a9bf65d9b84",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb582fbf712f5b6a9bf65d9b84",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174582fbf712f5b6a9bf65d9b84",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178582fbf712f5b6a9bf65d9b84",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3tlXnStJ1fFhdScmQeLpuG",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4VWpxQlVnMltoRKKVToSJM_profile",
+  "fetchedAt": "2026-03-20T00:29:22.877Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.877Z",
+  "data": {
+    "id": "4VWpxQlVnMltoRKKVToSJM",
+    "name": "Vincent Fanguro",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f9a20f8df83ac80f3b000657",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273f9a20f8df83ac80f3b000657",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02f9a20f8df83ac80f3b000657",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851f9a20f8df83ac80f3b000657",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4VWpxQlVnMltoRKKVToSJM",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

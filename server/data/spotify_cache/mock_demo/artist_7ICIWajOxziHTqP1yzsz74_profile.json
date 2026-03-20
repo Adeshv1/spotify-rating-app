@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7ICIWajOxziHTqP1yzsz74_profile",
+  "fetchedAt": "2026-03-20T00:29:23.757Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.757Z",
+  "data": {
+    "id": "7ICIWajOxziHTqP1yzsz74",
+    "name": "Patrick Buote",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736b341f41b776e5bd5e03b9ee",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736b341f41b776e5bd5e03b9ee",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026b341f41b776e5bd5e03b9ee",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516b341f41b776e5bd5e03b9ee",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7ICIWajOxziHTqP1yzsz74",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

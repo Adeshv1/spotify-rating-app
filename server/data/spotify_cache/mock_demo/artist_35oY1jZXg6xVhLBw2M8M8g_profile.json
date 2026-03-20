@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_35oY1jZXg6xVhLBw2M8M8g_profile",
+  "fetchedAt": "2026-03-20T00:29:21.692Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.692Z",
+  "data": {
+    "id": "35oY1jZXg6xVhLBw2M8M8g",
+    "name": "Gianni Domenici",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb35d18605b4ee65ec89dcd1e5",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb35d18605b4ee65ec89dcd1e5",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517435d18605b4ee65ec89dcd1e5",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17835d18605b4ee65ec89dcd1e5",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/35oY1jZXg6xVhLBw2M8M8g",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

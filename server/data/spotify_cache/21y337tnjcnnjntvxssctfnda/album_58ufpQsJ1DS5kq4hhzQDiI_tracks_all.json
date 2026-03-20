@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_58ufpQsJ1DS5kq4hhzQDiI_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.655Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.655Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3G5iN5QBqMeXx3uZPy8tgB"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 228720,
+        "name": "Young Girls",
+        "disc_number": 1,
+        "id": "3G5iN5QBqMeXx3uZPy8tgB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3w3y8KPTfNeOKPiqUTakBh"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 233478,
+        "name": "Locked out of Heaven",
+        "disc_number": 1,
+        "id": "3w3y8KPTfNeOKPiqUTakBh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ih2U8ttFzCjnQ5njF3SrR"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 244493,
+        "name": "Gorilla",
+        "disc_number": 1,
+        "id": "2ih2U8ttFzCjnQ5njF3SrR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55h7vJchibLdUkxdlX3fK7"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 178560,
+        "name": "Treasure",
+        "disc_number": 1,
+        "id": "55h7vJchibLdUkxdlX3fK7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/30raivfq7rSt5nKltiHfzG"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 228573,
+        "name": "Moonshine",
+        "disc_number": 1,
+        "id": "30raivfq7rSt5nKltiHfzG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nJW01T7XtvILxQgC5J7Wh"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 213826,
+        "name": "When I Was Your Man",
+        "disc_number": 1,
+        "id": "0nJW01T7XtvILxQgC5J7Wh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0inMKhbKWOTDA9UBUAKoU6"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 225026,
+        "name": "Natalie",
+        "disc_number": 1,
+        "id": "0inMKhbKWOTDA9UBUAKoU6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2tCPIp83mRXvVTytTAf1W4"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 207560,
+        "name": "Show Me",
+        "disc_number": 1,
+        "id": "2tCPIp83mRXvVTytTAf1W4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6FPQabaldvKE5cjqRfY9Os"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 203973,
+        "name": "Money Make Her Smile",
+        "disc_number": 1,
+        "id": "6FPQabaldvKE5cjqRfY9Os"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7lXOqE38eCr979gp27O5wr"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 132640,
+        "name": "If I Knew",
+        "disc_number": 1,
+        "id": "7lXOqE38eCr979gp27O5wr"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "58ufpQsJ1DS5kq4hhzQDiI"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4ggV0IaczfDFjVSwBM8yvi_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.944Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.944Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ella Langley",
+            "id": "6BRxQ8cD3eqnrVj6WKDok8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/65DbTqJKhbwqYbZ1Okr0rc"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 232226,
+        "name": "Choosin' Texas",
+        "disc_number": 1,
+        "id": "65DbTqJKhbwqYbZ1Okr0rc"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4ggV0IaczfDFjVSwBM8yvi"
+  }
+}

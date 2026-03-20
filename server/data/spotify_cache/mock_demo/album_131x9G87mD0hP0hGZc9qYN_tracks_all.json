@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_131x9G87mD0hP0hGZc9qYN_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.542Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.542Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3B4cjvGlPvyBLNG3AzEgkZ"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 153181,
+        "name": "E85",
+        "disc_number": 1,
+        "id": "3B4cjvGlPvyBLNG3AzEgkZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FlcmZ13DGRmscCroro9GO"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 155753,
+        "name": "Body",
+        "disc_number": 1,
+        "id": "0FlcmZ13DGRmscCroro9GO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "Yeat",
+            "id": "3qiHUAX7zY4Qnjx8TNUzVx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Ejyg4CavumEr7lFUkk9aF"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 146801,
+        "name": "Rendezvous (feat. Yeat)",
+        "disc_number": 1,
+        "id": "2Ejyg4CavumEr7lFUkk9aF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "Rema",
+            "id": "46pWGuE3dSwY3bMMXGBvVS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Z5KKoBGxpJo8YbDcGQXd5"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 226666,
+        "name": "Secondhand (feat. Rema)",
+        "disc_number": 1,
+        "id": "4Z5KKoBGxpJo8YbDcGQXd5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2GHKo6nrSjruvBEQbzD7Fw"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 138947,
+        "name": "Tiramisu",
+        "disc_number": 1,
+        "id": "2GHKo6nrSjruvBEQbzD7Fw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/03auLpFLdCv4HozP4pQseu"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 180705,
+        "name": "ATM",
+        "disc_number": 1,
+        "id": "03auLpFLdCv4HozP4pQseu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FMAKUsgIBszj75WEENYDO"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 99555,
+        "name": "Long Way To Calabasas",
+        "disc_number": 1,
+        "id": "0FMAKUsgIBszj75WEENYDO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4FUQtedaG22FWZ6lGyRApm"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 194594,
+        "name": "Rosary (feat. Travis Scott)",
+        "disc_number": 1,
+        "id": "4FUQtedaG22FWZ6lGyRApm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "Teezo Touchdown",
+            "id": "0fGcIStdT1OpFFhOC7Wp36"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Hb28pse82bhnmW9sjTahL"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 200474,
+        "name": "All The Signs (feat. Teezo Touchdown)",
+        "disc_number": 1,
+        "id": "3Hb28pse82bhnmW9sjTahL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16yVaWo0Gmvs2wlnmJbcH7"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 123840,
+        "name": "Call Back",
+        "disc_number": 1,
+        "id": "16yVaWo0Gmvs2wlnmJbcH7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3kw29NreyBGyArNmYARr63"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 169090,
+        "name": "Tuition",
+        "disc_number": 1,
+        "id": "3kw29NreyBGyArNmYARr63"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "SahBabii",
+            "id": "7GuUYiGZOzQwq4L6gAfy1T"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0gl5Yt7KlvwIb8LmPHmBTc"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 154285,
+        "name": "K9 (feat. SahBabii)",
+        "disc_number": 1,
+        "id": "0gl5Yt7KlvwIb8LmPHmBTc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2A5cwtDZpk7RvsPolrF4UL"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 211106,
+        "name": "Excavator",
+        "disc_number": 1,
+        "id": "2A5cwtDZpk7RvsPolrF4UL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6d9Cs2D2RSIl9c0ulgnFe8"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 121690,
+        "name": "Gemstone",
+        "disc_number": 1,
+        "id": "6d9Cs2D2RSIl9c0ulgnFe8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Y1ZpXS4HETFHDdBNfNU0I"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 157500,
+        "name": "OPPOSITE",
+        "disc_number": 1,
+        "id": "3Y1ZpXS4HETFHDdBNfNU0I"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/588gFLoYJdlQ9zLSuR3IpJ"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 180000,
+        "name": "TMU",
+        "disc_number": 1,
+        "id": "588gFLoYJdlQ9zLSuR3IpJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19cgfclwwxsGGwaEbOn0B2"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 177464,
+        "name": "Pleasure’s Mine",
+        "disc_number": 1,
+        "id": "19cgfclwwxsGGwaEbOn0B2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xEDRg4tI8ixoAvbrupsEg"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 200952,
+        "name": "Sweet Home",
+        "disc_number": 1,
+        "id": "5xEDRg4tI8ixoAvbrupsEg"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "131x9G87mD0hP0hGZc9qYN"
+  }
+}

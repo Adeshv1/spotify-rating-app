@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_2yNNYQBChuox9A5Ka93BIn_profile",
+  "fetchedAt": "2026-03-20T00:34:26.584Z",
+  "lastRefreshedAt": "2026-03-20T00:34:26.584Z",
+  "data": {
+    "id": "2yNNYQBChuox9A5Ka93BIn",
+    "name": "HUNTR/X",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736c1334650ced0e28f0b2e13f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736c1334650ced0e28f0b2e13f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026c1334650ced0e28f0b2e13f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048514dcb6c5df15cf74596ab25a4",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2yNNYQBChuox9A5Ka93BIn",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

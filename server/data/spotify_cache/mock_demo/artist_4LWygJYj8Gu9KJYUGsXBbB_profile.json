@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4LWygJYj8Gu9KJYUGsXBbB_profile",
+  "fetchedAt": "2026-03-20T00:29:21.112Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.112Z",
+  "data": {
+    "id": "4LWygJYj8Gu9KJYUGsXBbB",
+    "name": "Lester Dann",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273277361f20c9c3398cb80f20a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273277361f20c9c3398cb80f20a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02277361f20c9c3398cb80f20a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851277361f20c9c3398cb80f20a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4LWygJYj8Gu9KJYUGsXBbB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3XabrLwWwxIntz6A6X9naj_profile",
+  "fetchedAt": "2026-03-20T00:34:23.121Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.121Z",
+  "data": {
+    "id": "3XabrLwWwxIntz6A6X9naj",
+    "name": "Mark Lieder",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d377e2e56201f627bc928988",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d377e2e56201f627bc928988",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02daaf5159ac4fb31eae98ec84",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d377e2e56201f627bc928988",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3XabrLwWwxIntz6A6X9naj",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

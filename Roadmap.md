@@ -122,3 +122,8 @@
 + Demo mode: on owner login, force-cache full track payloads for all 5 demo playlists into backend storage and update the demo manifest (implemented 2026-03-19)
 + Playlists/UI: always attempt backend track fetch on first playlist open instead of blocking non-owned playlists behind a frontend ownership check, so demo/shared playlists can load immediately (implemented 2026-03-19)
 + Demo mode/UI: replace mock-user playlist updated/next-update timing with a fixed note that the demo playlists were made on March 17, 2026 (implemented 2026-03-19)
++ Playlists/UI: simplify playlist detail headers by removing cache metadata and showing the playlist track count beside the playlist name instead (implemented 2026-03-19)
++ Demo mode: on owner login, cache artist profile/image records for every unique artist across the 5 demo playlists (implemented 2026-03-19)
++ Demo mode: reuse existing backend playlist-track cache on owner login and only refetch a demo playlist from Spotify when its cached payload is missing or incomplete (implemented 2026-03-19)
++ Demo mode: on owner login, cache full album tracklists for every unique album referenced by the 5 demo playlists and only refetch albums whose backend cache is missing or incomplete (implemented 2026-03-20)
++ Demo mode: stop owner-login demo seeding immediately on Spotify `Retry-After` and persist a cooldown so later logins do not resume until the backoff window expires (implemented 2026-03-20)

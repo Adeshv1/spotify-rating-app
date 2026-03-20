@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_20B8Ga2HfEUNJBAbZsJU2c_profile",
+  "fetchedAt": "2026-03-20T00:29:17.689Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.689Z",
+  "data": {
+    "id": "20B8Ga2HfEUNJBAbZsJU2c",
+    "name": "Trap Dickey",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb10e42e2eb1e887a8944d6dda",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb10e42e2eb1e887a8944d6dda",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517410e42e2eb1e887a8944d6dda",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17810e42e2eb1e887a8944d6dda",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/20B8Ga2HfEUNJBAbZsJU2c",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

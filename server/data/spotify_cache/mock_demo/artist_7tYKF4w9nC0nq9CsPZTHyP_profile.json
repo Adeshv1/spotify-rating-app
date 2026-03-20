@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7tYKF4w9nC0nq9CsPZTHyP_profile",
+  "fetchedAt": "2026-03-20T00:29:16.667Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.667Z",
+  "data": {
+    "id": "7tYKF4w9nC0nq9CsPZTHyP",
+    "name": "SZA",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebfd0a9fb6c252a3ba44079acf",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebfd0a9fb6c252a3ba44079acf",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174fd0a9fb6c252a3ba44079acf",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178fd0a9fb6c252a3ba44079acf",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

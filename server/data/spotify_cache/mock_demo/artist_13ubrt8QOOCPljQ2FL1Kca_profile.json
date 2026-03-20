@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_13ubrt8QOOCPljQ2FL1Kca_profile",
+  "fetchedAt": "2026-03-20T00:29:17.359Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.359Z",
+  "data": {
+    "id": "13ubrt8QOOCPljQ2FL1Kca",
+    "name": "A$AP Rocky",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebad160b333f9a240f84aff7d7",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebad160b333f9a240f84aff7d7",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ad160b333f9a240f84aff7d7",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0VRj0yCOv2FXJNP47XQnx5_profile",
+  "fetchedAt": "2026-03-20T00:29:26.189Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.189Z",
+  "data": {
+    "id": "0VRj0yCOv2FXJNP47XQnx5",
+    "name": "Quavo",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd52229f479361a2375f6021c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebd52229f479361a2375f6021c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174d52229f479361a2375f6021c",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178d52229f479361a2375f6021c",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0VRj0yCOv2FXJNP47XQnx5",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

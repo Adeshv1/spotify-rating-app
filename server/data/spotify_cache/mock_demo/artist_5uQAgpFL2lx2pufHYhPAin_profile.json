@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5uQAgpFL2lx2pufHYhPAin_profile",
+  "fetchedAt": "2026-03-20T00:29:22.209Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.209Z",
+  "data": {
+    "id": "5uQAgpFL2lx2pufHYhPAin",
+    "name": "Allysium",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb66c7abf3cf9896370ec84d17",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb66c7abf3cf9896370ec84d17",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517466c7abf3cf9896370ec84d17",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17866c7abf3cf9896370ec84d17",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5uQAgpFL2lx2pufHYhPAin",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

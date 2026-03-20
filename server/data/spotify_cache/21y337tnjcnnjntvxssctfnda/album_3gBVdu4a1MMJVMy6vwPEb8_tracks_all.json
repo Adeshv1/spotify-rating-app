@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3gBVdu4a1MMJVMy6vwPEb8_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.031Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.031Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5KZ0qobWEFl892YjIC02SE"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 208666,
+        "name": "You",
+        "disc_number": 1,
+        "id": "5KZ0qobWEFl892YjIC02SE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 238640,
+        "name": "Creep",
+        "disc_number": 1,
+        "id": "70LcF31zb1H0PyJoS1Sx1r"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5qsgK2wcodYCEbgbdCpYOG"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 132173,
+        "name": "How Do You?",
+        "disc_number": 1,
+        "id": "5qsgK2wcodYCEbgbdCpYOG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3CbAW3GjkBKfErt4LLbSzr"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 325626,
+        "name": "Stop Whispering",
+        "disc_number": 1,
+        "id": "3CbAW3GjkBKfErt4LLbSzr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/46tfxn5lP7Qsbz7NHsj9iu"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 161533,
+        "name": "Thinking About You",
+        "disc_number": 1,
+        "id": "46tfxn5lP7Qsbz7NHsj9iu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23oUaizFBFVFI5PxJrkiO5"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 217800,
+        "name": "Anyone Can Play Guitar",
+        "disc_number": 1,
+        "id": "23oUaizFBFVFI5PxJrkiO5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2wOvYLilnDJfuPXGHGFAWZ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 189733,
+        "name": "Ripcord",
+        "disc_number": 1,
+        "id": "2wOvYLilnDJfuPXGHGFAWZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6HbWoyinLdXPZmk6xONuKw"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 192666,
+        "name": "Vegetable",
+        "disc_number": 1,
+        "id": "6HbWoyinLdXPZmk6xONuKw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0GDuL9TCO41PgsrKWBSGlm"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 145373,
+        "name": "Prove Yourself",
+        "disc_number": 1,
+        "id": "0GDuL9TCO41PgsrKWBSGlm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/13nQ70PnhDnTkYqCmdg3sy"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 253093,
+        "name": "I Can't",
+        "disc_number": 1,
+        "id": "13nQ70PnhDnTkYqCmdg3sy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/30C1FoJzEhNUILsxghioGz"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 187866,
+        "name": "Lurgee",
+        "disc_number": 1,
+        "id": "30C1FoJzEhNUILsxghioGz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Radiohead",
+            "id": "4Z8W4fKeB5YxbusRsdQVPb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XpcTQlNnfIQbiWE4hvYo7"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 282066,
+        "name": "Blow Out",
+        "disc_number": 1,
+        "id": "5XpcTQlNnfIQbiWE4hvYo7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "3gBVdu4a1MMJVMy6vwPEb8"
+  }
+}

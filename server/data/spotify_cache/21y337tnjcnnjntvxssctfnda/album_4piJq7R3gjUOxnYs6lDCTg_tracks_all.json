@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4piJq7R3gjUOxnYs6lDCTg_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:25.279Z",
+  "lastRefreshedAt": "2026-03-20T00:41:25.279Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/60eVCXFCuw1WYswBuNZc4H"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 243933,
+        "name": "Jenny Was A Friend Of Mine",
+        "disc_number": 1,
+        "id": "60eVCXFCuw1WYswBuNZc4H"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 222973,
+        "name": "Mr. Brightside",
+        "disc_number": 1,
+        "id": "003vvx7Niy0yvhvHt4a68B"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3KANrKOFYyAxfjQJHkgBdb"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 234106,
+        "name": "Smile Like You Mean It",
+        "disc_number": 1,
+        "id": "3KANrKOFYyAxfjQJHkgBdb"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6PwjJ58I4t7Mae9xfZ9l9v"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 197200,
+        "name": "Somebody Told Me",
+        "disc_number": 1,
+        "id": "6PwjJ58I4t7Mae9xfZ9l9v"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vollujufHY0jMZxx77VWr"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 301866,
+        "name": "All These Things That I've Done",
+        "disc_number": 1,
+        "id": "5vollujufHY0jMZxx77VWr"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6BnY0YochAURSXSR3d5N7O"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 194080,
+        "name": "Andy, You're A Star",
+        "disc_number": 1,
+        "id": "6BnY0YochAURSXSR3d5N7O"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3OMw6qj95yhfeqBIdL0c1g"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 258933,
+        "name": "On Top",
+        "disc_number": 1,
+        "id": "3OMw6qj95yhfeqBIdL0c1g"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2N7TN76tLuTcdn9UlS8ADT"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 192000,
+        "name": "Change Your Mind",
+        "disc_number": 1,
+        "id": "2N7TN76tLuTcdn9UlS8ADT"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7gS9H5JtkJZgUZBq5mWY4P"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 305013,
+        "name": "Believe Me Natalie",
+        "disc_number": 1,
+        "id": "7gS9H5JtkJZgUZBq5mWY4P"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4gAhDQjQT9rReQk5NoaiED"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 243293,
+        "name": "Midnight Show",
+        "disc_number": 1,
+        "id": "4gAhDQjQT9rReQk5NoaiED"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3nFhiJReGYBDoqArWW3p5e"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 344906,
+        "name": "Everything Will Be Alright",
+        "disc_number": 1,
+        "id": "3nFhiJReGYBDoqArWW3p5e"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Killers",
+            "id": "0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0751ozQYIiLVQ9FRFhe55j"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 254653,
+        "name": "Glamorous Indie Rock & Roll",
+        "disc_number": 1,
+        "id": "0751ozQYIiLVQ9FRFhe55j"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "4piJq7R3gjUOxnYs6lDCTg"
+  }
+}

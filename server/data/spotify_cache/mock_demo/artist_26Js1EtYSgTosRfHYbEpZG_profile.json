@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_26Js1EtYSgTosRfHYbEpZG_profile",
+  "fetchedAt": "2026-03-20T00:29:21.486Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.486Z",
+  "data": {
+    "id": "26Js1EtYSgTosRfHYbEpZG",
+    "name": "Lara Di Umbra",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb21a2a4ea50e44e2c49e0f159",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb21a2a4ea50e44e2c49e0f159",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517421a2a4ea50e44e2c49e0f159",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17821a2a4ea50e44e2c49e0f159",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/26Js1EtYSgTosRfHYbEpZG",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

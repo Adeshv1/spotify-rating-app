@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_64KEffDW9EtZ1y2vBYgq8T_profile",
+  "fetchedAt": "2026-03-20T00:29:19.657Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.657Z",
+  "data": {
+    "id": "64KEffDW9EtZ1y2vBYgq8T",
+    "name": "Marshmello",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb646c8a9d78f11834febcf978",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb646c8a9d78f11834febcf978",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174646c8a9d78f11834febcf978",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178646c8a9d78f11834febcf978",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/64KEffDW9EtZ1y2vBYgq8T",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

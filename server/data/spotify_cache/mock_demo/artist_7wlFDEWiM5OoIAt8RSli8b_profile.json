@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7wlFDEWiM5OoIAt8RSli8b_profile",
+  "fetchedAt": "2026-03-20T00:29:17.835Z",
+  "lastRefreshedAt": "2026-03-20T00:29:17.835Z",
+  "data": {
+    "id": "7wlFDEWiM5OoIAt8RSli8b",
+    "name": "YoungBoy Never Broke Again",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb776e469c846c205685141317",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb776e469c846c205685141317",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174776e469c846c205685141317",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178776e469c846c205685141317",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7wlFDEWiM5OoIAt8RSli8b",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

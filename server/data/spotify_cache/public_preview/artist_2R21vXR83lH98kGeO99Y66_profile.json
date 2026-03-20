@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_2R21vXR83lH98kGeO99Y66_profile",
+  "fetchedAt": "2026-03-20T00:34:27.483Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.483Z",
+  "data": {
+    "id": "2R21vXR83lH98kGeO99Y66",
+    "name": "Anuel AA",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba23ceb177745632b517cb7b2",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba23ceb177745632b517cb7b2",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a23ceb177745632b517cb7b2",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a23ceb177745632b517cb7b2",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2R21vXR83lH98kGeO99Y66",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

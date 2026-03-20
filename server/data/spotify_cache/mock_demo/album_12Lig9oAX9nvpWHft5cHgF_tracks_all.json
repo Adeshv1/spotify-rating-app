@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_12Lig9oAX9nvpWHft5cHgF_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:20.413Z",
+  "lastRefreshedAt": "2026-03-20T00:41:20.413Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Anitta",
+            "id": "7FNnA9vBm6EKceENgCGRMb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RxyxKUWxP3jJjfRd5ozr6"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 149787,
+        "name": "Illegal + Anitta",
+        "disc_number": 1,
+        "id": "3RxyxKUWxP3jJjfRd5ozr6"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "SEVENTEEN",
+            "id": "7nqOGRxlXj7N2JYbgNEjYH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2c6uK2BQ9ccN9KOgQPfrop"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 167403,
+        "name": "Illegal + SEVENTEEN",
+        "disc_number": 1,
+        "id": "2c6uK2BQ9ccN9KOgQPfrop"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Oklou",
+            "id": "6fFcUOFcbjeIuEomuUthkw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5FuHvT4gCAx3DS1USi8jBm"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 162352,
+        "name": "Girl Like Me + Oklou",
+        "disc_number": 1,
+        "id": "5FuHvT4gCAx3DS1USi8jBm"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "JADE",
+            "id": "24b0qNYNgeOfpP5rbljIB3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1gcSjWz47sNWKws2uk5Wry"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 178217,
+        "name": "Tonight + JADE",
+        "disc_number": 1,
+        "id": "1gcSjWz47sNWKws2uk5Wry"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Yves",
+            "id": "6AkddQqEu75QRbsCo12zce"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52vFAalJWVolzGZXmjtPIz"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 141793,
+        "name": "Stars + Yves",
+        "disc_number": 1,
+        "id": "52vFAalJWVolzGZXmjtPIz"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "JT",
+            "id": "39af15p0feaAOdL9DTRj3m"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/36e4mRTGXQL283nBFSA9Tv"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 127830,
+        "name": "Noises + JT",
+        "disc_number": 1,
+        "id": "36e4mRTGXQL283nBFSA9Tv"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Sugababes",
+            "id": "7rZNSLWMjTbwdLNskFbzFf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TAWeqgZgiXfgsarKOeTVE"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 169481,
+        "name": "Nice to Know You + Sugababes",
+        "disc_number": 1,
+        "id": "0TAWeqgZgiXfgsarKOeTVE"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Kylie Minogue",
+            "id": "4RVnAU35WRWra6OZ3CbbMA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0S9qRfGYOwnpbegV72h4GY"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 168599,
+        "name": "Stateside + Kylie Minogue",
+        "disc_number": 1,
+        "id": "0S9qRfGYOwnpbegV72h4GY"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Bladee",
+            "id": "2xvtxDNInKDV4AvGmjw6d1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6EUjksHprxyLw7dbNZtACA"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 148842,
+        "name": "Stateside + Bladee",
+        "disc_number": 1,
+        "id": "6EUjksHprxyLw7dbNZtACA"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Zara Larsson",
+            "id": "1Xylc3o4UrD53lo9CvFvVg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1DwscornXpj8fmOmYVlqZt"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 184761,
+        "name": "Stateside + Zara Larsson",
+        "disc_number": 1,
+        "id": "1DwscornXpj8fmOmYVlqZt"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5kXkNj56XlSPdHVj5RW5O9"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 132925,
+        "name": "Romeo + Ravyn Lenae",
+        "disc_number": 1,
+        "id": "5kXkNj56XlSPdHVj5RW5O9"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Rachel Chinouriri",
+            "id": "4wrzxtBZw20ufDstKyTnnP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1RXvponMOTq9sp8sKKXp7H"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 166514,
+        "name": "Romeo + Rachel Chinouriri",
+        "disc_number": 1,
+        "id": "1RXvponMOTq9sp8sKKXp7H"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Nia Archives",
+            "id": "7BMR0fwtEvzGtK4rNGdoiQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2zQcdOGeYT4WDrM6EDUVNb"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 160500,
+        "name": "Illegal + Nia Archives",
+        "disc_number": 2,
+        "id": "2zQcdOGeYT4WDrM6EDUVNb"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "KAYTRANADA",
+            "id": "6qgnBH6iDM91ipVXv28OMu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76AtpWLCarPl4okCl8XCwS"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 293308,
+        "name": "Girl Like Me + Kaytranada",
+        "disc_number": 2,
+        "id": "76AtpWLCarPl4okCl8XCwS"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Basement Jaxx",
+            "id": "4YrKBkKSVeqDamzBPWVnSJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4JUfQp7w1316PPLYRqfuvc"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 299999,
+        "name": "Tonight + Basement Jaxx",
+        "disc_number": 2,
+        "id": "4JUfQp7w1316PPLYRqfuvc"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Joe Goddard",
+            "id": "380fnmlGnkyueBMqGWx2k5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1YAWdF1zwbNb9BANOnqs7N"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 259122,
+        "name": "Tonight + Joe Goddard",
+        "disc_number": 2,
+        "id": "1YAWdF1zwbNb9BANOnqs7N"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "DJ Caio Prince",
+            "id": "5QihhtcyXmUesNqhRRaoaM"
+          },
+          {
+            "name": "Adame DJ",
+            "id": "7lOdAZzqR1Ju4bhq1kZUvy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42vnMLzLaaTmHE2wiHS8ta"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 167000,
+        "name": "Stars + DJ Caio Prince + Adame DJ",
+        "disc_number": 2,
+        "id": "42vnMLzLaaTmHE2wiHS8ta"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Mochakk",
+            "id": "0rTh1tAdrEbdKZBTiiAQSo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HJXM2QwgNVWRABiBn9rk9"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 391578,
+        "name": "Noises + Mochakk",
+        "disc_number": 2,
+        "id": "5HJXM2QwgNVWRABiBn9rk9"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Loukeman",
+            "id": "10JL2s5aUztzFyURrFrxtL"
+          },
+          {
+            "name": "Leod",
+            "id": "60s9PC0pLdn1j1fz6PjUT1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3vjtaquzUvt6mafYynWXd5"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 202065,
+        "name": "Nice to Know You + Loukeman + Leod",
+        "disc_number": 2,
+        "id": "3vjtaquzUvt6mafYynWXd5"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Sega Bodega",
+            "id": "1ZvF4Sgnre3Rk2CpiNy077"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7b2QNwTvP4QDP1MBn887AW"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 146379,
+        "name": "Nice to Know You + Sega Bodega",
+        "disc_number": 2,
+        "id": "7b2QNwTvP4QDP1MBn887AW"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "Groove Armada",
+            "id": "67tgMwUfnmqzYsNAtnP6YJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4DiAfRBbQ1NWIk1P1hacP7"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 294377,
+        "name": "Stateside + Groove Armada",
+        "disc_number": 2,
+        "id": "4DiAfRBbQ1NWIk1P1hacP7"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          },
+          {
+            "name": "KILIMANJARO",
+            "id": "4QGD0m9AGZixhuPAzaBeD7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6pRQZ4LOpKH5LeIxxg714p"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 183699,
+        "name": "Romeo + KILIMANJARO",
+        "disc_number": 2,
+        "id": "6pRQZ4LOpKH5LeIxxg714p"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ga6EhtysStSArBJlHwd5u"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 149666,
+        "name": "Illegal",
+        "disc_number": 3,
+        "id": "4ga6EhtysStSArBJlHwd5u"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1zDr6GmmtVruXfipUybKTf"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 144800,
+        "name": "Girl Like Me",
+        "disc_number": 3,
+        "id": "1zDr6GmmtVruXfipUybKTf"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7k1v3QKSfFJSxJcpIjZI59"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 174880,
+        "name": "Tonight",
+        "disc_number": 3,
+        "id": "7k1v3QKSfFJSxJcpIjZI59"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XNvUgy3lzW6Jrr11wuVYe"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 141866,
+        "name": "Stars",
+        "disc_number": 3,
+        "id": "5XNvUgy3lzW6Jrr11wuVYe"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/48FDcWUooZLn5vrrNmXiqV"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 24360,
+        "name": "Intermission",
+        "disc_number": 3,
+        "id": "48FDcWUooZLn5vrrNmXiqV"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LkH0smFkh3WKPiDmoFUKU"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 104813,
+        "name": "Noises",
+        "disc_number": 3,
+        "id": "1LkH0smFkh3WKPiDmoFUKU"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3aE3zfT5H2VXsmdmHlJRjc"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 170466,
+        "name": "Nice to Know You",
+        "disc_number": 3,
+        "id": "3aE3zfT5H2VXsmdmHlJRjc"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5rVhh5aM1xyVe6JUXPTte3"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 168040,
+        "name": "Stateside",
+        "disc_number": 3,
+        "id": "5rVhh5aM1xyVe6JUXPTte3"
+      },
+      {
+        "artists": [
+          {
+            "name": "PinkPantheress",
+            "id": "78rUTD7y6Cy67W1RVzYs7t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4W5GsXlEe24s68AEh8HWYu"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 154213,
+        "name": "Romeo",
+        "disc_number": 3,
+        "id": "4W5GsXlEe24s68AEh8HWYu"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 31,
+    "albumId": "12Lig9oAX9nvpWHft5cHgF"
+  }
+}

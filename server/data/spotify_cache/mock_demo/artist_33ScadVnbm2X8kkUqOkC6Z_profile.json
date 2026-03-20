@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_33ScadVnbm2X8kkUqOkC6Z_profile",
+  "fetchedAt": "2026-03-20T00:29:25.918Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.918Z",
+  "data": {
+    "id": "33ScadVnbm2X8kkUqOkC6Z",
+    "name": "Don Omar",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc9154bd840cd45e769c4e480",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc9154bd840cd45e769c4e480",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174c9154bd840cd45e769c4e480",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178c9154bd840cd45e769c4e480",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/33ScadVnbm2X8kkUqOkC6Z",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

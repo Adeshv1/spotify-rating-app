@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1qGVG7uUHFWBfuUXIon1gt_profile",
+  "fetchedAt": "2026-03-20T00:29:23.522Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.522Z",
+  "data": {
+    "id": "1qGVG7uUHFWBfuUXIon1gt",
+    "name": "Logan Jameison",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bc531e2c6fc92dd9fbad2af3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273bc531e2c6fc92dd9fbad2af3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02b2fb39e2c89b29e8c6b4dd2e",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851bc531e2c6fc92dd9fbad2af3",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1qGVG7uUHFWBfuUXIon1gt",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

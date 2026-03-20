@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4AK6F7OLvEQ5QYCBNiQWHq_profile",
+  "fetchedAt": "2026-03-20T00:29:24.853Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.853Z",
+  "data": {
+    "id": "4AK6F7OLvEQ5QYCBNiQWHq",
+    "name": "One Direction",
+    "imageUrl": "https://i.scdn.co/image/5bb443424a1ad71603c43d67f5af1a04da6bb3c8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/5bb443424a1ad71603c43d67f5af1a04da6bb3c8",
+        "height": 1000,
+        "width": 1000
+      },
+      {
+        "url": "https://i.scdn.co/image/289c7f686f5b78ceeb224453cf9a15697a678a79",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/45741ba38b51130bb96e00c0e24d17ba311a9293",
+        "height": 200,
+        "width": 200
+      },
+      {
+        "url": "https://i.scdn.co/image/6c89c662ad0ab75bc2af9a3ae2b16f811daced50",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4AK6F7OLvEQ5QYCBNiQWHq",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

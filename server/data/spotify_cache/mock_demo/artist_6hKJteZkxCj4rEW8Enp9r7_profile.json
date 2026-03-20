@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6hKJteZkxCj4rEW8Enp9r7_profile",
+  "fetchedAt": "2026-03-20T00:34:23.125Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.125Z",
+  "data": {
+    "id": "6hKJteZkxCj4rEW8Enp9r7",
+    "name": "Una Luna",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273abcf95af120c9b275e161fc9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273abcf95af120c9b275e161fc9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02abcf95af120c9b275e161fc9",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851abcf95af120c9b275e161fc9",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6hKJteZkxCj4rEW8Enp9r7",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

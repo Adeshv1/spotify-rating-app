@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1SupJlEpv7RS2tPNRaHViT_profile",
+  "fetchedAt": "2026-03-20T00:34:25.838Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.838Z",
+  "data": {
+    "id": "1SupJlEpv7RS2tPNRaHViT",
+    "name": "Nicky Jam",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb6705b864a7254d1572039b3d",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb6705b864a7254d1572039b3d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051746705b864a7254d1572039b3d",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1786705b864a7254d1572039b3d",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1SupJlEpv7RS2tPNRaHViT",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

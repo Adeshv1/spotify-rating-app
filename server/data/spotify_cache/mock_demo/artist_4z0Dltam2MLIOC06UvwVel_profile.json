@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4z0Dltam2MLIOC06UvwVel_profile",
+  "fetchedAt": "2026-03-20T00:34:22.900Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.900Z",
+  "data": {
+    "id": "4z0Dltam2MLIOC06UvwVel",
+    "name": "Glenn Natale",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5fdca9e8dbd9fa23af93f967",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb5fdca9e8dbd9fa23af93f967",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051745fdca9e8dbd9fa23af93f967",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1785fdca9e8dbd9fa23af93f967",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4z0Dltam2MLIOC06UvwVel",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

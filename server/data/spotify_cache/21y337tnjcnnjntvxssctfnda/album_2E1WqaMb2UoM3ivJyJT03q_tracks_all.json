@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2E1WqaMb2UoM3ivJyJT03q_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:28.950Z",
+  "lastRefreshedAt": "2026-03-20T00:41:28.950Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Noah Kahan",
+            "id": "2RQXRUsr4IW1f3mKyKsy4B"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0AV4GhGeGCVJphsMTxDWdE"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 262726,
+        "name": "Porch Light",
+        "disc_number": 1,
+        "id": "0AV4GhGeGCVJphsMTxDWdE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2E1WqaMb2UoM3ivJyJT03q"
+  }
+}

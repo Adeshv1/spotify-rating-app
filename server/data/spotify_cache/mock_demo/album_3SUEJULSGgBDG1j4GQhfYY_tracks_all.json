@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3SUEJULSGgBDG1j4GQhfYY_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.193Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.193Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dp0MRcrgCxEESP1LrF2yA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 140760,
+        "name": "Sexo, Violencia y Llantas",
+        "disc_number": 1,
+        "id": "1dp0MRcrgCxEESP1LrF2yA"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ORvXsPK9AJmDzm36BYcdy"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 230240,
+        "name": "Reliquia",
+        "disc_number": 1,
+        "id": "4ORvXsPK9AJmDzm36BYcdy"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2JH26hQtnqWUNnQET8o2N1"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 243240,
+        "name": "Divinize",
+        "disc_number": 1,
+        "id": "2JH26hQtnqWUNnQET8o2N1"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          },
+          {
+            "name": "Dougie F",
+            "id": "4pBG47zWhJbDw7mpsg68PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3hETtcSLmNncBjPMLHtVZs"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 248093,
+        "name": "Porcelana",
+        "disc_number": 1,
+        "id": "3hETtcSLmNncBjPMLHtVZs"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0hVZnH3f3xmudcfCFLdw1V"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 269680,
+        "name": "Mio Cristo Piange Diamanti",
+        "disc_number": 1,
+        "id": "0hVZnH3f3xmudcfCFLdw1V"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          },
+          {
+            "name": "Björk",
+            "id": "7w29UYBi0qsHi5RTcv3lmA"
+          },
+          {
+            "name": "Yves Tumor",
+            "id": "0qu422H5MOoQxGjd4IzHbS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2T8yuUKl1nhmtaIocqWo4i"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 178853,
+        "name": "Berghain",
+        "disc_number": 1,
+        "id": "2T8yuUKl1nhmtaIocqWo4i"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          },
+          {
+            "name": "Yahritza Y Su Esencia",
+            "id": "51ZSh80McCt7vbqHouzW0A"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4oVO4fGNRRvEn0CRuFO4qv"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 195546,
+        "name": "La Perla",
+        "disc_number": 1,
+        "id": "4oVO4fGNRRvEn0CRuFO4qv"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LFM6gtGwcTe8CXX6y1IK2"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 140373,
+        "name": "Mundo Nuevo",
+        "disc_number": 1,
+        "id": "1LFM6gtGwcTe8CXX6y1IK2"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3h64Lbm3TXMBSByfnRQyZE"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 104400,
+        "name": "De Madrugá",
+        "disc_number": 1,
+        "id": "3h64Lbm3TXMBSByfnRQyZE"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6FdOGTRYvLCJ79d55YtGgZ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 130506,
+        "name": "Dios Es Un Stalker",
+        "disc_number": 1,
+        "id": "6FdOGTRYvLCJ79d55YtGgZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7JKpS5rKsKWeVPZ0ojBqv9"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 258613,
+        "name": "La Yugular",
+        "disc_number": 1,
+        "id": "7JKpS5rKsKWeVPZ0ojBqv9"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/10uxlzuPGekUTay2ZpZ4pR"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 162533,
+        "name": "Sauvignon Blanc",
+        "disc_number": 1,
+        "id": "10uxlzuPGekUTay2ZpZ4pR"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          },
+          {
+            "name": "Estrella Morente",
+            "id": "5gKJbL392PiokTPUoL7N6D"
+          },
+          {
+            "name": "Sílvia Pérez Cruz",
+            "id": "7qJXYbBDibZ1Zixi89aUnw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7o76sIawH9bRWsltcWfQfd"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 251986,
+        "name": "La Rumba Del Perdón",
+        "disc_number": 1,
+        "id": "7o76sIawH9bRWsltcWfQfd"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          },
+          {
+            "name": "Carminho",
+            "id": "6I1r8xKn6bCeionvZVdzdR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ukpy7Q6QmrB7ttNMSAcG2"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 225400,
+        "name": "Memória",
+        "disc_number": 1,
+        "id": "4ukpy7Q6QmrB7ttNMSAcG2"
+      },
+      {
+        "artists": [
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GF92haKwJg9WUdnkTxRtr"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 194813,
+        "name": "Magnolias",
+        "disc_number": 1,
+        "id": "7GF92haKwJg9WUdnkTxRtr"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "3SUEJULSGgBDG1j4GQhfYY"
+  }
+}

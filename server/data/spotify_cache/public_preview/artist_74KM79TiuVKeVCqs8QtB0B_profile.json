@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_74KM79TiuVKeVCqs8QtB0B_profile",
+  "fetchedAt": "2026-03-20T00:34:27.089Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.089Z",
+  "data": {
+    "id": "74KM79TiuVKeVCqs8QtB0B",
+    "name": "Sabrina Carpenter",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb78e45cfa4697ce3c437cb455",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb78e45cfa4697ce3c437cb455",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517478e45cfa4697ce3c437cb455",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17878e45cfa4697ce3c437cb455",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

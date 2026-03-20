@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2LKW0m9cC63QzEI9tJH3ql_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.366Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.366Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "Sampha",
+            "id": "2WoVwexZuODvclzULjPQtm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lTwFP01ZXZYeKArCJeQ8k"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 187627,
+        "name": "Rain Down (Feat. Sampha)",
+        "disc_number": 1,
+        "id": "6lTwFP01ZXZYeKArCJeQ8k"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sXOV8uUpxPtyTZoV2iqYa"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 225875,
+        "name": "Have A Baby (With Me)",
+        "disc_number": 1,
+        "id": "7sXOV8uUpxPtyTZoV2iqYa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ctROU9Cit8yXawvYQgkIh"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 169004,
+        "name": "Call On Me",
+        "disc_number": 1,
+        "id": "7ctROU9Cit8yXawvYQgkIh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "Norwill Simmonds",
+            "id": "1gXpStjTXTgbXHfbdhDx4M"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/10XPqtGklNRy9p6rTpFyba"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 357705,
+        "name": "Baby Blue (Feat. Norwill Simmonds)",
+        "disc_number": 1,
+        "id": "10XPqtGklNRy9p6rTpFyba"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SeynaXh3RsTyun1DitBgd"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 265000,
+        "name": "Root of all Evil",
+        "disc_number": 1,
+        "id": "2SeynaXh3RsTyun1DitBgd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6DH13QYXK7lKkYHSU88N48"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 226283,
+        "name": "Who Knows",
+        "disc_number": 1,
+        "id": "6DH13QYXK7lKkYHSU88N48"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "Bon Iver",
+            "id": "4LEiUm1SRbFMgfqnQTwUbQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1lh5stJGmaVucEdExCqEVm"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 317000,
+        "name": "Moon (Feat. Bon Iver)",
+        "disc_number": 1,
+        "id": "1lh5stJGmaVucEdExCqEVm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "Yebba",
+            "id": "1ooV8YZC1KbpEcrmI8WH0F"
+          },
+          {
+            "name": "Blood Orange",
+            "id": "6LEeAFiJF8OuPx747e1wxR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Ws7pcKeEo6dW2xPUFgmQv"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 281000,
+        "name": "Touching God (Feat. Yebba & Blood Orange)",
+        "disc_number": 1,
+        "id": "3Ws7pcKeEo6dW2xPUFgmQv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4idq70ESkXPCPhCCnzBK1y"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 231800,
+        "name": "Sign Of The Times",
+        "disc_number": 1,
+        "id": "4idq70ESkXPCPhCCnzBK1y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1tWZGEvn2MIs0knr5XMNWE"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 174384,
+        "name": "Emily’s Song",
+        "disc_number": 1,
+        "id": "1tWZGEvn2MIs0knr5XMNWE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "646yf4t",
+            "id": "4obW4V3i8LGRVJbWClPclF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72Id6Ru1X67Sh8hmWNjrgN"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 198200,
+        "name": "No More Loving (On Women I Don’t Love) (Feat. 646yf4t)",
+        "disc_number": 1,
+        "id": "72Id6Ru1X67Sh8hmWNjrgN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Daniel Caesar",
+            "id": "20wkVLutqVOYrc0kxFs7rA"
+          },
+          {
+            "name": "Bon Iver",
+            "id": "4LEiUm1SRbFMgfqnQTwUbQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/79CUSO4qG6YPg26J9nhZnS"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 470500,
+        "name": "Sins Of The Father (Feat. Bon Iver)",
+        "disc_number": 1,
+        "id": "79CUSO4qG6YPg26J9nhZnS"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "2LKW0m9cC63QzEI9tJH3ql"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6KZDXtSj0SzGOV705nNeh3_profile",
+  "fetchedAt": "2026-03-20T00:34:25.471Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.471Z",
+  "data": {
+    "id": "6KZDXtSj0SzGOV705nNeh3",
+    "name": "Kid Ink",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebf4904a817005f3b96f4e6e53",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebf4904a817005f3b96f4e6e53",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174f4904a817005f3b96f4e6e53",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178f4904a817005f3b96f4e6e53",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6KZDXtSj0SzGOV705nNeh3",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

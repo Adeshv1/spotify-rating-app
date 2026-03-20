@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "userId": "public_preview",
+  "cacheKey": "artist_5NGO30tJxFlKixkPSgXcFE_profile",
+  "fetchedAt": "2026-03-20T00:34:27.089Z",
+  "lastRefreshedAt": "2026-03-20T00:34:27.089Z",
+  "data": {
+    "id": "5NGO30tJxFlKixkPSgXcFE",
+    "name": "The Police",
+    "imageUrl": "https://i.scdn.co/image/1f73a61faca2942cd5ea29c2143184db8645f0b3",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/1f73a61faca2942cd5ea29c2143184db8645f0b3",
+        "height": 641,
+        "width": 1000
+      },
+      {
+        "url": "https://i.scdn.co/image/72fe2cadb69ab59960ae3dbd29618549e4432699",
+        "height": 410,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/078c3d6784e53ca7490fb63218560d20100a18f2",
+        "height": 128,
+        "width": 200
+      },
+      {
+        "url": "https://i.scdn.co/image/e7a6ecc704516f1bdc3ff67e96fb51435ebeebbb",
+        "height": 41,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

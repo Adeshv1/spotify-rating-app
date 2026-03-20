@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2e43Th3IHo39TLIcMpeFbn_profile",
+  "fetchedAt": "2026-03-20T00:29:23.385Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.385Z",
+  "data": {
+    "id": "2e43Th3IHo39TLIcMpeFbn",
+    "name": "Remi Sinclair",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a149d13701869383375f3096",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a149d13701869383375f3096",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a149d13701869383375f3096",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a149d13701869383375f3096",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2e43Th3IHo39TLIcMpeFbn",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

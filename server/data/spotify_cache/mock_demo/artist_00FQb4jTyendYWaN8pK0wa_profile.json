@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_00FQb4jTyendYWaN8pK0wa_profile",
+  "fetchedAt": "2026-03-20T00:29:25.904Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.904Z",
+  "data": {
+    "id": "00FQb4jTyendYWaN8pK0wa",
+    "name": "Lana Del Rey",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174b99cacf8acd5378206767261",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178b99cacf8acd5378206767261",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

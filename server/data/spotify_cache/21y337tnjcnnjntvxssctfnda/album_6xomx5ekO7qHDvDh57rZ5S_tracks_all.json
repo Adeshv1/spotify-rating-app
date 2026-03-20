@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6xomx5ekO7qHDvDh57rZ5S_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.881Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.881Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Alex Warren",
+            "id": "0fTSzq9jAh4c36UVb4V7CB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 186964,
+        "name": "Ordinary",
+        "disc_number": 1,
+        "id": "6qqrTXSdwiJaq8SO0X2lSe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6xomx5ekO7qHDvDh57rZ5S"
+  }
+}

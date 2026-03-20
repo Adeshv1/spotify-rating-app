@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7CP9gWsfC3ZmfDnGdspj93_profile",
+  "fetchedAt": "2026-03-20T00:34:23.100Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.100Z",
+  "data": {
+    "id": "7CP9gWsfC3ZmfDnGdspj93",
+    "name": "Joviano Carrera",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273138fe416be9cc587daa08cf8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273138fe416be9cc587daa08cf8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02138fe416be9cc587daa08cf8",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851138fe416be9cc587daa08cf8",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7CP9gWsfC3ZmfDnGdspj93",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

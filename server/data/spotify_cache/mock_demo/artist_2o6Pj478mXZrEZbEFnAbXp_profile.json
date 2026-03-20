@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2o6Pj478mXZrEZbEFnAbXp_profile",
+  "fetchedAt": "2026-03-20T00:29:21.688Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.688Z",
+  "data": {
+    "id": "2o6Pj478mXZrEZbEFnAbXp",
+    "name": "Ren Lockhart",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d0365a778f959b5607d64b66",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d0365a778f959b5607d64b66",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d0365a778f959b5607d64b66",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d0365a778f959b5607d64b66",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2o6Pj478mXZrEZbEFnAbXp",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

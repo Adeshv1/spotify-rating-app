@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_41MozSoPIsD1dJM0CLPjZF_profile",
+  "fetchedAt": "2026-03-20T00:29:16.846Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.846Z",
+  "data": {
+    "id": "41MozSoPIsD1dJM0CLPjZF",
+    "name": "BLACKPINK",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb623538b7014238c54ceee056",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb623538b7014238c54ceee056",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174623538b7014238c54ceee056",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178623538b7014238c54ceee056",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/41MozSoPIsD1dJM0CLPjZF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

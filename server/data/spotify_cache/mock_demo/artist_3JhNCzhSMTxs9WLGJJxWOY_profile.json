@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3JhNCzhSMTxs9WLGJJxWOY_profile",
+  "fetchedAt": "2026-03-20T00:34:25.656Z",
+  "lastRefreshedAt": "2026-03-20T00:34:25.656Z",
+  "data": {
+    "id": "3JhNCzhSMTxs9WLGJJxWOY",
+    "name": "Macklemore",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb488b3b242f97163a7f8e17b9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb488b3b242f97163a7f8e17b9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174488b3b242f97163a7f8e17b9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178488b3b242f97163a7f8e17b9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3JhNCzhSMTxs9WLGJJxWOY",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

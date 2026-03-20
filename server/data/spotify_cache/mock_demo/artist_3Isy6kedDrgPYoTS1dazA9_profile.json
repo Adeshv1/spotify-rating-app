@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_3Isy6kedDrgPYoTS1dazA9_profile",
+  "fetchedAt": "2026-03-20T00:29:15.891Z",
+  "lastRefreshedAt": "2026-03-20T00:29:15.891Z",
+  "data": {
+    "id": "3Isy6kedDrgPYoTS1dazA9",
+    "name": "Sean Paul",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb60c3e9abe7327c0097738f22",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb60c3e9abe7327c0097738f22",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517460c3e9abe7327c0097738f22",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17860c3e9abe7327c0097738f22",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/3Isy6kedDrgPYoTS1dazA9",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

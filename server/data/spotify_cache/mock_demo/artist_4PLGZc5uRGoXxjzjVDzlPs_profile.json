@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4PLGZc5uRGoXxjzjVDzlPs_profile",
+  "fetchedAt": "2026-03-20T00:29:23.045Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.045Z",
+  "data": {
+    "id": "4PLGZc5uRGoXxjzjVDzlPs",
+    "name": "Damien Jeunet",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ac1da82a2efc57afee085687",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ac1da82a2efc57afee085687",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ac1da82a2efc57afee085687",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ac1da82a2efc57afee085687",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4PLGZc5uRGoXxjzjVDzlPs",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

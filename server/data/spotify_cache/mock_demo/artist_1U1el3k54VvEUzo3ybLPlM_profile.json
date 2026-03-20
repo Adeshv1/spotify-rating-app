@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1U1el3k54VvEUzo3ybLPlM_profile",
+  "fetchedAt": "2026-03-20T00:34:23.675Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.675Z",
+  "data": {
+    "id": "1U1el3k54VvEUzo3ybLPlM",
+    "name": "Kali Uchis",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebdeac5367816c7ab1f607e89a",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebdeac5367816c7ab1f607e89a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174deac5367816c7ab1f607e89a",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178deac5367816c7ab1f607e89a",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1U1el3k54VvEUzo3ybLPlM",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

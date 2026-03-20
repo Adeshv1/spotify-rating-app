@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4utNKv9RDTzfIGok0tlOgl_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:27.492Z",
+  "lastRefreshedAt": "2026-03-20T00:41:27.492Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sam Fender",
+            "id": "6zlR5ttMfMNmwf2lecU9Cc"
+          },
+          {
+            "name": "Olivia Dean",
+            "id": "00x1fYSGhdqScXBRpSj3DW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7MZHqgTVTnN6xZGYAcEEAf"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 339410,
+        "name": "Rein Me In (with Olivia Dean)",
+        "disc_number": 1,
+        "id": "7MZHqgTVTnN6xZGYAcEEAf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sam Fender",
+            "id": "6zlR5ttMfMNmwf2lecU9Cc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SSMfUpuczTne4lz4G5rHH"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 339053,
+        "name": "Rein Me In",
+        "disc_number": 1,
+        "id": "4SSMfUpuczTne4lz4G5rHH"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 2,
+    "albumId": "4utNKv9RDTzfIGok0tlOgl"
+  }
+}

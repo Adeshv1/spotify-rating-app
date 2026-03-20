@@ -1841,15 +1841,8 @@ function App() {
                     playlistsCache={playlistsCache}
                     playlistId={selectedPlaylistId}
                     ranking={userRanking}
-                    cooldownUntilMs={cooldownUntilMs}
-                    nowMs={nowMs}
-                    tracksLoading={tracksLoading}
                     tracksError={tracksError}
                     tracksCache={tracksCache}
-                    tracksSource={tracksSource}
-                    onObservedTracks={tracks =>
-                      setUserRanking(rk => reconcileRankingTrackKeys(rk, tracks))
-                    }
                     onBack={() => {
                       setSelectedPlaylistId(null);
                       setTracksError(null);
@@ -4518,23 +4511,21 @@ function PlaylistView({
   playlistsCache,
   playlistId,
   ranking,
-  nowMs,
-  tracksLoading,
   tracksError,
   tracksCache,
-  tracksSource,
   onBack,
 }) {
   const playlist =
     playlistsCache?.items?.find(p => p?.id === playlistId) || null;
-  const playlistSnapshotId =
-    typeof playlist?.snapshotId === "string" ? playlist.snapshotId : null;
-  const cachedSnapshotId =
-    typeof tracksCache?.snapshotId === "string" ? tracksCache.snapshotId : null;
-  const snapshotMismatch =
-    playlistSnapshotId &&
-    cachedSnapshotId &&
-    playlistSnapshotId !== cachedSnapshotId;
+  const trackCount =
+    Number.isFinite(tracksCache?.total) && Number(tracksCache.total) >= 0
+      ? Number(tracksCache.total)
+      : Number.isFinite(playlist?.tracksTotal) && Number(playlist.tracksTotal) >= 0
+        ? Number(playlist.tracksTotal)
+        : null;
+  const playlistHeading = Number.isFinite(trackCount)
+    ? `${playlist?.name || "Playlist"} (${trackCount} track${trackCount === 1 ? "" : "s"})`
+    : playlist?.name || "Playlist";
 
   const uniqueTracks = useMemo(() => {
     const items = Array.isArray(tracksCache?.items) ? tracksCache.items : [];
@@ -4572,31 +4563,9 @@ function PlaylistView({
         </button>
       </div>
 
-      <h2>{playlist?.name || "Playlist"}</h2>
+      <h2>{playlistHeading}</h2>
 
       {tracksError ? <p className="error">{tracksError}</p> : null}
-
-      {tracksCache ? (
-        <p className="meta">
-          Loaded from{" "}
-          <strong>{tracksSource === "cache" ? "cache" : "Spotify API"}</strong>.
-          Cached at {formatDateTime(tracksCache.fetchedAt)} (
-          {formatAge(nowMs - Date.parse(tracksCache.fetchedAt))} ago).{" "}
-          {tracksCache.isComplete
-            ? `All ${tracksCache.total} track(s) cached.`
-            : `Showing ${tracksCache.items.length} of ${tracksCache.total} (partial).`}{" "}
-          {tracksCache.latestAddedAt
-            ? `Newest added: ${formatDateTime(tracksCache.latestAddedAt)}.`
-            : ""}
-          {snapshotMismatch
-            ? " Playlist has changed since this cache (snapshot mismatch)."
-            : ""}
-        </p>
-      ) : tracksLoading ? (
-        <p className="meta">Fetching tracks…</p>
-      ) : (
-        <p className="meta">No track cache for this playlist yet.</p>
-      )}
 
       <PlaylistTracksTable
         uniqueTracks={uniqueTracks}

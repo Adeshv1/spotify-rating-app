@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1uE3dRPe3SrGdNhd1nWlSa_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:23.072Z",
+  "lastRefreshedAt": "2026-03-20T00:41:23.072Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2od6VwQ93pD6vfYss3oync"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 155563,
+        "name": "Genius",
+        "disc_number": 1,
+        "id": "2od6VwQ93pD6vfYss3oync"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4hTFbz1G3He7e3MKqXjcGx"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 134786,
+        "name": "Bad Idea",
+        "disc_number": 1,
+        "id": "4hTFbz1G3He7e3MKqXjcGx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          },
+          {
+            "name": "Childish Gambino",
+            "id": "73sIBHcqh3Z3NyqHKZ7FOL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jaNeCjRjTCekyaErvjnRX"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 195502,
+        "name": "One Wish (feat. Childish Gambino)",
+        "disc_number": 1,
+        "id": "4jaNeCjRjTCekyaErvjnRX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4YUkUocIFAeZznwprEAsxM"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 219051,
+        "name": "Dream Girl",
+        "disc_number": 1,
+        "id": "4YUkUocIFAeZznwprEAsxM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5NwBOCI0trPlbtfocWrt2q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 186173,
+        "name": "Candy",
+        "disc_number": 1,
+        "id": "5NwBOCI0trPlbtfocWrt2q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7pzL8kHWBXYoGITYwmrzj5"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 231613,
+        "name": "Love Is Blind",
+        "disc_number": 1,
+        "id": "7pzL8kHWBXYoGITYwmrzj5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 213466,
+        "name": "Love Me Not",
+        "disc_number": 1,
+        "id": "4WFgvKVfEhb3IUAFGrutTR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1OimzlKVRx75TZtPZiGAGK"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 205773,
+        "name": "From Scratch",
+        "disc_number": 1,
+        "id": "1OimzlKVRx75TZtPZiGAGK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4G67MRybTVTYariSY5WBXB"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 165007,
+        "name": "1 of 1",
+        "disc_number": 1,
+        "id": "4G67MRybTVTYariSY5WBXB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/36t9gWH3NGsrjP9jlaK1Dw"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 193760,
+        "name": "Pilot",
+        "disc_number": 1,
+        "id": "36t9gWH3NGsrjP9jlaK1Dw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ravyn Lenae",
+            "id": "5RTLRtXjbXI2lSXc6jxlAz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ObS8I1dTlxdYM59TsZAmi"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 243240,
+        "name": "Days",
+        "disc_number": 1,
+        "id": "1ObS8I1dTlxdYM59TsZAmi"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "1uE3dRPe3SrGdNhd1nWlSa"
+  }
+}

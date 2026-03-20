@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7Ln80lUS6He07XvHI8qqHH_profile",
+  "fetchedAt": "2026-03-20T00:29:16.080Z",
+  "lastRefreshedAt": "2026-03-20T00:29:16.080Z",
+  "data": {
+    "id": "7Ln80lUS6He07XvHI8qqHH",
+    "name": "Arctic Monkeys",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051747da39dea0a72f581535fb11f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1787da39dea0a72f581535fb11f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

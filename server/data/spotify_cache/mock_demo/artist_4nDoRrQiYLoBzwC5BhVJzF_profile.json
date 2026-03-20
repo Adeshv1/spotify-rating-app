@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4nDoRrQiYLoBzwC5BhVJzF_profile",
+  "fetchedAt": "2026-03-20T00:34:24.788Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.788Z",
+  "data": {
+    "id": "4nDoRrQiYLoBzwC5BhVJzF",
+    "name": "Camila Cabello",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb76470faf6330235edbcb90a9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb76470faf6330235edbcb90a9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517476470faf6330235edbcb90a9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17876470faf6330235edbcb90a9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

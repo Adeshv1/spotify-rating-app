@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7JhyuaeB60S8vsFRzcdN2o_profile",
+  "fetchedAt": "2026-03-20T00:29:22.458Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.458Z",
+  "data": {
+    "id": "7JhyuaeB60S8vsFRzcdN2o",
+    "name": "Stone Mirland",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e988c4a5b0ca3a74ae8bc1de",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e988c4a5b0ca3a74ae8bc1de",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e988c4a5b0ca3a74ae8bc1de",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e988c4a5b0ca3a74ae8bc1de",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7JhyuaeB60S8vsFRzcdN2o",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

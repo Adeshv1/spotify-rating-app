@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1zCiyHNwt0y29fTHrBvamB_profile",
+  "fetchedAt": "2026-03-20T00:29:23.519Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.519Z",
+  "data": {
+    "id": "1zCiyHNwt0y29fTHrBvamB",
+    "name": "Elias Kiefer",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb44cc12e08b40b4ec162c0c73",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb44cc12e08b40b4ec162c0c73",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517444cc12e08b40b4ec162c0c73",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17844cc12e08b40b4ec162c0c73",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1zCiyHNwt0y29fTHrBvamB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

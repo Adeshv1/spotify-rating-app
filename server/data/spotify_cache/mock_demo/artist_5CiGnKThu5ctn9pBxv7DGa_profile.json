@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_5CiGnKThu5ctn9pBxv7DGa_profile",
+  "fetchedAt": "2026-03-20T00:29:24.632Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.632Z",
+  "data": {
+    "id": "5CiGnKThu5ctn9pBxv7DGa",
+    "name": "benny blanco",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb9e339e423b680759b0006a63",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb9e339e423b680759b0006a63",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051749e339e423b680759b0006a63",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1789e339e423b680759b0006a63",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/5CiGnKThu5ctn9pBxv7DGa",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

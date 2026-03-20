@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_34dZRjYum6vVBGslgYaBtB_profile",
+  "fetchedAt": "2026-03-20T00:34:24.599Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.599Z",
+  "data": {
+    "id": "34dZRjYum6vVBGslgYaBtB",
+    "name": "Vika Jigulina",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b273695991d6f4a544a05df4c1c0",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273695991d6f4a544a05df4c1c0",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02695991d6f4a544a05df4c1c0",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851695991d6f4a544a05df4c1c0",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/34dZRjYum6vVBGslgYaBtB",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

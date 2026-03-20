@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2R0CFyeMDiRbfkhkIMbyl1_profile",
+  "fetchedAt": "2026-03-20T00:29:19.907Z",
+  "lastRefreshedAt": "2026-03-20T00:29:19.907Z",
+  "data": {
+    "id": "2R0CFyeMDiRbfkhkIMbyl1",
+    "name": "Cash Cobain",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb7cfe38800ef71a78754e83f",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb7cfe38800ef71a78754e83f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174b7cfe38800ef71a78754e83f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178b7cfe38800ef71a78754e83f",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2R0CFyeMDiRbfkhkIMbyl1",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

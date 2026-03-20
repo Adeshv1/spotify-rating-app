@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6KFq3hJB6JnNvDbEHRvPoK_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:24.649Z",
+  "lastRefreshedAt": "2026-03-20T00:41:24.649Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          },
+          {
+            "name": "JENNIE",
+            "id": "250b0Wlc5Vk0CoUsaCY84M"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5yvVYFDUpbnjcnRBgjwTzM"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 209720,
+        "name": "Dracula - JENNIE Remix",
+        "disc_number": 1,
+        "id": "5yvVYFDUpbnjcnRBgjwTzM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/358a0oZmonseg84SLb97vO"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 205308,
+        "name": "Dracula",
+        "disc_number": 1,
+        "id": "358a0oZmonseg84SLb97vO"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 2,
+    "albumId": "6KFq3hJB6JnNvDbEHRvPoK"
+  }
+}

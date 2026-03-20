@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0al74j1n8XIEkZMMFRfsbx_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.080Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.080Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "BLACKPINK",
+            "id": "41MozSoPIsD1dJM0CLPjZF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Dm1Yh4uRaPzAZlYBbPNDM"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 164718,
+        "name": "JUMP",
+        "disc_number": 1,
+        "id": "1Dm1Yh4uRaPzAZlYBbPNDM"
+      },
+      {
+        "artists": [
+          {
+            "name": "BLACKPINK",
+            "id": "41MozSoPIsD1dJM0CLPjZF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3FZPp9lBUvhsxFxKJi3VkB"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 195402,
+        "name": "GO",
+        "disc_number": 1,
+        "id": "3FZPp9lBUvhsxFxKJi3VkB"
+      },
+      {
+        "artists": [
+          {
+            "name": "BLACKPINK",
+            "id": "41MozSoPIsD1dJM0CLPjZF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55IDP7dpiWdb2XhG6BaHtL"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 172346,
+        "name": "Me and my",
+        "disc_number": 1,
+        "id": "55IDP7dpiWdb2XhG6BaHtL"
+      },
+      {
+        "artists": [
+          {
+            "name": "BLACKPINK",
+            "id": "41MozSoPIsD1dJM0CLPjZF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/43BJVWcBzHRIDaQCg7abnX"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 172992,
+        "name": "Champion",
+        "disc_number": 1,
+        "id": "43BJVWcBzHRIDaQCg7abnX"
+      },
+      {
+        "artists": [
+          {
+            "name": "BLACKPINK",
+            "id": "41MozSoPIsD1dJM0CLPjZF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YUoX58zywC6rqFPOUNOiq"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 187479,
+        "name": "Fxxxboy",
+        "disc_number": 1,
+        "id": "2YUoX58zywC6rqFPOUNOiq"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 5,
+    "albumId": "0al74j1n8XIEkZMMFRfsbx"
+  }
+}

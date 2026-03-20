@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_6TK7fjRPdy2GW2pJzNF23L_profile",
+  "fetchedAt": "2026-03-20T00:29:24.462Z",
+  "lastRefreshedAt": "2026-03-20T00:29:24.462Z",
+  "data": {
+    "id": "6TK7fjRPdy2GW2pJzNF23L",
+    "name": "Kyla",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27357a84c5fd0edb2b290e3d37e",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27357a84c5fd0edb2b290e3d37e",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0257a84c5fd0edb2b290e3d37e",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485157a84c5fd0edb2b290e3d37e",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/6TK7fjRPdy2GW2pJzNF23L",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

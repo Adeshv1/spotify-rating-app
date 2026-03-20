@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_137W8MRPWKqSmrBGDBFSop_profile",
+  "fetchedAt": "2026-03-20T00:34:23.993Z",
+  "lastRefreshedAt": "2026-03-20T00:34:23.993Z",
+  "data": {
+    "id": "137W8MRPWKqSmrBGDBFSop",
+    "name": "Wiz Khalifa",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc66b0a8c3268f0b6556f64a8",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc66b0a8c3268f0b6556f64a8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174c66b0a8c3268f0b6556f64a8",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178c66b0a8c3268f0b6556f64a8",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

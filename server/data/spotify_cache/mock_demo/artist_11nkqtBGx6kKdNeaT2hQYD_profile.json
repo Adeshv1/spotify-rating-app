@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_11nkqtBGx6kKdNeaT2hQYD_profile",
+  "fetchedAt": "2026-03-20T00:34:22.892Z",
+  "lastRefreshedAt": "2026-03-20T00:34:22.892Z",
+  "data": {
+    "id": "11nkqtBGx6kKdNeaT2hQYD",
+    "name": "Mírabilis",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731612772e36999e2b20391f6c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2731612772e36999e2b20391f6c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e021612772e36999e2b20391f6c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511612772e36999e2b20391f6c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/11nkqtBGx6kKdNeaT2hQYD",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

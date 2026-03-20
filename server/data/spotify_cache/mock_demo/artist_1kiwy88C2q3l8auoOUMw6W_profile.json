@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_1kiwy88C2q3l8auoOUMw6W_profile",
+  "fetchedAt": "2026-03-20T00:29:21.110Z",
+  "lastRefreshedAt": "2026-03-20T00:29:21.110Z",
+  "data": {
+    "id": "1kiwy88C2q3l8auoOUMw6W",
+    "name": "Aldo Talete",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb53e1662537fcbe46eeac8841",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb53e1662537fcbe46eeac8841",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000517453e1662537fcbe46eeac8841",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f17853e1662537fcbe46eeac8841",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/1kiwy88C2q3l8auoOUMw6W",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

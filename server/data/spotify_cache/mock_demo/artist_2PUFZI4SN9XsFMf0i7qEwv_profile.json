@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2PUFZI4SN9XsFMf0i7qEwv_profile",
+  "fetchedAt": "2026-03-20T00:29:23.042Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.042Z",
+  "data": {
+    "id": "2PUFZI4SN9XsFMf0i7qEwv",
+    "name": "Aeyes Libe",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739654a33e827eacd92576694c",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739654a33e827eacd92576694c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029654a33e827eacd92576694c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519654a33e827eacd92576694c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2PUFZI4SN9XsFMf0i7qEwv",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

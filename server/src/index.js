@@ -174,6 +174,8 @@ function readMockDemoManifest() {
     return {
       schemaVersion: 1,
       updatedAt: null,
+      seedThrottleUntil: null,
+      seedThrottleReason: null,
       resources: {},
     }
   }
@@ -181,6 +183,8 @@ function readMockDemoManifest() {
   return {
     schemaVersion: 1,
     updatedAt: typeof parsed.updatedAt === 'string' ? parsed.updatedAt : null,
+    seedThrottleUntil: typeof parsed.seedThrottleUntil === 'string' ? parsed.seedThrottleUntil : null,
+    seedThrottleReason: typeof parsed.seedThrottleReason === 'string' ? parsed.seedThrottleReason : null,
     resources: parsed.resources && typeof parsed.resources === 'object' ? parsed.resources : {},
   }
 }
@@ -206,6 +210,39 @@ function updateMockDemoManifestResource({ kind, id, status, cacheKey = null, not
   }
   manifest.updatedAt = now
   writeJsonFileAtomic(mockDemoManifestPath, manifest)
+}
+
+function setMockDemoSeedThrottle({ retryAfterSeconds, reason }) {
+  const seconds = Number(retryAfterSeconds)
+  if (!Number.isFinite(seconds) || seconds <= 0) return
+
+  const now = new Date().toISOString()
+  const untilIso = new Date(Date.now() + seconds * 1000).toISOString()
+  const manifest = readMockDemoManifest()
+  manifest.updatedAt = now
+  manifest.seedThrottleUntil = untilIso
+  manifest.seedThrottleReason = typeof reason === 'string' ? reason : 'spotify_retry_after'
+  writeJsonFileAtomic(mockDemoManifestPath, manifest)
+}
+
+function clearMockDemoSeedThrottle() {
+  const manifest = readMockDemoManifest()
+  if (!manifest.seedThrottleUntil && !manifest.seedThrottleReason) return
+  manifest.updatedAt = new Date().toISOString()
+  manifest.seedThrottleUntil = null
+  manifest.seedThrottleReason = null
+  writeJsonFileAtomic(mockDemoManifestPath, manifest)
+}
+
+function getMockDemoSeedThrottle() {
+  const manifest = readMockDemoManifest()
+  const untilMs = Date.parse(manifest.seedThrottleUntil || '')
+  if (!Number.isFinite(untilMs)) return null
+  return {
+    untilIso: manifest.seedThrottleUntil,
+    untilMs,
+    reason: manifest.seedThrottleReason || null,
+  }
 }
 
 function syncMockDemoManifestSeedState() {
@@ -470,6 +507,109 @@ function extractArtistIdsFromPlaylistPayload(payload) {
   return Array.from(artistIds)
 }
 
+function extractArtistIdsFromPlaylistPayloads(payloads) {
+  const artistIds = new Set()
+  for (const payload of Array.isArray(payloads) ? payloads : []) {
+    for (const artistId of extractArtistIdsFromPlaylistPayload(payload)) {
+      if (artistId) artistIds.add(artistId)
+    }
+  }
+  return Array.from(artistIds)
+}
+
+function extractAlbumRefsFromPlaylistPayload(payload) {
+  const items = Array.isArray(payload?.items)
+    ? payload.items
+    : Array.isArray(payload?.tracks?.items)
+      ? payload.tracks.items
+      : []
+
+  const albumsById = new Map()
+  for (const row of items) {
+    const entry =
+      row?.item && typeof row.item === 'object'
+        ? row.item
+        : row?.track && typeof row.track === 'object'
+          ? row.track
+          : null
+    const album = entry?.album
+    const albumId = typeof album?.id === 'string' ? album.id : null
+    if (!albumId) continue
+    const existing = albumsById.get(albumId)
+    const next = {
+      albumId,
+      albumName: typeof album?.name === 'string' ? album.name : existing?.albumName ?? null,
+      totalTracks: Number.isFinite(album?.total_tracks)
+        ? album.total_tracks
+        : Number.isFinite(existing?.totalTracks)
+          ? existing.totalTracks
+          : null,
+    }
+    albumsById.set(albumId, next)
+  }
+
+  return Array.from(albumsById.values())
+}
+
+function extractAlbumRefsFromPlaylistPayloads(payloads) {
+  const albumsById = new Map()
+  for (const payload of Array.isArray(payloads) ? payloads : []) {
+    for (const album of extractAlbumRefsFromPlaylistPayload(payload)) {
+      if (!album?.albumId) continue
+      const existing = albumsById.get(album.albumId)
+      albumsById.set(album.albumId, {
+        albumId: album.albumId,
+        albumName: album.albumName || existing?.albumName || null,
+        totalTracks: Number.isFinite(album?.totalTracks)
+          ? album.totalTracks
+          : Number.isFinite(existing?.totalTracks)
+            ? existing.totalTracks
+            : null,
+      })
+    }
+  }
+  return Array.from(albumsById.values())
+}
+
+function hasCompleteAlbumTracks(recordOrPayload, expectedTotal = null) {
+  const payload = recordOrPayload?.data && typeof recordOrPayload.data === 'object'
+    ? recordOrPayload.data
+    : recordOrPayload
+  const items = Array.isArray(payload?.items) ? payload.items : []
+  if (!items.length) return Number(payload?.total) === 0 || Number(expectedTotal) === 0
+  const payloadTotal = Number(payload?.total) || items.length
+  const neededTotal = Number.isFinite(expectedTotal) && expectedTotal > 0
+    ? Math.max(payloadTotal, expectedTotal)
+    : payloadTotal
+  return items.length >= neededTotal
+}
+
+function shouldRefreshArtistProfileRecord(record, nowMs) {
+  const fetchedAtMs = record ? Date.parse(record.fetchedAt) : NaN
+  return !record || !Number.isFinite(fetchedAtMs) || nowMs - fetchedAtMs >= ARTIST_IMAGE_REFRESH_MS
+}
+
+function buildArtistProfilePayload(data) {
+  const images = Array.isArray(data?.images) ? data.images : []
+  const imageUrl = typeof images?.[0]?.url === 'string' ? images[0].url : null
+  return {
+    id: typeof data?.id === 'string' ? data.id : null,
+    name: typeof data?.name === 'string' ? data.name : null,
+    imageUrl,
+    images: images
+      .map((image) => ({
+        url: typeof image?.url === 'string' ? image.url : null,
+        height: Number.isFinite(image?.height) ? image.height : null,
+        width: Number.isFinite(image?.width) ? image.width : null,
+      }))
+      .filter((image) => image.url),
+    externalUrl: typeof data?.external_urls?.spotify === 'string' ? data.external_urls.spotify : null,
+    genres: Array.isArray(data?.genres) ? data.genres.filter((genre) => typeof genre === 'string' && genre) : [],
+    popularity: Number.isFinite(data?.popularity) ? data.popularity : null,
+    followersTotal: Number.isFinite(data?.followers?.total) ? data.followers.total : null,
+  }
+}
+
 async function fetchSpotifyArtistById({ artistId, accessToken, debugContext }) {
   const apiUrl = `https://api.spotify.com/v1/artists/${encodeURIComponent(artistId)}`
 
@@ -502,17 +642,16 @@ async function fetchSpotifyArtistById({ artistId, accessToken, debugContext }) {
   return { ok: response.ok, status: response.status, data, retryAfterSeconds }
 }
 
-async function primeArtistImageCacheForPlaylist({ cacheUserId, playlistPayload, accessToken, debugContext }) {
-  if (!cacheUserId || !accessToken) return
-
-  const artistIds = extractArtistIdsFromPlaylistPayload(playlistPayload)
-  if (!artistIds.length) return
+async function primeArtistCachesForArtistIds({ cacheUserId, artistIds, accessToken, debugContext }) {
+  if (!cacheUserId || !accessToken) return { paused: false }
+  if (!artistIds.length) return { paused: false }
 
   const nowMs = Date.now()
   const idsToRefresh = artistIds.filter((artistId) =>
+    shouldRefreshArtistProfileRecord(readSpotifyCacheRecord(cacheUserId, `artist_${artistId}_profile`), nowMs) ||
     shouldRefreshArtistImageRecord(readSpotifyCacheRecord(cacheUserId, `artist_${artistId}_image`), nowMs),
   )
-  if (!idsToRefresh.length) return
+  if (!idsToRefresh.length) return { paused: false }
 
   const chunkSize = 5
   for (let i = 0; i < idsToRefresh.length; i += chunkSize) {
@@ -528,23 +667,196 @@ async function primeArtistImageCacheForPlaylist({ cacheUserId, playlistPayload, 
     )
 
     for (const result of results) {
-      if (!result.ok) continue
-      const artistId = typeof result.data?.id === 'string' ? result.data.id : null
-      if (!artistId) continue
-      const images = Array.isArray(result.data?.images) ? result.data.images : []
-      const imageUrl = typeof images?.[0]?.url === 'string' ? images[0].url : null
-      const cacheKey = `artist_${artistId}_image`
+      if (Number.isFinite(result?.retryAfterSeconds) && result.retryAfterSeconds > 0) {
+        if (cacheUserId === MOCK_DEMO_CACHE_USER_ID) {
+          setMockDemoSeedThrottle({
+            retryAfterSeconds: result.retryAfterSeconds,
+            reason: 'artist_cache_retry_after',
+          })
+        }
+        return { paused: true, retryAfterSeconds: result.retryAfterSeconds }
+      }
+
+      const artistId = typeof result?.data?.id === 'string' ? result.data.id : null
+      if (!result.ok || !artistId) {
+        if (cacheUserId === MOCK_DEMO_CACHE_USER_ID && artistId) {
+          updateMockDemoManifestResource({
+            kind: 'artist_profile',
+            id: artistId,
+            status: 'needed',
+            cacheKey: `artist_${artistId}_profile`,
+            note: 'Artist profile still needs to be cached for the demo library.',
+            extra: {
+              lastStatus: Number(result?.status) || null,
+              retryAfterSeconds: Number(result?.retryAfterSeconds) || null,
+            },
+          })
+        }
+        continue
+      }
+      const profileCacheKey = `artist_${artistId}_profile`
+      const imageCacheKey = `artist_${artistId}_image`
+      const profile = buildArtistProfilePayload(result.data)
       const storedAt = new Date().toISOString()
-      writeSpotifyCacheRecordAtomic(cacheUserId, cacheKey, {
+      writeSpotifyCacheRecordAtomic(cacheUserId, profileCacheKey, {
         schemaVersion: 1,
         userId: cacheUserId,
-        cacheKey,
+        cacheKey: profileCacheKey,
         fetchedAt: storedAt,
         lastRefreshedAt: storedAt,
-        data: { imageUrl },
+        data: profile,
+      })
+      writeSpotifyCacheRecordAtomic(cacheUserId, imageCacheKey, {
+        schemaVersion: 1,
+        userId: cacheUserId,
+        cacheKey: imageCacheKey,
+        fetchedAt: storedAt,
+        lastRefreshedAt: storedAt,
+        data: { imageUrl: profile.imageUrl },
+      })
+
+      if (cacheUserId === MOCK_DEMO_CACHE_USER_ID) {
+        updateMockDemoManifestResource({
+          kind: 'artist_profile',
+          id: artistId,
+          status: 'cached',
+          cacheKey: profileCacheKey,
+          note: 'Artist profile refreshed for the demo library.',
+          extra: {
+            name: profile.name,
+            cachedAt: storedAt,
+            imageUrl: profile.imageUrl,
+          },
+        })
+        updateMockDemoManifestResource({
+          kind: 'artist_image',
+          id: artistId,
+          status: 'cached',
+          cacheKey: imageCacheKey,
+          note: 'Artist image refreshed for the demo library.',
+          extra: {
+            name: profile.name,
+            cachedAt: storedAt,
+            imageUrl: profile.imageUrl,
+          },
+        })
+      }
+    }
+  }
+
+  return { paused: false }
+}
+
+async function primeAlbumCachesForAlbumRefs({ sourceUserId, cacheUserId, albumRefs, accessToken, debugContext }) {
+  if (!sourceUserId || !cacheUserId || !accessToken) return { paused: false }
+  if (!Array.isArray(albumRefs) || albumRefs.length === 0) return { paused: false }
+
+  for (const album of albumRefs) {
+    const albumId = typeof album?.albumId === 'string' ? album.albumId : null
+    if (!albumId) continue
+
+    const cacheKey = `album_${albumId}_tracks_all`
+    const expectedTotal = Number.isFinite(album?.totalTracks) ? album.totalTracks : null
+    const existingDemoRecord = readSpotifyCacheRecord(cacheUserId, cacheKey)
+    const existingOwnerRecord = readSpotifyCacheRecord(sourceUserId, cacheKey)
+    let albumTracksPayload = hasCompleteAlbumTracks(existingDemoRecord, expectedTotal)
+      ? existingDemoRecord.data
+      : hasCompleteAlbumTracks(existingOwnerRecord, expectedTotal)
+        ? existingOwnerRecord.data
+        : null
+    let albumStoredAt =
+      typeof existingDemoRecord?.fetchedAt === 'string'
+        ? existingDemoRecord.fetchedAt
+        : typeof existingOwnerRecord?.fetchedAt === 'string'
+          ? existingOwnerRecord.fetchedAt
+          : null
+
+    if (!hasCompleteAlbumTracks(albumTracksPayload, expectedTotal)) {
+      const fetchedAlbum = await fetchAlbumTracksAll({
+        albumId,
+        accessToken,
+        debugContext,
+      })
+      if (Number.isFinite(fetchedAlbum?.retryAfterSeconds) && fetchedAlbum.retryAfterSeconds > 0) {
+        if (cacheUserId === MOCK_DEMO_CACHE_USER_ID) {
+          setMockDemoSeedThrottle({
+            retryAfterSeconds: fetchedAlbum.retryAfterSeconds,
+            reason: 'album_cache_retry_after',
+          })
+        }
+        return { paused: true, retryAfterSeconds: fetchedAlbum.retryAfterSeconds }
+      }
+      if (!fetchedAlbum.ok || !hasCompleteAlbumTracks(fetchedAlbum.data, expectedTotal)) {
+        if (cacheUserId === MOCK_DEMO_CACHE_USER_ID) {
+          updateMockDemoManifestResource({
+            kind: 'album_tracks',
+            id: albumId,
+            status: 'needed',
+            cacheKey,
+            note: 'Album tracks still need to be cached for the demo album flow.',
+            extra: {
+              albumName: album?.albumName || null,
+              expectedTotal,
+              retryAfterSeconds: Number(fetchedAlbum?.retryAfterSeconds) || null,
+              lastStatus: Number(fetchedAlbum?.status) || null,
+            },
+          })
+        }
+        continue
+      }
+
+      albumTracksPayload = fetchedAlbum.data
+      albumStoredAt = new Date().toISOString()
+      writeSpotifyCacheDataRecord(sourceUserId, cacheKey, albumTracksPayload, albumStoredAt)
+    } else if (!hasCompleteAlbumTracks(existingDemoRecord, expectedTotal)) {
+      writeSpotifyCacheDataRecord(
+        cacheUserId,
+        cacheKey,
+        albumTracksPayload,
+        albumStoredAt || new Date().toISOString(),
+      )
+    }
+
+    const effectiveStoredAt = albumStoredAt || new Date().toISOString()
+    if (
+      !hasCompleteAlbumTracks(existingDemoRecord, expectedTotal) ||
+      existingDemoRecord?.data !== albumTracksPayload
+    ) {
+      writeSpotifyCacheDataRecord(
+        cacheUserId,
+        cacheKey,
+        albumTracksPayload,
+        effectiveStoredAt,
+      )
+    }
+
+    if (cacheUserId === MOCK_DEMO_CACHE_USER_ID) {
+      updateMockDemoManifestResource({
+        kind: 'album_tracks',
+        id: albumId,
+        status: 'cached',
+        cacheKey,
+        note: 'Album tracks cached for the demo album flow.',
+        extra: {
+          albumName: album?.albumName || null,
+          total: Number(albumTracksPayload?.total) || 0,
+          itemCount: Array.isArray(albumTracksPayload?.items) ? albumTracksPayload.items.length : 0,
+          cachedAt: effectiveStoredAt,
+        },
       })
     }
   }
+
+  return { paused: false }
+}
+
+async function primeArtistImageCacheForPlaylist({ cacheUserId, playlistPayload, accessToken, debugContext }) {
+  return primeArtistCachesForArtistIds({
+    cacheUserId,
+    artistIds: extractArtistIdsFromPlaylistPayload(playlistPayload),
+    accessToken,
+    debugContext,
+  })
 }
 
 function hasPlaylistItems(record) {
@@ -752,6 +1064,12 @@ async function fetchCurrentUserPlaylistsAll({ accessToken, debugContext }) {
 async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugContext }) {
   if (!sourceUserId || !accessToken || !isOwnerUser(sourceUserId)) return
 
+  const activeThrottle = getMockDemoSeedThrottle()
+  if (activeThrottle && activeThrottle.untilMs > Date.now()) {
+    return
+  }
+  if (activeThrottle) clearMockDemoSeedThrottle()
+
   let playlistPayload = readSpotifyCacheRecord(sourceUserId, 'me_playlists_all')?.data ?? null
   if (!hasUsablePlaylistPagePayload(playlistPayload) || !playlistPageContainsAllIds(playlistPayload, MOCK_DEMO_PLAYLIST_IDS)) {
     const fetchedPlaylists = await fetchCurrentUserPlaylistsAll({ accessToken, debugContext })
@@ -781,39 +1099,84 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
       .filter(Boolean)
       .map((playlist) => [playlist.id, playlist]),
   )
+  const cachedPlaylistPayloads = []
 
   for (const playlistId of MOCK_DEMO_PLAYLIST_IDS) {
     const cacheKey = `playlist_${playlistId}_tracks_all`
-    const fetchedTracks = await fetchPlaylistTracksAll({
-      playlistId,
-      accessToken,
-      debugContext,
-    })
     const playlistName =
       typeof playlistMetaById.get(playlistId)?.name === 'string'
         ? playlistMetaById.get(playlistId).name
         : null
+    const existingDemoTracksRecord = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
+    const existingOwnerTracksRecord = readSpotifyCacheRecord(sourceUserId, cacheKey)
+    let playlistTracksPayload = hasPlaylistItems(existingDemoTracksRecord)
+      ? existingDemoTracksRecord.data
+      : hasPlaylistItems(existingOwnerTracksRecord)
+        ? existingOwnerTracksRecord.data
+        : null
+    let playlistStoredAt =
+      typeof existingDemoTracksRecord?.fetchedAt === 'string'
+        ? existingDemoTracksRecord.fetchedAt
+        : typeof existingOwnerTracksRecord?.fetchedAt === 'string'
+          ? existingOwnerTracksRecord.fetchedAt
+          : null
 
-    if (!fetchedTracks.ok || !hasPlaylistItems({ data: fetchedTracks.data })) {
-      updateMockDemoManifestResource({
-        kind: 'playlist_tracks',
-        id: playlistId,
-        status: 'needed',
-        cacheKey,
-        note: 'Owner login attempted to refresh demo playlist tracks, but the full payload was not cached.',
-        extra: {
-          playlistName,
-          retryAfterSeconds: Number(fetchedTracks?.retryAfterSeconds) || null,
-          lastStatus: Number(fetchedTracks?.status) || null,
-        },
+    if (!hasPlaylistItems({ data: playlistTracksPayload })) {
+      const fetchedTracks = await fetchPlaylistTracksAll({
+        playlistId,
+        accessToken,
+        debugContext,
       })
-      continue
+      if (Number.isFinite(fetchedTracks?.retryAfterSeconds) && fetchedTracks.retryAfterSeconds > 0) {
+        setMockDemoSeedThrottle({
+          retryAfterSeconds: fetchedTracks.retryAfterSeconds,
+          reason: 'playlist_cache_retry_after',
+        })
+        return
+      }
+
+      if (!fetchedTracks.ok || !hasPlaylistItems({ data: fetchedTracks.data })) {
+        updateMockDemoManifestResource({
+          kind: 'playlist_tracks',
+          id: playlistId,
+          status: 'needed',
+          cacheKey,
+          note: 'Owner login attempted to refresh demo playlist tracks, but the full payload was not cached.',
+          extra: {
+            playlistName,
+            retryAfterSeconds: Number(fetchedTracks?.retryAfterSeconds) || null,
+            lastStatus: Number(fetchedTracks?.status) || null,
+          },
+        })
+        continue
+      }
+
+      playlistTracksPayload = fetchedTracks.data
+      playlistStoredAt = new Date().toISOString()
+      writeSpotifyCacheDataRecord(sourceUserId, cacheKey, playlistTracksPayload, playlistStoredAt)
+    } else if (!hasPlaylistItems(existingDemoTracksRecord)) {
+      writeSpotifyCacheDataRecord(
+        MOCK_DEMO_CACHE_USER_ID,
+        cacheKey,
+        playlistTracksPayload,
+        playlistStoredAt || new Date().toISOString(),
+      )
     }
 
-    const playlistTracksPayload = fetchedTracks.data
-    const playlistStoredAt = new Date().toISOString()
-    writeSpotifyCacheDataRecord(sourceUserId, cacheKey, playlistTracksPayload, playlistStoredAt)
-    writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey, playlistTracksPayload, playlistStoredAt)
+    const effectiveStoredAt = playlistStoredAt || new Date().toISOString()
+    if (
+      !hasPlaylistItems(existingDemoTracksRecord) ||
+      existingDemoTracksRecord?.data !== playlistTracksPayload
+    ) {
+      writeSpotifyCacheDataRecord(
+        MOCK_DEMO_CACHE_USER_ID,
+        cacheKey,
+        playlistTracksPayload,
+        effectiveStoredAt,
+      )
+    }
+
+    cachedPlaylistPayloads.push(playlistTracksPayload)
     updateMockDemoManifestResource({
       kind: 'playlist_tracks',
       id: playlistId,
@@ -824,10 +1187,27 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
         playlistName,
         total: Number(playlistTracksPayload?.total) || 0,
         itemCount: Array.isArray(playlistTracksPayload?.items) ? playlistTracksPayload.items.length : 0,
-        cachedAt: playlistStoredAt,
+        cachedAt: effectiveStoredAt,
       },
     })
   }
+
+  const albumPrime = await primeAlbumCachesForAlbumRefs({
+    sourceUserId,
+    cacheUserId: MOCK_DEMO_CACHE_USER_ID,
+    albumRefs: extractAlbumRefsFromPlaylistPayloads(cachedPlaylistPayloads),
+    accessToken,
+    debugContext,
+  })
+  if (albumPrime?.paused) return
+
+  const artistPrime = await primeArtistCachesForArtistIds({
+    cacheUserId: MOCK_DEMO_CACHE_USER_ID,
+    artistIds: extractArtistIdsFromPlaylistPayloads(cachedPlaylistPayloads),
+    accessToken,
+    debugContext,
+  })
+  if (artistPrime?.paused) return
 }
 
 async function fetchAlbumTracksAll({ albumId, accessToken, debugContext }) {

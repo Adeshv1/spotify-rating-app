@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_21E3waRsmPlU7jZsS13rcj_profile",
+  "fetchedAt": "2026-03-20T00:34:24.587Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.587Z",
+  "data": {
+    "id": "21E3waRsmPlU7jZsS13rcj",
+    "name": "Ne-Yo",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebca118e3822061f7b7f6bc537",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebca118e3822061f7b7f6bc537",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ca118e3822061f7b7f6bc537",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ca118e3822061f7b7f6bc537",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

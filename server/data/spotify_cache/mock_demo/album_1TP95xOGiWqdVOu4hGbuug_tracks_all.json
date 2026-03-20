@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1TP95xOGiWqdVOu4hGbuug_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.949Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.949Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/554qQSs9lpRVq6TlaaiIKT"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 146666,
+        "name": "4 Raws",
+        "disc_number": 1,
+        "id": "554qQSs9lpRVq6TlaaiIKT"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "Rico Ace",
+            "id": "4sY0lTSkfDMMt27cVvFT6o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pPNAgcdgtRMwK9mPYMK7O"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 108307,
+        "name": "Cali Man",
+        "disc_number": 1,
+        "id": "2pPNAgcdgtRMwK9mPYMK7O"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7gZxliU9pWwAQ3QdyQfdga"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 97714,
+        "name": "Prague",
+        "disc_number": 1,
+        "id": "7gZxliU9pWwAQ3QdyQfdga"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/78TC2xIVRqJNzzBS6abuNP"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 105931,
+        "name": "Dirty",
+        "disc_number": 1,
+        "id": "78TC2xIVRqJNzzBS6abuNP"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "fakemink",
+            "id": "0qc4BFxcwRFZfevTck4fOi"
+          },
+          {
+            "name": "Rico Ace",
+            "id": "4sY0lTSkfDMMt27cVvFT6o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5uz5v1hRZLjNGatcPtOWUv"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 111157,
+        "name": "LV Sandals",
+        "disc_number": 1,
+        "id": "5uz5v1hRZLjNGatcPtOWUv"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eCiTvwXk0GEEhWyNmZ7Rv"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 112941,
+        "name": "Panic",
+        "disc_number": 1,
+        "id": "7eCiTvwXk0GEEhWyNmZ7Rv"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "Fimiguerrero",
+            "id": "4M5b70A8aORXdyJVjRJ8du"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QSE7XfNSozCWMx6UuNIaa"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 121500,
+        "name": "5am",
+        "disc_number": 1,
+        "id": "1QSE7XfNSozCWMx6UuNIaa"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "Rico Ace",
+            "id": "4sY0lTSkfDMMt27cVvFT6o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57Z6TJCTMACXxdrcwZ3Zvf"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 109759,
+        "name": "Phantom",
+        "disc_number": 1,
+        "id": "57Z6TJCTMACXxdrcwZ3Zvf"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "Rico Ace",
+            "id": "4sY0lTSkfDMMt27cVvFT6o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2NLOyWzztMiW5FmNhD83K6"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 130461,
+        "name": "Mist",
+        "disc_number": 1,
+        "id": "2NLOyWzztMiW5FmNhD83K6"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7mcxFbFdnFFbWwPflgqqKE"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 96000,
+        "name": "Rottweiler",
+        "disc_number": 1,
+        "id": "7mcxFbFdnFFbWwPflgqqKE"
+      },
+      {
+        "artists": [
+          {
+            "name": "EsDeeKid",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy"
+          },
+          {
+            "name": "Fimiguerrero",
+            "id": "4M5b70A8aORXdyJVjRJ8du"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1r7dV486KA1fMo2w1voblx"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 109714,
+        "name": "Tartan",
+        "disc_number": 1,
+        "id": "1r7dV486KA1fMo2w1voblx"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "1TP95xOGiWqdVOu4hGbuug"
+  }
+}

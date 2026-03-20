@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4RSyJzf7ef6Iu2rnLdabNq_profile",
+  "fetchedAt": "2026-03-20T00:29:26.878Z",
+  "lastRefreshedAt": "2026-03-20T00:29:26.878Z",
+  "data": {
+    "id": "4RSyJzf7ef6Iu2rnLdabNq",
+    "name": "Willy William",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb2d1a2589cfb209205b84aecb",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb2d1a2589cfb209205b84aecb",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051742d1a2589cfb209205b84aecb",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1782d1a2589cfb209205b84aecb",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4RSyJzf7ef6Iu2rnLdabNq",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

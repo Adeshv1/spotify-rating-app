@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_7mpTE0q7VN3TGP1kpn4uIS_profile",
+  "fetchedAt": "2026-03-20T00:29:23.978Z",
+  "lastRefreshedAt": "2026-03-20T00:29:23.978Z",
+  "data": {
+    "id": "7mpTE0q7VN3TGP1kpn4uIS",
+    "name": "Otto Noir",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba0c76ddb21565f6db59af0ee",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eba0c76ddb21565f6db59af0ee",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174a0c76ddb21565f6db59af0ee",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178a0c76ddb21565f6db59af0ee",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/7mpTE0q7VN3TGP1kpn4uIS",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

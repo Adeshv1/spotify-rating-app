@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_4aPhtYq4FqnbM02GHtZHhz_profile",
+  "fetchedAt": "2026-03-20T00:29:20.137Z",
+  "lastRefreshedAt": "2026-03-20T00:29:20.137Z",
+  "data": {
+    "id": "4aPhtYq4FqnbM02GHtZHhz",
+    "name": "Floyd Nova",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732cc1d1db5441ddb362b8711b",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732cc1d1db5441ddb362b8711b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022cc1d1db5441ddb362b8711b",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512cc1d1db5441ddb362b8711b",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/4aPhtYq4FqnbM02GHtZHhz",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

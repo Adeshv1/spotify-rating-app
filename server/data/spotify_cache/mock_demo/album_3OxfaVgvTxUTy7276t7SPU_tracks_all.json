@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3OxfaVgvTxUTy7276t7SPU_tracks_all",
+  "fetchedAt": "2026-03-20T00:41:29.833Z",
+  "lastRefreshedAt": "2026-03-20T00:41:29.833Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Justice",
+            "id": "1gR0gsQYfi6joyO1dlp76N"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5673WA8EEUSPx1ir26lhGW"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 308575,
+        "name": "Wake Me Up (feat. Justice)",
+        "disc_number": 1,
+        "id": "5673WA8EEUSPx1ir26lhGW"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3AWDeHLc88XogCaCnZQLVI"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 224136,
+        "name": "Cry For Me",
+        "disc_number": 1,
+        "id": "3AWDeHLc88XogCaCnZQLVI"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/64JIAZ0bS7WoARYfWQGCoz"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 12288,
+        "name": "I Can't Fucking Sing",
+        "disc_number": 1,
+        "id": "64JIAZ0bS7WoARYfWQGCoz"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Anitta",
+            "id": "7FNnA9vBm6EKceENgCGRMb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7DY756WOLyOz2Xnhw4EFiC"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 301623,
+        "name": "São Paulo (feat. Anitta)",
+        "disc_number": 1,
+        "id": "7DY756WOLyOz2Xnhw4EFiC"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6jDGDtQPC46pFqxph3qdbD"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 22033,
+        "name": "Until We're Skin & Bones",
+        "disc_number": 1,
+        "id": "6jDGDtQPC46pFqxph3qdbD"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5rzI6Jnlhx8DgVgsOLorfW"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 232176,
+        "name": "Baptized In Fear",
+        "disc_number": 1,
+        "id": "5rzI6Jnlhx8DgVgsOLorfW"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0sTBOp1hdayTjw6UOyPyi6"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 234923,
+        "name": "Open Hearts",
+        "disc_number": 1,
+        "id": "0sTBOp1hdayTjw6UOyPyi6"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Msr8L0gHGDsLSBlk7pSPU"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 96024,
+        "name": "Opening Night",
+        "disc_number": 1,
+        "id": "4Msr8L0gHGDsLSBlk7pSPU"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          {
+            "name": "Florence + The Machine",
+            "id": "1moxjboGR7GNWYIMWsRjgG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2gyHr9WqZeMtzJOpWGuGo6"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 291192,
+        "name": "Reflections Laughing (feat. Travis Scott, Florence + The Machine)",
+        "disc_number": 1,
+        "id": "2gyHr9WqZeMtzJOpWGuGo6"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/637oNhilCI9UlkWkUW4Grt"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 301428,
+        "name": "Enjoy The Show (feat. Future)",
+        "disc_number": 1,
+        "id": "637oNhilCI9UlkWkUW4Grt"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FolPJnYMo71Z7qasTuoJT"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 354781,
+        "name": "Given Up On Me",
+        "disc_number": 1,
+        "id": "0FolPJnYMo71Z7qasTuoJT"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0bcZ7xN9IcjSNxLerzR2yl"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 188921,
+        "name": "I Can't Wait To Get There",
+        "disc_number": 1,
+        "id": "0bcZ7xN9IcjSNxLerzR2yl"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Playboi Carti",
+            "id": "699OTQXzgjhIYAHMy9RyPD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FIDCNYYjNvPVimz5icugS"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 256000,
+        "name": "Timeless (feat Playboi Carti)",
+        "disc_number": 1,
+        "id": "0FIDCNYYjNvPVimz5icugS"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2v0AG62ZHtD3I4YmTb3WYM"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 277274,
+        "name": "Niagara Falls",
+        "disc_number": 1,
+        "id": "2v0AG62ZHtD3I4YmTb3WYM"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7rVmzyFA7f4rNGl9onF21E"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 253734,
+        "name": "Take Me Back To LA",
+        "disc_number": 1,
+        "id": "7rVmzyFA7f4rNGl9onF21E"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Giorgio Moroder",
+            "id": "6jU2Tt13MmXYk0ZBv1KmfO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4sWQbsLLH2NEbO79DSZCL9"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 225312,
+        "name": "Big Sleep (feat. Giorgio Moroder)",
+        "disc_number": 1,
+        "id": "4sWQbsLLH2NEbO79DSZCL9"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0K3w6WNawZlv6Izmsrye8o"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 216431,
+        "name": "Give Me Mercy",
+        "disc_number": 1,
+        "id": "0K3w6WNawZlv6Izmsrye8o"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6i5fDaCzwxRrZtuvvcqoIf"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 188645,
+        "name": "Drive",
+        "disc_number": 1,
+        "id": "6i5fDaCzwxRrZtuvvcqoIf"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Lana Del Rey",
+            "id": "00FQb4jTyendYWaN8pK0wa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ZDKPFRZC6QlJpf8bCIXTs"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 282873,
+        "name": "The Abyss (feat. Lana Del Rey)",
+        "disc_number": 1,
+        "id": "5ZDKPFRZC6QlJpf8bCIXTs"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/717s9KFmHhyy5t3xkStS56"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 231860,
+        "name": "Red Terror",
+        "disc_number": 1,
+        "id": "717s9KFmHhyy5t3xkStS56"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6n6GfXu4i22rdsmRKe2eIn"
+        },
+        "track_number": 21,
+        "explicit": false,
+        "duration_ms": 297525,
+        "name": "Without a Warning",
+        "disc_number": 1,
+        "id": "6n6GfXu4i22rdsmRKe2eIn"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4TDPlp7OSOjuDU3l7PCM04"
+        },
+        "track_number": 22,
+        "explicit": false,
+        "duration_ms": 291486,
+        "name": "Hurry Up Tomorrow",
+        "disc_number": 1,
+        "id": "4TDPlp7OSOjuDU3l7PCM04"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 22,
+    "albumId": "3OxfaVgvTxUTy7276t7SPU"
+  }
+}

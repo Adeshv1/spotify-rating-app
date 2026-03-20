@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_2sflbTtCirog5VxD6jPAfb_profile",
+  "fetchedAt": "2026-03-20T00:29:18.492Z",
+  "lastRefreshedAt": "2026-03-20T00:29:18.492Z",
+  "data": {
+    "id": "2sflbTtCirog5VxD6jPAfb",
+    "name": "Monaleo",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb731d64972c1d13bf1b1810c1",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb731d64972c1d13bf1b1810c1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174731d64972c1d13bf1b1810c1",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178731d64972c1d13bf1b1810c1",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/2sflbTtCirog5VxD6jPAfb",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

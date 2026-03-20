@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_0TnOYISbd1XYRBk9myaseg_profile",
+  "fetchedAt": "2026-03-20T00:29:25.017Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.017Z",
+  "data": {
+    "id": "0TnOYISbd1XYRBk9myaseg",
+    "name": "Pitbull",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8d8ac7290d0fe2d12fb6e4d9",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8d8ac7290d0fe2d12fb6e4d9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab676161000051748d8ac7290d0fe2d12fb6e4d9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f1788d8ac7290d0fe2d12fb6e4d9",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

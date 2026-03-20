@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_23fqKkggKUBHNkbKtXEls4_profile",
+  "fetchedAt": "2026-03-20T00:34:24.165Z",
+  "lastRefreshedAt": "2026-03-20T00:34:24.165Z",
+  "data": {
+    "id": "23fqKkggKUBHNkbKtXEls4",
+    "name": "Kygo",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe5ea1aa1404629c12ad86658",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe5ea1aa1404629c12ad86658",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e5ea1aa1404629c12ad86658",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e5ea1aa1404629c12ad86658",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

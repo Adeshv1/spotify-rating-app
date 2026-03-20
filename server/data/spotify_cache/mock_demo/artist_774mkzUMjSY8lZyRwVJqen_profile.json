@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_774mkzUMjSY8lZyRwVJqen_profile",
+  "fetchedAt": "2026-03-20T00:29:22.702Z",
+  "lastRefreshedAt": "2026-03-20T00:29:22.702Z",
+  "data": {
+    "id": "774mkzUMjSY8lZyRwVJqen",
+    "name": "Noah Hart",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb479aeaeb66badda5ec4c8ede",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5eb479aeaeb66badda5ec4c8ede",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174479aeaeb66badda5ec4c8ede",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178479aeaeb66badda5ec4c8ede",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/774mkzUMjSY8lZyRwVJqen",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}

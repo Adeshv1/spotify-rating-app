@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "artist_246dkjvS1zLTtiykXe5h60_profile",
+  "fetchedAt": "2026-03-20T00:29:25.641Z",
+  "lastRefreshedAt": "2026-03-20T00:29:25.641Z",
+  "data": {
+    "id": "246dkjvS1zLTtiykXe5h60",
+    "name": "Post Malone",
+    "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174e17c0aa1714a03d62b5ce4e0",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178e17c0aa1714a03d62b5ce4e0",
+        "height": 160,
+        "width": 160
+      }
+    ],
+    "externalUrl": "https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60",
+    "genres": [],
+    "popularity": null,
+    "followersTotal": null
+  }
+}
