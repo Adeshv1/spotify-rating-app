@@ -134,3 +134,5 @@
 + Dashboard/Rank Songs: stop merging unrelated album-progress rows that only share album name/artist text, and clear stale `Rate` requests so demo-mode ranking can recover to auto-pick when a requested track is unavailable (implemented 2026-03-20)
 + Branding: rename the app to Rankify across UI and package metadata (implemented 2026-03-20)
 + Docs: add a README acknowledgement that Rankify was built with the help of OpenAI Codex (implemented 2026-03-20)
++ Header/UI: add a red storage warning beside Export / Import that explains browser-local persistence and recommends frequent backups (implemented 2026-03-20)
++ Deployment: make the Node server bind configurable via `HOST` and document Render-specific build/start/health/disk settings (implemented 2026-03-20)

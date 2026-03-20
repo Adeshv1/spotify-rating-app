@@ -1730,6 +1730,33 @@ function App() {
                     </label>
                   </div>
                 </details>
+                <details className="headerStorageNotice">
+                  <summary
+                    className="headerStorageNoticeBtn"
+                    aria-label="Storage and backup notice"
+                    title="Storage and backup notice"
+                  >
+                    !
+                  </summary>
+                  <div className="headerStorageNoticePanel">
+                    <div className="headerStorageNoticeTitle">
+                      Back up your data
+                    </div>
+                    <p className="headerStorageNoticeText">
+                      {isOwnerUser
+                        ? "This owner account also syncs changes to the server, but you should still export backups regularly."
+                        : "Your rankings and playlist data are stored in this browser on this device."}
+                    </p>
+                    <p className="headerStorageNoticeText">
+                      Export backups often. If this browser's stored site data is
+                      cleared or the browser resets, you could lose your rankings.
+                    </p>
+                    <p className="headerStorageNoticeText headerStorageNoticeTextSubtle">
+                      This normally should not happen as long as the browser's
+                      stored data is not cleared.
+                    </p>
+                  </div>
+                </details>
               </div>
             ) : null}
           </div>

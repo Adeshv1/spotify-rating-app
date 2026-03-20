@@ -62,6 +62,9 @@ if (!process.env.SPOTIFY_REDIRECT_URI && process.env.spotify_redirect_uri) {
 }
 
 const port = Number(process.env.PORT) || 8787
+const host = typeof process.env.HOST === 'string' && process.env.HOST.trim()
+  ? process.env.HOST.trim()
+  : '0.0.0.0'
 const isProduction = process.env.NODE_ENV === 'production'
 
 const dataDir = resolveConfiguredPath(process.env.DATA_DIR, path.join(serverRootDir, 'data'))
@@ -3320,6 +3323,7 @@ const server = http.createServer((req, res) => {
   res.end(JSON.stringify({ error: 'not_found' }))
 })
 
-server.listen(port, () => {
-  console.log(`server listening on http://localhost:${port}`)
+server.listen(port, host, () => {
+  const displayHost = host === '0.0.0.0' ? 'localhost' : host
+  console.log(`server listening on http://${displayHost}:${port} (bound to ${host})`)
 })

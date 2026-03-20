@@ -72,9 +72,29 @@ The backend serves the built frontend from `dist/` by default, so production can
 
 For a persistent deployment:
 
+- Set `HOST=0.0.0.0` so the Node server binds correctly on managed hosts
 - Set `DATA_DIR` to durable storage so rankings and Spotify cache survive restarts
 - Set `SPOTIFY_OWNER_USER_ID` if you want owner-only backup and demo-cache priming
 - If you reuse this project publicly, update the landing-page copy and allowlist/contact details in `src/App.jsx`
+
+### Render setup
+
+If you deploy on Render, create a `Web Service` and use:
+
+- Build Command: `npm install && npm run build`
+- Start Command: `npm --prefix server start`
+- Health Check Path: `/health`
+
+Recommended environment variables:
+
+- `NODE_ENV=production`
+- `HOST=0.0.0.0`
+- `DATA_DIR=/var/data`
+- `SPOTIFY_CLIENT_ID=...`
+- `SPOTIFY_REDIRECT_URI=https://your-render-domain.onrender.com/auth/callback`
+- `SPOTIFY_OWNER_USER_ID=...` if needed
+
+Attach a persistent disk and mount it at `/var/data`, otherwise rankings and server-side cache data will be lost on redeploy or restart.
 
 ## Notes for a public deployment
 
