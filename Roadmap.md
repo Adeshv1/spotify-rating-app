@@ -127,3 +127,5 @@
 + Demo mode: reuse existing backend playlist-track cache on owner login and only refetch a demo playlist from Spotify when its cached payload is missing or incomplete (implemented 2026-03-19)
 + Demo mode: on owner login, cache full album tracklists for every unique album referenced by the 5 demo playlists and only refetch albums whose backend cache is missing or incomplete (implemented 2026-03-20)
 + Demo mode: stop owner-login demo seeding immediately on Spotify `Retry-After` and persist a cooldown so later logins do not resume until the backoff window expires (implemented 2026-03-20)
++ Demo mode: persist the same `Retry-After` cooldown when the owner-login demo seed has to refresh the `/me/playlists` index before caching tracks/albums/artists (implemented 2026-03-20)
++ Deployment: harden production hosting by serving the built Vite app from the Node backend, making the data directory configurable, and using secure cookies in production (implemented 2026-03-20)

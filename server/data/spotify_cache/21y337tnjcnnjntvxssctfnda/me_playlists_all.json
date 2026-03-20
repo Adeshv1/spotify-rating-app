@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-20T00:46:29.437Z",
-  "lastRefreshedAt": "2026-03-20T00:46:29.437Z",
+  "fetchedAt": "2026-03-20T21:09:14.262Z",
+  "lastRefreshedAt": "2026-03-20T21:09:14.262Z",
   "data": {
     "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "limit": 50,
@@ -616,10 +616,10 @@
         },
         "primary_color": null,
         "public": true,
-        "snapshot_id": "AAAATJjEePCWkspsuzyUH+c4Tyg3gtzf",
+        "snapshot_id": "AAAATWg5WVQwfn7At5u0rHnHoJ5bM08R",
         "items": {
           "href": "https://api.spotify.com/v1/playlists/1HhyXOhzwyNlEsqGekNAMK/items",
-          "total": 68
+          "total": 69
         },
         "type": "playlist",
         "uri": "spotify:playlist:1HhyXOhzwyNlEsqGekNAMK"
@@ -1351,7 +1351,7 @@
         "images": [
           {
             "height": null,
-            "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f4e0c95c8825f5311866abdd",
+            "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f4e0c95c8825f5311866abdd",
             "width": null
           }
         ],

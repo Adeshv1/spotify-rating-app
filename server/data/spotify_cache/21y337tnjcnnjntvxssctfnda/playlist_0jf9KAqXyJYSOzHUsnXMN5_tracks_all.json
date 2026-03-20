@@ -1,0 +1,685 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "playlist_0jf9KAqXyJYSOzHUsnXMN5_tracks_all",
+  "fetchedAt": "2026-03-20T01:15:38.136Z",
+  "lastRefreshedAt": "2026-03-20T01:15:38.136Z",
+  "data": {
+    "limit": 50,
+    "items": [
+      {
+        "item": {
+          "album": {
+            "name": "Batchmate 2",
+            "total_tracks": 9,
+            "id": "60G1C0OfsmgcQ48zOCU1WT"
+          },
+          "artists": [
+            {
+              "name": "Jassie Gill",
+              "id": "3xZnxcyeC0vVaJvEA9VqrA"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2N6Eb3LyZfJlslxSZ1DA4S"
+          },
+          "explicit": false,
+          "duration_ms": 380900,
+          "name": "Lancer",
+          "type": "track",
+          "id": "2N6Eb3LyZfJlslxSZ1DA4S"
+        },
+        "added_at": "2025-08-25T09:32:26Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Khaalas",
+            "total_tracks": 10,
+            "id": "4cSKf4py6PyWYgWCsyiUSx"
+          },
+          "artists": [
+            {
+              "name": "Inderjit Nikku",
+              "id": "6Tfn1zm2FagIHJLbTSMPim"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1WdJbiMGA7hRQNEbeNWMTF"
+          },
+          "explicit": false,
+          "duration_ms": 195280,
+          "name": "College",
+          "type": "track",
+          "id": "1WdJbiMGA7hRQNEbeNWMTF"
+        },
+        "added_at": "2025-08-25T09:32:54Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "High Heels",
+            "total_tracks": 1,
+            "id": "4gXwRKdKvlbV5TF6Gnz8Yu"
+          },
+          "artists": [
+            {
+              "name": "Jaz Dhami",
+              "id": "5IfJHO9jIE1GVuC517P3nr"
+            },
+            {
+              "name": "Yo Yo Honey Singh",
+              "id": "7uIbLdzzSEqnX0Pkrb56cR"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2wSWVVClkhu7JahleyZL99"
+          },
+          "explicit": false,
+          "duration_ms": 297770,
+          "name": "High Heels",
+          "type": "track",
+          "id": "2wSWVVClkhu7JahleyZL99"
+        },
+        "added_at": "2025-08-25T09:41:07Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "One Touch",
+            "total_tracks": 1,
+            "id": "2ofkGDxQjUKEmhtJj0Mp1R"
+          },
+          "artists": [
+            {
+              "name": "Garry Sandhu",
+              "id": "7M3xY5iHSzEtoL3FpqOD75"
+            },
+            {
+              "name": "Roach Killa",
+              "id": "62RUJAVFb2U8n54mYnZAmS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0IeGazWVkbmTjDzH3HDIsn"
+          },
+          "explicit": false,
+          "duration_ms": 246469,
+          "name": "One Touch",
+          "type": "track",
+          "id": "0IeGazWVkbmTjDzH3HDIsn"
+        },
+        "added_at": "2025-08-25T09:41:28Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Best Of Preet Harpal",
+            "total_tracks": 9,
+            "id": "5WDUqYS6x87PEVD8bsPZ4W"
+          },
+          "artists": [
+            {
+              "name": "Preet Harpal",
+              "id": "433RQky1bQVcNrYhHdsLIu"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5UzfjTjHctMEkTmzt5S6Mq"
+          },
+          "explicit": false,
+          "duration_ms": 229784,
+          "name": "Yaar Berozgaar",
+          "type": "track",
+          "id": "5UzfjTjHctMEkTmzt5S6Mq"
+        },
+        "added_at": "2025-08-25T09:42:36Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Jaani & B Praak Hits",
+            "total_tracks": 8,
+            "id": "0voAJs7D6HmDcm2kxWw7n3"
+          },
+          "artists": [
+            {
+              "name": "Ranvir",
+              "id": "48nnpb95KOKktkP7GooORm"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2vj7Tor3fIVMPIoqjb5dpx"
+          },
+          "explicit": false,
+          "duration_ms": 230869,
+          "name": "Subha Subha",
+          "type": "track",
+          "id": "2vj7Tor3fIVMPIoqjb5dpx"
+        },
+        "added_at": "2025-08-25T09:43:45Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Killa",
+            "total_tracks": 1,
+            "id": "4wiCBrtJLBSkrU5W8wqfAf"
+          },
+          "artists": [
+            {
+              "name": "Akkiz",
+              "id": "39y3lAGLT8hnq0nPcge2BA"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5k5O5duwi8JSLQ57SlE67T"
+          },
+          "explicit": false,
+          "duration_ms": 201974,
+          "name": "Killa",
+          "type": "track",
+          "id": "5k5O5duwi8JSLQ57SlE67T"
+        },
+        "added_at": "2025-08-25T09:44:23Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "8 Kartoos",
+            "total_tracks": 8,
+            "id": "6XU5OF1MH7t8GcjMZCJQgY"
+          },
+          "artists": [
+            {
+              "name": "Dilpreet Dhillon",
+              "id": "5CGQa62CAweD76eHlDmp1m"
+            },
+            {
+              "name": "Desi Crew",
+              "id": "6lMIhndzcevFkVWSJnXPt2"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3jPpfpqgqZ3Isp0D4JnCbf"
+          },
+          "explicit": false,
+          "duration_ms": 209415,
+          "name": "Gulab",
+          "type": "track",
+          "id": "3jPpfpqgqZ3Isp0D4JnCbf"
+        },
+        "added_at": "2025-08-25T09:44:42Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Torh Dinde Haan",
+            "total_tracks": 1,
+            "id": "2WMmhwZkWyEkA8qSsxTvnA"
+          },
+          "artists": [
+            {
+              "name": "Nishawn Bhullar",
+              "id": "0PSwUlsuLrXzPlWIMW8wFZ"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4EFfQoHy1oaHL83wqBVzOr"
+          },
+          "explicit": false,
+          "duration_ms": 274664,
+          "name": "Torh Dinde Haan",
+          "type": "track",
+          "id": "4EFfQoHy1oaHL83wqBVzOr"
+        },
+        "added_at": "2025-10-12T05:44:42Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Mainu Single Rehna",
+            "total_tracks": 1,
+            "id": "5LPVoG3q5Y0w7wHc5ttDfj"
+          },
+          "artists": [
+            {
+              "name": "Rajveer",
+              "id": "2W2dydkyFy3lxXfDNRxhx3"
+            },
+            {
+              "name": "Rap: Fateh",
+              "id": "28IaV5gVBzY27Y7Vxgpzrt"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Bj0k02SXukX8NyLwuae7A"
+          },
+          "explicit": false,
+          "duration_ms": 251680,
+          "name": "Mainu Single Rehna",
+          "type": "track",
+          "id": "0Bj0k02SXukX8NyLwuae7A"
+        },
+        "added_at": "2025-10-12T06:39:35Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Masti 2",
+            "total_tracks": 10,
+            "id": "7qAhP1kStM9aZtRR3gnjbv"
+          },
+          "artists": [
+            {
+              "name": "Kamal Heer",
+              "id": "2S3lVn4PcnGcbKKu7nsDL6"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4d8ylRfNp85nV9Pattf6LZ"
+          },
+          "explicit": false,
+          "duration_ms": 312186,
+          "name": "Kihnu Yaad Kar Kar Hasdi",
+          "type": "track",
+          "id": "4d8ylRfNp85nV9Pattf6LZ"
+        },
+        "added_at": "2025-10-18T01:46:37Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Judda",
+            "total_tracks": 10,
+            "id": "5HpTdV3vaAY8X3O5OMM9lO"
+          },
+          "artists": [
+            {
+              "name": "Amrinder Gill",
+              "id": "1x02ug1CLkx7mrQP9FRswh"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7s4Piruj5mcEL5qcokVRc7"
+          },
+          "explicit": false,
+          "duration_ms": 226461,
+          "name": "Yaarian",
+          "type": "track",
+          "id": "7s4Piruj5mcEL5qcokVRc7"
+        },
+        "added_at": "2025-10-27T09:19:23Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Supna",
+            "total_tracks": 1,
+            "id": "47RsYwzZa3fYjIFU0vf9wA"
+          },
+          "artists": [
+            {
+              "name": "Amrinder Gill",
+              "id": "1x02ug1CLkx7mrQP9FRswh"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4W7JMHWwWffIBq2dYXkNJm"
+          },
+          "explicit": false,
+          "duration_ms": 225306,
+          "name": "Supna",
+          "type": "track",
+          "id": "4W7JMHWwWffIBq2dYXkNJm"
+        },
+        "added_at": "2025-11-20T10:32:55Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Sang Maar Gayi",
+            "total_tracks": 1,
+            "id": "6GXO46JpbsnaAAqw1VFmBo"
+          },
+          "artists": [
+            {
+              "name": "Geeta Zaildar",
+              "id": "78rdC4FvVaOJmEgfjlUi4a"
+            },
+            {
+              "name": "Jassi X",
+              "id": "3rJlJIcCjbAyj4X08YQqsS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4kKwMfSZyjiJyAPNWCDJed"
+          },
+          "explicit": false,
+          "duration_ms": 178958,
+          "name": "Sang Maar Gayi",
+          "type": "track",
+          "id": "4kKwMfSZyjiJyAPNWCDJed"
+        },
+        "added_at": "2025-11-25T08:28:22Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "College",
+            "total_tracks": 8,
+            "id": "0sk5iJoQU4uWTqYQWXUzk8"
+          },
+          "artists": [
+            {
+              "name": "Kulwinder Dhillon",
+              "id": "1Qxa8XqBALw9cbsZvppv5t"
+            },
+            {
+              "name": "Sukhpal Sukh",
+              "id": "5Fw338we3ckffdJs7goXZs"
+            },
+            {
+              "name": "Jeet Kaddon",
+              "id": "1J2gSdeSaj3fNWvtrI2x3o"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6FKZaQ6GachmVQgnQDcgn1"
+          },
+          "explicit": false,
+          "duration_ms": 224246,
+          "name": "Kali Kite Mil",
+          "type": "track",
+          "id": "6FKZaQ6GachmVQgnQDcgn1"
+        },
+        "added_at": "2026-01-22T21:14:49Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Waqt (The Time)",
+            "total_tracks": 9,
+            "id": "0goJVe4u0SjhP3pT3Td5Uu"
+          },
+          "artists": [
+            {
+              "name": "Preet Harpal",
+              "id": "433RQky1bQVcNrYhHdsLIu"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0QKf1azyuAWZJQXPTihKu7"
+          },
+          "explicit": false,
+          "duration_ms": 222691,
+          "name": "Law",
+          "type": "track",
+          "id": "0QKf1azyuAWZJQXPTihKu7"
+        },
+        "added_at": "2026-01-22T21:21:57Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Judaa 2",
+            "total_tracks": 10,
+            "id": "7tev0Bp4ca7frpgP6FsnkW"
+          },
+          "artists": [
+            {
+              "name": "Amrinder Gill",
+              "id": "1x02ug1CLkx7mrQP9FRswh"
+            },
+            {
+              "name": "Dr Zeus",
+              "id": "1zrFFDzoE9XXyjEqqgDpMm"
+            },
+            {
+              "name": "Young Fateh",
+              "id": "1oA3jatRjtvL8qzq7XIWyE"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7l5aVGnc4KRWcfGuDRqqy3"
+          },
+          "explicit": false,
+          "duration_ms": 160988,
+          "name": "Pendu (feat. Young Fateh)",
+          "type": "track",
+          "id": "7l5aVGnc4KRWcfGuDRqqy3"
+        },
+        "added_at": "2026-01-22T21:21:59Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "#Peg Pugg",
+            "total_tracks": 1,
+            "id": "5V3QyocurE7m9arVzX0d7Y"
+          },
+          "artists": [
+            {
+              "name": "Deep Karan",
+              "id": "2rAC8yC2Aqdo2utiGuDto2"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3r8BUzdry4UNYZnjSQAgM7"
+          },
+          "explicit": false,
+          "duration_ms": 199224,
+          "name": "#Peg Pugg",
+          "type": "track",
+          "id": "3r8BUzdry4UNYZnjSQAgM7"
+        },
+        "added_at": "2026-01-22T21:22:32Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Time Table",
+            "total_tracks": 1,
+            "id": "6SbMd2gWJToLYslil8xRJY"
+          },
+          "artists": [
+            {
+              "name": "Kulwinder Billa",
+              "id": "0CP2yDO5i5Q2G1fRj6C8JV"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2I2EWEhve98Wu5SnNYQJH5"
+          },
+          "explicit": false,
+          "duration_ms": 283627,
+          "name": "Time Table",
+          "type": "track",
+          "id": "2I2EWEhve98Wu5SnNYQJH5"
+        },
+        "added_at": "2026-01-22T21:22:40Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Shut Up",
+            "total_tracks": 1,
+            "id": "586Eo52HxiAXWKWeZT4TPL"
+          },
+          "artists": [
+            {
+              "name": "Gippy Grewal",
+              "id": "5kvGYraWFlXs2Jbt1Kphn8"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4Av5U7DWxQwcNhTn6U9YQW"
+          },
+          "explicit": false,
+          "duration_ms": 216000,
+          "name": "Shut Up",
+          "type": "track",
+          "id": "4Av5U7DWxQwcNhTn6U9YQW"
+        },
+        "added_at": "2026-01-22T21:23:15Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Challe Mundiya",
+            "total_tracks": 10,
+            "id": "6a4oxAVMk5OhAFRDS9P0VX"
+          },
+          "artists": [
+            {
+              "name": "Bai Amarjit",
+              "id": "5JcQ5hy2cWOwAjv7E0KU4B"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5nbXyZXg2V1A2NnTyfHUh3"
+          },
+          "explicit": false,
+          "duration_ms": 325480,
+          "name": "Ranoo",
+          "type": "track",
+          "id": "5nbXyZXg2V1A2NnTyfHUh3"
+        },
+        "added_at": "2026-01-26T04:52:32Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Inch",
+            "total_tracks": 1,
+            "id": "2mH8JkrBF2KlXTCKGUpG6D"
+          },
+          "artists": [
+            {
+              "name": "Zora Randhawa",
+              "id": "2dItxVGDw0zhzV4jfFV2V3"
+            },
+            {
+              "name": "Dr Zeus & Fateh",
+              "id": "4oSJs0Q1cIGN8ub8D2GVPf"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6gCjeZnpcKkowAw9WjFpFJ"
+          },
+          "explicit": false,
+          "duration_ms": 200782,
+          "name": "Inch",
+          "type": "track",
+          "id": "6gCjeZnpcKkowAw9WjFpFJ"
+        },
+        "added_at": "2026-01-26T05:08:28Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Jean",
+            "total_tracks": 1,
+            "id": "0Gzw7CcpbisI3CpxVrz5mp"
+          },
+          "artists": [
+            {
+              "name": "Ranjit Bawa",
+              "id": "6pU5oz09VUYtnFTd4P1Mxn"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6tGv3LqXAovNKudeK4rejY"
+          },
+          "explicit": false,
+          "duration_ms": 211774,
+          "name": "Jean",
+          "type": "track",
+          "id": "6tGv3LqXAovNKudeK4rejY"
+        },
+        "added_at": "2026-01-26T05:08:30Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Jugni Ji",
+            "total_tracks": 1,
+            "id": "6hJVZnZ8CWPVX38Jaog9y8"
+          },
+          "artists": [
+            {
+              "name": "Dr Zeus",
+              "id": "1zrFFDzoE9XXyjEqqgDpMm"
+            },
+            {
+              "name": "Shortie",
+              "id": "2yIbh3ljfJvWJw5VPj2n6t"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1a3cvLDFFeY63fyGQ0AlVA"
+          },
+          "explicit": false,
+          "duration_ms": 206418,
+          "name": "Jugni Ji",
+          "type": "track",
+          "id": "1a3cvLDFFeY63fyGQ0AlVA"
+        },
+        "added_at": "2026-02-09T18:24:37Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Aas",
+            "total_tracks": 1,
+            "id": "0SHsQP54BI5JsmxBNcBZfz"
+          },
+          "artists": [
+            {
+              "name": "Harman Gill",
+              "id": "22ueQkTfuHzT4C3tU6yLKz"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Z6nNVNUav5wgXzrG12PyX"
+          },
+          "explicit": false,
+          "duration_ms": 235102,
+          "name": "Aas",
+          "type": "track",
+          "id": "0Z6nNVNUav5wgXzrG12PyX"
+        },
+        "added_at": "2026-02-18T08:08:53Z"
+      },
+      {
+        "item": {
+          "album": {
+            "name": "Love Story",
+            "total_tracks": 1,
+            "id": "7AFDa1uSeuWsc8nUIHYFcK"
+          },
+          "artists": [
+            {
+              "name": "Harman Gill",
+              "id": "22ueQkTfuHzT4C3tU6yLKz"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1VDUjWEHFtIemeCBvj8kjR"
+          },
+          "explicit": false,
+          "duration_ms": 265822,
+          "name": "Love Story",
+          "type": "track",
+          "id": "1VDUjWEHFtIemeCBvj8kjR"
+        },
+        "added_at": "2026-02-18T08:11:49Z"
+      }
+    ],
+    "href": "https://api.spotify.com/v1/playlists/0jf9KAqXyJYSOzHUsnXMN5/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(id,name),album(id,name,total_tracks)))&locale=*",
+    "next": null,
+    "total": 26,
+    "previous": null,
+    "offset": 0
+  }
+}

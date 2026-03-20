@@ -5,6 +5,11 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { isOwnerUser } from './permissions/isOwnerUser.js'
 
+const serverEntryPath = fileURLToPath(import.meta.url)
+const serverSrcDir = path.dirname(serverEntryPath)
+const serverRootDir = path.join(serverSrcDir, '..')
+const appRootDir = path.join(serverRootDir, '..')
+
 function loadEnvFile(filePath) {
   let contents
   try {
@@ -40,7 +45,14 @@ function loadEnvFile(filePath) {
 
 loadEnvFile(path.join(process.cwd(), '.env'))
 loadEnvFile(path.join(process.cwd(), '..', '.env'))
-loadEnvFile(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '.env'))
+loadEnvFile(path.join(serverRootDir, '.env'))
+
+function resolveConfiguredPath(value, fallbackPath) {
+  if (typeof value !== 'string') return fallbackPath
+  const trimmed = value.trim()
+  if (!trimmed) return fallbackPath
+  return path.isAbsolute(trimmed) ? trimmed : path.resolve(process.cwd(), trimmed)
+}
 
 if (!process.env.SPOTIFY_CLIENT_ID && process.env.spotify_client_id) {
   process.env.SPOTIFY_CLIENT_ID = process.env.spotify_client_id
@@ -50,10 +62,13 @@ if (!process.env.SPOTIFY_REDIRECT_URI && process.env.spotify_redirect_uri) {
 }
 
 const port = Number(process.env.PORT) || 8787
+const isProduction = process.env.NODE_ENV === 'production'
 
-const dataDir = path.join(process.cwd(), 'data')
+const dataDir = resolveConfiguredPath(process.env.DATA_DIR, path.join(serverRootDir, 'data'))
 const rankingsDir = path.join(dataDir, 'rankings')
 const spotifyCacheDir = path.join(dataDir, 'spotify_cache')
+const clientDistDir = resolveConfiguredPath(process.env.CLIENT_DIST_DIR, path.join(appRootDir, 'dist'))
+const clientIndexPath = path.join(clientDistDir, 'index.html')
 const REFRESH_WINDOW_MS = 15 * 60 * 1000
 const PLAYLISTS_REFRESH_WINDOW_MS = 5 * 60 * 1000
 const PUBLIC_PREVIEW_PLAYLIST_ID = '5DBL17LWOZ1Yk87gan9wQq'
@@ -88,6 +103,24 @@ try {
 } catch {
   // ignore
 }
+
+const staticContentTypes = new Map([
+  ['.css', 'text/css; charset=utf-8'],
+  ['.gif', 'image/gif'],
+  ['.html', 'text/html; charset=utf-8'],
+  ['.ico', 'image/x-icon'],
+  ['.jpeg', 'image/jpeg'],
+  ['.jpg', 'image/jpeg'],
+  ['.js', 'text/javascript; charset=utf-8'],
+  ['.json', 'application/json; charset=utf-8'],
+  ['.mjs', 'text/javascript; charset=utf-8'],
+  ['.png', 'image/png'],
+  ['.svg', 'image/svg+xml; charset=utf-8'],
+  ['.txt', 'text/plain; charset=utf-8'],
+  ['.webp', 'image/webp'],
+  ['.woff', 'font/woff'],
+  ['.woff2', 'font/woff2'],
+])
 
 function safeFileComponent(value) {
   if (typeof value !== 'string') return 'unknown'
@@ -243,6 +276,76 @@ function getMockDemoSeedThrottle() {
     untilMs,
     reason: manifest.seedThrottleReason || null,
   }
+}
+
+function getStaticContentType(filePath) {
+  return staticContentTypes.get(path.extname(filePath).toLowerCase()) || 'application/octet-stream'
+}
+
+function getClientAssetPath(pathname) {
+  if (!pathname || pathname === '/') return null
+
+  let decodedPath = pathname
+  try {
+    decodedPath = decodeURIComponent(pathname)
+  } catch {
+    return null
+  }
+
+  const trimmed = decodedPath.replace(/^\/+/, '')
+  if (!trimmed) return null
+
+  const normalized = path.posix.normalize(trimmed)
+  if (!normalized || normalized === '.' || normalized.startsWith('..')) return null
+
+  return path.join(clientDistDir, normalized)
+}
+
+function tryServeClientAsset(res, pathname) {
+  const assetPath = getClientAssetPath(pathname)
+  if (!assetPath) return false
+
+  let stat
+  try {
+    stat = fs.statSync(assetPath)
+  } catch {
+    return false
+  }
+  if (!stat.isFile()) return false
+
+  res.statusCode = 200
+  res.setHeader('content-type', getStaticContentType(assetPath))
+  res.setHeader(
+    'cache-control',
+    pathname.startsWith('/assets/') ? 'public, max-age=31536000, immutable' : 'no-cache',
+  )
+  res.end(fs.readFileSync(assetPath))
+  return true
+}
+
+function shouldServeClientAppShell(pathname) {
+  if (!pathname) return false
+  if (pathname === '/') return true
+  if (pathname.startsWith('/api/')) return false
+  if (pathname.startsWith('/auth/')) return false
+  if (pathname.startsWith('/artist-image/')) return false
+  if (pathname === '/health') return false
+  return !path.extname(pathname)
+}
+
+function tryServeClientAppShell(res) {
+  let html
+  try {
+    html = fs.readFileSync(clientIndexPath)
+  } catch {
+    return false
+  }
+
+  res.statusCode = 200
+  res.setHeader('content-type', 'text/html; charset=utf-8')
+  res.setHeader('cache-control', 'no-cache')
+  res.end(html)
+  return true
 }
 
 function syncMockDemoManifestSeedState() {
@@ -1073,6 +1176,13 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
   let playlistPayload = readSpotifyCacheRecord(sourceUserId, 'me_playlists_all')?.data ?? null
   if (!hasUsablePlaylistPagePayload(playlistPayload) || !playlistPageContainsAllIds(playlistPayload, MOCK_DEMO_PLAYLIST_IDS)) {
     const fetchedPlaylists = await fetchCurrentUserPlaylistsAll({ accessToken, debugContext })
+    if (Number.isFinite(fetchedPlaylists?.retryAfterSeconds) && fetchedPlaylists.retryAfterSeconds > 0) {
+      setMockDemoSeedThrottle({
+        retryAfterSeconds: fetchedPlaylists.retryAfterSeconds,
+        reason: 'playlists_index_retry_after',
+      })
+      return
+    }
     if (!fetchedPlaylists.ok || !hasUsablePlaylistPagePayload(fetchedPlaylists.data)) return
     playlistPayload = fetchedPlaylists.data
     writeSpotifyCacheDataRecord(sourceUserId, 'me_playlists_all', playlistPayload)
@@ -1366,7 +1476,7 @@ function setCookie(res, name, value, options = {}) {
     sameSite = 'Lax',
     path = '/',
     maxAge,
-    secure = false,
+    secure = isProduction,
   } = options
 
   const parts = [`${name}=${encodeURIComponent(value)}`, `Path=${path}`, `SameSite=${sameSite}`]
@@ -3198,6 +3308,11 @@ const server = http.createServer((req, res) => {
     })()
 
     return
+  }
+
+  if (req.method === 'GET') {
+    if (tryServeClientAsset(res, url.pathname)) return
+    if (shouldServeClientAppShell(url.pathname) && tryServeClientAppShell(res)) return
   }
 
   res.statusCode = 404
