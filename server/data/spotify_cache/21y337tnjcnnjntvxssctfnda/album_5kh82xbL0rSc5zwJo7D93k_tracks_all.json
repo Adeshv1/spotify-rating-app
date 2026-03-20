@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5kh82xbL0rSc5zwJo7D93k_tracks_all",
+  "fetchedAt": "2026-03-19T23:54:43.864Z",
+  "lastRefreshedAt": "2026-03-19T23:54:43.864Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Jassi Gosal",
+            "id": "6Yw8Jl1i7Rb1sznqyPYocL"
+          },
+          {
+            "name": "Jagan Randhawa",
+            "id": "5bzhWJolUrQTS7XbGyZWQQ"
+          },
+          {
+            "name": "Sickboi",
+            "id": "2RSjOH1tYnTgkpkz81WICb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3b5N4LhGDttcLHRkrbJPac"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 173617,
+        "name": "Deja Vu",
+        "disc_number": 1,
+        "id": "3b5N4LhGDttcLHRkrbJPac"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jassi Gosal",
+            "id": "6Yw8Jl1i7Rb1sznqyPYocL"
+          },
+          {
+            "name": "Jagan Randhawa",
+            "id": "5bzhWJolUrQTS7XbGyZWQQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ZM4dLHabesrz6tbGAqcV8"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 145531,
+        "name": "Baby Calmdown",
+        "disc_number": 1,
+        "id": "3ZM4dLHabesrz6tbGAqcV8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jassi Gosal",
+            "id": "6Yw8Jl1i7Rb1sznqyPYocL"
+          },
+          {
+            "name": "Jagan Randhawa",
+            "id": "5bzhWJolUrQTS7XbGyZWQQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1pZPYwh80yzFQdIrTzFAZ0"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 172941,
+        "name": "Gas Light",
+        "disc_number": 1,
+        "id": "1pZPYwh80yzFQdIrTzFAZ0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jassi Gosal",
+            "id": "6Yw8Jl1i7Rb1sznqyPYocL"
+          },
+          {
+            "name": "Jagan Randhawa",
+            "id": "5bzhWJolUrQTS7XbGyZWQQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/78Wz8pHMao52u8kQWZhD4E"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 159574,
+        "name": "Night Flock",
+        "disc_number": 1,
+        "id": "78Wz8pHMao52u8kQWZhD4E"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 4,
+    "albumId": "5kh82xbL0rSc5zwJo7D93k"
+  }
+}

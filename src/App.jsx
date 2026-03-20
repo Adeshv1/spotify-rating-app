@@ -85,6 +85,7 @@ function formatCountdown(targetMs, nowMs) {
 }
 
 const PLAYLIST_ACTION_COOLDOWN_MS = 5_000;
+const MOCK_DEMO_USER_ID = "mock_demo";
 
 function getIngestedPlaylistIds(playlistsCache) {
   return Array.isArray(playlistsCache?.items)
@@ -1283,10 +1284,6 @@ function App() {
     if (!loggedIn || !profile?.id || !selectedPlaylistId) return;
 
     const userId = profile.id;
-    const playlist =
-      playlistsCache?.items?.find(p => p?.id === selectedPlaylistId) || null;
-    const ownedByUser = playlist?.owner?.id && playlist.owner.id === userId;
-
     const cachedError = readPlaylistTracksErrorCache(
       userId,
       selectedPlaylistId,
@@ -1308,13 +1305,8 @@ function App() {
       return;
     }
 
-    if (!ownedByUser) {
-      setTracksError(
-        "Spotify may forbid reading items for playlists you do not own (even if they appear in your list).",
-      );
-      return;
-    }
-
+    setTracksCache(null);
+    setTracksSource(null);
     refreshPlaylistTracks({ playlistId: selectedPlaylistId, force: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn, profile?.id, selectedPlaylistId, playlistsCache]);
@@ -3465,16 +3457,20 @@ function LandingPage() {
           </a>
           <a
             className="btn"
-            href="mailto:adeshvirk1@gmail.com?subject=Spotify%20Rating%20App%20Demo%20Access"
+            href="/auth/demo"
           >
             Try Demo
           </a>
         </div>
         <p className="landingAccessNote">
-          <span>Spotify requires manual approval for new users.</span>
-          <span>
-            To get access, email:{" "}
-            <a href="mailto:adeshvirk1@gmail.com">adeshvirk1@gmail.com</a>
+          <span className="landingAccessNoteWarning">
+            <strong>⚠</strong> Spotify requires apps in development mode to
+            manually approve users.
+          </span>
+          <span className="landingAccessNoteDetail">
+            Email <a href="mailto:adeshvirk1@gmail.com">adeshvirk1@gmail.com</a>{" "}
+            to use your own playlists, or click “Try Demo” to explore without
+            login.
           </span>
         </p>
         <p className="landingCredibility">
@@ -4075,6 +4071,7 @@ function PlaylistsView({
   onSelect,
 }) {
   const userId = profile?.id ?? null;
+  const isMockDemoUser = userId === MOCK_DEMO_USER_ID;
   const [ingestStateById, setIngestStateById] = useState({});
   const [cooldownNowMs, setCooldownNowMs] = useState(() => Date.now());
   const [globalActionCooldownUntilMs, setGlobalActionCooldownUntilMs] = useState(null);
@@ -4252,17 +4249,25 @@ function PlaylistsView({
 
       {playlistsCache ? (
         <p className="meta playlistStatusMeta">
-          <span>
-            Updated <strong>{updatedText}</strong>
-          </span>
-          <span>
-            Next update{" "}
-            <strong>
-              {Number.isFinite(nextPlaylistsRefreshAt)
-                ? `in ${nextRefreshCountdown}`
-                : "not scheduled"}
-            </strong>
-          </span>
+          {isMockDemoUser ? (
+            <span>
+              These demo playlists were made on <strong>March 17, 2026</strong>.
+            </span>
+          ) : (
+            <Fragment>
+              <span>
+                Updated <strong>{updatedText}</strong>
+              </span>
+              <span>
+                Next update{" "}
+                <strong>
+                  {Number.isFinite(nextPlaylistsRefreshAt)
+                    ? `in ${nextRefreshCountdown}`
+                    : "not scheduled"}
+                </strong>
+              </span>
+            </Fragment>
+          )}
         </p>
       ) : playlistsLoading ? (
         <p className="meta">Fetching playlists…</p>

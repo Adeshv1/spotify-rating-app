@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-03-20T00:21:34.960Z",
+  "resources": {
+    "playlists_index:me": {
+      "kind": "playlists_index",
+      "id": "me",
+      "status": "cached",
+      "cacheKey": "me_playlists_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:21:34.960Z",
+      "observations": 23,
+      "cachedAt": "2026-03-20T00:18:02.050Z",
+      "lastRefreshedAt": "2026-03-20T00:18:02.050Z",
+      "total": 5,
+      "itemCount": 5
+    },
+    "playlist_tracks:4j8kEJ1ifY5t1vsdSOabrW": {
+      "kind": "playlist_tracks",
+      "id": "4j8kEJ1ifY5t1vsdSOabrW",
+      "status": "cached",
+      "cacheKey": "playlist_4j8kEJ1ifY5t1vsdSOabrW_tracks_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:19:54.503Z",
+      "observations": 10,
+      "cachedAt": "2026-03-20T00:18:02.347Z",
+      "lastRefreshedAt": "2026-03-20T00:18:02.347Z",
+      "total": 50,
+      "itemCount": 50
+    },
+    "playlist_tracks:0Xbg4lYWUfBcr6VFdTD9cO": {
+      "kind": "playlist_tracks",
+      "id": "0Xbg4lYWUfBcr6VFdTD9cO",
+      "status": "cached",
+      "cacheKey": "playlist_0Xbg4lYWUfBcr6VFdTD9cO_tracks_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:19:51.663Z",
+      "observations": 10,
+      "cachedAt": "2026-03-20T00:18:02.676Z",
+      "lastRefreshedAt": "2026-03-20T00:18:02.676Z",
+      "total": 50,
+      "itemCount": 50
+    },
+    "playlist_tracks:3cC5l1hBHylTYRXTL2pL3O": {
+      "kind": "playlist_tracks",
+      "id": "3cC5l1hBHylTYRXTL2pL3O",
+      "status": "cached",
+      "cacheKey": "playlist_3cC5l1hBHylTYRXTL2pL3O_tracks_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:19:50.002Z",
+      "observations": 11,
+      "cachedAt": "2026-03-20T00:18:02.977Z",
+      "lastRefreshedAt": "2026-03-20T00:18:02.977Z",
+      "total": 50,
+      "itemCount": 50
+    },
+    "playlist_tracks:4Asx6gqYElg3Y9yXOLyOGH": {
+      "kind": "playlist_tracks",
+      "id": "4Asx6gqYElg3Y9yXOLyOGH",
+      "status": "cached",
+      "cacheKey": "playlist_4Asx6gqYElg3Y9yXOLyOGH_tracks_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:19:26.026Z",
+      "observations": 12,
+      "cachedAt": "2026-03-20T00:18:05.954Z",
+      "lastRefreshedAt": "2026-03-20T00:18:05.954Z",
+      "total": 128,
+      "itemCount": 128
+    },
+    "playlist_tracks:0skZPa2R7gdmrUHTAo7hYb": {
+      "kind": "playlist_tracks",
+      "id": "0skZPa2R7gdmrUHTAo7hYb",
+      "status": "cached",
+      "cacheKey": "playlist_0skZPa2R7gdmrUHTAo7hYb_tracks_all",
+      "note": "Served from mock demo cache.",
+      "firstObservedAt": "2026-03-19T23:43:14.777Z",
+      "lastObservedAt": "2026-03-20T00:18:20.519Z",
+      "observations": 11,
+      "cachedAt": "2026-03-20T00:18:06.923Z",
+      "lastRefreshedAt": "2026-03-20T00:18:06.923Z",
+      "total": 150,
+      "itemCount": 150
+    }
+  }
+}

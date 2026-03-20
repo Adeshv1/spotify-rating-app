@@ -117,3 +117,8 @@
 + Dashboard: sort Album progress by rated percentage before avg rank so fully rated albums tie on completion regardless of track count (implemented 2026-03-19)
 + Dashboard: make Album progress `#` reflect the visible table order after completion-based sorting (implemented 2026-03-19)
 + Dashboard: add an Album progress info button explaining completion-percent-first sorting and avg-rank tie-breaks (implemented 2026-03-19)
++ Demo mode: make `Try Demo` create a real shared app session through the normal auth/session flow (implemented 2026-03-19)
++ Demo mode: serve `mock_demo` cache records through the normal playlist/track/album/artist endpoints and log missing cache requirements to a manifest (implemented 2026-03-19)
++ Demo mode: on owner login, force-cache full track payloads for all 5 demo playlists into backend storage and update the demo manifest (implemented 2026-03-19)
++ Playlists/UI: always attempt backend track fetch on first playlist open instead of blocking non-owned playlists behind a frontend ownership check, so demo/shared playlists can load immediately (implemented 2026-03-19)
++ Demo mode/UI: replace mock-user playlist updated/next-update timing with a fixed note that the demo playlists were made on March 17, 2026 (implemented 2026-03-19)

@@ -640,7 +640,7 @@
 }
 
 .landingContent {
-  width: min(52rem, 100%);
+  width: min(56rem, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -661,7 +661,7 @@
 
 .landingLead {
   margin: 0.72rem 0 0;
-  max-width: 47rem;
+  max-width: 50rem;
   color: var(--text-muted);
   line-height: 1.56;
   font-size: 1.33rem;
@@ -722,23 +722,36 @@
 
 .landingAccessNote {
   margin: 0.72rem 0 0;
-  max-width: 30rem;
-  color: rgba(255, 255, 255, 0.7);
+  max-width: 50rem;
   font-size: 1.04rem;
-  line-height: 1.55;
+  line-height: 1.45;
+  font-weight: 600;
 }
 
 .landingAccessNote span {
   display: block;
 }
 
-.landingAccessNote a {
+.landingAccessNoteWarning {
+  color: #ffd76a;
+}
+
+.landingAccessNoteDetail {
   color: rgba(255, 255, 255, 0.82);
+}
+
+.landingAccessNote a {
+  color: inherit;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .landingAccessNote a:hover {
   color: #fff;
+}
+
+.landingAccessNote strong {
+  color: inherit;
 }
 
 @media (prefers-color-scheme: light) {

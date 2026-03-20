@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_39CdVS9HmbDDe5JEqLxVQn_tracks_all",
+  "fetchedAt": "2026-03-19T23:54:15.932Z",
+  "lastRefreshedAt": "2026-03-19T23:54:15.932Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Gagan Kooner",
+            "id": "04zsOadyaRBqhi2d1nKGUe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3h2EibJZalaVDB041GfYU7"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 144872,
+        "name": "GTHANG",
+        "disc_number": 1,
+        "id": "3h2EibJZalaVDB041GfYU7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gagan Kooner",
+            "id": "04zsOadyaRBqhi2d1nKGUe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0KexBaenImQdWeQuDsMf8n"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 160944,
+        "name": "LET 'EM HATE",
+        "disc_number": 1,
+        "id": "0KexBaenImQdWeQuDsMf8n"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gagan Kooner",
+            "id": "04zsOadyaRBqhi2d1nKGUe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YmwjvbaARyC9MeSQGYVbh"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 184583,
+        "name": "EARLY 20'S",
+        "disc_number": 1,
+        "id": "2YmwjvbaARyC9MeSQGYVbh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gagan Kooner",
+            "id": "04zsOadyaRBqhi2d1nKGUe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0DqYbnHHulZrQVXhRZJCY5"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 102857,
+        "name": "HAASE",
+        "disc_number": 1,
+        "id": "0DqYbnHHulZrQVXhRZJCY5"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 4,
+    "albumId": "39CdVS9HmbDDe5JEqLxVQn"
+  }
+}

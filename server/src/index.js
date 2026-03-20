@@ -58,6 +58,14 @@ const REFRESH_WINDOW_MS = 15 * 60 * 1000
 const PLAYLISTS_REFRESH_WINDOW_MS = 5 * 60 * 1000
 const PUBLIC_PREVIEW_PLAYLIST_ID = '5DBL17LWOZ1Yk87gan9wQq'
 const MOCK_DEMO_CACHE_USER_ID = 'mock_demo'
+const MOCK_DEMO_DISPLAY_NAME = 'Spotify Rating Demo'
+const MOCK_DEMO_AUTH_MODE = 'demo'
+const MOCK_DEMO_SCOPE = [
+  'user-read-email',
+  'user-read-private',
+  'playlist-read-private',
+  'playlist-read-collaborative',
+].join(' ')
 const MOCK_DEMO_PLAYLIST_IDS = [
   '4j8kEJ1ifY5t1vsdSOabrW',
   '0Xbg4lYWUfBcr6VFdTD9cO',
@@ -66,6 +74,7 @@ const MOCK_DEMO_PLAYLIST_IDS = [
   '0skZPa2R7gdmrUHTAo7hYb',
 ]
 const MOCK_DEMO_PLAYLIST_ID_SET = new Set(MOCK_DEMO_PLAYLIST_IDS)
+const mockDemoManifestPath = path.join(dataDir, 'mock_demo_cache_manifest.json')
 const spotifyRefreshInFlight = new Map()
 const ARTIST_IMAGE_MISS_WINDOW_MS = 60 * 1000
 const ARTIST_IMAGE_MISS_MAX_PER_WINDOW = 25
@@ -131,6 +140,149 @@ function writeSpotifyCacheDataRecord(userId, cacheKey, data, storedAt = new Date
 function getPersistentSpotifyCacheUserId(userId) {
   if (!isOwnerUser(userId)) return null
   return userId
+}
+
+function isDemoUserId(userId) {
+  return userId === MOCK_DEMO_CACHE_USER_ID
+}
+
+function isDemoSession(cookies) {
+  return cookies?.sp_auth_mode === MOCK_DEMO_AUTH_MODE && isDemoUserId(cookies?.sp_user_id)
+}
+
+function buildMockDemoProfile() {
+  return {
+    id: MOCK_DEMO_CACHE_USER_ID,
+    display_name: MOCK_DEMO_DISPLAY_NAME,
+  }
+}
+
+function setDemoSessionCookies(res) {
+  setCookie(res, 'sp_auth_mode', MOCK_DEMO_AUTH_MODE, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+  setCookie(res, 'sp_scope', MOCK_DEMO_SCOPE, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+  setCookie(res, 'sp_user_id', MOCK_DEMO_CACHE_USER_ID, { path: '/', maxAge: 30 * 24 * 60 * 60 })
+  setCookie(res, 'sp_user_name', MOCK_DEMO_DISPLAY_NAME, {
+    path: '/',
+    maxAge: 30 * 24 * 60 * 60,
+    httpOnly: false,
+  })
+}
+
+function readMockDemoManifest() {
+  const parsed = readJsonFile(mockDemoManifestPath)
+  if (!parsed || typeof parsed !== 'object') {
+    return {
+      schemaVersion: 1,
+      updatedAt: null,
+      resources: {},
+    }
+  }
+
+  return {
+    schemaVersion: 1,
+    updatedAt: typeof parsed.updatedAt === 'string' ? parsed.updatedAt : null,
+    resources: parsed.resources && typeof parsed.resources === 'object' ? parsed.resources : {},
+  }
+}
+
+function updateMockDemoManifestResource({ kind, id, status, cacheKey = null, note = null, extra = null }) {
+  if (!kind || !id) return
+
+  const now = new Date().toISOString()
+  const manifest = readMockDemoManifest()
+  const resourceKey = `${kind}:${id}`
+  const existing = manifest.resources?.[resourceKey]
+
+  manifest.resources[resourceKey] = {
+    kind,
+    id,
+    status,
+    cacheKey: typeof cacheKey === 'string' ? cacheKey : existing?.cacheKey ?? null,
+    note: typeof note === 'string' ? note : existing?.note ?? null,
+    firstObservedAt: typeof existing?.firstObservedAt === 'string' ? existing.firstObservedAt : now,
+    lastObservedAt: now,
+    observations: Number(existing?.observations) > 0 ? Number(existing.observations) + 1 : 1,
+    ...(extra && typeof extra === 'object' ? extra : {}),
+  }
+  manifest.updatedAt = now
+  writeJsonFileAtomic(mockDemoManifestPath, manifest)
+}
+
+function syncMockDemoManifestSeedState() {
+  const playlistIndexKey = 'me_playlists_all'
+  const playlistIndexRecord = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, playlistIndexKey)
+  updateMockDemoManifestResource({
+    kind: 'playlists_index',
+    id: 'me',
+    status: playlistIndexRecord ? 'cached' : 'needed',
+    cacheKey: playlistIndexKey,
+    note: playlistIndexRecord
+      ? 'Demo playlist index is cached.'
+      : 'Demo playlist index still needs to be cached.',
+    extra: playlistIndexRecord
+      ? { total: Number(playlistIndexRecord?.data?.total) || 0, cachedAt: playlistIndexRecord.fetchedAt }
+      : null,
+  })
+
+  for (const playlistId of MOCK_DEMO_PLAYLIST_IDS) {
+    const cacheKey = `playlist_${playlistId}_tracks_all`
+    const record = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
+    const itemCount = Array.isArray(record?.data?.items) ? record.data.items.length : 0
+    updateMockDemoManifestResource({
+      kind: 'playlist_tracks',
+      id: playlistId,
+      status: record ? 'cached' : 'needed',
+      cacheKey,
+      note: record
+        ? 'Demo playlist tracks are cached.'
+        : 'Demo playlist tracks still need to be cached before the full flow works.',
+      extra: record
+        ? {
+            total: Number(record?.data?.total) || itemCount,
+            itemCount,
+            cachedAt: record.fetchedAt,
+          }
+        : null,
+    })
+  }
+}
+
+function sendDemoCachePayload(res, { cacheKey, kind, id, missingError, missingMessage, transform }) {
+  const record = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
+  if (!record) {
+    updateMockDemoManifestResource({
+      kind,
+      id,
+      status: 'needed',
+      cacheKey,
+      note: missingMessage,
+    })
+    sendJson(res, 503, {
+      error: missingError,
+      message: missingMessage,
+      demoCacheKey: cacheKey,
+    })
+    return true
+  }
+
+  updateMockDemoManifestResource({
+    kind,
+    id,
+    status: 'cached',
+    cacheKey,
+    note: 'Served from mock demo cache.',
+    extra: {
+      cachedAt: record.fetchedAt,
+      lastRefreshedAt: record.lastRefreshedAt,
+      total: Number(record?.data?.total) || null,
+      itemCount: Array.isArray(record?.data?.items) ? record.data.items.length : null,
+    },
+  })
+  res.setHeader('x-sp-cache', 'demo_hit')
+  res.setHeader('x-sp-cache-fetched-at', record.fetchedAt)
+  res.setHeader('x-sp-cache-last-refreshed-at', record.lastRefreshedAt)
+  sendJson(res, 200, typeof transform === 'function' ? transform(record) : record.data)
+  return true
 }
 
 function shouldAttemptSpotifyRefresh({ record, nowMs, refreshWindowMs = REFRESH_WINDOW_MS }) {
@@ -610,24 +762,71 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
 
   const demoPlaylistsPayload = filterPlaylistPageByIds(playlistPayload, MOCK_DEMO_PLAYLIST_ID_SET)
   if (!Array.isArray(demoPlaylistsPayload?.items) || demoPlaylistsPayload.items.length === 0) return
-  writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, 'me_playlists_all', demoPlaylistsPayload)
+  const storedAt = new Date().toISOString()
+  writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, 'me_playlists_all', demoPlaylistsPayload, storedAt)
+  updateMockDemoManifestResource({
+    kind: 'playlists_index',
+    id: 'me',
+    status: 'cached',
+    cacheKey: 'me_playlists_all',
+    note: 'Demo playlist index refreshed from owner login.',
+    extra: {
+      total: Number(demoPlaylistsPayload?.total) || (Array.isArray(demoPlaylistsPayload?.items) ? demoPlaylistsPayload.items.length : 0),
+      cachedAt: storedAt,
+    },
+  })
+
+  const playlistMetaById = new Map(
+    (demoPlaylistsPayload.items || [])
+      .filter(Boolean)
+      .map((playlist) => [playlist.id, playlist]),
+  )
 
   for (const playlistId of MOCK_DEMO_PLAYLIST_IDS) {
     const cacheKey = `playlist_${playlistId}_tracks_all`
-    let playlistTracksPayload = readSpotifyCacheRecord(sourceUserId, cacheKey)?.data ?? null
+    const fetchedTracks = await fetchPlaylistTracksAll({
+      playlistId,
+      accessToken,
+      debugContext,
+    })
+    const playlistName =
+      typeof playlistMetaById.get(playlistId)?.name === 'string'
+        ? playlistMetaById.get(playlistId).name
+        : null
 
-    if (!hasPlaylistItems({ data: playlistTracksPayload })) {
-      const fetchedTracks = await fetchPlaylistTracksAll({
-        playlistId,
-        accessToken,
-        debugContext,
+    if (!fetchedTracks.ok || !hasPlaylistItems({ data: fetchedTracks.data })) {
+      updateMockDemoManifestResource({
+        kind: 'playlist_tracks',
+        id: playlistId,
+        status: 'needed',
+        cacheKey,
+        note: 'Owner login attempted to refresh demo playlist tracks, but the full payload was not cached.',
+        extra: {
+          playlistName,
+          retryAfterSeconds: Number(fetchedTracks?.retryAfterSeconds) || null,
+          lastStatus: Number(fetchedTracks?.status) || null,
+        },
       })
-      if (!fetchedTracks.ok || !hasPlaylistItems({ data: fetchedTracks.data })) continue
-      playlistTracksPayload = fetchedTracks.data
-      writeSpotifyCacheDataRecord(sourceUserId, cacheKey, playlistTracksPayload)
+      continue
     }
 
-    writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey, playlistTracksPayload)
+    const playlistTracksPayload = fetchedTracks.data
+    const playlistStoredAt = new Date().toISOString()
+    writeSpotifyCacheDataRecord(sourceUserId, cacheKey, playlistTracksPayload, playlistStoredAt)
+    writeSpotifyCacheDataRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey, playlistTracksPayload, playlistStoredAt)
+    updateMockDemoManifestResource({
+      kind: 'playlist_tracks',
+      id: playlistId,
+      status: 'cached',
+      cacheKey,
+      note: 'Demo playlist tracks refreshed from owner login.',
+      extra: {
+        playlistName,
+        total: Number(playlistTracksPayload?.total) || 0,
+        itemCount: Array.isArray(playlistTracksPayload?.items) ? playlistTracksPayload.items.length : 0,
+        cachedAt: playlistStoredAt,
+      },
+    })
   }
 }
 
@@ -805,6 +1004,7 @@ function clearCookie(res, name, options = {}) {
 }
 
 function clearSpotifyAuthCookies(res) {
+  clearCookie(res, 'sp_auth_mode', { path: '/' })
   clearCookie(res, 'sp_access', { path: '/' })
   clearCookie(res, 'sp_refresh', { path: '/' })
   clearCookie(res, 'sp_scope', { path: '/' })
@@ -1239,6 +1439,15 @@ const server = http.createServer((req, res) => {
     return
   }
 
+  if (req.method === 'GET' && url.pathname === '/auth/demo') {
+    syncMockDemoManifestSeedState()
+    setDemoSessionCookies(res)
+    res.statusCode = 302
+    res.setHeader('location', '/')
+    res.end()
+    return
+  }
+
   if (req.method === 'GET' && url.pathname === '/auth/callback') {
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const redirectUri = process.env.SPOTIFY_REDIRECT_URI || 'http://127.0.0.1:5173/auth/callback'
@@ -1310,6 +1519,7 @@ const server = http.createServer((req, res) => {
         if (typeof scope === 'string') {
           setCookie(res, 'sp_scope', scope, { path: '/', maxAge: 30 * 24 * 60 * 60 })
         }
+        setCookie(res, 'sp_auth_mode', 'spotify', { path: '/', maxAge: 30 * 24 * 60 * 60 })
         if (me?.data && typeof me.data === 'object') {
           if (typeof me.data.id === 'string') setCookie(res, 'sp_user_id', me.data.id, { path: '/', maxAge: 30 * 24 * 60 * 60 })
           if (typeof me.data.display_name === 'string') setCookie(res, 'sp_user_name', me.data.display_name, { path: '/', maxAge: 30 * 24 * 60 * 60, httpOnly: false })
@@ -1380,11 +1590,16 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/session') {
+    const demoSession = isDemoSession(cookies)
     const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
     const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
-    const loggedIn = hasAccess || hasRefresh
+    const loggedIn = demoSession || hasAccess || hasRefresh
     const scopes = typeof cookies.sp_scope === 'string' ? cookies.sp_scope.split(' ').filter(Boolean) : []
-    const user = typeof cookies.sp_user_id === 'string' ? { id: cookies.sp_user_id, display_name: cookies.sp_user_name || null } : null
+    const user = demoSession
+      ? buildMockDemoProfile()
+      : typeof cookies.sp_user_id === 'string'
+        ? { id: cookies.sp_user_id, display_name: cookies.sp_user_name || null }
+        : null
     const owner = isOwnerUser(user?.id)
     sendJson(res, 200, { loggedIn, scopes, user, isOwnerUser: owner })
     return
@@ -1392,9 +1607,10 @@ const server = http.createServer((req, res) => {
 
   if (req.method === 'GET' && url.pathname === '/api/ranking') {
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const demoSession = isDemoSession(cookies)
     const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
     const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
-    const loggedIn = hasAccess || hasRefresh
+    const loggedIn = demoSession || hasAccess || hasRefresh
 
     if (!loggedIn || !userId) {
       sendJson(res, 401, { error: 'not_logged_in' })
@@ -1414,9 +1630,10 @@ const server = http.createServer((req, res) => {
 
   if (req.method === 'PUT' && url.pathname === '/api/ranking') {
     const userId = typeof cookies.sp_user_id === 'string' ? cookies.sp_user_id : null
+    const demoSession = isDemoSession(cookies)
     const hasAccess = typeof cookies.sp_access === 'string' && cookies.sp_access.length > 0
     const hasRefresh = typeof cookies.sp_refresh === 'string' && cookies.sp_refresh.length > 0
-    const loggedIn = hasAccess || hasRefresh
+    const loggedIn = demoSession || hasAccess || hasRefresh
 
     if (!loggedIn || !userId) {
       sendJson(res, 401, { error: 'not_logged_in' })
@@ -1451,6 +1668,11 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/me') {
+    if (isDemoSession(cookies)) {
+      sendJson(res, 200, buildMockDemoProfile())
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
@@ -1513,6 +1735,17 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/me/playlists') {
+    if (isDemoSession(cookies)) {
+      sendDemoCachePayload(res, {
+        cacheKey: 'me_playlists_all',
+        kind: 'playlists_index',
+        id: 'me',
+        missingError: 'demo_playlists_unavailable',
+        missingMessage: 'The demo playlist list is not cached yet.',
+      })
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
@@ -1795,6 +2028,40 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname.startsWith('/api/tracks/')) {
+    if (isDemoSession(cookies)) {
+      const trackId = url.pathname.slice('/api/tracks/'.length)
+      const cacheKey = `track_${trackId}_artists`
+      const record = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
+
+      if (!record) {
+        updateMockDemoManifestResource({
+          kind: 'track_artists',
+          id: trackId,
+          status: 'needed',
+          cacheKey,
+          note: 'Track artist metadata is needed for the demo flow.',
+        })
+        sendJson(res, 200, { artists: [], album: null })
+        return
+      }
+
+      updateMockDemoManifestResource({
+        kind: 'track_artists',
+        id: trackId,
+        status: 'cached',
+        cacheKey,
+        note: 'Served track artist metadata from mock demo cache.',
+        extra: { cachedAt: record.fetchedAt, lastRefreshedAt: record.lastRefreshedAt },
+      })
+      res.setHeader('x-sp-cache', 'demo_hit')
+      res.setHeader('x-sp-cache-fetched-at', record.fetchedAt)
+      sendJson(res, 200, {
+        artists: record.data?.artists ?? [],
+        album: record.data?.album ?? null,
+      })
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
@@ -1947,6 +2214,24 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname.startsWith('/api/albums/') && url.pathname.endsWith('/tracks')) {
+    if (isDemoSession(cookies)) {
+      const parts = url.pathname.split('/').filter(Boolean)
+      const albumId = parts.length === 4 ? parts[2] : null
+      if (!albumId) {
+        sendJson(res, 400, { error: 'missing_album_id' })
+        return
+      }
+
+      sendDemoCachePayload(res, {
+        cacheKey: `album_${albumId}_tracks_all`,
+        kind: 'album_tracks',
+        id: albumId,
+        missingError: 'demo_album_tracks_unavailable',
+        missingMessage: 'This album is not cached for the demo yet.',
+      })
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
@@ -2082,6 +2367,41 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname.startsWith('/artist-image/')) {
+    if (isDemoSession(cookies)) {
+      const artistId = url.pathname.slice('/artist-image/'.length)
+      if (!artistId || !/^[a-zA-Z0-9]{10,64}$/.test(artistId)) {
+        sendJson(res, 400, { error: 'invalid_artist_id' })
+        return
+      }
+
+      const cacheKey = `artist_${artistId}_image`
+      const record = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
+      if (!record) {
+        updateMockDemoManifestResource({
+          kind: 'artist_image',
+          id: artistId,
+          status: 'needed',
+          cacheKey,
+          note: 'Artist image is needed for the demo flow.',
+        })
+        sendJson(res, 200, { imageUrl: null })
+        return
+      }
+
+      updateMockDemoManifestResource({
+        kind: 'artist_image',
+        id: artistId,
+        status: 'cached',
+        cacheKey,
+        note: 'Served artist image from mock demo cache.',
+        extra: { cachedAt: record.fetchedAt, lastRefreshedAt: record.lastRefreshedAt },
+      })
+      res.setHeader('x-sp-cache', 'demo_hit')
+      res.setHeader('x-sp-cache-fetched-at', record.fetchedAt)
+      sendJson(res, 200, { imageUrl: record.data?.imageUrl ?? null })
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
@@ -2244,6 +2564,24 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname.startsWith('/api/playlists/') && url.pathname.endsWith('/tracks')) {
+    if (isDemoSession(cookies)) {
+      const parts = url.pathname.split('/').filter(Boolean)
+      const playlistId = parts.length === 4 ? parts[2] : null
+      if (!playlistId) {
+        sendJson(res, 400, { error: 'missing_playlist_id' })
+        return
+      }
+
+      sendDemoCachePayload(res, {
+        cacheKey: `playlist_${playlistId}_tracks_all`,
+        kind: 'playlist_tracks',
+        id: playlistId,
+        missingError: 'demo_playlist_tracks_unavailable',
+        missingMessage: 'This demo playlist is not cached yet.',
+      })
+      return
+    }
+
     const clientId = process.env.SPOTIFY_CLIENT_ID
     const accessToken = cookies.sp_access
     const refreshToken = cookies.sp_refresh
