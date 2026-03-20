@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-20T22:17:40.076Z",
+  "updatedAt": "2026-03-20T23:12:42.246Z",
   "seedThrottleUntil": "2026-03-20T21:55:07.866Z",
   "seedThrottleReason": "album_cache_retry_after",
   "resources": {
@@ -11,8 +11,8 @@
       "cacheKey": "me_playlists_all",
       "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T22:17:40.076Z",
-      "observations": 91,
+      "lastObservedAt": "2026-03-20T23:12:42.246Z",
+      "observations": 102,
       "cachedAt": "2026-03-20T00:46:28.540Z",
       "lastRefreshedAt": "2026-03-20T00:46:28.540Z",
       "total": 5,
@@ -5106,13 +5106,12 @@
       "id": "4TO9hcCQfJDVBofrM5ra12",
       "status": "cached",
       "cacheKey": "artist_4TO9hcCQfJDVBofrM5ra12_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.514Z",
-      "lastObservedAt": "2026-03-20T00:29:20.514Z",
-      "observations": 1,
-      "name": "Aurelio Li",
+      "lastObservedAt": "2026-03-20T22:44:42.385Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:20.513Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb2bb43d81e6f660283a010b94"
+      "lastRefreshedAt": "2026-03-20T00:29:20.513Z"
     },
     "artist_profile:1Ld0guzIxggCOIbkE319nz": {
       "kind": "artist_profile",
@@ -5863,8 +5862,8 @@
       "cacheKey": "artist_25s9H1JQmTu3iuFzpXWUIg_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.457Z",
-      "lastObservedAt": "2026-03-20T00:47:47.491Z",
-      "observations": 5,
+      "lastObservedAt": "2026-03-20T22:44:42.395Z",
+      "observations": 6,
       "cachedAt": "2026-03-20T00:29:22.455Z",
       "lastRefreshedAt": "2026-03-20T00:29:22.455Z"
     },
@@ -7939,8 +7938,8 @@
       "cacheKey": "artist_3w8cRlmbnCOmIcFqwNyN1S_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:34:22.889Z",
-      "lastObservedAt": "2026-03-20T00:34:37.545Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T22:44:42.390Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:34:22.887Z",
       "lastRefreshedAt": "2026-03-20T00:34:22.887Z"
     },
