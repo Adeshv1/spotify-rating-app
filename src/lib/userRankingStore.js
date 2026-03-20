@@ -36,7 +36,7 @@ export function songIdentityOfTrack(track) {
   const name = normalizeString(track?.name).toLowerCase()
   const artists = Array.isArray(track?.artists) ? track.artists.map(normalizeString).filter(Boolean).join(',').toLowerCase() : ''
   const durationSeconds = Number.isFinite(track?.durationMs) ? String(Math.round(track.durationMs / 1000)) : ''
-  const seed = [name, artists].filter(Boolean).join('|') || [name, artists, durationSeconds].join('|')
+  const seed = [name, artists, durationSeconds].filter(Boolean).join('|')
   return seed ? `song:${seed}` : trackKeyOfTrack(track)
 }
 

@@ -10,7 +10,6 @@ import "./App.css";
 import "./Dashboard.css";
 import {
   clearPlaylistsCache,
-  formatAge,
   formatDateTime,
   getSpotifyCooldownUntil,
   readPlaylistsCache,
@@ -43,16 +42,13 @@ import {
   mergeLegacyPlaylistRanking,
   reconcileRankingTrackKeys,
   readUserRanking,
-  recordDuel,
   resetTrackState,
   setTrackBucket,
   songIdentityOfTrack,
   trackKeyOfTrack,
-  undoLast,
   mergeUserRankings,
   writeUserRanking,
 } from "./lib/userRankingStore";
-import { pickMatchup } from "./lib/matchup";
 import { readPlaylistRanking as readLegacyPlaylistRanking } from "./lib/playlistRankingStore";
 import { computeTopArtistsFromTracks } from "./lib/dashboardSelectors";
 import {
@@ -376,6 +372,40 @@ function mergeAlbumRows(existing, incoming) {
   };
 
   return finalizeAlbumRow(merged);
+}
+
+function getAlbumRowTrackRefs(album) {
+  return [
+    ...(Array.isArray(album?.ratedTracks) ? album.ratedTracks : []),
+    ...(Array.isArray(album?.unratedTracks) ? album.unratedTracks : []),
+    ...(Array.isArray(album?.doNotRateTracks) ? album.doNotRateTracks : []),
+  ];
+}
+
+function albumRowsShareTrackIdentity(left, right) {
+  const leftRefs = getAlbumRowTrackRefs(left);
+  const rightRefs = getAlbumRowTrackRefs(right);
+  if (leftRefs.length === 0 || rightRefs.length === 0) return false;
+
+  const leftKeys = new Set(
+    leftRefs
+      .map(track => (typeof track?.trackKey === "string" ? track.trackKey : null))
+      .filter(Boolean),
+  );
+  const leftIds = new Set(
+    leftRefs
+      .map(track => (typeof track?.id === "string" ? track.id : null))
+      .filter(Boolean),
+  );
+
+  return rightRefs.some(track => {
+    const trackKey =
+      typeof track?.trackKey === "string" ? track.trackKey : null;
+    const trackId = typeof track?.id === "string" ? track.id : null;
+    return (
+      (trackKey && leftKeys.has(trackKey)) || (trackId && leftIds.has(trackId))
+    );
+  });
 }
 
 function normalizeTrackName(name, id = null) {
@@ -1652,7 +1682,7 @@ function App() {
         <div className={`topBarInner ${!loggedIn ? "topBarInnerPublic" : ""}`.trim()}>
           <div className="topBarLeft">
             <div className="brand">
-              <div className="brandTitle">Spotify Rating App</div>
+              <div className="brandTitle">Rankify</div>
               {loggedIn ? (
                 <div className="brandSub">
                   {profile?.display_name
@@ -1892,7 +1922,7 @@ function App() {
             <div className="helpDialogHeader">
               <div>
                 <div className="helpDialogEyebrow">How it works</div>
-                <h2 id="how-to-use-title">How to use Spotify Rating App</h2>
+                <h2 id="how-to-use-title">How to use Rankify</h2>
               </div>
               <button
                 type="button"
@@ -2903,19 +2933,33 @@ function DashboardPage({
     for (const album of rawTopAlbums) {
       if (!album.albumId) continue;
       const identity = albumIdentityKey(album.name, album.artistLabel);
-      if (identity) albumsByIdentityWithId.set(identity, album.key);
+      if (!identity) continue;
+      const list = albumsByIdentityWithId.get(identity) || [];
+      list.push(album);
+      albumsByIdentityWithId.set(identity, list);
     }
 
     const mergedTopAlbums = new Map();
     for (const album of rawTopAlbums) {
       const identity = albumIdentityKey(album.name, album.artistLabel);
-      const canonicalKey =
-        !album.albumId && identity && albumsByIdentityWithId.has(identity)
-          ? albumsByIdentityWithId.get(identity)
-          : identity && !album.albumId
-            ? `meta:${identity}`
-            : album.key;
+      let canonicalKey = album.key;
+      if (!album.albumId && identity) {
+        const candidates = albumsByIdentityWithId.get(identity) || [];
+        const matchedAlbum =
+          candidates.find(candidate =>
+            albumRowsShareTrackIdentity(candidate, album),
+          ) || null;
+        if (matchedAlbum) canonicalKey = matchedAlbum.key;
+      }
       const existing = mergedTopAlbums.get(canonicalKey) || null;
+      if (
+        existing &&
+        existing.albumId !== album.albumId &&
+        !albumRowsShareTrackIdentity(existing, album)
+      ) {
+        mergedTopAlbums.set(album.key, { ...album, key: album.key });
+        continue;
+      }
       mergedTopAlbums.set(
         canonicalKey,
         existing ? mergeAlbumRows(existing, album) : { ...album, key: canonicalKey },
@@ -3554,10 +3598,10 @@ function RankSongsPage({
 
   useEffect(() => {
     if (!trackRequest?.trackKey) return;
+    if (trackByKey.size === 0) return;
     const canonicalKey =
       canonicalKeyByObservedKey.get(trackRequest.trackKey) || trackRequest.trackKey;
-    if (!trackByKey.has(canonicalKey)) return;
-    setActiveKey(canonicalKey);
+    if (trackByKey.has(canonicalKey)) setActiveKey(canonicalKey);
     onTrackRequestHandled?.();
   }, [canonicalKeyByObservedKey, trackByKey, trackRequest, onTrackRequestHandled]);
 
@@ -4575,72 +4619,6 @@ function PlaylistView({
   );
 }
 
-function TracksTable({ uniqueTracks }) {
-  const rows = useMemo(() => {
-    return uniqueTracks.map(({ key, track }) => ({
-      key,
-      track,
-      artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
-    }));
-  }, [uniqueTracks]);
-
-  if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
-
-  return (
-    <div className="cardSub">
-      <div
-        className="tableWrap"
-        role="region"
-        aria-label="Tracks table"
-        tabIndex={0}
-      >
-        <table className="table">
-          <thead>
-            <tr>
-              <th className="colSong">Song</th>
-              <th className="colArtist">Artist</th>
-              <th className="colAlbum">Album</th>
-              <th className="right colActions">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map(r => (
-              <tr key={r.key}>
-                <td>
-                  <div className="cellTitle">
-                    {r.track?.name || "(untitled track)"}
-                  </div>
-                </td>
-                <td>
-                  <div className="cellSub">{r.artists || "Unknown artist"}</div>
-                </td>
-                <td>
-                  <div className="cellSub">
-                    {r.track?.album || "Unknown album"}
-                  </div>
-                </td>
-                <td className="right">
-                  <span className="btnRow">
-                    {r.track?.id ? (
-                      <button
-                        className="btn small"
-                        onClick={() => openTrackInSpotify(r.track.id)}
-                        title="Play in Spotify"
-                      >
-                        Play
-                      </button>
-                    ) : null}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
 function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
   const rows = useMemo(() => {
     const list = uniqueTracks.map(({ key, track }) => {
@@ -4931,319 +4909,6 @@ function BinarySorter({
       ) : activeKey ? (
         <p className="meta">Pick a comparison to continue.</p>
       ) : null}
-    </div>
-  );
-}
-
-function Leaderboard({ uniqueTracks, ranking, onChange }) {
-  const [query, setQuery] = useState("");
-
-  const rows = useMemo(() => {
-    if (!ranking) return [];
-    const q = query.trim().toLowerCase();
-    return uniqueTracks
-      .map(({ key, track }) => ({
-        key,
-        track,
-        state: getTrackState(ranking, key),
-        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
-      }))
-      .filter(r => r.state.bucket !== "X")
-      .filter(r => {
-        if (!q) return true;
-        const hay = `${r.track?.name ?? ""} ${r.artists}`.toLowerCase();
-        return hay.includes(q);
-      })
-      .sort((a, b) => b.state.rating - a.state.rating);
-  }, [uniqueTracks, ranking, query]);
-
-  const ranks = useMemo(() => rows.map((_, idx) => idx + 1), [rows]);
-
-  return (
-    <div className="cardSub">
-      <div className="controls">
-        <input
-          className="textInput"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          placeholder="Search leaderboard…"
-          aria-label="Search leaderboard"
-        />
-      </div>
-
-      {!ranking ? <p className="meta">Loading ranking…</p> : null}
-
-      {ranking && rows.length ? (
-        <div
-          className="tableWrap"
-          role="region"
-          aria-label="Leaderboard table"
-          tabIndex={0}
-        >
-          <table className="table">
-            <thead>
-              <tr>
-                <th className="right colIndex">Rank</th>
-                <th className="colSong">Song</th>
-                <th className="colArtist">Artist</th>
-                <th className="colAlbum">Album</th>
-                <th className="right colMatches">Matches</th>
-                <th className="right colActions">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.slice(0, 250).map((r, idx) => (
-                <tr key={r.key}>
-                  <td className="right">
-                    <span className="cellSub">{ranks[idx] ?? idx + 1}</span>
-                  </td>
-                  <td>
-                    <div className="cellTitle">
-                      {r.track?.name || "(untitled track)"}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="cellSub">
-                      {r.artists || "Unknown artist"}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="cellSub">
-                      {r.track?.album || "Unknown album"}
-                    </div>
-                  </td>
-                  <td className="right">
-                    <span className="cellSub">{r.state.games}</span>
-                  </td>
-                  <td className="right">
-                    <span className="btnRow">
-                      {r.track?.id ? (
-                        <button
-                          className="btn small"
-                          onClick={() => openTrackInSpotify(r.track.id)}
-                          title="Play in Spotify"
-                        >
-                          Play
-                        </button>
-                      ) : null}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ) : ranking ? (
-        <p className="meta">No tracks to show yet.</p>
-      ) : null}
-    </div>
-  );
-}
-
-function HeadToHead({ uniqueTracks, ranking, onChange }) {
-  const [seed, setSeed] = useState(0);
-  const [sessionTarget, setSessionTarget] = useState(25);
-  const [sessionDone, setSessionDone] = useState(0);
-
-  const trackByKey = useMemo(() => {
-    const map = new Map();
-    for (const u of uniqueTracks) map.set(u.key, u.track);
-    return map;
-  }, [uniqueTracks]);
-
-  const trackKeys = useMemo(() => uniqueTracks.map(t => t.key), [uniqueTracks]);
-
-  const matchup = useMemo(() => {
-    if (!ranking) return null;
-    return pickMatchup({ trackKeys, ranking, seed });
-  }, [ranking, trackKeys, seed]);
-
-  const leftTrack = matchup ? trackByKey.get(matchup.leftKey) : null;
-  const rightTrack = matchup ? trackByKey.get(matchup.rightKey) : null;
-
-  const leftState =
-    matchup && ranking ? getTrackState(ranking, matchup.leftKey) : null;
-  const rightState =
-    matchup && ranking ? getTrackState(ranking, matchup.rightKey) : null;
-
-  const canUndo = Boolean(ranking?.history?.length);
-
-  function vote(winnerKey) {
-    if (!matchup) return;
-    onChange(r =>
-      r
-        ? recordDuel(r, {
-            leftKey: matchup.leftKey,
-            rightKey: matchup.rightKey,
-            winnerKey,
-          })
-        : r,
-    );
-    setSessionDone(n => n + 1);
-  }
-
-  function skip() {
-    setSeed(s => s + 1);
-  }
-
-  function undo() {
-    onChange(r => {
-      const next = r ? undoLast(r) : r;
-      if (next !== r) setSessionDone(n => Math.max(0, n - 1));
-      return next;
-    });
-  }
-
-  function doNotRate(trackKey) {
-    onChange(r => (r ? excludeTrack(r, trackKey) : r));
-    setSeed(s => s + 1);
-  }
-
-  return (
-    <div className="cardSub">
-      <p className="meta">
-        Use head-to-head comparisons to fine-tune the global order once you’ve
-        done an initial binary sort.
-      </p>
-
-      <div className="controls">
-        <button
-          className="btn"
-          onClick={() => setSessionDone(0)}
-          title="Resets the in-session counter only (does not affect rankings)."
-        >
-          Reset session
-        </button>
-
-        <label className="inlineLabel">
-          Target
-          <select
-            value={sessionTarget}
-            onChange={e => setSessionTarget(Number(e.target.value) || 25)}
-          >
-            <option value={10}>10</option>
-            <option value={25}>25</option>
-            <option value={50}>50</option>
-          </select>
-        </label>
-
-        <button
-          className="btn"
-          onClick={undo}
-          disabled={!canUndo}
-          title="Undo last comparison"
-        >
-          Undo
-        </button>
-      </div>
-
-      {ranking ? (
-        <p className="meta">
-          Session: {sessionDone}/{sessionTarget}. Total comparisons:{" "}
-          {ranking.history.length}.
-        </p>
-      ) : null}
-
-      {!ranking ? (
-        <p className="meta">Loading ranking…</p>
-      ) : !matchup || !leftTrack || !rightTrack ? (
-        <p className="meta">
-          Not enough eligible tracks for a matchup yet. Add at least 2
-          non-excluded songs.
-        </p>
-      ) : (
-        <>
-          <div className="duelGrid">
-            <div className="duelCard">
-              <div className="duelTitle">
-                {leftTrack?.name || "(untitled track)"}
-              </div>
-              {(leftTrack?.artists ?? []).length ? (
-                <div className="duelMeta">{leftTrack.artists.join(", ")}</div>
-              ) : null}
-              {leftState ? (
-                <div className="duelStats">
-                  <span className="cellSub">matches {leftState.games}</span>
-                </div>
-              ) : null}
-              <div className="controls">
-                {leftTrack?.id ? (
-                  <button
-                    className="btn"
-                    onClick={() => openTrackInSpotify(leftTrack.id)}
-                    title="Play in Spotify"
-                  >
-                    Play
-                  </button>
-                ) : null}
-                <button
-                  className="btn primary"
-                  onClick={() => vote(matchup.leftKey)}
-                >
-                  Left wins
-                </button>
-                <button
-                  className="btn danger"
-                  onClick={() => doNotRate(matchup.leftKey)}
-                  title="Exclude this track forever"
-                >
-                  Do not rate
-                </button>
-              </div>
-            </div>
-
-            <div className="duelVs">vs</div>
-
-            <div className="duelCard">
-              <div className="duelTitle">
-                {rightTrack?.name || "(untitled track)"}
-              </div>
-              {(rightTrack?.artists ?? []).length ? (
-                <div className="duelMeta">{rightTrack.artists.join(", ")}</div>
-              ) : null}
-              {rightState ? (
-                <div className="duelStats">
-                  <span className="cellSub">matches {rightState.games}</span>
-                </div>
-              ) : null}
-              <div className="controls">
-                {rightTrack?.id ? (
-                  <button
-                    className="btn"
-                    onClick={() => openTrackInSpotify(rightTrack.id)}
-                    title="Play in Spotify"
-                  >
-                    Play
-                  </button>
-                ) : null}
-                <button
-                  className="btn primary"
-                  onClick={() => vote(matchup.rightKey)}
-                >
-                  Right wins
-                </button>
-                <button
-                  className="btn danger"
-                  onClick={() => doNotRate(matchup.rightKey)}
-                  title="Exclude this track forever"
-                >
-                  Do not rate
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="controls">
-            <button
-              className="btn"
-              onClick={skip}
-              title="Skip this matchup and ask again later"
-            >
-              Skip
-            </button>
-          </div>
-        </>
-      )}
     </div>
   );
 }

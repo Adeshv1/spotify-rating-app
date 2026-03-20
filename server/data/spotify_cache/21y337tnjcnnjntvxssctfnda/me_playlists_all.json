@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "me_playlists_all",
-  "fetchedAt": "2026-03-20T21:09:14.262Z",
-  "lastRefreshedAt": "2026-03-20T21:09:14.262Z",
+  "fetchedAt": "2026-03-20T21:21:26.667Z",
+  "lastRefreshedAt": "2026-03-20T21:21:26.667Z",
   "data": {
     "href": "https://api.spotify.com/v1/me/playlists?offset=0&limit=50&locale=*",
     "limit": 50,

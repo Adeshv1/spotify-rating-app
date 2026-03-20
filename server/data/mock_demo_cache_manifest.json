@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-03-20T21:10:30.934Z",
+  "updatedAt": "2026-03-20T21:57:03.742Z",
   "seedThrottleUntil": "2026-03-20T21:55:07.866Z",
   "seedThrottleReason": "album_cache_retry_after",
   "resources": {
@@ -11,8 +11,8 @@
       "cacheKey": "me_playlists_all",
       "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:30.697Z",
-      "observations": 69,
+      "lastObservedAt": "2026-03-20T21:57:03.742Z",
+      "observations": 86,
       "cachedAt": "2026-03-20T00:46:28.540Z",
       "lastRefreshedAt": "2026-03-20T00:46:28.540Z",
       "total": 5,
@@ -23,65 +23,70 @@
       "id": "4j8kEJ1ifY5t1vsdSOabrW",
       "status": "cached",
       "cacheKey": "playlist_4j8kEJ1ifY5t1vsdSOabrW_tracks_all",
-      "note": "Demo playlist tracks are cached.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:29.581Z",
-      "observations": 31,
+      "lastObservedAt": "2026-03-20T21:50:40.958Z",
+      "observations": 36,
+      "cachedAt": "2026-03-20T00:29:12.050Z",
+      "lastRefreshedAt": "2026-03-20T00:29:12.050Z",
       "total": 50,
-      "itemCount": 50,
-      "cachedAt": "2026-03-20T00:29:12.050Z"
+      "itemCount": 50
     },
     "playlist_tracks:0Xbg4lYWUfBcr6VFdTD9cO": {
       "kind": "playlist_tracks",
       "id": "0Xbg4lYWUfBcr6VFdTD9cO",
       "status": "cached",
       "cacheKey": "playlist_0Xbg4lYWUfBcr6VFdTD9cO_tracks_all",
-      "note": "Demo playlist tracks are cached.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:29.585Z",
-      "observations": 32,
+      "lastObservedAt": "2026-03-20T21:50:35.002Z",
+      "observations": 37,
+      "cachedAt": "2026-03-20T00:29:12.354Z",
+      "lastRefreshedAt": "2026-03-20T00:29:12.354Z",
       "total": 50,
-      "itemCount": 50,
-      "cachedAt": "2026-03-20T00:29:12.354Z"
+      "itemCount": 50
     },
     "playlist_tracks:3cC5l1hBHylTYRXTL2pL3O": {
       "kind": "playlist_tracks",
       "id": "3cC5l1hBHylTYRXTL2pL3O",
       "status": "cached",
       "cacheKey": "playlist_3cC5l1hBHylTYRXTL2pL3O_tracks_all",
-      "note": "Demo playlist tracks are cached.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:29.589Z",
-      "observations": 33,
+      "lastObservedAt": "2026-03-20T21:50:29.119Z",
+      "observations": 38,
+      "cachedAt": "2026-03-20T00:29:12.619Z",
+      "lastRefreshedAt": "2026-03-20T00:29:12.619Z",
       "total": 50,
-      "itemCount": 50,
-      "cachedAt": "2026-03-20T00:29:12.619Z"
+      "itemCount": 50
     },
     "playlist_tracks:4Asx6gqYElg3Y9yXOLyOGH": {
       "kind": "playlist_tracks",
       "id": "4Asx6gqYElg3Y9yXOLyOGH",
       "status": "cached",
       "cacheKey": "playlist_4Asx6gqYElg3Y9yXOLyOGH_tracks_all",
-      "note": "Demo playlist tracks are cached.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:29.592Z",
-      "observations": 33,
+      "lastObservedAt": "2026-03-20T21:49:22.624Z",
+      "observations": 38,
+      "cachedAt": "2026-03-20T00:29:13.382Z",
+      "lastRefreshedAt": "2026-03-20T00:29:13.382Z",
       "total": 128,
-      "itemCount": 128,
-      "cachedAt": "2026-03-20T00:29:13.382Z"
+      "itemCount": 128
     },
     "playlist_tracks:0skZPa2R7gdmrUHTAo7hYb": {
       "kind": "playlist_tracks",
       "id": "0skZPa2R7gdmrUHTAo7hYb",
       "status": "cached",
       "cacheKey": "playlist_0skZPa2R7gdmrUHTAo7hYb_tracks_all",
-      "note": "Demo playlist tracks are cached.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-19T23:43:14.777Z",
-      "lastObservedAt": "2026-03-20T21:10:29.596Z",
-      "observations": 41,
+      "lastObservedAt": "2026-03-20T21:50:23.387Z",
+      "observations": 46,
+      "cachedAt": "2026-03-20T00:29:14.199Z",
+      "lastRefreshedAt": "2026-03-20T00:29:14.199Z",
       "total": 150,
-      "itemCount": 150,
-      "cachedAt": "2026-03-20T00:29:14.199Z"
+      "itemCount": 150
     },
     "artist_image:66CXWjxzNUsdJxJ2JdwvnR": {
       "kind": "artist_image",
@@ -1864,14 +1869,10 @@
       "id": "0h2knr6qpiAq0tV5ri5JMF",
       "status": "needed",
       "cacheKey": "album_0h2knr6qpiAq0tV5ri5JMF_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:24:52.430Z",
-      "lastObservedAt": "2026-03-20T00:41:52.672Z",
-      "observations": 2,
-      "albumName": "The Days / Nights",
-      "expectedTotal": 4,
-      "retryAfterSeconds": 76395,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:24:35.373Z",
+      "observations": 3
     },
     "album_tracks:5iK2afnsB8wwv9WULCE9e7": {
       "kind": "album_tracks",
@@ -1894,8 +1895,8 @@
       "cacheKey": "artist_250b0Wlc5Vk0CoUsaCY84M_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.770Z",
-      "lastObservedAt": "2026-03-20T21:10:30.795Z",
-      "observations": 17,
+      "lastObservedAt": "2026-03-20T21:19:36.836Z",
+      "observations": 20,
       "cachedAt": "2026-03-20T00:29:15.889Z",
       "lastRefreshedAt": "2026-03-20T00:29:15.889Z"
     },
@@ -1918,8 +1919,8 @@
       "cacheKey": "artist_0yjBkHJA6pxZL5FYccrwwa_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.774Z",
-      "lastObservedAt": "2026-03-20T21:10:30.800Z",
-      "observations": 18,
+      "lastObservedAt": "2026-03-20T21:19:08.714Z",
+      "observations": 20,
       "cachedAt": "2026-03-20T00:34:22.690Z",
       "lastRefreshedAt": "2026-03-20T00:34:22.690Z"
     },
@@ -1930,8 +1931,8 @@
       "cacheKey": "artist_0nAp5pLclY53Fdzm3cdm5N_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.775Z",
-      "lastObservedAt": "2026-03-20T21:10:30.805Z",
-      "observations": 16,
+      "lastObservedAt": "2026-03-20T21:50:20.072Z",
+      "observations": 19,
       "cachedAt": "2026-03-20T00:29:20.352Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.352Z"
     },
@@ -1942,8 +1943,8 @@
       "cacheKey": "artist_4uqHgaeBynLBQgfhMEIm1G_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.777Z",
-      "lastObservedAt": "2026-03-20T21:10:30.814Z",
-      "observations": 16,
+      "lastObservedAt": "2026-03-20T21:19:08.731Z",
+      "observations": 18,
       "cachedAt": "2026-03-20T00:29:19.654Z",
       "lastRefreshedAt": "2026-03-20T00:29:19.654Z"
     },
@@ -1954,8 +1955,8 @@
       "cacheKey": "artist_7hjNO6RQeqZIBZpZQdstUO_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.778Z",
-      "lastObservedAt": "2026-03-20T21:10:30.809Z",
-      "observations": 16,
+      "lastObservedAt": "2026-03-20T21:19:08.725Z",
+      "observations": 18,
       "cachedAt": "2026-03-20T00:29:19.652Z",
       "lastRefreshedAt": "2026-03-20T00:29:19.652Z"
     },
@@ -1966,8 +1967,8 @@
       "cacheKey": "artist_6USv9qhCn6zfxlBQIYJ9qs_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.909Z",
-      "lastObservedAt": "2026-03-20T21:10:30.900Z",
-      "observations": 17,
+      "lastObservedAt": "2026-03-20T21:19:08.817Z",
+      "observations": 19,
       "cachedAt": "2026-03-20T00:29:14.434Z",
       "lastRefreshedAt": "2026-03-20T00:29:14.434Z"
     },
@@ -1978,8 +1979,8 @@
       "cacheKey": "artist_7JhyuaeB60S8vsFRzcdN2o_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.909Z",
-      "lastObservedAt": "2026-03-20T21:10:30.818Z",
-      "observations": 16,
+      "lastObservedAt": "2026-03-20T21:19:08.736Z",
+      "observations": 18,
       "cachedAt": "2026-03-20T00:29:22.458Z",
       "lastRefreshedAt": "2026-03-20T00:29:22.458Z"
     },
@@ -1990,8 +1991,8 @@
       "cacheKey": "artist_0clWZsJkYSrFdmUkQygfiQ_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:27:45.911Z",
-      "lastObservedAt": "2026-03-20T21:10:30.904Z",
-      "observations": 16,
+      "lastObservedAt": "2026-03-20T21:19:08.823Z",
+      "observations": 18,
       "cachedAt": "2026-03-20T00:29:20.133Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.133Z"
     },
@@ -2107,8 +2108,8 @@
       "cacheKey": "artist_00x1fYSGhdqScXBRpSj3DW_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:14.705Z",
-      "lastObservedAt": "2026-03-20T21:10:30.930Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:27:58.943Z",
+      "observations": 9,
       "cachedAt": "2026-03-20T00:29:14.704Z",
       "lastRefreshedAt": "2026-03-20T00:29:14.704Z"
     },
@@ -2130,13 +2131,12 @@
       "id": "5p9HO3XC5P3BLxJs5Mtrhm",
       "status": "cached",
       "cacheKey": "artist_5p9HO3XC5P3BLxJs5Mtrhm_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:14.706Z",
-      "lastObservedAt": "2026-03-20T00:29:14.706Z",
-      "observations": 1,
-      "name": "Djo",
+      "lastObservedAt": "2026-03-20T21:19:36.830Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:14.705Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4113d395582d3667b7978430"
+      "lastRefreshedAt": "2026-03-20T00:29:14.705Z"
     },
     "artist_profile:6KImCVD70vtIoJWnq6nGn3": {
       "kind": "artist_profile",
@@ -2183,8 +2183,8 @@
       "cacheKey": "artist_4G9NDjRyZFDlJKMRL8hx3S_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:14.708Z",
-      "lastObservedAt": "2026-03-20T07:05:09.339Z",
-      "observations": 5,
+      "lastObservedAt": "2026-03-20T21:20:56.307Z",
+      "observations": 6,
       "cachedAt": "2026-03-20T00:29:14.707Z",
       "lastRefreshedAt": "2026-03-20T00:29:14.707Z"
     },
@@ -2449,8 +2449,8 @@
       "cacheKey": "artist_0fTSzq9jAh4c36UVb4V7CB_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:15.166Z",
-      "lastObservedAt": "2026-03-20T00:47:39.756Z",
-      "observations": 3,
+      "lastObservedAt": "2026-03-20T21:27:48.875Z",
+      "observations": 11,
       "cachedAt": "2026-03-20T00:29:15.165Z",
       "lastRefreshedAt": "2026-03-20T00:29:15.165Z"
     },
@@ -2524,13 +2524,12 @@
       "id": "1HY2Jd0NmPuamShAr6KMms",
       "status": "cached",
       "cacheKey": "artist_1HY2Jd0NmPuamShAr6KMms_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:15.358Z",
-      "lastObservedAt": "2026-03-20T00:29:15.358Z",
-      "observations": 1,
-      "name": "Lady Gaga",
+      "lastObservedAt": "2026-03-20T21:22:10.371Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:15.358Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebaadc18cac8d48124357c38e6"
+      "lastRefreshedAt": "2026-03-20T00:29:15.358Z"
     },
     "artist_profile:5RTLRtXjbXI2lSXc6jxlAz": {
       "kind": "artist_profile",
@@ -2601,13 +2600,12 @@
       "id": "74KM79TiuVKeVCqs8QtB0B",
       "status": "cached",
       "cacheKey": "artist_74KM79TiuVKeVCqs8QtB0B_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:15.670Z",
-      "lastObservedAt": "2026-03-20T00:29:15.670Z",
-      "observations": 1,
-      "name": "Sabrina Carpenter",
+      "lastObservedAt": "2026-03-20T21:20:56.420Z",
+      "observations": 5,
       "cachedAt": "2026-03-20T00:29:15.669Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb78e45cfa4697ce3c437cb455"
+      "lastRefreshedAt": "2026-03-20T00:29:15.669Z"
     },
     "artist_profile:3CIRif6ZAedT7kZSPvj2A4": {
       "kind": "artist_profile",
@@ -2857,13 +2855,12 @@
       "id": "4Gso3d4CscCijv0lmajZWs",
       "status": "cached",
       "cacheKey": "artist_4Gso3d4CscCijv0lmajZWs_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:16.084Z",
-      "lastObservedAt": "2026-03-20T00:29:16.084Z",
-      "observations": 1,
-      "name": "Don Toliver",
+      "lastObservedAt": "2026-03-20T21:22:10.379Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:16.084Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebc52b798deb89eb8414a51b7b"
+      "lastRefreshedAt": "2026-03-20T00:29:16.084Z"
     },
     "artist_profile:3S9Hg7sRKhmtWunFZ2yAYP": {
       "kind": "artist_profile",
@@ -3157,8 +3154,8 @@
       "cacheKey": "artist_67FB4n52MgexGQIG8s0yUH_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:16.670Z",
-      "lastObservedAt": "2026-03-20T21:10:30.921Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:27:48.854Z",
+      "observations": 11,
       "cachedAt": "2026-03-20T00:29:16.669Z",
       "lastRefreshedAt": "2026-03-20T00:29:16.669Z"
     },
@@ -3231,13 +3228,12 @@
       "id": "0NIIxcxNHmOoyBx03SfTCD",
       "status": "cached",
       "cacheKey": "artist_0NIIxcxNHmOoyBx03SfTCD_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:16.843Z",
-      "lastObservedAt": "2026-03-20T00:29:16.843Z",
-      "observations": 1,
-      "name": "Tinashe",
+      "lastObservedAt": "2026-03-20T21:27:49.011Z",
+      "observations": 9,
       "cachedAt": "2026-03-20T00:29:16.842Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba669f860c74c9007934d2cb6"
+      "lastRefreshedAt": "2026-03-20T00:29:16.842Z"
     },
     "artist_profile:4O15NlyKLIASxsJ0PrXPfz": {
       "kind": "artist_profile",
@@ -3565,13 +3561,12 @@
       "id": "46pWGuE3dSwY3bMMXGBvVS",
       "status": "cached",
       "cacheKey": "artist_46pWGuE3dSwY3bMMXGBvVS_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:17.688Z",
-      "lastObservedAt": "2026-03-20T00:29:17.688Z",
-      "observations": 1,
-      "name": "Rema",
+      "lastObservedAt": "2026-03-20T21:22:10.248Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:17.686Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcd9d661b6955241f33ef8a0a"
+      "lastRefreshedAt": "2026-03-20T00:29:17.686Z"
     },
     "artist_profile:20B8Ga2HfEUNJBAbZsJU2c": {
       "kind": "artist_profile",
@@ -3593,8 +3588,8 @@
       "cacheKey": "artist_20B8Ga2HfEUNJBAbZsJU2c_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:17.690Z",
-      "lastObservedAt": "2026-03-20T00:48:25.304Z",
-      "observations": 13,
+      "lastObservedAt": "2026-03-20T21:19:51.746Z",
+      "observations": 16,
       "cachedAt": "2026-03-20T00:29:17.689Z",
       "lastRefreshedAt": "2026-03-20T00:29:17.689Z"
     },
@@ -3618,8 +3613,8 @@
       "cacheKey": "artist_0RESbWvOMyua0yuyVrztJ5_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:17.693Z",
-      "lastObservedAt": "2026-03-20T00:48:25.308Z",
-      "observations": 13,
+      "lastObservedAt": "2026-03-20T21:19:51.740Z",
+      "observations": 16,
       "cachedAt": "2026-03-20T00:29:17.691Z",
       "lastRefreshedAt": "2026-03-20T00:29:17.691Z"
     },
@@ -3692,13 +3687,12 @@
       "id": "15iVAtD3s3FsQR4w1v6M0P",
       "status": "cached",
       "cacheKey": "artist_15iVAtD3s3FsQR4w1v6M0P_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:17.834Z",
-      "lastObservedAt": "2026-03-20T00:29:17.834Z",
-      "observations": 1,
-      "name": "Chief Keef",
+      "lastObservedAt": "2026-03-20T21:27:48.871Z",
+      "observations": 9,
       "cachedAt": "2026-03-20T00:29:17.833Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebe816aaf5f96c04fdfa8fadc7"
+      "lastRefreshedAt": "2026-03-20T00:29:17.833Z"
     },
     "artist_profile:7wlFDEWiM5OoIAt8RSli8b": {
       "kind": "artist_profile",
@@ -3883,13 +3877,12 @@
       "id": "23xFbA9rYgRX8mreqysWPc",
       "status": "cached",
       "cacheKey": "artist_23xFbA9rYgRX8mreqysWPc_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:18.068Z",
-      "lastObservedAt": "2026-03-20T00:29:18.068Z",
-      "observations": 1,
-      "name": "BossMan Dlow",
+      "lastObservedAt": "2026-03-20T21:20:56.426Z",
+      "observations": 5,
       "cachedAt": "2026-03-20T00:29:18.067Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebcaf6fb1684bd8bb4ece8d096"
+      "lastRefreshedAt": "2026-03-20T00:29:18.067Z"
     },
     "artist_profile:6OjtkJDlAZzlzAydEn78cK": {
       "kind": "artist_profile",
@@ -3934,13 +3927,12 @@
       "id": "0A0FS04o6zMoto8OKPsDwY",
       "status": "cached",
       "cacheKey": "artist_0A0FS04o6zMoto8OKPsDwY_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:18.223Z",
-      "lastObservedAt": "2026-03-20T00:29:18.223Z",
-      "observations": 1,
-      "name": "YG",
+      "lastObservedAt": "2026-03-20T21:20:56.415Z",
+      "observations": 5,
       "cachedAt": "2026-03-20T00:29:18.221Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb29831a7ff6177ec357478850"
+      "lastRefreshedAt": "2026-03-20T00:29:18.221Z"
     },
     "artist_profile:6qxpnaukVayrQn6ViNvu9I": {
       "kind": "artist_profile",
@@ -4086,13 +4078,12 @@
       "id": "2sflbTtCirog5VxD6jPAfb",
       "status": "cached",
       "cacheKey": "artist_2sflbTtCirog5VxD6jPAfb_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:18.492Z",
-      "lastObservedAt": "2026-03-20T00:29:18.492Z",
-      "observations": 1,
-      "name": "Monaleo",
+      "lastObservedAt": "2026-03-20T21:27:48.863Z",
+      "observations": 9,
       "cachedAt": "2026-03-20T00:29:18.492Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb731d64972c1d13bf1b1810c1"
+      "lastRefreshedAt": "2026-03-20T00:29:18.492Z"
     },
     "artist_profile:5f7VJjfbwm532GiveGC0ZK": {
       "kind": "artist_profile",
@@ -4305,13 +4296,12 @@
       "id": "3DbwFQlvLxRSi2uX8mf81A",
       "status": "cached",
       "cacheKey": "artist_3DbwFQlvLxRSi2uX8mf81A_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:18.975Z",
-      "lastObservedAt": "2026-03-20T00:29:18.975Z",
-      "observations": 1,
-      "name": "Sexyy Red",
+      "lastObservedAt": "2026-03-20T21:22:10.243Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:18.974Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebd341871daa2c688ea24dcf02"
+      "lastRefreshedAt": "2026-03-20T00:29:18.974Z"
     },
     "artist_profile:6fxyWrfmjcbj5d12gXeiNV": {
       "kind": "artist_profile",
@@ -4433,8 +4423,8 @@
       "cacheKey": "artist_0EeQBlQJFiAfJeVN2vT9s0_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:19.192Z",
-      "lastObservedAt": "2026-03-20T21:10:30.908Z",
-      "observations": 14,
+      "lastObservedAt": "2026-03-20T21:19:08.828Z",
+      "observations": 16,
       "cachedAt": "2026-03-20T00:29:19.191Z",
       "lastRefreshedAt": "2026-03-20T00:29:19.191Z"
     },
@@ -4458,8 +4448,8 @@
       "cacheKey": "artist_3pcerTbRFAPvWWtAfySFWB_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:19.193Z",
-      "lastObservedAt": "2026-03-20T21:10:30.912Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:19:08.834Z",
+      "observations": 8,
       "cachedAt": "2026-03-20T00:29:19.192Z",
       "lastRefreshedAt": "2026-03-20T00:29:19.192Z"
     },
@@ -4483,8 +4473,8 @@
       "cacheKey": "artist_3pbi8H08p95NUZ7m6ybxUV_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:19.197Z",
-      "lastObservedAt": "2026-03-20T21:10:30.917Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:19:08.842Z",
+      "observations": 8,
       "cachedAt": "2026-03-20T00:29:19.196Z",
       "lastRefreshedAt": "2026-03-20T00:29:19.196Z"
     },
@@ -4766,13 +4756,12 @@
       "id": "2R0CFyeMDiRbfkhkIMbyl1",
       "status": "cached",
       "cacheKey": "artist_2R0CFyeMDiRbfkhkIMbyl1_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:19.908Z",
-      "lastObservedAt": "2026-03-20T00:29:19.908Z",
-      "observations": 1,
-      "name": "Cash Cobain",
+      "lastObservedAt": "2026-03-20T21:22:10.238Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:19.907Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebb7cfe38800ef71a78754e83f"
+      "lastRefreshedAt": "2026-03-20T00:29:19.907Z"
     },
     "artist_profile:614WSOcC6h559Do1UR6k97": {
       "kind": "artist_profile",
@@ -4933,13 +4922,12 @@
       "id": "4gKgtmTsn635GvNGL8EXh8",
       "status": "cached",
       "cacheKey": "artist_4gKgtmTsn635GvNGL8EXh8_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.136Z",
-      "lastObservedAt": "2026-03-20T00:29:20.136Z",
-      "observations": 1,
-      "name": "Lorenzo Fiore",
+      "lastObservedAt": "2026-03-20T21:20:56.291Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:20.135Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb4c5f74b90fda5d8da275160a"
+      "lastRefreshedAt": "2026-03-20T00:29:20.135Z"
     },
     "artist_profile:4aPhtYq4FqnbM02GHtZHhz": {
       "kind": "artist_profile",
@@ -4961,8 +4949,8 @@
       "cacheKey": "artist_4aPhtYq4FqnbM02GHtZHhz_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.138Z",
-      "lastObservedAt": "2026-03-20T00:34:41.106Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T21:50:18.648Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:29:20.137Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.137Z"
     },
@@ -5075,8 +5063,8 @@
       "cacheKey": "artist_4XF98HJsL7ue3NksOvebiJ_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.362Z",
-      "lastObservedAt": "2026-03-20T00:34:41.112Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T21:50:20.087Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:29:20.361Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.361Z"
     },
@@ -5149,13 +5137,12 @@
       "id": "1Ld0guzIxggCOIbkE319nz",
       "status": "cached",
       "cacheKey": "artist_1Ld0guzIxggCOIbkE319nz_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.518Z",
-      "lastObservedAt": "2026-03-20T00:29:20.518Z",
-      "observations": 1,
-      "name": "Domi Nova",
+      "lastObservedAt": "2026-03-20T21:50:20.061Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:20.515Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bb0e5122eb52de8ef0ba8d78"
+      "lastRefreshedAt": "2026-03-20T00:29:20.515Z"
     },
     "artist_profile:297mB3xOXz7lxYcIY6Ur5E": {
       "kind": "artist_profile",
@@ -5177,8 +5164,8 @@
       "cacheKey": "artist_297mB3xOXz7lxYcIY6Ur5E_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.520Z",
-      "lastObservedAt": "2026-03-20T00:34:37.552Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T21:50:20.083Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:29:20.519Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.519Z"
     },
@@ -5202,8 +5189,8 @@
       "cacheKey": "artist_5BZjycpMPqgrPbJJq43szv_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.522Z",
-      "lastObservedAt": "2026-03-20T00:47:47.551Z",
-      "observations": 5,
+      "lastObservedAt": "2026-03-20T21:20:56.302Z",
+      "observations": 6,
       "cachedAt": "2026-03-20T00:29:20.521Z",
       "lastRefreshedAt": "2026-03-20T00:29:20.521Z"
     },
@@ -5300,13 +5287,12 @@
       "id": "5p7n7sxqcyq0G5BIan9PjM",
       "status": "cached",
       "cacheKey": "artist_5p7n7sxqcyq0G5BIan9PjM_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:20.782Z",
-      "lastObservedAt": "2026-03-20T00:29:20.782Z",
-      "observations": 1,
-      "name": "Rowan Elyse",
+      "lastObservedAt": "2026-03-20T21:22:10.258Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:20.781Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27328a669240bef6125d864e6e1"
+      "lastRefreshedAt": "2026-03-20T00:29:20.781Z"
     },
     "artist_profile:5mK058CiyrTC9IJtBMGixs": {
       "kind": "artist_profile",
@@ -5505,13 +5491,12 @@
       "id": "3QotXq2Hkg6Shoivd6GP71",
       "status": "cached",
       "cacheKey": "artist_3QotXq2Hkg6Shoivd6GP71_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.320Z",
-      "lastObservedAt": "2026-03-20T00:29:21.320Z",
-      "observations": 1,
-      "name": "Sine Hats",
+      "lastObservedAt": "2026-03-20T21:50:18.644Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:29:21.318Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eba2e58b4ead9594179f506a56"
+      "lastRefreshedAt": "2026-03-20T00:29:21.318Z"
     },
     "artist_profile:3GsfhG02GtXyYPOoc5QRa8": {
       "kind": "artist_profile",
@@ -5608,13 +5593,12 @@
       "id": "5MQgVlRZZAASmBxSk6bbqi",
       "status": "cached",
       "cacheKey": "artist_5MQgVlRZZAASmBxSk6bbqi_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.485Z",
-      "lastObservedAt": "2026-03-20T00:29:21.485Z",
-      "observations": 1,
-      "name": "Harmonic Reverie",
+      "lastObservedAt": "2026-03-20T21:22:10.375Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:21.483Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736a86c5db140303b258636a53"
+      "lastRefreshedAt": "2026-03-20T00:29:21.483Z"
     },
     "artist_profile:26Js1EtYSgTosRfHYbEpZG": {
       "kind": "artist_profile",
@@ -5634,13 +5618,12 @@
       "id": "26Js1EtYSgTosRfHYbEpZG",
       "status": "cached",
       "cacheKey": "artist_26Js1EtYSgTosRfHYbEpZG_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.487Z",
-      "lastObservedAt": "2026-03-20T00:29:21.487Z",
-      "observations": 1,
-      "name": "Lara Di Umbra",
+      "lastObservedAt": "2026-03-20T21:22:10.234Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:21.486Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb21a2a4ea50e44e2c49e0f159"
+      "lastRefreshedAt": "2026-03-20T00:29:21.486Z"
     },
     "artist_profile:5hVW03Fp1Lfjuz9VaMmrF4": {
       "kind": "artist_profile",
@@ -5662,8 +5645,8 @@
       "cacheKey": "artist_5hVW03Fp1Lfjuz9VaMmrF4_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.489Z",
-      "lastObservedAt": "2026-03-20T00:34:37.491Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T21:50:18.652Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:29:21.488Z",
       "lastRefreshedAt": "2026-03-20T00:29:21.488Z"
     },
@@ -5685,13 +5668,12 @@
       "id": "0nqRJVX6wgTfAlvltxr3d8",
       "status": "cached",
       "cacheKey": "artist_0nqRJVX6wgTfAlvltxr3d8_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.491Z",
-      "lastObservedAt": "2026-03-20T00:29:21.491Z",
-      "observations": 1,
-      "name": "Adrien Anviér",
+      "lastObservedAt": "2026-03-20T21:50:19.668Z",
+      "observations": 10,
       "cachedAt": "2026-03-20T00:29:21.490Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d8de2a7b039117b093304bbe"
+      "lastRefreshedAt": "2026-03-20T00:29:21.490Z"
     },
     "artist_profile:7eUaOSOuEptG91onQNFSCd": {
       "kind": "artist_profile",
@@ -5814,8 +5796,8 @@
       "cacheKey": "artist_0GZHuvPr2iFDH4BQFLOrEp_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:21.904Z",
-      "lastObservedAt": "2026-03-20T00:34:41.110Z",
-      "observations": 2,
+      "lastObservedAt": "2026-03-20T21:50:20.005Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:29:21.902Z",
       "lastRefreshedAt": "2026-03-20T00:29:21.902Z"
     },
@@ -5837,13 +5819,12 @@
       "id": "5uQAgpFL2lx2pufHYhPAin",
       "status": "cached",
       "cacheKey": "artist_5uQAgpFL2lx2pufHYhPAin_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.210Z",
-      "lastObservedAt": "2026-03-20T00:29:22.210Z",
-      "observations": 1,
-      "name": "Allysium",
+      "lastObservedAt": "2026-03-20T21:50:20.010Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:22.209Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb66c7abf3cf9896370ec84d17"
+      "lastRefreshedAt": "2026-03-20T00:29:22.209Z"
     },
     "artist_profile:6V5Qb50Rc4RxLMVRgLyD2W": {
       "kind": "artist_profile",
@@ -5863,13 +5844,12 @@
       "id": "6V5Qb50Rc4RxLMVRgLyD2W",
       "status": "cached",
       "cacheKey": "artist_6V5Qb50Rc4RxLMVRgLyD2W_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.212Z",
-      "lastObservedAt": "2026-03-20T00:29:22.212Z",
-      "observations": 1,
-      "name": "Ferragno",
+      "lastObservedAt": "2026-03-20T21:20:56.297Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:22.211Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734bb7ce89d588fdcd687a555d"
+      "lastRefreshedAt": "2026-03-20T00:29:22.211Z"
     },
     "artist_profile:25s9H1JQmTu3iuFzpXWUIg": {
       "kind": "artist_profile",
@@ -5927,13 +5907,12 @@
       "id": "3iXwpImyv9kqSfxcTtfou5",
       "status": "cached",
       "cacheKey": "artist_3iXwpImyv9kqSfxcTtfou5_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.461Z",
-      "lastObservedAt": "2026-03-20T00:29:22.461Z",
-      "observations": 1,
-      "name": "Blue George",
+      "lastObservedAt": "2026-03-20T21:50:18.685Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:29:22.460Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bde9803fd736835d928ea2e9"
+      "lastRefreshedAt": "2026-03-20T00:29:22.460Z"
     },
     "artist_profile:5CswSV6SeGqATyFK4cEUqg": {
       "kind": "artist_profile",
@@ -5953,13 +5932,12 @@
       "id": "5CswSV6SeGqATyFK4cEUqg",
       "status": "cached",
       "cacheKey": "artist_5CswSV6SeGqATyFK4cEUqg_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.698Z",
-      "lastObservedAt": "2026-03-20T00:29:22.698Z",
-      "observations": 1,
-      "name": "Novo Alonso",
+      "lastObservedAt": "2026-03-20T21:27:48.867Z",
+      "observations": 9,
       "cachedAt": "2026-03-20T00:29:22.697Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f139bc1bc67a6a28b0ee9a2f"
+      "lastRefreshedAt": "2026-03-20T00:29:22.697Z"
     },
     "artist_profile:7p0rpxmlHJrDNXr8CP2JhW": {
       "kind": "artist_profile",
@@ -5979,13 +5957,12 @@
       "id": "7p0rpxmlHJrDNXr8CP2JhW",
       "status": "cached",
       "cacheKey": "artist_7p0rpxmlHJrDNXr8CP2JhW_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.701Z",
-      "lastObservedAt": "2026-03-20T00:29:22.701Z",
-      "observations": 1,
-      "name": "Mes Croquis",
+      "lastObservedAt": "2026-03-20T21:22:10.253Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:22.699Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb5b891fef83769bbc79027792"
+      "lastRefreshedAt": "2026-03-20T00:29:22.699Z"
     },
     "artist_profile:774mkzUMjSY8lZyRwVJqen": {
       "kind": "artist_profile",
@@ -6030,13 +6007,12 @@
       "id": "42tiVWaBUkjkRqg3c5EoRG",
       "status": "cached",
       "cacheKey": "artist_42tiVWaBUkjkRqg3c5EoRG_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.707Z",
-      "lastObservedAt": "2026-03-20T00:29:22.707Z",
-      "observations": 1,
-      "name": "Rhian Cadogan",
+      "lastObservedAt": "2026-03-20T21:19:36.824Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:22.705Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27372632947689c31fdb2acbc1d"
+      "lastRefreshedAt": "2026-03-20T00:29:22.705Z"
     },
     "artist_profile:5W982ShqwBuQZHoATVqi4q": {
       "kind": "artist_profile",
@@ -6084,8 +6060,8 @@
       "cacheKey": "artist_4VWpxQlVnMltoRKKVToSJM_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.880Z",
-      "lastObservedAt": "2026-03-20T07:05:15.642Z",
-      "observations": 3,
+      "lastObservedAt": "2026-03-20T21:50:20.014Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:29:22.877Z",
       "lastRefreshedAt": "2026-03-20T00:29:22.877Z"
     },
@@ -6183,13 +6159,12 @@
       "id": "1gD9cydWC0yCBMG8Bn6tau",
       "status": "cached",
       "cacheKey": "artist_1gD9cydWC0yCBMG8Bn6tau_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:22.892Z",
-      "lastObservedAt": "2026-03-20T00:29:22.892Z",
-      "observations": 1,
-      "name": "Valter Soll",
+      "lastObservedAt": "2026-03-20T21:50:20.091Z",
+      "observations": 10,
       "cachedAt": "2026-03-20T00:29:22.891Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb2cde7ed9152f66dc9efe7fc1"
+      "lastRefreshedAt": "2026-03-20T00:29:22.891Z"
     },
     "artist_profile:7HUDHULnPyXARDfZzsx5xc": {
       "kind": "artist_profile",
@@ -6364,8 +6339,8 @@
       "cacheKey": "artist_4awKyidTqtd5z49BGOLvck_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.191Z",
-      "lastObservedAt": "2026-03-20T07:05:15.633Z",
-      "observations": 3,
+      "lastObservedAt": "2026-03-20T21:50:19.664Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:29:23.189Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.189Z"
     },
@@ -6387,13 +6362,12 @@
       "id": "51sDI12AiFuof8oXlSrdnM",
       "status": "cached",
       "cacheKey": "artist_51sDI12AiFuof8oXlSrdnM_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.193Z",
-      "lastObservedAt": "2026-03-20T00:29:23.193Z",
-      "observations": 1,
-      "name": "Reinhard Krause",
+      "lastObservedAt": "2026-03-20T21:27:58.938Z",
+      "observations": 7,
       "cachedAt": "2026-03-20T00:29:23.192Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273086119191d5369e14149ecb6"
+      "lastRefreshedAt": "2026-03-20T00:29:23.192Z"
     },
     "artist_profile:1Po25zG3Yrda2a6il6VH8l": {
       "kind": "artist_profile",
@@ -6465,8 +6439,8 @@
       "cacheKey": "artist_06bxyT4bXPZaKsInaJ75UL_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.384Z",
-      "lastObservedAt": "2026-03-20T21:10:30.925Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:50:18.681Z",
+      "observations": 10,
       "cachedAt": "2026-03-20T00:29:23.381Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.381Z"
     },
@@ -6541,8 +6515,8 @@
       "cacheKey": "artist_6HWqfAvhFGVzX04XxDZBVw_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.395Z",
-      "lastObservedAt": "2026-03-20T07:03:21.665Z",
-      "observations": 4,
+      "lastObservedAt": "2026-03-20T21:50:19.660Z",
+      "observations": 5,
       "cachedAt": "2026-03-20T00:29:23.394Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.394Z"
     },
@@ -6564,13 +6538,12 @@
       "id": "3MuhX7tuEdOUvsOGg7ui02",
       "status": "cached",
       "cacheKey": "artist_3MuhX7tuEdOUvsOGg7ui02_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.398Z",
-      "lastObservedAt": "2026-03-20T00:29:23.398Z",
-      "observations": 1,
-      "name": "Barry Hudson-Taylor",
+      "lastObservedAt": "2026-03-20T21:19:51.664Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:29:23.396Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb14e4997bcdf0f2097e63960c"
+      "lastRefreshedAt": "2026-03-20T00:29:23.396Z"
     },
     "artist_profile:2Nk5XPyODZYGkTpGPQel2Q": {
       "kind": "artist_profile",
@@ -6669,8 +6642,8 @@
       "cacheKey": "artist_1qGVG7uUHFWBfuUXIon1gt_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.523Z",
-      "lastObservedAt": "2026-03-20T07:03:21.872Z",
-      "observations": 4,
+      "lastObservedAt": "2026-03-20T21:50:18.630Z",
+      "observations": 6,
       "cachedAt": "2026-03-20T00:29:23.522Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.522Z"
     },
@@ -6694,8 +6667,8 @@
       "cacheKey": "artist_3pyGXjDKAt3czGsh7vxkT0_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.526Z",
-      "lastObservedAt": "2026-03-20T00:48:25.296Z",
-      "observations": 14,
+      "lastObservedAt": "2026-03-20T21:20:56.312Z",
+      "observations": 18,
       "cachedAt": "2026-03-20T00:29:23.525Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.525Z"
     },
@@ -6768,13 +6741,12 @@
       "id": "1vYrIm6O7VtBGszIWe75mB",
       "status": "cached",
       "cacheKey": "artist_1vYrIm6O7VtBGszIWe75mB_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.756Z",
-      "lastObservedAt": "2026-03-20T00:29:23.756Z",
-      "observations": 1,
-      "name": "Gabríel Ólafs",
+      "lastObservedAt": "2026-03-20T21:27:58.933Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:23.754Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb078b77503f0709b9c69b010e"
+      "lastRefreshedAt": "2026-03-20T00:29:23.754Z"
     },
     "artist_profile:7ICIWajOxziHTqP1yzsz74": {
       "kind": "artist_profile",
@@ -6822,8 +6794,8 @@
       "cacheKey": "artist_41P9wQe7ndXNRH4dMmeWXi_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.761Z",
-      "lastObservedAt": "2026-03-20T21:10:30.934Z",
-      "observations": 6,
+      "lastObservedAt": "2026-03-20T21:19:08.865Z",
+      "observations": 8,
       "cachedAt": "2026-03-20T00:29:23.760Z",
       "lastRefreshedAt": "2026-03-20T00:29:23.760Z"
     },
@@ -6845,13 +6817,12 @@
       "id": "0CEd23JZvyemacknJwWM9O",
       "status": "cached",
       "cacheKey": "artist_0CEd23JZvyemacknJwWM9O_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:23.972Z",
-      "lastObservedAt": "2026-03-20T00:29:23.972Z",
-      "observations": 1,
-      "name": "Les Rêveries",
+      "lastObservedAt": "2026-03-20T21:20:56.317Z",
+      "observations": 5,
       "cachedAt": "2026-03-20T00:29:23.970Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb081094ec50b3deff3554a2b5"
+      "lastRefreshedAt": "2026-03-20T00:29:23.970Z"
     },
     "artist_profile:3NMfMCA11Xo7RUc91o64Og": {
       "kind": "artist_profile",
@@ -7000,13 +6971,12 @@
       "id": "7JCthCuu5Wmxv2avqVFolo",
       "status": "cached",
       "cacheKey": "artist_7JCthCuu5Wmxv2avqVFolo_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:29:24.255Z",
-      "lastObservedAt": "2026-03-20T00:29:24.255Z",
-      "observations": 1,
-      "name": "Roger Eno",
+      "lastObservedAt": "2026-03-20T21:50:20.067Z",
+      "observations": 2,
       "cachedAt": "2026-03-20T00:29:24.253Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5ebad9a78089b97ab73df84721f"
+      "lastRefreshedAt": "2026-03-20T00:29:24.253Z"
     },
     "artist_profile:0R0y4nv4vZlqcgbNYVhwIo": {
       "kind": "artist_profile",
@@ -7842,13 +7812,12 @@
       "id": "1RRY8KBuZYuhAAJRgdDlP9",
       "status": "cached",
       "cacheKey": "artist_1RRY8KBuZYuhAAJRgdDlP9_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:34:22.683Z",
-      "lastObservedAt": "2026-03-20T00:34:22.683Z",
-      "observations": 1,
-      "name": "Ole-Bjørn Talstad",
+      "lastObservedAt": "2026-03-20T21:19:51.751Z",
+      "observations": 4,
       "cachedAt": "2026-03-20T00:34:22.679Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb8bd703c434812d1377722975"
+      "lastRefreshedAt": "2026-03-20T00:34:22.679Z"
     },
     "artist_profile:6hLr4Lg3n1F95Xmzn8ZcnA": {
       "kind": "artist_profile",
@@ -7931,13 +7900,12 @@
       "id": "3DkwuBQlbF81WFD2hhmkPR",
       "status": "cached",
       "cacheKey": "artist_3DkwuBQlbF81WFD2hhmkPR_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:34:22.700Z",
-      "lastObservedAt": "2026-03-20T00:34:22.700Z",
-      "observations": 1,
-      "name": "M. Ljungström",
+      "lastObservedAt": "2026-03-20T21:50:18.689Z",
+      "observations": 3,
       "cachedAt": "2026-03-20T00:34:22.698Z",
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d083d1dd0f5d82fecd7061f1"
+      "lastRefreshedAt": "2026-03-20T00:34:22.698Z"
     },
     "artist_profile:5J3gBMCxZ68jLD8aijjftS": {
       "kind": "artist_profile",
@@ -8061,8 +8029,8 @@
       "cacheKey": "artist_4z0Dltam2MLIOC06UvwVel_image",
       "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:34:22.901Z",
-      "lastObservedAt": "2026-03-20T07:03:21.700Z",
-      "observations": 4,
+      "lastObservedAt": "2026-03-20T21:50:18.635Z",
+      "observations": 6,
       "cachedAt": "2026-03-20T00:34:22.900Z",
       "lastRefreshedAt": "2026-03-20T00:34:22.900Z"
     },
@@ -8122,13 +8090,12 @@
       "id": "61cavYEyS6y1T99hc6gjYI",
       "status": "cached",
       "cacheKey": "artist_61cavYEyS6y1T99hc6gjYI_image",
-      "note": "Artist image refreshed for the demo library.",
+      "note": "Served artist image from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:34:23.119Z",
-      "lastObservedAt": "2026-03-20T00:34:23.119Z",
-      "observations": 1,
-      "name": "Arata Rin",
+      "lastObservedAt": "2026-03-20T21:50:18.639Z",
+      "observations": 11,
       "cachedAt": "2026-03-20T00:34:23.116Z",
-      "imageUrl": "https://i.scdn.co/image/ab6761610000e5eb27838dfa6faf3e06bb87a09a"
+      "lastRefreshedAt": "2026-03-20T00:34:23.116Z"
     },
     "artist_profile:3XabrLwWwxIntz6A6X9naj": {
       "kind": "artist_profile",
@@ -9098,14 +9065,14 @@
       "id": "0Bv6OJO0L5gcf20DMww54a",
       "status": "cached",
       "cacheKey": "album_0Bv6OJO0L5gcf20DMww54a_tracks_all",
-      "note": "Album tracks cached for the demo album flow.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:41:20.944Z",
-      "lastObservedAt": "2026-03-20T00:46:28.577Z",
-      "observations": 5,
-      "albumName": "Man I Need",
+      "lastObservedAt": "2026-03-20T21:19:49.378Z",
+      "observations": 6,
+      "cachedAt": "2026-03-20T00:41:20.943Z",
+      "lastRefreshedAt": "2026-03-20T00:41:20.943Z",
       "total": 3,
-      "itemCount": 3,
-      "cachedAt": "2026-03-20T00:41:20.943Z"
+      "itemCount": 3
     },
     "album_tracks:4JDXBZdRPId4devseaAOKH": {
       "kind": "album_tracks",
@@ -9266,14 +9233,14 @@
       "id": "7GS4aKISJ2KgAm4aBhkzng",
       "status": "cached",
       "cacheKey": "album_7GS4aKISJ2KgAm4aBhkzng_tracks_all",
-      "note": "Album tracks cached for the demo album flow.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:41:22.672Z",
-      "lastObservedAt": "2026-03-20T00:46:28.616Z",
-      "observations": 5,
-      "albumName": "Die On This Hill",
+      "lastObservedAt": "2026-03-20T21:23:03.473Z",
+      "observations": 6,
+      "cachedAt": "2026-03-20T00:41:22.671Z",
+      "lastRefreshedAt": "2026-03-20T00:41:22.671Z",
       "total": 4,
-      "itemCount": 4,
-      "cachedAt": "2026-03-20T00:41:22.671Z"
+      "itemCount": 4
     },
     "album_tracks:4UMjBXcRqIgMZ1XumU2x5T": {
       "kind": "album_tracks",
@@ -9658,14 +9625,14 @@
       "id": "6rpin9IVOuBEWBYnrA9hft",
       "status": "cached",
       "cacheKey": "album_6rpin9IVOuBEWBYnrA9hft_tracks_all",
-      "note": "Album tracks cached for the demo album flow.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:41:26.877Z",
-      "lastObservedAt": "2026-03-20T00:46:28.709Z",
-      "observations": 5,
-      "albumName": "Gabriela",
+      "lastObservedAt": "2026-03-20T21:22:13.137Z",
+      "observations": 6,
+      "cachedAt": "2026-03-20T00:41:26.877Z",
+      "lastRefreshedAt": "2026-03-20T00:41:26.877Z",
       "total": 2,
-      "itemCount": 2,
-      "cachedAt": "2026-03-20T00:41:26.877Z"
+      "itemCount": 2
     },
     "album_tracks:1W57oNaAkGObOQKBTxg4e9": {
       "kind": "album_tracks",
@@ -9770,14 +9737,14 @@
       "id": "2QWd1BsO7J0zLwxhsKl3zh",
       "status": "cached",
       "cacheKey": "album_2QWd1BsO7J0zLwxhsKl3zh_tracks_all",
-      "note": "Album tracks cached for the demo album flow.",
+      "note": "Served from mock demo cache.",
       "firstObservedAt": "2026-03-20T00:41:28.139Z",
-      "lastObservedAt": "2026-03-20T00:46:28.733Z",
-      "observations": 5,
-      "albumName": "Messy",
+      "lastObservedAt": "2026-03-20T21:24:40.030Z",
+      "observations": 6,
+      "cachedAt": "2026-03-20T00:41:28.138Z",
+      "lastRefreshedAt": "2026-03-20T00:41:28.138Z",
       "total": 6,
-      "itemCount": 6,
-      "cachedAt": "2026-03-20T00:41:28.138Z"
+      "itemCount": 6
     },
     "album_tracks:10FLjwfpbxLmW8c25Xyc2N": {
       "kind": "album_tracks",
@@ -9980,14 +9947,10 @@
       "id": "21xGzx6HTydCnvfZTvLf6b",
       "status": "needed",
       "cacheKey": "album_21xGzx6HTydCnvfZTvLf6b_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:30.155Z",
-      "lastObservedAt": "2026-03-20T00:44:03.402Z",
-      "observations": 4,
-      "albumName": "Ca$ino",
-      "expectedTotal": 11,
-      "retryAfterSeconds": 76265,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:24:33.351Z",
+      "observations": 5
     },
     "album_tracks:4itKk52E9ZCdWUQcFAkud9": {
       "kind": "album_tracks",
@@ -10148,14 +10111,10 @@
       "id": "3SqG2aIX6OI0o4SFSDqHjr",
       "status": "needed",
       "cacheKey": "album_3SqG2aIX6OI0o4SFSDqHjr_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:31.077Z",
-      "lastObservedAt": "2026-03-20T00:44:04.371Z",
-      "observations": 4,
-      "albumName": "Motion Party",
-      "expectedTotal": 2,
-      "retryAfterSeconds": 76264,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:23:25.434Z",
+      "observations": 7
     },
     "album_tracks:0EnjeA3ZeMivEGuACIgrQi": {
       "kind": "album_tracks",
@@ -10330,14 +10289,10 @@
       "id": "4Fx0xGlG4kmNBjzPVx7xGY",
       "status": "needed",
       "cacheKey": "album_4Fx0xGlG4kmNBjzPVx7xGY_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:32.029Z",
-      "lastObservedAt": "2026-03-20T00:44:05.411Z",
-      "observations": 4,
-      "albumName": "Disco Mafia Pack",
-      "expectedTotal": 4,
-      "retryAfterSeconds": 76263,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:24:34.573Z",
+      "observations": 7
     },
     "album_tracks:2baqPDpNzQ8eu8tGM98lZA": {
       "kind": "album_tracks",
@@ -11970,22 +11925,18 @@
       "cacheKey": "album_7ICabDvPYVzaAOL0Nt7JxD_tracks_all",
       "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:43.970Z",
-      "lastObservedAt": "2026-03-20T07:04:06.374Z",
-      "observations": 2
+      "lastObservedAt": "2026-03-20T21:49:54.990Z",
+      "observations": 4
     },
     "album_tracks:4togAOBBwtO2gJ7zULCDYi": {
       "kind": "album_tracks",
       "id": "4togAOBBwtO2gJ7zULCDYi",
       "status": "needed",
       "cacheKey": "album_4togAOBBwtO2gJ7zULCDYi_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:44.050Z",
-      "lastObservedAt": "2026-03-20T00:41:44.050Z",
-      "observations": 1,
-      "albumName": "Kalmte",
-      "expectedTotal": 5,
-      "retryAfterSeconds": 76404,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:49:52.137Z",
+      "observations": 3
     },
     "album_tracks:5tmo9htHpTWaVxZEgHFtB8": {
       "kind": "album_tracks",
@@ -12076,14 +12027,10 @@
       "id": "4HbZNk7ptUjYxOUy0yFCGI",
       "status": "needed",
       "cacheKey": "album_4HbZNk7ptUjYxOUy0yFCGI_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:44.651Z",
-      "lastObservedAt": "2026-03-20T00:41:44.651Z",
-      "observations": 1,
-      "albumName": "Songs Of Sundown",
-      "expectedTotal": 16,
-      "retryAfterSeconds": 76403,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:50:02.512Z",
+      "observations": 2
     },
     "album_tracks:096g5y9CPefSvUd9EhzL65": {
       "kind": "album_tracks",
@@ -12104,14 +12051,10 @@
       "id": "26z4j76XfqW15DPpGXEx3D",
       "status": "needed",
       "cacheKey": "album_26z4j76XfqW15DPpGXEx3D_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:44.808Z",
-      "lastObservedAt": "2026-03-20T00:41:44.808Z",
-      "observations": 1,
-      "albumName": "Noktúrna Variations",
-      "expectedTotal": 3,
-      "retryAfterSeconds": 76403,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:49:53.989Z",
+      "observations": 5
     },
     "album_tracks:2pRy5vvv9wU2guTJuw1X9m": {
       "kind": "album_tracks",
@@ -12174,14 +12117,10 @@
       "id": "0tVEjAfGFPBdtvql2BUHKs",
       "status": "needed",
       "cacheKey": "album_0tVEjAfGFPBdtvql2BUHKs_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:45.211Z",
-      "lastObservedAt": "2026-03-20T00:41:45.211Z",
-      "observations": 1,
-      "albumName": "Under",
-      "expectedTotal": 5,
-      "retryAfterSeconds": 76403,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:49:53.557Z",
+      "observations": 3
     },
     "album_tracks:7H66SSCcsdRnEdhQxdan7r": {
       "kind": "album_tracks",
@@ -13252,14 +13191,10 @@
       "id": "1Kw1bVd07oRqcjrcjQKC8T",
       "status": "needed",
       "cacheKey": "album_1Kw1bVd07oRqcjrcjQKC8T_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:51.546Z",
-      "lastObservedAt": "2026-03-20T00:41:51.546Z",
-      "observations": 1,
-      "albumName": "Talk That Talk",
-      "expectedTotal": 11,
-      "retryAfterSeconds": 76396,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:24:38.376Z",
+      "observations": 2
     },
     "album_tracks:6cunQQ7YZisYOoiFu2ywIq": {
       "kind": "album_tracks",
@@ -13532,14 +13467,10 @@
       "id": "2vD3zSQr8hNlg0obNel4TE",
       "status": "needed",
       "cacheKey": "album_2vD3zSQr8hNlg0obNel4TE_tracks_all",
-      "note": "Album tracks still need to be cached for the demo album flow.",
+      "note": "This album is not cached for the demo yet.",
       "firstObservedAt": "2026-03-20T00:41:53.124Z",
-      "lastObservedAt": "2026-03-20T00:41:53.124Z",
-      "observations": 1,
-      "albumName": "Camila",
-      "expectedTotal": 11,
-      "retryAfterSeconds": 76395,
-      "lastStatus": 429
+      "lastObservedAt": "2026-03-20T21:24:38.992Z",
+      "observations": 2
     },
     "album_tracks:2sBB17RXTamvj7Ncps15AK": {
       "kind": "album_tracks",

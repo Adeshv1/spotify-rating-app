@@ -1,101 +1,111 @@
-# Spotify Rating App User Guide
+# Rankify User Guide
 
-This document explains how the website works from a user perspective.
+This guide explains the current app flow from a user point of view.
 
-## What the site does
+## What the app does
 
-The app lets you build a global ranking of your Spotify songs.
+Rankify helps you build one global ranking of your music.
 
-It is designed around three main ideas:
+The core workflow is:
 
-- You add playlists from your Spotify account into the app.
-- You rank songs using a binary comparison flow instead of scoring everything manually.
-- The dashboard turns your ranked songs into useful views like top songs, top artists, and album progress.
+- bring playlists into the app
+- rank songs with a binary placement flow
+- review the results in the dashboard
 
-The ranking is global. A song only needs to be ranked once, even if it appears in multiple playlists or albums.
+The ranking is global, not per playlist. If the same song appears in multiple playlists or albums, you should only need to rank it once.
 
-## Main pages
+## Ways to enter the app
 
-The website has three main signed-in pages:
+When you open the site while signed out, you land on a simple public page with two options:
+
+- `Sign in with Spotify`
+- `Try Demo`
+
+### Sign in with Spotify
+
+Use this when you want to work with your own Spotify playlists.
+
+The app requests enough Spotify access to:
+
+- read your playlists
+- read playlist tracks when you open or sync them
+- open playlists, tracks, artists, and albums in Spotify
+
+If the deployed Spotify app is still in development mode, your account may need to be allowlisted in the Spotify Developer Dashboard before login will work.
+
+### Try Demo
+
+Use this when you want to explore the product without Spotify login.
+
+Demo mode loads a shared pre-cached library so you can browse playlists, rank songs locally in your browser, and see how the dashboard works.
+
+## Main signed-in pages
+
+The main app has three pages:
 
 1. `Playlists`
 2. `Rank Songs`
 3. `Dashboard`
 
-There is also a public landing page for people who are not signed in.
+There is also a playlist detail view that opens from the Playlists page.
 
-## Public landing page
+## Header actions
 
-When someone opens the site without logging in, they see:
+After login or demo entry, the top bar includes:
 
-- A short explanation of the app
-- A `Sign in with Spotify` button
-- A read-only dashboard preview
+- navigation for `Playlists`, `Rank Songs`, and `Dashboard`
+- `Export / Import`
+- `How to use`
+- `Log out`
 
-The public preview is just for viewing. It does not let the visitor add playlists or rank songs.
-
-## Signing in
-
-Users sign in with Spotify.
-
-After login, the app can:
-
-- Read the user's playlists
-- Read playlist tracks when the user chooses to add a playlist
-- Open songs, artists, albums, and playlists in Spotify
+`Export / Import` backs up or restores your local app state. `How to use` opens a short in-app summary of the recommended workflow.
 
 ## Playlists page
 
-The Playlists page is where users choose what music to bring into the ranking system.
+The Playlists page is where you decide what music enters the ranking pool.
 
-Each playlist card shows:
+Each playlist card can show:
 
-- The playlist cover image
-- The playlist title
-- The playlist owner
-- Whether it has already been added to rankings
-- Whether the track cache is fresh or outdated
+- playlist cover
+- playlist name
+- playlist owner
+- track count when known
+- whether the playlist has already been added to the global ranking pool
+- the last sync time when the playlist has been ingested already
 
-There is also a playlist search bar at the top so users can filter by playlist name or owner.
+There is also a search bar so you can filter playlists by name or owner.
 
-### Actions on the Playlists page
+### Playlist actions
 
-Each playlist has two main actions:
+Each playlist card supports two main actions:
 
-- Click the cover or title to open the playlist detail page
-- Click `Add to Rankings` or `Refresh Playlist` to import the playlist's songs into the app
+- click the cover or title to open the playlist detail view
+- click `Add to Global Ranking` or `Sync`
 
-### What happens when a playlist is added
+`Add to Global Ranking` pulls the playlist's songs into your ranking pool for the first time.
 
-When the user adds a playlist:
+`Sync` refreshes the playlist from Spotify and updates the songs the app uses for that playlist.
 
-- The app fetches the playlist tracks from Spotify
-- The track list is cached locally
-- Songs from the playlist are added into the user's global song pool
-- If the playlist was already added before, refreshing it updates the cached track list
+### Important detail
 
-This means the app separates:
+A playlist existing in Spotify is not the same as that playlist being included in the app.
 
-- having a playlist in Spotify
-- having that playlist ingested into the app's ranking system
+You can see a playlist in the list before it has been ingested into your ranking pool.
 
-## Playlist detail page
+## Playlist detail view
 
-When a user opens a playlist from the Playlists page, they see:
+When you open a playlist, the app shows a track table for that playlist.
 
-- The playlist name
-- Cache information for that playlist
-- A table of tracks in the playlist
+The table includes:
 
-The playlist track table is mainly a browsing view. It shows:
+- playlist order
+- global rank, if the song is already ranked
+- song name
+- artist
+- album
+- `Play`
 
-- Song name
-- Artist
-- Album
-- Global rank, if the song is already ranked
-- A `Play` button when Spotify can open that song
-
-This page helps users inspect what is inside a playlist and how those songs currently relate to the global ranking.
+This is mainly a browsing screen. It helps you inspect the playlist and see how its songs currently fit into the larger ranking.
 
 ## Rank Songs page
 
@@ -107,202 +117,172 @@ It has three columns:
 2. `Rank`
 3. `Ranked`
 
-### Unranked column
+### Unranked
 
-This column contains songs that are in the global song pool but are not yet ranked.
+This column contains songs that are in your global pool but do not have a placed rank yet.
 
-Users can:
+You can:
 
-- Search unranked songs
-- Click `Rank` to start placing a song
-- Click `Play` to open the song in Spotify
-- Click the `x` button to move a song into `Do not rate`
+- search unranked songs
+- click `Rank` to start placing a song
+- click `Play` to open the song in Spotify
+- move a song into `Do not rate`
 
-At the bottom of the column there is a `Do not rate` section.
+At the bottom of the column there is a collapsible `Do not rate` section.
 
-Songs in `Do not rate` are excluded from ranking until the user restores them.
+Songs in `Do not rate` are excluded from the ranking flow until you restore them.
 
-Users can:
+### Rank
 
-- Open the `Do not rate` list
-- Click `Add to Ranking` to move a song back into the normal ranking flow
+This column runs the binary placement flow.
 
-### Rank column
+When you start ranking a song, the app compares that active song against songs that already have positions in the ordered list. Each choice narrows the correct insertion point until the app can place the song.
 
-This is the binary sort interface.
+Available actions include:
 
-When a user starts ranking a song, the app compares that active song against a song that already has a position in the global order.
+- `Better` on either side
+- `Play` for either song when Spotify playback/open is available
+- `Skip`
+- `Do not rate`
 
-The user chooses which song is better.
+This is much faster than trying to score every song manually.
 
-Each choice narrows the correct position for the active song until the app knows exactly where to insert it.
+### Ranked
 
-Available actions in this column:
+This column shows the ordered list of ranked songs.
 
-- `Better` on the left song
-- `Better` on the right song
-- `Play` for either song when available
-- `Skip` to leave the current song and pick another one later
-- `Do not rate` to exclude the active song from ranking
+You can:
 
-This method is faster than comparing every song against every other song.
-
-### Ranked column
-
-This column shows the current global order of all ranked songs.
-
-Users can:
-
-- Search ranked songs
-- Hover a row to swap the visible rank number with a `Play` button
-- Click the up arrow to move a song up by one spot
-- Click the down arrow to move a song down by one spot
-- Click `Reset` to move a song back to unranked and place it again from scratch
-
-This page is the core ranking workflow for the site.
+- search ranked songs
+- hover a row to reveal `Play`
+- move a song up by one slot
+- move a song down by one slot
+- click `Reset` to send a song back to unranked
 
 ## Dashboard page
 
-The Dashboard page turns ranked data into summary views.
+The Dashboard summarizes the current global ranking.
 
-It has three major sections:
+Its main sections are:
 
 1. `Top songs`
 2. `Top artists`
 3. `Album progress`
 
-There is also an `Export / Import` section at the top.
-
 ### Top songs
 
-This section shows the user's best ranked songs in order.
+This is the straightforward ordered list of your highest-ranked songs.
 
-Each row shows:
+Rows show:
 
-- Rank number
-- Song name
-- Artist names
-- A `Play` button
+- rank
+- song name
+- artist names
+- `Play`
 
 ### Top artists
 
-This section groups ranked songs by artist and estimates artist strength from the user's song rankings.
+This section estimates artist strength from your ranked songs.
 
-Each artist card shows:
+Each artist card can show:
 
-- Artist image when available
-- Artist name
-- Average rank based on that artist's top songs
-- A short list of the artist's best songs in the user's ranking
-- A `Play` button to open the artist in Spotify
+- artist image
+- artist name
+- average rank based on that artist's top songs
+- ranked track count
+- the artist's top songs from your ranking
+- a `Play` button that opens the artist in Spotify
 
-This is not based on Spotify popularity. It is based on the user's own song order.
+This is based on your ranking, not Spotify popularity.
 
 ### Album progress
 
-This section shows albums that have at least one rated song.
+Album progress helps you finish ranking albums that already have at least one rated song.
 
 Each album row shows:
 
-- Album rank inside the dashboard
-- Album name
-- Artist label
-- Average rank of the album's rated songs
-- How many songs are rated out of the total album track count
+- position in the dashboard table
+- album name
+- artist
+- average rank
+- completion percentage and rated-track count
 
-Users can expand an album row with `Show`.
+You can expand an album row to see:
 
-When expanded, the album view shows:
+- `Rated`
+- `Unrated`
+- `DO NOT RATE`
+- `Open album`
+- `Rate next song`
 
-- `Rated` songs
-- `Unrated` songs
-- `DO NOT RATE` songs inside the unrated side
-- `Open album` to open the album in Spotify
-- `Rate next song` to immediately start ranking the next available song
+Inside the expanded view:
 
-Within an expanded album:
+- rated songs show their rank and `Play`
+- unrated songs can be sent into the ranking flow with `Rate`
+- `DO NOT RATE` songs can also be restored and ranked again
 
-- Rated songs have their rank number and a `Play` button
-- Unrated songs have a `Rate` button
-- Songs in `DO NOT RATE` also have a `Rate` button, which restores them and starts ranking them again
-
-### How album progress works
-
-Album progress is meant to help users finish albums from their existing ranked music pool.
-
-The app can fetch the full track list for an album when needed so album progress is more accurate than just looking at playlist copies of songs.
-
-If the same song appears on more than one album, the app tries to keep one song identity for ranking while still letting that song count toward each relevant album.
+Album progress uses cached full album tracklists when needed, so it can be more complete than a single playlist copy of an album.
 
 ## Export and Import
 
-At the top of the Dashboard page, users can:
+The `Export / Import` menu backs up or restores the local app state for the current browser.
 
-- Export JSON
-- Import JSON
+Export includes:
 
-This is for moving or backing up ranking data.
+- ranking data
+- local playlist state
+- related local app data used by the interface
 
-Export creates a JSON file containing the current ranking state.
+Import replaces the current local state with the imported file.
 
-Import replaces the current in-browser ranking state with the imported file.
-
-## How the ranking data behaves
-
-The app is built around a few important rules:
+## Rules that matter
 
 ### One global ranking
 
-The ranking is not per playlist.
-
-If a song appears in multiple playlists, it still belongs to one global order.
+Songs are ranked in one shared order across all added playlists.
 
 ### Do not rate
 
-If a song is marked `Do not rate`, it is excluded from the normal ranking flow until restored.
+Songs in `Do not rate` stay out of the ranking flow until restored.
 
-### Duplicate song handling
+### Duplicate handling
 
-Spotify sometimes exposes the same visible song through different playlist or album variants.
+Spotify often exposes multiple variants of what is effectively the same song.
 
-The app tries to collapse those variants into one song identity so users do not have to rank the same song multiple times.
+The app tries to collapse those variants into one song identity so you do not keep re-ranking duplicates.
 
-### Rankings and albums
+### Albums use the same song identity
 
-Album progress is derived from the global ranking state plus cached album data.
-
-An album only appears in Album progress after at least one song on that album has been rated.
+The app tries to preserve one ranking identity for a song even when it appears across playlists, album caches, or alternate album memberships.
 
 ## Saving and persistence
 
 For every user:
 
-- Rankings are stored in local browser storage
-- Cached playlists and cached tracks are stored locally
+- rankings are stored in browser storage
+- playlist and track caches are stored locally in the browser
 
-For the owner account:
+For the configured owner account:
 
-- Rankings are also backed up on the server
+- rankings can also be backed up on the server
+- the backend can maintain shared demo cache data used by `Try Demo`
 
-From the user's point of view, the app behaves the same for everyone. The only owner-specific difference is the extra server backup.
+## Recommended flow
 
-## Recommended user flow
+If you are new to the app, use this order:
 
-If someone is new to the app, the easiest way to use it is:
-
-1. Sign in with Spotify
+1. Sign in with Spotify or click `Try Demo`
 2. Open `Playlists`
-3. Search for a playlist
-4. Click `Add to Rankings`
-5. Go to `Rank Songs`
-6. Start ranking songs from the `Unranked` column
-7. Use `Do not rate` for songs they do not want in the ranking
-8. Open `Dashboard` to review top songs, top artists, and album progress
-9. Use album expansion and `Rate next song` to finish albums faster
-10. Export JSON occasionally as a backup
+3. Add one or more playlists with `Add to Global Ranking`
+4. Open `Rank Songs`
+5. Start placing songs from `Unranked`
+6. Use `Do not rate` for songs you do not want in the final order
+7. Open `Dashboard` to review top songs, artists, and album progress
+8. Use `Rate next song` inside albums to finish more of the library
+9. Export your data occasionally if you want a manual backup
 
-## Short explanation for other people
+## Short description
 
-If you need a quick one-paragraph description to send someone, use this:
+Use this if you want a compact summary to share:
 
-> This site connects to Spotify, lets you add your playlists into a personal song pool, and builds a global ranking of your music using a fast binary comparison system. After ranking songs, the dashboard shows your top songs, strongest artists, and album progress, and you can exclude songs with Do not rate or export/import your data as JSON.
+> Rankify turns playlists into one personal song ranking. You add playlists, place songs with a fast binary comparison flow, and then review the results through top songs, artist summaries, and album progress. It also supports demo mode, Do not rate, and local export/import.

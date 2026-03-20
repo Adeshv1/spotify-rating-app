@@ -129,3 +129,8 @@
 + Demo mode: stop owner-login demo seeding immediately on Spotify `Retry-After` and persist a cooldown so later logins do not resume until the backoff window expires (implemented 2026-03-20)
 + Demo mode: persist the same `Retry-After` cooldown when the owner-login demo seed has to refresh the `/me/playlists` index before caching tracks/albums/artists (implemented 2026-03-20)
 + Deployment: harden production hosting by serving the built Vite app from the Node backend, making the data directory configurable, and using secure cookies in production (implemented 2026-03-20)
++ Docs: refresh README and user guide for a public GitHub release and current app flow (implemented 2026-03-20)
++ Cleanup: remove stale Vite scaffold assets, generated build output, and dead head-to-head UI remnants no longer used by the app (implemented 2026-03-20)
++ Dashboard/Rank Songs: stop merging unrelated album-progress rows that only share album name/artist text, and clear stale `Rate` requests so demo-mode ranking can recover to auto-pick when a requested track is unavailable (implemented 2026-03-20)
++ Branding: rename the app to Rankify across UI and package metadata (implemented 2026-03-20)
++ Docs: add a README acknowledgement that Rankify was built with the help of OpenAI Codex (implemented 2026-03-20)
