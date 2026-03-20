@@ -1274,6 +1274,11 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
       typeof playlistMetaById.get(playlistId)?.name === 'string'
         ? playlistMetaById.get(playlistId).name
         : null
+    logDemoSeed('playlist_loop_enter', {
+      sourceUserId,
+      playlistId,
+      playlistName,
+    })
     const existingDemoTracksRecord = readSpotifyCacheRecord(MOCK_DEMO_CACHE_USER_ID, cacheKey)
     const existingOwnerTracksRecord = readSpotifyCacheRecord(sourceUserId, cacheKey)
     let playlistTracksPayload = hasPlaylistItems(existingDemoTracksRecord)
@@ -1297,7 +1302,11 @@ async function seedMockDemoPlaylistCache({ sourceUserId, accessToken, debugConte
       const fetchedTracks = await fetchPlaylistTracksAll({
         playlistId,
         accessToken,
-        debugContext,
+        debugContext: {
+          ...(debugContext && typeof debugContext === 'object' ? debugContext : {}),
+          playlistId,
+          phase: 'demo_seed_playlist_tracks',
+        },
       })
       if (Number.isFinite(fetchedTracks?.retryAfterSeconds) && fetchedTracks.retryAfterSeconds > 0) {
         setMockDemoSeedThrottle({
@@ -1655,6 +1664,10 @@ function logSpotifyRequest({ label, method = 'GET', status, ok, durationMs, retr
     `${Math.max(0, Math.round(durationMs || 0))}ms`,
   ]
   if (typeof context?.userId === 'string' && context.userId) parts.push(`user=${context.userId}`)
+  if (typeof context?.playlistId === 'string' && context.playlistId) parts.push(`playlist=${context.playlistId}`)
+  if (typeof context?.albumId === 'string' && context.albumId) parts.push(`album=${context.albumId}`)
+  if (typeof context?.artistId === 'string' && context.artistId) parts.push(`artist=${context.artistId}`)
+  if (typeof context?.phase === 'string' && context.phase) parts.push(`phase=${context.phase}`)
   if (Number.isFinite(retryAfterSeconds)) parts.push(`retryAfter=${retryAfterSeconds}s`)
   if (!ok) {
     const message =
@@ -2173,8 +2186,12 @@ const server = http.createServer((req, res) => {
                 debugContext,
               })
             }
-          } catch {
-            // ignore preview prime failures
+          } catch (error) {
+            console.error('[demo-seed] callback prime failed', JSON.stringify({
+              userId: typeof me?.data?.id === 'string' ? me.data.id : null,
+              message: error?.message || null,
+              stack: typeof error?.stack === 'string' ? error.stack : null,
+            }, null, 2))
           }
         }
 
