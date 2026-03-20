@@ -967,6 +967,7 @@ async function primeArtistImageCacheForPlaylist({ cacheUserId, playlistPayload, 
 }
 
 function hasPlaylistItems(record) {
+  if (!record || typeof record !== 'object') return false
   const items = Array.isArray(record?.data?.items)
     ? record.data.items
     : Array.isArray(record?.data?.tracks?.items)
