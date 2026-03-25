@@ -767,6 +767,7 @@
 
 .landingActions .btn {
   text-decoration: none;
+  box-sizing: border-box;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -993,8 +994,52 @@
 }
 
 @media (max-width: 560px) {
+  .topBarInnerPublic {
+    min-height: 3rem;
+    gap: 0.65rem;
+    padding: 0.45rem 0.8rem;
+  }
+
+  .brandTitle {
+    font-size: 1.08rem;
+  }
+
+  .navbarLink {
+    min-height: 1.82rem;
+    padding: 0.22rem 0.58rem;
+    font-size: 0.82rem;
+  }
+
+  .containerLanding {
+    padding: 0.55rem 0.75rem 0.85rem;
+  }
+
+  .cardLanding {
+    min-height: auto;
+    padding: 0.95rem 0.95rem 1.1rem;
+  }
+
+  .landingPage {
+    min-height: auto;
+    padding: 0.3rem 0 0.2rem;
+  }
+
   .landingContent {
     width: 100%;
+    min-height: auto;
+  }
+
+  .landingContent h1 {
+    max-width: 11ch;
+    font-size: clamp(2.3rem, 11vw, 3rem);
+    line-height: 0.98;
+  }
+
+  .landingLead {
+    max-width: 34rem;
+    margin-top: 0.56rem;
+    font-size: 1rem;
+    line-height: 1.48;
   }
 
   .landingLead,
@@ -1003,14 +1048,112 @@
   }
 
   .landingActions {
-    width: 100%;
+    width: min(100%, 22rem);
+    margin-inline: auto;
     flex-direction: column;
     align-items: stretch;
+    gap: 0.55rem;
+    margin-top: 0.85rem;
   }
 
   .landingActions .btn {
     width: 100%;
     min-width: 0;
+  }
+
+  .landingActions .btn.primary {
+    padding: 0.76rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .landingActions .btn:not(.primary) {
+    padding: 0.66rem 1rem;
+    font-size: 0.98rem;
+  }
+
+  .landingAccessNote {
+    margin-top: 0.8rem;
+    padding: 0.78rem 0.86rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.95rem;
+    line-height: 1.42;
+    text-align: left;
+  }
+
+  .landingAccessNoteWarning {
+    color: rgba(255, 215, 106, 0.88);
+  }
+
+  .landingAccessNoteDetail {
+    margin-top: 0.24rem;
+  }
+
+  .landingCredibility {
+    margin-top: 1rem;
+    padding-top: 0.95rem;
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .topBarInnerPublic {
+    padding: 0.42rem 0.68rem;
+  }
+
+  .brandTitle {
+    font-size: 1.02rem;
+  }
+
+  .navbarLink {
+    padding: 0.2rem 0.52rem;
+    font-size: 0.79rem;
+  }
+
+  .containerLanding {
+    padding: 0.45rem 0.62rem 0.78rem;
+  }
+
+  .cardLanding {
+    padding: 0.82rem 0.8rem 0.98rem;
+  }
+
+  .landingPage {
+    padding-top: 0.2rem;
+  }
+
+  .landingContent h1 {
+    max-width: 10ch;
+    font-size: clamp(2rem, 10.4vw, 2.55rem);
+  }
+
+  .landingLead {
+    margin-top: 0.5rem;
+    font-size: 0.96rem;
+  }
+
+  .landingActions {
+    gap: 0.5rem;
+    margin-top: 0.78rem;
+  }
+
+  .landingActions .btn.primary {
+    font-size: 1rem;
+  }
+
+  .landingActions .btn:not(.primary) {
+    font-size: 0.95rem;
+  }
+
+  .landingAccessNote {
+    margin-top: 0.72rem;
+    padding: 0.72rem 0.76rem;
+    font-size: 0.92rem;
+  }
+
+  .landingCredibility {
+    font-size: 0.92rem;
   }
 }
 

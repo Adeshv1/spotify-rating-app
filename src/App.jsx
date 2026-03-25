@@ -1929,7 +1929,7 @@ function App() {
             ) : (
               <a
                 className="navbarLink"
-                href="https://github.com/"
+                href="https://github.com/Adeshv1/spotify-rating-app"
                 target="_blank"
                 rel="noreferrer"
               >
