@@ -997,7 +997,7 @@ const HOW_TO_USE_PAGES = [
   {
     title: "Dashboard",
     description:
-      "See your global ranking as top songs, artist summaries, and album progress with quick Rate next song actions.",
+      "See your global ranking as top songs, artist summaries, and album progress with album and single-song add-to-ranking actions.",
   },
 ];
 
@@ -1984,17 +1984,30 @@ function App() {
                     playlistsCache={playlistsCache}
                     onOverwriteRanking={next => setUserRanking(next)}
                     onStartRankingTrack={(trackKey, options = {}) => {
-                      if (!trackKey) return;
+                      const currentUserId = profile?.id;
+                      if (
+                        currentUserId &&
+                        Array.isArray(options?.tracksToAdd) &&
+                        options.tracksToAdd.length
+                      ) {
+                        upsertGlobalSongs(currentUserId, options.tracksToAdd);
+                        setLocalDataRevision(value => value + 1);
+                      }
+                      if (!trackKey && !options?.tracksToAdd?.length) return;
                       if (options?.restoreExcluded) {
                         setUserRanking(rk =>
                           rk ? setTrackBucket(rk, trackKey, "U") : rk,
                         );
                       }
-                      setRankTrackRequest({
-                        trackKey,
-                        mode: "binary",
-                        nonce: Date.now(),
-                      });
+                      setRankTrackRequest(
+                        trackKey
+                          ? {
+                              trackKey,
+                              mode: "binary",
+                              nonce: Date.now(),
+                            }
+                          : null,
+                      );
                       navigate("/rank", { replace: true });
                     }}
                   />
@@ -2840,7 +2853,6 @@ function DashboardPage({
       const cached = readAlbumTracksCache(userId, albumId);
       if (cached?.items?.length) {
         setAlbumTracksById(prev => ({ ...prev, [albumId]: cached }));
-        upsertGlobalSongs(userId, cached.items);
         return cached;
       }
 
@@ -2882,7 +2894,6 @@ function DashboardPage({
         });
         const nextRecord = record || readAlbumTracksCache(userId, albumId);
         if (nextRecord?.items?.length) {
-          upsertGlobalSongs(userId, nextRecord.items);
           setAlbumTracksById(prev => ({ ...prev, [albumId]: nextRecord }));
         }
         setAlbumLoadStateById(prev => ({
@@ -2902,6 +2913,135 @@ function DashboardPage({
       }
     },
     [albumLoadStateById, albumTracksById, userId],
+  );
+
+  const buildTrackUpsertPayload = useCallback((track, albumOverride = null) => {
+    if (!track || typeof track !== "object") return null;
+    const id = typeof track?.id === "string" ? track.id : null;
+    if (!id) return null;
+
+    const resolvedAlbumId =
+      typeof albumOverride?.albumId === "string" && albumOverride.albumId
+        ? albumOverride.albumId
+        : typeof track?.albumId === "string" && track.albumId
+          ? track.albumId
+          : null;
+    const resolvedAlbumName =
+      typeof albumOverride?.album === "string" && albumOverride.album
+        ? albumOverride.album
+        : typeof track?.album === "string" && track.album
+          ? track.album
+          : null;
+    const resolvedAlbumTrackCount = Number.isFinite(albumOverride?.albumTrackCount)
+      ? albumOverride.albumTrackCount
+      : Number.isFinite(track?.albumTrackCount)
+        ? track.albumTrackCount
+        : null;
+
+    return {
+      id,
+      name: typeof track?.name === "string" ? track.name : null,
+      artists: Array.isArray(track?.artists) ? track.artists.filter(Boolean) : [],
+      artistIds: Array.isArray(track?.artistIds)
+        ? track.artistIds.map(value => (typeof value === "string" ? value : null))
+        : [],
+      albumId: resolvedAlbumId,
+      album: resolvedAlbumName,
+      albumTrackCount: resolvedAlbumTrackCount,
+      durationMs: Number.isFinite(track?.durationMs) ? track.durationMs : null,
+      explicit: typeof track?.explicit === "boolean" ? track.explicit : null,
+      externalUrl:
+        typeof track?.externalUrl === "string" ? track.externalUrl : null,
+    };
+  }, []);
+
+  const addTracksToRankingFromAlbum = useCallback(
+    async (album, trackFilter = null) => {
+      if (!userId) return [];
+
+      const record = await ensureAlbumTracks(album);
+      const items = Array.isArray(record?.items) ? record.items : [];
+      if (!items.length) return [];
+
+      const albumOverride = {
+        albumId:
+          typeof album?.albumId === "string" && album.albumId
+            ? album.albumId
+            : typeof record?.albumId === "string" && record.albumId
+              ? record.albumId
+              : null,
+        album:
+          typeof album?.name === "string" && album.name
+            ? album.name
+            : typeof record?.albumName === "string" && record.albumName
+              ? record.albumName
+              : null,
+        albumTrackCount: Number.isFinite(record?.total) ? record.total : null,
+      };
+
+      const selectedItems = trackFilter ? items.filter(trackFilter) : items;
+      return selectedItems
+        .map(track => buildTrackUpsertPayload(track, albumOverride))
+        .filter(Boolean);
+    },
+    [buildTrackUpsertPayload, ensureAlbumTracks, userId],
+  );
+
+  const addSingleTrackToRanking = useCallback(
+    async (album, track, options = {}) => {
+      if (!track) return;
+
+      const selectedIdentity = albumTrackIdentity(track);
+      const selectedId =
+        typeof track?.id === "string" && track.id ? track.id : null;
+      const selectedKey =
+        typeof track?.trackKey === "string" && track.trackKey
+          ? track.trackKey
+          : null;
+
+      let tracksToAdd = await addTracksToRankingFromAlbum(album, candidate => {
+        const candidateId =
+          typeof candidate?.id === "string" && candidate.id ? candidate.id : null;
+        const candidateKey = trackKeyOfTrack(candidate);
+        const candidateIdentity = albumTrackIdentity({
+          ...candidate,
+          trackKey: candidateKey,
+        });
+        return (
+          (selectedId && candidateId === selectedId) ||
+          (selectedKey && candidateKey === selectedKey) ||
+          (selectedIdentity && candidateIdentity === selectedIdentity)
+        );
+      });
+
+      if (!tracksToAdd.length) {
+        const fallback = buildTrackUpsertPayload(track, {
+          albumId: typeof album?.albumId === "string" ? album.albumId : null,
+          album: typeof album?.name === "string" ? album.name : null,
+          albumTrackCount: Number.isFinite(album?.totalTracks)
+            ? album.totalTracks
+            : null,
+        });
+        tracksToAdd = fallback ? [fallback] : [];
+      }
+
+      if (!tracksToAdd.length) return;
+      const requestedTrackKey = trackKeyOfTrack(tracksToAdd[0]);
+      onStartRankingTrack?.(requestedTrackKey, {
+        tracksToAdd,
+        restoreExcluded: Boolean(options?.restoreExcluded),
+      });
+    },
+    [addTracksToRankingFromAlbum, buildTrackUpsertPayload, onStartRankingTrack],
+  );
+
+  const addWholeAlbumToRanking = useCallback(
+    async album => {
+      const tracksToAdd = await addTracksToRankingFromAlbum(album);
+      if (!tracksToAdd.length) return;
+      onStartRankingTrack?.(null, { tracksToAdd });
+    },
+    [addTracksToRankingFromAlbum, onStartRankingTrack],
   );
 
   const computed = useMemo(() => {
@@ -3303,7 +3443,6 @@ function DashboardPage({
               <tbody>
                 {computed.topAlbums.map((a, idx) => {
                   const expanded = expandedAlbumKey === a.key;
-                  const nextTrackToRate = a.unratedTracks[0]?.trackKey || null;
                   const hasPendingAlbumTracks =
                     a.unratedCount > 0 || a.doNotRateCount > 0;
                   const albumLoadState =
@@ -3407,14 +3546,12 @@ function DashboardPage({
                                     Open album
                                   </button>
                                 ) : null}
-                                {nextTrackToRate ? (
+                                {a.unratedCount > 0 ? (
                                   <button
                                     className="btn small"
-                                    onClick={() =>
-                                      onStartRankingTrack?.(nextTrackToRate)
-                                    }
+                                    onClick={() => addWholeAlbumToRanking(a)}
                                   >
-                                    Rate next song
+                                    Rank whole album
                                   </button>
                                 ) : null}
                               </span>
@@ -3501,11 +3638,7 @@ function DashboardPage({
                                           <span className="albumTrackActions">
                                             <button
                                               className="btn small compact"
-                                              onClick={() =>
-                                                onStartRankingTrack?.(
-                                                  track.trackKey,
-                                                )
-                                              }
+                                              onClick={() => addSingleTrackToRanking(a, track)}
                                             >
                                               Rate
                                             </button>
@@ -3545,12 +3678,9 @@ function DashboardPage({
                                                 <button
                                                   className="btn small compact"
                                                   onClick={() =>
-                                                    onStartRankingTrack?.(
-                                                      track.trackKey,
-                                                      {
-                                                        restoreExcluded: true,
-                                                      },
-                                                    )
+                                                    addSingleTrackToRanking(a, track, {
+                                                      restoreExcluded: true,
+                                                    })
                                                   }
                                                 >
                                                   Rate

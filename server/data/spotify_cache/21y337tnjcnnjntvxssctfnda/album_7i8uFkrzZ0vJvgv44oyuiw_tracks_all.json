@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7i8uFkrzZ0vJvgv44oyuiw_tracks_all",
+  "fetchedAt": "2026-03-25T23:00:17.032Z",
+  "lastRefreshedAt": "2026-03-25T23:00:17.032Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dulla",
+            "id": "2zGP5dYW7vsTnCtjnhO8eo"
+          },
+          {
+            "name": "Shah Rehan",
+            "id": "2TFn1e5UTGZzzkt0TkGWPl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2zDvY1uKpQHXYCXht7jDP6"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 161592,
+        "name": "Living Style",
+        "disc_number": 1,
+        "id": "2zDvY1uKpQHXYCXht7jDP6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dulla",
+            "id": "2zGP5dYW7vsTnCtjnhO8eo"
+          },
+          {
+            "name": "Shah Rehan",
+            "id": "2TFn1e5UTGZzzkt0TkGWPl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WnkcGAsCKwgO6Hljy9ZSq"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 161326,
+        "name": "Wanna Tell Me",
+        "disc_number": 1,
+        "id": "0WnkcGAsCKwgO6Hljy9ZSq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dulla",
+            "id": "2zGP5dYW7vsTnCtjnhO8eo"
+          },
+          {
+            "name": "Shah Rehan",
+            "id": "2TFn1e5UTGZzzkt0TkGWPl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/03ci7MgIBlV3hZKPwnHkXd"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 173217,
+        "name": "Brotha",
+        "disc_number": 1,
+        "id": "03ci7MgIBlV3hZKPwnHkXd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dulla",
+            "id": "2zGP5dYW7vsTnCtjnhO8eo"
+          },
+          {
+            "name": "Shah Rehan",
+            "id": "2TFn1e5UTGZzzkt0TkGWPl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6fzhBisfi58YJDjlX7Uq94"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 171789,
+        "name": "For Girls",
+        "disc_number": 1,
+        "id": "6fzhBisfi58YJDjlX7Uq94"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dulla",
+            "id": "2zGP5dYW7vsTnCtjnhO8eo"
+          },
+          {
+            "name": "Shah Rehan",
+            "id": "2TFn1e5UTGZzzkt0TkGWPl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00eqP5IcDNgHp0H4WKZhIg"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 231219,
+        "name": "Pushkar",
+        "disc_number": 1,
+        "id": "00eqP5IcDNgHp0H4WKZhIg"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 5,
+    "albumId": "7i8uFkrzZ0vJvgv44oyuiw"
+  }
+}

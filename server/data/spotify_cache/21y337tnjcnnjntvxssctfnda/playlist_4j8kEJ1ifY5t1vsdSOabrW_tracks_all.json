@@ -2,9 +2,10 @@
   "schemaVersion": 1,
   "userId": "21y337tnjcnnjntvxssctfnda",
   "cacheKey": "playlist_4j8kEJ1ifY5t1vsdSOabrW_tracks_all",
-  "fetchedAt": "2026-03-20T00:29:12.050Z",
-  "lastRefreshedAt": "2026-03-20T00:29:12.050Z",
+  "fetchedAt": "2026-03-25T23:07:55.914Z",
+  "lastRefreshedAt": "2026-03-25T23:07:55.914Z",
   "data": {
+    "limit": 50,
     "items": [
       {
         "item": {
@@ -359,7 +360,7 @@
             "spotify": "https://open.spotify.com/track/55lijDD6OAjLFFUHU9tcDm"
           },
           "explicit": false,
-          "duration_ms": 196795,
+          "duration_ms": 197142,
           "name": "WHERE IS MY HUSBAND!",
           "type": "track",
           "id": "55lijDD6OAjLFFUHU9tcDm"
@@ -1255,8 +1256,10 @@
         "added_at": "2026-03-17T23:07:19Z"
       }
     ],
-    "offset": 0,
-    "limit": 50,
-    "total": 50
+    "href": "https://api.spotify.com/v1/playlists/4j8kEJ1ifY5t1vsdSOabrW/items?offset=0&limit=50&market=from_token&additional_types=track&fields=href,limit,next,offset,previous,total,snapshot_id,items(added_at,item(type,id,name,duration_ms,explicit,external_urls(spotify),artists(id,name),album(id,name,total_tracks)))&locale=*",
+    "next": null,
+    "total": 50,
+    "previous": null,
+    "offset": 0
   }
 }
