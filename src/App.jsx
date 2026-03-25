@@ -1090,6 +1090,7 @@ function App() {
   const isDashboardRoute = routePath === "/app/dashboard";
   const isRankRoute = routePath === "/rank";
   const isDashboardLikeRoute = isDashboardRoute;
+  const isPublicLanding = !loggedIn;
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000);
@@ -1196,6 +1197,13 @@ function App() {
       setIsOwnerUser(false);
     }
   }, [loggedIn]);
+
+  useEffect(() => {
+    document.body.classList.toggle("publicLandingBody", isPublicLanding);
+    return () => {
+      document.body.classList.remove("publicLandingBody");
+    };
+  }, [isPublicLanding]);
 
   const refreshPlaylistsCache = useCallback(async ({ force = false } = {}) => {
     if (!loggedIn || !profile?.id) return;
@@ -1794,7 +1802,7 @@ function App() {
   }
 
   return (
-    <div className="appShell">
+    <div className={`appShell ${isPublicLanding ? "appShellPublicLanding" : ""}`.trim()}>
       <header className={`topBar ${!loggedIn ? "topBarPublic" : ""}`.trim()}>
         <div className={`topBarInner ${!loggedIn ? "topBarInnerPublic" : ""}`.trim()}>
           <div className="topBarLeft">

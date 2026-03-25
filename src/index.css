@@ -36,6 +36,11 @@ body {
   overflow: hidden;
 }
 
+body.publicLandingBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

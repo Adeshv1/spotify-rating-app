@@ -21,6 +21,11 @@
 - Add keyboard shortcuts for faster seeding/duels
 - Add export/import (CSV/JSON) for rankings
 - Add tests/linting and basic CI
++ Pull-to-refresh: enable browser-native refresh on the public landing page (implemented 2026-03-25)
+- Pull-to-refresh: enable browser-native refresh on the Playlists page
+- Pull-to-refresh: enable browser-native refresh on playlist detail view
+- Pull-to-refresh: enable browser-native refresh on Rank Songs
+- Pull-to-refresh: enable browser-native refresh on Dashboard
 + Add owner-only permission helper (Spotify user id) (implemented 2026-03-03)
 + Add non-owner cache refresh policy (server throttle + auto-refresh) (implemented 2026-03-03)
 + Add public landing page + minimal routing (implemented 2026-03-03)
