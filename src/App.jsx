@@ -236,11 +236,8 @@ function normalizeLooseString(value) {
   return value.trim().replaceAll(/\s+/g, " ");
 }
 
-function albumIdentityKey(name, artistLabel) {
-  const normalizedName = normalizeLooseString(name).toLowerCase();
-  const normalizedArtist = normalizeLooseString(artistLabel).toLowerCase();
-  if (!normalizedName) return "";
-  return `${normalizedName}::${normalizedArtist}`;
+function albumNameKey(name) {
+  return normalizeLooseString(name).toLowerCase();
 }
 
 function mergeAlbumTrackItems(existing, incoming) {
@@ -271,6 +268,16 @@ function mergeAlbumTrackItems(existing, incoming) {
   };
 }
 
+function albumTrackIdentity(track) {
+  const identity = songIdentityOfTrack(track);
+  if (typeof identity === "string" && identity) return identity;
+  if (typeof track?.trackKey === "string" && track.trackKey) {
+    return `track:${track.trackKey}`;
+  }
+  if (typeof track?.id === "string" && track.id) return `id:${track.id}`;
+  return "";
+}
+
 function dedupeAlbumTrackList(tracks) {
   const map = new Map();
   for (const track of tracks || []) {
@@ -284,17 +291,69 @@ function dedupeAlbumTrackList(tracks) {
   return Array.from(map.values());
 }
 
+function normalizeAlbumTrackBuckets(album) {
+  const grouped = new Map();
+
+  const addTracks = (bucket, tracks) => {
+    for (const track of tracks || []) {
+      const identity = albumTrackIdentity(track);
+      if (!identity) continue;
+      const existing = grouped.get(identity) || null;
+      if (!existing) {
+        grouped.set(identity, { bucket, track });
+        continue;
+      }
+
+      if (existing.bucket === bucket) {
+        grouped.set(identity, {
+          bucket,
+          track: mergeAlbumTrackItems(existing.track, track),
+        });
+        continue;
+      }
+
+      const priority = { rated: 3, doNotRate: 2, unrated: 1 };
+      const keepExisting =
+        (priority[existing.bucket] || 0) >= (priority[bucket] || 0);
+
+      grouped.set(identity, {
+        bucket: keepExisting ? existing.bucket : bucket,
+        track: keepExisting
+          ? mergeAlbumTrackItems(existing.track, track)
+          : mergeAlbumTrackItems(track, existing.track),
+      });
+    }
+  };
+
+  addTracks("rated", dedupeAlbumTrackList(album?.ratedTracks));
+  addTracks("doNotRate", dedupeAlbumTrackList(album?.doNotRateTracks));
+  addTracks("unrated", dedupeAlbumTrackList(album?.unratedTracks));
+
+  const ratedTracks = [];
+  const unratedTracks = [];
+  const doNotRateTracks = [];
+
+  for (const entry of grouped.values()) {
+    if (entry.bucket === "rated") ratedTracks.push(entry.track);
+    else if (entry.bucket === "doNotRate") doNotRateTracks.push(entry.track);
+    else unratedTracks.push(entry.track);
+  }
+
+  return { ratedTracks, unratedTracks, doNotRateTracks };
+}
+
 function finalizeAlbumRow(album) {
-  const ratedTracks = dedupeAlbumTrackList(album?.ratedTracks).sort(
+  const normalizedBuckets = normalizeAlbumTrackBuckets(album);
+  const ratedTracks = normalizedBuckets.ratedTracks.sort(
     (left, right) => left.rank - right.rank,
   );
-  const unratedTracks = dedupeAlbumTrackList(album?.unratedTracks).sort(
+  const unratedTracks = normalizedBuckets.unratedTracks.sort(
     (left, right) =>
       (left.name || "").localeCompare(right.name || "", "en", {
         numeric: true,
       }),
   );
-  const doNotRateTracks = dedupeAlbumTrackList(album?.doNotRateTracks).sort(
+  const doNotRateTracks = normalizedBuckets.doNotRateTracks.sort(
     (left, right) =>
       (left.name || "").localeCompare(right.name || "", "en", {
         numeric: true,
@@ -397,15 +456,41 @@ function albumRowsShareTrackIdentity(left, right) {
       .map(track => (typeof track?.id === "string" ? track.id : null))
       .filter(Boolean),
   );
+  const leftIdentities = new Set(
+    leftRefs.map(track => albumTrackIdentity(track)).filter(Boolean),
+  );
 
   return rightRefs.some(track => {
     const trackKey =
       typeof track?.trackKey === "string" ? track.trackKey : null;
     const trackId = typeof track?.id === "string" ? track.id : null;
+    const identity = albumTrackIdentity(track);
     return (
-      (trackKey && leftKeys.has(trackKey)) || (trackId && leftIds.has(trackId))
+      (trackKey && leftKeys.has(trackKey)) ||
+      (trackId && leftIds.has(trackId)) ||
+      (identity && leftIdentities.has(identity))
     );
   });
+}
+
+function albumRowsCanMerge(left, right) {
+  if (!left || !right) return false;
+
+  if (
+    typeof left?.albumId === "string" &&
+    left.albumId &&
+    typeof right?.albumId === "string" &&
+    right.albumId &&
+    left.albumId === right.albumId
+  ) {
+    return true;
+  }
+
+  const leftName = albumNameKey(left?.name);
+  const rightName = albumNameKey(right?.name);
+  if (!leftName || !rightName || leftName !== rightName) return false;
+
+  return albumRowsShareTrackIdentity(left, right);
 }
 
 function normalizeTrackName(name, id = null) {
@@ -2976,37 +3061,14 @@ function DashboardPage({
       })
       .filter(a => a.totalTracks >= 2 && a.ratedCount > 0);
 
-    const albumsByIdentityWithId = new Map();
-    for (const album of rawTopAlbums) {
-      if (!album.albumId) continue;
-      const identity = albumIdentityKey(album.name, album.artistLabel);
-      if (!identity) continue;
-      const list = albumsByIdentityWithId.get(identity) || [];
-      list.push(album);
-      albumsByIdentityWithId.set(identity, list);
-    }
-
     const mergedTopAlbums = new Map();
     for (const album of rawTopAlbums) {
-      const identity = albumIdentityKey(album.name, album.artistLabel);
-      let canonicalKey = album.key;
-      if (!album.albumId && identity) {
-        const candidates = albumsByIdentityWithId.get(identity) || [];
-        const matchedAlbum =
-          candidates.find(candidate =>
-            albumRowsShareTrackIdentity(candidate, album),
-          ) || null;
-        if (matchedAlbum) canonicalKey = matchedAlbum.key;
-      }
-      const existing = mergedTopAlbums.get(canonicalKey) || null;
-      if (
-        existing &&
-        existing.albumId !== album.albumId &&
-        !albumRowsShareTrackIdentity(existing, album)
-      ) {
-        mergedTopAlbums.set(album.key, { ...album, key: album.key });
-        continue;
-      }
+      const matchedEntry =
+        Array.from(mergedTopAlbums.entries()).find(([, existing]) =>
+          albumRowsCanMerge(existing, album),
+        ) || null;
+      const canonicalKey = matchedEntry?.[0] || album.key;
+      const existing = matchedEntry?.[1] || null;
       mergedTopAlbums.set(
         canonicalKey,
         existing ? mergeAlbumRows(existing, album) : { ...album, key: canonicalKey },

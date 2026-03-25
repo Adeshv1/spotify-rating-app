@@ -138,3 +138,6 @@
 + Deployment: make the Node server bind configurable via `HOST` and document Render-specific build/start/health/disk settings (implemented 2026-03-20)
 + Backend: add explicit demo-seeding progress/failure logs so Render shows where owner-login demo cache priming stops (implemented 2026-03-20)
 + Rank Songs: resolve binary-compare labels from local caches and never fall back to raw `spid:` keys in the ranking UI (implemented 2026-03-25)
++ Dashboard: merge duplicate album-progress rows by logical song identity so alternate track variants do not split one album into copies (implemented 2026-03-25)
++ Ranking data: reconcile duplicate song variants by normalized name + artists even when Spotify durations differ slightly across releases (implemented 2026-03-25)
++ Dashboard: merge duplicate album-progress rows across album-id and alternate-release variants when the album name matches and the songs overlap (implemented 2026-03-25)
