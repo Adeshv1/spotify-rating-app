@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6OOlsOIftmTNh1eOpDu1ht_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.185Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.185Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Arlo Thiem",
+            "id": "7eUaOSOuEptG91onQNFSCd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6skKXgbwajpTf6czxhF5td"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 217000,
+        "name": "Memories Of You",
+        "disc_number": 1,
+        "id": "6skKXgbwajpTf6czxhF5td"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6OOlsOIftmTNh1eOpDu1ht"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3GZqBOHrpOyPFQu1ux6n2F_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.446Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.446Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Silvenna",
+            "id": "0EpNnTSU5DHuYwSdMMRyfw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XoxeBjlebxva3UpSBULCl"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 141763,
+        "name": "Veranda",
+        "disc_number": 1,
+        "id": "4XoxeBjlebxva3UpSBULCl"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3GZqBOHrpOyPFQu1ux6n2F"
+  }
+}

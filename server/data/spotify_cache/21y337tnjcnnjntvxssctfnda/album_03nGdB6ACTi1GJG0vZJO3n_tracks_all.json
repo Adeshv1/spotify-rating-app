@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_03nGdB6ACTi1GJG0vZJO3n_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:23.835Z",
+  "lastRefreshedAt": "2026-03-25T22:19:23.835Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "H3adband",
+            "id": "3TvL95zdOZWkMbkvfJ8cCk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0092fZcbCidhWrmBQX4guf"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 138668,
+        "name": "BOO",
+        "disc_number": 1,
+        "id": "0092fZcbCidhWrmBQX4guf"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "03nGdB6ACTi1GJG0vZJO3n"
+  }
+}

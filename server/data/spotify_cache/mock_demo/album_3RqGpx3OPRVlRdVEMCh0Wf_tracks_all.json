@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3RqGpx3OPRVlRdVEMCh0Wf_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:21.913Z",
+  "lastRefreshedAt": "2026-03-25T22:19:21.913Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3v1d12O8WEj5H9eFID7HBn"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 165288,
+        "name": "HELICOPTER",
+        "disc_number": 1,
+        "id": "3v1d12O8WEj5H9eFID7HBn"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3RqGpx3OPRVlRdVEMCh0Wf"
+  }
+}

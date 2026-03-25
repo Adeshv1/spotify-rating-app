@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_58woFKp3lFRTgRlFvfFh5B_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.548Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.548Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Domi Nova",
+            "id": "1Ld0guzIxggCOIbkE319nz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3paUjcpKJ910PnpxZJIZfE"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 183500,
+        "name": "Contradictions",
+        "disc_number": 1,
+        "id": "3paUjcpKJ910PnpxZJIZfE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "58woFKp3lFRTgRlFvfFh5B"
+  }
+}

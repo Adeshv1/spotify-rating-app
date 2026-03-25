@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5amj9zNeZ3B2EdpBgXrOZ0_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.972Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.972Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2cvFLZPAQoGeQnIRPt2LHE"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 57328,
+        "name": "MiNd Of MiNdd (Intro)",
+        "disc_number": 1,
+        "id": "2cvFLZPAQoGeQnIRPt2LHE"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0PDUDa38GO8lMxLCRc4lL1"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 202749,
+        "name": "PILLOWTALK",
+        "disc_number": 1,
+        "id": "0PDUDa38GO8lMxLCRc4lL1"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dtWKqqdveI3YvdYJQKWWn"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 226648,
+        "name": "iT's YoU",
+        "disc_number": 1,
+        "id": "6dtWKqqdveI3YvdYJQKWWn"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ofgPlilLgcw6G7fd2zNpT"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 208916,
+        "name": "BeFoUr",
+        "disc_number": 1,
+        "id": "7ofgPlilLgcw6G7fd2zNpT"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/48qaQk75LoWs5qgsZgbkA5"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 189964,
+        "name": "sHe",
+        "disc_number": 1,
+        "id": "48qaQk75LoWs5qgsZgbkA5"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TC3wZupelwzKhuueGSGZu"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 205781,
+        "name": "dRuNk",
+        "disc_number": 1,
+        "id": "0TC3wZupelwzKhuueGSGZu"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dq1fUiJe6BiBORZtb9TxZ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 104238,
+        "name": "INTERMISSION: fLoWer",
+        "disc_number": 1,
+        "id": "6dq1fUiJe6BiBORZtb9TxZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6LWS6iYUZKYHNl2VwNytpo"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 201296,
+        "name": "rEaR vIeW",
+        "disc_number": 1,
+        "id": "6LWS6iYUZKYHNl2VwNytpo"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          },
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7iCeaYJSEdGWeFNTAEqUzJ"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 212747,
+        "name": "wRoNg (feat. Kehlani)",
+        "disc_number": 1,
+        "id": "7iCeaYJSEdGWeFNTAEqUzJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lvsJDZ7336YmpBzcNGhbe"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 202217,
+        "name": "fOoL fOr YoU",
+        "disc_number": 1,
+        "id": "6lvsJDZ7336YmpBzcNGhbe"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3MpdgSxThlICp5LSsZejGf"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 239192,
+        "name": "BoRdErSz",
+        "disc_number": 1,
+        "id": "3MpdgSxThlICp5LSsZejGf"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xJzcq1r4F1ryMujB1Caqq"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 245261,
+        "name": "tRuTh",
+        "disc_number": 1,
+        "id": "7xJzcq1r4F1ryMujB1Caqq"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/26PFSyfXPYz6NcWbtM5Cst"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 252632,
+        "name": "lUcOzAdE",
+        "disc_number": 1,
+        "id": "26PFSyfXPYz6NcWbtM5Cst"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7jKdgYPDj6AxVU2wk9muN1"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 178695,
+        "name": "TiO",
+        "disc_number": 1,
+        "id": "7jKdgYPDj6AxVU2wk9muN1"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LLIkqUK19oJXHozT5PJ3B"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 224326,
+        "name": "BLUE",
+        "disc_number": 1,
+        "id": "1LLIkqUK19oJXHozT5PJ3B"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1V7dfxBuI7pOysGAKm6w3S"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 176323,
+        "name": "BRIGHT",
+        "disc_number": 1,
+        "id": "1V7dfxBuI7pOysGAKm6w3S"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1zWMf9bVyhY5W3ZORbjNWt"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 192136,
+        "name": "LIKE I WOULD",
+        "disc_number": 1,
+        "id": "1zWMf9bVyhY5W3ZORbjNWt"
+      },
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4MaOXwqSgiwgngbeYePmu8"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 255005,
+        "name": "SHE DON'T LOVE ME",
+        "disc_number": 1,
+        "id": "4MaOXwqSgiwgngbeYePmu8"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "5amj9zNeZ3B2EdpBgXrOZ0"
+  }
+}

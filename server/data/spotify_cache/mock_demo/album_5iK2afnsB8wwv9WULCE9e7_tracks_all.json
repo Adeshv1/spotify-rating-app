@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5iK2afnsB8wwv9WULCE9e7_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:51.577Z",
+  "lastRefreshedAt": "2026-03-25T22:19:51.577Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Astrid S",
+            "id": "3AVfmawzu83sp94QW7CEGm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3mTudELJLaQ2KWOPZ1fH41"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 208015,
+        "name": "Paper Thin",
+        "disc_number": 1,
+        "id": "3mTudELJLaQ2KWOPZ1fH41"
+      },
+      {
+        "artists": [
+          {
+            "name": "Astrid S",
+            "id": "3AVfmawzu83sp94QW7CEGm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/46ydq5g3k17iLJs3qMDvO6"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 208728,
+        "name": "Hurts So Good",
+        "disc_number": 1,
+        "id": "46ydq5g3k17iLJs3qMDvO6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Astrid S",
+            "id": "3AVfmawzu83sp94QW7CEGm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/44QPo940wumNDeqL8v6AMu"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 193826,
+        "name": "Jump",
+        "disc_number": 1,
+        "id": "44QPo940wumNDeqL8v6AMu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Astrid S",
+            "id": "3AVfmawzu83sp94QW7CEGm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3H9CQYRjYS2bixQXoawh98"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 214226,
+        "name": "Atic",
+        "disc_number": 1,
+        "id": "3H9CQYRjYS2bixQXoawh98"
+      },
+      {
+        "artists": [
+          {
+            "name": "Astrid S",
+            "id": "3AVfmawzu83sp94QW7CEGm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5kNtYmydoA9Dd959vVlKBJ"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 176093,
+        "name": "I Don’t Wanna Know",
+        "disc_number": 1,
+        "id": "5kNtYmydoA9Dd959vVlKBJ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 5,
+    "albumId": "5iK2afnsB8wwv9WULCE9e7"
+  }
+}

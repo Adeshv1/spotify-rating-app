@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2BPTDSwabVcb0C315KGctp_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:47.827Z",
+  "lastRefreshedAt": "2026-03-25T22:19:47.827Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Les Rêveries",
+            "id": "0CEd23JZvyemacknJwWM9O"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5aqsEPDq44asJ3eJDlYq1F"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 137424,
+        "name": "Printemps",
+        "disc_number": 1,
+        "id": "5aqsEPDq44asJ3eJDlYq1F"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2BPTDSwabVcb0C315KGctp"
+  }
+}

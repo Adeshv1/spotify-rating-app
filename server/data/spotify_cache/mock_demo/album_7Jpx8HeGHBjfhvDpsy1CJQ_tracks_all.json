@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7Jpx8HeGHBjfhvDpsy1CJQ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:26.219Z",
+  "lastRefreshedAt": "2026-03-25T22:19:26.219Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          },
+          {
+            "name": "Marshmello",
+            "id": "64KEffDW9EtZ1y2vBYgq8T"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2XhatQ5NqfdqZMLCegWnbD"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 149394,
+        "name": "We Don’t Get Along (with Marshmello)",
+        "disc_number": 1,
+        "id": "2XhatQ5NqfdqZMLCegWnbD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7Jpx8HeGHBjfhvDpsy1CJQ"
+  }
+}

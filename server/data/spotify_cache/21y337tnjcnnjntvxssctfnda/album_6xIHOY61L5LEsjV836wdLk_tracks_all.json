@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6xIHOY61L5LEsjV836wdLk_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:40.936Z",
+  "lastRefreshedAt": "2026-03-25T22:19:40.936Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Christian Janssen",
+            "id": "42vzUzUtpdNGFYxqgVcXl1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Q2ih8UwOirSbXp9Nb4QV4"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 122445,
+        "name": "A quiet river",
+        "disc_number": 1,
+        "id": "1Q2ih8UwOirSbXp9Nb4QV4"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6xIHOY61L5LEsjV836wdLk"
+  }
+}

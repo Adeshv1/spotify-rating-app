@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2YbzBN9aTNdoV4g5nj1iB7_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:30.179Z",
+  "lastRefreshedAt": "2026-03-25T22:19:30.179Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tankeflukt",
+            "id": "5AlAiT9n6MGUG2Lron7jB1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6G8LanLXd3GVoae2jwx4bE"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 172180,
+        "name": "Moving on",
+        "disc_number": 1,
+        "id": "6G8LanLXd3GVoae2jwx4bE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2YbzBN9aTNdoV4g5nj1iB7"
+  }
+}

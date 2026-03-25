@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1xtnpw9zgawd67Q5AVdPqX_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:26.046Z",
+  "lastRefreshedAt": "2026-03-25T22:19:26.046Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3NZ3oBrDN9D2Bi1hykwXHb"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 146865,
+        "name": "Regular",
+        "disc_number": 1,
+        "id": "3NZ3oBrDN9D2Bi1hykwXHb"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1xtnpw9zgawd67Q5AVdPqX"
+  }
+}

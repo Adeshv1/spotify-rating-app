@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6TwN6Lq9glwnG8kNp6chHY_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.548Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.548Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6VObnIkLVruX4UVyxWhlqm"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 286081,
+        "name": "Skyfall",
+        "disc_number": 1,
+        "id": "6VObnIkLVruX4UVyxWhlqm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6TwN6Lq9glwnG8kNp6chHY"
+  }
+}

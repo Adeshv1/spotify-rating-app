@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_68enXe5XcJdciSDAZr0Alr_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:56.946Z",
+  "lastRefreshedAt": "2026-03-25T22:19:56.946Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55ZcA6PazdlXjE1jO5GrzJ"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 186187,
+        "name": "Ashley",
+        "disc_number": 1,
+        "id": "55ZcA6PazdlXjE1jO5GrzJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/66c7n8ZXmYQQeXyNVfiArc"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 234410,
+        "name": "clementine",
+        "disc_number": 1,
+        "id": "66c7n8ZXmYQQeXyNVfiArc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ufmtcIFdFpuUYBPXK5f67"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 181805,
+        "name": "Graveyard",
+        "disc_number": 1,
+        "id": "2ufmtcIFdFpuUYBPXK5f67"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7lidXGPXPYLNThITAOTlkK"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 205473,
+        "name": "You should be sad",
+        "disc_number": 1,
+        "id": "7lidXGPXPYLNThITAOTlkK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6BORJ0ZazxMBpM3cWg79Id"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 167904,
+        "name": "Forever ... (is a long time)",
+        "disc_number": 1,
+        "id": "6BORJ0ZazxMBpM3cWg79Id"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          },
+          {
+            "name": "Dominic Fike",
+            "id": "6USv9qhCn6zfxlBQIYJ9qs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2sOOXgEGB7nhKO8mmc1GhI"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 76480,
+        "name": "Dominic’s Interlude",
+        "disc_number": 1,
+        "id": "2sOOXgEGB7nhKO8mmc1GhI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35FjZytt5TukIgJD86UybL"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 171015,
+        "name": "I HATE EVERYBODY",
+        "disc_number": 1,
+        "id": "35FjZytt5TukIgJD86UybL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1OfLNb6dQ9dra1B58iT9Ex"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 234858,
+        "name": "3am",
+        "disc_number": 1,
+        "id": "1OfLNb6dQ9dra1B58iT9Ex"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6FZDfxM3a3UCqtzo5pxSLZ"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 201660,
+        "name": "Without Me",
+        "disc_number": 1,
+        "id": "6FZDfxM3a3UCqtzo5pxSLZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42SOtYBdnfj9zEdZSlAq5k"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 221095,
+        "name": "Finally // beautiful stranger",
+        "disc_number": 1,
+        "id": "42SOtYBdnfj9zEdZSlAq5k"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          },
+          {
+            "name": "Alanis Morissette",
+            "id": "6ogn9necmbUdCppmNnGOdi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ZmwwHYtun94UOdFWWgdif"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 161155,
+        "name": "Alanis’ Interlude",
+        "disc_number": 1,
+        "id": "6ZmwwHYtun94UOdFWWgdif"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1H3Okhf16ttAICZF7zgDko"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 143364,
+        "name": "killing boys",
+        "disc_number": 1,
+        "id": "1H3Okhf16ttAICZF7zgDko"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          },
+          {
+            "name": "SUGA",
+            "id": "0ebNdVaOfp6N0oZ1guIxM8"
+          },
+          {
+            "name": "BTS",
+            "id": "3Nrfpe0tUJi4K4DXYWgMUX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ZoQVu9XBssJBdeKMgF2eV"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 138204,
+        "name": "SUGA's Interlude",
+        "disc_number": 1,
+        "id": "1ZoQVu9XBssJBdeKMgF2eV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3jgHKbpswygyOMipFz06RQ"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 153089,
+        "name": "More",
+        "disc_number": 1,
+        "id": "3jgHKbpswygyOMipFz06RQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Mfv5HaqnI18Q9JRv9hqnn"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 211784,
+        "name": "Still Learning",
+        "disc_number": 1,
+        "id": "2Mfv5HaqnI18Q9JRv9hqnn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ed6Wdjk7gkxI2lIYjAoJ2"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 174806,
+        "name": "929",
+        "disc_number": 1,
+        "id": "1ed6Wdjk7gkxI2lIYjAoJ2"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "68enXe5XcJdciSDAZr0Alr"
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7apLPYT8szV1IqTxyVSy5P_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.409Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.409Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3myI1o0izYfh2z9JTQzCfJ"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 275386,
+        "name": "Don't Let Me Fall",
+        "disc_number": 1,
+        "id": "3myI1o0izYfh2z9JTQzCfJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/59dLtGBS26x7kc0rHbaPrq"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 268320,
+        "name": "Nothin' on You (feat. Bruno Mars)",
+        "disc_number": 1,
+        "id": "59dLtGBS26x7kc0rHbaPrq"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Lupe Fiasco",
+            "id": "01QTIT5P1pFP3QnnFSdsJf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/478eJVTkk34oWr1abVMqfv"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 213920,
+        "name": "Past My Shades (feat. Lupe Fiasco)",
+        "disc_number": 1,
+        "id": "478eJVTkk34oWr1abVMqfv"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Hayley Williams",
+            "id": "6Rx1JKzBrSzoKQtmbVmBnM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lV2MSQmRIkycDScNtrBXO"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 180480,
+        "name": "Airplanes (feat. Hayley Williams of Paramore)",
+        "disc_number": 1,
+        "id": "6lV2MSQmRIkycDScNtrBXO"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Playboy Tre´",
+            "id": "6i4NElwiChcidDdwr7myDT"
+          },
+          {
+            "name": "T.I.",
+            "id": "4OBJLual30L7gRl5UkeRcT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZMDfZ2VB5J1SVKEBP9ryH"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 257920,
+        "name": "Bet I (feat. T.I. & Playboy Tre)",
+        "disc_number": 1,
+        "id": "2ZMDfZ2VB5J1SVKEBP9ryH"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16reakUNjt48eY9D9VfqyA"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 293040,
+        "name": "Ghost in the Machine",
+        "disc_number": 1,
+        "id": "16reakUNjt48eY9D9VfqyA"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Janelle Monáe",
+            "id": "6ueGR6SWhUJfvEhqkvMsVs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Y3d8TTZXRfhrGGVoKAeNP"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 206906,
+        "name": "The Kids (feat. Janelle Monáe)",
+        "disc_number": 1,
+        "id": "5Y3d8TTZXRfhrGGVoKAeNP"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Rivers Cuomo",
+            "id": "4LAz9VRX8Nat9kvIzgkg2v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5uHYcK0nbEYgRaFTY5BqnP"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 196133,
+        "name": "Magic (feat. Rivers Cuomo)",
+        "disc_number": 1,
+        "id": "5uHYcK0nbEYgRaFTY5BqnP"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3SiUGXivvan3tlVSitU2Ci"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 221893,
+        "name": "Fame",
+        "disc_number": 1,
+        "id": "3SiUGXivvan3tlVSitU2Ci"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5B0WISmCAb2WFrpFsVdK5E"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 243440,
+        "name": "Lovelier Than You",
+        "disc_number": 1,
+        "id": "5B0WISmCAb2WFrpFsVdK5E"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Ricco Barrino",
+            "id": "4Sm4OwmPnnZ6L4EYX4AhOc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0lZdHkKFAOnVBEq8Ze1Gsg"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 203546,
+        "name": "5th Dimension (feat. Ricco Barrino)",
+        "disc_number": 1,
+        "id": "0lZdHkKFAOnVBEq8Ze1Gsg"
+      },
+      {
+        "artists": [
+          {
+            "name": "B.o.B",
+            "id": "5ndkK3dpZLKtBklKjxNQwT"
+          },
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          },
+          {
+            "name": "Hayley Williams",
+            "id": "6Rx1JKzBrSzoKQtmbVmBnM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bnDTGikdoO8CwzlAPyBHR"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 319293,
+        "name": "Airplanes, Pt. II (feat. Eminem & Hayley Williams of Paramore)",
+        "disc_number": 1,
+        "id": "2bnDTGikdoO8CwzlAPyBHR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "7apLPYT8szV1IqTxyVSy5P"
+  }
+}

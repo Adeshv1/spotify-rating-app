@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7IAk6YxAb3zjyOaGV0nzb0_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:37.268Z",
+  "lastRefreshedAt": "2026-03-25T22:19:37.268Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Martes Fiore",
+            "id": "4iyGWBpdODMrJp3DRotA9W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bTycbdDfQELplifneZzJj"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 146500,
+        "name": "Clouds Coming",
+        "disc_number": 1,
+        "id": "7bTycbdDfQELplifneZzJj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7IAk6YxAb3zjyOaGV0nzb0"
+  }
+}

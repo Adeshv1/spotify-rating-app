@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3jKaPFUBaonBSfAK6ubtU6_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:27.141Z",
+  "lastRefreshedAt": "2026-03-25T22:19:27.141Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Isidorus",
+            "id": "1XvelV0uWSMLWWE5VQHbOO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6niIx0QbmKwJFk5H2vv9DT"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 124632,
+        "name": "Light in Silence",
+        "disc_number": 1,
+        "id": "6niIx0QbmKwJFk5H2vv9DT"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3jKaPFUBaonBSfAK6ubtU6"
+  }
+}

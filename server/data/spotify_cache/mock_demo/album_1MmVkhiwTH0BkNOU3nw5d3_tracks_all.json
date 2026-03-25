@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1MmVkhiwTH0BkNOU3nw5d3_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.793Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.793Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ghvzmzpx2nnrbx7wtpMgo"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 165727,
+        "name": "Cyber Sex",
+        "disc_number": 1,
+        "id": "1ghvzmzpx2nnrbx7wtpMgo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          },
+          {
+            "name": "Smino",
+            "id": "1ybINI1qPiFbwDXamRtwxD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7k51pIqTGEHHZOnpI11Qq2"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 195207,
+        "name": "Won't Bite (feat. Smino)",
+        "disc_number": 1,
+        "id": "7k51pIqTGEHHZOnpI11Qq2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1TMWcbxL5YF8rKsFHv5hAP"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 187048,
+        "name": "Rules",
+        "disc_number": 1,
+        "id": "1TMWcbxL5YF8rKsFHv5hAP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1L0z2CQKrKJ2spYSMkfim9"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 197930,
+        "name": "Bottom Bitch",
+        "disc_number": 1,
+        "id": "1L0z2CQKrKJ2spYSMkfim9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Dv1eDb0MEgF93GpLXlucZ"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 237894,
+        "name": "Say So",
+        "disc_number": 1,
+        "id": "3Dv1eDb0MEgF93GpLXlucZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          },
+          {
+            "name": "Gucci Mane",
+            "id": "13y7CgLHjMVRMDqxdx0Xdo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4EivmOT13NMpNSfTKn9p4s"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 163167,
+        "name": "Like That (feat. Gucci Mane)",
+        "disc_number": 1,
+        "id": "4EivmOT13NMpNSfTKn9p4s"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1j6NZFHrpc09YmEZuSlmwf"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 241484,
+        "name": "Talk Dirty",
+        "disc_number": 1,
+        "id": "1j6NZFHrpc09YmEZuSlmwf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2OAcH9SD8ehxuG0tWNe0cU"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 208482,
+        "name": "Addiction",
+        "disc_number": 1,
+        "id": "2OAcH9SD8ehxuG0tWNe0cU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/60ynsPSSKe6O3sfwRnIBRf"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 226978,
+        "name": "Streets",
+        "disc_number": 1,
+        "id": "60ynsPSSKe6O3sfwRnIBRf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xIDCYGTyLaDkiaaulVPcJ"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 160138,
+        "name": "Shine",
+        "disc_number": 1,
+        "id": "5xIDCYGTyLaDkiaaulVPcJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ZiJGdjNtvgngdT3wRKVqS"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 202378,
+        "name": "Better Than Me",
+        "disc_number": 1,
+        "id": "1ZiJGdjNtvgngdT3wRKVqS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Doja Cat",
+            "id": "5cj0lLjcoR7YOSnhnX0Po5"
+          },
+          {
+            "name": "Tyga",
+            "id": "5LHRHt1k9lMyONurDHEdrp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7f5trao56t7sB7f14QDTmp"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 203093,
+        "name": "Juicy",
+        "disc_number": 1,
+        "id": "7f5trao56t7sB7f14QDTmp"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "1MmVkhiwTH0BkNOU3nw5d3"
+  }
+}

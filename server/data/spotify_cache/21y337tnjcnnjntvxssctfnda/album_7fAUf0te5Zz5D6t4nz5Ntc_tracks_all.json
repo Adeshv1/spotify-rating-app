@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7fAUf0te5Zz5D6t4nz5Ntc_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.253Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.253Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70EGFwKoC1oqkyzqSXGsVJ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 114422,
+        "name": "Intro (Delirium)",
+        "disc_number": 1,
+        "id": "70EGFwKoC1oqkyzqSXGsVJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0KnF72yuxqUmnR9l8oRyxf"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 226056,
+        "name": "Aftertaste",
+        "disc_number": 1,
+        "id": "0KnF72yuxqUmnR9l8oRyxf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2VwsyCOfhWZg0cNUfLNptd"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 227423,
+        "name": "Something In The Way You Move",
+        "disc_number": 1,
+        "id": "2VwsyCOfhWZg0cNUfLNptd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0QpUhDAcBwtJvO47U6ddYI"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 226499,
+        "name": "Keep On Dancin'",
+        "disc_number": 1,
+        "id": "0QpUhDAcBwtJvO47U6ddYI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6YAuDfyjCy0vbKIqa71o8v"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 213445,
+        "name": "On My Mind",
+        "disc_number": 1,
+        "id": "6YAuDfyjCy0vbKIqa71o8v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5sKd9wOJDPCULRatbrw4rF"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 197851,
+        "name": "Around U",
+        "disc_number": 1,
+        "id": "5sKd9wOJDPCULRatbrw4rF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1K3ojv3m63ZYteqsWwN0I5"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 196212,
+        "name": "Codes",
+        "disc_number": 1,
+        "id": "1K3ojv3m63ZYteqsWwN0I5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0CaCoa5swlueEOTabxgehq"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 255231,
+        "name": "Holding On For Life",
+        "disc_number": 1,
+        "id": "0CaCoa5swlueEOTabxgehq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05zCWOpwIUf6JY06gSL6uz"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 252534,
+        "name": "Love Me Like You Do - From \"Fifty Shades Of Grey\"",
+        "disc_number": 1,
+        "id": "05zCWOpwIUf6JY06gSL6uz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/691z5Lu2yPlg8PIEDvPwMW"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 213994,
+        "name": "Don't Need Nobody",
+        "disc_number": 1,
+        "id": "691z5Lu2yPlg8PIEDvPwMW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fNRrgwuEGwvgAo7MPBbIR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 196379,
+        "name": "Don't Panic",
+        "disc_number": 1,
+        "id": "3fNRrgwuEGwvgAo7MPBbIR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2kDSXRbHeuntpfQ7fckRu4"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 208319,
+        "name": "We Can't Move To This",
+        "disc_number": 1,
+        "id": "2kDSXRbHeuntpfQ7fckRu4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16JduunM4qyR8ef6fgKVjz"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 237408,
+        "name": "Army",
+        "disc_number": 1,
+        "id": "16JduunM4qyR8ef6fgKVjz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6w3qhLTbVqRXQOo36QfVwy"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 216877,
+        "name": "Lost And Found",
+        "disc_number": 1,
+        "id": "6w3qhLTbVqRXQOo36QfVwy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7mWUcPvWCw3X7dkWMKRVsq"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 226540,
+        "name": "Devotion",
+        "disc_number": 1,
+        "id": "7mWUcPvWCw3X7dkWMKRVsq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Z7chyosQwkw6y4NroMz3d"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 189700,
+        "name": "Scream It Out",
+        "disc_number": 1,
+        "id": "5Z7chyosQwkw6y4NroMz3d"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "7fAUf0te5Zz5D6t4nz5Ntc"
+  }
+}

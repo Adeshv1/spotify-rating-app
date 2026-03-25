@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7qaaLpJ9QuQzAwbsZOd6PF_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:42.451Z",
+  "lastRefreshedAt": "2026-03-25T22:19:42.451Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dwight Rivera",
+            "id": "418rmHL9Xl5t9hCYF1Wgyl"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GRjlkZ7MxKtRC4jsJzQxv"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 145120,
+        "name": "Window Seat",
+        "disc_number": 1,
+        "id": "6GRjlkZ7MxKtRC4jsJzQxv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7qaaLpJ9QuQzAwbsZOd6PF"
+  }
+}

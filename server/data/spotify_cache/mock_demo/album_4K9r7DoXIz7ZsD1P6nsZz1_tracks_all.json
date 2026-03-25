@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4K9r7DoXIz7ZsD1P6nsZz1_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:26.375Z",
+  "lastRefreshedAt": "2026-03-25T22:19:26.375Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2mMSUTtyuQvAXeqwWJgJrX"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 182020,
+        "name": "Be Very Afraid",
+        "disc_number": 1,
+        "id": "2mMSUTtyuQvAXeqwWJgJrX"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "SoFaygo",
+            "id": "2SJhf6rTOU53g8yBdAjPby"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5obhkCpdeuQcJ3w4N6BVfS"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 181739,
+        "name": "Satellite",
+        "disc_number": 1,
+        "id": "5obhkCpdeuQcJ3w4N6BVfS"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Sheck Wes",
+            "id": "2RDOrhPqAM4jzTRCEb19qX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xZey3DC601Kv1vMlFvJax"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 180376,
+        "name": "Rain",
+        "disc_number": 1,
+        "id": "5xZey3DC601Kv1vMlFvJax"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0vqn83gxRRty97jHU2zhxp"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 209639,
+        "name": "Facts",
+        "disc_number": 1,
+        "id": "0vqn83gxRRty97jHU2zhxp"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Babyface Ray",
+            "id": "3zZ88AwlTwfCJkowsFCvLA"
+          },
+          {
+            "name": "Zona Man",
+            "id": "5rryVPJ5yjWq8QkQSCw7rs"
+          },
+          {
+            "name": "G.T.",
+            "id": "7LPqtwClp78XM85lJWaiKQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/38K5e0V5Wlkps0VOaznzEh"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 154773,
+        "name": "365",
+        "disc_number": 1,
+        "id": "38K5e0V5Wlkps0VOaznzEh"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Dougie F",
+            "id": "4pBG47zWhJbDw7mpsg68PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6T7zLjPwMrneCiO5eRbATf"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 206783,
+        "name": "Back In My Bag",
+        "disc_number": 1,
+        "id": "6T7zLjPwMrneCiO5eRbATf"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5X9LaDpoyfx0C4pDBgo4PR"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 172631,
+        "name": "SEOUL GLOW",
+        "disc_number": 1,
+        "id": "5X9LaDpoyfx0C4pDBgo4PR"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Sheck Wes",
+            "id": "2RDOrhPqAM4jzTRCEb19qX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5i1ODzIR84QYuYDPN2QLkS"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 181897,
+        "name": "Off at 7",
+        "disc_number": 1,
+        "id": "5i1ODzIR84QYuYDPN2QLkS"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Swae Lee",
+            "id": "1zNqQNIdeOUZHb8zbZRFMX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1IfjjJk7LlwWjNzruTJ7Co"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 160667,
+        "name": "Street Sweeper",
+        "disc_number": 1,
+        "id": "1IfjjJk7LlwWjNzruTJ7Co"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          },
+          {
+            "name": "Quavo",
+            "id": "0VRj0yCOv2FXJNP47XQnx5"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0YvlUFXEF7bjXnflqCn30u"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 186833,
+        "name": "Ring Ring",
+        "disc_number": 1,
+        "id": "0YvlUFXEF7bjXnflqCn30u"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "HVN",
+            "id": "61GrWHOtJOXpqQjibezT8i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5eqG0ezD4DwnmaOi46sgDd"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 120944,
+        "name": "Options",
+        "disc_number": 1,
+        "id": "5eqG0ezD4DwnmaOi46sgDd"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "SoFaygo",
+            "id": "2SJhf6rTOU53g8yBdAjPby"
+          },
+          {
+            "name": "Wallie the Sensei",
+            "id": "6cUpFVxDYWed9WxtC4QgC5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6peG4yF5frFHeEhqiaPWIa"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 145026,
+        "name": "First Round Pick",
+        "disc_number": 1,
+        "id": "6peG4yF5frFHeEhqiaPWIa"
+      },
+      {
+        "artists": [
+          {
+            "name": "CHASE B",
+            "id": "2cMVIRpseAO7fJAxNfg6rD"
+          },
+          {
+            "name": "bribandz",
+            "id": "1Rby23c3XSbpyRI9bg2Y4z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0aOyq78Rz4j0Y1IAVDN8fK"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 157744,
+        "name": "INDIE**",
+        "disc_number": 1,
+        "id": "0aOyq78Rz4j0Y1IAVDN8fK"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "4K9r7DoXIz7ZsD1P6nsZz1"
+  }
+}

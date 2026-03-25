@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1CYQlkKE5Q0khU6eMwVAVt_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:12.386Z",
+  "lastRefreshedAt": "2026-03-25T22:20:12.386Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1H2aLiua3VEig2qY0eU3s1"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 196506,
+        "name": "Sin Filtro",
+        "disc_number": 1,
+        "id": "1H2aLiua3VEig2qY0eU3s1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5YpwO3cCgxcUgNbJnWuEfM"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 173186,
+        "name": "Tequila",
+        "disc_number": 1,
+        "id": "5YpwO3cCgxcUgNbJnWuEfM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "Anuel AA",
+            "id": "2R21vXR83lH98kGeO99Y66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pWOMNQJW3g2zmGjP0Vkb0"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 215459,
+        "name": "Whine Up",
+        "disc_number": 1,
+        "id": "2pWOMNQJW3g2zmGjP0Vkb0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1NuV7MPW6vlAsMlr10mumb"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 175293,
+        "name": "Maniquí",
+        "disc_number": 1,
+        "id": "1NuV7MPW6vlAsMlr10mumb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "Darell",
+            "id": "1TtXnWcUs0FCkaZDPGYHdf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/24UXULlkYRgpgHjHfWqPO4"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 177400,
+        "name": "Perdóname",
+        "disc_number": 1,
+        "id": "24UXULlkYRgpgHjHfWqPO4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5qpXuQa1RcE4t14YDWWfGp"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 179533,
+        "name": "Novia Nueva",
+        "disc_number": 1,
+        "id": "5qpXuQa1RcE4t14YDWWfGp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "Rauw Alejandro",
+            "id": "1mcTU81TzQhprhouKaTkpq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4thYedllWlJQOnrplPxwfA"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 185693,
+        "name": "Quisieras",
+        "disc_number": 1,
+        "id": "4thYedllWlJQOnrplPxwfA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3tW1kXsFBAqBaPAZ73YUna"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 201106,
+        "name": "Destino",
+        "disc_number": 1,
+        "id": "3tW1kXsFBAqBaPAZ73YUna"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4HVMGcAkoArlmbdda5h1Gi"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 165493,
+        "name": "Come y Te Vas",
+        "disc_number": 1,
+        "id": "4HVMGcAkoArlmbdda5h1Gi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3OEQnJuFR0idVAcwTIkWCH"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 207413,
+        "name": "Borracho",
+        "disc_number": 1,
+        "id": "3OEQnJuFR0idVAcwTIkWCH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7FlUOV2d2Mu5sEn5gVbnZR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 136186,
+        "name": "La Toco",
+        "disc_number": 1,
+        "id": "7FlUOV2d2Mu5sEn5gVbnZR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "Sech",
+            "id": "77ziqFxp5gaInVrF2lj4ht"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/26Qhn2T88XqVinXQpmSarj"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 198320,
+        "name": "Atrévete",
+        "disc_number": 1,
+        "id": "26Qhn2T88XqVinXQpmSarj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "Ozuna",
+            "id": "1i8SpTcr7yvPOmcqrbnVXY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4PJ3umtW1aWdfh5EITHc6T"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 201818,
+        "name": "Te Robaré",
+        "disc_number": 1,
+        "id": "4PJ3umtW1aWdfh5EITHc6T"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          },
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5YUyW9opqNsMSEzzecZih1"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 172854,
+        "name": "X",
+        "disc_number": 1,
+        "id": "5YUyW9opqNsMSEzzecZih1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Nicky Jam",
+            "id": "1SupJlEpv7RS2tPNRaHViT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0NJjYoxIw73eZjKZga8jvV"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 173106,
+        "name": "La Promesa (La Calle)",
+        "disc_number": 1,
+        "id": "0NJjYoxIw73eZjKZga8jvV"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "1CYQlkKE5Q0khU6eMwVAVt"
+  }
+}

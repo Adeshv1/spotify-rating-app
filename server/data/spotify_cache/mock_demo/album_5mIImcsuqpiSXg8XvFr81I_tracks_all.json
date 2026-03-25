@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5mIImcsuqpiSXg8XvFr81I_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.834Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.834Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WRBJ8YRdbS6rwZkCk1Odh"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 128888,
+        "name": "ATTENTION",
+        "disc_number": 1,
+        "id": "0WRBJ8YRdbS6rwZkCk1Odh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6rY5FAWxCdAGllYEOZMbjW"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 209273,
+        "name": "SLOW DANCING IN THE DARK",
+        "disc_number": 1,
+        "id": "6rY5FAWxCdAGllYEOZMbjW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3u9RHP8IpKPZh7bKHw83Ci"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 179423,
+        "name": "TEST DRIVE",
+        "disc_number": 1,
+        "id": "3u9RHP8IpKPZh7bKHw83Ci"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4rf7Mjit1TCiNaDgdn6peQ"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 251015,
+        "name": "WANTED U",
+        "disc_number": 1,
+        "id": "4rf7Mjit1TCiNaDgdn6peQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          },
+          {
+            "name": "Clams Casino",
+            "id": "5vSQUyT33qxr1xAX2Tkf3A"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1c4qQG0WFrhSZxWGHjN1qA"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 107076,
+        "name": "CAN'T GET OVER YOU (feat. Clams Casino)",
+        "disc_number": 1,
+        "id": "1c4qQG0WFrhSZxWGHjN1qA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52ooD6LHuXFubM6d1CDD93"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 174357,
+        "name": "YEAH RIGHT",
+        "disc_number": 1,
+        "id": "52ooD6LHuXFubM6d1CDD93"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          },
+          {
+            "name": "Shlohmo",
+            "id": "6y80I9YZi4DOpbaSUlL725"
+          },
+          {
+            "name": "D33J",
+            "id": "6DIUUnQRMBTkigLlsAxblR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gdwDKR1y2qERKi2CHpxqq"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 199708,
+        "name": "WHY AM I STILL IN LA (feat. Shlohmo & D33J)",
+        "disc_number": 1,
+        "id": "6gdwDKR1y2qERKi2CHpxqq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3nNjA76lO6zbLKugA0tdOw"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 168417,
+        "name": "NO FUN",
+        "disc_number": 1,
+        "id": "3nNjA76lO6zbLKugA0tdOw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4pLoPxNTIwOoKj6s8BIoHR"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 153168,
+        "name": "COME THRU",
+        "disc_number": 1,
+        "id": "4pLoPxNTIwOoKj6s8BIoHR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          },
+          {
+            "name": "Trippie Redd",
+            "id": "6Xgp2XMz1fhVYe7i6yNAax"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4HKWrGhNxub4PTLg5CM5fW"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 158726,
+        "name": "R.I.P. (feat. Trippie Redd)",
+        "disc_number": 1,
+        "id": "4HKWrGhNxub4PTLg5CM5fW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ZFx96qgd3um86QFdEslYv"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 127318,
+        "name": "XNXX",
+        "disc_number": 1,
+        "id": "4ZFx96qgd3um86QFdEslYv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Joji",
+            "id": "3MZsBdqDrRTJihTHQrO6Dq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YTNma2z5qiOWYPMBGBFES"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 253780,
+        "name": "I'LL SEE YOU IN 40",
+        "disc_number": 1,
+        "id": "2YTNma2z5qiOWYPMBGBFES"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "5mIImcsuqpiSXg8XvFr81I"
+  }
+}

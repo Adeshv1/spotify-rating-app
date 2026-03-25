@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4gCNyS7pidfK3rKWhB3JOY_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.800Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.800Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Bs4jQEGMycglOfWPBqrVG"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 228138,
+        "name": "Steal My Girl",
+        "disc_number": 1,
+        "id": "2Bs4jQEGMycglOfWPBqrVG"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GtGeeChOx4NS77bqK8SUx"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 196059,
+        "name": "Ready to Run",
+        "disc_number": 1,
+        "id": "7GtGeeChOx4NS77bqK8SUx"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6HFywc5eQYRRYHYTatCb5Y"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 229038,
+        "name": "Where Do Broken Hearts Go",
+        "disc_number": 1,
+        "id": "6HFywc5eQYRRYHYTatCb5Y"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3JjnGLK8IxkNLvo8Lb3KOM"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 248357,
+        "name": "18",
+        "disc_number": 1,
+        "id": "3JjnGLK8IxkNLvo8Lb3KOM"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5UgsZiYk1lkEobuPHmRtWm"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 201856,
+        "name": "Girl Almighty",
+        "disc_number": 1,
+        "id": "5UgsZiYk1lkEobuPHmRtWm"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0L5gFNrzHyh4OhMwEz6DGS"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 210893,
+        "name": "Fool's Gold",
+        "disc_number": 1,
+        "id": "0L5gFNrzHyh4OhMwEz6DGS"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 226597,
+        "name": "Night Changes",
+        "disc_number": 1,
+        "id": "5O2P9iiztwhomNh8xkR9lJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4JaLkM90MJutDAl5jD9BZX"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 199724,
+        "name": "No Control",
+        "disc_number": 1,
+        "id": "4JaLkM90MJutDAl5jD9BZX"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34aYkYrY3sXhEU9O4VQgtB"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 174072,
+        "name": "Fireproof",
+        "disc_number": 1,
+        "id": "34aYkYrY3sXhEU9O4VQgtB"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lrC9aBnzlG9U5DDoHMnyt"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 256709,
+        "name": "Spaces",
+        "disc_number": 1,
+        "id": "4lrC9aBnzlG9U5DDoHMnyt"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6AzCBeiDuUXGXjznBufswB"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 214724,
+        "name": "Stockholm Syndrome",
+        "disc_number": 1,
+        "id": "6AzCBeiDuUXGXjznBufswB"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ibWCCEne6WEqDBAv7BeXv"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 231703,
+        "name": "Clouds",
+        "disc_number": 1,
+        "id": "6ibWCCEne6WEqDBAv7BeXv"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2skzofTV9Ys3eN70pghEHL"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 266593,
+        "name": "Change Your Ticket",
+        "disc_number": 1,
+        "id": "2skzofTV9Ys3eN70pghEHL"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23xx852ectQgmp1G78zSpd"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 194205,
+        "name": "Illusion",
+        "disc_number": 1,
+        "id": "23xx852ectQgmp1G78zSpd"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dD1aarWotVIiFo5gGdMc2"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 158312,
+        "name": "Once in a Lifetime",
+        "disc_number": 1,
+        "id": "1dD1aarWotVIiFo5gGdMc2"
+      },
+      {
+        "artists": [
+          {
+            "name": "One Direction",
+            "id": "4AK6F7OLvEQ5QYCBNiQWHq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bqIFmnVAsndYWuXxAwQet"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 198655,
+        "name": "Act My Age",
+        "disc_number": 1,
+        "id": "4bqIFmnVAsndYWuXxAwQet"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "4gCNyS7pidfK3rKWhB3JOY"
+  }
+}

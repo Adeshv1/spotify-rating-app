@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0U8AH8FOjVginjHUhK73Ov_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:43.039Z",
+  "lastRefreshedAt": "2026-03-25T22:19:43.039Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Will Kaufman",
+            "id": "1qw4AAqrPMSwFoEc1RBRLU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4fG5KccAJKYk1EguGbGKt0"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 146745,
+        "name": "Serene",
+        "disc_number": 1,
+        "id": "4fG5KccAJKYk1EguGbGKt0"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0U8AH8FOjVginjHUhK73Ov"
+  }
+}

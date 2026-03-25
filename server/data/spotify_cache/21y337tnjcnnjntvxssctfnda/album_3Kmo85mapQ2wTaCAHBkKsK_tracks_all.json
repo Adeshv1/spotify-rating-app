@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3Kmo85mapQ2wTaCAHBkKsK_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.187Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.187Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "MØ",
+            "id": "0bdfiayQAKewqEvaU6rXCv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zsXy7vlHdItvUSH8EwQss"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 185360,
+        "name": "Cold Water",
+        "disc_number": 1,
+        "id": "7zsXy7vlHdItvUSH8EwQss"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3Kmo85mapQ2wTaCAHBkKsK"
+  }
+}

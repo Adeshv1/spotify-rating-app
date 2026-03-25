@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5duyQokC4FMcWPYTV9Gpf9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:49.785Z",
+  "lastRefreshedAt": "2026-03-25T22:19:49.785Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4OSBTYWVwsQhGLF9NHvIbR"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 228093,
+        "name": "Rolling in the Deep",
+        "disc_number": 1,
+        "id": "4OSBTYWVwsQhGLF9NHvIbR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5mFMb5OHI3cN0UjITVztCj"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 223266,
+        "name": "Rumour Has It",
+        "disc_number": 1,
+        "id": "5mFMb5OHI3cN0UjITVztCj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eF2x1BkgilhaZ2AipRY8j"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 250000,
+        "name": "Turning Tables",
+        "disc_number": 1,
+        "id": "2eF2x1BkgilhaZ2AipRY8j"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CRtJS94Hq3PbBZT9LuF90"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 243200,
+        "name": "Don't You Remember",
+        "disc_number": 1,
+        "id": "1CRtJS94Hq3PbBZT9LuF90"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3di5hcvxxciiqwMH1jarhY"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 242973,
+        "name": "Set Fire to the Rain",
+        "disc_number": 1,
+        "id": "3di5hcvxxciiqwMH1jarhY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2hw47GMKL6LXwp5BJgPxXf"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 278040,
+        "name": "He Won't Go",
+        "disc_number": 1,
+        "id": "2hw47GMKL6LXwp5BJgPxXf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/43Bcg5ckW8WchRzyPZA0u1"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 228293,
+        "name": "Take It All",
+        "disc_number": 1,
+        "id": "43Bcg5ckW8WchRzyPZA0u1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42Uw9frN5ZVX40mRU3hHFL"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 241351,
+        "name": "I'll Be Waiting",
+        "disc_number": 1,
+        "id": "42Uw9frN5ZVX40mRU3hHFL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5W63Zcirj6bvnTxhVIKTSK"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 348226,
+        "name": "One And Only",
+        "disc_number": 1,
+        "id": "5W63Zcirj6bvnTxhVIKTSK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2PPN1HFpVotjq7oJIqQbnx"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 316240,
+        "name": "Lovesong",
+        "disc_number": 1,
+        "id": "2PPN1HFpVotjq7oJIqQbnx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Adele",
+            "id": "4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 285240,
+        "name": "Someone Like You",
+        "disc_number": 1,
+        "id": "3bNv3VuUOKgrf5hu3YcuRo"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "5duyQokC4FMcWPYTV9Gpf9"
+  }
+}

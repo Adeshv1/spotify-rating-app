@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3eDENR5ZFpxC72QQmBnLEo_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:39.951Z",
+  "lastRefreshedAt": "2026-03-25T22:19:39.951Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Stone Mirland",
+            "id": "7JhyuaeB60S8vsFRzcdN2o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0qFkEaASYYsIIQoYlN9SF9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 149482,
+        "name": "Petal Drift",
+        "disc_number": 1,
+        "id": "0qFkEaASYYsIIQoYlN9SF9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3eDENR5ZFpxC72QQmBnLEo"
+  }
+}

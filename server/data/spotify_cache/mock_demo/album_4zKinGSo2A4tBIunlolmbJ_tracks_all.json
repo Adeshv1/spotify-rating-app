@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4zKinGSo2A4tBIunlolmbJ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:28.891Z",
+  "lastRefreshedAt": "2026-03-25T22:19:28.891Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aquilegia",
+            "id": "4XF98HJsL7ue3NksOvebiJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ESAE30bJPEvyvfDE5oh1T"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 130181,
+        "name": "Silent Bloom",
+        "disc_number": 1,
+        "id": "2ESAE30bJPEvyvfDE5oh1T"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4zKinGSo2A4tBIunlolmbJ"
+  }
+}

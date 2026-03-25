@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2egZ9KaWhJHiylvZxaUW6F_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:42.082Z",
+  "lastRefreshedAt": "2026-03-25T22:19:42.082Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ren Lockhart",
+            "id": "2o6Pj478mXZrEZbEFnAbXp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62T1anGMtce8jCIdXIQRvL"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 161765,
+        "name": "Spring Roses",
+        "disc_number": 1,
+        "id": "62T1anGMtce8jCIdXIQRvL"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2egZ9KaWhJHiylvZxaUW6F"
+  }
+}

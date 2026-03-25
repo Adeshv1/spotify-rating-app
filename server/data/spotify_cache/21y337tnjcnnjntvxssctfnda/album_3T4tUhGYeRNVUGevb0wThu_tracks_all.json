@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3T4tUhGYeRNVUGevb0wThu_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.743Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.743Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7oolFzHipTMg2nL7shhdz2"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 227426,
+        "name": "Eraser",
+        "disc_number": 1,
+        "id": "7oolFzHipTMg2nL7shhdz2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6PCUP3dWmTjcTtXY02oFdT"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 261153,
+        "name": "Castle on the Hill",
+        "disc_number": 1,
+        "id": "6PCUP3dWmTjcTtXY02oFdT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/51ChrwmUPDJvedPQnIU8Ls"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 238440,
+        "name": "Dive",
+        "disc_number": 1,
+        "id": "51ChrwmUPDJvedPQnIU8Ls"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 233712,
+        "name": "Shape of You",
+        "disc_number": 1,
+        "id": "7qiZfU4dY1lWllzX7mPBI3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 263400,
+        "name": "Perfect",
+        "disc_number": 1,
+        "id": "0tgVpDi06FyKpA1z0VMD4v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0afhq8XCExXpqazXczTSve"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 170826,
+        "name": "Galway Girl",
+        "disc_number": 1,
+        "id": "0afhq8XCExXpqazXczTSve"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2RttW7RAu5nOAfq6YFvApB"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 207520,
+        "name": "Happier",
+        "disc_number": 1,
+        "id": "2RttW7RAu5nOAfq6YFvApB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HDPtsnyb3maFmPL8LLUTG"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 189280,
+        "name": "New Man",
+        "disc_number": 1,
+        "id": "5HDPtsnyb3maFmPL8LLUTG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2dfHh7ECGxfNqZTQno09Vk"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 248413,
+        "name": "Hearts Don't Break Around Here",
+        "disc_number": 1,
+        "id": "2dfHh7ECGxfNqZTQno09Vk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pJZ1v8HezrAoZ0Fhzby92"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 237333,
+        "name": "What Do I Know?",
+        "disc_number": 1,
+        "id": "2pJZ1v8HezrAoZ0Fhzby92"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6PJ8FF6UR8FZXfEvpHkIVN"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 280533,
+        "name": "How Would You Feel (Paean)",
+        "disc_number": 1,
+        "id": "6PJ8FF6UR8FZXfEvpHkIVN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4VuS959DSpr82t3qBqCrWG"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 221106,
+        "name": "Supermarket Flowers",
+        "disc_number": 1,
+        "id": "4VuS959DSpr82t3qBqCrWG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Lfiu5sZ4M4B6JaKMBc0FU"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 191146,
+        "name": "Barcelona",
+        "disc_number": 1,
+        "id": "3Lfiu5sZ4M4B6JaKMBc0FU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6SznMYPQJHzr3IwsAHLId2"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 176746,
+        "name": "Bibia Be Ye Ye",
+        "disc_number": 1,
+        "id": "6SznMYPQJHzr3IwsAHLId2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35QZaWQRkmnAVqBF1TLCxQ"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 179786,
+        "name": "Nancy Mulligan",
+        "disc_number": 1,
+        "id": "35QZaWQRkmnAVqBF1TLCxQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TIU9Ehmi6dMzZK73Ym4yj"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 247106,
+        "name": "Save Myself",
+        "disc_number": 1,
+        "id": "6TIU9Ehmi6dMzZK73Ym4yj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "3T4tUhGYeRNVUGevb0wThu"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1D92WOHWUI2AGQCCdplcXL_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.071Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.071Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lana Del Rey",
+            "id": "00FQb4jTyendYWaN8pK0wa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2nMeu6UenVvwUktBCpLMK9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 236053,
+        "name": "Young And Beautiful",
+        "disc_number": 1,
+        "id": "2nMeu6UenVvwUktBCpLMK9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1D92WOHWUI2AGQCCdplcXL"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1ebVdqQyb5FwcVvvpEDPRA_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:09.249Z",
+  "lastRefreshedAt": "2026-03-25T22:20:09.249Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Marshmello",
+            "id": "64KEffDW9EtZ1y2vBYgq8T"
+          },
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1wIyr1y5wiWqo7nqbxHpWt"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 201733,
+        "name": "FRIENDS",
+        "disc_number": 1,
+        "id": "1wIyr1y5wiWqo7nqbxHpWt"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1ebVdqQyb5FwcVvvpEDPRA"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_56yYgfX6M5FlpETfyZSHkn_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:11.727Z",
+  "lastRefreshedAt": "2026-03-25T22:20:11.727Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3DXXKDbbZKyAZfNb96ST3q"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 205745,
+        "name": "Confident",
+        "disc_number": 1,
+        "id": "3DXXKDbbZKyAZfNb96ST3q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3uwnnTQcHM1rDqSfA4gQNz"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 214739,
+        "name": "Cool for the Summer",
+        "disc_number": 1,
+        "id": "3uwnnTQcHM1rDqSfA4gQNz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TBBOmpJp7a4aTy15kKHqK"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 204188,
+        "name": "Old Ways",
+        "disc_number": 1,
+        "id": "6TBBOmpJp7a4aTy15kKHqK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/15Yp4D5e0MLaIN5tEe181h"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 221049,
+        "name": "For You",
+        "disc_number": 1,
+        "id": "15Yp4D5e0MLaIN5tEe181h"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3by8IfnW9dZ2t4pZw1WVxz"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 191307,
+        "name": "Stone Cold",
+        "disc_number": 1,
+        "id": "3by8IfnW9dZ2t4pZw1WVxz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          },
+          {
+            "name": "Iggy Azalea",
+            "id": "5yG7ZAZafVaAlMTeBybKAL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DJGyHhas36jlD3ImtTJdo"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 244014,
+        "name": "Kingdom Come",
+        "disc_number": 1,
+        "id": "5DJGyHhas36jlD3ImtTJdo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          },
+          {
+            "name": "Sirah",
+            "id": "3oAazIwC0nAYkOKVQPUC38"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/586Q1Orh7e4bbrRh9lfJgY"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 192918,
+        "name": "Waitin for You",
+        "disc_number": 1,
+        "id": "586Q1Orh7e4bbrRh9lfJgY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/40MNdK1qPu8kDB0cSI51ds"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 199140,
+        "name": "Wildfire",
+        "disc_number": 1,
+        "id": "40MNdK1qPu8kDB0cSI51ds"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2DTkSbhNDIq2FdyPEhLQcl"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 244998,
+        "name": "Lionheart",
+        "disc_number": 1,
+        "id": "2DTkSbhNDIq2FdyPEhLQcl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JGdRxJs2IBKMroirc7cQi"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 190745,
+        "name": "Yes",
+        "disc_number": 1,
+        "id": "0JGdRxJs2IBKMroirc7cQi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ktPESvBd4cGR9y8PPa3B2"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 235104,
+        "name": "Father",
+        "disc_number": 1,
+        "id": "6ktPESvBd4cGR9y8PPa3B2"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "56yYgfX6M5FlpETfyZSHkn"
+  }
+}

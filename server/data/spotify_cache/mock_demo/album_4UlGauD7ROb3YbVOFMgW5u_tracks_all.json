@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4UlGauD7ROb3YbVOFMgW5u_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.447Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.447Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6t90Z9XkdsHD8xMxro6KRP"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 161066,
+        "name": "Consideration",
+        "disc_number": 1,
+        "id": "6t90Z9XkdsHD8xMxro6KRP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6K4Co1NQyOnoFEJMkZHkln"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 72080,
+        "name": "James Joint",
+        "disc_number": 1,
+        "id": "6K4Co1NQyOnoFEJMkZHkln"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0UHB9METy4VCXNgkcGqHqS"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 253080,
+        "name": "Kiss It Better",
+        "disc_number": 1,
+        "id": "0UHB9METy4VCXNgkcGqHqS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72TFWvU3wUYdUuxejTTIzt"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 219320,
+        "name": "Work",
+        "disc_number": 1,
+        "id": "72TFWvU3wUYdUuxejTTIzt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4mCf3vQf7z0Yseo0RxAi3V"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 186466,
+        "name": "Desperado",
+        "disc_number": 1,
+        "id": "4mCf3vQf7z0Yseo0RxAi3V"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3HQcsqRjRdruUjkbDSgmVF"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 235586,
+        "name": "Woo",
+        "disc_number": 1,
+        "id": "3HQcsqRjRdruUjkbDSgmVF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4pAl7FkDMNBsjykPXo91B3"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 191600,
+        "name": "Needed Me",
+        "disc_number": 1,
+        "id": "4pAl7FkDMNBsjykPXo91B3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eDYNlBwRMeFOZHOZ95dZ1"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 133080,
+        "name": "Yeah, I Said It",
+        "disc_number": 1,
+        "id": "7eDYNlBwRMeFOZHOZ95dZ1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RtzmszGXs32TRhv5zTKNM"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 397093,
+        "name": "Same Ol’ Mistakes",
+        "disc_number": 1,
+        "id": "6RtzmszGXs32TRhv5zTKNM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7Jd5LgnSRQElW6FsTWVPzE"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 202506,
+        "name": "Never Ending",
+        "disc_number": 1,
+        "id": "7Jd5LgnSRQElW6FsTWVPzE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5oO3drDxtziYU2H1X23ZIp"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 224000,
+        "name": "Love On The Brain",
+        "disc_number": 1,
+        "id": "5oO3drDxtziYU2H1X23ZIp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KnJwhZU3DIBe54Q4HPpIl"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 120626,
+        "name": "Higher",
+        "disc_number": 1,
+        "id": "1KnJwhZU3DIBe54Q4HPpIl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6D2tzc8kRnZb7P1lNwMBLH"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 223213,
+        "name": "Close To You",
+        "disc_number": 1,
+        "id": "6D2tzc8kRnZb7P1lNwMBLH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5LJz7kmFhLqB53tmVWxig5"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 88493,
+        "name": "Goodnight Gotham",
+        "disc_number": 1,
+        "id": "5LJz7kmFhLqB53tmVWxig5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4UTizOdGljPIIbXtoXycAd"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 144226,
+        "name": "Pose",
+        "disc_number": 1,
+        "id": "4UTizOdGljPIIbXtoXycAd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BiELrM90hRxpozaIXbsLw"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 206400,
+        "name": "Sex With Me",
+        "disc_number": 1,
+        "id": "7BiELrM90hRxpozaIXbsLw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "4UlGauD7ROb3YbVOFMgW5u"
+  }
+}

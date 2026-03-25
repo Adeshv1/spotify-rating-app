@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_50owKb2Oo4FXVBpsxBwxSq_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:25.825Z",
+  "lastRefreshedAt": "2026-03-25T22:19:25.825Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Taffy",
+            "id": "7hjNO6RQeqZIBZpZQdstUO"
+          },
+          {
+            "name": "PLUTO",
+            "id": "4uqHgaeBynLBQgfhMEIm1G"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5AIKM6zNiPi00rbWPnEq80"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 157977,
+        "name": "Feeling On My Body",
+        "disc_number": 1,
+        "id": "5AIKM6zNiPi00rbWPnEq80"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "50owKb2Oo4FXVBpsxBwxSq"
+  }
+}

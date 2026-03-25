@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1MUae59pDReQvn12s6UsUD_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:28.171Z",
+  "lastRefreshedAt": "2026-03-25T22:19:28.171Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Saverio Lobeone",
+            "id": "0nAp5pLclY53Fdzm3cdm5N"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0YWCYAFinPOcx2CHG0bwr3"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 161017,
+        "name": "Contemplating the Horizon",
+        "disc_number": 1,
+        "id": "0YWCYAFinPOcx2CHG0bwr3"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1MUae59pDReQvn12s6UsUD"
+  }
+}

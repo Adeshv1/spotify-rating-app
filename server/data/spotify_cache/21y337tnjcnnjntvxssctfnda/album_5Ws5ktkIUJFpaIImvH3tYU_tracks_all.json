@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5Ws5ktkIUJFpaIImvH3tYU_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:51.423Z",
+  "lastRefreshedAt": "2026-03-25T22:19:51.423Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70un6hFtm3DkpqsYLRoRei"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 163120,
+        "name": "Sucker",
+        "disc_number": 1,
+        "id": "70un6hFtm3DkpqsYLRoRei"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0A5qqtFMG1qrNQEcjvr1A2"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 203907,
+        "name": "Break the Rules",
+        "disc_number": 1,
+        "id": "0A5qqtFMG1qrNQEcjvr1A2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/21DHouHM5YSgRNz5j8Rfiw"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 171346,
+        "name": "London Queen",
+        "disc_number": 1,
+        "id": "21DHouHM5YSgRNz5j8Rfiw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0CAAEA7BkwbtiQFcUWnaPX"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 137746,
+        "name": "Breaking Up",
+        "disc_number": 1,
+        "id": "0CAAEA7BkwbtiQFcUWnaPX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/77KiUa5A9TYY3tF77kKNbH"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 182306,
+        "name": "Gold Coins",
+        "disc_number": 1,
+        "id": "77KiUa5A9TYY3tF77kKNbH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Y1MWB026LYxGvhq4EcMiC"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 169866,
+        "name": "Boom Clap",
+        "disc_number": 1,
+        "id": "0Y1MWB026LYxGvhq4EcMiC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          },
+          {
+            "name": "Rita Ora",
+            "id": "5CCwRZC6euC8Odo6y9X8jr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TkwJ7TLLnnckRL3PkdPsU"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 228520,
+        "name": "Doing It (feat. Rita Ora)",
+        "disc_number": 1,
+        "id": "0TkwJ7TLLnnckRL3PkdPsU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2HoF2cssv14SED4kltbauH"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 165187,
+        "name": "Body of My Own",
+        "disc_number": 1,
+        "id": "2HoF2cssv14SED4kltbauH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69QmNaMqnhuvD5rhY0YQ5R"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 231616,
+        "name": "Famous",
+        "disc_number": 1,
+        "id": "69QmNaMqnhuvD5rhY0YQ5R"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/73gFV5HHqDa4pIk13LmkZ0"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 198441,
+        "name": "Hanging Around",
+        "disc_number": 1,
+        "id": "73gFV5HHqDa4pIk13LmkZ0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76BLktRNWANM2heVQNnXNz"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 188800,
+        "name": "So over You",
+        "disc_number": 1,
+        "id": "76BLktRNWANM2heVQNnXNz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YBGP58bw7JcmpOlo4qNKn"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 171444,
+        "name": "Die Tonight",
+        "disc_number": 1,
+        "id": "2YBGP58bw7JcmpOlo4qNKn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1NpDHjEYI8cXi3ECy3phqx"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 181720,
+        "name": "Caught in the Middle",
+        "disc_number": 1,
+        "id": "1NpDHjEYI8cXi3ECy3phqx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ktr6cVeb0tQT7gy6UBKTx"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 225887,
+        "name": "Need Ur Luv",
+        "disc_number": 1,
+        "id": "4ktr6cVeb0tQT7gy6UBKTx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charli xcx",
+            "id": "25uiPmTg16RbhZWAqwLBy5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7slO17jNwf7yI0SHLEXIXJ"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 208973,
+        "name": "Red Balloon - Bonus Track",
+        "disc_number": 1,
+        "id": "7slO17jNwf7yI0SHLEXIXJ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "5Ws5ktkIUJFpaIImvH3tYU"
+  }
+}

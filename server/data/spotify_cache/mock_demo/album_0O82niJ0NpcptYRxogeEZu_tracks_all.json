@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0O82niJ0NpcptYRxogeEZu_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:01.537Z",
+  "lastRefreshedAt": "2026-03-25T22:20:01.537Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/773hekg7UEdbGvv3lJ3CmV"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 482369,
+        "name": "Pusher Love Girl",
+        "disc_number": 1,
+        "id": "773hekg7UEdbGvv3lJ3CmV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          },
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6vt0I1cw1YmAIKDJvHVIM5"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 326271,
+        "name": "Suit & Tie (feat. JAY-Z)",
+        "disc_number": 1,
+        "id": "6vt0I1cw1YmAIKDJvHVIM5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7I7EnQnVJH1uSJ0cSQKPuu"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 430628,
+        "name": "Don't Hold the Wall",
+        "disc_number": 1,
+        "id": "7I7EnQnVJH1uSJ0cSQKPuu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7z0JDE4w67HXt5lEWsU2Hj"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 479755,
+        "name": "Strawberry Bubblegum",
+        "disc_number": 1,
+        "id": "7z0JDE4w67HXt5lEWsU2Hj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/79MOydAvZYm8nyyzd6fiVi"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 406637,
+        "name": "Tunnel Vision",
+        "disc_number": 1,
+        "id": "79MOydAvZYm8nyyzd6fiVi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xxEK0MQvkME1LSS2cIW7R"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 437016,
+        "name": "Spaceship Coupe",
+        "disc_number": 1,
+        "id": "7xxEK0MQvkME1LSS2cIW7R"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4CfYxSs4Dr8KWORCmN3hom"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 287938,
+        "name": "That Girl",
+        "disc_number": 1,
+        "id": "4CfYxSs4Dr8KWORCmN3hom"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2AobDJxjDp5TbxGdR3JGen"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 431621,
+        "name": "Let the Groove Get In",
+        "disc_number": 1,
+        "id": "2AobDJxjDp5TbxGdR3JGen"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4rHZZAmHpZrA3iH5zx8frV"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 485598,
+        "name": "Mirrors",
+        "disc_number": 1,
+        "id": "4rHZZAmHpZrA3iH5zx8frV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/06aFFobYGQNlyqXcEmYPSm"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 442681,
+        "name": "Blue Ocean Floor",
+        "disc_number": 1,
+        "id": "06aFFobYGQNlyqXcEmYPSm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3HaW1TqoBUrTwEYmtguKTa"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 279124,
+        "name": "Dress On",
+        "disc_number": 1,
+        "id": "3HaW1TqoBUrTwEYmtguKTa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Timberlake",
+            "id": "31TPClRtHm23RisEBtV3X7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rPDcjQNtOK0gey9Gu1tZ2"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 282478,
+        "name": "Body Count",
+        "disc_number": 1,
+        "id": "3rPDcjQNtOK0gey9Gu1tZ2"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "0O82niJ0NpcptYRxogeEZu"
+  }
+}

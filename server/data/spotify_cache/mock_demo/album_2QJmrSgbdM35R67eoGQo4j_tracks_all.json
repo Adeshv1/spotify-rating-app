@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2QJmrSgbdM35R67eoGQo4j_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.224Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.224Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qnM0XXPZOINWA778uNqQ9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 212600,
+        "name": "Welcome To New York",
+        "disc_number": 1,
+        "id": "6qnM0XXPZOINWA778uNqQ9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1p80LdxRV74UKvL8gnD7ky"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 231826,
+        "name": "Blank Space",
+        "disc_number": 1,
+        "id": "1p80LdxRV74UKvL8gnD7ky"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lIxdJw6W3Fg4vUIYCB0S5"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 231000,
+        "name": "Style",
+        "disc_number": 1,
+        "id": "4lIxdJw6W3Fg4vUIYCB0S5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5OndtwLGA9O6XHFcGm2H7r"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 235800,
+        "name": "Out Of The Woods",
+        "disc_number": 1,
+        "id": "5OndtwLGA9O6XHFcGm2H7r"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dAb8TY433dl3ZfXYCLE19"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 193293,
+        "name": "All You Had To Do Was Stay",
+        "disc_number": 1,
+        "id": "0dAb8TY433dl3ZfXYCLE19"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xTtaWoae3wi06K5WfVUUH"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 219200,
+        "name": "Shake It Off",
+        "disc_number": 1,
+        "id": "5xTtaWoae3wi06K5WfVUUH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3wmN11qXGL0HyPojvEE1D9"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 207440,
+        "name": "I Wish You Would",
+        "disc_number": 1,
+        "id": "3wmN11qXGL0HyPojvEE1D9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/273dCMFseLcVsoSWx59IoE"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 211933,
+        "name": "Bad Blood",
+        "disc_number": 1,
+        "id": "273dCMFseLcVsoSWx59IoE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/59HjlYCeBsxdI0fcm3zglw"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 220440,
+        "name": "Wildest Dreams",
+        "disc_number": 1,
+        "id": "59HjlYCeBsxdI0fcm3zglw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4dYUOfmWna6DFccnz732n8"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 247533,
+        "name": "How You Get The Girl",
+        "disc_number": 1,
+        "id": "4dYUOfmWna6DFccnz732n8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oKMl2tJv4fdidkXUYMI5x"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 250093,
+        "name": "This Love",
+        "disc_number": 1,
+        "id": "3oKMl2tJv4fdidkXUYMI5x"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3jBMHD19RZdAqG9iFQh7xc"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 195706,
+        "name": "I Know Places",
+        "disc_number": 1,
+        "id": "3jBMHD19RZdAqG9iFQh7xc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taylor Swift",
+            "id": "06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/06WgOCf0LV2h4keYXDRnuh"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 271000,
+        "name": "Clean",
+        "disc_number": 1,
+        "id": "06WgOCf0LV2h4keYXDRnuh"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "2QJmrSgbdM35R67eoGQo4j"
+  }
+}

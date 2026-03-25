@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3Qq8Z12Xl0i4mWhwNljTFx_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:48.641Z",
+  "lastRefreshedAt": "2026-03-25T22:19:48.641Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Roger Eno",
+            "id": "7JCthCuu5Wmxv2avqVFolo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5gbZe9oyXXQDMLXFGsR4YC"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 225494,
+        "name": "Through The Blue - Piano Version",
+        "disc_number": 1,
+        "id": "5gbZe9oyXXQDMLXFGsR4YC"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3Qq8Z12Xl0i4mWhwNljTFx"
+  }
+}

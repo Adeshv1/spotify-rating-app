@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1wpgafbHuQfSUmCWvahFlq_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:02.655Z",
+  "lastRefreshedAt": "2026-03-25T22:20:02.655Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2771LMNxwf62FTAdpJMQfM"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 223962,
+        "name": "Bodak Yellow",
+        "disc_number": 1,
+        "id": "2771LMNxwf62FTAdpJMQfM"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1wpgafbHuQfSUmCWvahFlq"
+  }
+}

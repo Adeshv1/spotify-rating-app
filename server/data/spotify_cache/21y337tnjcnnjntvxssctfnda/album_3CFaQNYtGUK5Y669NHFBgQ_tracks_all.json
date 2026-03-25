@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3CFaQNYtGUK5Y669NHFBgQ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:47.532Z",
+  "lastRefreshedAt": "2026-03-25T22:19:47.532Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Patrick Buote",
+            "id": "7ICIWajOxziHTqP1yzsz74"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2t9Fi5LCyFyha1EfaPqVD9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 137642,
+        "name": "Release from silence",
+        "disc_number": 1,
+        "id": "2t9Fi5LCyFyha1EfaPqVD9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3CFaQNYtGUK5Y669NHFBgQ"
+  }
+}

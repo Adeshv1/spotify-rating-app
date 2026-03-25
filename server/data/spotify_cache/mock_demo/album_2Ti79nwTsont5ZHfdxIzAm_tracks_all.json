@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2Ti79nwTsont5ZHfdxIzAm_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.652Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.652Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2aOPvzjpMwikBgngKcxsA9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 117482,
+        "name": "Introduction (instructions)",
+        "disc_number": 1,
+        "id": "2aOPvzjpMwikBgngKcxsA9"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2oe6dDthgthqUkfL3czpEd"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 109986,
+        "name": "ALONE, PART 3",
+        "disc_number": 1,
+        "id": "2oe6dDthgthqUkfL3czpEd"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JP9xo3adEtGSdUEISiszL"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 135090,
+        "name": "Moonlight",
+        "disc_number": 1,
+        "id": "0JP9xo3adEtGSdUEISiszL"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ee8Jmje8o58CHK66QrVC2"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 166605,
+        "name": "SAD!",
+        "disc_number": 1,
+        "id": "3ee8Jmje8o58CHK66QrVC2"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4UKCKdYiLN6IMA5ZESUTL7"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 160184,
+        "name": "the remedy for a broken heart (why am I so in love)",
+        "disc_number": 1,
+        "id": "4UKCKdYiLN6IMA5ZESUTL7"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6r7ULK6c5CLVvImjTIztl1"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 93447,
+        "name": "Floor 555",
+        "disc_number": 1,
+        "id": "6r7ULK6c5CLVvImjTIztl1"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01TnVDiet1DFTsyWKUKovl"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 186267,
+        "name": "NUMB",
+        "disc_number": 1,
+        "id": "01TnVDiet1DFTsyWKUKovl"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          },
+          {
+            "name": "Joey Bada$$",
+            "id": "2P5sC9cVZDToPxyomzF1UH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7J2gyNghNTzl4EsLhXp01Q"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 176590,
+        "name": "infinity (888) - feat. Joey Bada$$",
+        "disc_number": 1,
+        "id": "7J2gyNghNTzl4EsLhXp01Q"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7CkbRn6S0itJqcqn88AtSV"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 115194,
+        "name": "going down!",
+        "disc_number": 1,
+        "id": "7CkbRn6S0itJqcqn88AtSV"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          },
+          {
+            "name": "Travis Barker",
+            "id": "4exLIFE8sISLr28sqG1qNX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4zI04ezdmrN0lT2pHykYrd"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 101516,
+        "name": "Pain = BESTFRIEND - feat. Travis Barker",
+        "disc_number": 1,
+        "id": "4zI04ezdmrN0lT2pHykYrd"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          },
+          {
+            "name": "Matt OX",
+            "id": "2J6pigOrBmKQgqJUY5UM7r"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/65u1dHQyQyE4y4aN2eDmMF"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 130403,
+        "name": "$$$ - with Matt Ox",
+        "disc_number": 1,
+        "id": "65u1dHQyQyE4y4aN2eDmMF"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Znlc3UZAbSodFaMBjdpsX"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 48422,
+        "name": "love yourself (interlude)",
+        "disc_number": 1,
+        "id": "1Znlc3UZAbSodFaMBjdpsX"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          },
+          {
+            "name": "PnB Rock",
+            "id": "21WS9wngs9AqFckK7yYJPM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6rAGFgcGtlIdYxlhDizXNo"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 109556,
+        "name": "SMASH! - feat. PnB Rock",
+        "disc_number": 1,
+        "id": "6rAGFgcGtlIdYxlhDizXNo"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          },
+          {
+            "name": "Rio Santana",
+            "id": "3mLdH6xxrscTf2poCN9Kzy"
+          },
+          {
+            "name": "Judah",
+            "id": "2V0DROfM2ieFSOcA3SHJLD"
+          },
+          {
+            "name": "Andrez Babii",
+            "id": "4DROs1Ye9DiLY3X8L7xvl8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/14boA065HMHWvqyPPEeN4y"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 192229,
+        "name": "I don’t even speak spanish lol - feat. Rio Santana, Judah, Andrez Babii",
+        "disc_number": 1,
+        "id": "14boA065HMHWvqyPPEeN4y"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7AFASza1mXqntmGtbxXprO"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 121886,
+        "name": "changes",
+        "disc_number": 1,
+        "id": "7AFASza1mXqntmGtbxXprO"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZRo7axmMPeSVUvDbGkJah"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 110886,
+        "name": "Hope",
+        "disc_number": 1,
+        "id": "2ZRo7axmMPeSVUvDbGkJah"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5b6zjsBrZCqe6RFycLz2tc"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 80190,
+        "name": "schizophrenia",
+        "disc_number": 1,
+        "id": "5b6zjsBrZCqe6RFycLz2tc"
+      },
+      {
+        "artists": [
+          {
+            "name": "XXXTENTACION",
+            "id": "15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16x9bQHw8TBNaGDyULvwad"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 99658,
+        "name": "before I close my eyes",
+        "disc_number": 1,
+        "id": "16x9bQHw8TBNaGDyULvwad"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "2Ti79nwTsont5ZHfdxIzAm"
+  }
+}

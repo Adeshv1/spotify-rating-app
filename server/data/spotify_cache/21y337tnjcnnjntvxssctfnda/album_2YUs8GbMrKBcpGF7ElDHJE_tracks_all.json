@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2YUs8GbMrKBcpGF7ElDHJE_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:21.684Z",
+  "lastRefreshedAt": "2026-03-25T22:19:21.684Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Dame Grease",
+            "id": "24IeQOkTkPI6N4Kdin5dZS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6OPFeb9r0OdFHfcMZeVvWx"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 196418,
+        "name": "Make America Wavy Again (MAWA)",
+        "disc_number": 1,
+        "id": "6OPFeb9r0OdFHfcMZeVvWx"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23lQbnM1QFRaDV65PYV3EF"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 116568,
+        "name": "Whippin That Wave",
+        "disc_number": 1,
+        "id": "23lQbnM1QFRaDV65PYV3EF"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Harry Fraud",
+            "id": "37ASGd4rWpHjuVonnYAN6S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1412EGlPPRYVfBlxSFhLeM"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 150792,
+        "name": "Bulletproof Maybach",
+        "disc_number": 1,
+        "id": "1412EGlPPRYVfBlxSFhLeM"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3XzpVJGgXxxhLPNACa0J0Z"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 7082,
+        "name": "Skit, Pt. 1",
+        "disc_number": 1,
+        "id": "3XzpVJGgXxxhLPNACa0J0Z"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ehgf6op0j2sE4lqjiTkMY"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 136333,
+        "name": "Ever Since U Left Me (I Went Deaf)",
+        "disc_number": 1,
+        "id": "5ehgf6op0j2sE4lqjiTkMY"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1hXTcaPPMMYr4QBr6NQyv6"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 180000,
+        "name": "Pop The Half",
+        "disc_number": 1,
+        "id": "1hXTcaPPMMYr4QBr6NQyv6"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1yiqdyFyHYiVLohaRBHN6u"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 158965,
+        "name": "Heaven",
+        "disc_number": 1,
+        "id": "1yiqdyFyHYiVLohaRBHN6u"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Metro Boomin",
+            "id": "0iEtIxbK0KxaSlF7G42ZOp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22jaPzlb3Wpc59Q3QgVCXm"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 185606,
+        "name": "Metro Wave",
+        "disc_number": 1,
+        "id": "22jaPzlb3Wpc59Q3QgVCXm"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Murda Beatz",
+            "id": "3CbYyyd8wH3RT6t0jwpdzC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4F2CPlyoNxK6JbeAcmZGjT"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 143757,
+        "name": "The Race",
+        "disc_number": 1,
+        "id": "4F2CPlyoNxK6JbeAcmZGjT"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Harry Fraud",
+            "id": "37ASGd4rWpHjuVonnYAN6S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UYvd6lhe0FmeqkmzxnIQg"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 231366,
+        "name": "Effortless",
+        "disc_number": 1,
+        "id": "1UYvd6lhe0FmeqkmzxnIQg"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2khfw6S6fBhpgiSVMDqADJ"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 233874,
+        "name": "Me Too",
+        "disc_number": 1,
+        "id": "2khfw6S6fBhpgiSVMDqADJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Dame Grease",
+            "id": "24IeQOkTkPI6N4Kdin5dZS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7EeFl9kqfO0x1rkh8lWGoF"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 193697,
+        "name": "I Don’t Know",
+        "disc_number": 1,
+        "id": "7EeFl9kqfO0x1rkh8lWGoF"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Metro Boomin",
+            "id": "0iEtIxbK0KxaSlF7G42ZOp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YwGrKavVVfM9PsYnZjueM"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 201432,
+        "name": "Serenation",
+        "disc_number": 1,
+        "id": "2YwGrKavVVfM9PsYnZjueM"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/591TOjX9Qy6kCG6w6y5zAW"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 56424,
+        "name": "Skit, Pt. 2",
+        "disc_number": 1,
+        "id": "591TOjX9Qy6kCG6w6y5zAW"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Metro Boomin",
+            "id": "0iEtIxbK0KxaSlF7G42ZOp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69d2B6taZiUKiWwaliaYQP"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 168311,
+        "name": "Narcos",
+        "disc_number": 1,
+        "id": "69d2B6taZiUKiWwaliaYQP"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yEx7g9vA1BW0y3mWENyD9"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 207020,
+        "name": "Used To Baby",
+        "disc_number": 1,
+        "id": "0yEx7g9vA1BW0y3mWENyD9"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0p164x1VPxW263aw1RFvzN"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 185182,
+        "name": "Be All You Can Be",
+        "disc_number": 1,
+        "id": "0p164x1VPxW263aw1RFvzN"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          },
+          {
+            "name": "Chinx",
+            "id": "2DctCFD8X80VeY7WLC86PS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4k5JZjwh7LFpNN6pYMLuuB"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 208169,
+        "name": "Nigga Like Me",
+        "disc_number": 1,
+        "id": "4k5JZjwh7LFpNN6pYMLuuB"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4sX8daIlKdTzfZZGIjLuOh"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 268617,
+        "name": "Sunday School",
+        "disc_number": 1,
+        "id": "4sX8daIlKdTzfZZGIjLuOh"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ZvD27e0rX7Aw2B0Xxy772"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 202944,
+        "name": "Tease Me",
+        "disc_number": 1,
+        "id": "5ZvD27e0rX7Aw2B0Xxy772"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ixV842h9YzpWEkz06VFhQ"
+        },
+        "track_number": 21,
+        "explicit": true,
+        "duration_ms": 124800,
+        "name": "Like I Wasn't",
+        "disc_number": 1,
+        "id": "1ixV842h9YzpWEkz06VFhQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "French Montana",
+            "id": "6vXTefBL93Dj5IqAWq6OTv"
+          },
+          {
+            "name": "Max B",
+            "id": "7f35VZGDpomj11PXdNn5D9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0iJMZUKBKJQ7W2ST6WB9W0"
+        },
+        "track_number": 22,
+        "explicit": true,
+        "duration_ms": 183551,
+        "name": "Rich Off A Name",
+        "disc_number": 1,
+        "id": "0iJMZUKBKJQ7W2ST6WB9W0"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 22,
+    "albumId": "2YUs8GbMrKBcpGF7ElDHJE"
+  }
+}

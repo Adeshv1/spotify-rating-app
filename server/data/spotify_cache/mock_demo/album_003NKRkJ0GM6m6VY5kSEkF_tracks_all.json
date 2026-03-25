@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_003NKRkJ0GM6m6VY5kSEkF_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:39.057Z",
+  "lastRefreshedAt": "2026-03-25T22:19:39.057Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Li Zemin",
+            "id": "2v3FBpuuu8EdWvmS8OOctA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7l9kf2CXBDtvOMIRB23H5N"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 196556,
+        "name": "Future 未来",
+        "disc_number": 1,
+        "id": "7l9kf2CXBDtvOMIRB23H5N"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "003NKRkJ0GM6m6VY5kSEkF"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3UqI8H7dI34eg3yTf7aa1C_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.147Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.147Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Samuel Kees",
+            "id": "6KGVoP7dCFZ2FILUCCj4rn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0BDaM0EnJiCl6jmWAIERk3"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 155500,
+        "name": "Arbor",
+        "disc_number": 1,
+        "id": "0BDaM0EnJiCl6jmWAIERk3"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3UqI8H7dI34eg3yTf7aa1C"
+  }
+}

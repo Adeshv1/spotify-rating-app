@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6A1F3Fkq5dYeYYNkXflcTX_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.013Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.013Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3IfytpNFSJwGXrSJOVhKLV"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 301520,
+        "name": "Monstar",
+        "disc_number": 1,
+        "id": "3IfytpNFSJwGXrSJOVhKLV"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/030OCtLMrljNhp8OWHBWW3"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 224093,
+        "name": "Hey Daddy (Daddy's Home)",
+        "disc_number": 1,
+        "id": "030OCtLMrljNhp8OWHBWW3"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6IUiqtI8tE49sqGbmtrNd8"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 281293,
+        "name": "There Goes My Baby",
+        "disc_number": 1,
+        "id": "6IUiqtI8tE49sqGbmtrNd8"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2sdarYql1R0GAdFsdb4LDM"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 234253,
+        "name": "Lil Freak (feat. Nicki Minaj)",
+        "disc_number": 1,
+        "id": "2sdarYql1R0GAdFsdb4LDM"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Ludacris",
+            "id": "3ipn9JLAPI5GUEo4y4jcoi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34PFCxQHHROuFl2OsDCvxH"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 243133,
+        "name": "She Don't Know (feat. Ludacris)",
+        "disc_number": 1,
+        "id": "34PFCxQHHROuFl2OsDCvxH"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "will.i.am",
+            "id": "085pc2PYOi8bGKj0PNjekA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1bM50INir8voAkVoKuvEUI"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 269493,
+        "name": "OMG (feat. will.i.am)",
+        "disc_number": 1,
+        "id": "1bM50INir8voAkVoKuvEUI"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4qPmUf6dsy4AyfbxliqGSM"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 262493,
+        "name": "Mars vs. Venus",
+        "disc_number": 1,
+        "id": "4qPmUf6dsy4AyfbxliqGSM"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7140BL0vb51Y52HZ77VgZ5"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 302986,
+        "name": "Pro Lover",
+        "disc_number": 1,
+        "id": "7140BL0vb51Y52HZ77VgZ5"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ZZ4nTGGQrNlTDbr0iPS3k"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 251120,
+        "name": "Foolin' Around",
+        "disc_number": 1,
+        "id": "0ZZ4nTGGQrNlTDbr0iPS3k"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/77fP7UixHMYEIFT8NS92Ul"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 261413,
+        "name": "Papers",
+        "disc_number": 1,
+        "id": "77fP7UixHMYEIFT8NS92Ul"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6I87amCgXe8XOFfQJZWGPP"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 276440,
+        "name": "So Many Girls",
+        "disc_number": 1,
+        "id": "6I87amCgXe8XOFfQJZWGPP"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "T.I.",
+            "id": "4OBJLual30L7gRl5UkeRcT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ERcLgXeNSWG3ktsgaH56i"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 224080,
+        "name": "Guilty (feat. T.I.)",
+        "disc_number": 1,
+        "id": "7ERcLgXeNSWG3ktsgaH56i"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0G6SfvXZcPxKe931dS0LwB"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 195133,
+        "name": "Okay",
+        "disc_number": 1,
+        "id": "0G6SfvXZcPxKe931dS0LwB"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XmQMFVOdI7dstMgmhThyJ"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 216240,
+        "name": "Making Love (Into the Night)",
+        "disc_number": 1,
+        "id": "4XmQMFVOdI7dstMgmhThyJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xWoPclLuCoGpt9sg9RfAh"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 228413,
+        "name": "Love 'Em All",
+        "disc_number": 1,
+        "id": "3xWoPclLuCoGpt9sg9RfAh"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4356Typ82hUiFAynbLYbPn"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 220800,
+        "name": "DJ Got Us Fallin' In Love (feat. Pitbull)",
+        "disc_number": 1,
+        "id": "4356Typ82hUiFAynbLYbPn"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Vot6YSxInL52SGTN0XN9n"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 299333,
+        "name": "Hot Tottie (feat. JAY-Z)",
+        "disc_number": 1,
+        "id": "1Vot6YSxInL52SGTN0XN9n"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/469v2YvryJ3zKe7IdzYOlj"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 243800,
+        "name": "Lay You Down",
+        "disc_number": 1,
+        "id": "469v2YvryJ3zKe7IdzYOlj"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2LvCnYNqj2nzP6VQAB1uZV"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 253093,
+        "name": "Lingerie",
+        "disc_number": 1,
+        "id": "2LvCnYNqj2nzP6VQAB1uZV"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Bun B",
+            "id": "45a6gCQWq61lIUDmr1tKuO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ImEeJ5Fsdg4ULiBCOKEPG"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 249186,
+        "name": "Get In My Car (feat. Bun B)",
+        "disc_number": 1,
+        "id": "4ImEeJ5Fsdg4ULiBCOKEPG"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "benny blanco",
+            "id": "5CiGnKThu5ctn9pBxv7DGa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tnrFU8iLQ6orFXjCA3flL"
+        },
+        "track_number": 21,
+        "explicit": false,
+        "duration_ms": 208626,
+        "name": "Somebody to Love (feat. Justin Bieber) - Remix",
+        "disc_number": 1,
+        "id": "6tnrFU8iLQ6orFXjCA3flL"
+      },
+      {
+        "artists": [
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3PxTsBlC26KCv3pbsgeZsb"
+        },
+        "track_number": 22,
+        "explicit": false,
+        "duration_ms": 288106,
+        "name": "Stranger",
+        "disc_number": 1,
+        "id": "3PxTsBlC26KCv3pbsgeZsb"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 22,
+    "albumId": "6A1F3Fkq5dYeYYNkXflcTX"
+  }
+}

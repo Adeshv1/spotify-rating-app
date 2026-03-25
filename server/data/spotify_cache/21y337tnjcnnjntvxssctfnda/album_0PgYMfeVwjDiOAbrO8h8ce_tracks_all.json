@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0PgYMfeVwjDiOAbrO8h8ce_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.831Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.831Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Henry Flower",
+            "id": "297mB3xOXz7lxYcIY6Ur5E"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xyIb53JCp8AK3KAZBa52g"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 128609,
+        "name": "This Moment",
+        "disc_number": 1,
+        "id": "7xyIb53JCp8AK3KAZBa52g"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0PgYMfeVwjDiOAbrO8h8ce"
+  }
+}

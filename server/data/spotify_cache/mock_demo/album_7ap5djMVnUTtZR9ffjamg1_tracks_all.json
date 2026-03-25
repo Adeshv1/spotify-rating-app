@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7ap5djMVnUTtZR9ffjamg1_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:23.558Z",
+  "lastRefreshedAt": "2026-03-25T22:19:23.558Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KSe5wIvvaKCrPN8ySgSfg"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 148860,
+        "name": "Mrs. Trendsetter",
+        "disc_number": 1,
+        "id": "7KSe5wIvvaKCrPN8ySgSfg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wU2tBZRjLe84vEVSdCvQ6"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 130714,
+        "name": "Guaranteed",
+        "disc_number": 1,
+        "id": "0wU2tBZRjLe84vEVSdCvQ6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23En19UauVOU4UxVL7H7lv"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 143996,
+        "name": "Try To Love",
+        "disc_number": 1,
+        "id": "23En19UauVOU4UxVL7H7lv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/32SgsBkKdOjBffl8348wKh"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 196495,
+        "name": "Nasty Girl",
+        "disc_number": 1,
+        "id": "32SgsBkKdOjBffl8348wKh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1O545FhFVrzGywXfk4eM0V"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 159330,
+        "name": "Real Shit",
+        "disc_number": 1,
+        "id": "1O545FhFVrzGywXfk4eM0V"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55wb8ATRTYY3pjPX3RWDXi"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 112207,
+        "name": "Violation",
+        "disc_number": 1,
+        "id": "55wb8ATRTYY3pjPX3RWDXi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          },
+          {
+            "name": "Playboi Carti",
+            "id": "699OTQXzgjhIYAHMy9RyPD"
+          },
+          {
+            "name": "Skooly",
+            "id": "4gB2Nnsapxi4chX9f5zgku"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bhMeTchpDsG69wNmAZgzN"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 202162,
+        "name": "Let's Do It (feat. Playboi Carti & Skooly)",
+        "disc_number": 1,
+        "id": "7bhMeTchpDsG69wNmAZgzN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3dztSksye6ViocCQtMcNoy"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 126993,
+        "name": "Forever Slime",
+        "disc_number": 1,
+        "id": "3dztSksye6ViocCQtMcNoy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4wlCssQ6u25MSbrfblXyML"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 172330,
+        "name": "Middle of the Summer",
+        "disc_number": 1,
+        "id": "4wlCssQ6u25MSbrfblXyML"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3h5PyVDtNLCcSrDiYiJm8S"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 187678,
+        "name": "What She Like",
+        "disc_number": 1,
+        "id": "3h5PyVDtNLCcSrDiYiJm8S"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          },
+          {
+            "name": "Lil Yachty",
+            "id": "6icQOAFXDZKsumw3YXyusw"
+          },
+          {
+            "name": "LUCKI",
+            "id": "5tQMB0cuNXdCtzovGt55uD"
+          },
+          {
+            "name": "Veeze",
+            "id": "0B3kMiB21aPQlKumGDr4c7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0jjGs0KRZIxjp39gHpncDo"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 174109,
+        "name": "Get Along (feat. Lil Yachty, LUCKI & Veeze)",
+        "disc_number": 1,
+        "id": "0jjGs0KRZIxjp39gHpncDo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1t9dT5JBC9x5WaAJpQzU1I"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 192117,
+        "name": "Superman (feat. Young Thug)",
+        "disc_number": 1,
+        "id": "1t9dT5JBC9x5WaAJpQzU1I"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          },
+          {
+            "name": "Rylo Rodriguez",
+            "id": "0gg11prPP6OqtUvBcKnPpq"
+          },
+          {
+            "name": "Bino Rideaux",
+            "id": "3pcerTbRFAPvWWtAfySFWB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69QHPsr85HYRAOBeUYEml6"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 199423,
+        "name": "St. Tropez (feat. Rylo Rodriguez & Bino Rideaux)",
+        "disc_number": 1,
+        "id": "69QHPsr85HYRAOBeUYEml6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wWgef84KotZfYOuFrlr25"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 123075,
+        "name": "Otha Boy",
+        "disc_number": 1,
+        "id": "0wWgef84KotZfYOuFrlr25"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Baby",
+            "id": "5f7VJjfbwm532GiveGC0ZK"
+          },
+          {
+            "name": "G Herbo",
+            "id": "5QdEbQJ3ylBnc3gsIASAT5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6j9hMjMCp0II1QX1auUlWX"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 219767,
+        "name": "All On Me (feat. G Herbo)",
+        "disc_number": 1,
+        "id": "6j9hMjMCp0II1QX1auUlWX"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "7ap5djMVnUTtZR9ffjamg1"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6kf46HbnYCZzP6rjvQHYzg_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.310Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.310Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/312WNtMs3F28cUukaPY9bo"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 250758,
+        "name": "American Teen",
+        "disc_number": 1,
+        "id": "312WNtMs3F28cUukaPY9bo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Z3GHaZ6ec9bsiI5BenrbY"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 202534,
+        "name": "Young Dumb & Broke",
+        "disc_number": 1,
+        "id": "5Z3GHaZ6ec9bsiI5BenrbY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/152lZdxL1OR0ZMW6KquMif"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 219080,
+        "name": "Location",
+        "disc_number": 1,
+        "id": "152lZdxL1OR0ZMW6KquMif"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52Qu0no0NBho3zyRmjlsHn"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 244747,
+        "name": "Another Sad Love Song",
+        "disc_number": 1,
+        "id": "52Qu0no0NBho3zyRmjlsHn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/248OFOZef6ShXv6DGgbnxU"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 206543,
+        "name": "Saved",
+        "disc_number": 1,
+        "id": "248OFOZef6ShXv6DGgbnxU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/39KG4kom3enSx4GTThuDGt"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 199121,
+        "name": "Coaster",
+        "disc_number": 1,
+        "id": "39KG4kom3enSx4GTThuDGt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5bgwqaRSS3M8WHWruHgSL5"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 228593,
+        "name": "8TEEN",
+        "disc_number": 1,
+        "id": "5bgwqaRSS3M8WHWruHgSL5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6AIccJIWHGK26xi34FAkwl"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 204545,
+        "name": "Let's Go",
+        "disc_number": 1,
+        "id": "6AIccJIWHGK26xi34FAkwl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3JTtZUOiZljuWbNiasfHB6"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 167639,
+        "name": "Hopeless",
+        "disc_number": 1,
+        "id": "3JTtZUOiZljuWbNiasfHB6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34izzOmykADkGT27pUjUvJ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 207963,
+        "name": "Cold Blooded",
+        "disc_number": 1,
+        "id": "34izzOmykADkGT27pUjUvJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4V3VshJLUTCIWa77YiAkvM"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 241865,
+        "name": "Winter",
+        "disc_number": 1,
+        "id": "4V3VshJLUTCIWa77YiAkvM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/25YvGDl2zSE0pH8jrMZ6aY"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 257955,
+        "name": "Therapy",
+        "disc_number": 1,
+        "id": "25YvGDl2zSE0pH8jrMZ6aY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6SWHTMywuTXLFlMQ75cAuu"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 276224,
+        "name": "Keep Me",
+        "disc_number": 1,
+        "id": "6SWHTMywuTXLFlMQ75cAuu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Ob94QesoxHSBrypyBbdfd"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 207106,
+        "name": "Shot Down",
+        "disc_number": 1,
+        "id": "1Ob94QesoxHSBrypyBbdfd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/67kXYrMTQbS7MVbXyGyxHm"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 170662,
+        "name": "Angels",
+        "disc_number": 1,
+        "id": "67kXYrMTQbS7MVbXyGyxHm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "6kf46HbnYCZzP6rjvQHYzg"
+  }
+}

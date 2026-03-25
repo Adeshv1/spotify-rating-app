@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3sMktb2iVDvqtL4UXVcJDA_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:42.609Z",
+  "lastRefreshedAt": "2026-03-25T22:19:42.609Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Valter Soll",
+            "id": "1gD9cydWC0yCBMG8Bn6tau"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0jFnlaavbGTER2XNnUztEF"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 166910,
+        "name": "Brume Matinale",
+        "disc_number": 1,
+        "id": "0jFnlaavbGTER2XNnUztEF"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3sMktb2iVDvqtL4UXVcJDA"
+  }
+}

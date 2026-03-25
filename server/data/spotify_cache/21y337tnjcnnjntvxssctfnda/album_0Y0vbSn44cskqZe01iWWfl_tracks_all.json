@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0Y0vbSn44cskqZe01iWWfl_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:37.994Z",
+  "lastRefreshedAt": "2026-03-25T22:19:37.994Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sulman Indigo",
+            "id": "2RmYJmReQsQT4GoNEKMWC2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ert3RkJ8MenB9f4AQtFTl"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 138642,
+        "name": "A Quiet Morning",
+        "disc_number": 1,
+        "id": "4ert3RkJ8MenB9f4AQtFTl"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0Y0vbSn44cskqZe01iWWfl"
+  }
+}

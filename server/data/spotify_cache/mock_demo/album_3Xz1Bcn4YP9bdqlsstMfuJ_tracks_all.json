@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3Xz1Bcn4YP9bdqlsstMfuJ_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:09.752Z",
+  "lastRefreshedAt": "2026-03-25T22:20:09.752Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LsH71NteRF29VdSkXoF4Y"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 252440,
+        "name": "Bird Set Free",
+        "disc_number": 1,
+        "id": "1LsH71NteRF29VdSkXoF4Y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0OW1M1qshZQ6x4KRqingyz"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 263520,
+        "name": "Alive",
+        "disc_number": 1,
+        "id": "0OW1M1qshZQ6x4KRqingyz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6yuDA4JVS99KXSgjfniAnR"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 252066,
+        "name": "One Million Bullets",
+        "disc_number": 1,
+        "id": "6yuDA4JVS99KXSgjfniAnR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7jbIwfAQn5n8Pray78dGQp"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 247213,
+        "name": "Move Your Body",
+        "disc_number": 1,
+        "id": "7jbIwfAQn5n8Pray78dGQp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/059ACLUOyEcdruA2m9f2jd"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 217746,
+        "name": "Unstoppable",
+        "disc_number": 1,
+        "id": "059ACLUOyEcdruA2m9f2jd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BPw9h8vCIX94N0rjFU12S"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 211666,
+        "name": "Cheap Thrills",
+        "disc_number": 1,
+        "id": "7BPw9h8vCIX94N0rjFU12S"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4rM7BRLRq2AFd8z0Y9M7Nn"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 219773,
+        "name": "Reaper",
+        "disc_number": 1,
+        "id": "4rM7BRLRq2AFd8z0Y9M7Nn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02TYBtNZUMzPiysA1wieqO"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 241120,
+        "name": "House On Fire",
+        "disc_number": 1,
+        "id": "02TYBtNZUMzPiysA1wieqO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7IFlyEVvE4FFrsQ5FW2Stg"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 193133,
+        "name": "Footprints",
+        "disc_number": 1,
+        "id": "7IFlyEVvE4FFrsQ5FW2Stg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4mL6cZxeJz03zFjamavcrQ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 145600,
+        "name": "Sweet Design",
+        "disc_number": 1,
+        "id": "4mL6cZxeJz03zFjamavcrQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1V53FAB3MTA3nzqyiVX2cY"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 264986,
+        "name": "Broken Glass",
+        "disc_number": 1,
+        "id": "1V53FAB3MTA3nzqyiVX2cY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6iROnPbHAR4YqIJ5L6n9wy"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 287773,
+        "name": "Space Between",
+        "disc_number": 1,
+        "id": "6iROnPbHAR4YqIJ5L6n9wy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 224813,
+        "name": "Cheap Thrills (feat. Sean Paul)",
+        "disc_number": 1,
+        "id": "378iszndTZAR4dH8kwsLC6"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "3Xz1Bcn4YP9bdqlsstMfuJ"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2dWyq4IXlTxi8u5w1khJ5J_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:28.788Z",
+  "lastRefreshedAt": "2026-03-25T22:19:28.788Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Silvenna",
+            "id": "0EpNnTSU5DHuYwSdMMRyfw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6K4uQfVY4NGXQXx9Gq8LQa"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 163500,
+        "name": "Cellar",
+        "disc_number": 1,
+        "id": "6K4uQfVY4NGXQXx9Gq8LQa"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2dWyq4IXlTxi8u5w1khJ5J"
+  }
+}

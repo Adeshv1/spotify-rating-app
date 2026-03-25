@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3LByoNjO4gbuX5D0u26LDY_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.956Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.956Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5pwcZWC7XdfoPo8FDwPaui"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 260738,
+        "name": "X",
+        "disc_number": 1,
+        "id": "5pwcZWC7XdfoPo8FDwPaui"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7APPdMI01MaPrDDC13SQ4Z"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 193111,
+        "name": "Add Me In",
+        "disc_number": 1,
+        "id": "7APPdMI01MaPrDDC13SQ4Z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Tyga",
+            "id": "5LHRHt1k9lMyONurDHEdrp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5BrTUo0xP1wKXLJWUaGFtk"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 264938,
+        "name": "Loyal (feat. Lil Wayne & Tyga)",
+        "disc_number": 1,
+        "id": "5BrTUo0xP1wKXLJWUaGFtk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "USHER",
+            "id": "23zg3TcAtWQy7J6upgbUnj"
+          },
+          {
+            "name": "Rick Ross",
+            "id": "1sBkRIssrMs1AbVkOJbc7a"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fBbfrWZUuWWrMQXFISr7N"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 244136,
+        "name": "New Flame (feat. Usher & Rick Ross)",
+        "disc_number": 1,
+        "id": "3fBbfrWZUuWWrMQXFISr7N"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Trey Songz",
+            "id": "2iojnBLj0qIMiKPvVhLnsH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3YfXbsL0rPJBEeFqlriuCB"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 228636,
+        "name": "Songs On 12 Play (feat. Trey Songz)",
+        "disc_number": 1,
+        "id": "3YfXbsL0rPJBEeFqlriuCB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/08OZTvY8LhjMIUDFbHyo4S"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 76057,
+        "name": "101 (Interlude)",
+        "disc_number": 1,
+        "id": "08OZTvY8LhjMIUDFbHyo4S"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "R. Kelly",
+            "id": "2mxe0TnaNL039ysAj51xPQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6PkLBgVRUagyNM7n2Uqg1v"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 222475,
+        "name": "Drown In It (feat. R.Kelly)",
+        "disc_number": 1,
+        "id": "6PkLBgVRUagyNM7n2Uqg1v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Akon",
+            "id": "0z4gvV4rjIZ9wHck67ucSV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fLXPbXiezgmbJEEOkT8ve"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 228404,
+        "name": "Came To Do (feat. Akon)",
+        "disc_number": 1,
+        "id": "3fLXPbXiezgmbJEEOkT8ve"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62GbGgOxJdKRhXmsAoVTHS"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 231233,
+        "name": "Stereotype",
+        "disc_number": 1,
+        "id": "62GbGgOxJdKRhXmsAoVTHS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/40Z99CddZbCq4d9mBayPBx"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 225013,
+        "name": "Time For Love",
+        "disc_number": 1,
+        "id": "40Z99CddZbCq4d9mBayPBx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UAld1v88HPATDMcEbXzks"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 77564,
+        "name": "Lady In A Glass Dress (Interlude)",
+        "disc_number": 1,
+        "id": "1UAld1v88HPATDMcEbXzks"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7EJ1CjaeHobTNQCJOrFmpZ"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 268818,
+        "name": "Autumn Leaves (feat. Kendrick Lamar)",
+        "disc_number": 1,
+        "id": "7EJ1CjaeHobTNQCJOrFmpZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Brandy",
+            "id": "05oH07COxkXKIMt6mIPRee"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/53XKBenNVKE63wv2enGZ9O"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 228066,
+        "name": "Do Better (feat. Brandy)",
+        "disc_number": 1,
+        "id": "53XKBenNVKE63wv2enGZ9O"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1wRBr5cwobEKxYsFVCwqzI"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 222417,
+        "name": "See You Around",
+        "disc_number": 1,
+        "id": "1wRBr5cwobEKxYsFVCwqzI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4AjBSoFqX1V2bu48JFHaR9"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 201983,
+        "name": "Don't Be Gone Too Long",
+        "disc_number": 1,
+        "id": "4AjBSoFqX1V2bu48JFHaR9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4TKlUY47FU7QA8HcK1WTtR"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 222383,
+        "name": "Body Shots",
+        "disc_number": 1,
+        "id": "4TKlUY47FU7QA8HcK1WTtR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Jhené Aiko",
+            "id": "5ZS223C6JyBfXasXxrRqOk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1pxxlUuXMYbPSlIkolfp5J"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 227506,
+        "name": "Drunk Texting (feat. Jhené Aiko)",
+        "disc_number": 1,
+        "id": "1pxxlUuXMYbPSlIkolfp5J"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3UelXY8CORkvF860SpDtgt"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 229834,
+        "name": "Lost In Ya Love",
+        "disc_number": 1,
+        "id": "3UelXY8CORkvF860SpDtgt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2MDueMvPkUTpU6Xkmeinln"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 189629,
+        "name": "Love More (feat. Nicki Minaj)",
+        "disc_number": 1,
+        "id": "2MDueMvPkUTpU6Xkmeinln"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Aaliyah",
+            "id": "0urTpYCsixqZwgNTkPJOJ4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3uVCPFmavlWGQUqeYh8HhR"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 237981,
+        "name": "Don't Think They Know (feat. Aaliyah)",
+        "disc_number": 1,
+        "id": "3uVCPFmavlWGQUqeYh8HhR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yz2J4wsXFCjMjpJ6A74yV"
+        },
+        "track_number": 21,
+        "explicit": false,
+        "duration_ms": 213272,
+        "name": "Fine China",
+        "disc_number": 1,
+        "id": "0yz2J4wsXFCjMjpJ6A74yV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4yEGuMeq1XdPzjon9AocdU"
+        },
+        "track_number": 22,
+        "explicit": false,
+        "duration_ms": 208179,
+        "name": "No Lights",
+        "disc_number": 1,
+        "id": "4yEGuMeq1XdPzjon9AocdU"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 22,
+    "albumId": "3LByoNjO4gbuX5D0u26LDY"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_42WVQWuf1teDysXiOupIZt_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.414Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.414Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/33zbOXJSwW7uf4VXXWow2O"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 201263,
+        "name": "the ends",
+        "disc_number": 1,
+        "id": "33zbOXJSwW7uf4VXXWow2O"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Zy7XVdxyZQB8xp5xbpJdl"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 272500,
+        "name": "way back",
+        "disc_number": 1,
+        "id": "2Zy7XVdxyZQB8xp5xbpJdl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7pas6O1LYbaeChEFQBhPFU"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 226397,
+        "name": "coordinate",
+        "disc_number": 1,
+        "id": "7pas6O1LYbaeChEFQBhPFU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Ci4wASMY4xtKVMeHA6Sd5"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 286235,
+        "name": "through the late night",
+        "disc_number": 1,
+        "id": "1Ci4wASMY4xtKVMeHA6Sd5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ESJlaM8CE1jRWaNtwSNj8"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 213863,
+        "name": "beibs in the trap",
+        "disc_number": 1,
+        "id": "0ESJlaM8CE1jRWaNtwSNj8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4gh0ZnHzaTMT1sDga7Ek0N"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 191622,
+        "name": "sdp interlude",
+        "disc_number": 1,
+        "id": "4gh0ZnHzaTMT1sDga7Ek0N"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01Ch5LzVStxCFPKkT1xg6k"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 222317,
+        "name": "sweet sweet",
+        "disc_number": 1,
+        "id": "01Ch5LzVStxCFPKkT1xg6k"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/177WEvlLsCc0FzCTWslawr"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 176488,
+        "name": "outside",
+        "disc_number": 1,
+        "id": "177WEvlLsCc0FzCTWslawr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gBFPUFcJLzWGx4lenP6h2"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 243836,
+        "name": "goosebumps",
+        "disc_number": 1,
+        "id": "6gBFPUFcJLzWGx4lenP6h2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wwruKU956ldDyz55DZTt1"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 313909,
+        "name": "first take",
+        "disc_number": 1,
+        "id": "6wwruKU956ldDyz55DZTt1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          {
+            "name": "Quavo",
+            "id": "0VRj0yCOv2FXJNP47XQnx5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/20dP2DaMHIAmwWAbp7peSr"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 252256,
+        "name": "pick up the phone (feat. Quavo)",
+        "disc_number": 1,
+        "id": "20dP2DaMHIAmwWAbp7peSr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2AGUFka8kBWCM47h5uTlDb"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 200452,
+        "name": "lose",
+        "disc_number": 1,
+        "id": "2AGUFka8kBWCM47h5uTlDb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2c2csx4OTYtbkzvbSTXlGY"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 207107,
+        "name": "guidance",
+        "disc_number": 1,
+        "id": "2c2csx4OTYtbkzvbSTXlGY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1cZlBZwnwGPtYeRIeQcoFh"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 216945,
+        "name": "wonderful",
+        "disc_number": 1,
+        "id": "1cZlBZwnwGPtYeRIeQcoFh"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "42WVQWuf1teDysXiOupIZt"
+  }
+}

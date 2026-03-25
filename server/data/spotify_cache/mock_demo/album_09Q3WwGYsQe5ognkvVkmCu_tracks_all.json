@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_09Q3WwGYsQe5ognkvVkmCu_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:09.870Z",
+  "lastRefreshedAt": "2026-03-25T22:20:09.870Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RJdbAqRg0yRlQJicNa5My"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 71048,
+        "name": "Intro",
+        "disc_number": 1,
+        "id": "3RJdbAqRg0yRlQJicNa5My"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/422lAAWQO9TqL1LxIPdhOn"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 180328,
+        "name": "Random",
+        "disc_number": 1,
+        "id": "422lAAWQO9TqL1LxIPdhOn"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Bebe Rexha",
+            "id": "64M6ah0SkkRsnPGtGiRAbb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/40YcuQysJ0KlGQTeGUosTC"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 251465,
+        "name": "Me, Myself & I",
+        "disc_number": 1,
+        "id": "40YcuQysJ0KlGQTeGUosTC"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4wckW1OjAM2z6elKQdqUpi"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 199521,
+        "name": "One Of Them (feat. Big Sean)",
+        "disc_number": 1,
+        "id": "4wckW1OjAM2z6elKQdqUpi"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Tory Lanez",
+            "id": "2jku7tDXc6XoB6MO2hFuqg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5sv4LTz8qayQYnXlzaxg2x"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 273244,
+        "name": "Drifting (feat. Chris Brown & Tory Lanez)",
+        "disc_number": 1,
+        "id": "5sv4LTz8qayQYnXlzaxg2x"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Too $hort",
+            "id": "4sb7rZNN93BSS6Gqgepo4v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/26jrY21NkSefFPxpndtu4z"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 213560,
+        "name": "Of All Things (feat. Too $hort)",
+        "disc_number": 1,
+        "id": "26jrY21NkSefFPxpndtu4z"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Starrah",
+            "id": "6DpWtzfwV8fcwP6fXckDVu"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5O2Yjlcs5pSpHq1gcA0cwg"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 208835,
+        "name": "Order More (feat. Starrah)",
+        "disc_number": 1,
+        "id": "5O2Yjlcs5pSpHq1gcA0cwg"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xq3uN2toVZ8IbNzfTucyJ"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 127433,
+        "name": "Calm Down",
+        "disc_number": 1,
+        "id": "7xq3uN2toVZ8IbNzfTucyJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "SAYGRACE",
+            "id": "6y5amJcTjeDgLXIjtQLMst"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3DJzymVeQfMiPRgNSPUavd"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 191414,
+        "name": "Don't Let Me Go (feat. SAYGRACE)",
+        "disc_number": 1,
+        "id": "3DJzymVeQfMiPRgNSPUavd"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ztaHDRJVuQe61KVCIpgqw"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 207979,
+        "name": "You Got Me",
+        "disc_number": 1,
+        "id": "4ztaHDRJVuQe61KVCIpgqw"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Gizzle",
+            "id": "0xukYGKRRwBWS1N9sfCQoq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7swwxTs8Ra32hrsnWWgIyZ"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 252944,
+        "name": "What If (feat. Gizzle)",
+        "disc_number": 1,
+        "id": "7swwxTs8Ra32hrsnWWgIyZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3V8gULd6OJQ8myIO9ET23e"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 202510,
+        "name": "Sad Boy",
+        "disc_number": 1,
+        "id": "3V8gULd6OJQ8myIO9ET23e"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Marc E. Bassy",
+            "id": "3tQx1LPXbsYjE9VwN1Peaa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Bqxj0aH5KewYHKUg1IdrF"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 222467,
+        "name": "Some Kind Of Drug (feat. Marc E. Bassy)",
+        "disc_number": 1,
+        "id": "1Bqxj0aH5KewYHKUg1IdrF"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "QUIN",
+            "id": "3sHS70DMNgPxRqx2fUNrRA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76cdpJtbucm5LkjJ073uwP"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 179339,
+        "name": "Think About You (feat. Quiñ)",
+        "disc_number": 1,
+        "id": "76cdpJtbucm5LkjJ073uwP"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WQvmGZIMBmapHL3Garw7e"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 311375,
+        "name": "Everything Will Be OK (feat. Kehlani)",
+        "disc_number": 1,
+        "id": "1WQvmGZIMBmapHL3Garw7e"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "IAMNOBODI",
+            "id": "2DLlb2Se6eF0mMTYffyAcn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7cYtIISdq6e8UtWKugjCvm"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 250558,
+        "name": "For This (feat. IAMNOBODI)",
+        "disc_number": 1,
+        "id": "7cYtIISdq6e8UtWKugjCvm"
+      },
+      {
+        "artists": [
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "Keyshia Cole",
+            "id": "1vfezMIyCr4XUdYRaKIKi3"
+          },
+          {
+            "name": "E-40",
+            "id": "3crnzLy8R4lVwaigKEOz7V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2tIoKW7EXq9V10Kfg9zrDv"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 329705,
+        "name": "Nothing to Me (feat. Keyshia Cole & E-40)",
+        "disc_number": 1,
+        "id": "2tIoKW7EXq9V10Kfg9zrDv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "09Q3WwGYsQe5ognkvVkmCu"
+  }
+}

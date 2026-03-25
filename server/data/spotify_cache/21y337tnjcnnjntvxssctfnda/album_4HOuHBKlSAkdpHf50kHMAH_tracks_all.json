@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4HOuHBKlSAkdpHf50kHMAH_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:23.328Z",
+  "lastRefreshedAt": "2026-03-25T22:19:23.328Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ebbmrZS4I7SDg2qpJkMgr"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 131000,
+        "name": "Life After Death",
+        "disc_number": 1,
+        "id": "1ebbmrZS4I7SDg2qpJkMgr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Q7CZt8c9mBdRZr8WaMq07"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 175000,
+        "name": "Bigger Than Big",
+        "disc_number": 1,
+        "id": "6Q7CZt8c9mBdRZr8WaMq07"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/702RPpxfrbmHaC4v9oRynL"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 122000,
+        "name": "Sexy Soulaan",
+        "disc_number": 1,
+        "id": "702RPpxfrbmHaC4v9oRynL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57TSLzWfZdQroiwtIFX97X"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 179476,
+        "name": "Putting Ya Dine",
+        "disc_number": 1,
+        "id": "57TSLzWfZdQroiwtIFX97X"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/423TDIujPiwF39HWy4WqNj"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 125826,
+        "name": "Open The Gates",
+        "disc_number": 1,
+        "id": "423TDIujPiwF39HWy4WqNj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          },
+          {
+            "name": "Lizzo",
+            "id": "56oDRnqbIiwx4mymNEv7dS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zaWcWOj8qZWKqf0ldafNv"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 149173,
+        "name": "Freak Show",
+        "disc_number": 1,
+        "id": "7zaWcWOj8qZWKqf0ldafNv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5CAUuUleb6qZ7jcpVJQgkK"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 109986,
+        "name": "Tamron Hall",
+        "disc_number": 1,
+        "id": "5CAUuUleb6qZ7jcpVJQgkK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5dmw7qUPlD4kq9zzRZ5k7C"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 150933,
+        "name": "Locked In",
+        "disc_number": 1,
+        "id": "5dmw7qUPlD4kq9zzRZ5k7C"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lVeVo1aeiaGd6jjqO4kjq"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 163066,
+        "name": "Spare Change",
+        "disc_number": 1,
+        "id": "4lVeVo1aeiaGd6jjqO4kjq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mQutndCp4cUXnrXZ9acHB"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 262666,
+        "name": "Dignified",
+        "disc_number": 1,
+        "id": "0mQutndCp4cUXnrXZ9acHB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2a6ygUoZ56QoSowNTwLmqk"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 134546,
+        "name": "Diary Of An OG",
+        "disc_number": 1,
+        "id": "2a6ygUoZ56QoSowNTwLmqk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Monaleo",
+            "id": "2sflbTtCirog5VxD6jPAfb"
+          },
+          {
+            "name": "Bun B",
+            "id": "45a6gCQWq61lIUDmr1tKuO"
+          },
+          {
+            "name": "Paul Wall",
+            "id": "0k7Xl1pqI3tu8sSEjo5oEg"
+          },
+          {
+            "name": "Lil' Keke",
+            "id": "1grI9x4Uzos1Asx8JmRW6T"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1iVKKgghKCkDVIuzk7qnLD"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 242733,
+        "name": "We On Dat (OG Mix)",
+        "disc_number": 1,
+        "id": "1iVKKgghKCkDVIuzk7qnLD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "4HOuHBKlSAkdpHf50kHMAH"
+  }
+}

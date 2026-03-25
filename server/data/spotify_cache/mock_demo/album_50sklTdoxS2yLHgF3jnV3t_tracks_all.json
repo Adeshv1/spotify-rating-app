@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_50sklTdoxS2yLHgF3jnV3t_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:21.173Z",
+  "lastRefreshedAt": "2026-03-25T22:19:21.173Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Mike WiLL Made-It",
+            "id": "0NWbwDZY1VkRqFafuQm6wk"
+          },
+          {
+            "name": "Chief Keef",
+            "id": "15iVAtD3s3FsQR4w1v6M0P"
+          },
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LnDKUQRhGvVMraLKhWnuD"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 232000,
+        "name": "ROOMS",
+        "disc_number": 1,
+        "id": "0LnDKUQRhGvVMraLKhWnuD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "50sklTdoxS2yLHgF3jnV3t"
+  }
+}

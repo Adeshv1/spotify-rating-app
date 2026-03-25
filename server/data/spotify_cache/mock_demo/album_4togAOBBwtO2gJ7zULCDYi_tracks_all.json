@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4togAOBBwtO2gJ7zULCDYi_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:45.792Z",
+  "lastRefreshedAt": "2026-03-25T22:19:45.792Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Barry Hudson-Taylor",
+            "id": "3MuhX7tuEdOUvsOGg7ui02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4k8N1HD7vWq4Hg02QfnesO"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 141736,
+        "name": "Languor",
+        "disc_number": 1,
+        "id": "4k8N1HD7vWq4Hg02QfnesO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Barry Hudson-Taylor",
+            "id": "3MuhX7tuEdOUvsOGg7ui02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02RTEpcpmjB2UOhwopG480"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 200566,
+        "name": "Places",
+        "disc_number": 1,
+        "id": "02RTEpcpmjB2UOhwopG480"
+      },
+      {
+        "artists": [
+          {
+            "name": "Barry Hudson-Taylor",
+            "id": "3MuhX7tuEdOUvsOGg7ui02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7hEJhA9Z60LPveR5Ido64f"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 139467,
+        "name": "Beneath",
+        "disc_number": 1,
+        "id": "7hEJhA9Z60LPveR5Ido64f"
+      },
+      {
+        "artists": [
+          {
+            "name": "Barry Hudson-Taylor",
+            "id": "3MuhX7tuEdOUvsOGg7ui02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0PGpr21d5KUl4QIIYPC4vw"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 197222,
+        "name": "Veer",
+        "disc_number": 1,
+        "id": "0PGpr21d5KUl4QIIYPC4vw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Barry Hudson-Taylor",
+            "id": "3MuhX7tuEdOUvsOGg7ui02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dA0aY5pKAhBR5a2UXJIij"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 183949,
+        "name": "Reflections",
+        "disc_number": 1,
+        "id": "0dA0aY5pKAhBR5a2UXJIij"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 5,
+    "albumId": "4togAOBBwtO2gJ7zULCDYi"
+  }
+}

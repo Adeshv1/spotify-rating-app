@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5KO6U6HtIH8sK9sOJmJt2i_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:45.383Z",
+  "lastRefreshedAt": "2026-03-25T22:19:45.383Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Remi Sinclair",
+            "id": "2e43Th3IHo39TLIcMpeFbn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6zo1cdRzbCvGZmJVJEk8TS"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 134000,
+        "name": "Onward",
+        "disc_number": 1,
+        "id": "6zo1cdRzbCvGZmJVJEk8TS"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5KO6U6HtIH8sK9sOJmJt2i"
+  }
+}

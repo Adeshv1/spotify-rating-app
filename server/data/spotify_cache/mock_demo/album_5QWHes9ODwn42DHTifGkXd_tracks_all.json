@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5QWHes9ODwn42DHTifGkXd_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:11.399Z",
+  "lastRefreshedAt": "2026-03-25T22:20:11.399Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5zfvGTlCAxY6GwZ9TkCZ4M"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 249534,
+        "name": "Ten Thousand Hours",
+        "disc_number": 1,
+        "id": "5zfvGTlCAxY6GwZ9TkCZ4M"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Ray Dalton",
+            "id": "4e0nWw2r4BoQSKPQ2zpU13"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22skzmqfdWrjJylampe0kt"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 258431,
+        "name": "Can't Hold Us (feat. Ray Dalton)",
+        "disc_number": 1,
+        "id": "22skzmqfdWrjJylampe0kt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Wanz",
+            "id": "56xTxG4nQMAs1GW9kvn0uA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6CjtS2JZH9RkDz5UVInsa9"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 235613,
+        "name": "Thrift Shop (feat. Wanz)",
+        "disc_number": 1,
+        "id": "6CjtS2JZH9RkDz5UVInsa9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Buffalo Madonna",
+            "id": "77d8Yuuv6nGCJSnZHcOpVe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2fydEzbtN7EkzbEC4iMYhn"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 256178,
+        "name": "Thin Line (feat. Buffalo Madonna)",
+        "disc_number": 1,
+        "id": "2fydEzbtN7EkzbEC4iMYhn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Mary Lambert",
+            "id": "5Z2NUZiY3FA00HKu5WTMhA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SUbEGOWS0cUV19uFjQQxR"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 320034,
+        "name": "Same Love (feat. Mary Lambert)",
+        "disc_number": 1,
+        "id": "2SUbEGOWS0cUV19uFjQQxR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0YnkUO5Pb02TyNtS9DpOd4"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 224834,
+        "name": "Make The Money",
+        "disc_number": 1,
+        "id": "0YnkUO5Pb02TyNtS9DpOd4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Allen Stone",
+            "id": "536osqBGKzeozje8BfcGsa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VAXbgI4hKU3Dk7VWpFMMf"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 274285,
+        "name": "Neon Cathedral (feat. Allen Stone)",
+        "disc_number": 1,
+        "id": "3VAXbgI4hKU3Dk7VWpFMMf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "The Teaching",
+            "id": "7u0hj7d0myg3ZAKgevXalz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0lqbeYBf3b3DQEageCXThv"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 295679,
+        "name": "BomBom (feat. The Teaching)",
+        "disc_number": 1,
+        "id": "0lqbeYBf3b3DQEageCXThv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Hollis",
+            "id": "28KOnhhvUnyvgRNXEQ41WL"
+          },
+          {
+            "name": "ScHoolboy Q",
+            "id": "5IcR3N7QB1j6KBL8eImZ8m"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1o1Pny4JcE3LdUBeBedbm6"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 220319,
+        "name": "White Walls (feat. ScHoolboy Q & Hollis)",
+        "disc_number": 1,
+        "id": "1o1Pny4JcE3LdUBeBedbm6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Ab-Soul",
+            "id": "0g9vAlRPK9Gt3FKCekk4TW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0s4NbQ0wejCPZu6aMrpVQM"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 233195,
+        "name": "Jimmy Iovine (feat. Ab-Soul)",
+        "disc_number": 1,
+        "id": "0s4NbQ0wejCPZu6aMrpVQM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2NywFcoD8G4U5SyIh8CWQ3"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 299599,
+        "name": "Wing$",
+        "disc_number": 1,
+        "id": "2NywFcoD8G4U5SyIh8CWQ3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Evan Roman",
+            "id": "1QKJnzrlF5qGwmMJdXtOm2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0f5leEKNHInbvCX5D09aZg"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 226049,
+        "name": "A Wake (feat. Evan Roman)",
+        "disc_number": 1,
+        "id": "0f5leEKNHInbvCX5D09aZg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Eighty4 Fly",
+            "id": "4sqgE7XhJ2Cvu3Z4AvFj0j"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0a4CAmtWcIjhoAHASaA4pt"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 251509,
+        "name": "Gold (feat. Eighty4 Fly)",
+        "disc_number": 1,
+        "id": "0a4CAmtWcIjhoAHASaA4pt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          },
+          {
+            "name": "Ben Bridwell",
+            "id": "6Vfn70eqp3AgtiZZtQcv4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7gSyfcCtcnlHDbA8O3Lnls"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 251196,
+        "name": "Starting Over (feat. Ben Bridwell)",
+        "disc_number": 1,
+        "id": "7gSyfcCtcnlHDbA8O3Lnls"
+      },
+      {
+        "artists": [
+          {
+            "name": "Macklemore & Ryan Lewis",
+            "id": "5BcAKTbp20cv7tC5VqPFoC"
+          },
+          {
+            "name": "Macklemore",
+            "id": "3JhNCzhSMTxs9WLGJJxWOY"
+          },
+          {
+            "name": "Ryan Lewis",
+            "id": "5mZJerulcERBZV7xnhrVp1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3EXsZpJ5081LaCrjuiDVkc"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 257855,
+        "name": "Cowboy Boots",
+        "disc_number": 1,
+        "id": "3EXsZpJ5081LaCrjuiDVkc"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "5QWHes9ODwn42DHTifGkXd"
+  }
+}

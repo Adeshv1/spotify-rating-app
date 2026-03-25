@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_55PVyRV3IhOpKAzLcPxFs3_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:25.469Z",
+  "lastRefreshedAt": "2026-03-25T22:19:25.469Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "A Boogie Wit da Hoodie",
+            "id": "31W5EY0aAly4Qieq6OFu6I"
+          },
+          {
+            "name": "Kyle Richh",
+            "id": "0hF6lbAjRsq4svrQUr5sgU"
+          },
+          {
+            "name": "ZEDDY WILL",
+            "id": "1alf4P7GDe5aNpALBzWIGf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qxaBUnihi6tbLnAUE2pye"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 217013,
+        "name": "PGD (feat. Kyle Richh & ZEDDY WILL)",
+        "disc_number": 1,
+        "id": "2qxaBUnihi6tbLnAUE2pye"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "55PVyRV3IhOpKAzLcPxFs3"
+  }
+}

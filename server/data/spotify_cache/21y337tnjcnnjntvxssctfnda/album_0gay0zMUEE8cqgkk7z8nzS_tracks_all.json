@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0gay0zMUEE8cqgkk7z8nzS_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:23.943Z",
+  "lastRefreshedAt": "2026-03-25T22:19:23.943Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Doechii",
+            "id": "4E2rKHVDssGJm2SCDOMMJB"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2igNvPf7RLTZG688Mx8GtU"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 188600,
+        "name": "girl, get up. (feat. SZA)",
+        "disc_number": 1,
+        "id": "2igNvPf7RLTZG688Mx8GtU"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0gay0zMUEE8cqgkk7z8nzS"
+  }
+}

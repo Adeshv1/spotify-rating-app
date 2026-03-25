@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_18pNyU9wkPCB0P4AuTmIvG_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:35.273Z",
+  "lastRefreshedAt": "2026-03-25T22:19:35.273Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Waylen Orson",
+            "id": "0MiPwC4KkJlyM17wLHZViw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3LkQZrx4ozjCE1RxHON6Bc"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 146718,
+        "name": "Veloura",
+        "disc_number": 1,
+        "id": "3LkQZrx4ozjCE1RxHON6Bc"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "18pNyU9wkPCB0P4AuTmIvG"
+  }
+}

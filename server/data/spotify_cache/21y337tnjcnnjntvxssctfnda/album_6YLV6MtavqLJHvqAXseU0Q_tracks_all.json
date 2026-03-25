@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6YLV6MtavqLJHvqAXseU0Q_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.743Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.743Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Christian Janssen",
+            "id": "42vzUzUtpdNGFYxqgVcXl1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2yssn38qENJXqRlnmxcVzB"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 131152,
+        "name": "Choose your battles",
+        "disc_number": 1,
+        "id": "2yssn38qENJXqRlnmxcVzB"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6YLV6MtavqLJHvqAXseU0Q"
+  }
+}

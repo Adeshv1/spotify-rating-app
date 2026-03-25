@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_48zisMeiXniWLzOQghbPqS_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:11.566Z",
+  "lastRefreshedAt": "2026-03-25T22:20:11.566Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ZmkjefPVLvloVSgtmRu5M"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 219200,
+        "name": "Faith",
+        "disc_number": 1,
+        "id": "0ZmkjefPVLvloVSgtmRu5M"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Alesso",
+            "id": "4AVFqumd2ogHFlRbKIjp1t"
+          },
+          {
+            "name": "Hurts",
+            "id": "3w4VAlllkAWI6m0AV0Gn6a"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4J7CKHCF3mdL4diUsmW8lq"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 184280,
+        "name": "Under Control (feat. Hurts)",
+        "disc_number": 1,
+        "id": "4J7CKHCF3mdL4diUsmW8lq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/07nH4ifBxUB4lZcsf44Brn"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 212960,
+        "name": "Blame (feat. John Newman)",
+        "disc_number": 1,
+        "id": "07nH4ifBxUB4lZcsf44Brn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "All About She",
+            "id": "4v31ZbEICHeUehSZdcc4ga"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vQctmBxi79lyQoc2DDAsP"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 218373,
+        "name": "Love Now (feat. All About She)",
+        "disc_number": 1,
+        "id": "5vQctmBxi79lyQoc2DDAsP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GvXJZ8EQuUWzthpPFLr6f"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 221786,
+        "name": "Slow Acid",
+        "disc_number": 1,
+        "id": "6GvXJZ8EQuUWzthpPFLr6f"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7MmG8p0F9N3C4AXdK6o6Eb"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 227266,
+        "name": "Outside (feat. Ellie Goulding)",
+        "disc_number": 1,
+        "id": "7MmG8p0F9N3C4AXdK6o6Eb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Firebeatz",
+            "id": "53YSn9tHwGJ6bq5P0gGoYo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57EMMRviFnUVwYgsHgAlA2"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 224386,
+        "name": "It Was You",
+        "disc_number": 1,
+        "id": "57EMMRviFnUVwYgsHgAlA2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6YUTL4dYpB9xZO5qExPf05"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 222533,
+        "name": "Summer",
+        "disc_number": 1,
+        "id": "6YUTL4dYpB9xZO5qExPf05"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Ummet Ozcan",
+            "id": "7e1BNCygl2Gf7CX8LrByPv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/07BCFbk1oCwf80lemfyzK6"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 291960,
+        "name": "Overdrive",
+        "disc_number": 1,
+        "id": "07BCFbk1oCwf80lemfyzK6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Hurts",
+            "id": "3w4VAlllkAWI6m0AV0Gn6a"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4NH6M9tsx1dXL58zZTmTYE"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 221680,
+        "name": "Ecstasy (feat. Hurts)",
+        "disc_number": 1,
+        "id": "4NH6M9tsx1dXL58zZTmTYE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "HAIM",
+            "id": "4Ui2kfOqGujY81UcPrb5KE"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75kMrDKPJJpgEQaXVh7QMB"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 232226,
+        "name": "Pray to God (feat. HAIM)",
+        "disc_number": 1,
+        "id": "75kMrDKPJJpgEQaXVh7QMB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/64j3Bd62HTe0pclk8Aq9BE"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 187546,
+        "name": "Open Wide (feat. Big Sean)",
+        "disc_number": 1,
+        "id": "64j3Bd62HTe0pclk8Aq9BE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Gwen Stefani",
+            "id": "4yiQZ8tQPux8cPriYMWUFP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0otmDG441slQ7QYZUPgBcM"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 218440,
+        "name": "Together (feat. Gwen Stefani)",
+        "disc_number": 1,
+        "id": "0otmDG441slQ7QYZUPgBcM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "R3HAB",
+            "id": "6cEuCEZu7PAE9ZSzLLc2oQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5lByoyTJti3jYo22bLQKOH"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 234773,
+        "name": "Burnin",
+        "disc_number": 1,
+        "id": "5lByoyTJti3jYo22bLQKOH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Tinashe",
+            "id": "0NIIxcxNHmOoyBx03SfTCD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sUrtg1AYRyrDECLqq6no9"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 236066,
+        "name": "Dollar Signs (feat. Tinashe)",
+        "disc_number": 1,
+        "id": "7sUrtg1AYRyrDECLqq6no9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "48zisMeiXniWLzOQghbPqS"
+  }
+}

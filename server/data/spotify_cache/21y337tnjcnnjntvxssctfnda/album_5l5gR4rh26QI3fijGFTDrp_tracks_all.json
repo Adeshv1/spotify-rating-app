@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5l5gR4rh26QI3fijGFTDrp_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.071Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.071Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "ZAYN",
+            "id": "5ZsFI1h6hIdQRw2ti0hz81"
+          },
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1j4kHkkpqZRBwE0A4CN4Yv"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 239000,
+        "name": "Dusk Till Dawn (feat. Sia) - Radio Edit",
+        "disc_number": 1,
+        "id": "1j4kHkkpqZRBwE0A4CN4Yv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5l5gR4rh26QI3fijGFTDrp"
+  }
+}

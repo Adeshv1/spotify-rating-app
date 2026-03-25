@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4JlzEvVJqpb62Xwc0EmOHr_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:02.005Z",
+  "lastRefreshedAt": "2026-03-25T22:20:02.005Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Becky G",
+            "id": "4obzFoKoKRHIphyHzJ35G3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3DmW6y7wTEYHJZlLo1r6XJ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 206166,
+        "name": "Shower",
+        "disc_number": 1,
+        "id": "3DmW6y7wTEYHJZlLo1r6XJ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4JlzEvVJqpb62Xwc0EmOHr"
+  }
+}

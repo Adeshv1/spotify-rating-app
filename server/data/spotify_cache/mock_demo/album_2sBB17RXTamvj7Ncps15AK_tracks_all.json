@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2sBB17RXTamvj7Ncps15AK_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.107Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.107Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          },
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0u2P5u6lvoDfwTYjAADbn4"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 200185,
+        "name": "lovely (with Khalid)",
+        "disc_number": 1,
+        "id": "0u2P5u6lvoDfwTYjAADbn4"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2sBB17RXTamvj7Ncps15AK"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_73ZvpuYhKDr2FW4vlPsTpW_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:01.227Z",
+  "lastRefreshedAt": "2026-03-25T22:20:01.227Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          },
+          {
+            "name": "Musiq Soulchild",
+            "id": "3UVRliakQfa1pMWIsNuiZ8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4k6hX9RKD096K1NCjjJZLc"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 273349,
+        "name": "Footsteps (feat. Musiq Soulchild)",
+        "disc_number": 1,
+        "id": "4k6hX9RKD096K1NCjjJZLc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0aSW5EMeNnQSMJQ8QN3zIW"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 167206,
+        "name": "Too Deep",
+        "disc_number": 1,
+        "id": "0aSW5EMeNnQSMJQ8QN3zIW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          },
+          {
+            "name": "Dom Kennedy",
+            "id": "3s8alQfNnY0roAHaJh7Xxt"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0tkmYNfaEaH9HpR59ApRtE"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 244688,
+        "name": "Nunya (feat. Dom Kennedy)",
+        "disc_number": 1,
+        "id": "0tkmYNfaEaH9HpR59ApRtE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0kas95RruYRVqrOb07rgkh"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 179336,
+        "name": "Morning Glory",
+        "disc_number": 1,
+        "id": "0kas95RruYRVqrOb07rgkh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4BOikd4oZjOYMde9AXfrTo"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 181140,
+        "name": "Feels",
+        "disc_number": 1,
+        "id": "4BOikd4oZjOYMde9AXfrTo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ZRuF2n1CQxyxxAAWsKJOy"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 201787,
+        "name": "Nights Like This (feat. Ty Dolla $ign)",
+        "disc_number": 1,
+        "id": "6ZRuF2n1CQxyxxAAWsKJOy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          },
+          {
+            "name": "6LACK",
+            "id": "4IVAbR2w4JJNJDDRFP3E83"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1EGrDTfEuAiRzRdxlblpET"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 236218,
+        "name": "RPG (feat. 6lack)",
+        "disc_number": 1,
+        "id": "1EGrDTfEuAiRzRdxlblpET"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/32s2Dn9EVvO2f85MrpRoBV"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 163839,
+        "name": "Butterfly",
+        "disc_number": 1,
+        "id": "32s2Dn9EVvO2f85MrpRoBV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jM3c9KLTO9iZPm9A7neiL"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 213364,
+        "name": "Love Language",
+        "disc_number": 1,
+        "id": "4jM3c9KLTO9iZPm9A7neiL"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "73ZvpuYhKDr2FW4vlPsTpW"
+  }
+}

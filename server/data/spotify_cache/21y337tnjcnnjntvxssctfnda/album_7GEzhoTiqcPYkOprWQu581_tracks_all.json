@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7GEzhoTiqcPYkOprWQu581_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:00.719Z",
+  "lastRefreshedAt": "2026-03-25T22:20:00.719Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          },
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ef4DlsgrMEH11cDZd32M6"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 214846,
+        "name": "One Kiss (with Dua Lipa)",
+        "disc_number": 1,
+        "id": "7ef4DlsgrMEH11cDZd32M6"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7GEzhoTiqcPYkOprWQu581"
+  }
+}

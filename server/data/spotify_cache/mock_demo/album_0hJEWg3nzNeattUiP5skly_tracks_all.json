@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0hJEWg3nzNeattUiP5skly_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:24.064Z",
+  "lastRefreshedAt": "2026-03-25T22:19:24.064Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "NAV",
+            "id": "7rkW85dBwwrJtlHRDkJDAC"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ApfK0ChvyLJcG4lyA3LbW"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 182673,
+        "name": "Trimski",
+        "disc_number": 1,
+        "id": "6ApfK0ChvyLJcG4lyA3LbW"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0hJEWg3nzNeattUiP5skly"
+  }
+}

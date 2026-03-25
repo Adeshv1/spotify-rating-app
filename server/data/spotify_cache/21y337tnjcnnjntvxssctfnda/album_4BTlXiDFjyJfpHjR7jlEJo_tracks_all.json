@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4BTlXiDFjyJfpHjR7jlEJo_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.180Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.180Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6b3b7lILUJqXcp6w9wNQSm"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 224813,
+        "name": "Cheap Thrills (feat. Sean Paul)",
+        "disc_number": 1,
+        "id": "6b3b7lILUJqXcp6w9wNQSm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4BTlXiDFjyJfpHjR7jlEJo"
+  }
+}

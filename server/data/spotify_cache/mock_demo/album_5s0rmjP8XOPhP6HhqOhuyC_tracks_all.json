@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5s0rmjP8XOPhP6HhqOhuyC_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.738Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.738Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5BoOzegGrg5XFRR8UBDtkF"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 233813,
+        "name": "Broken Whiskey Glass",
+        "disc_number": 1,
+        "id": "5BoOzegGrg5XFRR8UBDtkF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02opp1cycqiFNDpLd2o1J3"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 207680,
+        "name": "Big Lie",
+        "disc_number": 1,
+        "id": "02opp1cycqiFNDpLd2o1J3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0H8XeaJunhvpBdBFIYi6Sh"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 234213,
+        "name": "Deja Vu",
+        "disc_number": 1,
+        "id": "0H8XeaJunhvpBdBFIYi6Sh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6M0IsaUX4GNyto4niSegfI"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 179826,
+        "name": "No Option",
+        "disc_number": 1,
+        "id": "6M0IsaUX4GNyto4niSegfI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QWmKmqhv5zcsS3v45FNl0"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 268933,
+        "name": "Cold",
+        "disc_number": 1,
+        "id": "1QWmKmqhv5zcsS3v45FNl0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6eT7xZZlB2mwyzJ2sUKG6w"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 256532,
+        "name": "White Iverson",
+        "disc_number": 1,
+        "id": "6eT7xZZlB2mwyzJ2sUKG6w"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75ZvA4QfFiZvzhj2xkaWAh"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 223346,
+        "name": "I Fall Apart",
+        "disc_number": 1,
+        "id": "75ZvA4QfFiZvzhj2xkaWAh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DLTuH4A5VZB2HKpqHQR6t"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 194333,
+        "name": "Patient",
+        "disc_number": 1,
+        "id": "5DLTuH4A5VZB2HKpqHQR6t"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5yuShbu70mtHXY0yLzCQLQ"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 179613,
+        "name": "Go Flex",
+        "disc_number": 1,
+        "id": "5yuShbu70mtHXY0yLzCQLQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7MTIDmToGs0I5Oue9V0CHl"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 197120,
+        "name": "Feel",
+        "disc_number": 1,
+        "id": "7MTIDmToGs0I5Oue9V0CHl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SYUUlkScpNR1QvPscXf8t"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 237146,
+        "name": "Too Young",
+        "disc_number": 1,
+        "id": "4SYUUlkScpNR1QvPscXf8t"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Quavo",
+            "id": "0VRj0yCOv2FXJNP47XQnx5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3a1lNhkSLSkpJE4MSHpDu9"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 220293,
+        "name": "Congratulations",
+        "disc_number": 1,
+        "id": "3a1lNhkSLSkpJE4MSHpDu9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2rKmNEYrQxaOPZrOWKZpOc"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 194826,
+        "name": "Up There",
+        "disc_number": 1,
+        "id": "2rKmNEYrQxaOPZrOWKZpOc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LpiKjWMfZTkPPHonlM8nB"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 219146,
+        "name": "Yours Truly, Austin Post",
+        "disc_number": 1,
+        "id": "0LpiKjWMfZTkPPHonlM8nB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5dI1yHSqgmilFEqpGbqxHh"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 324853,
+        "name": "Leave",
+        "disc_number": 1,
+        "id": "5dI1yHSqgmilFEqpGbqxHh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61jnrkPHpLumBf1kqGpRRt"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 249026,
+        "name": "Hit This Hard",
+        "disc_number": 1,
+        "id": "61jnrkPHpLumBf1kqGpRRt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "2 Chainz",
+            "id": "17lzZA2AlOHwCwFALHttmp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ysAvOdJgUjc6CqOQxepaz"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 224960,
+        "name": "Money Made Me Do It",
+        "disc_number": 1,
+        "id": "1ysAvOdJgUjc6CqOQxepaz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35r28RDot7nPE7y9K9H7l0"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 257265,
+        "name": "Feeling Whitney",
+        "disc_number": 1,
+        "id": "35r28RDot7nPE7y9K9H7l0"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "5s0rmjP8XOPhP6HhqOhuyC"
+  }
+}

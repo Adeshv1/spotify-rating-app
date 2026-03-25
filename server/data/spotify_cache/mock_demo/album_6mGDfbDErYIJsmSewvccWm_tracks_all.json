@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6mGDfbDErYIJsmSewvccWm_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.473Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.473Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Kendo Kapponi",
+            "id": "3SqADzYzd7W0qbkUimYuo5"
+          },
+          {
+            "name": "Syko",
+            "id": "1zmzpuJ3e3MI7nWTGgWrWd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Ch8M9mtAUrsxRPstlRam6"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 235480,
+        "name": "Orphanization",
+        "disc_number": 1,
+        "id": "5Ch8M9mtAUrsxRPstlRam6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Kendo Kapponi",
+            "id": "3SqADzYzd7W0qbkUimYuo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4HUn6GdekVkPwJrAufiWyE"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 247320,
+        "name": "El Duro",
+        "disc_number": 1,
+        "id": "4HUn6GdekVkPwJrAufiWyE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4s7DK08ZqqU5EnjvQ6Vlle"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 232226,
+        "name": "Hasta Abajo",
+        "disc_number": 1,
+        "id": "4s7DK08ZqqU5EnjvQ6Vlle"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Plan B",
+            "id": "2jSGzJw0ebJLu7OLVSOcBP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0BenZn1xELuxhb7Pjwyjxv"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 237973,
+        "name": "Hooka",
+        "disc_number": 1,
+        "id": "0BenZn1xELuxhb7Pjwyjxv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Kendo Kapponi",
+            "id": "3SqADzYzd7W0qbkUimYuo5"
+          },
+          {
+            "name": "Syko",
+            "id": "1zmzpuJ3e3MI7nWTGgWrWd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6DBDszb5xqRot1ywnQvk4q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 361960,
+        "name": "Angeles Y Demonios",
+        "disc_number": 1,
+        "id": "6DBDszb5xqRot1ywnQvk4q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0A7uLa2SqVK5s5Y2V3kCyW"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 258613,
+        "name": "Good Looking",
+        "disc_number": 1,
+        "id": "0A7uLa2SqVK5s5Y2V3kCyW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cyYC67XY3weSVmSLdKLP8"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 292160,
+        "name": "Taboo",
+        "disc_number": 1,
+        "id": "4cyYC67XY3weSVmSLdKLP8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Kendo Kapponi",
+            "id": "3SqADzYzd7W0qbkUimYuo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6e1GVODwIB2IYkSxKDsKzv"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 264800,
+        "name": "Viviendo Con El Enemigo",
+        "disc_number": 1,
+        "id": "6e1GVODwIB2IYkSxKDsKzv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0I7WNugLpudPyF71xFZ8D3"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 224093,
+        "name": "Sr. Destino",
+        "disc_number": 1,
+        "id": "0I7WNugLpudPyF71xFZ8D3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/38yQMFhgXnTFYOnxrbOv9v"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 292120,
+        "name": "Huerfano De Amor",
+        "disc_number": 1,
+        "id": "38yQMFhgXnTFYOnxrbOv9v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Zion",
+            "id": "1pgDilWYDWLoOgGjf1iHNu"
+          },
+          {
+            "name": "Lennox",
+            "id": "7BOLXRhKCofrP6ESS7Owuo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7AObnx2EzL6FeYjmdjPCoA"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 202600,
+        "name": "Ella Ella",
+        "disc_number": 1,
+        "id": "7AObnx2EzL6FeYjmdjPCoA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Lucenzo",
+            "id": "5bv5RplEOwdCvhq0EILh9E"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2a1o6ZejUi8U3wzzOtCOYw"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 198773,
+        "name": "Danza Kuduro",
+        "disc_number": 1,
+        "id": "2a1o6ZejUi8U3wzzOtCOYw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7yxWmnTrXBxevDiMf2qrqI"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 248626,
+        "name": "Luna Llena",
+        "disc_number": 1,
+        "id": "7yxWmnTrXBxevDiMf2qrqI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Don Omar",
+            "id": "33ScadVnbm2X8kkUqOkC6Z"
+          },
+          {
+            "name": "Kendo Kapponi",
+            "id": "3SqADzYzd7W0qbkUimYuo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1qLeX26IEu3kPWxPfyBMGd"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 225333,
+        "name": "RX",
+        "disc_number": 1,
+        "id": "1qLeX26IEu3kPWxPfyBMGd"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "6mGDfbDErYIJsmSewvccWm"
+  }
+}

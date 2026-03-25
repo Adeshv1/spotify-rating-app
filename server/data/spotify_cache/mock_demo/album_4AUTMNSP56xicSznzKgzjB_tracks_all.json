@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4AUTMNSP56xicSznzKgzjB_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:56.697Z",
+  "lastRefreshedAt": "2026-03-25T22:19:56.697Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MfU6mWCehJGaTI0dvW5Kx"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 170665,
+        "name": "Like This",
+        "disc_number": 1,
+        "id": "1MfU6mWCehJGaTI0dvW5Kx"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          },
+          {
+            "name": "Adam Levine",
+            "id": "4bYPcJP5jwMhSivRcqie2n"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7x5xYW5W42OGPAdHUyyguy"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 227475,
+        "name": "Locked Away (feat. Adam Levine)",
+        "disc_number": 1,
+        "id": "7x5xYW5W42OGPAdHUyyguy"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19Qduas1mZwiAr4yUuBZXC"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 214119,
+        "name": "Checking For You",
+        "disc_number": 1,
+        "id": "19Qduas1mZwiAr4yUuBZXC"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YePYsIAjvrtqL8HQ9pI3b"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 246477,
+        "name": "Take You Down",
+        "disc_number": 1,
+        "id": "2YePYsIAjvrtqL8HQ9pI3b"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dUDMgtBlvKZODeSIqOjIA"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 237841,
+        "name": "Broadway",
+        "disc_number": 1,
+        "id": "1dUDMgtBlvKZODeSIqOjIA"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4J2U0fZ4SYQV5gCFpc6GYI"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 212160,
+        "name": "Over",
+        "disc_number": 1,
+        "id": "4J2U0fZ4SYQV5gCFpc6GYI"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          },
+          {
+            "name": "Chloe Angelides",
+            "id": "79A4RmgwxYGIDkqQDUHLXK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/37k7igIs7IrMVUadwWKHJ6"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 206705,
+        "name": "Make Up (feat. Chloe Angelides)",
+        "disc_number": 1,
+        "id": "37k7igIs7IrMVUadwWKHJ6"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Lz435VjV3fHJXcw2J3qzR"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 234358,
+        "name": "Again",
+        "disc_number": 1,
+        "id": "2Lz435VjV3fHJXcw2J3qzR"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          },
+          {
+            "name": "Akon",
+            "id": "0z4gvV4rjIZ9wHck67ucSV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0CxCpL8uCAwThYevFxv6bb"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 222101,
+        "name": "Live by the Gun (feat. Akon)",
+        "disc_number": 1,
+        "id": "0CxCpL8uCAwThYevFxv6bb"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XVdD3uM197ypsVCZC2ciB"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 231884,
+        "name": "Slave to the Dollar",
+        "disc_number": 1,
+        "id": "5XVdD3uM197ypsVCZC2ciB"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2r6DJtkGe7BumeqcEt0GKI"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 241615,
+        "name": "Save My Soul",
+        "disc_number": 1,
+        "id": "2r6DJtkGe7BumeqcEt0GKI"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          },
+          {
+            "name": "Tarrus Riley",
+            "id": "4frHO7KPcfMjhnVdIMJ98c"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6yoI7MhAp0UuaaDcOjcVPt"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 213595,
+        "name": "Crazy Love (feat. Tarrus Riley)",
+        "disc_number": 1,
+        "id": "6yoI7MhAp0UuaaDcOjcVPt"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/54dchlJdlVs58DRNqKH1yf"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 234312,
+        "name": "Don't You Worry",
+        "disc_number": 1,
+        "id": "54dchlJdlVs58DRNqKH1yf"
+      },
+      {
+        "artists": [
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0BX0fLDGira6rZ2HRQ4o6r"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 656166,
+        "name": "Our Story",
+        "disc_number": 1,
+        "id": "0BX0fLDGira6rZ2HRQ4o6r"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "4AUTMNSP56xicSznzKgzjB"
+  }
+}

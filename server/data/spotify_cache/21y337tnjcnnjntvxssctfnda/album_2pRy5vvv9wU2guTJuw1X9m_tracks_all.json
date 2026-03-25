@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2pRy5vvv9wU2guTJuw1X9m_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:47.270Z",
+  "lastRefreshedAt": "2026-03-25T22:19:47.270Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Mes Croquis",
+            "id": "7p0rpxmlHJrDNXr8CP2JhW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WM2fu4FoREAkHiD25SAOj"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 144875,
+        "name": "Les Soir",
+        "disc_number": 1,
+        "id": "0WM2fu4FoREAkHiD25SAOj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2pRy5vvv9wU2guTJuw1X9m"
+  }
+}

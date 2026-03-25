@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2ODvWsOgouMbaA5xf0RkJe_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:51.117Z",
+  "lastRefreshedAt": "2026-03-25T22:19:51.117Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Daft Punk",
+            "id": "4tZwfgrHOc3mvqYlEYSvVi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7MXVkk9YMctZqd1Srtv4MB"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 230453,
+        "name": "Starboy",
+        "disc_number": 1,
+        "id": "7MXVkk9YMctZqd1Srtv4MB"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4F7A0DXBrmUAkp32uenhZt"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 249213,
+        "name": "Party Monster",
+        "disc_number": 1,
+        "id": "4F7A0DXBrmUAkp32uenhZt"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4oeaIftdpT3JuZLcCkKmVE"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 220306,
+        "name": "False Alarm",
+        "disc_number": 1,
+        "id": "4oeaIftdpT3JuZLcCkKmVE"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/37F0uwRSrdzkBiuj0D5UHI"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 218880,
+        "name": "Reminder",
+        "disc_number": 1,
+        "id": "37F0uwRSrdzkBiuj0D5UHI"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/36YCdzT57us0LhDmCYtrNE"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 232880,
+        "name": "Rockin’",
+        "disc_number": 1,
+        "id": "36YCdzT57us0LhDmCYtrNE"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00NAQYOP4AmWR549nnYJZu"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 265600,
+        "name": "Secrets",
+        "disc_number": 1,
+        "id": "00NAQYOP4AmWR549nnYJZu"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1oGdVdYjeQvojGKDddxLQQ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 206013,
+        "name": "True Colors",
+        "disc_number": 1,
+        "id": "1oGdVdYjeQvojGKDddxLQQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Lana Del Rey",
+            "id": "00FQb4jTyendYWaN8pK0wa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4EDijkJdHBZZ0GwJ12iTAj"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 111640,
+        "name": "Stargirl Interlude",
+        "disc_number": 1,
+        "id": "4EDijkJdHBZZ0GwJ12iTAj"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4h90qkbnW1Qq6pBhoPvwko"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 231360,
+        "name": "Sidewalks",
+        "disc_number": 1,
+        "id": "4h90qkbnW1Qq6pBhoPvwko"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4mU5iXHeLgbR94siF7p1sY"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 237573,
+        "name": "Six Feet Under",
+        "disc_number": 1,
+        "id": "4mU5iXHeLgbR94siF7p1sY"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27BgDmciSjoxTG0almHTpZ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 223293,
+        "name": "Love To Lay",
+        "disc_number": 1,
+        "id": "27BgDmciSjoxTG0almHTpZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ifooM33X1iBxVYyOkSbXW"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 220173,
+        "name": "A Lonely Night",
+        "disc_number": 1,
+        "id": "0ifooM33X1iBxVYyOkSbXW"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6pDVjCUA3B1vg9waKutAsv"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 197653,
+        "name": "Attention",
+        "disc_number": 1,
+        "id": "6pDVjCUA3B1vg9waKutAsv"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/15k2nBQJ0teDmPZHrOXL2N"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 221920,
+        "name": "Ordinary Life",
+        "disc_number": 1,
+        "id": "15k2nBQJ0teDmPZHrOXL2N"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57qiTKh8bVX0VtfUNTQqhw"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 198653,
+        "name": "Nothing Without You",
+        "disc_number": 1,
+        "id": "57qiTKh8bVX0VtfUNTQqhw"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0NWqNXBJTpXbkI5rPWNy3p"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 321026,
+        "name": "All I Know",
+        "disc_number": 1,
+        "id": "0NWqNXBJTpXbkI5rPWNy3p"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Ch7LmS7r2Gy2kc64wv3Bz"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 260252,
+        "name": "Die For You",
+        "disc_number": 1,
+        "id": "2Ch7LmS7r2Gy2kc64wv3Bz"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Daft Punk",
+            "id": "4tZwfgrHOc3mvqYlEYSvVi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3dhjNA0jGA8vHBQ1VdD6vV"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 269186,
+        "name": "I Feel It Coming",
+        "disc_number": 1,
+        "id": "3dhjNA0jGA8vHBQ1VdD6vV"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "2ODvWsOgouMbaA5xf0RkJe"
+  }
+}

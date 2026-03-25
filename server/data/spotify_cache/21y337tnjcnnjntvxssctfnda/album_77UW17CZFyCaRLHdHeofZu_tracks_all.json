@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_77UW17CZFyCaRLHdHeofZu_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:10.428Z",
+  "lastRefreshedAt": "2026-03-25T22:20:10.428Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Sam Martin",
+            "id": "66AE89GQTx88zLYhXn1wFK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7pqgMEKsDMOHUdFQ7n0N9K"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 203641,
+        "name": "Dangerous (feat. Sam Martin)",
+        "disc_number": 1,
+        "id": "7pqgMEKsDMOHUdFQ7n0N9K"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Emeli Sandé",
+            "id": "7sfgqEdoeBTjd8lQsPT3Cy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1YRjRHdl0aEtzHEn1uGi8k"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 207200,
+        "name": "What I Did for Love (feat. Emeli Sandé)",
+        "disc_number": 1,
+        "id": "1YRjRHdl0aEtzHEn1uGi8k"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Showtek",
+            "id": "3gk0OYeLFWYupGFRHqLSR7"
+          },
+          {
+            "name": "Elliphant",
+            "id": "134GdR5tUtxJrf8cpsfpyY"
+          },
+          {
+            "name": "Ms. Dynamite",
+            "id": "42qLC3FgtazA9AvaIoiP62"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5I1QXv0dEydyRIPOo2MO9l"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 237720,
+        "name": "No Money No Love (feat. Elliphant & Ms. Dynamite)",
+        "disc_number": 1,
+        "id": "5I1QXv0dEydyRIPOo2MO9l"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Sam Martin",
+            "id": "66AE89GQTx88zLYhXn1wFK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2rgtCOVK2tpfao2VjURn84"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 203520,
+        "name": "Lovers on the Sun (feat. Sam Martin)",
+        "disc_number": 1,
+        "id": "2rgtCOVK2tpfao2VjURn84"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Danny O'Donoghue",
+            "id": "5DuLhdNVF1dyQfO6FS8iNW"
+          },
+          {
+            "name": "Glen Power",
+            "id": "1AWpeqVgI2TC9kDuDp0FfW"
+          },
+          {
+            "name": "Mark Sheehan",
+            "id": "7zP3twCl1uC982R9sb5zns"
+          },
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4IyTNlvWHiMxDdZ4Ii5hnA"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 229253,
+        "name": "Goodbye Friend (feat. The Script)",
+        "disc_number": 1,
+        "id": "4IyTNlvWHiMxDdZ4Ii5hnA"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Ladysmith Black Mambazo",
+            "id": "3FdLhnmXynPvZkbILPpB6d"
+          },
+          {
+            "name": "Nico & Vinz",
+            "id": "0awl5piYwO0CDTHEkCjUhn"
+          },
+          {
+            "name": "Nico Sereba",
+            "id": "0uF5eJUZAvklB3QRceobhZ"
+          },
+          {
+            "name": "Vincent \"Vinzy V\" Dery",
+            "id": "5Yz0EEDmU5nMl5fGmc6iZ9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YgD8aDme4OP5kPIp7PCZy"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 238346,
+        "name": "Lift Me Up (feat. Nico & Vinz, Ladysmith Black Mambazo)",
+        "disc_number": 1,
+        "id": "2YgD8aDme4OP5kPIp7PCZy"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "John Legend",
+            "id": "5y2Xq6xcjJb2jVM54GHK3t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61hXfKJVSytvEgXSFfdjCT"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 226586,
+        "name": "Listen (feat. John Legend)",
+        "disc_number": 1,
+        "id": "61hXfKJVSytvEgXSFfdjCT"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3kJRBUfW9qhYkWnlIBFAMw"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 233266,
+        "name": "Bang My Head (feat. Sia)",
+        "disc_number": 1,
+        "id": "3kJRBUfW9qhYkWnlIBFAMw"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Bebe Rexha",
+            "id": "64M6ah0SkkRsnPGtGiRAbb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6CZh6hYZajOjpEcPmnRMnt"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 243280,
+        "name": "Yesterday (feat. Bebe Rexha)",
+        "disc_number": 1,
+        "id": "6CZh6hYZajOjpEcPmnRMnt"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "AFROJACK",
+            "id": "4D75GcNG95ebPtNvoNVXhz"
+          },
+          {
+            "name": "Bebe Rexha",
+            "id": "64M6ah0SkkRsnPGtGiRAbb"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/285HeuLxsngjFn4GGegGNm"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 192560,
+        "name": "Hey Mama (feat. Nicki Minaj, Bebe Rexha & Afrojack)",
+        "disc_number": 1,
+        "id": "285HeuLxsngjFn4GGegGNm"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Showtek",
+            "id": "3gk0OYeLFWYupGFRHqLSR7"
+          },
+          {
+            "name": "MAGIC!",
+            "id": "0DxeaLnv6SyYk2DOqkLO8c"
+          },
+          {
+            "name": "Sonny Wilson",
+            "id": "3gTl4XARdQR2Sy59osG0Ia"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1JI77eVbrOtdHOsLK4G1Mq"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 211866,
+        "name": "Sun Goes Down (feat. MAGIC! & Sonny Wilson)",
+        "disc_number": 1,
+        "id": "1JI77eVbrOtdHOsLK4G1Mq"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Ryan Tedder",
+            "id": "4we5S2VLjgY9KzIzApL1KI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/37TgrDSXlOQI1mAqASPI7F"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 214573,
+        "name": "S.T.O.P",
+        "disc_number": 1,
+        "id": "37TgrDSXlOQI1mAqASPI7F"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Birdy",
+            "id": "2WX2uTcsvV5OnS0inACecP"
+          },
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MtHnqURYyTeeMKur7qd0E"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 188906,
+        "name": "I'll Keep Loving You (feat. Birdy & Jaymes Young)",
+        "disc_number": 1,
+        "id": "1MtHnqURYyTeeMKur7qd0E"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Sia",
+            "id": "5WUlDfRSoLAfcVSX1WnrxN"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4J1DXVKlC7h5wSgeuULPYh"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 234666,
+        "name": "The Whisperer (feat. Sia)",
+        "disc_number": 1,
+        "id": "4J1DXVKlC7h5wSgeuULPYh"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Showtek",
+            "id": "3gk0OYeLFWYupGFRHqLSR7"
+          },
+          {
+            "name": "VASSY",
+            "id": "7HqEmV7FeCi16bQyHMpIrF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6eIacmhkE82vZlMDnGS7aP"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 170625,
+        "name": "Bad (feat. Vassy) - Radio Edit",
+        "disc_number": 1,
+        "id": "6eIacmhkE82vZlMDnGS7aP"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Skylar Grey",
+            "id": "4utLUGcTvOJFr6aqIJtYWV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/31RuuWQ8XpyLNp5iKMyxWq"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 235384,
+        "name": "Rise (feat. Skylar Grey)",
+        "disc_number": 1,
+        "id": "31RuuWQ8XpyLNp5iKMyxWq"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Skylar Grey",
+            "id": "4utLUGcTvOJFr6aqIJtYWV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qVXkG01rBYGfxIndGOQ3z"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 191412,
+        "name": "Shot Me Down (feat. Skylar Grey) - Radio Edit",
+        "disc_number": 1,
+        "id": "6qVXkG01rBYGfxIndGOQ3z"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Sam Martin",
+            "id": "66AE89GQTx88zLYhXn1wFK"
+          },
+          {
+            "name": "Robin Schulz",
+            "id": "3t5xRXzsuZmMDkQzgOX35S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1FkbBFzuPskyOvIoipKug5"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 200869,
+        "name": "Dangerous (feat. Sam Martin) - Robin Schulz Remix; Radio Edit",
+        "disc_number": 1,
+        "id": "1FkbBFzuPskyOvIoipKug5"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "77UW17CZFyCaRLHdHeofZu"
+  }
+}

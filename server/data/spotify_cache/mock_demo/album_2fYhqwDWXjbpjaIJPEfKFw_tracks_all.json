@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2fYhqwDWXjbpjaIJPEfKFw_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:49.967Z",
+  "lastRefreshedAt": "2026-03-25T22:19:49.967Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/39LmTF9RgyakzSYX8txrow"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 212266,
+        "name": "imagine",
+        "disc_number": 1,
+        "id": "39LmTF9RgyakzSYX8txrow"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1TEL6MlSSVLSdhOSddidlJ"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 171573,
+        "name": "needy",
+        "disc_number": 1,
+        "id": "1TEL6MlSSVLSdhOSddidlJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4uTvPEr01pjTbZgl7jcKBD"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 182000,
+        "name": "NASA",
+        "disc_number": 1,
+        "id": "4uTvPEr01pjTbZgl7jcKBD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2hloaUoRonYssMuqLCBLTX"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 216893,
+        "name": "bloodline",
+        "disc_number": 1,
+        "id": "2hloaUoRonYssMuqLCBLTX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3wFLWP0FcIqHK1wb1CPthQ"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 208880,
+        "name": "fake smile",
+        "disc_number": 1,
+        "id": "3wFLWP0FcIqHK1wb1CPthQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Il6Oe7lr5XM7A0cWbVQtr"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 267106,
+        "name": "bad idea",
+        "disc_number": 1,
+        "id": "5Il6Oe7lr5XM7A0cWbVQtr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27356GVuMPFWiJSZCragoM"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 140693,
+        "name": "make up",
+        "disc_number": 1,
+        "id": "27356GVuMPFWiJSZCragoM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2vdBo4ALPYbHRUPKgtE5iC"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 271466,
+        "name": "ghostin",
+        "disc_number": 1,
+        "id": "2vdBo4ALPYbHRUPKgtE5iC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4T652DlATVHe0jdLKaN3Bw"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 222946,
+        "name": "in my head",
+        "disc_number": 1,
+        "id": "4T652DlATVHe0jdLKaN3Bw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 178626,
+        "name": "7 rings",
+        "disc_number": 1,
+        "id": "6ocbgoVGwYJhOv1GgI9NsF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3e9HZxeyfWwjeyPAMmWSSQ"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 207320,
+        "name": "thank u, next",
+        "disc_number": 1,
+        "id": "3e9HZxeyfWwjeyPAMmWSSQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4kV4N9D1iKVxx1KLvtTpjS"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 190440,
+        "name": "break up with your girlfriend, i'm bored",
+        "disc_number": 1,
+        "id": "4kV4N9D1iKVxx1KLvtTpjS"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "2fYhqwDWXjbpjaIJPEfKFw"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6KZDkQ7hYuOqG8O4cjNLl9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:38.793Z",
+  "lastRefreshedAt": "2026-03-25T22:19:38.793Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Joviano Carrera",
+            "id": "7CP9gWsfC3ZmfDnGdspj93"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4VCdqcivjBs1bfQAGB54rQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 151923,
+        "name": "Biassono",
+        "disc_number": 1,
+        "id": "4VCdqcivjBs1bfQAGB54rQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6KZDkQ7hYuOqG8O4cjNLl9"
+  }
+}

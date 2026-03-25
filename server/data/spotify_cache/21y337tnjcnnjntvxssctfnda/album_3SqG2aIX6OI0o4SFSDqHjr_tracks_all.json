@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3SqG2aIX6OI0o4SFSDqHjr_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.513Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.513Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "BossMan Dlow",
+            "id": "23xFbA9rYgRX8mreqysWPc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6i33LrYcqEjfhDudr0PRy9"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 95840,
+        "name": "Motion Party",
+        "disc_number": 1,
+        "id": "6i33LrYcqEjfhDudr0PRy9"
+      },
+      {
+        "artists": [
+          {
+            "name": "BossMan Dlow",
+            "id": "23xFbA9rYgRX8mreqysWPc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1erGbLK5noXdxpfz4JjtQ7"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 125000,
+        "name": "Let's Go Get Em",
+        "disc_number": 1,
+        "id": "1erGbLK5noXdxpfz4JjtQ7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 2,
+    "albumId": "3SqG2aIX6OI0o4SFSDqHjr"
+  }
+}

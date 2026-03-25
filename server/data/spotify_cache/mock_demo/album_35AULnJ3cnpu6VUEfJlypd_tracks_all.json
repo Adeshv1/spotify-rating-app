@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_35AULnJ3cnpu6VUEfJlypd_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.831Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.831Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6HTprulGfeFVrLLvfi3t8a"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 195105,
+        "name": "Mr. Saxobeat - Radio Edit",
+        "disc_number": 1,
+        "id": "6HTprulGfeFVrLLvfi3t8a"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/74xTn2WAqHzJX6239rjkUP"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 236770,
+        "name": "Ting-Ting",
+        "disc_number": 1,
+        "id": "74xTn2WAqHzJX6239rjkUP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6mBKu7eWI7oR0jKgnX5XFV"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 223522,
+        "name": "Show Me The Way",
+        "disc_number": 1,
+        "id": "6mBKu7eWI7oR0jKgnX5XFV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2WY9Q47EzFd0sWA7knbCHK"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 235362,
+        "name": "Lollipop (Param pam pam)",
+        "disc_number": 1,
+        "id": "2WY9Q47EzFd0sWA7knbCHK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4KxQPeKbfNrS3zxUGgEGEK"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 208874,
+        "name": "Crazy",
+        "disc_number": 1,
+        "id": "4KxQPeKbfNrS3zxUGgEGEK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16cjxRIPDF7JGjXJgtGqkr"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 217389,
+        "name": "Bitter Sweet",
+        "disc_number": 1,
+        "id": "16cjxRIPDF7JGjXJgtGqkr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ptW8kjuXkGdIL5kFxy8jw"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 209336,
+        "name": "Get Back (Asap)",
+        "disc_number": 1,
+        "id": "0ptW8kjuXkGdIL5kFxy8jw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          },
+          {
+            "name": "Carlprit",
+            "id": "0Wj6u7zMY2dOLkJGz62bEp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1yResKlHM0Jgc7aakSwmhN"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 200120,
+        "name": "1.000.000 (feat. Carlprit)",
+        "disc_number": 1,
+        "id": "1yResKlHM0Jgc7aakSwmhN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5wCHeUY68uj83dDK6rCGUq"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 222102,
+        "name": "Mr Saxobeat - Maan Studio Remix",
+        "disc_number": 1,
+        "id": "5wCHeUY68uj83dDK6rCGUq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0QnO3YalfZm2DB5tG50fiL"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 252544,
+        "name": "Lollipop (Param pam pam) - Club Version",
+        "disc_number": 1,
+        "id": "0QnO3YalfZm2DB5tG50fiL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0rEGMp31Z9Ax2sn6Ho6aff"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 201355,
+        "name": "Get Back (ASAP) - Maan Studio Remix",
+        "disc_number": 1,
+        "id": "0rEGMp31Z9Ax2sn6Ho6aff"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5eOVh6b0CE8zoj3eDwVpqh"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 256635,
+        "name": "Mr. Saxobeat - Extended Version",
+        "disc_number": 1,
+        "id": "5eOVh6b0CE8zoj3eDwVpqh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alexandra Stan",
+            "id": "0BmLNz4nSLfoWYW1cYsElL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/74PHCas9J4Qgtu1PkTVYwM"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 266336,
+        "name": "Get Back (Asap) - Extended Version",
+        "disc_number": 1,
+        "id": "74PHCas9J4Qgtu1PkTVYwM"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "35AULnJ3cnpu6VUEfJlypd"
+  }
+}

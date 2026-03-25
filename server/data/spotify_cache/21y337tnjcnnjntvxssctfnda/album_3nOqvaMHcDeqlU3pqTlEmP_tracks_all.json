@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3nOqvaMHcDeqlU3pqTlEmP_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:30.828Z",
+  "lastRefreshedAt": "2026-03-25T22:19:30.828Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "jiel",
+            "id": "2uCs7S22q8iEg52XCLTzZx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Rr3fUE84z8AjJshTRiCWt"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 180000,
+        "name": "afterthought",
+        "disc_number": 1,
+        "id": "4Rr3fUE84z8AjJshTRiCWt"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3nOqvaMHcDeqlU3pqTlEmP"
+  }
+}

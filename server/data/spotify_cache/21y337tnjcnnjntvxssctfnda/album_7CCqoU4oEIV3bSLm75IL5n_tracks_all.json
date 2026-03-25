@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7CCqoU4oEIV3bSLm75IL5n_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.708Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.708Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lYKuF88iTBrppJoq03ujE"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 202626,
+        "name": "Dynamite",
+        "disc_number": 1,
+        "id": "4lYKuF88iTBrppJoq03ujE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Ludacris",
+            "id": "3ipn9JLAPI5GUEo4y4jcoi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Oqg0RD3ywUXEtt7seShF0"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 185186,
+        "name": "Break Your Heart",
+        "disc_number": 1,
+        "id": "4Oqg0RD3ywUXEtt7seShF0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Kesha",
+            "id": "6LqNN22kT3074XbTVUrhzX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KRlQNTZnIK4oVxZn2fmsB"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 218906,
+        "name": "Dirty Picture",
+        "disc_number": 1,
+        "id": "6KRlQNTZnIK4oVxZn2fmsB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5hXDKJ7C0CyjPvkhxk8Acn"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 192453,
+        "name": "Take Me Back",
+        "disc_number": 1,
+        "id": "5hXDKJ7C0CyjPvkhxk8Acn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5nO1wok8CiaLxNtpnjWkJe"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 228560,
+        "name": "I'll Never Love Again",
+        "disc_number": 1,
+        "id": "5nO1wok8CiaLxNtpnjWkJe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1We6nPTBQobe2jzKO9AbUm"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 226146,
+        "name": "I Can Be",
+        "disc_number": 1,
+        "id": "1We6nPTBQobe2jzKO9AbUm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3PuuiEumRWH9Nrw371J41g"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 217320,
+        "name": "No Other One - Remastered",
+        "disc_number": 1,
+        "id": "3PuuiEumRWH9Nrw371J41g"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Luciana",
+            "id": "4ugGMtXC28CVR5hlYJy9wV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4dWIul4vTUB2gBu82XJfQw"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 212640,
+        "name": "Come On Girl",
+        "disc_number": 1,
+        "id": "4dWIul4vTUB2gBu82XJfQw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4gub3nlONJ9W1LHpvIJOQl"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 211586,
+        "name": "Falling In Love",
+        "disc_number": 1,
+        "id": "4gub3nlONJ9W1LHpvIJOQl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Kylie Minogue",
+            "id": "4RVnAU35WRWra6OZ3CbbMA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/089vxHEH64AKLKhokNXEJx"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 187666,
+        "name": "Higher",
+        "disc_number": 1,
+        "id": "089vxHEH64AKLKhokNXEJx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UMtUZgAnFa0B4HsMvsEgZ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 217520,
+        "name": "Feel Again - Remastered 2010",
+        "disc_number": 1,
+        "id": "1UMtUZgAnFa0B4HsMvsEgZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0bMBcrDQuwK2FABbpQDvA9"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 218333,
+        "name": "She's Like A Star",
+        "disc_number": 1,
+        "id": "0bMBcrDQuwK2FABbpQDvA9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5nyo3JgWuUjFvUfqyCs6i9"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 238466,
+        "name": "I Just Wanna Know",
+        "disc_number": 1,
+        "id": "5nyo3JgWuUjFvUfqyCs6i9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0xo7GnSBwlkBOKTGV4QUZP"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 252453,
+        "name": "Forever Love",
+        "disc_number": 1,
+        "id": "0xo7GnSBwlkBOKTGV4QUZP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Travie McCoy",
+            "id": "7o9Nl7K1Al6NNAHX6jn6iG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1gNAEzINjeXnQ6Yy2kADe1"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 218160,
+        "name": "Higher",
+        "disc_number": 1,
+        "id": "1gNAEzINjeXnQ6Yy2kADe1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Agent X",
+            "id": "3gnnsoDJAHfrNZXd2mgzZa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WKDspRnBI0y9uo3ISlW7x"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 264253,
+        "name": "Break Your Heart - Agent X Remix",
+        "disc_number": 1,
+        "id": "0WKDspRnBI0y9uo3ISlW7x"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Ralphi Rosario",
+            "id": "0c5584rnmlOvkMpJtpBLTh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ZBI1ImT7F1fCdmxRnDrh7"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 226720,
+        "name": "Dynamite - Ralphi Rosario Radio Edit",
+        "disc_number": 1,
+        "id": "3ZBI1ImT7F1fCdmxRnDrh7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Club Junkies",
+            "id": "06mRdYmly1OZsj8nu0wmyS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5kmKl1GEQhyWXdRBii5TTv"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 196480,
+        "name": "Higher - Club Junkies Radio Edit",
+        "disc_number": 1,
+        "id": "5kmKl1GEQhyWXdRBii5TTv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          },
+          {
+            "name": "Kesha",
+            "id": "6LqNN22kT3074XbTVUrhzX"
+          },
+          {
+            "name": "Redtop",
+            "id": "1JZWmq5faxH0ef4GrU3b1z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/71mBBHYh99tETiOZWvnUIs"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 197186,
+        "name": "Dirty Picture - RedTop Radio Edit",
+        "disc_number": 1,
+        "id": "71mBBHYh99tETiOZWvnUIs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Taio Cruz",
+            "id": "6MF9fzBmfXghAz953czmBC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42AcnfPuSV3i6iWA0OfwTw"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 212853,
+        "name": "Telling The World",
+        "disc_number": 1,
+        "id": "42AcnfPuSV3i6iWA0OfwTw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 20,
+    "albumId": "7CCqoU4oEIV3bSLm75IL5n"
+  }
+}

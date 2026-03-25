@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5BvgP623rtvlc0HDcpzquz_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.251Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.251Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55qBw1900pZKfXJ6Q9A2Lc"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 227760,
+        "name": "Teenage Dream",
+        "disc_number": 1,
+        "id": "55qBw1900pZKfXJ6Q9A2Lc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/455AfCsOhhLPRc68sE01D8"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 230746,
+        "name": "Last Friday Night (T.G.I.F.)",
+        "disc_number": 1,
+        "id": "455AfCsOhhLPRc68sE01D8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          },
+          {
+            "name": "Snoop Dogg",
+            "id": "7hJcb9fa4alzcOq3EaNPoG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tS3XVuOyu10897O3ae7bi"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 234653,
+        "name": "California Gurls",
+        "disc_number": 1,
+        "id": "6tS3XVuOyu10897O3ae7bi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4lCv7b86sLynZbXhfScfm2"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 227880,
+        "name": "Firework",
+        "disc_number": 1,
+        "id": "4lCv7b86sLynZbXhfScfm2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0rXw5rWZpOdfeeCbMln8MU"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 231920,
+        "name": "Peacock",
+        "disc_number": 1,
+        "id": "0rXw5rWZpOdfeeCbMln8MU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7s0YfJE6hNNYq9BV26iCw6"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 272920,
+        "name": "Circle The Drain",
+        "disc_number": 1,
+        "id": "7s0YfJE6hNNYq9BV26iCw6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oL3XRtkP1WVbMxf7dtTdu"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 227333,
+        "name": "The One That Got Away",
+        "disc_number": 1,
+        "id": "3oL3XRtkP1WVbMxf7dtTdu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4z8ssgZfs5TzKiO8HaGWXO"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 206373,
+        "name": "E.T.",
+        "disc_number": 1,
+        "id": "4z8ssgZfs5TzKiO8HaGWXO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6WR4l21xoK1pQDhjxg7wg7"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 248533,
+        "name": "Who Am I Living For?",
+        "disc_number": 1,
+        "id": "6WR4l21xoK1pQDhjxg7wg7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0SrCokfLVXjRV94KpP3iPm"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 247626,
+        "name": "Pearl",
+        "disc_number": 1,
+        "id": "0SrCokfLVXjRV94KpP3iPm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/089keBWJUOsI9wUeVr1uIr"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 212280,
+        "name": "Hummingbird Heartbeat",
+        "disc_number": 1,
+        "id": "089keBWJUOsI9wUeVr1uIr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1EFNEJyZUsctm6yVzGqLl6"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 241320,
+        "name": "Not Like The Movies",
+        "disc_number": 1,
+        "id": "1EFNEJyZUsctm6yVzGqLl6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5jx8tCxiO0uIbo2uNia23K"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 259040,
+        "name": "The One That Got Away - Acoustic",
+        "disc_number": 1,
+        "id": "5jx8tCxiO0uIbo2uNia23K"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nZzRJbFvCEct3uzu04ZoL"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 216160,
+        "name": "Part Of Me",
+        "disc_number": 1,
+        "id": "1nZzRJbFvCEct3uzu04ZoL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5JLv62qFIS1DR3zGEcApRt"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 220946,
+        "name": "Wide Awake",
+        "disc_number": 1,
+        "id": "5JLv62qFIS1DR3zGEcApRt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GsYM767NTEiUFjq00tspw"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 223560,
+        "name": "Dressin' Up",
+        "disc_number": 1,
+        "id": "7GsYM767NTEiUFjq00tspw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/36ux3YuUsGTWPT8fXclS45"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 229573,
+        "name": "E.T.",
+        "disc_number": 1,
+        "id": "36ux3YuUsGTWPT8fXclS45"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          },
+          {
+            "name": "Missy Elliott",
+            "id": "2wIVse2owClT7go1WT98tk"
+          },
+          {
+            "name": "Dr. Luke",
+            "id": "15wlmlNEnCUlTEgeShnDO7"
+          },
+          {
+            "name": "Cirkut",
+            "id": "75ejsr1iK59GJ93YnrUKrv"
+          },
+          {
+            "name": "Dream Machine",
+            "id": "1RXCSRl9JrHXl7cSGebdWG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Smx7N3TVs9McglUSCWEYn"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 238746,
+        "name": "Last Friday Night (T.G.I.F.)",
+        "disc_number": 1,
+        "id": "4Smx7N3TVs9McglUSCWEYn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Katy Perry",
+            "id": "6jJ0s89eD6GaHleKKya26X"
+          },
+          {
+            "name": "Tommie Sunshine",
+            "id": "42tlZWSz1V6Rsqds29GcRo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Rilw7PyAua7lmQCYPiQKq"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 423053,
+        "name": "Tommie Sunshine's Megasix Smash-Up",
+        "disc_number": 1,
+        "id": "5Rilw7PyAua7lmQCYPiQKq"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 19,
+    "albumId": "5BvgP623rtvlc0HDcpzquz"
+  }
+}

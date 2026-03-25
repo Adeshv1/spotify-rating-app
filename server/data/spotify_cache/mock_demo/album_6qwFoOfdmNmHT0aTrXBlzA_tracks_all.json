@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6qwFoOfdmNmHT0aTrXBlzA_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:30.077Z",
+  "lastRefreshedAt": "2026-03-25T22:19:30.077Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Mijongya",
+            "id": "7GPrD3dPYED5wENCMHirj7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ottoPWbTULvnKU5PSCysf"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 172036,
+        "name": "Veiled Remembrance",
+        "disc_number": 1,
+        "id": "5ottoPWbTULvnKU5PSCysf"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6qwFoOfdmNmHT0aTrXBlzA"
+  }
+}

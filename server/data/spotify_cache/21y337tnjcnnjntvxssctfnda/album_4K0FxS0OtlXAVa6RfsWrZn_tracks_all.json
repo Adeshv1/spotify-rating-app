@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4K0FxS0OtlXAVa6RfsWrZn_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:46.592Z",
+  "lastRefreshedAt": "2026-03-25T22:19:46.592Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sarah Watson",
+            "id": "3pyGXjDKAt3czGsh7vxkT0"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4GpRhtTwljdnKpVEiFlJv9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 135344,
+        "name": "Peggy's Cove",
+        "disc_number": 1,
+        "id": "4GpRhtTwljdnKpVEiFlJv9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4K0FxS0OtlXAVa6RfsWrZn"
+  }
+}

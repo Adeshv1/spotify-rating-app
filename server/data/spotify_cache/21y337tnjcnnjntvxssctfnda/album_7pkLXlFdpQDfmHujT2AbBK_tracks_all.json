@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7pkLXlFdpQDfmHujT2AbBK_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.666Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.666Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "benny blanco",
+            "id": "5CiGnKThu5ctn9pBxv7DGa"
+          },
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          },
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0d2iYfpKoM0QCKvcLCkBao"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 173799,
+        "name": "Eastside (with Halsey & Khalid)",
+        "disc_number": 1,
+        "id": "0d2iYfpKoM0QCKvcLCkBao"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7pkLXlFdpQDfmHujT2AbBK"
+  }
+}

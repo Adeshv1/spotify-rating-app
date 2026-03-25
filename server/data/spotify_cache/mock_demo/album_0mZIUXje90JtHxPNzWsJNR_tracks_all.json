@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0mZIUXje90JtHxPNzWsJNR_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.161Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.161Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qNALlmZa1ESnCxJmXE1K9"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 186080,
+        "name": "The Way I Am",
+        "disc_number": 1,
+        "id": "6qNALlmZa1ESnCxJmXE1K9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5cF0dROlMOK5uNZtivgu50"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 208786,
+        "name": "Attention",
+        "disc_number": 1,
+        "id": "5cF0dROlMOK5uNZtivgu50"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6pQadiopoIsS4x78tjSkJt"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 197106,
+        "name": "LA Girls",
+        "disc_number": 1,
+        "id": "6pQadiopoIsS4x78tjSkJt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wmAHw1szh5RCKSRjiXhPe"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 200853,
+        "name": "How Long",
+        "disc_number": 1,
+        "id": "6wmAHw1szh5RCKSRjiXhPe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1lsBTdE6MGsKeZCD6llNu7"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 180493,
+        "name": "Done for Me (feat. Kehlani)",
+        "disc_number": 1,
+        "id": "1lsBTdE6MGsKeZCD6llNu7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZrHbO88rM6Ijeg0aJmSzl"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 190533,
+        "name": "Patient",
+        "disc_number": 1,
+        "id": "2ZrHbO88rM6Ijeg0aJmSzl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Boyz II Men",
+            "id": "6O74knDqdv3XaWtkII7Xjp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5QLAHKawoQwVRNf1waaVW7"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 243160,
+        "name": "If You Leave Me Now (feat. Boyz II Men)",
+        "disc_number": 1,
+        "id": "5QLAHKawoQwVRNf1waaVW7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7aSvPfoqiM0zwPqupLGaHd"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 263413,
+        "name": "BOY",
+        "disc_number": 1,
+        "id": "7aSvPfoqiM0zwPqupLGaHd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TapyDFlRUlZ4cmIaqJx4k"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 190053,
+        "name": "Slow It Down",
+        "disc_number": 1,
+        "id": "6TapyDFlRUlZ4cmIaqJx4k"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "James Taylor",
+            "id": "0vn7UBvSQECKJm2817Yf1P"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/17RMnDmv5CEo3s0tmipRyb"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 217560,
+        "name": "Change (feat. James Taylor)",
+        "disc_number": 1,
+        "id": "17RMnDmv5CEo3s0tmipRyb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1PuQTv1Kr1gzLgVeATSuh6"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 216053,
+        "name": "Somebody Told Me",
+        "disc_number": 1,
+        "id": "1PuQTv1Kr1gzLgVeATSuh6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7k7JKDjCd9zuL0iF7iWaNs"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 170946,
+        "name": "Empty Cups",
+        "disc_number": 1,
+        "id": "7k7JKDjCd9zuL0iF7iWaNs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jgF1sLf3TkQbZkLHsc6SI"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 206453,
+        "name": "Through It All",
+        "disc_number": 1,
+        "id": "4jgF1sLf3TkQbZkLHsc6SI"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "0mZIUXje90JtHxPNzWsJNR"
+  }
+}

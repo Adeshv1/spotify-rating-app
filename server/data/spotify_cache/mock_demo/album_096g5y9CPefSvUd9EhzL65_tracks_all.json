@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_096g5y9CPefSvUd9EhzL65_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:47.018Z",
+  "lastRefreshedAt": "2026-03-25T22:19:47.018Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ron Adelaar",
+            "id": "09L72oOms1QBoALUSLqx8u"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HbLcDxxjtJ0800p6RjoeH"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 128724,
+        "name": "Evening Star",
+        "disc_number": 1,
+        "id": "5HbLcDxxjtJ0800p6RjoeH"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "096g5y9CPefSvUd9EhzL65"
+  }
+}

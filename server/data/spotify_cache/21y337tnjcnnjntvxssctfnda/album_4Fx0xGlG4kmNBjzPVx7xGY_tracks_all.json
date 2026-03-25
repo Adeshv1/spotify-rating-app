@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4Fx0xGlG4kmNBjzPVx7xGY_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:24.577Z",
+  "lastRefreshedAt": "2026-03-25T22:19:24.577Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Shoreline Mafia",
+            "id": "4tYSBptyGeVyZsk8JC4JHZ"
+          },
+          {
+            "name": "Disco Lines",
+            "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+          },
+          {
+            "name": "OHGEESY",
+            "id": "3ppQEG71r7jVpI8RudzycF"
+          },
+          {
+            "name": "Fenix Flexin",
+            "id": "63GIj2yhFvX1Bzphb9JgVb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0HNYsGGjrvPQsaXR6sFnVB"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 134400,
+        "name": "Quickest Routes",
+        "disc_number": 1,
+        "id": "0HNYsGGjrvPQsaXR6sFnVB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shoreline Mafia",
+            "id": "4tYSBptyGeVyZsk8JC4JHZ"
+          },
+          {
+            "name": "Disco Lines",
+            "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+          },
+          {
+            "name": "OHGEESY",
+            "id": "3ppQEG71r7jVpI8RudzycF"
+          },
+          {
+            "name": "Fenix Flexin",
+            "id": "63GIj2yhFvX1Bzphb9JgVb"
+          },
+          {
+            "name": "OTXBOYZ",
+            "id": "3OmnE5KylEPVQOIlfnTHcc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1OfqmtlSMyyGIGvkXg8fpL"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 127934,
+        "name": "Bands (feat. OTXBOYZ) [Disco Lines REMIX]",
+        "disc_number": 1,
+        "id": "1OfqmtlSMyyGIGvkXg8fpL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shoreline Mafia",
+            "id": "4tYSBptyGeVyZsk8JC4JHZ"
+          },
+          {
+            "name": "Disco Lines",
+            "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+          },
+          {
+            "name": "OHGEESY",
+            "id": "3ppQEG71r7jVpI8RudzycF"
+          },
+          {
+            "name": "Fenix Flexin",
+            "id": "63GIj2yhFvX1Bzphb9JgVb"
+          },
+          {
+            "name": "TOBEHONEST",
+            "id": "5aE4f6qwsXT5hACySkxJQo"
+          },
+          {
+            "name": "OTXBOYZ",
+            "id": "3OmnE5KylEPVQOIlfnTHcc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1b6EQMrjfbXn1EOGJV1IED"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 144387,
+        "name": "Nun Major (feat. OTXBOYZ) [Disco Lines & TOBEHONEST REMIX]",
+        "disc_number": 1,
+        "id": "1b6EQMrjfbXn1EOGJV1IED"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shoreline Mafia",
+            "id": "4tYSBptyGeVyZsk8JC4JHZ"
+          },
+          {
+            "name": "Disco Lines",
+            "id": "5Kmr0b3ip8g9P2i0dLTC3Z"
+          },
+          {
+            "name": "OHGEESY",
+            "id": "3ppQEG71r7jVpI8RudzycF"
+          },
+          {
+            "name": "Fenix Flexin",
+            "id": "63GIj2yhFvX1Bzphb9JgVb"
+          },
+          {
+            "name": "OTXBOYZ",
+            "id": "3OmnE5KylEPVQOIlfnTHcc"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xn44VcgS5vLxgbXJqVtRT"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 195038,
+        "name": "Musty (feat. OTXBOYZ) [Disco Lines REMIX]",
+        "disc_number": 1,
+        "id": "3xn44VcgS5vLxgbXJqVtRT"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 4,
+    "albumId": "4Fx0xGlG4kmNBjzPVx7xGY"
+  }
+}

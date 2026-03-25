@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0rPZ302N1AwjJGO6llGHnK_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:42.731Z",
+  "lastRefreshedAt": "2026-03-25T22:19:42.731Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Floyd Nova",
+            "id": "4aPhtYq4FqnbM02GHtZHhz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/391l8re8aew1rvyNOXUYDD"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 172500,
+        "name": "Nostalgia",
+        "disc_number": 1,
+        "id": "391l8re8aew1rvyNOXUYDD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0rPZ302N1AwjJGO6llGHnK"
+  }
+}

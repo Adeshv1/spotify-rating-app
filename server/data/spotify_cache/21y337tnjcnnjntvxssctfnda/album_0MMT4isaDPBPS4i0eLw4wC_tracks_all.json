@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0MMT4isaDPBPS4i0eLw4wC_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:35.665Z",
+  "lastRefreshedAt": "2026-03-25T22:19:35.665Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lara Di Umbra",
+            "id": "26Js1EtYSgTosRfHYbEpZG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57lP0TxQtO4lsBqSEbDOgw"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 143718,
+        "name": "Les rêveries élusives",
+        "disc_number": 1,
+        "id": "57lP0TxQtO4lsBqSEbDOgw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0MMT4isaDPBPS4i0eLw4wC"
+  }
+}

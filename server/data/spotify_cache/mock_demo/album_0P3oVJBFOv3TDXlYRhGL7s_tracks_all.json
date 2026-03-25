@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0P3oVJBFOv3TDXlYRhGL7s_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.423Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.423Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/03j354P848KtNU2FVSwkDG"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 223373,
+        "name": "Real Life",
+        "disc_number": 1,
+        "id": "03j354P848KtNU2FVSwkDG"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Labrinth",
+            "id": "2feDdbD5araYcm6JhFHHw7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1bAvtmTl0F9loyz9AwPwp7"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 281146,
+        "name": "Losers",
+        "disc_number": 1,
+        "id": "1bAvtmTl0F9loyz9AwPwp7"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1mhVXWduD8ReDwusfaHNwU"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 334333,
+        "name": "Tell Your Friends",
+        "disc_number": 1,
+        "id": "1mhVXWduD8ReDwusfaHNwU"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4PhsKqMdgMEUSstTDAmMpg"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 249040,
+        "name": "Often",
+        "disc_number": 1,
+        "id": "4PhsKqMdgMEUSstTDAmMpg"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7fBv7CLKzipRk6EC6TWHOB"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 242253,
+        "name": "The Hills",
+        "disc_number": 1,
+        "id": "7fBv7CLKzipRk6EC6TWHOB"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7uJH0YdSZL6psjxI6Xy08b"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 348853,
+        "name": "Acquainted",
+        "disc_number": 1,
+        "id": "7uJH0YdSZL6psjxI6Xy08b"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22VdIZQfgXJea34mQxlt81"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 213520,
+        "name": "Can't Feel My Face",
+        "disc_number": 1,
+        "id": "22VdIZQfgXJea34mQxlt81"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6C6fHTuFUxVtJpBOOaMvJr"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 253506,
+        "name": "Shameless",
+        "disc_number": 1,
+        "id": "6C6fHTuFUxVtJpBOOaMvJr"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4frLb7nWtsz2ymBE6k2GRP"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 277680,
+        "name": "Earned It (Fifty Shades Of Grey)",
+        "disc_number": 1,
+        "id": "4frLb7nWtsz2ymBE6k2GRP"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/25KybV9BOUlvcnv7nN3Pyo"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 235653,
+        "name": "In The Night",
+        "disc_number": 1,
+        "id": "25KybV9BOUlvcnv7nN3Pyo"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3H3qBumaYj67PT3aMEBvAP"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 340493,
+        "name": "As You Are",
+        "disc_number": 1,
+        "id": "3H3qBumaYj67PT3aMEBvAP"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Ed Sheeran",
+            "id": "6eUKZXaKkcviH0Ku9w2n3V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6J7PIkhtHwmFjPLq0SyuPj"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 260640,
+        "name": "Dark Times",
+        "disc_number": 1,
+        "id": "6J7PIkhtHwmFjPLq0SyuPj"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Lana Del Rey",
+            "id": "00FQb4jTyendYWaN8pK0wa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1gZADNt16Oh23jWyMYRk4p"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 274960,
+        "name": "Prisoner",
+        "disc_number": 1,
+        "id": "1gZADNt16Oh23jWyMYRk4p"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wzPHTgOtFIDhk2rD3Au4x"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 377346,
+        "name": "Angel",
+        "disc_number": 1,
+        "id": "0wzPHTgOtFIDhk2rD3Au4x"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "0P3oVJBFOv3TDXlYRhGL7s"
+  }
+}

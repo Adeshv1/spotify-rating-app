@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4vhZKLj3AB4e64DF1r6hTG_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:24.974Z",
+  "lastRefreshedAt": "2026-03-25T22:19:24.974Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "A$AP Ferg",
+            "id": "5dHt1vcEm9qb8fCyLcB3HL"
+          },
+          {
+            "name": "TiaCorine",
+            "id": "39i5B6umzWzkfMe12JrMwW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72RUTtIzJOPusBgxBaF4iW"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 176867,
+        "name": "THE SCYTHE [Feat. TiaCorine & A$AP Ferg]",
+        "disc_number": 1,
+        "id": "72RUTtIzJOPusBgxBaF4iW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          },
+          {
+            "name": "LAZER DIM 700",
+            "id": "3CE6MgsLpKMDfYFtexgc8U"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6fgIqLAI6RYf5S0JjZgxKe"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 207079,
+        "name": "LIT EFFECT [Feat. Bktherula & LAZER DIM 700]",
+        "disc_number": 1,
+        "id": "6fgIqLAI6RYf5S0JjZgxKe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "Juicy J",
+            "id": "5gCRApTajqwbnHHPbr2Fpi"
+          },
+          {
+            "name": "Key Nyata",
+            "id": "4X2V63Czlm32j6Yk38WeX5"
+          },
+          {
+            "name": "A$AP Ferg",
+            "id": "5dHt1vcEm9qb8fCyLcB3HL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4vqIcTctLixrnffboAMpJn"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 250105,
+        "name": "PHONY [Feat. Juicy J, Key Nyata & A$AP Ferg]",
+        "disc_number": 1,
+        "id": "4vqIcTctLixrnffboAMpJn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "1900Rugrat",
+            "id": "6HHAJjAD9nZ2GftcwEf8r5"
+          },
+          {
+            "name": "Key Nyata",
+            "id": "4X2V63Czlm32j6Yk38WeX5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Gcjb2eQswhu82cipZa34v"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 237421,
+        "name": "MUTT THAT BIH [Feat. 1900Rugrat & Key Nyata]",
+        "disc_number": 1,
+        "id": "5Gcjb2eQswhu82cipZa34v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "Smino",
+            "id": "1ybINI1qPiFbwDXamRtwxD"
+          },
+          {
+            "name": "TiaCorine",
+            "id": "39i5B6umzWzkfMe12JrMwW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5WLtSGSx0sQbmpLHrQ19Ic"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 225615,
+        "name": "HOOPTY [Feat. TiaCorine & Smino]",
+        "disc_number": 1,
+        "id": "5WLtSGSx0sQbmpLHrQ19Ic"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "454",
+            "id": "29fUSOyH1ufr9HZbErHpc4"
+          },
+          {
+            "name": "Luh Tyler",
+            "id": "1K15GRZZATsCJyGJ4bYiEz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5PmHRo2DypyydSaufOQW7d"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 227009,
+        "name": "YOU AINT GOTTA LIE [Feat. 454 & Luh Tyler]",
+        "disc_number": 1,
+        "id": "5PmHRo2DypyydSaufOQW7d"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          },
+          {
+            "name": "TiaCorine",
+            "id": "39i5B6umzWzkfMe12JrMwW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0i8BSCd7iN5Ck6jtUl04Tf"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 210762,
+        "name": "TAN [Feat. Bktherula & TiaCorine]",
+        "disc_number": 1,
+        "id": "0i8BSCd7iN5Ck6jtUl04Tf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Denzel Curry",
+            "id": "6fxyWrfmjcbj5d12gXeiNV"
+          },
+          {
+            "name": "A$AP Ferg",
+            "id": "5dHt1vcEm9qb8fCyLcB3HL"
+          },
+          {
+            "name": "SadBoi",
+            "id": "7kpAW7boBJFRFCMydZpjUd"
+          },
+          {
+            "name": "Rich The Kid",
+            "id": "1pPmIToKXyGdsCF6LmqLmI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nTawhKNAyDAtEkhPsNYY7"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 246903,
+        "name": "UP [Feat. Rich The Kid, A$AP Ferg & SadBoi]",
+        "disc_number": 1,
+        "id": "1nTawhKNAyDAtEkhPsNYY7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 8,
+    "albumId": "4vhZKLj3AB4e64DF1r6hTG"
+  }
+}

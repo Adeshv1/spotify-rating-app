@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0xzScN8P3hQAz3BT3YYX5w_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.561Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.561Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          },
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6v3KW9xbzN5yKLt9YKDYA2"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 190799,
+        "name": "Señorita",
+        "disc_number": 1,
+        "id": "6v3KW9xbzN5yKLt9YKDYA2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TFpGNlWslRQO4oyTtJq6K"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 200840,
+        "name": "Lost In Japan",
+        "disc_number": 1,
+        "id": "0TFpGNlWslRQO4oyTtJq6K"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bT1PH7Cw3J9p3t7nlXCdh"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 191466,
+        "name": "If I Can't Have You",
+        "disc_number": 1,
+        "id": "2bT1PH7Cw3J9p3t7nlXCdh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SFnIqRWyHt9MUNeXkykii"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 211293,
+        "name": "In My Blood",
+        "disc_number": 1,
+        "id": "2SFnIqRWyHt9MUNeXkykii"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49u62ZMTXz91U8V4uXaJ4q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 235760,
+        "name": "Fallin' All In You",
+        "disc_number": 1,
+        "id": "49u62ZMTXz91U8V4uXaJ4q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2UCYrYM83sowbj1OG6qsVn"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 200586,
+        "name": "Where Were You In The Morning?",
+        "disc_number": 1,
+        "id": "2UCYrYM83sowbj1OG6qsVn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3J3AQ7NSo0p3RX8U2gnC4v"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 164213,
+        "name": "Nervous",
+        "disc_number": 1,
+        "id": "3J3AQ7NSo0p3RX8U2gnC4v"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          },
+          {
+            "name": "Julia Michaels",
+            "id": "0ZED1XzwlLHW4ZaG4lOT6m"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5VQBZPF4L2VrR7aMfAdRq3"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 159533,
+        "name": "Like To Be You (feat. Julia Michaels)",
+        "disc_number": 1,
+        "id": "5VQBZPF4L2VrR7aMfAdRq3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3isPczLtjVuERmr5hpSvIl"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 175573,
+        "name": "Particular Taste",
+        "disc_number": 1,
+        "id": "3isPczLtjVuERmr5hpSvIl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1RL042HeY9ln1Bwu2ODyJJ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 142533,
+        "name": "Because I Had You",
+        "disc_number": 1,
+        "id": "1RL042HeY9ln1Bwu2ODyJJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6oZk0lzaP7RcwKjyZrIJBV"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 238093,
+        "name": "Why",
+        "disc_number": 1,
+        "id": "6oZk0lzaP7RcwKjyZrIJBV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          },
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5cWIKVqSpJQiRmG59sfii5"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 190826,
+        "name": "Youth (feat. Khalid)",
+        "disc_number": 1,
+        "id": "5cWIKVqSpJQiRmG59sfii5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UWbBNuBIB9wYg82aaWRvN"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 212773,
+        "name": "Perfectly Wrong",
+        "disc_number": 1,
+        "id": "1UWbBNuBIB9wYg82aaWRvN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2d3zTjEWyOzKDPOLjDSRlR"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 148173,
+        "name": "Mutual",
+        "disc_number": 1,
+        "id": "2d3zTjEWyOzKDPOLjDSRlR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eKH2typXktOBTgWrOHnni"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 204053,
+        "name": "Queen",
+        "disc_number": 1,
+        "id": "2eKH2typXktOBTgWrOHnni"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2s6BVlw41U03QdFaMeT5FQ"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 169596,
+        "name": "When You're Ready",
+        "disc_number": 1,
+        "id": "2s6BVlw41U03QdFaMeT5FQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "0xzScN8P3hQAz3BT3YYX5w"
+  }
+}

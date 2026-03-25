@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0wfne2JijoxJm0qzJd3V5h_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.237Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.237Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ShkBYAHvhsVPugmuYCmkd"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 314546,
+        "name": "Organization & Classification",
+        "disc_number": 1,
+        "id": "5ShkBYAHvhsVPugmuYCmkd"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6SMRI3wX3OLLJk70vmSmE4"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 151360,
+        "name": "Natives of the Windy Forest",
+        "disc_number": 1,
+        "id": "6SMRI3wX3OLLJk70vmSmE4"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7dQf8jWXfT2WlwyKDeV0lF"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 188106,
+        "name": "dRuGz",
+        "disc_number": 1,
+        "id": "7dQf8jWXfT2WlwyKDeV0lF"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gxrNepquIl6iZZa37eeBg"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 219946,
+        "name": "Cycles",
+        "disc_number": 1,
+        "id": "6gxrNepquIl6iZZa37eeBg"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dvLOW7bjAwF0qFqowACFD"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 260306,
+        "name": "F Q-­C #8",
+        "disc_number": 1,
+        "id": "1dvLOW7bjAwF0qFqowACFD"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          },
+          {
+            "name": "Jabs",
+            "id": "2fvjhbcMip4jMPt8W9EZbi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JYh5zmUdO79lyzo8E06LK"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 193426,
+        "name": "Not So Different",
+        "disc_number": 1,
+        "id": "0JYh5zmUdO79lyzo8E06LK"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/18hhT0y7TdUQHuiB1lISiJ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 258920,
+        "name": "IDK",
+        "disc_number": 1,
+        "id": "18hhT0y7TdUQHuiB1lISiJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5eiBiwQKVhZXP58fbCohue"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 255760,
+        "name": "RANDOMSONG",
+        "disc_number": 1,
+        "id": "5eiBiwQKVhZXP58fbCohue"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0RCpze7hmowZIGUJs9Dm7w"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 136760,
+        "name": "Marceline",
+        "disc_number": 1,
+        "id": "0RCpze7hmowZIGUJs9Dm7w"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/21P2a9sTPM73vl7FPSK64r"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 181466,
+        "name": "Marceline PT. 2",
+        "disc_number": 1,
+        "id": "21P2a9sTPM73vl7FPSK64r"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0joZZOJ18HViEbVdxqNXsk"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 221506,
+        "name": "UR Town",
+        "disc_number": 1,
+        "id": "0joZZOJ18HViEbVdxqNXsk"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          },
+          {
+            "name": "Jabs",
+            "id": "2fvjhbcMip4jMPt8W9EZbi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QxdbPRokY6Gu5LPHofOUw"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 216893,
+        "name": "Star",
+        "disc_number": 1,
+        "id": "1QxdbPRokY6Gu5LPHofOUw"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0y60itmpH0aPKsFiGxmtnh"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 196520,
+        "name": "Wait a Minute!",
+        "disc_number": 1,
+        "id": "0y60itmpH0aPKsFiGxmtnh"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1zJMFf0EzbGCpL0zROfmVF"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 231813,
+        "name": "Waves of Nature",
+        "disc_number": 1,
+        "id": "1zJMFf0EzbGCpL0zROfmVF"
+      },
+      {
+        "artists": [
+          {
+            "name": "WILLOW",
+            "id": "3rWZHrfrsPBxVy692yAIxF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4WOkayOYe5EoOuNUpFQoEG"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 228920,
+        "name": "Why Don't You Cry",
+        "disc_number": 1,
+        "id": "4WOkayOYe5EoOuNUpFQoEG"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "0wfne2JijoxJm0qzJd3V5h"
+  }
+}

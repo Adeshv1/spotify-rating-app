@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1KnEqKgjw9ryJcHvIgKHL0_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:48.511Z",
+  "lastRefreshedAt": "2026-03-25T22:19:48.511Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Davignon",
+            "id": "6X9fOKgbMi7PCa7ZuB7ktE"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2oafUifmaR1uBS3o9o7uLO"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 141451,
+        "name": "Quiet Eyes",
+        "disc_number": 1,
+        "id": "2oafUifmaR1uBS3o9o7uLO"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1KnEqKgjw9ryJcHvIgKHL0"
+  }
+}

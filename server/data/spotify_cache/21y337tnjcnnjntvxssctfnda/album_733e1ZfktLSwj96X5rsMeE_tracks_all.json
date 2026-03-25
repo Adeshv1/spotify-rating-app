@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_733e1ZfktLSwj96X5rsMeE_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.192Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.192Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/65kp3OFn7JXbCvkm3m2Ui2"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 185276,
+        "name": "Two®",
+        "disc_number": 1,
+        "id": "65kp3OFn7JXbCvkm3m2Ui2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QgTBfRN5m81a5K01qens6"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 247347,
+        "name": "444+222",
+        "disc_number": 1,
+        "id": "1QgTBfRN5m81a5K01qens6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1uL78kFWxhz3umTMWJu8n5"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 207038,
+        "name": "Sauce It Up",
+        "disc_number": 1,
+        "id": "1uL78kFWxhz3umTMWJu8n5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0QV16pno66L6K3fn4W13b7"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 189229,
+        "name": "No Sleep Leak",
+        "disc_number": 1,
+        "id": "0QV16pno66L6K3fn4W13b7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          },
+          {
+            "name": "Oh Wonder",
+            "id": "5cIc3SBFuBLVxJz58W2tU9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eAZfqOm4EnOF9VvN50Tyc"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 221746,
+        "name": "The Way Life Goes (feat. Oh Wonder)",
+        "disc_number": 1,
+        "id": "2eAZfqOm4EnOF9VvN50Tyc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3tcoEYOZUHKB3RKNByIN13"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 177048,
+        "name": "For Real",
+        "disc_number": 1,
+        "id": "3tcoEYOZUHKB3RKNByIN13"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Y3Tj0wJhKAaPbwWxXxZGS"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 233645,
+        "name": "Feelings Mutual",
+        "disc_number": 1,
+        "id": "5Y3Tj0wJhKAaPbwWxXxZGS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          },
+          {
+            "name": "Pharrell Williams",
+            "id": "2RdwBSPQiwcmiDo9kixcl8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MJErNPIQUoEMu4YUUmecm"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 258789,
+        "name": "Neon Guts (feat. Pharrell Williams)",
+        "disc_number": 1,
+        "id": "1MJErNPIQUoEMu4YUUmecm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2O1qYJTA2BI5ypFFqEZhh4"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 274880,
+        "name": "Early 20 Rager",
+        "disc_number": 1,
+        "id": "2O1qYJTA2BI5ypFFqEZhh4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          },
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5O8x1YlmLQopQHErxtDfi9"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 190355,
+        "name": "UnFazed (feat. The Weeknd)",
+        "disc_number": 1,
+        "id": "5O8x1YlmLQopQHErxtDfi9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/14nAQy3fHVzDb7LKxpS7Ld"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 264124,
+        "name": "Pretty Mami",
+        "disc_number": 1,
+        "id": "14nAQy3fHVzDb7LKxpS7Ld"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ro5QCkSCtbfhMHnvMase3"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 201544,
+        "name": "How to Talk",
+        "disc_number": 1,
+        "id": "0ro5QCkSCtbfhMHnvMase3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5tRmoZRoupvMYPV1oezFrH"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 173797,
+        "name": "X",
+        "disc_number": 1,
+        "id": "5tRmoZRoupvMYPV1oezFrH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57nQyFocXZrKvWg5ZPYSoG"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 199211,
+        "name": "Malfunction",
+        "disc_number": 1,
+        "id": "57nQyFocXZrKvWg5ZPYSoG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZdCrBA52bb4pIG3tOOZiQ"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 173419,
+        "name": "Dark Queen",
+        "disc_number": 1,
+        "id": "2ZdCrBA52bb4pIG3tOOZiQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GX5flRQZVHRAGd6B4TmDO"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 182706,
+        "name": "XO Tour Llif3",
+        "disc_number": 1,
+        "id": "7GX5flRQZVHRAGd6B4TmDO"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "733e1ZfktLSwj96X5rsMeE"
+  }
+}

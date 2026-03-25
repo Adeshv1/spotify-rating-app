@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4JPguzRps3kuWDD5GS6oXr_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.478Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.478Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wfbD5rAksdXUzRvMfM3x5"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 177573,
+        "name": "The One",
+        "disc_number": 1,
+        "id": "0wfbD5rAksdXUzRvMfM3x5"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6cPyTS0Kk2sc4xQwC93kOg"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 207520,
+        "name": "Break Up Every Night",
+        "disc_number": 1,
+        "id": "6cPyTS0Kk2sc4xQwC93kOg"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/26AuyrZGzWWiYZPSd3XBIg"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 224280,
+        "name": "Bloodstream",
+        "disc_number": 1,
+        "id": "26AuyrZGzWWiYZPSd3XBIg"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Emily Warren",
+            "id": "1oKdM70mJD8VvDOTKeS8t1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1pJQAHpD51J7GYaFrrFO9S"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 228480,
+        "name": "Don't Say",
+        "disc_number": 1,
+        "id": "1pJQAHpD51J7GYaFrrFO9S"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RUKPb4LETWmmr3iAEQktW"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 247160,
+        "name": "Something Just Like This",
+        "disc_number": 1,
+        "id": "6RUKPb4LETWmmr3iAEQktW"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Emily Warren",
+            "id": "1oKdM70mJD8VvDOTKeS8t1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6V9kwssTrwkKT72imgowj9"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 217413,
+        "name": "My Type",
+        "disc_number": 1,
+        "id": "6V9kwssTrwkKT72imgowj9"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Louane",
+            "id": "7wjeXCtRND2ZdKfMJFu6JC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xhJmd0I15jFcEdqxfCzKk"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 217613,
+        "name": "It Won't Kill Ya",
+        "disc_number": 1,
+        "id": "5xhJmd0I15jFcEdqxfCzKk"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72jbDTw1piOOj770jWNeaG"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 221506,
+        "name": "Paris",
+        "disc_number": 1,
+        "id": "72jbDTw1piOOj770jWNeaG"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KjbNLbRjuoa8rEq5yNA6H"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 208000,
+        "name": "Honest",
+        "disc_number": 1,
+        "id": "6KjbNLbRjuoa8rEq5yNA6H"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Jhené Aiko",
+            "id": "5ZS223C6JyBfXasXxrRqOk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dj1CtyRxZ4bnIT4Q20jNT"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 215720,
+        "name": "Wake Up Alone",
+        "disc_number": 1,
+        "id": "0dj1CtyRxZ4bnIT4Q20jNT"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KeZgPUr54C8iz3FjqzVoz"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 224773,
+        "name": "Young",
+        "disc_number": 1,
+        "id": "1KeZgPUr54C8iz3FjqzVoz"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Florida Georgia Line",
+            "id": "3b8QkneNDz4JHKKKlLgYZg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GeD5g9vZTz25Egf8kxoIY"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 214306,
+        "name": "Last Day Alive",
+        "disc_number": 1,
+        "id": "6GeD5g9vZTz25Egf8kxoIY"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "4JPguzRps3kuWDD5GS6oXr"
+  }
+}

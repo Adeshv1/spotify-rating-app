@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1YQtaGamRAouYAW7rSu2us_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:23.053Z",
+  "lastRefreshedAt": "2026-03-25T22:19:23.053Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Joyner Lucas",
+            "id": "6C1ohJrd5VydigQtaGy5Wa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1HFzBE8VY5zyNowBre0zRo"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 168181,
+        "name": "GTA 6",
+        "disc_number": 1,
+        "id": "1HFzBE8VY5zyNowBre0zRo"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1YQtaGamRAouYAW7rSu2us"
+  }
+}

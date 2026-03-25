@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_52ukyDfkPmF4X6EcSYVfVJ_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:11.111Z",
+  "lastRefreshedAt": "2026-03-25T22:20:11.111Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Ry1k3dG0gXTnJ7MRBgZ4n"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 215346,
+        "name": "Things That Stop You Dreaming",
+        "disc_number": 1,
+        "id": "4Ry1k3dG0gXTnJ7MRBgZ4n"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KxwZYyzWNyZSRyErj2ojT"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 252733,
+        "name": "Let Her Go",
+        "disc_number": 1,
+        "id": "1KxwZYyzWNyZSRyErj2ojT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0VcdgrMOVRozDwCsBw86Cb"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 204426,
+        "name": "Staring At The Stars",
+        "disc_number": 1,
+        "id": "0VcdgrMOVRozDwCsBw86Cb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WLvHbIiY91oEzXxUBWPnW"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 235840,
+        "name": "All The Little Lights",
+        "disc_number": 1,
+        "id": "1WLvHbIiY91oEzXxUBWPnW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ir7ESj8NjGTyoM4d3UEc1"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 221240,
+        "name": "The Wrong Direction",
+        "disc_number": 1,
+        "id": "2ir7ESj8NjGTyoM4d3UEc1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2L9ggyI3VteYO9bdKgHTic"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 192146,
+        "name": "Circles",
+        "disc_number": 1,
+        "id": "2L9ggyI3VteYO9bdKgHTic"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5dEtpoKbCeMRFCIhikxJ29"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 248000,
+        "name": "Keep On Walking",
+        "disc_number": 1,
+        "id": "5dEtpoKbCeMRFCIhikxJ29"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QYUJZKfFLtdNS14aUAqVb"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 190600,
+        "name": "Patient Love",
+        "disc_number": 1,
+        "id": "3QYUJZKfFLtdNS14aUAqVb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Yt8Hc2vDDGVJgWoo01YZN"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 273560,
+        "name": "Life's For The Living",
+        "disc_number": 1,
+        "id": "2Yt8Hc2vDDGVJgWoo01YZN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6i1D00RfMyWljXRXz0QGzh"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 213173,
+        "name": "Holes",
+        "disc_number": 1,
+        "id": "6i1D00RfMyWljXRXz0QGzh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0P8HzErZaE6LfXyF2uL8ht"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 242986,
+        "name": "Feather On The Clyde",
+        "disc_number": 1,
+        "id": "0P8HzErZaE6LfXyF2uL8ht"
+      },
+      {
+        "artists": [
+          {
+            "name": "Passenger",
+            "id": "0gadJ2b9A4SKsB1RFkBb66"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/56z6a7NoLresbMn9KwKa0X"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 213093,
+        "name": "I Hate - Live from The Borderline, London",
+        "disc_number": 1,
+        "id": "56z6a7NoLresbMn9KwKa0X"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "52ukyDfkPmF4X6EcSYVfVJ"
+  }
+}

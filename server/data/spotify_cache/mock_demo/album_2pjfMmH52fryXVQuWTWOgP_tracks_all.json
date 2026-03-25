@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2pjfMmH52fryXVQuWTWOgP_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:00.902Z",
+  "lastRefreshedAt": "2026-03-25T22:20:00.902Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XNrMwGx1SqP01sqkGTDmo"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 219466,
+        "name": "One More Night",
+        "disc_number": 1,
+        "id": "4XNrMwGx1SqP01sqkGTDmo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          },
+          {
+            "name": "Wiz Khalifa",
+            "id": "137W8MRPWKqSmrBGDBFSop"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4P0osvTXoSYZZC2n8IFH3c"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 231386,
+        "name": "Payphone",
+        "disc_number": 1,
+        "id": "4P0osvTXoSYZZC2n8IFH3c"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3cvNxYnBgh6ystYLC6NQTT"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 225400,
+        "name": "Daylight",
+        "disc_number": 1,
+        "id": "3cvNxYnBgh6ystYLC6NQTT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5b2aMqcSeAMlDptX6EjE7m"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 185280,
+        "name": "Lucky Strike",
+        "disc_number": 1,
+        "id": "5b2aMqcSeAMlDptX6EjE7m"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ElhEl1tkaDZBglzN5XKZg"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 205200,
+        "name": "The Man Who Never Lied",
+        "disc_number": 1,
+        "id": "5ElhEl1tkaDZBglzN5XKZg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/12tUCBq7V9qCF8qGOLpcnu"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 229826,
+        "name": "Love Somebody",
+        "disc_number": 1,
+        "id": "12tUCBq7V9qCF8qGOLpcnu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yg6n1GI3n6oiC1D1vdncA"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 163973,
+        "name": "Ladykiller",
+        "disc_number": 1,
+        "id": "0yg6n1GI3n6oiC1D1vdncA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lx0wqoIBxSJgd033dJxvj"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 203453,
+        "name": "Fortune Teller",
+        "disc_number": 1,
+        "id": "6lx0wqoIBxSJgd033dJxvj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2EUxbBRKE07EOWW8mBkg5q"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 194253,
+        "name": "Sad",
+        "disc_number": 1,
+        "id": "2EUxbBRKE07EOWW8mBkg5q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/24QIrV8FsMKIPCjwmDkEyw"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 209013,
+        "name": "Tickets",
+        "disc_number": 1,
+        "id": "24QIrV8FsMKIPCjwmDkEyw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7B0un3gd0aBlXbbItaoYxI"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 211426,
+        "name": "Doin’ Dirt",
+        "disc_number": 1,
+        "id": "7B0un3gd0aBlXbbItaoYxI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62FOsBpnZXEoPc1Qo9hcap"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 255266,
+        "name": "Beautiful Goodbye",
+        "disc_number": 1,
+        "id": "62FOsBpnZXEoPc1Qo9hcap"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1c2MXiju7DNPSfsKoVbHlg"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 214853,
+        "name": "Wipe Your Eyes",
+        "disc_number": 1,
+        "id": "1c2MXiju7DNPSfsKoVbHlg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5mICU0mlpIYeah7MRjHmHP"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 212666,
+        "name": "Wasted Years",
+        "disc_number": 1,
+        "id": "5mICU0mlpIYeah7MRjHmHP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Maroon 5",
+            "id": "04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ToTl9sLEljoOkHjJlLzHq"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 203933,
+        "name": "Let’s Stay Together",
+        "disc_number": 1,
+        "id": "0ToTl9sLEljoOkHjJlLzHq"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "2pjfMmH52fryXVQuWTWOgP"
+  }
+}

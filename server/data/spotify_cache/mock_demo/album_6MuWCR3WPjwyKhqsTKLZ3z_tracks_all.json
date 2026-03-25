@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6MuWCR3WPjwyKhqsTKLZ3z_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:02.268Z",
+  "lastRefreshedAt": "2026-03-25T22:20:02.268Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JrodaFVB3keEja7U1PabP"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 241666,
+        "name": "Tied Down",
+        "disc_number": 1,
+        "id": "0JrodaFVB3keEja7U1PabP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7LJzs1Kr8kW3d6cFTCueNV"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 204346,
+        "name": "Stoned on You",
+        "disc_number": 1,
+        "id": "7LJzs1Kr8kW3d6cFTCueNV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4f38RwYxPBNhdvng6rAqEA"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 248173,
+        "name": "Don't You Know",
+        "disc_number": 1,
+        "id": "4f38RwYxPBNhdvng6rAqEA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ezFtClxTMcS2AotqjTZX5"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 216573,
+        "name": "Stone",
+        "disc_number": 1,
+        "id": "1ezFtClxTMcS2AotqjTZX5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3eXXcGXGrTbGAZ7V5pU6i8"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 211600,
+        "name": "Sugar Burn",
+        "disc_number": 1,
+        "id": "3eXXcGXGrTbGAZ7V5pU6i8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0vMI3AJPQMjytAu8XMWr65"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 217400,
+        "name": "Feel Something",
+        "disc_number": 1,
+        "id": "0vMI3AJPQMjytAu8XMWr65"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7drLhxwt6idqexeSk4Zuf4"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 222786,
+        "name": "Black Magic",
+        "disc_number": 1,
+        "id": "7drLhxwt6idqexeSk4Zuf4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          },
+          {
+            "name": "Phoebe Ryan",
+            "id": "4N874uPqBka1QiCvnCVOtr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Zge2Kfo3Yd9JOGnAmVPbb"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 240586,
+        "name": "We Won't",
+        "disc_number": 1,
+        "id": "0Zge2Kfo3Yd9JOGnAmVPbb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7no6YBosw5P2itTFuxYJIu"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 228160,
+        "name": "Naked",
+        "disc_number": 1,
+        "id": "7no6YBosw5P2itTFuxYJIu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3guZzFjyEutpq8Y58RTI3z"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 232200,
+        "name": "Two People",
+        "disc_number": 1,
+        "id": "3guZzFjyEutpq8Y58RTI3z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4JuJZzGcswQszYiKJSnC6i"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 247346,
+        "name": "I'll Be Good",
+        "disc_number": 1,
+        "id": "4JuJZzGcswQszYiKJSnC6i"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jaymes Young",
+            "id": "6QrQ7OrISRYIfS5mtacaw2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1SOClUWhOi8vHZYMz3GluK"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 237720,
+        "name": "Infinity",
+        "disc_number": 1,
+        "id": "1SOClUWhOi8vHZYMz3GluK"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "6MuWCR3WPjwyKhqsTKLZ3z"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5tkPTjFGKUGziNsROnBfya_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:44.384Z",
+  "lastRefreshedAt": "2026-03-25T22:19:44.384Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Domi Nova",
+            "id": "1Ld0guzIxggCOIbkE319nz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6xld6bFu5ST7nickcSK1lP"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 168250,
+        "name": "Wish",
+        "disc_number": 1,
+        "id": "6xld6bFu5ST7nickcSK1lP"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5tkPTjFGKUGziNsROnBfya"
+  }
+}

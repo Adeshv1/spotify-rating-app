@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5UVS5hHLLxQgH22bXKrFUi_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.276Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.276Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aurelio Li",
+            "id": "4TO9hcCQfJDVBofrM5ra12"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2hegfLKqobbWtYPg0Z31vm"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 148269,
+        "name": "Eternal Moon",
+        "disc_number": 1,
+        "id": "2hegfLKqobbWtYPg0Z31vm"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5UVS5hHLLxQgH22bXKrFUi"
+  }
+}

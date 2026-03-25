@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3JoiYj7Wu5cM6X6rHJAVdg_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.283Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.283Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Db6u3YPKXGL1thirSloux"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 228573,
+        "name": "STICKS AND STONES (INTRO)",
+        "disc_number": 1,
+        "id": "0Db6u3YPKXGL1thirSloux"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0QgwjxR1VchizzckKXwyBu"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 138346,
+        "name": "POP DAT THANG",
+        "disc_number": 1,
+        "id": "0QgwjxR1VchizzckKXwyBu"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1SYloVfczCJTFNa3gVnTbN"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 127066,
+        "name": "WHAT ABOUT ME",
+        "disc_number": 1,
+        "id": "1SYloVfczCJTFNa3gVnTbN"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4H5Ht7M9iKf489VsrB9tHF"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 123880,
+        "name": "POOTIE TANG",
+        "disc_number": 1,
+        "id": "4H5Ht7M9iKf489VsrB9tHF"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2PB2qWeMiyDPHXIz8AwzSs"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 120000,
+        "name": "DON JULIO LEMONADE",
+        "disc_number": 1,
+        "id": "2PB2qWeMiyDPHXIz8AwzSs"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dvwE4w0nIlPiOhRhtNHvw"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 216453,
+        "name": "MARINATING",
+        "disc_number": 1,
+        "id": "0dvwE4w0nIlPiOhRhtNHvw"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3MWwqW2tinlIuHENi0qrIL"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 162920,
+        "name": "PAPER LOW",
+        "disc_number": 1,
+        "id": "3MWwqW2tinlIuHENi0qrIL"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xVdlf3bnu2M7OmkUaNY5z"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 130386,
+        "name": "OUT YA BUSINESS",
+        "disc_number": 1,
+        "id": "2xVdlf3bnu2M7OmkUaNY5z"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          },
+          {
+            "name": "Hunxho",
+            "id": "508weSx4HBumrGggFmc7br"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0KokPknHXM5rA6SlSzUaAx"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 164571,
+        "name": "MAKE YOU MINE (Ft. Hunxho)",
+        "disc_number": 1,
+        "id": "0KokPknHXM5rA6SlSzUaAx"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2liRw8aYilNCIHxKgKb7EV"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 112506,
+        "name": "SHAKE THE SPOT",
+        "disc_number": 1,
+        "id": "2liRw8aYilNCIHxKgKb7EV"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49JrpaFwhuwglNv6YsET3s"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 129600,
+        "name": "#1 NIGGA",
+        "disc_number": 1,
+        "id": "49JrpaFwhuwglNv6YsET3s"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0TTYPERMRhcBNflN6MP6II"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 140000,
+        "name": "CLEAR THIS SHIT",
+        "disc_number": 1,
+        "id": "0TTYPERMRhcBNflN6MP6II"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6bnsC1aGqAA7KVSuw2Jnd3"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 139640,
+        "name": "RAIN RAIN",
+        "disc_number": 1,
+        "id": "6bnsC1aGqAA7KVSuw2Jnd3"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61f4l4V5JkFziMDjHDE07F"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 204706,
+        "name": "BENEFICIAL",
+        "disc_number": 1,
+        "id": "61f4l4V5JkFziMDjHDE07F"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2TrzNhKA1PFL4MQp4DSPeB"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 143133,
+        "name": "BABY DADDY MUSIC",
+        "disc_number": 1,
+        "id": "2TrzNhKA1PFL4MQp4DSPeB"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2GQ0gpHjtOtsqw8DAZZQUa"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 129139,
+        "name": "CRANK [SUMN]",
+        "disc_number": 1,
+        "id": "2GQ0gpHjtOtsqw8DAZZQUa"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RykxfcqXlWnnKTx2fl9qD"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 191053,
+        "name": "LETTER TO MY YN",
+        "disc_number": 1,
+        "id": "3RykxfcqXlWnnKTx2fl9qD"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3KdqDdXHykjhMQPqArhYQP"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 163746,
+        "name": "DONT INSULT ME (Ft. Twin)",
+        "disc_number": 1,
+        "id": "3KdqDdXHykjhMQPqArhYQP"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62X1SoC0iQsYLpQwv2xx9P"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 120000,
+        "name": "PBJT",
+        "disc_number": 1,
+        "id": "62X1SoC0iQsYLpQwv2xx9P"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          },
+          {
+            "name": "Coi Leray",
+            "id": "6AMd49uBDJfhf30Ak2QR5s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4oqDtRwOFu8Ejw4SB3Toql"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 143920,
+        "name": "BOOMERANG (with Coi Leray)",
+        "disc_number": 1,
+        "id": "4oqDtRwOFu8Ejw4SB3Toql"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UyspP7AUZnR0cjzl7unoa"
+        },
+        "track_number": 21,
+        "explicit": true,
+        "duration_ms": 107528,
+        "name": "BOOM",
+        "disc_number": 1,
+        "id": "1UyspP7AUZnR0cjzl7unoa"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/38njknjjfS67EqNdDvp2o3"
+        },
+        "track_number": 22,
+        "explicit": true,
+        "duration_ms": 178604,
+        "name": "MIC CHECK",
+        "disc_number": 1,
+        "id": "38njknjjfS67EqNdDvp2o3"
+      },
+      {
+        "artists": [
+          {
+            "name": "DaBaby",
+            "id": "4r63FhuTkUYltbVAg5TQnk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QON1ytaoxvXkzPEFWiDrH"
+        },
+        "track_number": 23,
+        "explicit": true,
+        "duration_ms": 184800,
+        "name": "KOBE IN 2009 (OUTRO)",
+        "disc_number": 1,
+        "id": "3QON1ytaoxvXkzPEFWiDrH"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 23,
+    "albumId": "3JoiYj7Wu5cM6X6rHJAVdg"
+  }
+}

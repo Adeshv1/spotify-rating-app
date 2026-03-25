@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2nkto6YNI4rUYTLqEwWJ3o_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.098Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.098Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Rex Orange County",
+            "id": "7pbDxGE6nQSZVfiFdq9lOL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/33i3xxHB4YSYGYbtJrwwO8"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 194080,
+        "name": "Foreword (feat. Rex Orange County)",
+        "disc_number": 1,
+        "id": "33i3xxHB4YSYGYbtJrwwO8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KuXb26rHuRy3ZDse1VRmx"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 194933,
+        "name": "Where This Flower Blooms (feat. Frank Ocean)",
+        "disc_number": 1,
+        "id": "6KuXb26rHuRy3ZDse1VRmx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4KgTrzmfiWNcVneh2Dd1Ou"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 36160,
+        "name": "Sometimes...",
+        "disc_number": 1,
+        "id": "4KgTrzmfiWNcVneh2Dd1Ou"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Kali Uchis",
+            "id": "1U1el3k54VvEUzo3ybLPlM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 180386,
+        "name": "See You Again (feat. Kali Uchis)",
+        "disc_number": 1,
+        "id": "7KA4W4McWYRpgf0fWsJZWB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/21yRtB6B8EMounImAfHRCP"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 205093,
+        "name": "Who Dat Boy (feat. A$AP Rocky)",
+        "disc_number": 1,
+        "id": "21yRtB6B8EMounImAfHRCP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Alexander Brettin",
+            "id": "0VMO6LSExFeqYrtcR8VAre"
+          },
+          {
+            "name": "Jaden",
+            "id": "0xOeVMOz2fVg5BJY3N6akT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5SxlUF7J8tyFIEF22EomeP"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 237000,
+        "name": "Pothole (feat. Jaden Smith)",
+        "disc_number": 1,
+        "id": "5SxlUF7J8tyFIEF22EomeP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Estelle",
+            "id": "5T0MSzX9RC5NA6gAI6irSn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ACiYjq5Q7e6BlhZEHz7cd"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 223946,
+        "name": "Garden Shed (feat. Estelle)",
+        "disc_number": 1,
+        "id": "6ACiYjq5Q7e6BlhZEHz7cd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Rex Orange County",
+            "id": "7pbDxGE6nQSZVfiFdq9lOL"
+          },
+          {
+            "name": "Anna of the North",
+            "id": "1mSJCvDX0W7Dn7S9C6vmvI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5WNYg3usc6H8N3MBEp4zVk"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 320720,
+        "name": "Boredom (feat. Rex Orange County & Anna of the North)",
+        "disc_number": 1,
+        "id": "5WNYg3usc6H8N3MBEp4zVk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/430qNtapCS3Ue1yoSql1oV"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 206266,
+        "name": "I Ain't Got Time!",
+        "disc_number": 1,
+        "id": "430qNtapCS3Ue1yoSql1oV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          },
+          {
+            "name": "Steve Lacy",
+            "id": "57vWImR43h4CaDao012Ofp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bEcoz1OcfMgUbp2ft8ieQ"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 255653,
+        "name": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+        "disc_number": 1,
+        "id": "4bEcoz1OcfMgUbp2ft8ieQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/39u2PsqrAZpZ0KPx6CjasV"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 60000,
+        "name": "Droppin' Seeds (feat. Lil' Wayne)",
+        "disc_number": 1,
+        "id": "39u2PsqrAZpZ0KPx6CjasV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XDpeWqPADoWRKcUY3dC84"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 225346,
+        "name": "November",
+        "disc_number": 1,
+        "id": "4XDpeWqPADoWRKcUY3dC84"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0qtK3XwbuG153dmwB8iepL"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 224893,
+        "name": "Glitter",
+        "disc_number": 1,
+        "id": "0qtK3XwbuG153dmwB8iepL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3R1Vu4Ws7UitwDxDHTol0P"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 235400,
+        "name": "Enjoy Right Now, Today",
+        "disc_number": 1,
+        "id": "3R1Vu4Ws7UitwDxDHTol0P"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "2nkto6YNI4rUYTLqEwWJ3o"
+  }
+}

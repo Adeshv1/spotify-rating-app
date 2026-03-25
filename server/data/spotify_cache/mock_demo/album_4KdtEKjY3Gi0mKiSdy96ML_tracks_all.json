@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4KdtEKjY3Gi0mKiSdy96ML_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.460Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.460Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7p2ewixAShLpjDZrnzZK7c"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 231453,
+        "name": "Get Up 10",
+        "disc_number": 1,
+        "id": "7p2ewixAShLpjDZrnzZK7c"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "Migos",
+            "id": "6oMuImdp5ZcFhWP0ESe6mG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qcG0nZ6S3zZV0UrkY5nFo"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 262308,
+        "name": "Drip (feat. Migos)",
+        "disc_number": 1,
+        "id": "2qcG0nZ6S3zZV0UrkY5nFo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/17Yq72h0p15OhCbZ5lJ5gd"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 181623,
+        "name": "Bickenhead",
+        "disc_number": 1,
+        "id": "17Yq72h0p15OhCbZ5lJ5gd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KBYefIoo7KydImq1uUQlL"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 223712,
+        "name": "Bodak Yellow",
+        "disc_number": 1,
+        "id": "6KBYefIoo7KydImq1uUQlL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Yl4OmDby9iitgNWZPwxkd"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 210787,
+        "name": "Be Careful",
+        "disc_number": 1,
+        "id": "2Yl4OmDby9iitgNWZPwxkd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "Chance the Rapper",
+            "id": "1anyVhU62p31KFi8MEzkbf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00B7TZ0Xawar6NZ00JFomN"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 284855,
+        "name": "Best Life (feat. Chance The Rapper)",
+        "disc_number": 1,
+        "id": "00B7TZ0Xawar6NZ00JFomN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "Bad Bunny",
+            "id": "4q3ewBCX7sLwd24euuV69X"
+          },
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/58q2HKrzhC3ozto2nDdN4z"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 253390,
+        "name": "I Like It",
+        "disc_number": 1,
+        "id": "58q2HKrzhC3ozto2nDdN4z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "Kehlani",
+            "id": "0cGUm45nv7Z6M6qdXYQGTX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DfWF0jqMgZDCiu9zJENTA"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 177139,
+        "name": "Ring (feat. Kehlani)",
+        "disc_number": 1,
+        "id": "5DfWF0jqMgZDCiu9zJENTA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1vBeIXlzbAieGoDqInav5j"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 229004,
+        "name": "Money Bag",
+        "disc_number": 1,
+        "id": "1vBeIXlzbAieGoDqInav5j"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dIoGTQXDh1wVnhIiSyYEa"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 224284,
+        "name": "Bartier Cardi (feat. 21 Savage)",
+        "disc_number": 1,
+        "id": "0dIoGTQXDh1wVnhIiSyYEa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "YG",
+            "id": "0A0FS04o6zMoto8OKPsDwY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0CfmNX2TXk7yoJqHJiixnp"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 230952,
+        "name": "She Bad",
+        "disc_number": 1,
+        "id": "0CfmNX2TXk7yoJqHJiixnp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/74cVJfmK18rhWnscIpGXjt"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 188523,
+        "name": "Thru Your Phone",
+        "disc_number": 1,
+        "id": "74cVJfmK18rhWnscIpGXjt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1f5PNhkNgUpvDEeZfcIlO1"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 200205,
+        "name": "I Do (feat. SZA)",
+        "disc_number": 1,
+        "id": "1f5PNhkNgUpvDEeZfcIlO1"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "4KdtEKjY3Gi0mKiSdy96ML"
+  }
+}

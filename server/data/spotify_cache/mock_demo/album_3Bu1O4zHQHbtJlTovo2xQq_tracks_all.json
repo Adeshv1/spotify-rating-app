@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3Bu1O4zHQHbtJlTovo2xQq_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:40.680Z",
+  "lastRefreshedAt": "2026-03-25T22:19:40.680Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Niamh Shona",
+            "id": "2ILFSwtF4RJgfzeKMbOJft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Z66nkKa3VNgWEth3shaNe"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 173136,
+        "name": "Mavro",
+        "disc_number": 1,
+        "id": "2Z66nkKa3VNgWEth3shaNe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3Bu1O4zHQHbtJlTovo2xQq"
+  }
+}

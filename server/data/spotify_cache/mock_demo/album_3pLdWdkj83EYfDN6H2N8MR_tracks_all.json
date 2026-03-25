@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3pLdWdkj83EYfDN6H2N8MR_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.120Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.120Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5qN4HFkapdAOV94XPryVof"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 130613,
+        "name": "Black Panther",
+        "disc_number": 1,
+        "id": "5qN4HFkapdAOV94XPryVof"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3GCdLUSnKSMJhs4Tj6CV3s"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 232186,
+        "name": "All The Stars (with SZA) - From \"Black Panther: The Album\"",
+        "disc_number": 1,
+        "id": "3GCdLUSnKSMJhs4Tj6CV3s"
+      },
+      {
+        "artists": [
+          {
+            "name": "ScHoolboy Q",
+            "id": "5IcR3N7QB1j6KBL8eImZ8m"
+          },
+          {
+            "name": "2 Chainz",
+            "id": "17lzZA2AlOHwCwFALHttmp"
+          },
+          {
+            "name": "Saudi",
+            "id": "37Qsf5KCKljH7mL134xp4k"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4LmAnpjlhWTahvRkYR8xJa"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 267426,
+        "name": "X (with 2 Chainz & Saudi)",
+        "disc_number": 1,
+        "id": "4LmAnpjlhWTahvRkYR8xJa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Khalid",
+            "id": "6LuN9FCkKOj5PcnpouEgny"
+          },
+          {
+            "name": "Swae Lee",
+            "id": "1zNqQNIdeOUZHb8zbZRFMX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5jyyPsIGM2yqkZN9R3TmvN"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 238893,
+        "name": "The Ways (with Swae Lee)",
+        "disc_number": 1,
+        "id": "5jyyPsIGM2yqkZN9R3TmvN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Vince Staples",
+            "id": "68kEuyFKyqrdQQLLsmiatm"
+          },
+          {
+            "name": "Yugen Blakrok",
+            "id": "3kv1Edgn5HlEWCuEKr1Y9x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bUcBztfGqO7cSI2gMZeCI"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 180893,
+        "name": "Opps (with Yugen Blakrok)",
+        "disc_number": 1,
+        "id": "7bUcBztfGqO7cSI2gMZeCI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jorja Smith",
+            "id": "1CoZyIx7UvdxT5c8UkMzHd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0DJBgBiYeSn6n1AXAkFVE8"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 208760,
+        "name": "I Am",
+        "disc_number": 1,
+        "id": "0DJBgBiYeSn6n1AXAkFVE8"
+      },
+      {
+        "artists": [
+          {
+            "name": "SOB X RBE",
+            "id": "2TImI3DW7o5MdRXJs4D37h"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2tPcTFiQF9MbVUyjZ3zDhA"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 219306,
+        "name": "Paramedic!",
+        "disc_number": 1,
+        "id": "2tPcTFiQF9MbVUyjZ3zDhA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ab-Soul",
+            "id": "0g9vAlRPK9Gt3FKCekk4TW"
+          },
+          {
+            "name": "Anderson .Paak",
+            "id": "3jK9MiCrA42lLAdMGUZpwa"
+          },
+          {
+            "name": "James Blake",
+            "id": "53KwLdlmrlCelAZMaLVZqU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4KXwFI9pgJLpUIAc9oSL8j"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 272306,
+        "name": "Bloody Waters (with Anderson .Paak & James Blake)",
+        "disc_number": 1,
+        "id": "4KXwFI9pgJLpUIAc9oSL8j"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jay Rock",
+            "id": "28ExwzUQsvgJooOI0X1mr3"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          },
+          {
+            "name": "James Blake",
+            "id": "53KwLdlmrlCelAZMaLVZqU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1eLSF6HfrRA0AsNmTkUlKx"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 225266,
+        "name": "King's Dead (with Kendrick Lamar, Future & James Blake)",
+        "disc_number": 1,
+        "id": "1eLSF6HfrRA0AsNmTkUlKx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Zacari",
+            "id": "3qBKjEOanahMxlRojwCzhI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4FpfU1O7WCLBnmwu5XAFk4"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 85266,
+        "name": "Redemption Interlude",
+        "disc_number": 1,
+        "id": "4FpfU1O7WCLBnmwu5XAFk4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Zacari",
+            "id": "3qBKjEOanahMxlRojwCzhI"
+          },
+          {
+            "name": "Babes Wodumo",
+            "id": "3jfVtv9mWfW0c5b3Fx440e"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76iVOVsliCHlWqKuDnCfhE"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 222093,
+        "name": "Redemption (with Babes Wodumo)",
+        "disc_number": 1,
+        "id": "76iVOVsliCHlWqKuDnCfhE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Mozzy",
+            "id": "4AA474G2hRfrHyGrfyDseO"
+          },
+          {
+            "name": "Sjava",
+            "id": "4RfOLIFy2xEmlWzXEVmLJn"
+          },
+          {
+            "name": "REASON",
+            "id": "6XpXnnKHIhCOUbOLOJGe6o"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35cOyocq8Gb6UcT0NWeTwn"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 242293,
+        "name": "Seasons (with Sjava & Reason)",
+        "disc_number": 1,
+        "id": "35cOyocq8Gb6UcT0NWeTwn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5cXg9IQS34FzLVdHhp7hu7"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 221826,
+        "name": "Big Shot (with Travis Scott)",
+        "disc_number": 1,
+        "id": "5cXg9IQS34FzLVdHhp7hu7"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/77UjLW8j5UAGAGVGhR5oUK"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 211440,
+        "name": "Pray For Me (with Kendrick Lamar)",
+        "disc_number": 1,
+        "id": "77UjLW8j5UAGAGVGhR5oUK"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "3pLdWdkj83EYfDN6H2N8MR"
+  }
+}

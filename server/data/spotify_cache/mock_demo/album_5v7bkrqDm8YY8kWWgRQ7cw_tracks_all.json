@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5v7bkrqDm8YY8kWWgRQ7cw_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:43.522Z",
+  "lastRefreshedAt": "2026-03-25T22:19:43.522Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aeyes Libe",
+            "id": "2PUFZI4SN9XsFMf0i7qEwv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4QfPxrgEAfWt0DEjrR1CXw"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 178000,
+        "name": "Ellie",
+        "disc_number": 1,
+        "id": "4QfPxrgEAfWt0DEjrR1CXw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5v7bkrqDm8YY8kWWgRQ7cw"
+  }
+}

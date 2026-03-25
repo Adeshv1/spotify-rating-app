@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0EnjeA3ZeMivEGuACIgrQi_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.647Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.647Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6pEYXmQkuNhxpQoZHAxAmv"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 169667,
+        "name": "DROPWHENIDROP",
+        "disc_number": 1,
+        "id": "6pEYXmQkuNhxpQoZHAxAmv"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xxXloRRArmI68r1jLRqOd"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 179286,
+        "name": "LOVESEXDREAMS",
+        "disc_number": 1,
+        "id": "7xxXloRRArmI68r1jLRqOd"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          },
+          {
+            "name": "9lives",
+            "id": "2MQN1o9W3ULxdT38vj8g4Q"
+          },
+          {
+            "name": "SimmyAuto",
+            "id": "1hynyJGL1vjc5z9GjzdSbM"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5rVUWHXqweJrLtrI2ipvgo"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 154218,
+        "name": "BBGIRLGOSLOW (feat. Ty Dolla $ign)",
+        "disc_number": 1,
+        "id": "5rVUWHXqweJrLtrI2ipvgo"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Lkq8vXr1fSEtusj1r3hxc"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 108314,
+        "name": "ADULT SWIM",
+        "disc_number": 1,
+        "id": "6Lkq8vXr1fSEtusj1r3hxc"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/11M71aTI495qaqRkpzieDV"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 108693,
+        "name": "I FEEL LIKE (SKIT)",
+        "disc_number": 1,
+        "id": "11M71aTI495qaqRkpzieDV"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bAwtFpvzfT6c83pbnf6wo"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 136680,
+        "name": "BLEHT",
+        "disc_number": 1,
+        "id": "3bAwtFpvzfT6c83pbnf6wo"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5no3Adk3462rSqNZBD4L0x"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 193869,
+        "name": "DELILAH",
+        "disc_number": 1,
+        "id": "5no3Adk3462rSqNZBD4L0x"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0V7SoZFvqRehBMExApMj4u"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 73414,
+        "name": "ABSTRACT",
+        "disc_number": 1,
+        "id": "0V7SoZFvqRehBMExApMj4u"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          },
+          {
+            "name": "Joey Bada$$",
+            "id": "2P5sC9cVZDToPxyomzF1UH"
+          },
+          {
+            "name": "Murda Beatz",
+            "id": "3CbYyyd8wH3RT6t0jwpdzC"
+          },
+          {
+            "name": "KayCyy",
+            "id": "7gmVTgaiN0gpDJKvTHPTRL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0kpDa6Wl0DT6rUcAuFKjYL"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 251128,
+        "name": "EUPHORIA",
+        "disc_number": 1,
+        "id": "0kpDa6Wl0DT6rUcAuFKjYL"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DaVRYqspJ45wO2ZywtrGC"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 166952,
+        "name": "DUMBSHIT",
+        "disc_number": 1,
+        "id": "5DaVRYqspJ45wO2ZywtrGC"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5exLQLkZlHWRIav2qTFvsL"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 130268,
+        "name": "RIP",
+        "disc_number": 1,
+        "id": "5exLQLkZlHWRIav2qTFvsL"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2QDy878tgK7UbNqsZzmzHt"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 198315,
+        "name": "OCB",
+        "disc_number": 1,
+        "id": "2QDy878tgK7UbNqsZzmzHt"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3CgXcuA79LAUAGfKRi5SbF"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 126978,
+        "name": "PICKUPTHEPHONE",
+        "disc_number": 1,
+        "id": "3CgXcuA79LAUAGfKRi5SbF"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dMunm3LsCReHCylSzkOZz"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 153866,
+        "name": "NO CONTACT",
+        "disc_number": 1,
+        "id": "1dMunm3LsCReHCylSzkOZz"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0sH7M5s2bEWFRe7v7VRemW"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 115002,
+        "name": "BIG FEELING",
+        "disc_number": 1,
+        "id": "0sH7M5s2bEWFRe7v7VRemW"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ej7JrLZmPSVQSDn4F8QKb"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 183065,
+        "name": "LOOKALIVE",
+        "disc_number": 1,
+        "id": "0ej7JrLZmPSVQSDn4F8QKb"
+      },
+      {
+        "artists": [
+          {
+            "name": "BKTHERULA",
+            "id": "6OjtkJDlAZzlzAydEn78cK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YkAVGFoleomOGMAUlLjzV"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 125454,
+        "name": "I KNOW (SKIT)",
+        "disc_number": 1,
+        "id": "2YkAVGFoleomOGMAUlLjzV"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "0EnjeA3ZeMivEGuACIgrQi"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3pdKKSqqLVIKmRTGw0x2N7_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:09.456Z",
+  "lastRefreshedAt": "2026-03-25T22:20:09.456Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZHH9aoZjrqtFk1SX1dXy7"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 202360,
+        "name": "Moonlight",
+        "disc_number": 1,
+        "id": "2ZHH9aoZjrqtFk1SX1dXy7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RUhbFEhrvGISaQ8u2j2JN"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 235946,
+        "name": "Dangerous Woman",
+        "disc_number": 1,
+        "id": "6RUhbFEhrvGISaQ8u2j2JN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4gfOOBI36Z94x9Gai61XP4"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 179293,
+        "name": "Be Alright",
+        "disc_number": 1,
+        "id": "4gfOOBI36Z94x9Gai61XP4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/63y6xWR4gXz7bnUGOk8iI6"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 244453,
+        "name": "Into You",
+        "disc_number": 1,
+        "id": "63y6xWR4gXz7bnUGOk8iI6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/43bCmCI0nSgcT7QdMXY6LV"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 226160,
+        "name": "Side To Side",
+        "disc_number": 1,
+        "id": "43bCmCI0nSgcT7QdMXY6LV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49vZduMPCMnDDrl1WBxUDk"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 223853,
+        "name": "Let Me Love You",
+        "disc_number": 1,
+        "id": "49vZduMPCMnDDrl1WBxUDk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1FFUXkoWIc9of8yOscGiaC"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 214906,
+        "name": "Greedy",
+        "disc_number": 1,
+        "id": "1FFUXkoWIc9of8yOscGiaC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Macy Gray",
+            "id": "4ylR3zwA0zaapAu94fktwa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RFoG1NFXFBRs3aAMpqCmN"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 229680,
+        "name": "Leave Me Lonely",
+        "disc_number": 1,
+        "id": "6RFoG1NFXFBRs3aAMpqCmN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4RJTTrZqPFWaWACVXHkvjw"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 194840,
+        "name": "Everyday",
+        "disc_number": 1,
+        "id": "4RJTTrZqPFWaWACVXHkvjw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0NAwPzl6im6ds9pe51BdD4"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 226426,
+        "name": "Bad Decisions",
+        "disc_number": 1,
+        "id": "0NAwPzl6im6ds9pe51BdD4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0D9w5UiVChw1VTZk1py37x"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 200400,
+        "name": "Thinking Bout You",
+        "disc_number": 1,
+        "id": "0D9w5UiVChw1VTZk1py37x"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "3pdKKSqqLVIKmRTGw0x2N7"
+  }
+}

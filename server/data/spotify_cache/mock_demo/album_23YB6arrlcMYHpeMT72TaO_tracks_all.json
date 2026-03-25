@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_23YB6arrlcMYHpeMT72TaO_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.896Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.896Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "BigXthaPlug",
+            "id": "6qxpnaukVayrQn6ViNvu9I"
+          },
+          {
+            "name": "Ro$ama",
+            "id": "6sacEP77oivRMuZRlOuSCr"
+          },
+          {
+            "name": "MurdaGang PB",
+            "id": "5vdwkO2Let6z32D2Oa9MEr"
+          },
+          {
+            "name": "Yung Hood",
+            "id": "3OTNDa1tTW4HSiGfxZuJkI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6fODAgyTJdN7ATeJOP81dj"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 128573,
+        "name": "6WA",
+        "disc_number": 1,
+        "id": "6fODAgyTJdN7ATeJOP81dj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "23YB6arrlcMYHpeMT72TaO"
+  }
+}

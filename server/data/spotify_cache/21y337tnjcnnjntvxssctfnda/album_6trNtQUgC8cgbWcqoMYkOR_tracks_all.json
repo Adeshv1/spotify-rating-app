@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6trNtQUgC8cgbWcqoMYkOR_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.551Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.551Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fpVWegR6YOS1Yk5HSMYIq"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 221786,
+        "name": "Paranoid",
+        "disc_number": 1,
+        "id": "3fpVWegR6YOS1Yk5HSMYIq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Swae Lee",
+            "id": "1zNqQNIdeOUZHb8zbZRFMX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5VuxWXbt7XENQCtE9TzpTv"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 194560,
+        "name": "Spoil My Night (feat. Swae Lee)",
+        "disc_number": 1,
+        "id": "5VuxWXbt7XENQCtE9TzpTv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2VdT56BGpdqNHUgOe1j5vc"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 206453,
+        "name": "Rich & Sad",
+        "disc_number": 1,
+        "id": "2VdT56BGpdqNHUgOe1j5vc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5lZZmityu9TAjNvSY6GLhR"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 204360,
+        "name": "Zack And Codeine",
+        "disc_number": 1,
+        "id": "5lZZmityu9TAjNvSY6GLhR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ffntNJnJOeFv7b7DCd0Bw"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 216746,
+        "name": "Takin' Shots",
+        "disc_number": 1,
+        "id": "5ffntNJnJOeFv7b7DCd0Bw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0e7ipj03S05BNilyu5bRzt"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 218146,
+        "name": "rockstar (feat. 21 Savage)",
+        "disc_number": 1,
+        "id": "0e7ipj03S05BNilyu5bRzt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/09IOPhEh1OMe0HD9b36FJk"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 246986,
+        "name": "Over Now",
+        "disc_number": 1,
+        "id": "09IOPhEh1OMe0HD9b36FJk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3swc6WTsr7rl9DqQKQA55C"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 221440,
+        "name": "Psycho (feat. Ty Dolla $ign)",
+        "disc_number": 1,
+        "id": "3swc6WTsr7rl9DqQKQA55C"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7dt6x5M1jzdTEt8oCbisTK"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 231266,
+        "name": "Better Now",
+        "disc_number": 1,
+        "id": "7dt6x5M1jzdTEt8oCbisTK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6IaieqiCVvsNvEt6Y7yOFa"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 206266,
+        "name": "Ball For Me (feat. Nicki Minaj)",
+        "disc_number": 1,
+        "id": "6IaieqiCVvsNvEt6Y7yOFa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4qWCFTuNnmGNdY4egtb4ZY"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 228226,
+        "name": "Otherside",
+        "disc_number": 1,
+        "id": "4qWCFTuNnmGNdY4egtb4ZY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4H7WNRErSbONkM06blBoGc"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 204426,
+        "name": "Stay",
+        "disc_number": 1,
+        "id": "4H7WNRErSbONkM06blBoGc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ZemPoaj7LBj1RAQrb89EC"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 261799,
+        "name": "Blame It On Me",
+        "disc_number": 1,
+        "id": "1ZemPoaj7LBj1RAQrb89EC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          },
+          {
+            "name": "G-Eazy",
+            "id": "02kJSzxNuaWGqwubyUba0Z"
+          },
+          {
+            "name": "YG",
+            "id": "0A0FS04o6zMoto8OKPsDwY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/688QpQAwqsLdBR6lr13wK1"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 212466,
+        "name": "Same Bitches (feat. G-Eazy & YG)",
+        "disc_number": 1,
+        "id": "688QpQAwqsLdBR6lr13wK1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0R6Jlsq25eZB3Wftpxi3oF"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 112013,
+        "name": "Jonestown (Interlude)",
+        "disc_number": 1,
+        "id": "0R6Jlsq25eZB3Wftpxi3oF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1D2L6MefbXon28PzIk9I3r"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 211426,
+        "name": "92 Explorer",
+        "disc_number": 1,
+        "id": "1D2L6MefbXon28PzIk9I3r"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/32lItqlMi4LBhb4k0BaSaC"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 227533,
+        "name": "Candy Paint",
+        "disc_number": 1,
+        "id": "32lItqlMi4LBhb4k0BaSaC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Post Malone",
+            "id": "246dkjvS1zLTtiykXe5h60"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0MrRAUcB8AZiB9ue2VOBYe"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 228146,
+        "name": "Sugar Wraith",
+        "disc_number": 1,
+        "id": "0MrRAUcB8AZiB9ue2VOBYe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "6trNtQUgC8cgbWcqoMYkOR"
+  }
+}

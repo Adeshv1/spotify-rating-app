@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4alcGHjstaALJHHiljfy3H_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.305Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.305Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2PESSRrfGBuDrJ1I7rm8dc"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 248613,
+        "name": "DUCKWORTH.",
+        "disc_number": 1,
+        "id": "2PESSRrfGBuDrJ1I7rm8dc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4suzR7RVn00QijvJPkMVMf"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 248826,
+        "name": "GOD.",
+        "disc_number": 1,
+        "id": "4suzR7RVn00QijvJPkMVMf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28J8MZFrSMvd5gWxAGRBq1"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 460573,
+        "name": "FEAR.",
+        "disc_number": 1,
+        "id": "28J8MZFrSMvd5gWxAGRBq1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "U2",
+            "id": "51Blml2LZPmy7TTiAg47vQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0lJZRic5kToowUXH35uy7P"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 254200,
+        "name": "XXX. FEAT. U2.",
+        "disc_number": 1,
+        "id": "0lJZRic5kToowUXH35uy7P"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Zacari",
+            "id": "3qBKjEOanahMxlRojwCzhI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0R9U7yIlLm8KAL6iQbwKKT"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 213400,
+        "name": "LOVE. FEAT. ZACARI.",
+        "disc_number": 1,
+        "id": "0R9U7yIlLm8KAL6iQbwKKT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1PKNKessUE10zYclDWNRfE"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 307880,
+        "name": "LUST.",
+        "disc_number": 1,
+        "id": "1PKNKessUE10zYclDWNRfE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0gvQoTWRxsW5Rd7KgPp0u3"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 177000,
+        "name": "HUMBLE.",
+        "disc_number": 1,
+        "id": "0gvQoTWRxsW5Rd7KgPp0u3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1P9LiOkE3LnKSYsoz1F8A7"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 275253,
+        "name": "PRIDE.",
+        "disc_number": 1,
+        "id": "1P9LiOkE3LnKSYsoz1F8A7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Omhxcy38tjNxqVZshdfpf"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 227360,
+        "name": "LOYALTY. FEAT. RIHANNA.",
+        "disc_number": 1,
+        "id": "0Omhxcy38tjNxqVZshdfpf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3hKPfWwm32Nv7Xj57lrxeC"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 214826,
+        "name": "FEEL.",
+        "disc_number": 1,
+        "id": "3hKPfWwm32Nv7Xj57lrxeC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3uubYELqTxIOqGalMtUq63"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 208733,
+        "name": "ELEMENT.",
+        "disc_number": 1,
+        "id": "3uubYELqTxIOqGalMtUq63"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7tC6nVqWp4FALU6I3li1g9"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 160293,
+        "name": "YAH.",
+        "disc_number": 1,
+        "id": "7tC6nVqWp4FALU6I3li1g9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4odAJ4IxmYzy3co4TeYP24"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 185946,
+        "name": "DNA.",
+        "disc_number": 1,
+        "id": "4odAJ4IxmYzy3co4TeYP24"
+      },
+      {
+        "artists": [
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WonGCoO1sz7I4aD0HRbXy"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 118066,
+        "name": "BLOOD.",
+        "disc_number": 1,
+        "id": "1WonGCoO1sz7I4aD0HRbXy"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "4alcGHjstaALJHHiljfy3H"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5tmo9htHpTWaVxZEgHFtB8_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:45.935Z",
+  "lastRefreshedAt": "2026-03-25T22:19:45.935Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Miran",
+            "id": "2Nk5XPyODZYGkTpGPQel2Q"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7JuANIIOksqHRFXgE8tEld"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 125041,
+        "name": "Lisser",
+        "disc_number": 1,
+        "id": "7JuANIIOksqHRFXgE8tEld"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5tmo9htHpTWaVxZEgHFtB8"
+  }
+}

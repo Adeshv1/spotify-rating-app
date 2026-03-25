@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6EVYTRG1drKdO8OnIQBeEj_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:49.117Z",
+  "lastRefreshedAt": "2026-03-25T22:19:49.117Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0qMNPhpRzbghJy6G3SgRag"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 79840,
+        "name": "Intro",
+        "disc_number": 1,
+        "id": "0qMNPhpRzbghJy6G3SgRag"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Iggy Azalea",
+            "id": "5yG7ZAZafVaAlMTeBybKAL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7vS3Y0IKjde7Xg85LWIEdP"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 193920,
+        "name": "Problem",
+        "disc_number": 1,
+        "id": "7vS3Y0IKjde7Xg85LWIEdP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 197266,
+        "name": "One Last Time",
+        "disc_number": 1,
+        "id": "7xoUc6faLbCqZO6fQEYprd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/40fHWRL8bKcl5J4t4OKUiW"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 211880,
+        "name": "Why Try",
+        "disc_number": 1,
+        "id": "40fHWRL8bKcl5J4t4OKUiW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Zedd",
+            "id": "2qxJFvFYMEDqd7ui6kSAcq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/12KUFSHFgT0XCoiSlvdQi4"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 214840,
+        "name": "Break Free",
+        "disc_number": 1,
+        "id": "12KUFSHFgT0XCoiSlvdQi4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70yhaHLp9STtzI2Kzba6Tr"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 233733,
+        "name": "Best Mistake",
+        "disc_number": 1,
+        "id": "70yhaHLp9STtzI2Kzba6Tr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Cashmere Cat",
+            "id": "2LZDXcxJWgsJfKXZv9a5eG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0fonaf88IEDQM309zmU80L"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 217053,
+        "name": "Be My Baby",
+        "disc_number": 1,
+        "id": "0fonaf88IEDQM309zmU80L"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Childish Gambino",
+            "id": "73sIBHcqh3Z3NyqHKZ7FOL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0HGcQDbRen8luCnwH53sNl"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 253386,
+        "name": "Break Your Heart Right Back",
+        "disc_number": 1,
+        "id": "0HGcQDbRen8luCnwH53sNl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "The Weeknd",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5J4ZkQpzMUFojo1CtAZYpn"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 236133,
+        "name": "Love Me Harder",
+        "disc_number": 1,
+        "id": "5J4ZkQpzMUFojo1CtAZYpn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5lvnGiTAH9BVlJLHc0DXZz"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 232586,
+        "name": "Just A Little Bit Of Your Heart",
+        "disc_number": 1,
+        "id": "5lvnGiTAH9BVlJLHc0DXZz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "A$AP Ferg",
+            "id": "5dHt1vcEm9qb8fCyLcB3HL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1rNop31kdDmSj3Ds6xhIeS"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 192226,
+        "name": "Hands On Me",
+        "disc_number": 1,
+        "id": "1rNop31kdDmSj3Ds6xhIeS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4eumFsTnduH3zRfaASoAPs"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 168520,
+        "name": "My Everything",
+        "disc_number": 1,
+        "id": "4eumFsTnduH3zRfaASoAPs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Jessie J",
+            "id": "2gsggkzM5R49q6jpPvazou"
+          },
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/466s1BacUmiRdR3ISvNjyx"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 199320,
+        "name": "Bang Bang",
+        "disc_number": 1,
+        "id": "466s1BacUmiRdR3ISvNjyx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6LQzYkmd8ADbKOOEVDnlG4"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 193986,
+        "name": "Only 1",
+        "disc_number": 1,
+        "id": "6LQzYkmd8ADbKOOEVDnlG4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3hgl7EQwTutSm6PESsB7gZ"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 233720,
+        "name": "You Don't Know Me",
+        "disc_number": 1,
+        "id": "3hgl7EQwTutSm6PESsB7gZ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "6EVYTRG1drKdO8OnIQBeEj"
+  }
+}

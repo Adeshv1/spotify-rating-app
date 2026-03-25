@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3voPvL5aaEDJZqPGALEQQE_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:27.636Z",
+  "lastRefreshedAt": "2026-03-25T22:19:27.636Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aurelian Juno",
+            "id": "0clWZsJkYSrFdmUkQygfiQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SV6rrWHkmxOgV4FwrGxl5"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 140000,
+        "name": "As It Is",
+        "disc_number": 1,
+        "id": "2SV6rrWHkmxOgV4FwrGxl5"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3voPvL5aaEDJZqPGALEQQE"
+  }
+}

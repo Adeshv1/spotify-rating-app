@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_02sEJTj1sye1JaqxqpcSCp_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.120Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.120Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/21yo11TFsfpDtuYyCbqhZS"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 83400,
+        "name": "Intro (A86)",
+        "disc_number": 1,
+        "id": "21yo11TFsfpDtuYyCbqhZS"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Bipolar Sunshine",
+            "id": "0CjWKoS55T7DOt0HJuwF1H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0g5EKLgdKvNlln7TNqBByK"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 220573,
+        "name": "Middle",
+        "disc_number": 1,
+        "id": "0g5EKLgdKvNlln7TNqBByK"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Skrillex",
+            "id": "5he5w2lnU9x7JFhnwcekXX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5GokpIAufFJxKqkJgRtdKD"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 258346,
+        "name": "Sahara",
+        "disc_number": 1,
+        "id": "5GokpIAufFJxKqkJgRtdKD"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "JRY",
+            "id": "6r514fXAl2fe5cHF6HKOHW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6NsxPxFzZ18TKBcTgxX3dh"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 206666,
+        "name": "Sober",
+        "disc_number": 1,
+        "id": "6NsxPxFzZ18TKBcTgxX3dh"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Moksi",
+            "id": "5jm3x1qIibWdKSEMw2G011"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GTxdh4FiA8XyCLFK1vvgG"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 263106,
+        "name": "Pigalle",
+        "disc_number": 1,
+        "id": "6GTxdh4FiA8XyCLFK1vvgG"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "George Maple",
+            "id": "19m3oZKjGSLzVW0OGIAcNg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Mf84BbHYdrewDABZOH5H6"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 237960,
+        "name": "Talk",
+        "disc_number": 1,
+        "id": "5Mf84BbHYdrewDABZOH5H6"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Yellow Claw",
+            "id": "47z7ZrgFoBvVpCnElCE3Zh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7LWPWw7PtYHrDn194kNCPA"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 222000,
+        "name": "Ocho Cinco",
+        "disc_number": 1,
+        "id": "7LWPWw7PtYHrDn194kNCPA"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Jeremih",
+            "id": "3KV3p5EY4AvKxOlhGHORLg"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          },
+          {
+            "name": "Swizz Beatz",
+            "id": "2cADQgiLMjNhbsfeN52Bf3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69bDRy5MeWQl1lNeEJQIBE"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 217373,
+        "name": "The Half",
+        "disc_number": 1,
+        "id": "69bDRy5MeWQl1lNeEJQIBE"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          {
+            "name": "Migos",
+            "id": "6oMuImdp5ZcFhWP0ESe6mG"
+          },
+          {
+            "name": "GASHI",
+            "id": "0JOxt5QOwq0czoJxvSc5hS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/56urRCfhQX5H3tfGt6q3uU"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 256320,
+        "name": "Oh Me Oh My",
+        "disc_number": 1,
+        "id": "56urRCfhQX5H3tfGt6q3uU"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sn0OyaKn1XKx18JjUZkSw"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 249600,
+        "name": "Propaganda",
+        "disc_number": 1,
+        "id": "7sn0OyaKn1XKx18JjUZkSw"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "GASHI",
+            "id": "0JOxt5QOwq0czoJxvSc5hS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2cs9NbGdcutSqoy0SEmyuY"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 213240,
+        "name": "4 Life",
+        "disc_number": 1,
+        "id": "2cs9NbGdcutSqoy0SEmyuY"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Bipolar Sunshine",
+            "id": "0CjWKoS55T7DOt0HJuwF1H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5PsLICW9HfBbHZ64TT1liT"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 222413,
+        "name": "Future Pt 2",
+        "disc_number": 1,
+        "id": "5PsLICW9HfBbHZ64TT1liT"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0lYBSQXN6rCTvUZvg9S0lU"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 205946,
+        "name": "Let Me Love You",
+        "disc_number": 1,
+        "id": "0lYBSQXN6rCTvUZvg9S0lU"
+      },
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Mr Hudson",
+            "id": "1zV9UjTUevjp5VUddqIUUn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CpCIb8zybdjskLQRL6rEC"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 286880,
+        "name": "Here Comes The Night",
+        "disc_number": 1,
+        "id": "1CpCIb8zybdjskLQRL6rEC"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "02sEJTj1sye1JaqxqpcSCp"
+  }
+}

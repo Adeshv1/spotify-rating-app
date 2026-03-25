@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7MmMz1SDFpAustlXwduMFa_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:21.463Z",
+  "lastRefreshedAt": "2026-03-25T22:19:21.463Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "T.I.",
+            "id": "4OBJLual30L7gRl5UkeRcT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6AXf9n3qazR1bE1dngnqxi"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 179924,
+        "name": "LET 'EM KNOW",
+        "disc_number": 1,
+        "id": "6AXf9n3qazR1bE1dngnqxi"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7MmMz1SDFpAustlXwduMFa"
+  }
+}

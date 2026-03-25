@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1lXY618HWkwYKJWBRYR4MK_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.733Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.733Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05KOgYg8PGeJyyWBPi5ja8"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 218673,
+        "name": "Free Smoke",
+        "disc_number": 1,
+        "id": "05KOgYg8PGeJyyWBPi5ja8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Giggs",
+            "id": "3S0tlB4fE7ChxI2pWz8Xip"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6CfrYuD3YRDYdYvH9jNtXY"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 149568,
+        "name": "No Long Talk",
+        "disc_number": 1,
+        "id": "6CfrYuD3YRDYdYvH9jNtXY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5mCPDVBb16L4XQwDdbRUpz"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 298940,
+        "name": "Passionfruit",
+        "disc_number": 1,
+        "id": "5mCPDVBb16L4XQwDdbRUpz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/13e6f8t7RKXuxZ0JdaaJRG"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 107673,
+        "name": "Jorja Interlude",
+        "disc_number": 1,
+        "id": "13e6f8t7RKXuxZ0JdaaJRG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Black Coffee",
+            "id": "6wMr4zKPrrR0UVz08WtUWc"
+          },
+          {
+            "name": "Jorja Smith",
+            "id": "1CoZyIx7UvdxT5c8UkMzHd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7y6c07pgjZvtHI9kuMVqk1"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 250337,
+        "name": "Get It Together",
+        "disc_number": 1,
+        "id": "7y6c07pgjZvtHI9kuMVqk1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76gUmNLXGQVOsGhfcshkFP"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 205162,
+        "name": "Madiba Riddim",
+        "disc_number": 1,
+        "id": "76gUmNLXGQVOsGhfcshkFP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2XlHu0HcujBCkWMdIAvrqt"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 216557,
+        "name": "Blem",
+        "disc_number": 1,
+        "id": "2XlHu0HcujBCkWMdIAvrqt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Sampha",
+            "id": "2WoVwexZuODvclzULjPQtm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2fkeWbM6iqTw7oGHTYm2lw"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 186293,
+        "name": "4422",
+        "disc_number": 1,
+        "id": "2fkeWbM6iqTw7oGHTYm2lw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6UjfByV1lDLW0SOVQA4NAi"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 189229,
+        "name": "Gyalchester",
+        "disc_number": 1,
+        "id": "6UjfByV1lDLW0SOVQA4NAi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2dfqS3MRtbLZSZA1IL8xY5"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 143213,
+        "name": "Skepta Interlude",
+        "disc_number": 1,
+        "id": "2dfqS3MRtbLZSZA1IL8xY5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Quavo",
+            "id": "0VRj0yCOv2FXJNP47XQnx5"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bjwRfXMk4uRgOD9IBYl9h"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 236614,
+        "name": "Portland",
+        "disc_number": 1,
+        "id": "2bjwRfXMk4uRgOD9IBYl9h"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "2 Chainz",
+            "id": "17lzZA2AlOHwCwFALHttmp"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0xl1w2q4VLojeXp4JfazPL"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 307593,
+        "name": "Sacrifices",
+        "disc_number": 1,
+        "id": "0xl1w2q4VLojeXp4JfazPL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6MbH1QiphMCPTqVEVC7UYi"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 153724,
+        "name": "Nothings Into Somethings",
+        "disc_number": 1,
+        "id": "6MbH1QiphMCPTqVEVC7UYi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6n3HGiq4v35D6eFOSwqYuo"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 219692,
+        "name": "Teenage Fever",
+        "disc_number": 1,
+        "id": "6n3HGiq4v35D6eFOSwqYuo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Giggs",
+            "id": "3S0tlB4fE7ChxI2pWz8Xip"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2jTujnt0y344ai1rNOywgr"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 162637,
+        "name": "KMT",
+        "disc_number": 1,
+        "id": "2jTujnt0y344ai1rNOywgr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Na0z2gfN67Rzf0vp74Wi3"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 305373,
+        "name": "Lose You",
+        "disc_number": 1,
+        "id": "2Na0z2gfN67Rzf0vp74Wi3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5f5r2N4Lp9WoULWPH9zp2W"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 228437,
+        "name": "Can't Have Everything",
+        "disc_number": 1,
+        "id": "5f5r2N4Lp9WoULWPH9zp2W"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28irpKCCK9nn9DZSik2zEx"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 206119,
+        "name": "Glow",
+        "disc_number": 1,
+        "id": "28irpKCCK9nn9DZSik2zEx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "PARTYNEXTDOOR",
+            "id": "2HPaUgqeutzr3jx5a9WyDV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5JUu0unA8VwhTZ9LkMWUVI"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 368035,
+        "name": "Since Way Back",
+        "disc_number": 1,
+        "id": "5JUu0unA8VwhTZ9LkMWUVI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/343YBumqHu19cGoGARUTsd"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 210937,
+        "name": "Fake Love",
+        "disc_number": 1,
+        "id": "343YBumqHu19cGoGARUTsd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bJ4mu7MHa3rHiNyKjOoSl"
+        },
+        "track_number": 21,
+        "explicit": true,
+        "duration_ms": 250770,
+        "name": "Ice Melts",
+        "disc_number": 1,
+        "id": "7bJ4mu7MHa3rHiNyKjOoSl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2KvHC9z14GSl4YpkNMX384"
+        },
+        "track_number": 22,
+        "explicit": true,
+        "duration_ms": 283550,
+        "name": "Do Not Disturb",
+        "disc_number": 1,
+        "id": "2KvHC9z14GSl4YpkNMX384"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 22,
+    "albumId": "1lXY618HWkwYKJWBRYR4MK"
+  }
+}

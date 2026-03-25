@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6jk8taCOXavu7PudkybqHO_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.936Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.936Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Jeremy Mayfield",
+            "id": "0yjBkHJA6pxZL5FYccrwwa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7riO7i4L4lBTjqrkuu4sTv"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 156308,
+        "name": "In the Stars",
+        "disc_number": 1,
+        "id": "7riO7i4L4lBTjqrkuu4sTv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6jk8taCOXavu7PudkybqHO"
+  }
+}

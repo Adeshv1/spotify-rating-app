@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2rqjmynngV4AmGoL1ZEuwM_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.356Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.356Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Wild Belle",
+            "id": "4wHZkzWXD9GPr4RQAYjUcv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1DlW1PeiL0QsA13dTCSQG7"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 233010,
+        "name": "Be Together",
+        "disc_number": 1,
+        "id": "1DlW1PeiL0QsA13dTCSQG7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Jovi Rockwell",
+            "id": "3NB7oCgOzcdYVtdvNIEDep"
+          },
+          {
+            "name": "Elliphant",
+            "id": "134GdR5tUtxJrf8cpsfpyY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MpFTT6O4g74rJmA9sv3tk"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 207716,
+        "name": "Too Original",
+        "disc_number": 1,
+        "id": "1MpFTT6O4g74rJmA9sv3tk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Chronixx",
+            "id": "2oZcMYiKpjaA2Et5mU3RPP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0t7HKmZDWnOIRDVT9hqyuQ"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 214916,
+        "name": "Blaze Up The Fire",
+        "disc_number": 1,
+        "id": "0t7HKmZDWnOIRDVT9hqyuQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "MØ",
+            "id": "0bdfiayQAKewqEvaU6rXCv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01aTsQoKoeXofSTvKuunzv"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 176561,
+        "name": "Lean On",
+        "disc_number": 1,
+        "id": "01aTsQoKoeXofSTvKuunzv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          },
+          {
+            "name": "Tarrus Riley",
+            "id": "4frHO7KPcfMjhnVdIMJ98c"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Q6T5Xwf39j9HTQwUZERMT"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 206327,
+        "name": "Powerful (feat. Ellie Goulding & Tarrus Riley)",
+        "disc_number": 1,
+        "id": "3Q6T5Xwf39j9HTQwUZERMT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Nyla",
+            "id": "4VZY0nxYMSNotbS7WjNVQy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1XtM3xPw0Jnu8TEMMrsp2p"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 198718,
+        "name": "Light It Up",
+        "disc_number": 1,
+        "id": "1XtM3xPw0Jnu8TEMMrsp2p"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2UKf3nFTnwm06g3SjUj5Sy"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 225999,
+        "name": "Roll the Bass",
+        "disc_number": 1,
+        "id": "2UKf3nFTnwm06g3SjUj5Sy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Pusha T",
+            "id": "0ONHkAv9pCAFxb0zJwDNTy"
+          },
+          {
+            "name": "Mad Cobra",
+            "id": "56MDhktp7hO6MqKCS9rSXT"
+          },
+          {
+            "name": "2 Chainz",
+            "id": "17lzZA2AlOHwCwFALHttmp"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1mJ9xZPxojUJk1s1EmRsXX"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 233333,
+        "name": "Night Riders",
+        "disc_number": 1,
+        "id": "1mJ9xZPxojUJk1s1EmRsXX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          },
+          {
+            "name": "Ariana Grande",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR"
+          },
+          {
+            "name": "Machel Montano",
+            "id": "6wxP7SSzfvi21Cnl8JicdQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6a0RQZS4mlCqjCjeZPZvVQ"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 229750,
+        "name": "All My Love (Remix)",
+        "disc_number": 1,
+        "id": "6a0RQZS4mlCqjCjeZPZvVQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "2rqjmynngV4AmGoL1ZEuwM"
+  }
+}

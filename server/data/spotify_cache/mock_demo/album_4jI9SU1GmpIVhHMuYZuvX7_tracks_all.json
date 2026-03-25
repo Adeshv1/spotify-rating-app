@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4jI9SU1GmpIVhHMuYZuvX7_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:20.324Z",
+  "lastRefreshedAt": "2026-03-25T22:19:20.324Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0EqH5Wz93cJtfUGv3vtQPY"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 57733,
+        "name": "29 Intro",
+        "disc_number": 1,
+        "id": "0EqH5Wz93cJtfUGv3vtQPY"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57ENogEkvFsU7Wmt3lvQMG"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 196080,
+        "name": "Two Six",
+        "disc_number": 1,
+        "id": "57ENogEkvFsU7Wmt3lvQMG"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3sJLoIc9y1b4gKAP8ZNsR9"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 318066,
+        "name": "SAFETY",
+        "disc_number": 1,
+        "id": "3sJLoIc9y1b4gKAP8ZNsR9"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4pPJQ2p8jIsBuvxEIW2R99"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 242573,
+        "name": "Run A Train (with Future)",
+        "disc_number": 1,
+        "id": "4pPJQ2p8jIsBuvxEIW2R99"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nhNz1tWU8p5WvFAAgFW2h"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 290346,
+        "name": "Poor Thang",
+        "disc_number": 1,
+        "id": "1nhNz1tWU8p5WvFAAgFW2h"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "PJ",
+            "id": "4O36cq71Cq7NazopFLBMmb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7oSdhQFfq5ScVjRkVcj4Ua"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 235906,
+        "name": "Legacy (with PJ)",
+        "disc_number": 1,
+        "id": "7oSdhQFfq5ScVjRkVcj4Ua"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          },
+          {
+            "name": "Tems",
+            "id": "687cZJR45JO7jhk1LHIbgq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6jtqO14L18plBtpDTtUkFR"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 310626,
+        "name": "Bunce Road Blues (with Future & Tems)",
+        "disc_number": 1,
+        "id": "6jtqO14L18plBtpDTtUkFR"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ZfOg71oANMaKmswvSEF2r"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 277013,
+        "name": "WHO TF IZ U",
+        "disc_number": 1,
+        "id": "5ZfOg71oANMaKmswvSEF2r"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/290Vqn3zZX5QarUQra9LT2"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 254973,
+        "name": "Drum n Bass",
+        "disc_number": 1,
+        "id": "290Vqn3zZX5QarUQra9LT2"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2aNaJLXE4SXbm9L23qpHTG"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 254013,
+        "name": "The Let Out",
+        "disc_number": 1,
+        "id": "2aNaJLXE4SXbm9L23qpHTG"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Awr3NZMkRHQFabkMxW1VT"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 246440,
+        "name": "Bombs in the Ville/Hit the Gas",
+        "disc_number": 1,
+        "id": "0Awr3NZMkRHQFabkMxW1VT"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QQp1Y4zWok1YvzB4zutGy"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 204413,
+        "name": "Lonely at the Top (Bonus)",
+        "disc_number": 1,
+        "id": "3QQp1Y4zWok1YvzB4zutGy"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4DvoYgOZXnqmKuc2GzzFHz"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 366413,
+        "name": "39 Intro",
+        "disc_number": 2,
+        "id": "4DvoYgOZXnqmKuc2GzzFHz"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3kUHIvjJ8p9UzeaeeqHkfg"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 176253,
+        "name": "The Fall-Off is Inevitable",
+        "disc_number": 2,
+        "id": "3kUHIvjJ8p9UzeaeeqHkfg"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Erykah Badu",
+            "id": "7IfculRW2WXyzNQ8djX8WX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1lYM9PgB0QOk3pDo8h0UiN"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 270626,
+        "name": "The Villest (with Erykah Badu)",
+        "disc_number": 2,
+        "id": "1lYM9PgB0QOk3pDo8h0UiN"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Petey Pablo",
+            "id": "4Js9eYwAf9rypNtV8pNSw9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6WGJ7hPYHXu3aQ6x8GzigX"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 202253,
+        "name": "Old Dog (with Petey Pablo)",
+        "disc_number": 2,
+        "id": "6WGJ7hPYHXu3aQ6x8GzigX"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0pchHye1t8VA9gTHK3hAAZ"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 252986,
+        "name": "Life Sentence",
+        "disc_number": 2,
+        "id": "0pchHye1t8VA9gTHK3hAAZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Burna Boy",
+            "id": "3wcj11K77LjEY1PkEazffa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nn0Z1o1WI01pB7oEPiJeE"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 286866,
+        "name": "Only You (with Burna Boy)",
+        "disc_number": 2,
+        "id": "0nn0Z1o1WI01pB7oEPiJeE"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0C9B7SpULk3KlkOz3MhTEb"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 298360,
+        "name": "Man Up Above",
+        "disc_number": 2,
+        "id": "0C9B7SpULk3KlkOz3MhTEb"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5pjf75G1zn9EEFa8iaCV5h"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 332386,
+        "name": "I Love Her Again",
+        "disc_number": 2,
+        "id": "5pjf75G1zn9EEFa8iaCV5h"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          },
+          {
+            "name": "Morray",
+            "id": "44vREmJC0OlVZjZaGLqVEd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2yb0MxSCkck68LhC6zGiiv"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 319080,
+        "name": "What If (with Morray)",
+        "disc_number": 2,
+        "id": "2yb0MxSCkck68LhC6zGiiv"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/050ECC7Yu78pTJP8PrMo8o"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 264520,
+        "name": "Quik Stop",
+        "disc_number": 2,
+        "id": "050ECC7Yu78pTJP8PrMo8o"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1jEwnEPAUAPL5eLiMPt1Fd"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 275213,
+        "name": "and the whole world is the Ville",
+        "disc_number": 2,
+        "id": "1jEwnEPAUAPL5eLiMPt1Fd"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tRoAQrFAnSccpbVPHDIHb"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 154840,
+        "name": "Ocean Way (Bonus)",
+        "disc_number": 2,
+        "id": "6tRoAQrFAnSccpbVPHDIHb"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 24,
+    "albumId": "4jI9SU1GmpIVhHMuYZuvX7"
+  }
+}

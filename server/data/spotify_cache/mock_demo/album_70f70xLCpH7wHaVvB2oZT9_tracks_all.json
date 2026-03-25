@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_70f70xLCpH7wHaVvB2oZT9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:56.009Z",
+  "lastRefreshedAt": "2026-03-25T22:19:56.009Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Ludacris",
+            "id": "3ipn9JLAPI5GUEo4y4jcoi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Mg8vLBYwizu7AuhYQO64V"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 244546,
+        "name": "All Around The World",
+        "disc_number": 1,
+        "id": "1Mg8vLBYwizu7AuhYQO64V"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2L7rZWg9RLxIwnysmxm4xk"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 171333,
+        "name": "Boyfriend",
+        "disc_number": 1,
+        "id": "2L7rZWg9RLxIwnysmxm4xk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0pwYLVXVknPSGUQb39cePC"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 229466,
+        "name": "As Long As You Love Me",
+        "disc_number": 1,
+        "id": "0pwYLVXVknPSGUQb39cePC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5uDuOnjJ0MrfJxvEHPpJap"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 234680,
+        "name": "Catching Feelings",
+        "disc_number": 1,
+        "id": "5uDuOnjJ0MrfJxvEHPpJap"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/41bV7zvmTbAPinmY1pG4xN"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 220893,
+        "name": "Take You",
+        "disc_number": 1,
+        "id": "41bV7zvmTbAPinmY1pG4xN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7vjtAU3Ns1AT4dRa0voHBJ"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 204186,
+        "name": "Right Here",
+        "disc_number": 1,
+        "id": "7vjtAU3Ns1AT4dRa0voHBJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zMMgJ8cSCg4iPuoxWtTyL"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 248386,
+        "name": "Fall",
+        "disc_number": 1,
+        "id": "7zMMgJ8cSCg4iPuoxWtTyL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23taOWrpWaAtU8rVN7hiNu"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 237293,
+        "name": "Die In Your Arms",
+        "disc_number": 1,
+        "id": "23taOWrpWaAtU8rVN7hiNu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2iyW0eOEQ764Dz2sn8ImN9"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 230106,
+        "name": "Thought Of You",
+        "disc_number": 1,
+        "id": "2iyW0eOEQ764Dz2sn8ImN9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/190jyVPHYjAqEaOGmMzdyk"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 227986,
+        "name": "Beauty And A Beat",
+        "disc_number": 1,
+        "id": "190jyVPHYjAqEaOGmMzdyk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2neyhqdDpRH7LV08C39TFJ"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 234493,
+        "name": "One Love",
+        "disc_number": 1,
+        "id": "2neyhqdDpRH7LV08C39TFJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nxvFG50rGXkiGQqOO2MHr"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 189653,
+        "name": "Be Alright",
+        "disc_number": 1,
+        "id": "0nxvFG50rGXkiGQqOO2MHr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1AruWZmSy4RerslWBkH8OY"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 222560,
+        "name": "Believe",
+        "disc_number": 1,
+        "id": "1AruWZmSy4RerslWBkH8OY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0b1L4GuHRY7jLzcMdek3fP"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 213560,
+        "name": "Out Of Town Girl",
+        "disc_number": 1,
+        "id": "0b1L4GuHRY7jLzcMdek3fP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Z3y6552thvY2jKNHHMtXj"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 239866,
+        "name": "She Don't Like The Lights",
+        "disc_number": 1,
+        "id": "2Z3y6552thvY2jKNHHMtXj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7E1dQbOk1qcx9gEPUMBKsk"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 248293,
+        "name": "Maria",
+        "disc_number": 1,
+        "id": "7E1dQbOk1qcx9gEPUMBKsk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Jaden",
+            "id": "0xOeVMOz2fVg5BJY3N6akT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55DEnUKIReTBcrjAmAa9Tw"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 193186,
+        "name": "Fairytale",
+        "disc_number": 1,
+        "id": "55DEnUKIReTBcrjAmAa9Tw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "70f70xLCpH7wHaVvB2oZT9"
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1j2x7FJXTgUT0X5hZ8TDXE_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:01.703Z",
+  "lastRefreshedAt": "2026-03-25T22:20:01.703Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ltwanTt7xjvZ3rPayPppS"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 178373,
+        "name": "Dark Sky (Skyscrapers)",
+        "disc_number": 1,
+        "id": "6ltwanTt7xjvZ3rPayPppS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1bzM1cd6oqFozdr4wK6HdR"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 252040,
+        "name": "Blessings",
+        "disc_number": 1,
+        "id": "1bzM1cd6oqFozdr4wK6HdR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/30CZcZ0NpTXjVJJa5X5nwf"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 224386,
+        "name": "All Your Fault",
+        "disc_number": 1,
+        "id": "30CZcZ0NpTXjVJJa5X5nwf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "E-40",
+            "id": "3crnzLy8R4lVwaigKEOz7V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7FYH5AW3bVfZHJIQpq3UOA"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 284386,
+        "name": "I Don't Fuck With You",
+        "disc_number": 1,
+        "id": "7FYH5AW3bVfZHJIQpq3UOA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          },
+          {
+            "name": "Ty Dolla $ign",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rsOs39rDAYxIOrDTHAgR9"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 216653,
+        "name": "Play No Games",
+        "disc_number": 1,
+        "id": "3rsOs39rDAYxIOrDTHAgR9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1o8jNa1Rsgh0iI9KQKRDHN"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 215440,
+        "name": "Paradise - Extended",
+        "disc_number": 1,
+        "id": "1o8jNa1Rsgh0iI9KQKRDHN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35wGuOS7f10WZ3yfmbAzjD"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 304493,
+        "name": "Win Some, Lose Some",
+        "disc_number": 1,
+        "id": "35wGuOS7f10WZ3yfmbAzjD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2g2cBOrUa5n9ee1RtOISVT"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 250533,
+        "name": "Stay Down",
+        "disc_number": 1,
+        "id": "2g2cBOrUa5n9ee1RtOISVT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Jhené Aiko",
+            "id": "5ZS223C6JyBfXasXxrRqOk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6rje9f1wRFJDO2iTORw0lH"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 319973,
+        "name": "I Know",
+        "disc_number": 1,
+        "id": "6rje9f1wRFJDO2iTORw0lH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WYH592ttkhg3wch4a4Xvk"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 275933,
+        "name": "Deep",
+        "disc_number": 1,
+        "id": "0WYH592ttkhg3wch4a4Xvk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "John Legend",
+            "id": "5y2Xq6xcjJb2jVM54GHK3t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/731Pa6Gt7GAdADATMSEL0N"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 254626,
+        "name": "One Man Can Change The World",
+        "disc_number": 1,
+        "id": "731Pa6Gt7GAdADATMSEL0N"
+      },
+      {
+        "artists": [
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3JaQQnAGa5pIqhqSiA7r2f"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 223493,
+        "name": "Outro",
+        "disc_number": 1,
+        "id": "3JaQQnAGa5pIqhqSiA7r2f"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "1j2x7FJXTgUT0X5hZ8TDXE"
+  }
+}

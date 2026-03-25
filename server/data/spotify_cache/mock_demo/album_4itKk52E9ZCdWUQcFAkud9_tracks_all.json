@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4itKk52E9ZCdWUQcFAkud9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:20.575Z",
+  "lastRefreshedAt": "2026-03-25T22:19:20.575Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1jux3g1YXNub0NkYbLTLIp"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 171845,
+        "name": "ORDER OF PROTECTION",
+        "disc_number": 1,
+        "id": "1jux3g1YXNub0NkYbLTLIp"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6zJ68ym0Buv2TpuUu8tw9A"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 160966,
+        "name": "HELICOPTER",
+        "disc_number": 1,
+        "id": "6zJ68ym0Buv2TpuUu8tw9A"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6uqoRmGkz2p9GDgisc9TcN"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 49047,
+        "name": "INTERROGATION (SKIT)",
+        "disc_number": 1,
+        "id": "6uqoRmGkz2p9GDgisc9TcN"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2FycFFuNMVVYIiIqeldXF5"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 199015,
+        "name": "STOLE YA FLOW",
+        "disc_number": 1,
+        "id": "2FycFFuNMVVYIiIqeldXF5"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "Brent Faiyaz",
+            "id": "3tlXnStJ1fFhdScmQeLpuG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xsTsnA5QOFCnFXdEHGkli"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 346093,
+        "name": "STAY HERE 4 LIFE (feat. Brent Faiyaz)",
+        "disc_number": 1,
+        "id": "2xsTsnA5QOFCnFXdEHGkli"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3sXsbaZlsTv2iJiEntsgM5"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 227423,
+        "name": "PLAYA",
+        "disc_number": 1,
+        "id": "3sXsbaZlsTv2iJiEntsgM5"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eEnuNVAHQXEwg18zZnmdL"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 195130,
+        "name": "NO TRESPASSING",
+        "disc_number": 1,
+        "id": "7eEnuNVAHQXEwg18zZnmdL"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "BossMan Dlow",
+            "id": "23xFbA9rYgRX8mreqysWPc"
+          },
+          {
+            "name": "Sauce Walka",
+            "id": "42yf4QkiE9a252krn9OUCb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2lSDVBIWbWQ7z5Lw15GRNw"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 200170,
+        "name": "STOP SNITCHING (feat. BossMan Dlow & Sauce Walka)",
+        "disc_number": 1,
+        "id": "2lSDVBIWbWQ7z5Lw15GRNw"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "Slay Squad",
+            "id": "1Zi4Bswn8gDAoyFwEkQFqE"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pwOJNlr5TJaR30dJIqK9M"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 178673,
+        "name": "STFU (feat. Slay Squad)",
+        "disc_number": 1,
+        "id": "2pwOJNlr5TJaR30dJIqK9M"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1AXsHbdIYx2OyKmdOcIL5T"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 234151,
+        "name": "PUNK ROCKY",
+        "disc_number": 1,
+        "id": "1AXsHbdIYx2OyKmdOcIL5T"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4WGk4UwyQD0mxTN6gEL4wl"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 224279,
+        "name": "AIR FORCE (BLACK DEMARCO)",
+        "disc_number": 1,
+        "id": "4WGk4UwyQD0mxTN6gEL4wl"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "Gorillaz",
+            "id": "3AA28KZvwAUcZuOKwyblJQ"
+          },
+          {
+            "name": "Westside Gunn",
+            "id": "0ABk515kENDyATUdpCKVfW"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69AHqDMcDKyxKL1lNNCIve"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 245988,
+        "name": "WHISKEY (RELEASE ME) (feat. Gorillaz & Westside Gunn)",
+        "disc_number": 1,
+        "id": "69AHqDMcDKyxKL1lNNCIve"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "Doechii",
+            "id": "4E2rKHVDssGJm2SCDOMMJB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5FYaSV8TLF7qvonB1BDOw0"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 235206,
+        "name": "ROBBERY (feat. Doechii)",
+        "disc_number": 1,
+        "id": "5FYaSV8TLF7qvonB1BDOw0"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2JfyjfqbQrTXMzH8n0fOht"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 285634,
+        "name": "DON'T BE DUMB / TRIP BABY",
+        "disc_number": 1,
+        "id": "2JfyjfqbQrTXMzH8n0fOht"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "will.i.am",
+            "id": "085pc2PYOi8bGKj0PNjekA"
+          },
+          {
+            "name": "Jessica Pratt",
+            "id": "5KTykbPcDB4GYS49jcHbWh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22FKiBdLUCRHlZJthzTlAy"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 214777,
+        "name": "THE END (feat. will.i.am & Jessica Pratt)",
+        "disc_number": 1,
+        "id": "22FKiBdLUCRHlZJthzTlAy"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4vYazVB0YNgKBjG3EQmT02"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 192333,
+        "name": "SWAT TEAM",
+        "disc_number": 2,
+        "id": "4vYazVB0YNgKBjG3EQmT02"
+      },
+      {
+        "artists": [
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          },
+          {
+            "name": "Tyler, The Creator",
+            "id": "4V8LLVI7PbaPR0K2TGSxFF"
+          },
+          {
+            "name": "Jozzy",
+            "id": "6Ja6zFB5d7XRihhfMo6KzY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qJjgYxhZ3gBTm4TI8t41e"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 229102,
+        "name": "FISH N STEAK (WHAT IT IS) (feat. Tyler, The Creator & Jozzy)",
+        "disc_number": 2,
+        "id": "6qJjgYxhZ3gBTm4TI8t41e"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "4itKk52E9ZCdWUQcFAkud9"
+  }
+}

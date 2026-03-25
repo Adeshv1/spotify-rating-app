@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5QG3tjE5L9F6O2vCAPph38_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:10.981Z",
+  "lastRefreshedAt": "2026-03-25T22:20:10.981Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ySUcLPVX7KudhnmNcgY2D"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 243600,
+        "name": "S&M",
+        "disc_number": 1,
+        "id": "7ySUcLPVX7KudhnmNcgY2D"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6DkXLzBQT7cwXmTyzAB1DJ"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 263173,
+        "name": "What's My Name?",
+        "disc_number": 1,
+        "id": "6DkXLzBQT7cwXmTyzAB1DJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3DDBW9yeXc0RQUAOBeKYti"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 261746,
+        "name": "Cheers (Drink To That)",
+        "disc_number": 1,
+        "id": "3DDBW9yeXc0RQUAOBeKYti"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3IS0tPKRymmP8GwXeuLNn2"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 199666,
+        "name": "Fading",
+        "disc_number": 1,
+        "id": "3IS0tPKRymmP8GwXeuLNn2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ENexcMEMsYk0rVJigVD3i"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 235493,
+        "name": "Only Girl (In The World)",
+        "disc_number": 1,
+        "id": "2ENexcMEMsYk0rVJigVD3i"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1NpDnkQO0yWxTtntrC0UNz"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 251600,
+        "name": "California King Bed",
+        "disc_number": 1,
+        "id": "1NpDnkQO0yWxTtntrC0UNz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0GLfodYacy3BJE7AI3A8en"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 267013,
+        "name": "Man Down",
+        "disc_number": 1,
+        "id": "0GLfodYacy3BJE7AI3A8en"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Nicki Minaj",
+            "id": "0hCNtLu0JehylgoiP8L4Gh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0XZHZslvxrByI84hFYWyXS"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 224826,
+        "name": "Raining Men",
+        "disc_number": 1,
+        "id": "0XZHZslvxrByI84hFYWyXS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5lP1kCqAj1fh9pgJWOKyJa"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 257506,
+        "name": "Complicated",
+        "disc_number": 1,
+        "id": "5lP1kCqAj1fh9pgJWOKyJa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1mjMXiWYKSJ5XmJCC0O9HJ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 303733,
+        "name": "Skin",
+        "disc_number": 1,
+        "id": "1mjMXiWYKSJ5XmJCC0O9HJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4p2newrzzjPdXIENDqlCCW"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 296293,
+        "name": "Love The Way You Lie (Part II) - Pt. 2",
+        "disc_number": 1,
+        "id": "4p2newrzzjPdXIENDqlCCW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Marc Jackson Burrows",
+            "id": "3IoIRHbV0weqdZmN6ewOtH"
+          },
+          {
+            "name": "Lee Dagger",
+            "id": "7hEDdJUgflzNOt4ow0OnuC"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Tb4oHMR617zvLANuiV1ok"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 230426,
+        "name": "Only Girl (In The World) - The Bimbo Jones Radio",
+        "disc_number": 1,
+        "id": "3Tb4oHMR617zvLANuiV1ok"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Cajjmere Wray",
+            "id": "1oImAc6GWpVa0QUbH7XcH5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/25A1RmT5eh7C99KXfESRj5"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 221266,
+        "name": "Only Girl (In The World) - CCW Radio Mix",
+        "disc_number": 1,
+        "id": "25A1RmT5eh7C99KXfESRj5"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "5QG3tjE5L9F6O2vCAPph38"
+  }
+}

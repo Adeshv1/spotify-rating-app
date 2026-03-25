@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_79dL7FLiJFOO0EoehUHQBv_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:10.130Z",
+  "lastRefreshedAt": "2026-03-25T22:20:10.130Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 467586,
+        "name": "Let It Happen",
+        "disc_number": 1,
+        "id": "2X485T9Z5Ly0xyaghN73ed"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1cCbsojaA6GIT7Y3zuMJ1q"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 107533,
+        "name": "Nangs",
+        "disc_number": 1,
+        "id": "1cCbsojaA6GIT7Y3zuMJ1q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UYj8qTWjneZJDVjUMwMub"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 255413,
+        "name": "The Moment",
+        "disc_number": 1,
+        "id": "1UYj8qTWjneZJDVjUMwMub"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0xtIp0lgccN85GfGOekS5L"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 270680,
+        "name": "Yes I'm Changing",
+        "disc_number": 1,
+        "id": "0xtIp0lgccN85GfGOekS5L"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5M4yti0QxgqJieUYaEXcpw"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 318591,
+        "name": "Eventually",
+        "disc_number": 1,
+        "id": "5M4yti0QxgqJieUYaEXcpw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/79chzfFIIq7cHkqcYYORk0"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 55413,
+        "name": "Gossip",
+        "disc_number": 1,
+        "id": "79chzfFIIq7cHkqcYYORk0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6K4t31amVTZDgR3sKmwUJJ"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 216320,
+        "name": "The Less I Know The Better",
+        "disc_number": 1,
+        "id": "6K4t31amVTZDgR3sKmwUJJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4a9fW33mYR8LhXBOLUhbfF"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 228040,
+        "name": "Past Life",
+        "disc_number": 1,
+        "id": "4a9fW33mYR8LhXBOLUhbfF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2gNfxysfBRfl9Lvi9T3v6R"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 108546,
+        "name": "Disciples",
+        "disc_number": 1,
+        "id": "2gNfxysfBRfl9Lvi9T3v6R"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2O99aywAVBhaPrsiJ6zbSS"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 241986,
+        "name": "'Cause I'm A Man",
+        "disc_number": 1,
+        "id": "2O99aywAVBhaPrsiJ6zbSS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3I7OmVsk4Hm5LBbs2GmhlD"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 252026,
+        "name": "Reality In Motion",
+        "disc_number": 1,
+        "id": "3I7OmVsk4Hm5LBbs2GmhlD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5h9hkYIBWTZYFRmF6Iz1gt"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 185773,
+        "name": "Love/Paranoia",
+        "disc_number": 1,
+        "id": "5h9hkYIBWTZYFRmF6Iz1gt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Tame Impala",
+            "id": "5INjqkS1o8h1imAzPqGZBb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52ojopYMUzeNcudsoz7O9D"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 363240,
+        "name": "New Person, Same Old Mistakes",
+        "disc_number": 1,
+        "id": "52ojopYMUzeNcudsoz7O9D"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "79dL7FLiJFOO0EoehUHQBv"
+  }
+}

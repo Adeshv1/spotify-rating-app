@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0OcMap99vLEeGkBCfCwRwS_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.888Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.888Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          },
+          {
+            "name": "The-Dream",
+            "id": "1W3FSF1BLpY3hlVIgvenLz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7r6PigmGzlB3YPB7wvBBbi"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 272506,
+        "name": "No Church In The Wild",
+        "disc_number": 1,
+        "id": "7r6PigmGzlB3YPB7wvBBbi"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Beyoncé",
+            "id": "6vWDO969PvNqNYHIOW5v0m"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4TRUsIZw92IhJjAtxtiC4e"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 266253,
+        "name": "Lift Off",
+        "disc_number": 1,
+        "id": "4TRUsIZw92IhJjAtxtiC4e"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1auxYwYrFRqZP7t3s7w4um"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 219333,
+        "name": "Ni**as In Paris",
+        "disc_number": 1,
+        "id": "1auxYwYrFRqZP7t3s7w4um"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Otis Redding",
+            "id": "60df5JBRRPcnSpsIMxxwQm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/14I61w6cyYUHiV2n28IYdP"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 178213,
+        "name": "Otis",
+        "disc_number": 1,
+        "id": "14I61w6cyYUHiV2n28IYdP"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2aqe2NgAwmMlPgtf1MnGoy"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 140746,
+        "name": "Gotta Have It",
+        "disc_number": 1,
+        "id": "2aqe2NgAwmMlPgtf1MnGoy"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0x367gcUm6nsEoMXXFfEMy"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 272853,
+        "name": "New Day",
+        "disc_number": 1,
+        "id": "0x367gcUm6nsEoMXXFfEMy"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1BMzxGds8WSK39p4y432fl"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 202560,
+        "name": "That's My Bitch",
+        "disc_number": 1,
+        "id": "1BMzxGds8WSK39p4y432fl"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0y0imMk6KsO90MaHG4MVAl"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 174133,
+        "name": "Welcome To The Jungle",
+        "disc_number": 1,
+        "id": "0y0imMk6KsO90MaHG4MVAl"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22ngk2DRBy7audIugfYDKd"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 256706,
+        "name": "Who Gon Stop Me",
+        "disc_number": 1,
+        "id": "22ngk2DRBy7audIugfYDKd"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Gjc2FE6BEMMHURUjlMXvX"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 300960,
+        "name": "Murder To Excellence",
+        "disc_number": 1,
+        "id": "3Gjc2FE6BEMMHURUjlMXvX"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0qM9UF4CbazQ5xa8PCTopE"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 292066,
+        "name": "Made In America",
+        "disc_number": 1,
+        "id": "0qM9UF4CbazQ5xa8PCTopE"
+      },
+      {
+        "artists": [
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          },
+          {
+            "name": "Kanye West",
+            "id": "5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Mr Hudson",
+            "id": "1zV9UjTUevjp5VUddqIUUn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bDPr2VAjcfgUDmN9dGOC3"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 201453,
+        "name": "Why I Love You",
+        "disc_number": 1,
+        "id": "4bDPr2VAjcfgUDmN9dGOC3"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "0OcMap99vLEeGkBCfCwRwS"
+  }
+}

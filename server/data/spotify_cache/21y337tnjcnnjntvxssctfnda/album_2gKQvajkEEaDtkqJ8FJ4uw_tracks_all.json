@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2gKQvajkEEaDtkqJ8FJ4uw_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:53.278Z",
+  "lastRefreshedAt": "2026-03-25T22:19:53.278Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2d8JP84HNLKhmd6IYOoupQ"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 222093,
+        "name": "Trap Queen",
+        "disc_number": 1,
+        "id": "2d8JP84HNLKhmd6IYOoupQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5V5GpAKuuep9cH2uy9s4CN"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 211186,
+        "name": "How We Do Things (feat. Monty)",
+        "disc_number": 1,
+        "id": "5V5GpAKuuep9cH2uy9s4CN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0w3Q3VFdrYzo24QUIGnBNy"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 186986,
+        "name": "679 (feat. Monty)",
+        "disc_number": 1,
+        "id": "0w3Q3VFdrYzo24QUIGnBNy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0W1OeXDPntUH0BeyJtE9UM"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 200253,
+        "name": "Jugg (feat. Monty)",
+        "disc_number": 1,
+        "id": "0W1OeXDPntUH0BeyJtE9UM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4xepGpmo2kv2PgRCrkWoCN"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 204173,
+        "name": "Trap Luv",
+        "disc_number": 1,
+        "id": "4xepGpmo2kv2PgRCrkWoCN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LiteLBEA32FDQ86YZDUgA"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 177200,
+        "name": "I Wonder",
+        "disc_number": 1,
+        "id": "0LiteLBEA32FDQ86YZDUgA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ESSGgWzRf1xvP7G5hHMhB"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 312240,
+        "name": "Again",
+        "disc_number": 1,
+        "id": "3ESSGgWzRf1xvP7G5hHMhB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WoOzgvz6CgH4pX6a1RKGp"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 213053,
+        "name": "My Way (feat. Monty)",
+        "disc_number": 1,
+        "id": "1WoOzgvz6CgH4pX6a1RKGp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4STnruOS34o1TIMxi9p6KF"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 278693,
+        "name": "Time (feat. Monty)",
+        "disc_number": 1,
+        "id": "4STnruOS34o1TIMxi9p6KF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2WB4Iip3WXoQPt940zkAAj"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 195186,
+        "name": "Boomin",
+        "disc_number": 1,
+        "id": "2WB4Iip3WXoQPt940zkAAj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1iuljeYz6ZG3GTJOZZkoer"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 173893,
+        "name": "RGF Island",
+        "disc_number": 1,
+        "id": "1iuljeYz6ZG3GTJOZZkoer"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QsILO369FaBdl6V9YNFGl"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 225866,
+        "name": "D.A.M.",
+        "disc_number": 1,
+        "id": "1QsILO369FaBdl6V9YNFGl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3wr2fJ91iGjZlrcDLJ6bYp"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 304200,
+        "name": "No Days Off (feat. Monty)",
+        "disc_number": 1,
+        "id": "3wr2fJ91iGjZlrcDLJ6bYp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Rue04MVaTGF5hPWHcAHIC"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 170493,
+        "name": "I'm Straight",
+        "disc_number": 1,
+        "id": "1Rue04MVaTGF5hPWHcAHIC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7oLQkZscMC02VZysLkC55T"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 208306,
+        "name": "Couple Bands",
+        "disc_number": 1,
+        "id": "7oLQkZscMC02VZysLkC55T"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "M80",
+            "id": "55XjZzMlz3sRjUWSlFedM0"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MZXUaUI0Dre17fdCFjDC3"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 247360,
+        "name": "Rock My Chain (feat. M80)",
+        "disc_number": 1,
+        "id": "1MZXUaUI0Dre17fdCFjDC3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ETQmUSbMuf1HiPOO0L08A"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 336640,
+        "name": "Rewind (feat. Monty)",
+        "disc_number": 1,
+        "id": "3ETQmUSbMuf1HiPOO0L08A"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1VYDjz8U0cak2ZQdaPh6qJ"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 224890,
+        "name": "Let It Bang",
+        "disc_number": 1,
+        "id": "1VYDjz8U0cak2ZQdaPh6qJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5T6B8Xe5xWbcytXUzEZXGK"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 222592,
+        "name": "For My Team (feat. Monty)",
+        "disc_number": 1,
+        "id": "5T6B8Xe5xWbcytXUzEZXGK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Fetty Wap",
+            "id": "6PXS4YHDkKvl1wkIl4V8DL"
+          },
+          {
+            "name": "Monty",
+            "id": "1Wnfj5qZsp8nPsGBBRRa4W"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ftnxHsCH6HF5GWTLCoTGQ"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 311317,
+        "name": "Whateva (feat. Monty)",
+        "disc_number": 1,
+        "id": "4ftnxHsCH6HF5GWTLCoTGQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 20,
+    "albumId": "2gKQvajkEEaDtkqJ8FJ4uw"
+  }
+}

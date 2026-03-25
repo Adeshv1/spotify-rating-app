@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6dl9yYAICcDA8riVDWdxqA_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.621Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.621Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Skaresnø",
+            "id": "6hLr4Lg3n1F95Xmzn8ZcnA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55k2hCElfUZ8VBWbKhDEXY"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 198102,
+        "name": "Tides of Silence",
+        "disc_number": 1,
+        "id": "55k2hCElfUZ8VBWbKhDEXY"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6dl9yYAICcDA8riVDWdxqA"
+  }
+}

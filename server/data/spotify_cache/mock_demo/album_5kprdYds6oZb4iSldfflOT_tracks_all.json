@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5kprdYds6oZb4iSldfflOT_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.877Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.877Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "Carla Morrison",
+            "id": "0XK6kT7xcZAlcYrNjOgzJe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2EEjiKbE4pAjX49TrBzw1X"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 66226,
+        "name": "Vibras",
+        "disc_number": 1,
+        "id": "2EEjiKbE4pAjX49TrBzw1X"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "Willy William",
+            "id": "4RSyJzf7ef6Iu2rnLdabNq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7COfe3P7KgfwDwIRB8LIDw"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 185040,
+        "name": "Mi Gente",
+        "disc_number": 1,
+        "id": "7COfe3P7KgfwDwIRB8LIDw"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6VrBWh90BiwWmwKtvwWFcq"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 248826,
+        "name": "Ambiente",
+        "disc_number": 1,
+        "id": "6VrBWh90BiwWmwKtvwWFcq"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1tWpgH8rErSXPOkQKFCag9"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 205120,
+        "name": "Cuando Tú Quieras",
+        "disc_number": 1,
+        "id": "1tWpgH8rErSXPOkQKFCag9"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "Zion & Lennox",
+            "id": "21451j1KhjAiaYKflxBjr1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5qFeMRz4TvetPmzjre9Dq7"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 250840,
+        "name": "No Es Justo",
+        "disc_number": 1,
+        "id": "5qFeMRz4TvetPmzjre9Dq7"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2yBWnRKj0Zx7AF1kufajvW"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 254720,
+        "name": "Ahora",
+        "disc_number": 1,
+        "id": "2yBWnRKj0Zx7AF1kufajvW"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "ROSALÍA",
+            "id": "7ltDVBr6mKbRvohxheJ9h1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3vgiIJW3iSQRRvgYiW86i9"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 159573,
+        "name": "Brillo",
+        "disc_number": 1,
+        "id": "3vgiIJW3iSQRRvgYiW86i9"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CU1MTRABcra8xqqT12jYq"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 53560,
+        "name": "En Mí (Interlude)",
+        "disc_number": 1,
+        "id": "1CU1MTRABcra8xqqT12jYq"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2YSi7TDMnNCDzlN8VMH4kt"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 195586,
+        "name": "En Mí",
+        "disc_number": 1,
+        "id": "2YSi7TDMnNCDzlN8VMH4kt"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "Wisin & Yandel",
+            "id": "1wZtkThiXbVNtj6hee6dz9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Nkqp3NSGWMXVVO08zGpN7"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 202346,
+        "name": "Peligrosa",
+        "disc_number": 1,
+        "id": "3Nkqp3NSGWMXVVO08zGpN7"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/66XlMyAfZjJ24GVa2qPF9c"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 222493,
+        "name": "Noches Pasadas",
+        "disc_number": 1,
+        "id": "66XlMyAfZjJ24GVa2qPF9c"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2QEiEzGafy58BV4h5FuCUK"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 205120,
+        "name": "Tu Verdad",
+        "disc_number": 1,
+        "id": "2QEiEzGafy58BV4h5FuCUK"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ZxJkG775oka5RsH3Yuwv3"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 191546,
+        "name": "Dónde Estarás",
+        "disc_number": 1,
+        "id": "1ZxJkG775oka5RsH3Yuwv3"
+      },
+      {
+        "artists": [
+          {
+            "name": "J Balvin",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "name": "Jeon",
+            "id": "3ECsaSd1fom8coUUkkFzqt"
+          },
+          {
+            "name": "Anitta",
+            "id": "7FNnA9vBm6EKceENgCGRMb"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7FnHUsFRTMg8VYteFKj3xL"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 189653,
+        "name": "Machika",
+        "disc_number": 1,
+        "id": "7FnHUsFRTMg8VYteFKj3xL"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "5kprdYds6oZb4iSldfflOT"
+  }
+}

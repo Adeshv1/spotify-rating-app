@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0IUCAsckpNyV4wHKIHQawC_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:01.342Z",
+  "lastRefreshedAt": "2026-03-25T22:20:01.342Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Kygo",
+            "id": "23fqKkggKUBHNkbKtXEls4"
+          },
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3eR23VReFzcdmS7TYCrhCe"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 220780,
+        "name": "It Ain't Me (with Selena Gomez)",
+        "disc_number": 1,
+        "id": "3eR23VReFzcdmS7TYCrhCe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0IUCAsckpNyV4wHKIHQawC"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4PgleR09JVnm3zY1fW3XBA_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:09.603Z",
+  "lastRefreshedAt": "2026-03-25T22:20:09.603Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 225983,
+        "name": "24K Magic",
+        "disc_number": 1,
+        "id": "6b8Be6ljOzmkOmFslEb23P"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mBKv9DkYfQHjdMcw2jdyI"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 186973,
+        "name": "Chunky",
+        "disc_number": 1,
+        "id": "0mBKv9DkYfQHjdMcw2jdyI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1I6pKIyaBp4OebTGLJpCCC"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 210053,
+        "name": "Perm",
+        "disc_number": 1,
+        "id": "1I6pKIyaBp4OebTGLJpCCC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0KKkJNfGyhkQ5aFogxQAPU"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 206693,
+        "name": "That's What I Like",
+        "disc_number": 1,
+        "id": "0KKkJNfGyhkQ5aFogxQAPU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0kN8xEmgMW9mh7UmDYHlJP"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 261240,
+        "name": "Versace on the Floor",
+        "disc_number": 1,
+        "id": "0kN8xEmgMW9mh7UmDYHlJP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2mrZYZGmPFV3QOyYPZ1zsn"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 198186,
+        "name": "Straight up & Down",
+        "disc_number": 1,
+        "id": "2mrZYZGmPFV3QOyYPZ1zsn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ObpR8ek44tvWefQRcSo8K"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 250080,
+        "name": "Calling All My Lovelies",
+        "disc_number": 1,
+        "id": "6ObpR8ek44tvWefQRcSo8K"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XMkENs3GfeRza8MfVAhjK"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 191000,
+        "name": "Finesse",
+        "disc_number": 1,
+        "id": "5XMkENs3GfeRza8MfVAhjK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0B0tYbVp7pDQAqKDhgMeaL"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 281826,
+        "name": "Too Good to Say Goodbye",
+        "disc_number": 1,
+        "id": "0B0tYbVp7pDQAqKDhgMeaL"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "4PgleR09JVnm3zY1fW3XBA"
+  }
+}

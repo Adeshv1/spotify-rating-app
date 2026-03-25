@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0rSLgV8p5FzfnqlEk4GzxE_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.596Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.596Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Chainsmokers",
+            "id": "69GGBxA162lTqCwzJG5jLp"
+          },
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BKLCZ1jbUBVqRi2FVlTVw"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 244960,
+        "name": "Closer",
+        "disc_number": 1,
+        "id": "7BKLCZ1jbUBVqRi2FVlTVw"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0rSLgV8p5FzfnqlEk4GzxE"
+  }
+}

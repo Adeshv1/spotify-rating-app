@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0UMMIkurRUmkruZ3KGBLtG_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.455Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.455Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05jQUgTm40hzAw5uqOy0ob"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 129153,
+        "name": "Intro",
+        "disc_number": 1,
+        "id": "05jQUgTm40hzAw5uqOy0ob"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6LBpGdlukUARutol7VgWIS"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 242697,
+        "name": "January 28th",
+        "disc_number": 1,
+        "id": "6LBpGdlukUARutol7VgWIS"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4tqcoej1zPvwePZCzuAjJd"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 239266,
+        "name": "Wet Dreamz",
+        "disc_number": 1,
+        "id": "4tqcoej1zPvwePZCzuAjJd"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/11qa6plS660rrrkf6VJ3cX"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 264213,
+        "name": "03’ Adolescence",
+        "disc_number": 1,
+        "id": "11qa6plS660rrrkf6VJ3cX"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52A8OAP8lTQKZCj4Rce92B"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 269721,
+        "name": "A Tale Of 2 Citiez",
+        "disc_number": 1,
+        "id": "52A8OAP8lTQKZCj4Rce92B"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6sf35vqrEAN8fOFzrKmv9A"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 288123,
+        "name": "Fire Squad",
+        "disc_number": 1,
+        "id": "6sf35vqrEAN8fOFzrKmv9A"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5dp2DNJtGuNjwgEtAN6BZd"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 257872,
+        "name": "St. Tropez",
+        "disc_number": 1,
+        "id": "5dp2DNJtGuNjwgEtAN6BZd"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Thqjtu54vKMP06pwZkAWp"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 301064,
+        "name": "G.O.M.D",
+        "disc_number": 1,
+        "id": "0Thqjtu54vKMP06pwZkAWp"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/68Dni7IE4VyPkTOH9mRWHr"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 292799,
+        "name": "No Role Modelz",
+        "disc_number": 1,
+        "id": "68Dni7IE4VyPkTOH9mRWHr"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7L3yLy4K5CI7AWK2DfAbTv"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 219173,
+        "name": "Hello",
+        "disc_number": 1,
+        "id": "7L3yLy4K5CI7AWK2DfAbTv"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5O59s7bCgTFsXDXlWecyQ1"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 292865,
+        "name": "Apparently",
+        "disc_number": 1,
+        "id": "5O59s7bCgTFsXDXlWecyQ1"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2e3Ea0o24lReQFR4FA7yXH"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 211496,
+        "name": "Love Yourz",
+        "disc_number": 1,
+        "id": "2e3Ea0o24lReQFR4FA7yXH"
+      },
+      {
+        "artists": [
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3U1mFf6W429eMYDwmgkbaZ"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 875306,
+        "name": "Note To Self",
+        "disc_number": 1,
+        "id": "3U1mFf6W429eMYDwmgkbaZ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "0UMMIkurRUmkruZ3KGBLtG"
+  }
+}

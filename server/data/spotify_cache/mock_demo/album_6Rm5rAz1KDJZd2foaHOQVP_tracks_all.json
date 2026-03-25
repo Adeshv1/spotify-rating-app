@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6Rm5rAz1KDJZd2foaHOQVP_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:35.403Z",
+  "lastRefreshedAt": "2026-03-25T22:19:35.403Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Cole Neumann",
+            "id": "74auvTTfi03X3mGsJxUqEi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6X9DrQLnANiUyPEZxq5f1L"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 126383,
+        "name": "Signs",
+        "disc_number": 1,
+        "id": "6X9DrQLnANiUyPEZxq5f1L"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6Rm5rAz1KDJZd2foaHOQVP"
+  }
+}

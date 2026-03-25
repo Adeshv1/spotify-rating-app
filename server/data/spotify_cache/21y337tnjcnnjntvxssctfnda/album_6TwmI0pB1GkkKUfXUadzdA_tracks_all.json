@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6TwmI0pB1GkkKUfXUadzdA_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:46.476Z",
+  "lastRefreshedAt": "2026-03-25T22:19:46.476Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Logan Jameison",
+            "id": "1qGVG7uUHFWBfuUXIon1gt"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4EIbWNNAT3TqvzflNhGKyU"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 150898,
+        "name": "Pines and Cedars",
+        "disc_number": 1,
+        "id": "4EIbWNNAT3TqvzflNhGKyU"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6TwmI0pB1GkkKUfXUadzdA"
+  }
+}

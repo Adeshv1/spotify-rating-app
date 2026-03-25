@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1ne2D0NxoGyZd31gAM4HNd_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.972Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.972Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bBknFVxhFjBIFX91HcneQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 199440,
+        "name": "There's Nothing Holdin' Me Back",
+        "disc_number": 1,
+        "id": "3bBknFVxhFjBIFX91HcneQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6rKr29yPKnQNhOxXMYvE9Y"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 241893,
+        "name": "Ruin",
+        "disc_number": 1,
+        "id": "6rKr29yPKnQNhOxXMYvE9Y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6EKvI1Beyh29HJoLJOdfw2"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 208733,
+        "name": "Mercy",
+        "disc_number": 1,
+        "id": "6EKvI1Beyh29HJoLJOdfw2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QGsuHI8jO1Rx4JWLUh9jd"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 187973,
+        "name": "Treat You Better",
+        "disc_number": 1,
+        "id": "3QGsuHI8jO1Rx4JWLUh9jd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1vfLwrJnjFAVo9wE78zKYs"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 199013,
+        "name": "Three Empty Words",
+        "disc_number": 1,
+        "id": "1vfLwrJnjFAVo9wE78zKYs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RGh0LzwNcYNWYCdNJwHvG"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 215773,
+        "name": "Don't Be A Fool",
+        "disc_number": 1,
+        "id": "6RGh0LzwNcYNWYCdNJwHvG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nBpOzhk48RP7WNT2OOw9W"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 186946,
+        "name": "Like This",
+        "disc_number": 1,
+        "id": "1nBpOzhk48RP7WNT2OOw9W"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5CRLZTiHict3Z9NDRBivxk"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 166053,
+        "name": "No Promises",
+        "disc_number": 1,
+        "id": "5CRLZTiHict3Z9NDRBivxk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22sC8OxlbvWNA4YxUzu11i"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 201440,
+        "name": "Lights On",
+        "disc_number": 1,
+        "id": "22sC8OxlbvWNA4YxUzu11i"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Y46EWgFZylXgqGfEBUEt1"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 199186,
+        "name": "Honest",
+        "disc_number": 1,
+        "id": "4Y46EWgFZylXgqGfEBUEt1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6C6o1thW23zGypBnWdTKec"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 175253,
+        "name": "Patience",
+        "disc_number": 1,
+        "id": "6C6o1thW23zGypBnWdTKec"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/07A4mFpXnuUrcRIc1S8ilz"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 198226,
+        "name": "Bad Reputation",
+        "disc_number": 1,
+        "id": "07A4mFpXnuUrcRIc1S8ilz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Shawn Mendes",
+            "id": "7n2wHs1TKAczGzO7Dd2rGr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5VYgsWOawA5pqeYP5pJMFR"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 300986,
+        "name": "Understand",
+        "disc_number": 1,
+        "id": "5VYgsWOawA5pqeYP5pJMFR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "1ne2D0NxoGyZd31gAM4HNd"
+  }
+}

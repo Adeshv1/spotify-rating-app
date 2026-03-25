@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4437EHGAGBNz2lJzZaWogn_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:40.799Z",
+  "lastRefreshedAt": "2026-03-25T22:19:40.799Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Novo Alonso",
+            "id": "5CswSV6SeGqATyFK4cEUqg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vC5C7G92VJ4s9lXqtOXKY"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 142582,
+        "name": "Before You",
+        "disc_number": 1,
+        "id": "5vC5C7G92VJ4s9lXqtOXKY"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4437EHGAGBNz2lJzZaWogn"
+  }
+}

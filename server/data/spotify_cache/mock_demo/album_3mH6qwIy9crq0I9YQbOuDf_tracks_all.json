@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3mH6qwIy9crq0I9YQbOuDf_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.425Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.425Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19YKaevk2bce4odJkP5L22"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 314075,
+        "name": "Nikes",
+        "disc_number": 1,
+        "id": "19YKaevk2bce4odJkP5L22"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZWlPOoWh0626oTaHrnl2a"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 249191,
+        "name": "Ivy",
+        "disc_number": 1,
+        "id": "2ZWlPOoWh0626oTaHrnl2a"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 184516,
+        "name": "Pink + White",
+        "disc_number": 1,
+        "id": "3xKsf9qdS1CyvXSMEid6g8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1IdZvb2XK8NmsovQlV6CPn"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 86943,
+        "name": "Be Yourself",
+        "disc_number": 1,
+        "id": "1IdZvb2XK8NmsovQlV6CPn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35xSkNIXi504fcEwz9USRB"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 257380,
+        "name": "Solo",
+        "disc_number": 1,
+        "id": "35xSkNIXi504fcEwz9USRB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4xR3MAscflQ262kMeiKshQ"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 184600,
+        "name": "Skyline To",
+        "disc_number": 1,
+        "id": "4xR3MAscflQ262kMeiKshQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5GUYJTQap5F3RDQiCOJhrS"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 249667,
+        "name": "Self Control",
+        "disc_number": 1,
+        "id": "5GUYJTQap5F3RDQiCOJhrS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2JUqYobT8NvARdPmc4ES2x"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 66786,
+        "name": "Good Guy",
+        "disc_number": 1,
+        "id": "2JUqYobT8NvARdPmc4ES2x"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eqoqGkKwgOaWNNHx90uEZ"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 307151,
+        "name": "Nights",
+        "disc_number": 1,
+        "id": "7eqoqGkKwgOaWNNHx90uEZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qtoRFCOEL1gRn5q9DJC7F"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 78742,
+        "name": "Solo (Reprise)",
+        "disc_number": 1,
+        "id": "2qtoRFCOEL1gRn5q9DJC7F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/17yrCsl1Ai6CZLBmGj6d6p"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 158478,
+        "name": "Pretty Sweet",
+        "disc_number": 1,
+        "id": "17yrCsl1Ai6CZLBmGj6d6p"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/73D5hBkiVZkopZrmBZTBWf"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 68588,
+        "name": "Facebook Story",
+        "disc_number": 1,
+        "id": "73D5hBkiVZkopZrmBZTBWf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1VZLEW5ZfcAbKZ94XQiSZF"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 85754,
+        "name": "Close To You",
+        "disc_number": 1,
+        "id": "1VZLEW5ZfcAbKZ94XQiSZF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2LMkwUfqC6S6s6qDVlEuzV"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 248807,
+        "name": "White Ferrari",
+        "disc_number": 1,
+        "id": "2LMkwUfqC6S6s6qDVlEuzV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1BViPjTT585XAhkUUrkts0"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 334570,
+        "name": "Seigfried",
+        "disc_number": 1,
+        "id": "1BViPjTT585XAhkUUrkts0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34xTFwjPQ1dC6uJmleno7x"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 177922,
+        "name": "Godspeed",
+        "disc_number": 1,
+        "id": "34xTFwjPQ1dC6uJmleno7x"
+      },
+      {
+        "artists": [
+          {
+            "name": "Frank Ocean",
+            "id": "2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5k8LB57xOq8UUNVaKWSqrf"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 564165,
+        "name": "Futura Free",
+        "disc_number": 1,
+        "id": "5k8LB57xOq8UUNVaKWSqrf"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "3mH6qwIy9crq0I9YQbOuDf"
+  }
+}

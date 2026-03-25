@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7ICabDvPYVzaAOL0Nt7JxD_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:45.666Z",
+  "lastRefreshedAt": "2026-03-25T22:19:45.666Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aksel Krystad",
+            "id": "6HWqfAvhFGVzX04XxDZBVw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5w3O0ONMHCM9YmTS96fplL"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 132416,
+        "name": "Without End",
+        "disc_number": 1,
+        "id": "5w3O0ONMHCM9YmTS96fplL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Aksel Krystad",
+            "id": "6HWqfAvhFGVzX04XxDZBVw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Ha08J0DbLURB78xp0oQBb"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 128500,
+        "name": "Seize",
+        "disc_number": 1,
+        "id": "2Ha08J0DbLURB78xp0oQBb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Aksel Krystad",
+            "id": "6HWqfAvhFGVzX04XxDZBVw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2IHXMdWIGkuOfMzKTkJtIg"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 129974,
+        "name": "Orb",
+        "disc_number": 1,
+        "id": "2IHXMdWIGkuOfMzKTkJtIg"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 3,
+    "albumId": "7ICabDvPYVzaAOL0Nt7JxD"
+  }
+}

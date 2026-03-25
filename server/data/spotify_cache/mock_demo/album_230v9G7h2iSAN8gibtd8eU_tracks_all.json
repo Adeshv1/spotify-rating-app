@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_230v9G7h2iSAN8gibtd8eU_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:40.232Z",
+  "lastRefreshedAt": "2026-03-25T22:19:40.232Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Una Luna",
+            "id": "6hKJteZkxCj4rEW8Enp9r7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5OwbUwe2qFPQ1iUSosmR9u"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 158374,
+        "name": "Elegy Of Solace",
+        "disc_number": 1,
+        "id": "5OwbUwe2qFPQ1iUSosmR9u"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "230v9G7h2iSAN8gibtd8eU"
+  }
+}

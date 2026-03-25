@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_27r1Al7Uf7dtsd4zNCqXb6_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:43.383Z",
+  "lastRefreshedAt": "2026-03-25T22:19:43.383Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Korey Banks",
+            "id": "300oLKNAaJNFP04XeswaAG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ANR14gcrMm6asGMNVhivt"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 170500,
+        "name": "Come close",
+        "disc_number": 1,
+        "id": "3ANR14gcrMm6asGMNVhivt"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "27r1Al7Uf7dtsd4zNCqXb6"
+  }
+}

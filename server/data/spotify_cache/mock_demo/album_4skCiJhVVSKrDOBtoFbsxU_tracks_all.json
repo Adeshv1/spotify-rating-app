@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4skCiJhVVSKrDOBtoFbsxU_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.326Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.326Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19HA9J80qZfIkAnp2g8N2S"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 234280,
+        "name": "Famous",
+        "disc_number": 1,
+        "id": "19HA9J80qZfIkAnp2g8N2S"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5eqK0tbzUPo2SoeZsov04s"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 220306,
+        "name": "Bank Account",
+        "disc_number": 1,
+        "id": "5eqK0tbzUPo2SoeZsov04s"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28mrq1UKIVItTbPqyub52b"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 292266,
+        "name": "Close My Eyes",
+        "disc_number": 1,
+        "id": "28mrq1UKIVItTbPqyub52b"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2MnJoNVtf0pw7HUn3I1Tih"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 162253,
+        "name": "Bad Business",
+        "disc_number": 1,
+        "id": "2MnJoNVtf0pw7HUn3I1Tih"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6sBB5CBuzKJhDooro1IraE"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 169093,
+        "name": "Baby Girl",
+        "disc_number": 1,
+        "id": "6sBB5CBuzKJhDooro1IraE"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1GFvYZ72Ca67UG9Kdjjk3C"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 263426,
+        "name": "Thug Life",
+        "disc_number": 1,
+        "id": "1GFvYZ72Ca67UG9Kdjjk3C"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gHWMJzCYkbDcsqKHoycJw"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 239160,
+        "name": "FaceTime",
+        "disc_number": 1,
+        "id": "6gHWMJzCYkbDcsqKHoycJw"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6DLSa36zH0cSTO7bWCCxx0"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 219360,
+        "name": "Nothin New",
+        "disc_number": 1,
+        "id": "6DLSa36zH0cSTO7bWCCxx0"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0G149jkGWKwrPXUGkEDgWM"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 271306,
+        "name": "Numb",
+        "disc_number": 1,
+        "id": "0G149jkGWKwrPXUGkEDgWM"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2pmYug1wWd0WoK5tpbsbKL"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 147426,
+        "name": "Dead People",
+        "disc_number": 1,
+        "id": "2pmYug1wWd0WoK5tpbsbKL"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/06RzVT7uWMYv2fPTyiOy1m"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 213426,
+        "name": "Money Convo",
+        "disc_number": 1,
+        "id": "06RzVT7uWMYv2fPTyiOy1m"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7rErmb9ztCh29H8nWmavQz"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 217866,
+        "name": "Special",
+        "disc_number": 1,
+        "id": "7rErmb9ztCh29H8nWmavQz"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0zcmVx57BsnlYaPu7k2e2e"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 313986,
+        "name": "Whole Lot",
+        "disc_number": 1,
+        "id": "0zcmVx57BsnlYaPu7k2e2e"
+      },
+      {
+        "artists": [
+          {
+            "name": "21 Savage",
+            "id": "1URnnhqYAYcrqrcwql10ft"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1U3XdjHLA6TgpVEGTikNcp"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 431586,
+        "name": "7 Min Freestyle",
+        "disc_number": 1,
+        "id": "1U3XdjHLA6TgpVEGTikNcp"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "4skCiJhVVSKrDOBtoFbsxU"
+  }
+}

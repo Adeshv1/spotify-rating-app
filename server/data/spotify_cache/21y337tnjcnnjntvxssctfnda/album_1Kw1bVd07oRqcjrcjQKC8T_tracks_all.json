@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1Kw1bVd07oRqcjrcjQKC8T_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.803Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.803Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Yt9lRtS5V4nbJnwcgFgvC"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 200013,
+        "name": "You Da One",
+        "disc_number": 1,
+        "id": "3Yt9lRtS5V4nbJnwcgFgvC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3tyPOhuVnt5zd5kGfxbCyL"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 242680,
+        "name": "Where Have You Been",
+        "disc_number": 1,
+        "id": "3tyPOhuVnt5zd5kGfxbCyL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "Calvin Harris",
+            "id": "7CajNmpbOovFoOoasH2HaY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0U10zFw4GlBacOy9VDGfGL"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 215226,
+        "name": "We Found Love",
+        "disc_number": 1,
+        "id": "0U10zFw4GlBacOy9VDGfGL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          },
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57mKcbEq7nMqtJ4gqJvWcp"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 209600,
+        "name": "Talk That Talk",
+        "disc_number": 1,
+        "id": "57mKcbEq7nMqtJ4gqJvWcp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3jYW03V9XeM2w7LJ0EXQDC"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 178026,
+        "name": "Cockiness (Love It)",
+        "disc_number": 1,
+        "id": "3jYW03V9XeM2w7LJ0EXQDC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4EfN6bixdOOgoLYR5C4cWo"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 78200,
+        "name": "Birthday Cake",
+        "disc_number": 1,
+        "id": "4EfN6bixdOOgoLYR5C4cWo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3gMC76iTaypaOnuIZZvoiR"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 237013,
+        "name": "We All Want Love",
+        "disc_number": 1,
+        "id": "3gMC76iTaypaOnuIZZvoiR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5A0Swrynpx7ALauNv08nBe"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 212186,
+        "name": "Drunk On Love",
+        "disc_number": 1,
+        "id": "5A0Swrynpx7ALauNv08nBe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5CegsKtrwkX9HKb2YU5FOm"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 209266,
+        "name": "Roc Me Out",
+        "disc_number": 1,
+        "id": "5CegsKtrwkX9HKb2YU5FOm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ROCX1nquOZ5i05YfGysu0"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 211000,
+        "name": "Watch n' Learn",
+        "disc_number": 1,
+        "id": "1ROCX1nquOZ5i05YfGysu0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2f5PEKVrNEHL1X0dtMNgYu"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 256306,
+        "name": "Farewell",
+        "disc_number": 1,
+        "id": "2f5PEKVrNEHL1X0dtMNgYu"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "1Kw1bVd07oRqcjrcjQKC8T"
+  }
+}

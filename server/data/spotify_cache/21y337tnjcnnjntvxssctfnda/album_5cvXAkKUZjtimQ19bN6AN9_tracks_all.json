@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5cvXAkKUZjtimQ19bN6AN9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:43.725Z",
+  "lastRefreshedAt": "2026-03-25T22:19:43.725Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Damien Jeunet",
+            "id": "4PLGZc5uRGoXxjzjVDzlPs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5LmaeC0bRQqaHtK781KOhD"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 158000,
+        "name": "Archipelago",
+        "disc_number": 1,
+        "id": "5LmaeC0bRQqaHtK781KOhD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "5cvXAkKUZjtimQ19bN6AN9"
+  }
+}

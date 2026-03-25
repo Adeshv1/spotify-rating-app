@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7carHLnG8dnfTtFik3eqhb_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:41.515Z",
+  "lastRefreshedAt": "2026-03-25T22:19:41.515Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Florentin Davies",
+            "id": "5W982ShqwBuQZHoATVqi4q"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Q3Ap0awH9ziePtPXhxWEB"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 173133,
+        "name": "Almost April",
+        "disc_number": 1,
+        "id": "5Q3Ap0awH9ziePtPXhxWEB"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7carHLnG8dnfTtFik3eqhb"
+  }
+}

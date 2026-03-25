@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4rFrdkSWs0dtj0rWPzOk1v_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:04.593Z",
+  "lastRefreshedAt": "2026-03-25T22:20:04.593Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5kqIPrATaCc2LqxVWzQGbk"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 237300,
+        "name": "7 Years",
+        "disc_number": 1,
+        "id": "5kqIPrATaCc2LqxVWzQGbk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xRBYte8zzJNmRfBgYIWnX"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 191760,
+        "name": "Take the World By Storm",
+        "disc_number": 1,
+        "id": "5xRBYte8zzJNmRfBgYIWnX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ArQzSBevAdXTxRY6Ulhbq"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 206902,
+        "name": "Mama Said",
+        "disc_number": 1,
+        "id": "5ArQzSBevAdXTxRY6Ulhbq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Vq1gRj4U2HQ4uLBbT9y9U"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 218733,
+        "name": "Happy Home",
+        "disc_number": 1,
+        "id": "3Vq1gRj4U2HQ4uLBbT9y9U"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xi7d2yGx09UKMAAr7A3az"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 203080,
+        "name": "Drunk in the Morning",
+        "disc_number": 1,
+        "id": "3xi7d2yGx09UKMAAr7A3az"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3DwN8YfAtvJh4c5u8DZPen"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 266226,
+        "name": "Better Than Yourself (Criminal Mind, Pt. 2)",
+        "disc_number": 1,
+        "id": "3DwN8YfAtvJh4c5u8DZPen"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6WtQ5gKWzVW1MxiEbeCtoi"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 190120,
+        "name": "Don't You Worry 'Bout Me",
+        "disc_number": 1,
+        "id": "6WtQ5gKWzVW1MxiEbeCtoi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/67DNRQWjRLMFvekBRprYtW"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 236853,
+        "name": "What Happened to Perfect",
+        "disc_number": 1,
+        "id": "67DNRQWjRLMFvekBRprYtW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Mkj948t1Rvf8Zr9cgE1oE"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 206346,
+        "name": "Strip No More",
+        "disc_number": 1,
+        "id": "6Mkj948t1Rvf8Zr9cgE1oE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3cdmLOVYY9vht4a1THRJcZ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 202893,
+        "name": "You're Not There",
+        "disc_number": 1,
+        "id": "3cdmLOVYY9vht4a1THRJcZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lukas Graham",
+            "id": "25u4wHJWxCA9vO0CzxAbK7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/630aEV7ZOzv5BcWxzXFokR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 244626,
+        "name": "Funeral",
+        "disc_number": 1,
+        "id": "630aEV7ZOzv5BcWxzXFokR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "4rFrdkSWs0dtj0rWPzOk1v"
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0pFydyko4Iw450abXlDPpp_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.581Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.581Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bcoefFvjSgbq7IPBEVLNt"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 172053,
+        "name": "Intro",
+        "disc_number": 1,
+        "id": "2bcoefFvjSgbq7IPBEVLNt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0BKXZkU8oGad58MyTFyFXu"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 312960,
+        "name": "Blunt Blowin",
+        "disc_number": 1,
+        "id": "0BKXZkU8oGad58MyTFyFXu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/66TxPMqbyDLJOusYH4o93n"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 198280,
+        "name": "MegaMan",
+        "disc_number": 1,
+        "id": "66TxPMqbyDLJOusYH4o93n"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Cory Gunz",
+            "id": "7BAaznGSsqcksud4R5ou5z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Qy6a5KzM4XlRxsNcGYhgH"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 248586,
+        "name": "6 Foot 7 Foot",
+        "disc_number": 1,
+        "id": "5Qy6a5KzM4XlRxsNcGYhgH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/26rzYxyfEcuAfga8ZtPt64"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 281080,
+        "name": "Nightmares Of The Bottom",
+        "disc_number": 1,
+        "id": "26rzYxyfEcuAfga8ZtPt64"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0b4M7hd7mzLTm99MrMeZsp"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 305840,
+        "name": "She Will",
+        "disc_number": 1,
+        "id": "0b4M7hd7mzLTm99MrMeZsp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "T-Pain",
+            "id": "3aQeKQSyrW4qWr35idm0cy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ZiMQKIieJ7GTRYnO8fP8p"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 278520,
+        "name": "How To Hate",
+        "disc_number": 1,
+        "id": "2ZiMQKIieJ7GTRYnO8fP8p"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Tech N9ne",
+            "id": "6UBA15slIuadJ8h2lPRPos"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1taGiVxLW3rzZ0T5TyUrws"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 121226,
+        "name": "Interlude",
+        "disc_number": 1,
+        "id": "1taGiVxLW3rzZ0T5TyUrws"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Rick Ross",
+            "id": "1sBkRIssrMs1AbVkOJbc7a"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dpok9LbD1eATa5XPMardF"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 286973,
+        "name": "John",
+        "disc_number": 1,
+        "id": "0dpok9LbD1eATa5XPMardF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1aQAx8RAoAF5gqk5RMpQOV"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 223920,
+        "name": "Abortion",
+        "disc_number": 1,
+        "id": "1aQAx8RAoAF5gqk5RMpQOV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "John Legend",
+            "id": "5y2Xq6xcjJb2jVM54GHK3t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1phfqF2ZNrLAOMFuLb0ZsN"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 232093,
+        "name": "So Special",
+        "disc_number": 1,
+        "id": "1phfqF2ZNrLAOMFuLb0ZsN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5W7BcYDIaeXnpG3e39T7hJ"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 240306,
+        "name": "How To Love",
+        "disc_number": 1,
+        "id": "5W7BcYDIaeXnpG3e39T7hJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/15WOWZpw9YnE4RQQnXHQqW"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 255373,
+        "name": "President Carter",
+        "disc_number": 1,
+        "id": "15WOWZpw9YnE4RQQnXHQqW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Jadakiss",
+            "id": "5pnbUBPifNnlusY8kTBivi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FEZedp3QtZK11jcphYQ4y"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 241466,
+        "name": "It's Good",
+        "disc_number": 1,
+        "id": "0FEZedp3QtZK11jcphYQ4y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Bun B",
+            "id": "45a6gCQWq61lIUDmr1tKuO"
+          },
+          {
+            "name": "Nas",
+            "id": "20qISvAhX20dpIbOOzGK3q"
+          },
+          {
+            "name": "Shyne",
+            "id": "64ovxBmjJ9ZDqkzEXVWpVc"
+          },
+          {
+            "name": "Busta Rhymes",
+            "id": "1YfEcTuGvBQ8xSD1f53UnK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nDCgWmID4UcKJQ4muVPen"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 232666,
+        "name": "Outro",
+        "disc_number": 1,
+        "id": "0nDCgWmID4UcKJQ4muVPen"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qfhmUBsKt9e9bxBVOEANF"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 281266,
+        "name": "I Like The View",
+        "disc_number": 1,
+        "id": "2qfhmUBsKt9e9bxBVOEANF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Bruno Mars",
+            "id": "0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5hUYsaOyMY32yjRXeuQwGj"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 228093,
+        "name": "Mirror",
+        "disc_number": 1,
+        "id": "5hUYsaOyMY32yjRXeuQwGj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6mTBGEeuTNbEw4RULwJfgj"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 165013,
+        "name": "Two Shots",
+        "disc_number": 1,
+        "id": "6mTBGEeuTNbEw4RULwJfgj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dQL9iRVx0popEIlZVYpc9"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 233520,
+        "name": "Up Up And Away",
+        "disc_number": 1,
+        "id": "6dQL9iRVx0popEIlZVYpc9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Kevin Rudolf",
+            "id": "0Chxmm4XMM87mJOHvyiUzL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7v1zLL6rOsRfGmhiXDw9lD"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 218866,
+        "name": "Novacane",
+        "disc_number": 1,
+        "id": "7v1zLL6rOsRfGmhiXDw9lD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "name": "Birdman",
+            "id": "35sCXuy5gN6Or69rZ9vqBs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4sm8x2UGtTo8HUQRkukoAs"
+        },
+        "track_number": 21,
+        "explicit": true,
+        "duration_ms": 245346,
+        "name": "I Got Some Money On Me",
+        "disc_number": 1,
+        "id": "4sm8x2UGtTo8HUQRkukoAs"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 21,
+    "albumId": "0pFydyko4Iw450abXlDPpp"
+  }
+}

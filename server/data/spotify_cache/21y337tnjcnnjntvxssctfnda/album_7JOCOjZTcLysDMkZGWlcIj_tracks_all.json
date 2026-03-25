@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7JOCOjZTcLysDMkZGWlcIj_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.305Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.305Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/629MXzH7txguTIePdNXOWY"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 263920,
+        "name": "Good Ol' Days",
+        "disc_number": 1,
+        "id": "629MXzH7txguTIePdNXOWY"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Sayb1EWTywPttwJo7zjBt"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 232253,
+        "name": "Six Degrees of Separation",
+        "disc_number": 1,
+        "id": "0Sayb1EWTywPttwJo7zjBt"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          },
+          {
+            "name": "will.i.am",
+            "id": "085pc2PYOi8bGKj0PNjekA"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7wMq5n8mYSKlQIGECKUgTX"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 202533,
+        "name": "Hall of Fame (feat. will.i.am)",
+        "disc_number": 1,
+        "id": "7wMq5n8mYSKlQIGECKUgTX"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6EzSy7WxNCazx3csu7lxdV"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 219546,
+        "name": "If You Could See Me Now",
+        "disc_number": 1,
+        "id": "6EzSy7WxNCazx3csu7lxdV"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7JqCjgNaHhNcvL9DDLynJP"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 286773,
+        "name": "Glowing",
+        "disc_number": 1,
+        "id": "7JqCjgNaHhNcvL9DDLynJP"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0SrrslErFxqDBR30B7LVSb"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 264746,
+        "name": "Give the Love Around",
+        "disc_number": 1,
+        "id": "0SrrslErFxqDBR30B7LVSb"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5KxoDNLmlkvEEZNSdw7Evj"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 274626,
+        "name": "Broken Arrow",
+        "disc_number": 1,
+        "id": "5KxoDNLmlkvEEZNSdw7Evj"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ljKFva9CLIoc0Y26B2NSb"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 221453,
+        "name": "Kaleidoscope",
+        "disc_number": 1,
+        "id": "6ljKFva9CLIoc0Y26B2NSb"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2nZRTRS4Asz7qV6CLW85qA"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 245213,
+        "name": "No Words",
+        "disc_number": 1,
+        "id": "2nZRTRS4Asz7qV6CLW85qA"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6QiBNpMK7xlZFnnoEdIPCr"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 189466,
+        "name": "Millionaires",
+        "disc_number": 1,
+        "id": "6QiBNpMK7xlZFnnoEdIPCr"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MkiqU0AvKhjOZdL6I7NQS"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 250333,
+        "name": "Moon Boots",
+        "disc_number": 2,
+        "id": "1MkiqU0AvKhjOZdL6I7NQS"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/46N5bUS88qYcDXYvCRCPPm"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 278706,
+        "name": "Hurricanes",
+        "disc_number": 2,
+        "id": "46N5bUS88qYcDXYvCRCPPm"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FB5ILDICqwK6xj7W1RP9u"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 201093,
+        "name": "Hall of Fame",
+        "disc_number": 2,
+        "id": "0FB5ILDICqwK6xj7W1RP9u"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2hFw7EzB1g8QGunPJjBjrh"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 338400,
+        "name": "Breakeven - Live At The Aviva Stadium, Dublin",
+        "disc_number": 2,
+        "id": "2hFw7EzB1g8QGunPJjBjrh"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xMVakxkbsjd8KI6QmG79Q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 295613,
+        "name": "The Man Who Can't Be Moved - Live At The Aviva Stadium, Dublin",
+        "disc_number": 2,
+        "id": "2xMVakxkbsjd8KI6QmG79Q"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4eeHsWT8u0zwXejVYaSoLM"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 298066,
+        "name": "Talk You Down - Live At The Aviva Stadium, Dublin",
+        "disc_number": 2,
+        "id": "4eeHsWT8u0zwXejVYaSoLM"
+      },
+      {
+        "artists": [
+          {
+            "name": "The Script",
+            "id": "3AQRLZ9PuTAozP28Skbq8V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4llNwotltjRfm312AvF7vn"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 304973,
+        "name": "For the First Time - Live At The Aviva Stadium, Dublin",
+        "disc_number": 2,
+        "id": "4llNwotltjRfm312AvF7vn"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "7JOCOjZTcLysDMkZGWlcIj"
+  }
+}

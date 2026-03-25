@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3BmcYMh0KYsimWL6p2gPa9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.999Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.999Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Ludacris",
+            "id": "3ipn9JLAPI5GUEo4y4jcoi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6epn3r7S14KUqlReYr77hA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 214240,
+        "name": "Baby",
+        "disc_number": 1,
+        "id": "6epn3r7S14KUqlReYr77hA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rLIv187BhjyweFe89SgLn"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 220920,
+        "name": "Somebody To Love",
+        "disc_number": 1,
+        "id": "3rLIv187BhjyweFe89SgLn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1DyV9obL0pPibOjW5ufg15"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 222960,
+        "name": "Stuck In The Moment",
+        "disc_number": 1,
+        "id": "1DyV9obL0pPibOjW5ufg15"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Xw2FLih8m5ItDbyP992HH"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 196906,
+        "name": "U Smile",
+        "disc_number": 1,
+        "id": "6Xw2FLih8m5ItDbyP992HH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1xgN9KBVVoTNygpYjpXnvH"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 212573,
+        "name": "Runaway Love",
+        "disc_number": 1,
+        "id": "1xgN9KBVVoTNygpYjpXnvH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01BlGnXpLuC0BjgUxVYZFb"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 264400,
+        "name": "Never Let You Go",
+        "disc_number": 1,
+        "id": "01BlGnXpLuC0BjgUxVYZFb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Jessica Jarrell",
+            "id": "6sjsQahFYXgmOmocbuHou3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1tzkJMX3gNjnpcHdLD0pM3"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 251186,
+        "name": "Overboard",
+        "disc_number": 1,
+        "id": "1tzkJMX3gNjnpcHdLD0pM3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Sean Kingston",
+            "id": "6S0dmVVn4udvppDhZIWxCr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75vEuMA15pb8JmgrGugHEs"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 202626,
+        "name": "Eenie Meenie",
+        "disc_number": 1,
+        "id": "75vEuMA15pb8JmgrGugHEs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7wj1Lb5ggzMWJ9TqZJ2dwo"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 234933,
+        "name": "Up",
+        "disc_number": 1,
+        "id": "7wj1Lb5ggzMWJ9TqZJ2dwo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0aPZbnkMoWJaJ5CNVLCj8S"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 232720,
+        "name": "That Should Be Me",
+        "disc_number": 1,
+        "id": "0aPZbnkMoWJaJ5CNVLCj8S"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "3BmcYMh0KYsimWL6p2gPa9"
+  }
+}

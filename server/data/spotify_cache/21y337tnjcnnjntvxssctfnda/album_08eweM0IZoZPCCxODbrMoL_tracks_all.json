@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_08eweM0IZoZPCCxODbrMoL_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:12.240Z",
+  "lastRefreshedAt": "2026-03-25T22:20:12.240Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7Jw7oOzXLYtSKCA8eqNxKK"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 169773,
+        "name": "Watch Me Do",
+        "disc_number": 1,
+        "id": "7Jw7oOzXLYtSKCA8eqNxKK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3KwwE4sgCzMaKWq6QBebmX"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 181240,
+        "name": "Me Too",
+        "disc_number": 1,
+        "id": "3KwwE4sgCzMaKWq6QBebmX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0l0CvurVUrr2w3Jj1hOVFc"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 213506,
+        "name": "NO",
+        "disc_number": 1,
+        "id": "0l0CvurVUrr2w3Jj1hOVFc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          },
+          {
+            "name": "Yo Gotti",
+            "id": "6Ha4aES39QiVjR0L2lwuwq"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6b8uJshhCxmASNCjg5hLJo"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 167613,
+        "name": "Better (feat. Yo Gotti)",
+        "disc_number": 1,
+        "id": "6b8uJshhCxmASNCjg5hLJo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wb0X7n3cAKeajIOguyd9t"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 245120,
+        "name": "Hopeless Romantic",
+        "disc_number": 1,
+        "id": "0wb0X7n3cAKeajIOguyd9t"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          },
+          {
+            "name": "LunchMoney Lewis",
+            "id": "2iUbk5KhZYZt4CRvWbwb7S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1wIDxpXCRnHmQJOvSsVIP1"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 167760,
+        "name": "I Love Me",
+        "disc_number": 1,
+        "id": "1wIDxpXCRnHmQJOvSsVIP1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rsOJ5Nbmr7pWxY1p6ZDxk"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 238946,
+        "name": "Kindly Calm Me Down",
+        "disc_number": 1,
+        "id": "3rsOJ5Nbmr7pWxY1p6ZDxk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bUWLYU3s6sbQqlo7075Og"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 208693,
+        "name": "Woman Up",
+        "disc_number": 1,
+        "id": "2bUWLYU3s6sbQqlo7075Og"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2f4FDuRjuV1yXfpoG49ABM"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 164733,
+        "name": "Just a Friend to You",
+        "disc_number": 1,
+        "id": "2f4FDuRjuV1yXfpoG49ABM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/32jNxnHEdW0R152i2MFLIC"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 200013,
+        "name": "I Won't Let You Down",
+        "disc_number": 1,
+        "id": "32jNxnHEdW0R152i2MFLIC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6nIMEvZUmWXKp008VsZKDL"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 183240,
+        "name": "Dance Like Yo Daddy",
+        "disc_number": 1,
+        "id": "6nIMEvZUmWXKp008VsZKDL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3GITyRCiTn1dlQfmKXVeQ0"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 222013,
+        "name": "Champagne Problems",
+        "disc_number": 1,
+        "id": "3GITyRCiTn1dlQfmKXVeQ0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          },
+          {
+            "name": "Kelli Trainor",
+            "id": "1pW0NUJuJSLcLNW1JTlqiP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3PYZWh5KZ6VlXHDlwDVJUt"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 194960,
+        "name": "Mom (feat. Kelli Trainor)",
+        "disc_number": 1,
+        "id": "3PYZWh5KZ6VlXHDlwDVJUt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4wiMHrvVktJvSmNeCPw5RS"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 210386,
+        "name": "Friends",
+        "disc_number": 1,
+        "id": "4wiMHrvVktJvSmNeCPw5RS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          },
+          {
+            "name": "R. City",
+            "id": "4TH4BHy0LdBi3dpBW4P2UX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2wlg0KPxVfupjkhC2z14zo"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 205906,
+        "name": "Thank You (feat. R. City)",
+        "disc_number": 1,
+        "id": "2wlg0KPxVfupjkhC2z14zo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Kd3Ih8VZgaetIqke9SIND"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 221320,
+        "name": "Goosebumps",
+        "disc_number": 1,
+        "id": "0Kd3Ih8VZgaetIqke9SIND"
+      },
+      {
+        "artists": [
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xTHJOM0ZxiEaCjpTfjeF0"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 193853,
+        "name": "Throwback Love",
+        "disc_number": 1,
+        "id": "3xTHJOM0ZxiEaCjpTfjeF0"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "08eweM0IZoZPCCxODbrMoL"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2aOzBC2dw4L6USRUdyu2X3_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.023Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.023Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Don Toliver",
+            "id": "4Gso3d4CscCijv0lmajZWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0FrESd7LNffZyGZ37VuSmH"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 180705,
+        "name": "ATM",
+        "disc_number": 1,
+        "id": "0FrESd7LNffZyGZ37VuSmH"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2aOzBC2dw4L6USRUdyu2X3"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0x3Xq6Lhchktl3cksHTRfm_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:34.866Z",
+  "lastRefreshedAt": "2026-03-25T22:19:34.866Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Felix Brightwood",
+            "id": "2HITDeV1KHvOpkWy95Rv9t"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/48P8vOmx5edtkwLqeTvqJn"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 144960,
+        "name": "Blue Hour",
+        "disc_number": 1,
+        "id": "48P8vOmx5edtkwLqeTvqJn"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0x3Xq6Lhchktl3cksHTRfm"
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_36zFjOhkJXdudJMUiEqroA_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:22.402Z",
+  "lastRefreshedAt": "2026-03-25T22:19:22.402Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5zFQ7S1D4JCWLglRw7IMyf"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 3533,
+        "name": "Love Speaks",
+        "disc_number": 1,
+        "id": "5zFQ7S1D4JCWLglRw7IMyf"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7cJlI4SqxAtbLwPnNz18P5"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 165795,
+        "name": "Mask And Gloves",
+        "disc_number": 1,
+        "id": "7cJlI4SqxAtbLwPnNz18P5"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5gSIZs6z9f7mJwBbtYMQXs"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 165969,
+        "name": "Another Episode",
+        "disc_number": 1,
+        "id": "5gSIZs6z9f7mJwBbtYMQXs"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WBZnIC6NoSixIgbN7OYWx"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 198187,
+        "name": "Anti-Social",
+        "disc_number": 1,
+        "id": "1WBZnIC6NoSixIgbN7OYWx"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7lcHxzbQUiBV2geV8Jf0y6"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 119978,
+        "name": "Headtap",
+        "disc_number": 1,
+        "id": "7lcHxzbQUiBV2geV8Jf0y6"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/50wWhxRIdwQX6VIE8jQcp6"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 145414,
+        "name": "Badder Than Yours",
+        "disc_number": 1,
+        "id": "50wWhxRIdwQX6VIE8jQcp6"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1jWZoYxu9RdZfvpdA7LST8"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 149500,
+        "name": "Me and You",
+        "disc_number": 1,
+        "id": "1jWZoYxu9RdZfvpdA7LST8"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3FxX3O420wCIPBcHAUPqzK"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 172293,
+        "name": "My Life I Apologize",
+        "disc_number": 1,
+        "id": "3FxX3O420wCIPBcHAUPqzK"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6uqVW1v1y5bdb54w2ikz7e"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 165905,
+        "name": "Perfecto",
+        "disc_number": 1,
+        "id": "6uqVW1v1y5bdb54w2ikz7e"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2MpexxdPAAlGeQg5EkqPw6"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 190826,
+        "name": "Ballin",
+        "disc_number": 1,
+        "id": "2MpexxdPAAlGeQg5EkqPw6"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0fexpazh4vYXbnDWhzlb9T"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 227129,
+        "name": "Bang Out",
+        "disc_number": 1,
+        "id": "0fexpazh4vYXbnDWhzlb9T"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3eIhhxsApqbp4dyu7PVaJ7"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 180613,
+        "name": "Don't Break",
+        "disc_number": 1,
+        "id": "3eIhhxsApqbp4dyu7PVaJ7"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2oJ0KQhHawciJV5RriP0TP"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 149663,
+        "name": "Good Dope",
+        "disc_number": 1,
+        "id": "2oJ0KQhHawciJV5RriP0TP"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          },
+          {
+            "name": "Burna Boy",
+            "id": "3wcj11K77LjEY1PkEazffa"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/68uqUS5wIIZgSbnWwNEH9Q"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 165095,
+        "name": "Teary Eyes (feat. Burna Boy)",
+        "disc_number": 1,
+        "id": "68uqUS5wIIZgSbnWwNEH9Q"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/74Mnd7eySUBXCs7PEDJF3C"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 127534,
+        "name": "For You",
+        "disc_number": 1,
+        "id": "74Mnd7eySUBXCs7PEDJF3C"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Sy9PzIKNGbnoY3WWPBZAR"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 176294,
+        "name": "Bruce Wayne",
+        "disc_number": 1,
+        "id": "0Sy9PzIKNGbnoY3WWPBZAR"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3jqq7FxiVkIBlz5T0oij6r"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 164323,
+        "name": "FWYT",
+        "disc_number": 1,
+        "id": "3jqq7FxiVkIBlz5T0oij6r"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4FCcM8tfbvzcfniwMnSzzg"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 172166,
+        "name": "Role Model",
+        "disc_number": 1,
+        "id": "4FCcM8tfbvzcfniwMnSzzg"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lOKKhOf7l24r25NOj5d5d"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 131080,
+        "name": "Baby Boo",
+        "disc_number": 1,
+        "id": "6lOKKhOf7l24r25NOj5d5d"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/28NgPsmoySTvfVvMFfDHiz"
+        },
+        "track_number": 20,
+        "explicit": true,
+        "duration_ms": 222089,
+        "name": "Vendetta",
+        "disc_number": 1,
+        "id": "28NgPsmoySTvfVvMFfDHiz"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/07p5Rk1rteOLrfo6RYg8zI"
+        },
+        "track_number": 21,
+        "explicit": true,
+        "duration_ms": 133358,
+        "name": "Horsepower",
+        "disc_number": 1,
+        "id": "07p5Rk1rteOLrfo6RYg8zI"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5QAZpctXHfwbDXvWQSTBsr"
+        },
+        "track_number": 22,
+        "explicit": true,
+        "duration_ms": 210955,
+        "name": "My Grave",
+        "disc_number": 1,
+        "id": "5QAZpctXHfwbDXvWQSTBsr"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6oWnklXrRni909zZITAXTD"
+        },
+        "track_number": 23,
+        "explicit": true,
+        "duration_ms": 196632,
+        "name": "My Brothers",
+        "disc_number": 1,
+        "id": "6oWnklXrRni909zZITAXTD"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Y1VYdUhIwd88K8frS9eI1"
+        },
+        "track_number": 24,
+        "explicit": true,
+        "duration_ms": 179619,
+        "name": "I Want",
+        "disc_number": 1,
+        "id": "6Y1VYdUhIwd88K8frS9eI1"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2H5yrhMTVIsqcJxQnyj2yz"
+        },
+        "track_number": 25,
+        "explicit": true,
+        "duration_ms": 195008,
+        "name": "L.O.V.E.H.A.T.E",
+        "disc_number": 1,
+        "id": "2H5yrhMTVIsqcJxQnyj2yz"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34rsUwQw8VJrgsMUj6LkUx"
+        },
+        "track_number": 26,
+        "explicit": true,
+        "duration_ms": 180887,
+        "name": "Resume",
+        "disc_number": 1,
+        "id": "34rsUwQw8VJrgsMUj6LkUx"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4zjDmKKRQWskqkkhezKsFa"
+        },
+        "track_number": 27,
+        "explicit": true,
+        "duration_ms": 137142,
+        "name": "Steal The Show",
+        "disc_number": 1,
+        "id": "4zjDmKKRQWskqkkhezKsFa"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/53PU1kFo2U6Ym0vIskM6FT"
+        },
+        "track_number": 28,
+        "explicit": true,
+        "duration_ms": 216197,
+        "name": "Factor",
+        "disc_number": 1,
+        "id": "53PU1kFo2U6Ym0vIskM6FT"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6LNYAP2mcxAHieT9sQu3uU"
+        },
+        "track_number": 29,
+        "explicit": true,
+        "duration_ms": 145469,
+        "name": "Leaving Me",
+        "disc_number": 1,
+        "id": "6LNYAP2mcxAHieT9sQu3uU"
+      },
+      {
+        "artists": [
+          {
+            "name": "YoungBoy Never Broke Again",
+            "id": "7wlFDEWiM5OoIAt8RSli8b"
+          },
+          {
+            "name": "Jelly Roll",
+            "id": "19k8AgwwTSxeaxkOuCQEJs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2EXk9xakgtdNIwXpsDxGZJ"
+        },
+        "track_number": 30,
+        "explicit": true,
+        "duration_ms": 134001,
+        "name": "Devil Go Away (feat. Jelly Roll)",
+        "disc_number": 1,
+        "id": "2EXk9xakgtdNIwXpsDxGZJ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 30,
+    "albumId": "36zFjOhkJXdudJMUiEqroA"
+  }
+}

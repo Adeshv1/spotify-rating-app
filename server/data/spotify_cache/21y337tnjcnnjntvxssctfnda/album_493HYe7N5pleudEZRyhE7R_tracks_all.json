@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_493HYe7N5pleudEZRyhE7R_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.428Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.428Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JXXNGljqupsJaZsgSbMZV"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 195373,
+        "name": "Sure Thing",
+        "disc_number": 1,
+        "id": "0JXXNGljqupsJaZsgSbMZV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          },
+          {
+            "name": "J. Cole",
+            "id": "6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5VA4Ispp52EA1sOqzMz3Av"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 295920,
+        "name": "All I Want Is You (feat. J. Cole)",
+        "disc_number": 1,
+        "id": "5VA4Ispp52EA1sOqzMz3Av"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1eUGmzzvahJjOSWgDHuRlv"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 102813,
+        "name": "Girl With The Tattoo Enter.lewd",
+        "disc_number": 1,
+        "id": "1eUGmzzvahJjOSWgDHuRlv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5JBVrYNpJEa7eyG0E8UMvX"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 177480,
+        "name": "Pay Me",
+        "disc_number": 1,
+        "id": "5JBVrYNpJEa7eyG0E8UMvX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4isk4UYRcmslphcTq61xUg"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 226360,
+        "name": "Quickie",
+        "disc_number": 1,
+        "id": "4isk4UYRcmslphcTq61xUg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4qE2iDO78w5uHs03R8V7FQ"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 203680,
+        "name": "Girls Like You",
+        "disc_number": 1,
+        "id": "4qE2iDO78w5uHs03R8V7FQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tmWKd8kKXaYGfhihe5zmp"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 31666,
+        "name": "Overload Enter.lewd",
+        "disc_number": 1,
+        "id": "6tmWKd8kKXaYGfhihe5zmp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7dB1PiZseXwBZSObScI2nH"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 229320,
+        "name": "Hard Way",
+        "disc_number": 1,
+        "id": "7dB1PiZseXwBZSObScI2nH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3TeNkdbYRK8mGfvTMZtXBM"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 322226,
+        "name": "Teach Me",
+        "disc_number": 1,
+        "id": "3TeNkdbYRK8mGfvTMZtXBM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7E0Vsj8rinTQl50BAsFewF"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 227960,
+        "name": "Hero",
+        "disc_number": 1,
+        "id": "7E0Vsj8rinTQl50BAsFewF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3HBZIY3FVzXu6YjhExNqWe"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 181533,
+        "name": "Vixen",
+        "disc_number": 1,
+        "id": "3HBZIY3FVzXu6YjhExNqWe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4YMEYbRvgzVXJoKi53SSgU"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 203426,
+        "name": "To The Moon",
+        "disc_number": 1,
+        "id": "4YMEYbRvgzVXJoKi53SSgU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4WLQVGtxD8eqDPMX2CiZlE"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 176013,
+        "name": "My Piece",
+        "disc_number": 1,
+        "id": "4WLQVGtxD8eqDPMX2CiZlE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 13,
+    "albumId": "493HYe7N5pleudEZRyhE7R"
+  }
+}

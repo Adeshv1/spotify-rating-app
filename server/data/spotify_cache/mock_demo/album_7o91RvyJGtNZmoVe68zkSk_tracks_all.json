@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_7o91RvyJGtNZmoVe68zkSk_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:45.256Z",
+  "lastRefreshedAt": "2026-03-25T22:19:45.256Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Carluccio",
+            "id": "06bxyT4bXPZaKsInaJ75UL"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0kpHSnJTru2qYTk0WFDsyA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 140124,
+        "name": "Fiume",
+        "disc_number": 1,
+        "id": "0kpHSnJTru2qYTk0WFDsyA"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7o91RvyJGtNZmoVe68zkSk"
+  }
+}

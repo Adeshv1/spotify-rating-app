@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0hvw1dqFx2BgQ8GGtTbH5y_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:29.004Z",
+  "lastRefreshedAt": "2026-03-25T22:19:29.004Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Saverio Lobeone",
+            "id": "0nAp5pLclY53Fdzm3cdm5N"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3C1YOgC9O7ecXCnlkkQAVR"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 136034,
+        "name": "Soft Rain",
+        "disc_number": 1,
+        "id": "3C1YOgC9O7ecXCnlkkQAVR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0hvw1dqFx2BgQ8GGtTbH5y"
+  }
+}

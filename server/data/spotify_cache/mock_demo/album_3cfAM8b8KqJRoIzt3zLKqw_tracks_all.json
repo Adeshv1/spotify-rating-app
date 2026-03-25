@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3cfAM8b8KqJRoIzt3zLKqw_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:58.702Z",
+  "lastRefreshedAt": "2026-03-25T22:19:58.702Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6f49kbOuQSOsStBpyGvQfA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 223773,
+        "name": "A Head Full of Dreams",
+        "disc_number": 1,
+        "id": "6f49kbOuQSOsStBpyGvQfA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3HWDWyIqWuLsTHECx9DvXF"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 229093,
+        "name": "Birds",
+        "disc_number": 1,
+        "id": "3HWDWyIqWuLsTHECx9DvXF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RiPr603aXAoi4GHyXx0uy"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 258266,
+        "name": "Hymn for the Weekend",
+        "disc_number": 1,
+        "id": "3RiPr603aXAoi4GHyXx0uy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5qfZRNjt2TkHEL12r3sDEU"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 282693,
+        "name": "Everglow",
+        "disc_number": 1,
+        "id": "5qfZRNjt2TkHEL12r3sDEU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69uxyAqqPIsUyTO8txoP2M"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 263786,
+        "name": "Adventure of a Lifetime",
+        "disc_number": 1,
+        "id": "69uxyAqqPIsUyTO8txoP2M"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7fJFDK6XjYsXcMKNHESbot"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 267533,
+        "name": "Fun (feat. Tove Lo)",
+        "disc_number": 1,
+        "id": "7fJFDK6XjYsXcMKNHESbot"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7IX7VAXujvcZ3e1PG7sGP7"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 111853,
+        "name": "Kaleidoscope",
+        "disc_number": 1,
+        "id": "7IX7VAXujvcZ3e1PG7sGP7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4giCxIFPZNQIP4bIZM4sqH"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 376826,
+        "name": "Army of One",
+        "disc_number": 1,
+        "id": "4giCxIFPZNQIP4bIZM4sqH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3wtV2ifnHzirkAElgTGh63"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 271106,
+        "name": "Amazing Day",
+        "disc_number": 1,
+        "id": "3wtV2ifnHzirkAElgTGh63"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VqiD8Yvk6bKwqS1e64PHB"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 60106,
+        "name": "Colour Spectrum",
+        "disc_number": 1,
+        "id": "3VqiD8Yvk6bKwqS1e64PHB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Coldplay",
+            "id": "4gzpq5DPGxSnKTe4SA8HAU"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/31L9yLXSj6LpCFupyMV6CR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 405320,
+        "name": "Up&Up",
+        "disc_number": 1,
+        "id": "31L9yLXSj6LpCFupyMV6CR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "3cfAM8b8KqJRoIzt3zLKqw"
+  }
+}

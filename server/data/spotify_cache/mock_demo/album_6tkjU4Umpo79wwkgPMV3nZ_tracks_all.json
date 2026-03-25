@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6tkjU4Umpo79wwkgPMV3nZ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:56.585Z",
+  "lastRefreshedAt": "2026-03-25T22:19:56.585Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7LoWAhcGbxSkT6trTqXQR6"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 74865,
+        "name": "Intro",
+        "disc_number": 1,
+        "id": "7LoWAhcGbxSkT6trTqXQR6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4VXIryQMWpIdGgYR4TrjT1"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 165819,
+        "name": "All Girls Are The Same",
+        "disc_number": 1,
+        "id": "4VXIryQMWpIdGgYR4TrjT1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/285pBltuF7vW8TeWk8hdRR"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 239835,
+        "name": "Lucid Dreams",
+        "disc_number": 1,
+        "id": "285pBltuF7vW8TeWk8hdRR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          },
+          {
+            "name": "Lil Uzi Vert",
+            "id": "4O15NlyKLIASxsJ0PrXPfz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1a7WZZZH7LzyvorhpOJFTe"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 258475,
+        "name": "Wasted (feat. Lil Uzi Vert)",
+        "disc_number": 1,
+        "id": "1a7WZZZH7LzyvorhpOJFTe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5wujBwqG7INdStqGd4tRMX"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 169999,
+        "name": "Armed And Dangerous",
+        "disc_number": 1,
+        "id": "5wujBwqG7INdStqGd4tRMX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1fCeXjoRExPP2qwSBh2aST"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 186945,
+        "name": "Black & White",
+        "disc_number": 1,
+        "id": "1fCeXjoRExPP2qwSBh2aST"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oDkdAySo1VQQG0ptV7uwa"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 175755,
+        "name": "Lean Wit Me",
+        "disc_number": 1,
+        "id": "3oDkdAySo1VQQG0ptV7uwa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0INehbMZOFPnaPBAjK97i3"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 244193,
+        "name": "I'll Be Fine",
+        "disc_number": 1,
+        "id": "0INehbMZOFPnaPBAjK97i3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WZFN4E8HrmGUU0EMyKQ8c"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 176443,
+        "name": "Used To",
+        "disc_number": 1,
+        "id": "0WZFN4E8HrmGUU0EMyKQ8c"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1wa6QQsdSE3X2GbRljGpFk"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 183703,
+        "name": "Candles",
+        "disc_number": 1,
+        "id": "1wa6QQsdSE3X2GbRljGpFk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49QVOdWgGagzLrThkIqtK6"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 170538,
+        "name": "Scared Of Love (with instrumental by Ghost Loft)",
+        "disc_number": 1,
+        "id": "49QVOdWgGagzLrThkIqtK6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3XRQT7EoS4U87rUuJwg5P3"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 122285,
+        "name": "Hurt Me",
+        "disc_number": 1,
+        "id": "3XRQT7EoS4U87rUuJwg5P3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19m3E0nMZobyA93AxMXC32"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 192859,
+        "name": "I'm Still",
+        "disc_number": 1,
+        "id": "19m3E0nMZobyA93AxMXC32"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/24BNgrtp6Fag4M5BQPEgsV"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 162981,
+        "name": "End Of The Road",
+        "disc_number": 1,
+        "id": "24BNgrtp6Fag4M5BQPEgsV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/17Cs25j5Ui6X6W4Hk1kAyC"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 187006,
+        "name": "Long Gone",
+        "disc_number": 1,
+        "id": "17Cs25j5Ui6X6W4Hk1kAyC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1p7DC2sFe7aJdO1RZdO3tC"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 64194,
+        "name": "Betrayal - Skit",
+        "disc_number": 1,
+        "id": "1p7DC2sFe7aJdO1RZdO3tC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4TlZtoFcV9fKSxs3RVy9Td"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 74590,
+        "name": "Karma - Skit",
+        "disc_number": 1,
+        "id": "4TlZtoFcV9fKSxs3RVy9Td"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "6tkjU4Umpo79wwkgPMV3nZ"
+  }
+}

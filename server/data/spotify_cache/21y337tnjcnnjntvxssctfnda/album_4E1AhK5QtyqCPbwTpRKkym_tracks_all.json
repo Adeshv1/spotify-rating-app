@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_4E1AhK5QtyqCPbwTpRKkym_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:25.100Z",
+  "lastRefreshedAt": "2026-03-25T22:19:25.100Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Nipsey Hussle",
+            "id": "0EeQBlQJFiAfJeVN2vT9s0"
+          },
+          {
+            "name": "Bino Rideaux",
+            "id": "3pcerTbRFAPvWWtAfySFWB"
+          },
+          {
+            "name": "Static Major",
+            "id": "3pbi8H08p95NUZ7m6ybxUV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/10lkd5Ixflx3dfu3aWb3EX"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 138533,
+        "name": "Reckless (feat. Static Major)",
+        "disc_number": 1,
+        "id": "10lkd5Ixflx3dfu3aWb3EX"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4E1AhK5QtyqCPbwTpRKkym"
+  }
+}

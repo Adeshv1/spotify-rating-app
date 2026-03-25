@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2iFTxCYwhF5oC1L8s1B0rI_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:12.085Z",
+  "lastRefreshedAt": "2026-03-25T22:20:12.085Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wJwkMo278iWVlWl1XQ4WA"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 227373,
+        "name": "The Heart Wants What It Wants",
+        "disc_number": 1,
+        "id": "6wJwkMo278iWVlWl1XQ4WA"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2iFTxCYwhF5oC1L8s1B0rI"
+  }
+}

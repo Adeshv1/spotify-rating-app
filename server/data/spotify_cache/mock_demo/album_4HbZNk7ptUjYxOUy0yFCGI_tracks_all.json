@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4HbZNk7ptUjYxOUy0yFCGI_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:46.911Z",
+  "lastRefreshedAt": "2026-03-25T22:19:46.911Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6NEv5D0WOXlSBUVKeKqU7o"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 150513,
+        "name": "Something Of A Glow",
+        "disc_number": 1,
+        "id": "6NEv5D0WOXlSBUVKeKqU7o"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jqSm6EXeex43MVnGq02AD"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 158625,
+        "name": "Warmer Weather",
+        "disc_number": 1,
+        "id": "4jqSm6EXeex43MVnGq02AD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1FPEQvf7LS9c5GhFrwo6Y6"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 132625,
+        "name": "Nowhere Closer",
+        "disc_number": 1,
+        "id": "1FPEQvf7LS9c5GhFrwo6Y6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2KUS7DwgiTPQYzadVXL75U"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 142625,
+        "name": "Eventide",
+        "disc_number": 1,
+        "id": "2KUS7DwgiTPQYzadVXL75U"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xYwDciPjfdqigoChxk14c"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 132625,
+        "name": "Vesper",
+        "disc_number": 1,
+        "id": "2xYwDciPjfdqigoChxk14c"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4tdcsEP9Siu7kEBwGavq15"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 134625,
+        "name": "Afternoon Ending",
+        "disc_number": 1,
+        "id": "4tdcsEP9Siu7kEBwGavq15"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7DMvcL4XiAlLiYdzDbUm7F"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 144625,
+        "name": "When The Little Man Speaks",
+        "disc_number": 1,
+        "id": "7DMvcL4XiAlLiYdzDbUm7F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1fplFfx0dc6cFS6fz7nd01"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 148625,
+        "name": "Beyond The Gloom",
+        "disc_number": 1,
+        "id": "1fplFfx0dc6cFS6fz7nd01"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/40kdOBxqnfAltfoLcLdK60"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 140625,
+        "name": "Dimday Dreams",
+        "disc_number": 1,
+        "id": "40kdOBxqnfAltfoLcLdK60"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fhB0fIgJRYn3nx2920RvB"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 134625,
+        "name": "An Evening Story",
+        "disc_number": 1,
+        "id": "3fhB0fIgJRYn3nx2920RvB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4t4pUb2ZpeFJnGCkBL0f0c"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 120625,
+        "name": "Sand Drawings",
+        "disc_number": 1,
+        "id": "4t4pUb2ZpeFJnGCkBL0f0c"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oEbbZzH4KXUR9GDEjNPvb"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 142625,
+        "name": "Minutes To Midnight",
+        "disc_number": 1,
+        "id": "3oEbbZzH4KXUR9GDEjNPvb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2doa89JBg5ZXBKcMNZnIu2"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 140625,
+        "name": "One More Story",
+        "disc_number": 1,
+        "id": "2doa89JBg5ZXBKcMNZnIu2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bXZT2r9M8YPu7eq723IQA"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 88625,
+        "name": "Before Bed",
+        "disc_number": 1,
+        "id": "3bXZT2r9M8YPu7eq723IQA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4GM0wrjTAKVCWhcqVGbxip"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 140625,
+        "name": "Around This Hour",
+        "disc_number": 1,
+        "id": "4GM0wrjTAKVCWhcqVGbxip"
+      },
+      {
+        "artists": [
+          {
+            "name": "Comet Blue",
+            "id": "27DGFhdWUeudNFbPJROkWF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1hzzLE9FHJRNBXUVpz7l0J"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 98625,
+        "name": "Dreamland",
+        "disc_number": 1,
+        "id": "1hzzLE9FHJRNBXUVpz7l0J"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "4HbZNk7ptUjYxOUy0yFCGI"
+  }
+}

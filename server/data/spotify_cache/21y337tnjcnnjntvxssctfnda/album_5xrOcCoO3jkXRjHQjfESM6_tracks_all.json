@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5xrOcCoO3jkXRjHQjfESM6_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:51.907Z",
+  "lastRefreshedAt": "2026-03-25T22:19:51.907Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Jhené Aiko",
+            "id": "5ZS223C6JyBfXasXxrRqOk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vf6J4SM5SZ2I87jA2juK2"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 238292,
+        "name": "Naked Truth",
+        "disc_number": 1,
+        "id": "5vf6J4SM5SZ2I87jA2juK2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Ellie Goulding",
+            "id": "0X2BH1fck6amBIoJhDVmmJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5OaRqgnamUsa99HzxSTdDv"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 214270,
+        "name": "Bad Love",
+        "disc_number": 1,
+        "id": "5OaRqgnamUsa99HzxSTdDv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Becky G",
+            "id": "4obzFoKoKRHIphyHzJ35G3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4dSoDnmR9opAQ8KxUc9SbC"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 199944,
+        "name": "Mad Love",
+        "disc_number": 1,
+        "id": "4dSoDnmR9opAQ8KxUc9SbC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/66iI77cgWBEdGichkndWJe"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 206003,
+        "name": "Jump On It",
+        "disc_number": 1,
+        "id": "66iI77cgWBEdGichkndWJe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Major Lazer",
+            "id": "738wLrAtLtCtFOLvQBXOXp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6vVFqMUDG316z5EXYHs7fE"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 221612,
+        "name": "Tip Pon It",
+        "disc_number": 1,
+        "id": "6vVFqMUDG316z5EXYHs7fE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Stefflon Don",
+            "id": "2ExGrw6XpbtUAJHTLtUXUD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/73nrq7e9AHfi9t4T9qfmKh"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 249581,
+        "name": "Jet Plane Trip",
+        "disc_number": 1,
+        "id": "73nrq7e9AHfi9t4T9qfmKh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Migos",
+            "id": "6oMuImdp5ZcFhWP0ESe6mG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3PGubBdFfQSHAHsXb068eG"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 206059,
+        "name": "Body",
+        "disc_number": 1,
+        "id": "3PGubBdFfQSHAHsXb068eG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Tory Lanez",
+            "id": "2jku7tDXc6XoB6MO2hFuqg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VwR0joqoloF97pCHzLVLx"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 225903,
+        "name": "Tek Weh Yuh Heart",
+        "disc_number": 1,
+        "id": "3VwR0joqoloF97pCHzLVLx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/48QmG1dfvMuYLxMPt7KSRA"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 221176,
+        "name": "No Lie",
+        "disc_number": 1,
+        "id": "48QmG1dfvMuYLxMPt7KSRA"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "5xrOcCoO3jkXRjHQjfESM6"
+  }
+}

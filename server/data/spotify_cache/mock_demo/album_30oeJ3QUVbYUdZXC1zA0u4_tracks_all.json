@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_30oeJ3QUVbYUdZXC1zA0u4_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:37.754Z",
+  "lastRefreshedAt": "2026-03-25T22:19:37.754Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ziva",
+            "id": "3w8cRlmbnCOmIcFqwNyN1S"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/11cs7GCNODxUDGhmw4SVGa"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 152175,
+        "name": "Next Chapter",
+        "disc_number": 1,
+        "id": "11cs7GCNODxUDGhmw4SVGa"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "30oeJ3QUVbYUdZXC1zA0u4"
+  }
+}

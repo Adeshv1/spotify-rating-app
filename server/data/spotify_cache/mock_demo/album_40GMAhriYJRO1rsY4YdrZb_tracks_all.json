@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_40GMAhriYJRO1rsY4YdrZb_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:49.619Z",
+  "lastRefreshedAt": "2026-03-25T22:19:49.619Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sBwAWyXfiIgrYQ8BaJESH"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 328906,
+        "name": "Keep The Family Close",
+        "disc_number": 1,
+        "id": "7sBwAWyXfiIgrYQ8BaJESH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1C7KSXR2GVxknex6I4ANco"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 255786,
+        "name": "9",
+        "disc_number": 1,
+        "id": "1C7KSXR2GVxknex6I4ANco"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/03L2AoiRbWhvt7BDMx1jUB"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 297373,
+        "name": "U With Me?",
+        "disc_number": 1,
+        "id": "03L2AoiRbWhvt7BDMx1jUB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3cjF2OFRmip8spwZYQRKxP"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 240653,
+        "name": "Feel No Ways",
+        "disc_number": 1,
+        "id": "3cjF2OFRmip8spwZYQRKxP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5NFYuqu8V6QXc6mzcLImd6"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 209413,
+        "name": "Hype",
+        "disc_number": 1,
+        "id": "5NFYuqu8V6QXc6mzcLImd6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4PA16FAl8LPmFmOhARawdV"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 253533,
+        "name": "Weston Road Flows",
+        "disc_number": 1,
+        "id": "4PA16FAl8LPmFmOhARawdV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cRBqWBjuccCowYVHFlXK6"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 333946,
+        "name": "Redemption",
+        "disc_number": 1,
+        "id": "4cRBqWBjuccCowYVHFlXK6"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "PARTYNEXTDOOR",
+            "id": "2HPaUgqeutzr3jx5a9WyDV"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3aJkV6DUTSCqOwVwaBDG9B"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 195053,
+        "name": "With You",
+        "disc_number": 1,
+        "id": "3aJkV6DUTSCqOwVwaBDG9B"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "dvsn",
+            "id": "7e1ICztHM2Sc4JNLxeMXYl"
+          },
+          {
+            "name": "Pimp C",
+            "id": "7v9bFXCdSMA2o3gS4nvp0F"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qLcJOLrh6Djda4uLbldSA"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 290133,
+        "name": "Faithful",
+        "disc_number": 1,
+        "id": "2qLcJOLrh6Djda4uLbldSA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/433P7tDcIAi6NLnf4Sh6tI"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 189853,
+        "name": "Still Here",
+        "disc_number": 1,
+        "id": "433P7tDcIAi6NLnf4Sh6tI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3O8NlPh2LByMU9lSRSHedm"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 245226,
+        "name": "Controlla",
+        "disc_number": 1,
+        "id": "3O8NlPh2LByMU9lSRSHedm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Wizkid",
+            "id": "3tVQdUvClmAT7URs9V3rsp"
+          },
+          {
+            "name": "Kyla",
+            "id": "6TK7fjRPdy2GW2pJzNF23L"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 173986,
+        "name": "One Dance",
+        "disc_number": 1,
+        "id": "1zi7xx7UVEFkmKfv06H8x0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Future",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5e574bhjycX1eH2l4Auage"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 220426,
+        "name": "Grammys",
+        "disc_number": 1,
+        "id": "5e574bhjycX1eH2l4Auage"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3NxAG2ni1lLa8RKL6a0INc"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 241400,
+        "name": "Childs Play",
+        "disc_number": 1,
+        "id": "3NxAG2ni1lLa8RKL6a0INc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5mPSyjLatqB00IkPqRlbTE"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 212946,
+        "name": "Pop Style",
+        "disc_number": 1,
+        "id": "5mPSyjLatqB00IkPqRlbTE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3BtuIIrQlkujKPuWF2B85z"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 263373,
+        "name": "Too Good",
+        "disc_number": 1,
+        "id": "3BtuIIrQlkujKPuWF2B85z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Majid Jordan",
+            "id": "4HzKw8XcD0piJmDrrPRCYk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ppVO2tyWRRznNmONvt7Se"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 106333,
+        "name": "Summers Over Interlude",
+        "disc_number": 1,
+        "id": "3ppVO2tyWRRznNmONvt7Se"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4BhGTc3Cgay2U1QcTS7vQe"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 238120,
+        "name": "Fire & Desire",
+        "disc_number": 1,
+        "id": "4BhGTc3Cgay2U1QcTS7vQe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7MjSipTto9QljYzZnloXOn"
+        },
+        "track_number": 19,
+        "explicit": true,
+        "duration_ms": 311960,
+        "name": "Views",
+        "disc_number": 1,
+        "id": "7MjSipTto9QljYzZnloXOn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wwPcA6wtMf6HUMpIRdeP7"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 267066,
+        "name": "Hotline Bling",
+        "disc_number": 1,
+        "id": "0wwPcA6wtMf6HUMpIRdeP7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 20,
+    "albumId": "40GMAhriYJRO1rsY4YdrZb"
+  }
+}

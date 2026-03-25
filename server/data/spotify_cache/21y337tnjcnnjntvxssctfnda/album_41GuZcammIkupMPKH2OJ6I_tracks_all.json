@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_41GuZcammIkupMPKH2OJ6I_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.618Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.618Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7wBJfHzpfI3032CSD7CE2m"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 270714,
+        "name": "STARGAZING",
+        "disc_number": 1,
+        "id": "7wBJfHzpfI3032CSD7CE2m"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7KZ5MMVgBVox9ycroB2UrI"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 180182,
+        "name": "CAROUSEL",
+        "disc_number": 1,
+        "id": "7KZ5MMVgBVox9ycroB2UrI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xLMifQCjDGFmkHkpNLD9h"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 312820,
+        "name": "SICKO MODE",
+        "disc_number": 1,
+        "id": "2xLMifQCjDGFmkHkpNLD9h"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SZepBIPDRwPaHIjAKwRDb"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 185610,
+        "name": "R.I.P. SCREW",
+        "disc_number": 1,
+        "id": "4SZepBIPDRwPaHIjAKwRDb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1xYpVRspgaLxdJLOTQkTjg"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 338438,
+        "name": "STOP TRYING TO BE GOD",
+        "disc_number": 1,
+        "id": "1xYpVRspgaLxdJLOTQkTjg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6OaVWaGfhXn70ZJfdVcabn"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 218283,
+        "name": "NO BYSTANDERS",
+        "disc_number": 1,
+        "id": "6OaVWaGfhXn70ZJfdVcabn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6NMtzpDQBTOfJwMzgMX0zl"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 145588,
+        "name": "SKELETONS",
+        "disc_number": 1,
+        "id": "6NMtzpDQBTOfJwMzgMX0zl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/20MuVazoNMv6xjKPnRFOxG"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 231963,
+        "name": "WAKE UP",
+        "disc_number": 1,
+        "id": "20MuVazoNMv6xjKPnRFOxG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/11kDth1aKUEUMq9r1pqyds"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 196138,
+        "name": "5% TINT",
+        "disc_number": 1,
+        "id": "11kDth1aKUEUMq9r1pqyds"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6BJbOXDlgVAXSaq6wYFYT2"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 156885,
+        "name": "NC-17",
+        "disc_number": 1,
+        "id": "6BJbOXDlgVAXSaq6wYFYT2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4MXhiYIRDMGAuvZc5IFTwC"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 142969,
+        "name": "ASTROTHUNDER",
+        "disc_number": 1,
+        "id": "4MXhiYIRDMGAuvZc5IFTwC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7lAK3oHbfEnvUQWosrMMpR"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 150043,
+        "name": "YOSEMITE",
+        "disc_number": 1,
+        "id": "7lAK3oHbfEnvUQWosrMMpR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27a1mYSG5tYg7dmEjWBcmL"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 198408,
+        "name": "CAN'T SAY",
+        "disc_number": 1,
+        "id": "27a1mYSG5tYg7dmEjWBcmL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4KYS9GK68yeuUJ8vJfPxrq"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 176720,
+        "name": "WHO? WHAT!",
+        "disc_number": 1,
+        "id": "4KYS9GK68yeuUJ8vJfPxrq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2cYqizR4lgvp4Qu6IQ3qGN"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 190557,
+        "name": "BUTTERFLY EFFECT",
+        "disc_number": 1,
+        "id": "2cYqizR4lgvp4Qu6IQ3qGN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/58TaFP5j5i9swOf584yon2"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 217828,
+        "name": "HOUSTONFORNICATION",
+        "disc_number": 1,
+        "id": "58TaFP5j5i9swOf584yon2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6vnfObZ4Ys70SBAtti1xZ9"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 209115,
+        "name": "COFFEE BEAN",
+        "disc_number": 1,
+        "id": "6vnfObZ4Ys70SBAtti1xZ9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "41GuZcammIkupMPKH2OJ6I"
+  }
+}

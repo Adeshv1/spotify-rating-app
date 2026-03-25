@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4rG0MhkU6UojACJxkMHIXB_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:02.381Z",
+  "lastRefreshedAt": "2026-03-25T22:20:02.381Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Vein",
+            "id": "3BnF35ARlp8mMeyXTjUZsr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2HPmy1uA2SSJVVTduU9g2q"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 84320,
+        "name": "Mr. Worldwide (Intro) (feat. Vein)",
+        "disc_number": 1,
+        "id": "2HPmy1uA2SSJVVTduU9g2q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "AFROJACK",
+            "id": "4D75GcNG95ebPtNvoNVXhz"
+          },
+          {
+            "name": "Ne-Yo",
+            "id": "21E3waRsmPlU7jZsS13rcj"
+          },
+          {
+            "name": "Nayer",
+            "id": "1ruutHJcECI7cos2n5TqpO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 252306,
+        "name": "Give Me Everything (feat. Nayer)",
+        "disc_number": 1,
+        "id": "4QNpBfC0zvjKqPJcyqBy9W"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Marc Anthony",
+            "id": "4wLXwxDeWQ8mtUIRPxGiD6"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2cZrrQMjB63c0iIugYH9zS"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 231573,
+        "name": "Rain Over Me (feat. Marc Anthony)",
+        "disc_number": 1,
+        "id": "2cZrrQMjB63c0iIugYH9zS"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "T-Pain",
+            "id": "3aQeKQSyrW4qWr35idm0cy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rfhI32Il2hVRKDkuGeeen"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 234453,
+        "name": "Hey Baby (Drop It to the Floor) (feat. T-Pain)",
+        "disc_number": 1,
+        "id": "3rfhI32Il2hVRKDkuGeeen"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0c7wqpBLOTFr1yb70LHGFM"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 180266,
+        "name": "Pause",
+        "disc_number": 1,
+        "id": "0c7wqpBLOTFr1yb70LHGFM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Enrique Iglesias",
+            "id": "7qG3b048QCHVRO5Pv1T5lw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Zc3d993GDKljZ5d6NNk3b"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 230320,
+        "name": "Come N Go (feat. Enrique Iglesias)",
+        "disc_number": 1,
+        "id": "5Zc3d993GDKljZ5d6NNk3b"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "T-Pain",
+            "id": "3aQeKQSyrW4qWr35idm0cy"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LomM3L6atrf79ZL7nHDp4"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 214826,
+        "name": "Shake Senora (feat. T-Pain & Sean Paul)",
+        "disc_number": 1,
+        "id": "1LomM3L6atrf79ZL7nHDp4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Chris Brown",
+            "id": "7bXgB6jMjp9ATFy66eO08Z"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/62zFEHfAYl5kdHYOivj4BC"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 227280,
+        "name": "International Love (feat. Chris Brown)",
+        "disc_number": 1,
+        "id": "62zFEHfAYl5kdHYOivj4BC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Kelly Rowland",
+            "id": "3AuMNF8rQAKOzjYppFNAoB"
+          },
+          {
+            "name": "Jamie Drastik",
+            "id": "5Eqq5ePFgYSyL6oskZwYpM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LHpEIKaXBtXrqSUEdfWKm"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 228026,
+        "name": "Castle Made Of Sand (feat. Kelly Rowland & Jamie Drastik)",
+        "disc_number": 1,
+        "id": "0LHpEIKaXBtXrqSUEdfWKm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Redfoo",
+            "id": "3mH3OBKopDDVgnJcT5PrPk"
+          },
+          {
+            "name": "Vein",
+            "id": "3BnF35ARlp8mMeyXTjUZsr"
+          },
+          {
+            "name": "David Rush",
+            "id": "5IqWDVLGThjmkm22e3oBU3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2yazRoolWXk58jAmKgxcDd"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 269360,
+        "name": "Took My Love (feat. Red Foo, Vein & David Rush)",
+        "disc_number": 1,
+        "id": "2yazRoolWXk58jAmKgxcDd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Jamie Foxx",
+            "id": "7LnaAXbDVIL75IVPnndf7w"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/50pJXx2ImZomgdmFUtIczx"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 230680,
+        "name": "Where Do We Go (feat. Jamie Foxx)",
+        "disc_number": 1,
+        "id": "50pJXx2ImZomgdmFUtIczx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7J67Boe7skkGlM5HCy3JHR"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 184080,
+        "name": "Something For The DJs",
+        "disc_number": 1,
+        "id": "7J67Boe7skkGlM5HCy3JHR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Akon",
+            "id": "0z4gvV4rjIZ9wHck67ucSV"
+          },
+          {
+            "name": "DJ Frank E",
+            "id": "4yt2wdqvcHygghx9iNUb6i"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1d5dIwX0QGabBASb3gI3VA"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 187213,
+        "name": "Mr. Right Now (feat. Akon & DJ Frank E)",
+        "disc_number": 1,
+        "id": "1d5dIwX0QGabBASb3gI3VA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "T-Pain",
+            "id": "3aQeKQSyrW4qWr35idm0cy"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          },
+          {
+            "name": "Ludacris",
+            "id": "3ipn9JLAPI5GUEo4y4jcoi"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/43s0CIP1nrgUXCLyBmchYH"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 252360,
+        "name": "Shake Senora Remix (feat. T-Pain, Sean Paul & Ludacris)",
+        "disc_number": 1,
+        "id": "43s0CIP1nrgUXCLyBmchYH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Nicola Fasano",
+            "id": "0AJ9YvsEOnAqMB9Q15TfYQ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00NmK2seXpRFNAEsRBe7lc"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 175893,
+        "name": "Oye Baby",
+        "disc_number": 1,
+        "id": "00NmK2seXpRFNAEsRBe7lc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Pitbull",
+            "id": "0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "name": "Nelly",
+            "id": "2gBjLmx6zQnFGQJCAQpRgw"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4faHjDxqvO9clYe4grJeeD"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 220360,
+        "name": "My Kinda Girl (feat. Nelly)",
+        "disc_number": 1,
+        "id": "4faHjDxqvO9clYe4grJeeD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "4rG0MhkU6UojACJxkMHIXB"
+  }
+}

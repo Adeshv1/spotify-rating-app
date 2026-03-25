@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0tGht9KBhk71vOJCHZzhVk_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:02.765Z",
+  "lastRefreshedAt": "2026-03-25T22:20:02.765Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1AguHaKOuggrVTebp7cZEI"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 184573,
+        "name": "Stereo Love",
+        "disc_number": 1,
+        "id": "1AguHaKOuggrVTebp7cZEI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4rCDfKjSS4KZk6hMB9epXh"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 247853,
+        "name": "Stereo Love - Original",
+        "disc_number": 1,
+        "id": "4rCDfKjSS4KZk6hMB9epXh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Cqzr5QGrgY2iygBLr8uAp"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 321600,
+        "name": "Stereo Love - Extended Version",
+        "disc_number": 1,
+        "id": "0Cqzr5QGrgY2iygBLr8uAp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00nrx9u2oleyYT1MSMyXPU"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 303626,
+        "name": "Stereo Love - Molella remix",
+        "disc_number": 1,
+        "id": "00nrx9u2oleyYT1MSMyXPU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3orQkDVX3JqGcDXN8rdyLi"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 303453,
+        "name": "Stereo Love - DaBo remix",
+        "disc_number": 1,
+        "id": "3orQkDVX3JqGcDXN8rdyLi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Edward Maya",
+            "id": "6XwwFnewNgWp81MYMK8zLq"
+          },
+          {
+            "name": "Vika Jigulina",
+            "id": "34dZRjYum6vVBGslgYaBtB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bqnIgMIL53Cz7EJ5HHJhf"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 322453,
+        "name": "Stereo Love - Scotty Remix",
+        "disc_number": 1,
+        "id": "4bqnIgMIL53Cz7EJ5HHJhf"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 6,
+    "albumId": "0tGht9KBhk71vOJCHZzhVk"
+  }
+}

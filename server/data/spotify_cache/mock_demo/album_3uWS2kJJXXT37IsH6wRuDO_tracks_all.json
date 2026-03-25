@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3uWS2kJJXXT37IsH6wRuDO_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:28.581Z",
+  "lastRefreshedAt": "2026-03-25T22:19:28.581Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Eigil Leuc",
+            "id": "7nseZgS00tkLotjF6GbGrt"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0NqpLq9EZGy9HCK6xWpGep"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 150845,
+        "name": "Meadow",
+        "disc_number": 1,
+        "id": "0NqpLq9EZGy9HCK6xWpGep"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3uWS2kJJXXT37IsH6wRuDO"
+  }
+}

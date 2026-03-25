@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7H66SSCcsdRnEdhQxdan7r_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:48.106Z",
+  "lastRefreshedAt": "2026-03-25T22:19:48.106Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Yasuo Zen",
+            "id": "4Gew7TmeuvKFbHl0PttGaz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7jUgBIVfc6C2YfFqFmETxz"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 199428,
+        "name": "Air from Air",
+        "disc_number": 1,
+        "id": "7jUgBIVfc6C2YfFqFmETxz"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7H66SSCcsdRnEdhQxdan7r"
+  }
+}

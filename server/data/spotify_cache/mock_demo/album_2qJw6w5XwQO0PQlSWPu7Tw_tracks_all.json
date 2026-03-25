@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2qJw6w5XwQO0PQlSWPu7Tw_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:10.810Z",
+  "lastRefreshedAt": "2026-03-25T22:20:10.810Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2lDgdWIGLYuk74pDeRPgPF"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 162013,
+        "name": "Chosen",
+        "disc_number": 1,
+        "id": "2lDgdWIGLYuk74pDeRPgPF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01GZjSSjSSpvTnDNdR8r3Y"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 175746,
+        "name": "Recovery",
+        "disc_number": 1,
+        "id": "01GZjSSjSSpvTnDNdR8r3Y"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HgZU8DoSWLvs1dWBvXYJt"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 184386,
+        "name": "Vengo dalla luna",
+        "disc_number": 1,
+        "id": "5HgZU8DoSWLvs1dWBvXYJt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 211560,
+        "name": "Beggin'",
+        "disc_number": 1,
+        "id": "3Wrjm47oTz2sjIgck11l5e"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6D2tOVX5MMl8jNVkwsFaWg"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 146813,
+        "name": "Let's Get It Started",
+        "disc_number": 1,
+        "id": "6D2tOVX5MMl8jNVkwsFaWg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4AIatGjGyVipeEAzCMTqOg"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 161040,
+        "name": "Somebody Told Me",
+        "disc_number": 1,
+        "id": "4AIatGjGyVipeEAzCMTqOg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Måneskin",
+            "id": "0lAWpj5szCSwM4rUMHYmrr"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5AVPuxGEBlOaSsWDOh0OE7"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 210773,
+        "name": "You Need Me, I Don't Need You",
+        "disc_number": 1,
+        "id": "5AVPuxGEBlOaSsWDOh0OE7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 7,
+    "albumId": "2qJw6w5XwQO0PQlSWPu7Tw"
+  }
+}

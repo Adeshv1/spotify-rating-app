@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2No724SMCYYdHbpY4DnFeO_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:44.608Z",
+  "lastRefreshedAt": "2026-03-25T22:19:44.608Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Tristaan Wilkes",
+            "id": "4awKyidTqtd5z49BGOLvck"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61PEtXxbmpaVQDRNxcE0IJ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 123216,
+        "name": "Just Stay",
+        "disc_number": 1,
+        "id": "61PEtXxbmpaVQDRNxcE0IJ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2No724SMCYYdHbpY4DnFeO"
+  }
+}

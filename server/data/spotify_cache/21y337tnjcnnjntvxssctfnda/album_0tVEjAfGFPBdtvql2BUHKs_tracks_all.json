@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_0tVEjAfGFPBdtvql2BUHKs_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:47.963Z",
+  "lastRefreshedAt": "2026-03-25T22:19:47.963Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Hideyuki Hashimoto",
+            "id": "3NMfMCA11Xo7RUc91o64Og"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ewEtlUJ1zw71SMMf786J0"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 189000,
+        "name": "Clear",
+        "disc_number": 1,
+        "id": "1ewEtlUJ1zw71SMMf786J0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Hideyuki Hashimoto",
+            "id": "3NMfMCA11Xo7RUc91o64Og"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5fo9T0WnMcNm4k0Qlgbeba"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 123000,
+        "name": "Under",
+        "disc_number": 1,
+        "id": "5fo9T0WnMcNm4k0Qlgbeba"
+      },
+      {
+        "artists": [
+          {
+            "name": "Hideyuki Hashimoto",
+            "id": "3NMfMCA11Xo7RUc91o64Og"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5TYRJ7u7aBl7XJfiDO71rA"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 123000,
+        "name": "Sou",
+        "disc_number": 1,
+        "id": "5TYRJ7u7aBl7XJfiDO71rA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Hideyuki Hashimoto",
+            "id": "3NMfMCA11Xo7RUc91o64Og"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eFIg4h5BQkGBCnc8A5HoX"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 148000,
+        "name": "Bloom",
+        "disc_number": 1,
+        "id": "2eFIg4h5BQkGBCnc8A5HoX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Hideyuki Hashimoto",
+            "id": "3NMfMCA11Xo7RUc91o64Og"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0y7I045qDUH1carkgTB2UG"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 159000,
+        "name": "Turn",
+        "disc_number": 1,
+        "id": "0y7I045qDUH1carkgTB2UG"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 5,
+    "albumId": "0tVEjAfGFPBdtvql2BUHKs"
+  }
+}

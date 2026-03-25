@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5C0YLr4OoRGFDaqdMQmkeH_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.336Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.336Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mtdxzBRDbueLFpiwpbHKO"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 205053,
+        "name": "Sola",
+        "disc_number": 1,
+        "id": "0mtdxzBRDbueLFpiwpbHKO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4v4pC1y5UI5oHdcluJIJs8"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 212306,
+        "name": "Apaga La Luz",
+        "disc_number": 1,
+        "id": "4v4pC1y5UI5oHdcluJIJs8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0oBLtIumLel0ODRz09MIbV"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 247520,
+        "name": "Le Pido Al Cielo",
+        "disc_number": 1,
+        "id": "0oBLtIumLel0ODRz09MIbV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "Ozuna",
+            "id": "1i8SpTcr7yvPOmcqrbnVXY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cuGZb0iFyHtwaSKdKrJkF"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 164533,
+        "name": "Imposible",
+        "disc_number": 1,
+        "id": "4cuGZb0iFyHtwaSKdKrJkF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1s2VGd7q3D3UA3vuaHI7rw"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 175773,
+        "name": "Poco A Poco",
+        "disc_number": 1,
+        "id": "1s2VGd7q3D3UA3vuaHI7rw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1NP2PmbNcmfWD5xxd6T5nD"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 261653,
+        "name": "Dime Que No Te Iras",
+        "disc_number": 1,
+        "id": "1NP2PmbNcmfWD5xxd6T5nD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "Demi Lovato",
+            "id": "6S2OmqARrzebs0tKUEyXyp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mlAOSILGRys2IbvyOT5VJ"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 173800,
+        "name": "Échame La Culpa",
+        "disc_number": 1,
+        "id": "0mlAOSILGRys2IbvyOT5VJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2jrAfG6qBg3hrjXo23jSFH"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 230440,
+        "name": "Tanto Para Nada",
+        "disc_number": 1,
+        "id": "2jrAfG6qBg3hrjXo23jSFH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "Daddy Yankee",
+            "id": "4VMYDCV2IEDYJArk749S6m"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6habFhsOp2NvshLv26DqMb"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 229360,
+        "name": "Despacito",
+        "disc_number": 1,
+        "id": "6habFhsOp2NvshLv26DqMb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4x11GKtZ69mSTDcDiFdyoD"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 229053,
+        "name": "Más Fuerte Que Yo",
+        "disc_number": 1,
+        "id": "4x11GKtZ69mSTDcDiFdyoD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "Stefflon Don",
+            "id": "2ExGrw6XpbtUAJHTLtUXUD"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2u7tDWQ6LX0Kw1LiK1jaok"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 200973,
+        "name": "Calypso",
+        "disc_number": 1,
+        "id": "2u7tDWQ6LX0Kw1LiK1jaok"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/58Q3qeQ5rRhwPOzZIzsreT"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 202120,
+        "name": "Ahí Estas Tú",
+        "disc_number": 1,
+        "id": "58Q3qeQ5rRhwPOzZIzsreT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "Daddy Yankee",
+            "id": "4VMYDCV2IEDYJArk749S6m"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1vnnXMrBeEWiRg3YCMCjQq"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 230413,
+        "name": "Despacito - Remix",
+        "disc_number": 1,
+        "id": "1vnnXMrBeEWiRg3YCMCjQq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          },
+          {
+            "name": "KAROL G",
+            "id": "790FomKkXshlbRYZFtlgla"
+          },
+          {
+            "name": "Andrés Torres",
+            "id": "4KLOMib6zqzNayKwLWTs2Q"
+          },
+          {
+            "name": "Mauricio Rengifo",
+            "id": "7p3ipw2PvGG0X2x6zL1DLO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2QF0IIqJXHaxe5IJ8LFBDc"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 185666,
+        "name": "Calypso - Remix",
+        "disc_number": 1,
+        "id": "2QF0IIqJXHaxe5IJ8LFBDc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Luis Fonsi",
+            "id": "4V8Sr092TqfHkfAA5fXXqG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7rFhj13UzWPjxj9jRFp58B"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 204346,
+        "name": "Sola - English Version",
+        "disc_number": 1,
+        "id": "7rFhj13UzWPjxj9jRFp58B"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 15,
+    "albumId": "5C0YLr4OoRGFDaqdMQmkeH"
+  }
+}

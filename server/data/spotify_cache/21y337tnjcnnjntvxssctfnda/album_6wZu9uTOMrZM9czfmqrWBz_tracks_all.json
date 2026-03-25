@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6wZu9uTOMrZM9czfmqrWBz_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:37.404Z",
+  "lastRefreshedAt": "2026-03-25T22:19:37.404Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "M. Ljungström",
+            "id": "3DkwuBQlbF81WFD2hhmkPR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3PjllqpJS9qF82x1qxaTGv"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 138057,
+        "name": "I Believe",
+        "disc_number": 1,
+        "id": "3PjllqpJS9qF82x1qxaTGv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6wZu9uTOMrZM9czfmqrWBz"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6jKZplJpy21R5lHaYHHjmZ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.283Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.283Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7pT6WSg4PCt4mr5ZFyUfsF"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 181522,
+        "name": "If We Have Each Other",
+        "disc_number": 1,
+        "id": "7pT6WSg4PCt4mr5ZFyUfsF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4IhKLu7Vk3j2TLmnFPl6To"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 218893,
+        "name": "Water Fountain",
+        "disc_number": 1,
+        "id": "4IhKLu7Vk3j2TLmnFPl6To"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0DYRjWiFJHvLjxRrywtltC"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 192500,
+        "name": "Annabelle's Homework",
+        "disc_number": 1,
+        "id": "0DYRjWiFJHvLjxRrywtltC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 169353,
+        "name": "Let Me Down Slowly",
+        "disc_number": 1,
+        "id": "2qxmye6gAegTMjLKEBoR3d"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1rMSja8j1k8VRXXztemdLb"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 144386,
+        "name": "Swim",
+        "disc_number": 1,
+        "id": "1rMSja8j1k8VRXXztemdLb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/60cYr5uuMoxvyuIx45rGEW"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 181705,
+        "name": "Boy In The Bubble",
+        "disc_number": 1,
+        "id": "60cYr5uuMoxvyuIx45rGEW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/211LaT5hzPOKolVtgzwWnq"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 173487,
+        "name": "Steve",
+        "disc_number": 1,
+        "id": "211LaT5hzPOKolVtgzwWnq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0IrtQ83z9jylZaLEJK2eoy"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 210353,
+        "name": "Gotta Be A Reason",
+        "disc_number": 1,
+        "id": "0IrtQ83z9jylZaLEJK2eoy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2W0AJEbIC2vdZTV2nVSAsg"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 188850,
+        "name": "Outrunning Karma",
+        "disc_number": 1,
+        "id": "2W0AJEbIC2vdZTV2nVSAsg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0WHi11uzahqpEtPGYCW6oQ"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 185122,
+        "name": "If I Killed Someone For You",
+        "disc_number": 1,
+        "id": "0WHi11uzahqpEtPGYCW6oQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3gYK7eEFbp6KzmqYRMyQRm"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 191560,
+        "name": "Death Of A Hero",
+        "disc_number": 1,
+        "id": "3gYK7eEFbp6KzmqYRMyQRm"
+      },
+      {
+        "artists": [
+          {
+            "name": "Alec Benjamin",
+            "id": "5IH6FPUwQTxPSXurCrcIov"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Ys68FZdQFcFw7IgkANVoM"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 184121,
+        "name": "1994",
+        "disc_number": 1,
+        "id": "5Ys68FZdQFcFw7IgkANVoM"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 12,
+    "albumId": "6jKZplJpy21R5lHaYHHjmZ"
+  }
+}

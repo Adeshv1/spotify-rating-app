@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2ZUFSbIkmFkGag000RWOpA_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:00.606Z",
+  "lastRefreshedAt": "2026-03-25T22:20:00.606Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69gz9onZQNVw55cMQsaYii"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 366400,
+        "name": "Tuscan Leather",
+        "disc_number": 1,
+        "id": "69gz9onZQNVw55cMQsaYii"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6s64FyS9n0XYbGMLH3LOWU"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 267373,
+        "name": "Furthest Thing",
+        "disc_number": 1,
+        "id": "6s64FyS9n0XYbGMLH3LOWU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3dgQqOiQ9fCKVhNOedd2lf"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 174120,
+        "name": "Started From the Bottom",
+        "disc_number": 1,
+        "id": "3dgQqOiQ9fCKVhNOedd2lf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1HnhCD1u0c4dHSMazmWGyM"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 217600,
+        "name": "Wu-Tang Forever",
+        "disc_number": 1,
+        "id": "1HnhCD1u0c4dHSMazmWGyM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3EJ9ZuqkL1kwgouugqsLu8"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 252053,
+        "name": "Own It",
+        "disc_number": 1,
+        "id": "3EJ9ZuqkL1kwgouugqsLu8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3X37NtwadSS0RM20dh2IgP"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 270200,
+        "name": "Worst Behavior",
+        "disc_number": 1,
+        "id": "3X37NtwadSS0RM20dh2IgP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Jhené Aiko",
+            "id": "5ZS223C6JyBfXasXxrRqOk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2WC4sK0ryyysQhtDok9Ytr"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 322160,
+        "name": "From Time",
+        "disc_number": 1,
+        "id": "2WC4sK0ryyysQhtDok9Ytr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Majid Jordan",
+            "id": "4HzKw8XcD0piJmDrrPRCYk"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6jdOi5U5LBzQrc4c1VT983"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 227880,
+        "name": "Hold On, We're Going Home",
+        "disc_number": 1,
+        "id": "6jdOi5U5LBzQrc4c1VT983"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Sj81sMg37Hd4omn7Ow2qR"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 296400,
+        "name": "Connect",
+        "disc_number": 1,
+        "id": "1Sj81sMg37Hd4omn7Ow2qR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5dHpbFmZjWucrol0M7aNGU"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 224040,
+        "name": "The Language",
+        "disc_number": 1,
+        "id": "5dHpbFmZjWucrol0M7aNGU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Detail",
+            "id": "4sglKanXuoU0gqGYP3wiNv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5wTRsfZKeaQnQn8JeW8QYQ"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 255826,
+        "name": "305 To My City",
+        "disc_number": 1,
+        "id": "5wTRsfZKeaQnQn8JeW8QYQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "Sampha",
+            "id": "2WoVwexZuODvclzULjPQtm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5LnXWeA9tuWKI2C1H74iiJ"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 261866,
+        "name": "Too Much",
+        "disc_number": 1,
+        "id": "5LnXWeA9tuWKI2C1H74iiJ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "JAŸ-Z",
+            "id": "3nFkdlSjzX9mRTtwJOzDYB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4RI9eX7jNcdaQOJifn7t6z"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 433800,
+        "name": "Pound Cake / Paris Morton Music 2",
+        "disc_number": 1,
+        "id": "4RI9eX7jNcdaQOJifn7t6z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Ggfa9cpkpfp5D6Rg0Yyw1"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 236360,
+        "name": "Come Thru",
+        "disc_number": 1,
+        "id": "5Ggfa9cpkpfp5D6Rg0Yyw1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          },
+          {
+            "name": "2 Chainz",
+            "id": "17lzZA2AlOHwCwFALHttmp"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ngydCLbzCEdtu8SEOXhPU"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 271573,
+        "name": "All Me",
+        "disc_number": 1,
+        "id": "5ngydCLbzCEdtu8SEOXhPU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Drake",
+            "id": "3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3t8pnImpBpOwxdtYBpKvA9"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 241000,
+        "name": "The Motion",
+        "disc_number": 1,
+        "id": "3t8pnImpBpOwxdtYBpKvA9"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 16,
+    "albumId": "2ZUFSbIkmFkGag000RWOpA"
+  }
+}

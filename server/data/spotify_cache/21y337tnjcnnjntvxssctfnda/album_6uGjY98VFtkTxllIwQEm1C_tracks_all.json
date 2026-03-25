@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6uGjY98VFtkTxllIwQEm1C_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:51.241Z",
+  "lastRefreshedAt": "2026-03-25T22:19:51.241Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5hvqUsj6aRCNuQdABRbdLi"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 251327,
+        "name": "Run Away With Me",
+        "disc_number": 1,
+        "id": "5hvqUsj6aRCNuQdABRbdLi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nADuXOH8Kz3A2DvikzKFo"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 197346,
+        "name": "E·mo·tion",
+        "disc_number": 1,
+        "id": "0nADuXOH8Kz3A2DvikzKFo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Cv2xkl4C42AhIJS1G6PVD"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 204415,
+        "name": "I Really Like You",
+        "disc_number": 1,
+        "id": "5Cv2xkl4C42AhIJS1G6PVD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3IdKf3t6QFPAH8TAlXX1lo"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 202226,
+        "name": "Gimmie Love",
+        "disc_number": 1,
+        "id": "3IdKf3t6QFPAH8TAlXX1lo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4GasbmZ7tT5ySEa3YDc6xB"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 278120,
+        "name": "All That",
+        "disc_number": 1,
+        "id": "4GasbmZ7tT5ySEa3YDc6xB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5OP7mSj8bwtxH4cCuiZdpU"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 222279,
+        "name": "Boy Problems",
+        "disc_number": 1,
+        "id": "5OP7mSj8bwtxH4cCuiZdpU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1059Cki9fQaZ0vm7j49JHO"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 238506,
+        "name": "Making The Most Of The Night",
+        "disc_number": 1,
+        "id": "1059Cki9fQaZ0vm7j49JHO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1euprQzQR1lh0XYHdkvRDM"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 199719,
+        "name": "Your Type",
+        "disc_number": 1,
+        "id": "1euprQzQR1lh0XYHdkvRDM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3LzFVlytAq7M3UriB5fN71"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 193492,
+        "name": "Let's Get Lost",
+        "disc_number": 1,
+        "id": "3LzFVlytAq7M3UriB5fN71"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7vcnct4y1WpodNv9m4sVqP"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 184612,
+        "name": "LA Hallucinations",
+        "disc_number": 1,
+        "id": "7vcnct4y1WpodNv9m4sVqP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0wzBitsXRyB16HsOKnS1cq"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 253066,
+        "name": "Warm Blood",
+        "disc_number": 1,
+        "id": "0wzBitsXRyB16HsOKnS1cq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/08wFxQ0Hr3a7VVrlj5i6mf"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 221039,
+        "name": "When I Needed You",
+        "disc_number": 1,
+        "id": "08wFxQ0Hr3a7VVrlj5i6mf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0IP1LkEZZPe28GFI2CG2cl"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 176719,
+        "name": "Black Heart",
+        "disc_number": 1,
+        "id": "0IP1LkEZZPe28GFI2CG2cl"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JxdjNNbbFu3AFSO65rj3F"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 219892,
+        "name": "I Didn't Just Come Here To Dance",
+        "disc_number": 1,
+        "id": "0JxdjNNbbFu3AFSO65rj3F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1q14UQqqSqewgMcmqQV3fU"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 209479,
+        "name": "Favourite Colour",
+        "disc_number": 1,
+        "id": "1q14UQqqSqewgMcmqQV3fU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6lM47dGKt0ppwhuAGAFhRK"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 253582,
+        "name": "Never Get To Hold You",
+        "disc_number": 1,
+        "id": "6lM47dGKt0ppwhuAGAFhRK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Carly Rae Jepsen",
+            "id": "6sFIWsNpZYqfjUpaCgueju"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/20mD1TLc2aNfdb9xrDLkWQ"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 215992,
+        "name": "Love Again",
+        "disc_number": 1,
+        "id": "20mD1TLc2aNfdb9xrDLkWQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "6uGjY98VFtkTxllIwQEm1C"
+  }
+}

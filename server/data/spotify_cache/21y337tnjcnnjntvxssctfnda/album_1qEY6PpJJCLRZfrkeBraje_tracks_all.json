@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_1qEY6PpJJCLRZfrkeBraje_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:27.270Z",
+  "lastRefreshedAt": "2026-03-25T22:19:27.270Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Eternalistic",
+            "id": "77efGNIP8xtX0iCb5RCHCG"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1sMKl4w5GEbLJaSjlIy75I"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 147971,
+        "name": "Still Unbroken",
+        "disc_number": 1,
+        "id": "1sMKl4w5GEbLJaSjlIy75I"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1qEY6PpJJCLRZfrkeBraje"
+  }
+}

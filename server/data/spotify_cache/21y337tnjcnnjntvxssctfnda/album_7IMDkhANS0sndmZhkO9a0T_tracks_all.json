@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7IMDkhANS0sndmZhkO9a0T_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:35.148Z",
+  "lastRefreshedAt": "2026-03-25T22:19:35.148Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Eldur Hættu",
+            "id": "3GsfhG02GtXyYPOoc5QRa8"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16uzCCEGABfcr8X2a1J3kC"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 158358,
+        "name": "Veil of Evening",
+        "disc_number": 1,
+        "id": "16uzCCEGABfcr8X2a1J3kC"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7IMDkhANS0sndmZhkO9a0T"
+  }
+}

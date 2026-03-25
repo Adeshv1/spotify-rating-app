@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0BRvF0Q2VNJrtyoiAIjFxe_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:25.337Z",
+  "lastRefreshedAt": "2026-03-25T22:19:25.337Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          },
+          {
+            "name": "BAK Jay",
+            "id": "7L2tttKztwzcNqrKUiEbZR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3vJxspQ5ZqrCpZgV1FX9wf"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 165501,
+        "name": "Kriss Vecc",
+        "disc_number": 1,
+        "id": "3vJxspQ5ZqrCpZgV1FX9wf"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5N2Z3kP0ao73zBrxnmrhEZ"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 128789,
+        "name": "ABC's",
+        "disc_number": 1,
+        "id": "5N2Z3kP0ao73zBrxnmrhEZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          },
+          {
+            "name": "Lil Double 0",
+            "id": "4uKEP0JYfpFtngWlgViewd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2iSaJzjl3aJs4c4ihK30RA"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 148949,
+        "name": "No 4s",
+        "disc_number": 1,
+        "id": "2iSaJzjl3aJs4c4ihK30RA"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2VQKKwIniVNl4sK2foK0x8"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 129065,
+        "name": "Habitat",
+        "disc_number": 1,
+        "id": "2VQKKwIniVNl4sK2foK0x8"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          },
+          {
+            "name": "Lil Scoom89",
+            "id": "5p56M9Zj9oNwDEEjGWWJ2T"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42G90ZXwql5GyLxY7uK7Eg"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 140458,
+        "name": "Step",
+        "disc_number": 1,
+        "id": "42G90ZXwql5GyLxY7uK7Eg"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ajZiVZRhRaV0llTRQBosE"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 136055,
+        "name": "Gangsta Ways",
+        "disc_number": 1,
+        "id": "5ajZiVZRhRaV0llTRQBosE"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Bt1BfsbxOWqWFvs0Q1rYu"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 108245,
+        "name": "The One I Want",
+        "disc_number": 1,
+        "id": "2Bt1BfsbxOWqWFvs0Q1rYu"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/17IrlkrJT7blqMEuyyx7Yl"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 103061,
+        "name": "No Second Guessing",
+        "disc_number": 1,
+        "id": "17IrlkrJT7blqMEuyyx7Yl"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          },
+          {
+            "name": "Mama Million",
+            "id": "5m041e3yWuwwFh9p0bYK2j"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1y0MXzPo0cgwovYEvr440R"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 110591,
+        "name": "Slick & Mezzy",
+        "disc_number": 1,
+        "id": "1y0MXzPo0cgwovYEvr440R"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/46ECAjBoTQCg3lZmYP7CWa"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 100757,
+        "name": "$ For $",
+        "disc_number": 1,
+        "id": "46ECAjBoTQCg3lZmYP7CWa"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6uT6pGnEyVa1DJGcyhN0j1"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 124289,
+        "name": "Freestyle",
+        "disc_number": 1,
+        "id": "6uT6pGnEyVa1DJGcyhN0j1"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6w89mmW1StsmDr6TaanjVe"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 84442,
+        "name": "Can't Breathe",
+        "disc_number": 1,
+        "id": "6w89mmW1StsmDr6TaanjVe"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          },
+          {
+            "name": "Skrilla",
+            "id": "3qdQnBjEBHrk5nZYxXdV1U"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2uBbWBJ3d7NvqdA6fgmCUU"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 162542,
+        "name": "Dead Body",
+        "disc_number": 1,
+        "id": "2uBbWBJ3d7NvqdA6fgmCUU"
+      },
+      {
+        "artists": [
+          {
+            "name": "MAF Teeski",
+            "id": "0mokg9WGOIBWvBjaF2wkSB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3uRTPsBNEwSnZJUtOKbMKh"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 115136,
+        "name": "In My Bag",
+        "disc_number": 1,
+        "id": "3uRTPsBNEwSnZJUtOKbMKh"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "0BRvF0Q2VNJrtyoiAIjFxe"
+  }
+}

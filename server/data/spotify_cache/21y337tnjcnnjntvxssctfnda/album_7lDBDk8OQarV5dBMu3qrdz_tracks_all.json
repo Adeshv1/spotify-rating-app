@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7lDBDk8OQarV5dBMu3qrdz_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.953Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.953Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7oIGPzZ1TGlFbdG4nDI3uo"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 246400,
+        "name": "Revival",
+        "disc_number": 1,
+        "id": "7oIGPzZ1TGlFbdG4nDI3uo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QNoKVgA758HFLu3TW2q7R"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 217906,
+        "name": "Kill Em With Kindness",
+        "disc_number": 1,
+        "id": "1QNoKVgA758HFLu3TW2q7R"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LoriJC05IrHIDwj3q0KC1"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 200680,
+        "name": "Hands To Myself",
+        "disc_number": 1,
+        "id": "1LoriJC05IrHIDwj3q0KC1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1BZG99C7Co1r6QUC3zaS59"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 229080,
+        "name": "Same Old Love",
+        "disc_number": 1,
+        "id": "1BZG99C7Co1r6QUC3zaS59"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3viZcRlE38APncWJ5VGM4q"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 194826,
+        "name": "Sober",
+        "disc_number": 1,
+        "id": "3viZcRlE38APncWJ5VGM4q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          },
+          {
+            "name": "A$AP Rocky",
+            "id": "13ubrt8QOOCPljQ2FL1Kca"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/578Eooad7oUyn4stovZiPg"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 221280,
+        "name": "Good For You",
+        "disc_number": 1,
+        "id": "578Eooad7oUyn4stovZiPg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7jO0qPIBVGOmqxpCthE8H3"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 249080,
+        "name": "Camouflage",
+        "disc_number": 1,
+        "id": "7jO0qPIBVGOmqxpCthE8H3"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7fBUnDgtSvYpYWuX4iAfns"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 213426,
+        "name": "Me & The Rhythm",
+        "disc_number": 1,
+        "id": "7fBUnDgtSvYpYWuX4iAfns"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6mEFvpqnzElavdz3gfP2XT"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 221853,
+        "name": "Survivors",
+        "disc_number": 1,
+        "id": "6mEFvpqnzElavdz3gfP2XT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5VQ0SPGs7vdzQCIzsHTNUz"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 207733,
+        "name": "Body Heat",
+        "disc_number": 1,
+        "id": "5VQ0SPGs7vdzQCIzsHTNUz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3IMXLQk09YmvNb2tdT4aWk"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 167253,
+        "name": "Rise",
+        "disc_number": 1,
+        "id": "3IMXLQk09YmvNb2tdT4aWk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ulNKUFHijHiPD2rtrSNOC"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 210506,
+        "name": "Me & My Girls",
+        "disc_number": 1,
+        "id": "4ulNKUFHijHiPD2rtrSNOC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1JvGjHoDwbekZ9lNVzH0GH"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 217440,
+        "name": "Nobody",
+        "disc_number": 1,
+        "id": "1JvGjHoDwbekZ9lNVzH0GH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0z8u1VqXUYPBMIoF91JIWE"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 242640,
+        "name": "Perfect",
+        "disc_number": 1,
+        "id": "0z8u1VqXUYPBMIoF91JIWE"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "7lDBDk8OQarV5dBMu3qrdz"
+  }
+}

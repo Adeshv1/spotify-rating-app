@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_47BiFcV59TQi2s9SkBo2pb_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.635Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.635Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Tj1luJyKPQt7WbrqpJ2Az"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 303733,
+        "name": "Cold Wind Blows",
+        "disc_number": 1,
+        "id": "3Tj1luJyKPQt7WbrqpJ2Az"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          },
+          {
+            "name": "Kobe Honeycutt",
+            "id": "0JvIgRftY6CoKCwDpgZ4I1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/66h8hB4In6t725WtAPL23J"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 300426,
+        "name": "Talkin’ 2 Myself",
+        "disc_number": 1,
+        "id": "66h8hB4In6t725WtAPL23J"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6HLZaECJKDjNE0jiGBeqxz"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 213493,
+        "name": "On Fire",
+        "disc_number": 1,
+        "id": "6HLZaECJKDjNE0jiGBeqxz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          },
+          {
+            "name": "P!nk",
+            "id": "1KCSPY1glIKqW2TotWuXOR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7kNlRLC9PEH8nXMVawssMx"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 265906,
+        "name": "Won't Back Down",
+        "disc_number": 1,
+        "id": "7kNlRLC9PEH8nXMVawssMx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ne7JVHEPnoncXzQunQVKW"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 238173,
+        "name": "W.T.P.",
+        "disc_number": 1,
+        "id": "1ne7JVHEPnoncXzQunQVKW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ZqWBTU1EkdVPAMwQgfKiv"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 298893,
+        "name": "Going Through Changes",
+        "disc_number": 1,
+        "id": "0ZqWBTU1EkdVPAMwQgfKiv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7Ie9W94M7OjPoZVV216Xus"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 248133,
+        "name": "Not Afraid",
+        "disc_number": 1,
+        "id": "7Ie9W94M7OjPoZVV216Xus"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2V7NoXGv2VDnLeTM7w8SFd"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 275400,
+        "name": "Seduction",
+        "disc_number": 1,
+        "id": "2V7NoXGv2VDnLeTM7w8SFd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          },
+          {
+            "name": "Lil Wayne",
+            "id": "55Aa2cqylxrFIXC767Z865"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bHT9osSq1rwT2yaImzqCi"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 299506,
+        "name": "No Love",
+        "disc_number": 1,
+        "id": "7bHT9osSq1rwT2yaImzqCi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0sHW1jXe6Sou3437gJQNGA"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 278640,
+        "name": "Space Bound",
+        "disc_number": 1,
+        "id": "0sHW1jXe6Sou3437gJQNGA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SE4yewyGpOYfxfx59Yjc5"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 279013,
+        "name": "Cinderella Man",
+        "disc_number": 1,
+        "id": "4SE4yewyGpOYfxfx59Yjc5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dyWQoMOU9oERL6c9vxtRp"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 241586,
+        "name": "25 To Life",
+        "disc_number": 1,
+        "id": "0dyWQoMOU9oERL6c9vxtRp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Ve4qBYAThGLTOva0hhoTa"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 325346,
+        "name": "So Bad",
+        "disc_number": 1,
+        "id": "5Ve4qBYAThGLTOva0hhoTa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0ANExk8Iu85oqCgk82rG64"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 292480,
+        "name": "Almost Famous",
+        "disc_number": 1,
+        "id": "0ANExk8Iu85oqCgk82rG64"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          },
+          {
+            "name": "Rihanna",
+            "id": "5pKCCKE2ajJHZ9KAiaK11H"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/15JINEqzVMv3SvJTAXAKED"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 263373,
+        "name": "Love The Way You Lie",
+        "disc_number": 1,
+        "id": "15JINEqzVMv3SvJTAXAKED"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1v54pVfqtSC7KbTu2C2pnM"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 305680,
+        "name": "You’re Never Over",
+        "disc_number": 1,
+        "id": "1v54pVfqtSC7KbTu2C2pnM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Eminem",
+            "id": "7dGJo4pcD2V6oG8kP0tJRR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/44ut2KJnt0HQMnUaMlDv9W"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 194440,
+        "name": "Untitled",
+        "disc_number": 1,
+        "id": "44ut2KJnt0HQMnUaMlDv9W"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "47BiFcV59TQi2s9SkBo2pb"
+  }
+}

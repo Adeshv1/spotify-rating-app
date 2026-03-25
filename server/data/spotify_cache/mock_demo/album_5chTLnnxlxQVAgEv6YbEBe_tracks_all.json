@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_5chTLnnxlxQVAgEv6YbEBe_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:59.453Z",
+  "lastRefreshedAt": "2026-03-25T22:19:59.453Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2xGjfbXZnI8uQDhukoQURQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 319560,
+        "name": "K.",
+        "disc_number": 1,
+        "id": "2xGjfbXZnI8uQDhukoQURQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cV9zzKtPtW4i0FhnEwazU"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 290160,
+        "name": "Each Time You Fall in Love",
+        "disc_number": 1,
+        "id": "4cV9zzKtPtW4i0FhnEwazU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0yuAWlxq59xT3agQ965OxE"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 214680,
+        "name": "Sunsetz",
+        "disc_number": 1,
+        "id": "0yuAWlxq59xT3agQ965OxE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 290146,
+        "name": "Apocalypse",
+        "disc_number": 1,
+        "id": "1oAwsWBovWRIp7qLMGPIet"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6eknHC7HjAKchl23x2A7dW"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 274106,
+        "name": "Flash",
+        "disc_number": 1,
+        "id": "6eknHC7HjAKchl23x2A7dW"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2KhrPRV0V1FS2l4eQMJUWt"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 291640,
+        "name": "Sweet",
+        "disc_number": 1,
+        "id": "2KhrPRV0V1FS2l4eQMJUWt"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Ddfm2NQwTRsf7YVlt258S"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 364680,
+        "name": "Opera House",
+        "disc_number": 1,
+        "id": "2Ddfm2NQwTRsf7YVlt258S"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6i2XzqnaxvpNVTUw8EjPMU"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 243640,
+        "name": "Truly",
+        "disc_number": 1,
+        "id": "6i2XzqnaxvpNVTUw8EjPMU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4xbN7giFhdGbSQTPyG178F"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 258013,
+        "name": "John Wayne",
+        "disc_number": 1,
+        "id": "4xbN7giFhdGbSQTPyG178F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Cigarettes After Sex",
+            "id": "1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2XIX01WCkNRqL1gQ5OBgJt"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 273426,
+        "name": "Young & Dumb",
+        "disc_number": 1,
+        "id": "2XIX01WCkNRqL1gQ5OBgJt"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 10,
+    "albumId": "5chTLnnxlxQVAgEv6YbEBe"
+  }
+}

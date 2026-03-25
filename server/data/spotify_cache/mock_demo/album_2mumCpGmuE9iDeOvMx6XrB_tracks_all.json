@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2mumCpGmuE9iDeOvMx6XrB_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:52.747Z",
+  "lastRefreshedAt": "2026-03-25T22:19:52.747Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1qxNjI7CWqoPrJZIPiYggP"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 92653,
+        "name": "Za Intro",
+        "disc_number": 1,
+        "id": "1qxNjI7CWqoPrJZIPiYggP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5BArG7sCHPSa1bXe6SaE4J"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 217120,
+        "name": "Martyrial Girl$",
+        "disc_number": 1,
+        "id": "5BArG7sCHPSa1bXe6SaE4J"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          },
+          {
+            "name": "Oh Land",
+            "id": "46CuxapoPjUfIOiXdNq7qM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3nUszV5llWoAaYBjIh7YQa"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 251600,
+        "name": "Life Goes On (feat. Oh Land)",
+        "disc_number": 1,
+        "id": "3nUszV5llWoAaYBjIh7YQa"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          },
+          {
+            "name": "Adam Levine",
+            "id": "4bYPcJP5jwMhSivRcqie2n"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0qOnSQQF0yzuPWsXrQ9paz"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 210960,
+        "name": "Stereo Hearts (feat. Adam Levine)",
+        "disc_number": 1,
+        "id": "0qOnSQQF0yzuPWsXrQ9paz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/46Dt1s8011jivif0OhWdj5"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 240240,
+        "name": "Solo Discotheque (Whiskey Bitness)",
+        "disc_number": 1,
+        "id": "46Dt1s8011jivif0OhWdj5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5AU2AUQ2AnRNFEnalA9wmF"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 221213,
+        "name": "Holy Horseshit, Batman!",
+        "disc_number": 1,
+        "id": "5AU2AUQ2AnRNFEnalA9wmF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          },
+          {
+            "name": "Neon Hitch",
+            "id": "2TnJ7VOpGzjtKUn0ObpEYe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bfqkspKABT4pPicm6wC9F"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 222213,
+        "name": "Ass Back Home (feat. Neon Hitch)",
+        "disc_number": 1,
+        "id": "3bfqkspKABT4pPicm6wC9F"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1HkoICaaH0f4mLHP4dSWb7"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 195213,
+        "name": "Nil-Nil-Draw",
+        "disc_number": 1,
+        "id": "1HkoICaaH0f4mLHP4dSWb7"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nhPIfkqazQBHApnPOXDYR"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 230493,
+        "name": "Lazarus, Ze Gitan",
+        "disc_number": 1,
+        "id": "1nhPIfkqazQBHApnPOXDYR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          },
+          {
+            "name": "Ryan Tedder",
+            "id": "4we5S2VLjgY9KzIzApL1KI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/77ZdAoTHYoF6Umo76HFD4m"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 228533,
+        "name": "The Fighter",
+        "disc_number": 1,
+        "id": "77ZdAoTHYoF6Umo76HFD4m"
+      },
+      {
+        "artists": [
+          {
+            "name": "Gym Class Heroes",
+            "id": "4IJczjB0fJ04gs4uvP0Fli"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1dUeViLfKLOpyNL6cib9wD"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 503453,
+        "name": "Kid Nothing and the Never-Ending Naked Nightmare",
+        "disc_number": 1,
+        "id": "1dUeViLfKLOpyNL6cib9wD"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "2mumCpGmuE9iDeOvMx6XrB"
+  }
+}

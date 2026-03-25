@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6JNBQ30f1VtI0MFL9Y7gC8_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:30.944Z",
+  "lastRefreshedAt": "2026-03-25T22:19:30.944Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Rowan Elyse",
+            "id": "5p7n7sxqcyq0G5BIan9PjM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vh2NNTsI6A5pvc9GaYbj7"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 163721,
+        "name": "Roots And Rain",
+        "disc_number": 1,
+        "id": "5vh2NNTsI6A5pvc9GaYbj7"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6JNBQ30f1VtI0MFL9Y7gC8"
+  }
+}

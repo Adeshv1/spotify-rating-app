@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7rjp836UdyTfcc2XtWjyB2_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:40.388Z",
+  "lastRefreshedAt": "2026-03-25T22:19:40.388Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Blue George",
+            "id": "3iXwpImyv9kqSfxcTtfou5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LlWrUUgRE2Mqxdbcpj6NF"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 159753,
+        "name": "Morning Dew",
+        "disc_number": 1,
+        "id": "1LlWrUUgRE2Mqxdbcpj6NF"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7rjp836UdyTfcc2XtWjyB2"
+  }
+}

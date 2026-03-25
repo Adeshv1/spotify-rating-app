@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1a1T9YpoJoiwP9iESKlJSN_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:44.715Z",
+  "lastRefreshedAt": "2026-03-25T22:19:44.715Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Reinhard Krause",
+            "id": "51sDI12AiFuof8oXlSrdnM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/38GNL3kBcQafMTKT5tom7c"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 137743,
+        "name": "Fields Of Love",
+        "disc_number": 1,
+        "id": "38GNL3kBcQafMTKT5tom7c"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "1a1T9YpoJoiwP9iESKlJSN"
+  }
+}

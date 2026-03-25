@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7tGqajhsfJf24VmrE96j9s_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.304Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.304Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ren Lockhart",
+            "id": "2o6Pj478mXZrEZbEFnAbXp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Qqto6duuFLcAUvTEsacwS"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 149629,
+        "name": "Cataverdis",
+        "disc_number": 1,
+        "id": "6Qqto6duuFLcAUvTEsacwS"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "7tGqajhsfJf24VmrE96j9s"
+  }
+}

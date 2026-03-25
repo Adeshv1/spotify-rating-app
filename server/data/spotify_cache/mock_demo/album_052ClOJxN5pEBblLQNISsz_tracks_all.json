@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_052ClOJxN5pEBblLQNISsz_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:36.438Z",
+  "lastRefreshedAt": "2026-03-25T22:19:36.438Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Gianni Domenici",
+            "id": "35oY1jZXg6xVhLBw2M8M8g"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4hhki0inb5KmXcI3gJGXOv"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 144564,
+        "name": "Silent Steps in the Snow",
+        "disc_number": 1,
+        "id": "4hhki0inb5KmXcI3gJGXOv"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "052ClOJxN5pEBblLQNISsz"
+  }
+}

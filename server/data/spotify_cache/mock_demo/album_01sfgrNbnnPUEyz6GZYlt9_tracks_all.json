@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_01sfgrNbnnPUEyz6GZYlt9_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.097Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.097Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4P76CEIXrrWT2cgS1YrTMr"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 205720,
+        "name": "Genesis",
+        "disc_number": 1,
+        "id": "4P76CEIXrrWT2cgS1YrTMr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          },
+          {
+            "name": "Miguel",
+            "id": "360IAlyVv4PCEVjgyMZrxK"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2OWKDTonST8HNko3dBlPPp"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 203769,
+        "name": "Lost In Your Light (feat. Miguel)",
+        "disc_number": 1,
+        "id": "2OWKDTonST8HNko3dBlPPp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5eTNdkstwKaNahHf41fJ9u"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 187957,
+        "name": "Hotter Than Hell",
+        "disc_number": 1,
+        "id": "5eTNdkstwKaNahHf41fJ9u"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7FCfMXYTIiQ9b4hDYs4Iol"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 202914,
+        "name": "Be the One",
+        "disc_number": 1,
+        "id": "7FCfMXYTIiQ9b4hDYs4Iol"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76cy1WJvNGJTj78UqeA5zr"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 217946,
+        "name": "IDGAF",
+        "disc_number": 1,
+        "id": "76cy1WJvNGJTj78UqeA5zr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2eAAEa8pxKF7My0EO4rFgR"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 178583,
+        "name": "Blow Your Mind (Mwah)",
+        "disc_number": 1,
+        "id": "2eAAEa8pxKF7My0EO4rFgR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1mxaufUe16G9wOoG9ptUqr"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 227946,
+        "name": "Garden",
+        "disc_number": 1,
+        "id": "1mxaufUe16G9wOoG9ptUqr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0mDGNetRxywxqgiXFbagZh"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 216080,
+        "name": "No Goodbyes",
+        "disc_number": 1,
+        "id": "0mDGNetRxywxqgiXFbagZh"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0gtSPYz0OHoF7k09Auq1uC"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 171946,
+        "name": "Thinking 'Bout You",
+        "disc_number": 1,
+        "id": "0gtSPYz0OHoF7k09Auq1uC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2ekn2ttSfGqwhhate0LSR0"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 209320,
+        "name": "New Rules",
+        "disc_number": 1,
+        "id": "2ekn2ttSfGqwhhate0LSR0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4wNQAG2BzbVkLhdajjxGpR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 194106,
+        "name": "Begging",
+        "disc_number": 1,
+        "id": "4wNQAG2BzbVkLhdajjxGpR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5E5MqaS6eOsbaJibl3YeMZ"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 230480,
+        "name": "Homesick",
+        "disc_number": 1,
+        "id": "5E5MqaS6eOsbaJibl3YeMZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qxagPKgS2Wc05MLmJucBE"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 220240,
+        "name": "Dreams",
+        "disc_number": 1,
+        "id": "2qxagPKgS2Wc05MLmJucBE"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4isCUHcZJs0o8niODly6qc"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 208689,
+        "name": "Room for 2",
+        "disc_number": 1,
+        "id": "4isCUHcZJs0o8niODly6qc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2qES7NEo0DCDvi707VS3HC"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 271934,
+        "name": "New Love",
+        "disc_number": 1,
+        "id": "2qES7NEo0DCDvi707VS3HC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LwbO2KIQw1uR2FCqwaKAu"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 238826,
+        "name": "Bad Together",
+        "disc_number": 1,
+        "id": "0LwbO2KIQw1uR2FCqwaKAu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Dua Lipa",
+            "id": "6M2wZ9GZgrQXHCFfjv46we"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1oXHXIB8rHgwHSsPRNjEzn"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 228976,
+        "name": "Last Dance",
+        "disc_number": 1,
+        "id": "1oXHXIB8rHgwHSsPRNjEzn"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "01sfgrNbnnPUEyz6GZYlt9"
+  }
+}

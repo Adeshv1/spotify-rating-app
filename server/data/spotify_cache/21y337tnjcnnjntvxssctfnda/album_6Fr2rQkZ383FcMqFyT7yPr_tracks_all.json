@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6Fr2rQkZ383FcMqFyT7yPr_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:00.028Z",
+  "lastRefreshedAt": "2026-03-25T22:20:00.028Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SnNaoNhMjC1WRMTWD8qTX"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 134346,
+        "name": "Mark My Words",
+        "disc_number": 1,
+        "id": "2SnNaoNhMjC1WRMTWD8qTX"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0SNIAtRCPVVLoGEPcuHSIc"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 199946,
+        "name": "I'll Show You",
+        "disc_number": 1,
+        "id": "0SNIAtRCPVVLoGEPcuHSIc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4B0JvthVoAAuygILe3n4Bs"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 205680,
+        "name": "What Do You Mean?",
+        "disc_number": 1,
+        "id": "4B0JvthVoAAuygILe3n4Bs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/09CtPGIpYB4BrO8qb1RGsF"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 200786,
+        "name": "Sorry",
+        "disc_number": 1,
+        "id": "09CtPGIpYB4BrO8qb1RGsF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 233720,
+        "name": "Love Yourself",
+        "disc_number": 1,
+        "id": "50kpGaPAhYJ3sGmk6vplg0"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/61uyGDPJ06MkxJtHgPmuyO"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 208120,
+        "name": "Company",
+        "disc_number": 1,
+        "id": "61uyGDPJ06MkxJtHgPmuyO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Big Sean",
+            "id": "0c173mlxpT3dSFRgMO8XPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/23UV8pJEvRnAZd6ZAXBC0H"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 286853,
+        "name": "No Pressure",
+        "disc_number": 1,
+        "id": "23UV8pJEvRnAZd6ZAXBC0H"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5L9WFUodzACitS1TiGm7Mi"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 275040,
+        "name": "No Sense",
+        "disc_number": 1,
+        "id": "5L9WFUodzACitS1TiGm7Mi"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Halsey",
+            "id": "26VFTg2z8YR0cCuwLzESi2"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7E390nZTMqEbrNC1TmHd42"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 244906,
+        "name": "The Feeling",
+        "disc_number": 1,
+        "id": "7E390nZTMqEbrNC1TmHd42"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4yWCzA44dQyp0SoeM81bUb"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 234786,
+        "name": "Life Is Worth Living",
+        "disc_number": 1,
+        "id": "4yWCzA44dQyp0SoeM81bUb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Skrillex",
+            "id": "5he5w2lnU9x7JFhnwcekXX"
+          },
+          {
+            "name": "Diplo",
+            "id": "5fMUXHkw8R8eOP2RNVYEZX"
+          },
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0n8ob8S72lvznoVfiwz4qL"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 242520,
+        "name": "Where Are Ü Now",
+        "disc_number": 1,
+        "id": "0n8ob8S72lvznoVfiwz4qL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sK3nu6yk8urQ44ouEB7Au"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 223333,
+        "name": "Children",
+        "disc_number": 1,
+        "id": "7sK3nu6yk8urQ44ouEB7Au"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2IjyFRCRn8x1bEquOM3vxg"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 210160,
+        "name": "Purpose",
+        "disc_number": 1,
+        "id": "2IjyFRCRn8x1bEquOM3vxg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gcA4zzG6FnMEgPSDKbAMs"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 199226,
+        "name": "Been You",
+        "disc_number": 1,
+        "id": "6gcA4zzG6FnMEgPSDKbAMs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4AMnUGvZUVJgDuY7rOPzUZ"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 238133,
+        "name": "Get Used To It",
+        "disc_number": 1,
+        "id": "4AMnUGvZUVJgDuY7rOPzUZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "name": "Nas",
+            "id": "20qISvAhX20dpIbOOzGK3q"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1m6FkAtWVloxIRHKl7pBDP"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 202960,
+        "name": "We Are",
+        "disc_number": 1,
+        "id": "1m6FkAtWVloxIRHKl7pBDP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/00IH8ZjI9ZGB51WRX1Oesj"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 203613,
+        "name": "Trust",
+        "disc_number": 1,
+        "id": "00IH8ZjI9ZGB51WRX1Oesj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4kP50JQmyFrl9pLSmnFPZr"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 231413,
+        "name": "All In It",
+        "disc_number": 1,
+        "id": "4kP50JQmyFrl9pLSmnFPZr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Justin Bieber",
+            "id": "1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5YNf9s8WE3iF33YaFNrgpa"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 203800,
+        "name": "What Do You Mean? - Acoustic",
+        "disc_number": 1,
+        "id": "5YNf9s8WE3iF33YaFNrgpa"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 19,
+    "albumId": "6Fr2rQkZ383FcMqFyT7yPr"
+  }
+}

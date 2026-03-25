@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2iIqqSVeH04ytD0DIWrrA6_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:56.821Z",
+  "lastRefreshedAt": "2026-03-25T22:19:56.821Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4MagTPnkPiDuIa4P8GtW1b"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 197436,
+        "name": "I Like Me Better",
+        "disc_number": 1,
+        "id": "4MagTPnkPiDuIa4P8GtW1b"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2WdAV1VqmllcEznKlVOFxG"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 204712,
+        "name": "Paris in the Rain",
+        "disc_number": 1,
+        "id": "2WdAV1VqmllcEznKlVOFxG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6T7WudDzdcjkOpSeUmshzn"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 165102,
+        "name": "Comfortable",
+        "disc_number": 1,
+        "id": "6T7WudDzdcjkOpSeUmshzn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6uuslD9HHSfs5uOKvwpqkn"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 192529,
+        "name": "Paranoid",
+        "disc_number": 1,
+        "id": "6uuslD9HHSfs5uOKvwpqkn"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1U85jCmEwSIlJdrMpNsDCU"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 189333,
+        "name": "The Other",
+        "disc_number": 1,
+        "id": "1U85jCmEwSIlJdrMpNsDCU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/63PiZyWQgrKKQxKdouicyw"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 231676,
+        "name": "Reforget",
+        "disc_number": 1,
+        "id": "63PiZyWQgrKKQxKdouicyw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6I6lwAR8HMDQwltRcRJOtg"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 229029,
+        "name": "The Story Never Ends",
+        "disc_number": 1,
+        "id": "6I6lwAR8HMDQwltRcRJOtg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QmZBRns8OY4RjfkNiH2YT"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 194754,
+        "name": "Enemies",
+        "disc_number": 1,
+        "id": "1QmZBRns8OY4RjfkNiH2YT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01m3txvFMtZZtHvlgd3LoU"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 231774,
+        "name": "Come Back Home",
+        "disc_number": 1,
+        "id": "01m3txvFMtZZtHvlgd3LoU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          },
+          {
+            "name": "Travis Mills",
+            "id": "5fzbfP3jLDaJZe7TdFDXRY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1YuvmjpSSPUplUoRrOqaNb"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 235081,
+        "name": "Question",
+        "disc_number": 1,
+        "id": "1YuvmjpSSPUplUoRrOqaNb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/37RdUoVflkM32nEOZF1pFy"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 224449,
+        "name": "Easy Love",
+        "disc_number": 1,
+        "id": "37RdUoVflkM32nEOZF1pFy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4FOb1q78Z6p3rVcXZfa9qe"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 206368,
+        "name": "Adrenaline",
+        "disc_number": 1,
+        "id": "4FOb1q78Z6p3rVcXZfa9qe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5V5c0lAnvM2aqCDHWZFx0K"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 205267,
+        "name": "Chasing Fire",
+        "disc_number": 1,
+        "id": "5V5c0lAnvM2aqCDHWZFx0K"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0agBbN89WzrD9B2vPwQdNr"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 237810,
+        "name": "Breathe",
+        "disc_number": 1,
+        "id": "0agBbN89WzrD9B2vPwQdNr"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/41u66btoF0ENOiJMAcV4mx"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 262103,
+        "name": "Bracelet",
+        "disc_number": 1,
+        "id": "41u66btoF0ENOiJMAcV4mx"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0leLID5Y6OqL4wkuT0JqlB"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 255885,
+        "name": "Getting Over You",
+        "disc_number": 1,
+        "id": "0leLID5Y6OqL4wkuT0JqlB"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lauv",
+            "id": "5JZ7CnR6gTvEMKX4g70Amv"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MaQMMOR80DNUWVBM7L9fz"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 208000,
+        "name": "Never Not",
+        "disc_number": 1,
+        "id": "1MaQMMOR80DNUWVBM7L9fz"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 17,
+    "albumId": "2iIqqSVeH04ytD0DIWrrA6"
+  }
+}

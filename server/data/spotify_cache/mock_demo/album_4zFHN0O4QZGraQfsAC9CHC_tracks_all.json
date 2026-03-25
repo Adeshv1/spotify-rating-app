@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_4zFHN0O4QZGraQfsAC9CHC_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:28.471Z",
+  "lastRefreshedAt": "2026-03-25T22:19:28.471Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Isidorus",
+            "id": "1XvelV0uWSMLWWE5VQHbOO"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0i1hx7DAJAiwA1mR8tc72O"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 146456,
+        "name": "The Last Dream",
+        "disc_number": 1,
+        "id": "0i1hx7DAJAiwA1mR8tc72O"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "4zFHN0O4QZGraQfsAC9CHC"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_6j0bsFT0NhsZiiSJqS3mze_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:44.971Z",
+  "lastRefreshedAt": "2026-03-25T22:19:44.971Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Malmkvist",
+            "id": "1Po25zG3Yrda2a6il6VH8l"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42cskWMuFydbI9f9um1sTj"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 127000,
+        "name": "Nordanvind",
+        "disc_number": 1,
+        "id": "42cskWMuFydbI9f9um1sTj"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6j0bsFT0NhsZiiSJqS3mze"
+  }
+}

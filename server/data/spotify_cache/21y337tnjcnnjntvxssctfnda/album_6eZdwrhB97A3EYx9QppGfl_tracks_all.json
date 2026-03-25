@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6eZdwrhB97A3EYx9QppGfl_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:57.135Z",
+  "lastRefreshedAt": "2026-03-25T22:19:57.135Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/39a23fzBmNlAzz7fHok1Jo"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 91910,
+        "name": "Intro (Difference)",
+        "disc_number": 1,
+        "id": "39a23fzBmNlAzz7fHok1Jo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5QDGKcQLqOJvoiu8eScEaM"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 261878,
+        "name": "Let Em' Know",
+        "disc_number": 1,
+        "id": "5QDGKcQLqOJvoiu8eScEaM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/43PuMrRfbyyuz4QpZ3oAwN"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 194613,
+        "name": "Exchange",
+        "disc_number": 1,
+        "id": "43PuMrRfbyyuz4QpZ3oAwN"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5g30WoqK1Dv5Bnwpusp2vk"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 124855,
+        "name": "For However Long",
+        "disc_number": 1,
+        "id": "5g30WoqK1Dv5Bnwpusp2vk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3pXF1nA74528Edde4of9CC"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 198294,
+        "name": "Don't",
+        "disc_number": 1,
+        "id": "3pXF1nA74528Edde4of9CC"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2uYnktBpKbr8YuiLit7WiZ"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 161946,
+        "name": "Open Interlude",
+        "disc_number": 1,
+        "id": "2uYnktBpKbr8YuiLit7WiZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/725fdnXEqS0Xs1sTvdNuHq"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 190177,
+        "name": "Ten Nine Fourteen",
+        "disc_number": 1,
+        "id": "725fdnXEqS0Xs1sTvdNuHq"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5vjV8rtLO9H1XVMFTXSbnZ"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 194015,
+        "name": "The Sequence",
+        "disc_number": 1,
+        "id": "5vjV8rtLO9H1XVMFTXSbnZ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5RqsqQU0erB0OgLbwem6pU"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 223467,
+        "name": "Rambo",
+        "disc_number": 1,
+        "id": "5RqsqQU0erB0OgLbwem6pU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Y87Aek2DGI5s4WNAh8zKR"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 196111,
+        "name": "502 Come Up",
+        "disc_number": 1,
+        "id": "5Y87Aek2DGI5s4WNAh8zKR"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16bHRxM89ue0TiCKARYbRp"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 200756,
+        "name": "Sorry Not Sorry",
+        "disc_number": 1,
+        "id": "16bHRxM89ue0TiCKARYbRp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0zg5XJPiga7E5FxiehriG2"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 199323,
+        "name": "Been That Way",
+        "disc_number": 1,
+        "id": "0zg5XJPiga7E5FxiehriG2"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2gq9iG0maBxkuZI7yfGJuv"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 218261,
+        "name": "Overtime",
+        "disc_number": 1,
+        "id": "2gq9iG0maBxkuZI7yfGJuv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Bryson Tiller",
+            "id": "2EMAnMvWE2eb56ToJVfCWs"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5rgrBsAFYMun6yhtnLKRPz"
+        },
+        "track_number": 14,
+        "explicit": false,
+        "duration_ms": 249318,
+        "name": "Right My Wrongs",
+        "disc_number": 1,
+        "id": "5rgrBsAFYMun6yhtnLKRPz"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "6eZdwrhB97A3EYx9QppGfl"
+  }
+}

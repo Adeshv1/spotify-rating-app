@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_6mXWQfXOEZCFfEcYwC74qH_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:38.951Z",
+  "lastRefreshedAt": "2026-03-25T22:19:38.951Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Allysium",
+            "id": "5uQAgpFL2lx2pufHYhPAin"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RI7rnK1YgmyRcXq9pkMqQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 168498,
+        "name": "This Tender Appeal",
+        "disc_number": 1,
+        "id": "3RI7rnK1YgmyRcXq9pkMqQ"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "6mXWQfXOEZCFfEcYwC74qH"
+  }
+}

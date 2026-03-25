@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2vD3zSQr8hNlg0obNel4TE_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:03.012Z",
+  "lastRefreshedAt": "2026-03-25T22:20:03.012Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4eWQlBRaTjPPUlzacqEeoQ"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 226986,
+        "name": "Never Be the Same",
+        "disc_number": 1,
+        "id": "4eWQlBRaTjPPUlzacqEeoQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4XLu3tTSZiPFVC9mmuR6Zp"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 164363,
+        "name": "All These Years",
+        "disc_number": 1,
+        "id": "4XLu3tTSZiPFVC9mmuR6Zp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HwnezK198pJCEj1l2Adjy"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 177161,
+        "name": "She Loves Control",
+        "disc_number": 1,
+        "id": "5HwnezK198pJCEj1l2Adjy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          },
+          {
+            "name": "Young Thug",
+            "id": "50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1rfofaqEpACxVEHIZBJe6W"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 217308,
+        "name": "Havana (feat. Young Thug)",
+        "disc_number": 1,
+        "id": "1rfofaqEpACxVEHIZBJe6W"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5xi2SXmF3A5AIsuGXiUIZu"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 182563,
+        "name": "Inside Out",
+        "disc_number": 1,
+        "id": "5xi2SXmF3A5AIsuGXiUIZu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sTtHHrD0zDpmzQzH3zegz"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 178464,
+        "name": "Consequences",
+        "disc_number": 1,
+        "id": "7sTtHHrD0zDpmzQzH3zegz"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3iq9nhbI8fcnNamxMft1uv"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 214382,
+        "name": "Real Friends",
+        "disc_number": 1,
+        "id": "3iq9nhbI8fcnNamxMft1uv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7IL3UOlcJ6nmcCMwpnlfcA"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 236360,
+        "name": "Something's Gotta Give",
+        "disc_number": 1,
+        "id": "7IL3UOlcJ6nmcCMwpnlfcA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1GO9vCm5Cra5uWGSWQ5mGK"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 219824,
+        "name": "In the Dark",
+        "disc_number": 1,
+        "id": "1GO9vCm5Cra5uWGSWQ5mGK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2gxqozTaq2NYylvS8jd57G"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 175652,
+        "name": "Into It",
+        "disc_number": 1,
+        "id": "2gxqozTaq2NYylvS8jd57G"
+      },
+      {
+        "artists": [
+          {
+            "name": "Camila Cabello",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0sVgOxAOOAj0K8PdFEGhrR"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 227261,
+        "name": "Never Be the Same - Radio Edit",
+        "disc_number": 1,
+        "id": "0sVgOxAOOAj0K8PdFEGhrR"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "2vD3zSQr8hNlg0obNel4TE"
+  }
+}

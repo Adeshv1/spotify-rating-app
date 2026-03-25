@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_23amY0Ns9L31zVNhG9BRZO_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:20.842Z",
+  "lastRefreshedAt": "2026-03-25T22:19:20.842Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Trap Dickey",
+            "id": "20B8Ga2HfEUNJBAbZsJU2c"
+          },
+          {
+            "name": "Key Glock",
+            "id": "0RESbWvOMyua0yuyVrztJ5"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70sjcC1GLyYfcHntiZ16cN"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 139805,
+        "name": "Down South (feat. Key Glock)",
+        "disc_number": 1,
+        "id": "70sjcC1GLyYfcHntiZ16cN"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "23amY0Ns9L31zVNhG9BRZO"
+  }
+}

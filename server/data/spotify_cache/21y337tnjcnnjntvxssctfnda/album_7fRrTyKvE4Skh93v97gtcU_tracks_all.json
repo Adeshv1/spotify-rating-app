@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7fRrTyKvE4Skh93v97gtcU_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:49.420Z",
+  "lastRefreshedAt": "2026-03-25T22:19:49.420Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5w7wuzMzsDer96KqxafeRK"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 194711,
+        "name": "COPYCAT",
+        "disc_number": 1,
+        "id": "5w7wuzMzsDer96KqxafeRK"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/41zXlQxzTi6cGAjpOXyLYH"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 203569,
+        "name": "idontwannabeyouanymore",
+        "disc_number": 1,
+        "id": "41zXlQxzTi6cGAjpOXyLYH"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1RGasjWLZ4qMN7wbtkLa3u"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 170852,
+        "name": "my boy",
+        "disc_number": 1,
+        "id": "1RGasjWLZ4qMN7wbtkLa3u"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eB1V5LvAdxCc7brfGhRRo"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 177523,
+        "name": "watch",
+        "disc_number": 1,
+        "id": "7eB1V5LvAdxCc7brfGhRRo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3WxmlTZ85sCYFnuIXmUAEe"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 204770,
+        "name": "party favor",
+        "disc_number": 1,
+        "id": "3WxmlTZ85sCYFnuIXmUAEe"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ni8ZTAY1GHXEFOGHl7fdg"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 179172,
+        "name": "bellyache",
+        "disc_number": 1,
+        "id": "1ni8ZTAY1GHXEFOGHl7fdg"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7hDVYcQq6MxkdJGweuCtl9"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 200379,
+        "name": "ocean eyes",
+        "disc_number": 1,
+        "id": "7hDVYcQq6MxkdJGweuCtl9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1WsEgieHsWWndAzLkmV105"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 229425,
+        "name": "hostage",
+        "disc_number": 1,
+        "id": "1WsEgieHsWWndAzLkmV105"
+      },
+      {
+        "artists": [
+          {
+            "name": "Billie Eilish",
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH"
+          },
+          {
+            "name": "Vince Staples",
+            "id": "68kEuyFKyqrdQQLLsmiatm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6X7qcg95CAeJpTjtg1wooM"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 179015,
+        "name": "&burn (with Vince Staples)",
+        "disc_number": 1,
+        "id": "6X7qcg95CAeJpTjtg1wooM"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 9,
+    "albumId": "7fRrTyKvE4Skh93v97gtcU"
+  }
+}

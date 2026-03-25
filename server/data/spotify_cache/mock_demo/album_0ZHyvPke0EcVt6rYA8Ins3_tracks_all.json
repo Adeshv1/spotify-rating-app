@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0ZHyvPke0EcVt6rYA8Ins3_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.186Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.186Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "DJ Snake",
+            "id": "540vIaP2JwjQb9dm3aArA4"
+          },
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          },
+          {
+            "name": "Ozuna",
+            "id": "1i8SpTcr7yvPOmcqrbnVXY"
+          },
+          {
+            "name": "Cardi B",
+            "id": "4kYSro6naA4h99UJvo89HB"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4w8niZpiMy6qz1mntFA5uM"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 212500,
+        "name": "Taki Taki (with Selena Gomez, Ozuna & Cardi B)",
+        "disc_number": 1,
+        "id": "4w8niZpiMy6qz1mntFA5uM"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0ZHyvPke0EcVt6rYA8Ins3"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_2Bgfdyrywv3KEe0WwZdb0V_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:01.848Z",
+  "lastRefreshedAt": "2026-03-25T22:20:01.848Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4jkya9yFBCcQGYDwVBHWPT"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 338496,
+        "name": "Tribute",
+        "disc_number": 1,
+        "id": "4jkya9yFBCcQGYDwVBHWPT"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5TbzAWWc5eJaANpA9kfGCd"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 239894,
+        "name": "Love Me Again",
+        "disc_number": 1,
+        "id": "5TbzAWWc5eJaANpA9kfGCd"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4SXtvUC0xvwqlGgLAjV0XG"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 282028,
+        "name": "Losing Sleep",
+        "disc_number": 1,
+        "id": "4SXtvUC0xvwqlGgLAjV0XG"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5ZhVlg6PfTCumBGFxlnhuO"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 220400,
+        "name": "Easy",
+        "disc_number": 1,
+        "id": "5ZhVlg6PfTCumBGFxlnhuO"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4YjyzY9k75m7uLcAtXBxFp"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 215192,
+        "name": "Try",
+        "disc_number": 1,
+        "id": "4YjyzY9k75m7uLcAtXBxFp"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cBxS9ozaFa9hTkrV5yQdX"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 230683,
+        "name": "Out Of My Head",
+        "disc_number": 1,
+        "id": "4cBxS9ozaFa9hTkrV5yQdX"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rUG2H2MCyZ8elpVB2jA8p"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 222218,
+        "name": "Cheating",
+        "disc_number": 1,
+        "id": "3rUG2H2MCyZ8elpVB2jA8p"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7b3Cw57KqLydGwCDnE1AUX"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 260148,
+        "name": "Running",
+        "disc_number": 1,
+        "id": "7b3Cw57KqLydGwCDnE1AUX"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3GJuu8Owrnv6pqWE7JFWfC"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 212739,
+        "name": "Gold Dust",
+        "disc_number": 1,
+        "id": "3GJuu8Owrnv6pqWE7JFWfC"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eOy13CbSBNgcG7h13QZTl"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 223511,
+        "name": "Goodnight Goodbye",
+        "disc_number": 1,
+        "id": "7eOy13CbSBNgcG7h13QZTl"
+      },
+      {
+        "artists": [
+          {
+            "name": "John Newman",
+            "id": "34v5MVKeQnIo0CWYMbbrPf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3nzu7yAW1FLFvtwwH6Hymr"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 202594,
+        "name": "All I Need Is You",
+        "disc_number": 1,
+        "id": "3nzu7yAW1FLFvtwwH6Hymr"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "2Bgfdyrywv3KEe0WwZdb0V"
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_1I6FpscJIfwf4T56VxGVsB_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:50.937Z",
+  "lastRefreshedAt": "2026-03-25T22:19:50.937Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1lOe9qE0vR9zwWQAOk6CoO"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 131240,
+        "name": "Ransom",
+        "disc_number": 1,
+        "id": "1lOe9qE0vR9zwWQAOk6CoO"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6eSU1exzDvBEXmBRxspeh5"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 109373,
+        "name": "Shots",
+        "disc_number": 1,
+        "id": "6eSU1exzDvBEXmBRxspeh5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1kBgQ2cBNONDo7ABrvmRfu"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 157933,
+        "name": "Sidenote",
+        "disc_number": 1,
+        "id": "1kBgQ2cBNONDo7ABrvmRfu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4guBZjUyrGoHsTahO3IHdj"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 116240,
+        "name": "Did It Again",
+        "disc_number": 1,
+        "id": "4guBZjUyrGoHsTahO3IHdj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ipyiYqvds0wcaFDTW6N4X"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 163266,
+        "name": "Out Of Luck",
+        "disc_number": 1,
+        "id": "1ipyiYqvds0wcaFDTW6N4X"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3gOh1UDmnGWN4wrEcaulri"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 154880,
+        "name": "Left, Right",
+        "disc_number": 1,
+        "id": "3gOh1UDmnGWN4wrEcaulri"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ESyocZUQ3fOlCbNP6n17i"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 123573,
+        "name": "Bossanova",
+        "disc_number": 1,
+        "id": "4ESyocZUQ3fOlCbNP6n17i"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2BULAwmRpScmZE7YOF07e5"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 150093,
+        "name": "Amigo",
+        "disc_number": 1,
+        "id": "2BULAwmRpScmZE7YOF07e5"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4QjLUh87xXSWoOVFbtjkWb"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 114426,
+        "name": "Glo Up",
+        "disc_number": 1,
+        "id": "4QjLUh87xXSWoOVFbtjkWb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7uVu5amg3zP3p2n22WhY2z"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 202666,
+        "name": "Phenom",
+        "disc_number": 1,
+        "id": "7uVu5amg3zP3p2n22WhY2z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/10mIc2UoZkg1kaOfKSZ8y1"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 172786,
+        "name": "Weatherman",
+        "disc_number": 1,
+        "id": "10mIc2UoZkg1kaOfKSZ8y1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Bhdiu8zhwQR3tXy8YMbCj"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 134520,
+        "name": "DUI",
+        "disc_number": 1,
+        "id": "4Bhdiu8zhwQR3tXy8YMbCj"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4e0FYxSROat25pH16zMTZI"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 117013,
+        "name": "Love Me",
+        "disc_number": 1,
+        "id": "4e0FYxSROat25pH16zMTZI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SFaHGfSeOYBA0foNEVlIY"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 117013,
+        "name": "Molly Girl",
+        "disc_number": 1,
+        "id": "2SFaHGfSeOYBA0foNEVlIY"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ndxiJH8MkwIvPpRn8DVJA"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 128720,
+        "name": "The Score",
+        "disc_number": 1,
+        "id": "4ndxiJH8MkwIvPpRn8DVJA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/06xih8BhxlC9EbjqHWBtEs"
+        },
+        "track_number": 16,
+        "explicit": true,
+        "duration_ms": 135386,
+        "name": "Senorita",
+        "disc_number": 1,
+        "id": "06xih8BhxlC9EbjqHWBtEs"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7FITP8MVBwdQcbNAr0aVio"
+        },
+        "track_number": 17,
+        "explicit": true,
+        "duration_ms": 174093,
+        "name": "Count Me Out",
+        "disc_number": 1,
+        "id": "7FITP8MVBwdQcbNAr0aVio"
+      },
+      {
+        "artists": [
+          {
+            "name": "Lil Tecca",
+            "id": "4Ga1P7PMIsmqEZqhYZQgDo"
+          },
+          {
+            "name": "Juice WRLD",
+            "id": "4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2WsuSYJNXGKXVYkHPnq2yp"
+        },
+        "track_number": 18,
+        "explicit": true,
+        "duration_ms": 171253,
+        "name": "Ransom (with Juice WRLD) - Remix",
+        "disc_number": 1,
+        "id": "2WsuSYJNXGKXVYkHPnq2yp"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "1I6FpscJIfwf4T56VxGVsB"
+  }
+}

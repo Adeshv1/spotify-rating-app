@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_3meZFplbMmji648oWUNEfQ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:55.872Z",
+  "lastRefreshedAt": "2026-03-25T22:19:55.872Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Clean Bandit",
+            "id": "6MDME20pz9RveH9rEXvrOM"
+          },
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5knuzwU65gJK7IF5yJsuaW"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 251088,
+        "name": "Rockabye (feat. Sean Paul & Anne-Marie)",
+        "disc_number": 1,
+        "id": "5knuzwU65gJK7IF5yJsuaW"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3meZFplbMmji648oWUNEfQ"
+  }
+}

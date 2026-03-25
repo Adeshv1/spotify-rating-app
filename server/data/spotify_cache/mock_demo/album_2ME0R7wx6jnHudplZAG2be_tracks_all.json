@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2ME0R7wx6jnHudplZAG2be_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:25.633Z",
+  "lastRefreshedAt": "2026-03-25T22:19:25.633Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Pooh Shiesty",
+            "id": "5F1aAS1duwlzExnPs3l2Xe"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5YbDA37CN0YcgZXF6L2cBX"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 319213,
+        "name": "FDO",
+        "disc_number": 1,
+        "id": "5YbDA37CN0YcgZXF6L2cBX"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2ME0R7wx6jnHudplZAG2be"
+  }
+}

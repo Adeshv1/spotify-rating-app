@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0Ql3uAzHXNRXCSqHaIYc8V_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:38.391Z",
+  "lastRefreshedAt": "2026-03-25T22:19:38.391Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Mijongya",
+            "id": "7GPrD3dPYED5wENCMHirj7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4xvFnv7jOKavTDsu40BPJk"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 187198,
+        "name": "Mystical Murmurs",
+        "disc_number": 1,
+        "id": "4xvFnv7jOKavTDsu40BPJk"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0Ql3uAzHXNRXCSqHaIYc8V"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_2w1FFF4DGgE1DZKKKvujf9_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:37.639Z",
+  "lastRefreshedAt": "2026-03-25T22:19:37.639Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Emile Cerise",
+            "id": "5J3gBMCxZ68jLD8aijjftS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/657LOljr0QcBwRX1qtWQy6"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 131433,
+        "name": "As a Rose Blossom",
+        "disc_number": 1,
+        "id": "657LOljr0QcBwRX1qtWQy6"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "2w1FFF4DGgE1DZKKKvujf9"
+  }
+}

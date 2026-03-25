@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_3A3g8Hg3Y2y42uG7BmDoft_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:27.883Z",
+  "lastRefreshedAt": "2026-03-25T22:19:27.883Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Floyd Nova",
+            "id": "4aPhtYq4FqnbM02GHtZHhz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2brRgCl1LHEDuwMjFxp8s5"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 174375,
+        "name": "Éveil",
+        "disc_number": 1,
+        "id": "2brRgCl1LHEDuwMjFxp8s5"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "3A3g8Hg3Y2y42uG7BmDoft"
+  }
+}

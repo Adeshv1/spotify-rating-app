@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_7lPoGKpCGgdKFAxpudhAH5_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:05.811Z",
+  "lastRefreshedAt": "2026-03-25T22:20:05.811Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xtdJnI5fEMtNB6nDqvwyy"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 215560,
+        "name": "Cry",
+        "disc_number": 1,
+        "id": "3xtdJnI5fEMtNB6nDqvwyy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01BC4Xj5tfsfV8DLDrma7q"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 199773,
+        "name": "Ciao Adios",
+        "disc_number": 1,
+        "id": "01BC4Xj5tfsfV8DLDrma7q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/572xshmOviSGH70oPYMCZV"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 205593,
+        "name": "Alarm",
+        "disc_number": 1,
+        "id": "572xshmOviSGH70oPYMCZV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6xVr2J3X0zhEJQz5L0QNAP"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 193440,
+        "name": "Trigger",
+        "disc_number": 1,
+        "id": "6xVr2J3X0zhEJQz5L0QNAP"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4iiOb1mdmh0PCYI4BZYUU9"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 214471,
+        "name": "Then",
+        "disc_number": 1,
+        "id": "4iiOb1mdmh0PCYI4BZYUU9"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zRObPOHA0tWMYTAxLudmA"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 233760,
+        "name": "Perfect",
+        "disc_number": 1,
+        "id": "7zRObPOHA0tWMYTAxLudmA"
+      },
+      {
+        "artists": [
+          {
+            "name": "Marshmello",
+            "id": "64KEffDW9EtZ1y2vBYgq8T"
+          },
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6IQCmIGaOxzjNNcwScETVD"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 202620,
+        "name": "FRIENDS",
+        "disc_number": 1,
+        "id": "6IQCmIGaOxzjNNcwScETVD"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/11z8f8BH1WdIlFI9TNQ9mc"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 206186,
+        "name": "Bad Girlfriend",
+        "disc_number": 1,
+        "id": "11z8f8BH1WdIlFI9TNQ9mc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1s3lN9mJhWzhNIw28SQTuf"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 172869,
+        "name": "Heavy",
+        "disc_number": 1,
+        "id": "1s3lN9mJhWzhNIw28SQTuf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 186986,
+        "name": "2002",
+        "disc_number": 1,
+        "id": "2BgEsaKNfHUdlh97KmvFyo"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6jrjTqvniDSdk0jQPrdPIu"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 200146,
+        "name": "Can I Get Your Number",
+        "disc_number": 1,
+        "id": "6jrjTqvniDSdk0jQPrdPIu"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4hGBLGIu8Gbqs6C0gqVEb1"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 247480,
+        "name": "Machine",
+        "disc_number": 1,
+        "id": "4hGBLGIu8Gbqs6C0gqVEb1"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7v3wcfESfRKICfvNFnyn0T"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 234586,
+        "name": "Breathing Fire",
+        "disc_number": 1,
+        "id": "7v3wcfESfRKICfvNFnyn0T"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5wXJJlUlG8ebhGulA7rroU"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 191133,
+        "name": "Some People",
+        "disc_number": 1,
+        "id": "5wXJJlUlG8ebhGulA7rroU"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4OU3hjKf1mQvkY9YPqXlE4"
+        },
+        "track_number": 15,
+        "explicit": true,
+        "duration_ms": 249426,
+        "name": "Used to Love You",
+        "disc_number": 1,
+        "id": "4OU3hjKf1mQvkY9YPqXlE4"
+      },
+      {
+        "artists": [
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2UMvrzK3hCP7ftLDHLO9G8"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 226280,
+        "name": "Peak - Stripped",
+        "disc_number": 1,
+        "id": "2UMvrzK3hCP7ftLDHLO9G8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Clean Bandit",
+            "id": "6MDME20pz9RveH9rEXvrOM"
+          },
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          },
+          {
+            "name": "Sean Paul",
+            "id": "3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fvY2U1AzW0diYF0hnBbKt"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 250456,
+        "name": "Rockabye (feat. Sean Paul & Anne-Marie)",
+        "disc_number": 1,
+        "id": "3fvY2U1AzW0diYF0hnBbKt"
+      },
+      {
+        "artists": [
+          {
+            "name": "David Guetta",
+            "id": "1Cs0zKBU1kc0i8ypK3B9ai"
+          },
+          {
+            "name": "Anne-Marie",
+            "id": "1zNqDE7qDGCsyzJwohVaoX"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01u9H9ZBX0nFWEw1FLnulL"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 184311,
+        "name": "Don't Leave Me Alone (feat. Anne-Marie)",
+        "disc_number": 1,
+        "id": "01u9H9ZBX0nFWEw1FLnulL"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 18,
+    "albumId": "7lPoGKpCGgdKFAxpudhAH5"
+  }
+}

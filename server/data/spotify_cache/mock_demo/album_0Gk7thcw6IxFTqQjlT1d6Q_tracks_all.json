@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0Gk7thcw6IxFTqQjlT1d6Q_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:30.321Z",
+  "lastRefreshedAt": "2026-03-25T22:19:30.321Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Lexi Bradley",
+            "id": "1CvuYflvQR5lwg1WzrhKAm"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6nLMLEetvwwmZxnENQrQWn"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 142853,
+        "name": "Torrero",
+        "disc_number": 1,
+        "id": "6nLMLEetvwwmZxnENQrQWn"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0Gk7thcw6IxFTqQjlT1d6Q"
+  }
+}

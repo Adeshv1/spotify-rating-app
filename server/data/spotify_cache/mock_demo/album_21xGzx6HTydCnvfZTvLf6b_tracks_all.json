@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_21xGzx6HTydCnvfZTvLf6b_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:20.453Z",
+  "lastRefreshedAt": "2026-03-25T22:19:20.453Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4LGFc5Vv5YlqTvWIa37CbG"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 118425,
+        "name": "No Security",
+        "disc_number": 1,
+        "id": "4LGFc5Vv5YlqTvWIa37CbG"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VW6HJYa5l0uzGcCRA222P"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 260825,
+        "name": "Ca$ino",
+        "disc_number": 1,
+        "id": "3VW6HJYa5l0uzGcCRA222P"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7bwLHhqhRu0fVTM3aaeK9V"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 136542,
+        "name": "Birds & the Bees",
+        "disc_number": 1,
+        "id": "7bwLHhqhRu0fVTM3aaeK9V"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          },
+          {
+            "name": "Momo Boyd",
+            "id": "5gqxLVfjWfNZ6dsKL05NKd"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5sHeIGDbdzw8DeO57XZKIy"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 232424,
+        "name": "Good Flirts (feat. Kendrick Lamar & Momo Boyd)",
+        "disc_number": 1,
+        "id": "5sHeIGDbdzw8DeO57XZKIy"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Th1SPySWgYlkXXC6wLMwL"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 195612,
+        "name": "House Money",
+        "disc_number": 1,
+        "id": "5Th1SPySWgYlkXXC6wLMwL"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/76uwSqRmmSfRZVocIceH1b"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 205176,
+        "name": "I am not a Lyricist",
+        "disc_number": 1,
+        "id": "76uwSqRmmSfRZVocIceH1b"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          },
+          {
+            "name": "Too $hort",
+            "id": "4sb7rZNN93BSS6Gqgepo4v"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2N1D5t5zkvlNElbH9q0vBv"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 184930,
+        "name": "$ex Appeal (feat. Too $hort)",
+        "disc_number": 1,
+        "id": "2N1D5t5zkvlNElbH9q0vBv"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5OUtx1HW0cLbt1bCuSHlw8"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 228013,
+        "name": "Highway 95 pt.2",
+        "disc_number": 1,
+        "id": "5OUtx1HW0cLbt1bCuSHlw8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5waTXjl4V7YBw1Bo4CsjlM"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 292359,
+        "name": "Circus Circus Free$tyle",
+        "disc_number": 1,
+        "id": "5waTXjl4V7YBw1Bo4CsjlM"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          },
+          {
+            "name": "Che Ecru",
+            "id": "45AMD9qU0ERQY5RvR7deHR"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05gychGDaYtqT3sWQhZydb"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 199831,
+        "name": "Dramatic Girl (feat. Che Ecru)",
+        "disc_number": 1,
+        "id": "05gychGDaYtqT3sWQhZydb"
+      },
+      {
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "id": "5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4OiF7pHMapELmWxgwShCbK"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 166469,
+        "name": "No Blame",
+        "disc_number": 1,
+        "id": "4OiF7pHMapELmWxgwShCbK"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 11,
+    "albumId": "21xGzx6HTydCnvfZTvLf6b"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_76290XdXVF9rPzGdNRWdCh_tracks_all",
+  "fetchedAt": "2026-03-25T22:20:06.119Z",
+  "lastRefreshedAt": "2026-03-25T22:20:06.119Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5wTVNpi5WDByxBgKgUE6MU"
+        },
+        "track_number": 1,
+        "explicit": true,
+        "duration_ms": 181109,
+        "name": "Supermodel",
+        "disc_number": 1,
+        "id": "5wTVNpi5WDByxBgKgUE6MU"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          },
+          {
+            "name": "Travis Scott",
+            "id": "0Y5tJX1MQlPlqiwlOH1tJY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0q75NwOoFiARAVp4EXU4Bs"
+        },
+        "track_number": 2,
+        "explicit": true,
+        "duration_ms": 275085,
+        "name": "Love Galore (feat. Travis Scott)",
+        "disc_number": 1,
+        "id": "0q75NwOoFiARAVp4EXU4Bs"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          },
+          {
+            "name": "Kendrick Lamar",
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/593W4qZOwwdqF6YnimJjL6"
+        },
+        "track_number": 3,
+        "explicit": true,
+        "duration_ms": 266072,
+        "name": "Doves In The Wind (feat. Kendrick Lamar)",
+        "disc_number": 1,
+        "id": "593W4qZOwwdqF6YnimJjL6"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/06u5LrUpbosQlQ1QJFhPpG"
+        },
+        "track_number": 4,
+        "explicit": true,
+        "duration_ms": 231412,
+        "name": "Drew Barrymore",
+        "disc_number": 1,
+        "id": "06u5LrUpbosQlQ1QJFhPpG"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5yvhdo8FXbBsIllxv2Rr94"
+        },
+        "track_number": 5,
+        "explicit": true,
+        "duration_ms": 196120,
+        "name": "Prom",
+        "disc_number": 1,
+        "id": "5yvhdo8FXbBsIllxv2Rr94"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gU9OKjOE7ghfEd55oRO57"
+        },
+        "track_number": 6,
+        "explicit": true,
+        "duration_ms": 272193,
+        "name": "The Weekend",
+        "disc_number": 1,
+        "id": "6gU9OKjOE7ghfEd55oRO57"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6Vmow8PuUaU7W1T2WWLZk2"
+        },
+        "track_number": 7,
+        "explicit": true,
+        "duration_ms": 161615,
+        "name": "Go Gina",
+        "disc_number": 1,
+        "id": "6Vmow8PuUaU7W1T2WWLZk2"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/19woxaSpjOefa2JnAOoqW5"
+        },
+        "track_number": 8,
+        "explicit": true,
+        "duration_ms": 208397,
+        "name": "Garden (Say It Like Dat)",
+        "disc_number": 1,
+        "id": "19woxaSpjOefa2JnAOoqW5"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2fXwCWkh6YG5zU1IyvQrbs"
+        },
+        "track_number": 9,
+        "explicit": true,
+        "duration_ms": 231257,
+        "name": "Broken Clocks",
+        "disc_number": 1,
+        "id": "2fXwCWkh6YG5zU1IyvQrbs"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0336UwEBwBBao8uWCuugYr"
+        },
+        "track_number": 10,
+        "explicit": true,
+        "duration_ms": 149314,
+        "name": "Anything",
+        "disc_number": 1,
+        "id": "0336UwEBwBBao8uWCuugYr"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          },
+          {
+            "name": "James Fauntleroy",
+            "id": "5ooSG9S0glqP5ZrqqaHBvT"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3LcoHjgdNl4xtWVaJGSA1p"
+        },
+        "track_number": 11,
+        "explicit": true,
+        "duration_ms": 75810,
+        "name": "Wavy (Interlude) (feat. James Fauntleroy)",
+        "disc_number": 1,
+        "id": "3LcoHjgdNl4xtWVaJGSA1p"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5fQBa4wkmq28xpSLOQ202K"
+        },
+        "track_number": 12,
+        "explicit": true,
+        "duration_ms": 253590,
+        "name": "Normal Girl",
+        "disc_number": 1,
+        "id": "5fQBa4wkmq28xpSLOQ202K"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          },
+          {
+            "name": "Isaiah Rashad",
+            "id": "6aaMZ3fcfLv4tEbmY7bjRM"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1IgePMOW0qEe1AViWgkal9"
+        },
+        "track_number": 13,
+        "explicit": true,
+        "duration_ms": 245929,
+        "name": "Pretty Little Birds (feat. Isaiah Rashad)",
+        "disc_number": 1,
+        "id": "1IgePMOW0qEe1AViWgkal9"
+      },
+      {
+        "artists": [
+          {
+            "name": "SZA",
+            "id": "7tYKF4w9nC0nq9CsPZTHyP"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4h6ViRoztTBpWcJ1zFT9Zg"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 198160,
+        "name": "20 Something",
+        "disc_number": 1,
+        "id": "4h6ViRoztTBpWcJ1zFT9Zg"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 14,
+    "albumId": "76290XdXVF9rPzGdNRWdCh"
+  }
+}

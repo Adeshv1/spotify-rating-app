@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0HrNXsDWQIBntoUwfhjaVW_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:38.214Z",
+  "lastRefreshedAt": "2026-03-25T22:19:38.214Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Aquilegia",
+            "id": "4XF98HJsL7ue3NksOvebiJ"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/31qeus61ieZE3s9VU3OOPU"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 223494,
+        "name": "The Story of Forever",
+        "disc_number": 1,
+        "id": "31qeus61ieZE3s9VU3OOPU"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0HrNXsDWQIBntoUwfhjaVW"
+  }
+}

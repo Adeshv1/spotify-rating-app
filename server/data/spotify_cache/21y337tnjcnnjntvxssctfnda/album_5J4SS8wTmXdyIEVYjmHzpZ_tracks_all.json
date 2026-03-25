@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_5J4SS8wTmXdyIEVYjmHzpZ_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:54.020Z",
+  "lastRefreshedAt": "2026-03-25T22:19:54.020Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5MwIGPDKeDb7SpblcaQP6O"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 194453,
+        "name": "One Call Away",
+        "disc_number": 1,
+        "id": "5MwIGPDKeDb7SpblcaQP6O"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2EbseeW2cr5zK3J8VuYntw"
+        },
+        "track_number": 2,
+        "explicit": false,
+        "duration_ms": 199133,
+        "name": "Dangerously",
+        "disc_number": 1,
+        "id": "2EbseeW2cr5zK3J8VuYntw"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6TjWrm6BZytIjHnZcX2TGk"
+        },
+        "track_number": 3,
+        "explicit": false,
+        "duration_ms": 190453,
+        "name": "Marvin Gaye (feat. Meghan Trainor)",
+        "disc_number": 1,
+        "id": "6TjWrm6BZytIjHnZcX2TGk"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6A7PbIUxiSwqOlHuMwI7te"
+        },
+        "track_number": 4,
+        "explicit": false,
+        "duration_ms": 212213,
+        "name": "Losing My Mind",
+        "disc_number": 1,
+        "id": "6A7PbIUxiSwqOlHuMwI7te"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Selena Gomez",
+            "id": "0C8ZW7ezQVs4URX5aX7Kqx"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/54PbBpquVfhfrwRwvjSXbI"
+        },
+        "track_number": 5,
+        "explicit": false,
+        "duration_ms": 217706,
+        "name": "We Don't Talk Anymore (feat. Selena Gomez)",
+        "disc_number": 1,
+        "id": "54PbBpquVfhfrwRwvjSXbI"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1mL1pb7iSeTk90dtEsa73j"
+        },
+        "track_number": 6,
+        "explicit": false,
+        "duration_ms": 210866,
+        "name": "My Gospel",
+        "disc_number": 1,
+        "id": "1mL1pb7iSeTk90dtEsa73j"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5U3qK5UVDDn8ir0ktbK11Q"
+        },
+        "track_number": 7,
+        "explicit": false,
+        "duration_ms": 190106,
+        "name": "Up All Night",
+        "disc_number": 1,
+        "id": "5U3qK5UVDDn8ir0ktbK11Q"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Fi7qTS7T0OGDiQe6EVPNf"
+        },
+        "track_number": 8,
+        "explicit": false,
+        "duration_ms": 206466,
+        "name": "Left Right Left",
+        "disc_number": 1,
+        "id": "5Fi7qTS7T0OGDiQe6EVPNf"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6gRoudyuCU7aD9AJWjTMdd"
+        },
+        "track_number": 9,
+        "explicit": false,
+        "duration_ms": 214413,
+        "name": "Then There's You",
+        "disc_number": 1,
+        "id": "6gRoudyuCU7aD9AJWjTMdd"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34OANthMBNkRGMfzU3Rov8"
+        },
+        "track_number": 10,
+        "explicit": false,
+        "duration_ms": 210680,
+        "name": "Suffer",
+        "disc_number": 1,
+        "id": "34OANthMBNkRGMfzU3Rov8"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Shy Carter",
+            "id": "7JZafQsN8syJ9agEtcyP4V"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5XNQD4EOqj2afdqsvYvzMc"
+        },
+        "track_number": 11,
+        "explicit": false,
+        "duration_ms": 235920,
+        "name": "As You Are (feat. Shy Carter)",
+        "disc_number": 1,
+        "id": "5XNQD4EOqj2afdqsvYvzMc"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0djtkuu6afzGQKcuEi2gNV"
+        },
+        "track_number": 12,
+        "explicit": false,
+        "duration_ms": 187906,
+        "name": "Some Type of Love",
+        "disc_number": 1,
+        "id": "0djtkuu6afzGQKcuEi2gNV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Wiz Khalifa",
+            "id": "137W8MRPWKqSmrBGDBFSop"
+          },
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6IcrwGdIvRsrImOnoYfG9Z"
+        },
+        "track_number": 13,
+        "explicit": false,
+        "duration_ms": 229525,
+        "name": "See You Again (feat. Charlie Puth)",
+        "disc_number": 1,
+        "id": "6IcrwGdIvRsrImOnoYfG9Z"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Wale",
+            "id": "67nwj3Y5sZQLl72VNUHEYE"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4LfkoDOt4mhrbo8Ndk37sQ"
+        },
+        "track_number": 14,
+        "explicit": true,
+        "duration_ms": 200106,
+        "name": "Marvin Gaye (feat. Wale) - Remix",
+        "disc_number": 1,
+        "id": "4LfkoDOt4mhrbo8Ndk37sQ"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Meghan Trainor",
+            "id": "6JL8zeS1NmiOftqZTRgdTz"
+          },
+          {
+            "name": "Boehm",
+            "id": "08p782h5VznNEQMM4wAEp9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UkB6rIHWMke2DcyZZ37CF"
+        },
+        "track_number": 15,
+        "explicit": false,
+        "duration_ms": 194499,
+        "name": "Marvin Gaye (feat. Meghan Trainor) - Boehm Remix",
+        "disc_number": 1,
+        "id": "1UkB6rIHWMke2DcyZZ37CF"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "Tyga",
+            "id": "5LHRHt1k9lMyONurDHEdrp"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4zhpLgd7CsS69auGgoMpoT"
+        },
+        "track_number": 16,
+        "explicit": false,
+        "duration_ms": 192045,
+        "name": "One Call Away (feat. Tyga) - Remix",
+        "disc_number": 1,
+        "id": "4zhpLgd7CsS69auGgoMpoT"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          },
+          {
+            "name": "KLYMVX",
+            "id": "68PsxdwOmePEmaNZJgKBU3"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7o3q6UPTiQ1QqyxMz4KQsV"
+        },
+        "track_number": 17,
+        "explicit": false,
+        "duration_ms": 221441,
+        "name": "One Call Away - KLYMVX Remix",
+        "disc_number": 1,
+        "id": "7o3q6UPTiQ1QqyxMz4KQsV"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7eJECM4njsc622iY9zg4af"
+        },
+        "track_number": 18,
+        "explicit": false,
+        "duration_ms": 189052,
+        "name": "One Call Away - Acoustic",
+        "disc_number": 1,
+        "id": "7eJECM4njsc622iY9zg4af"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2jqbQyZBU5QgXPz6ItIgBp"
+        },
+        "track_number": 19,
+        "explicit": false,
+        "duration_ms": 179439,
+        "name": "Marvin Gaye - Live",
+        "disc_number": 1,
+        "id": "2jqbQyZBU5QgXPz6ItIgBp"
+      },
+      {
+        "artists": [
+          {
+            "name": "Charlie Puth",
+            "id": "6VuMaDnrHyPL1p4EHjYLi7"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/473mvpyfJXItgFFZuuakvc"
+        },
+        "track_number": 20,
+        "explicit": false,
+        "duration_ms": 192808,
+        "name": "Some Type of Love - Live",
+        "disc_number": 1,
+        "id": "473mvpyfJXItgFFZuuakvc"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 20,
+    "albumId": "5J4SS8wTmXdyIEVYjmHzpZ"
+  }
+}

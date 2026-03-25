@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "album_48f225tKoJvjJOu6HDpzmb_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:35.804Z",
+  "lastRefreshedAt": "2026-03-25T22:19:35.804Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Ole-Bjørn Talstad",
+            "id": "1RRY8KBuZYuhAAJRgdDlP9"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5rWsceGlMA0FD647lhEVEX"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 135122,
+        "name": "Gravity",
+        "disc_number": 1,
+        "id": "5rWsceGlMA0FD647lhEVEX"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "48f225tKoJvjJOu6HDpzmb"
+  }
+}

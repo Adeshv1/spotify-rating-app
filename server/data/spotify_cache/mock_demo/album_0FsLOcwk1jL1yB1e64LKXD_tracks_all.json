@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "userId": "mock_demo",
+  "cacheKey": "album_0FsLOcwk1jL1yB1e64LKXD_tracks_all",
+  "fetchedAt": "2026-03-25T22:19:48.241Z",
+  "lastRefreshedAt": "2026-03-25T22:19:48.241Z",
+  "data": {
+    "items": [
+      {
+        "artists": [
+          {
+            "name": "Otto Noir",
+            "id": "7mpTE0q7VN3TGP1kpn4uIS"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3cn7PHrN7FdhOrH2wqPeKe"
+        },
+        "track_number": 1,
+        "explicit": false,
+        "duration_ms": 161913,
+        "name": "Lofoten",
+        "disc_number": 1,
+        "id": "3cn7PHrN7FdhOrH2wqPeKe"
+      }
+    ],
+    "offset": 0,
+    "limit": 50,
+    "total": 1,
+    "albumId": "0FsLOcwk1jL1yB1e64LKXD"
+  }
+}
