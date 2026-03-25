@@ -151,3 +151,4 @@
 + Landing: tighten the public mobile layout with smaller hero typography, stacked CTAs, cleaner navbar spacing, and a softer dev-mode note without changing desktop (implemented 2026-03-25)
 + Auth: redirect cancelled Spotify consent back to the landing page with a friendly message instead of leaving the callback in a broken error state (implemented 2026-03-25)
 + Auth/UI: make cancelled Spotify consent return to the landing page quietly without showing a red error message (implemented 2026-03-25)
++ Landing: make the inner public hero card occupy nearly the full viewport on desktop and mobile while preserving clean outer margins (implemented 2026-03-25)

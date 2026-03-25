@@ -162,7 +162,7 @@
 }
 
 .appShellPublicLanding .mainLanding > .container {
-  min-height: auto;
+  min-height: calc(100svh - 4.25rem);
 }
 
 .cardDashboard {
@@ -179,13 +179,23 @@
   padding: 1.2% 1.5% 1.5%;
 }
 
+.appShellPublicLanding .containerLanding {
+  min-height: calc(100svh - 4.25rem);
+  padding: 0.8rem 1.15rem 1rem;
+}
+
 .cardLanding {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   min-height: 100%;
   height: auto;
   display: flex;
   padding: 2% 2.5%;
   overflow: visible;
+}
+
+.appShellPublicLanding .cardLanding {
+  min-height: calc(100svh - 5.85rem);
+  padding: 1.35rem 1.65rem 1.2rem;
 }
 
 .dashboardPage {
@@ -738,6 +748,11 @@
   box-sizing: border-box;
 }
 
+.appShellPublicLanding .landingPage {
+  min-height: 100%;
+  padding: 0;
+}
+
 .landingContent {
   width: min(56rem, 100%);
   display: flex;
@@ -747,6 +762,10 @@
   flex: 1 1 auto;
   min-height: 100%;
   margin: 0 auto;
+}
+
+.appShellPublicLanding .landingContent {
+  width: min(60rem, 100%);
 }
 
 .landingContent h1 {
@@ -1037,9 +1056,24 @@
     padding: 0.95rem 0.95rem 1.1rem;
   }
 
+  .appShellPublicLanding .containerLanding {
+    min-height: calc(100svh - 3.9rem);
+    padding: 0.45rem 0.55rem 0.6rem;
+  }
+
+  .appShellPublicLanding .cardLanding {
+    min-height: calc(100svh - 4.95rem);
+    padding: 0.85rem 0.85rem 0.95rem;
+  }
+
   .landingPage {
     min-height: auto;
     padding: 0.3rem 0 0.2rem;
+  }
+
+  .appShellPublicLanding .landingPage {
+    min-height: 100%;
+    padding: 0;
   }
 
   .landingContent {
@@ -1135,6 +1169,15 @@
 
   .cardLanding {
     padding: 0.82rem 0.8rem 0.98rem;
+  }
+
+  .appShellPublicLanding .containerLanding {
+    padding: 0.38rem 0.48rem 0.52rem;
+  }
+
+  .appShellPublicLanding .cardLanding {
+    min-height: calc(100svh - 4.65rem);
+    padding: 0.78rem 0.74rem 0.88rem;
   }
 
   .landingPage {
