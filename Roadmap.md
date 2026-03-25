@@ -137,3 +137,4 @@
 + Header/UI: add a red storage warning beside Export / Import that explains browser-local persistence and recommends frequent backups (implemented 2026-03-20)
 + Deployment: make the Node server bind configurable via `HOST` and document Render-specific build/start/health/disk settings (implemented 2026-03-20)
 + Backend: add explicit demo-seeding progress/failure logs so Render shows where owner-login demo cache priming stops (implemented 2026-03-20)
++ Rank Songs: resolve binary-compare labels from local caches and never fall back to raw `spid:` keys in the ranking UI (implemented 2026-03-25)

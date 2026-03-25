@@ -412,8 +412,28 @@ function normalizeTrackName(name, id = null) {
   if (typeof name !== "string") return null;
   const trimmed = name.trim();
   if (!trimmed) return null;
+  if (trimmed.startsWith("spid:")) return null;
   if (id && trimmed === id) return null;
+  if (id && trimmed === `spid:${id}`) return null;
   return trimmed;
+}
+
+function spotifyIdFromTrackKey(trackKey) {
+  if (typeof trackKey !== "string" || !trackKey.startsWith("spid:")) {
+    return null;
+  }
+  const id = trackKey.slice("spid:".length).trim();
+  return id || null;
+}
+
+function getTrackDisplayName(track, trackKey = null) {
+  const fallbackId =
+    (typeof track?.id === "string" && track.id) ||
+    spotifyIdFromTrackKey(trackKey);
+  return (
+    normalizeTrackName(track?.name, fallbackId) ||
+    (fallbackId ? "Unknown Spotify track" : "(untitled track)")
+  );
 }
 
 function getTrackAlbumMemberships(track) {
@@ -3658,21 +3678,27 @@ function RankSongsPage({
   const trackIndex = useMemo(() => {
     const map = new Map();
     for (const t of globalSongs) {
-      const key = trackKeyOfTrack(t);
-      if (!map.has(key)) {
-        const artists = Array.isArray(t?.artists)
-          ? t.artists.filter(Boolean)
-          : [];
-        map.set(key, {
-          id: typeof t?.id === "string" ? t.id : null,
-          name: typeof t?.name === "string" ? t.name : null,
-          artists,
-          album: typeof t?.album === "string" ? t.album : null,
-        });
+      mergeTrackIntoIndex(map, t);
+    }
+
+    const playlistIds = Array.isArray(readPlaylistsCache(userId)?.items)
+      ? readPlaylistsCache(userId)
+          .items.map(playlist => playlist?.id)
+          .filter(Boolean)
+      : [];
+
+    for (const playlistId of playlistIds) {
+      const cachedTracks = readPlaylistTracksCache(userId, playlistId);
+      const items = Array.isArray(cachedTracks?.items)
+        ? cachedTracks.items
+        : [];
+      for (const track of items) {
+        mergeTrackIntoIndex(map, track);
       }
     }
+
     return map;
-  }, [globalSongs]);
+  }, [globalSongs, localDataRevision, userId]);
 
   const unrankedRows = useMemo(() => {
     if (!ranking) return [];
@@ -3865,13 +3891,13 @@ function RankSongsPage({
                               className="rankSongsExcludeBtn"
                               onClick={() => moveTrackToExcluded(r.key)}
                               title="Move to Do not rate"
-                              aria-label={`Move ${r.track?.name || r.key} to Do not rate`}
+                              aria-label={`Move ${getTrackDisplayName(r.track, r.key)} to Do not rate`}
                             >
                               ×
                             </button>
                             <div className="rankSongsCellText">
                               <div className="cellTitle">
-                                {r.track?.name || r.key}
+                                {getTrackDisplayName(r.track, r.key)}
                               </div>
                               <div className="cellSub">
                                 {r.artists || "Unknown artist"}
@@ -3931,7 +3957,7 @@ function RankSongsPage({
                             >
                               <div className="rankSongsExcludedMain">
                                 <div className="cellTitle">
-                                  {r.track?.name || r.key}
+                                  {getTrackDisplayName(r.track, r.key)}
                                 </div>
                                 <div className="cellSub">
                                   {r.artists || "Unknown artist"}
@@ -4057,7 +4083,7 @@ function RankSongsPage({
                                 className="btn small rowPlayBtn rankSongsHoverPlay"
                                 onClick={() => openTrackInSpotify(r.track.id)}
                                 title="Play in Spotify"
-                                aria-label={`Play ${r.track?.name || r.key}`}
+                                aria-label={`Play ${getTrackDisplayName(r.track, r.key)}`}
                               >
                                 Play
                               </button>
@@ -4066,7 +4092,7 @@ function RankSongsPage({
                         </td>
                         <td>
                           <div className="cellTitle">
-                            {r.track?.name || r.key}
+                            {getTrackDisplayName(r.track, r.key)}
                           </div>
                           <div className="cellSub">
                             {r.artists || "Unknown artist"}
@@ -4079,7 +4105,7 @@ function RankSongsPage({
                               onClick={() => moveRankedTrack(r.key, -1)}
                               disabled={(orderedIndexByKey.get(r.key) ?? idx) <= 0}
                               title="Move this song up one position"
-                              aria-label={`Move ${r.track?.name || r.key} up one position`}
+                              aria-label={`Move ${getTrackDisplayName(r.track, r.key)} up one position`}
                             >
                               ↑
                             </button>
@@ -4091,7 +4117,7 @@ function RankSongsPage({
                                 orderedKeys.length - 1
                               }
                               title="Move this song down one position"
-                              aria-label={`Move ${r.track?.name || r.key} down one position`}
+                              aria-label={`Move ${getTrackDisplayName(r.track, r.key)} down one position`}
                             >
                               ↓
                             </button>
@@ -4791,6 +4817,9 @@ function BinarySorter({
     (activeKey && trackIndex?.get?.(activeKey)) ||
     (activeKey && trackByKey.get(activeKey)) ||
     null;
+  const activeTrackId =
+    (typeof activeTrack?.id === "string" && activeTrack.id) ||
+    spotifyIdFromTrackKey(activeKey);
 
   const midIndex =
     session && baseOrder.length
@@ -4801,6 +4830,9 @@ function BinarySorter({
     (midKey && trackIndex?.get?.(midKey)) ||
     (midKey && trackByKey.get(midKey)) ||
     null;
+  const midTrackId =
+    (typeof midTrack?.id === "string" && midTrack.id) ||
+    spotifyIdFromTrackKey(midKey);
 
   function insertAt(position) {
     if (!ranking || !activeKey) return;
@@ -4853,7 +4885,7 @@ function BinarySorter({
           <div className="duelGrid">
             <div className="duelCard duelCardLeft">
               <div className="duelTitle">
-                {activeTrack?.name || activeKey || "(untitled track)"}
+                {getTrackDisplayName(activeTrack, activeKey)}
               </div>
               {Array.isArray(activeTrack?.artists) &&
               activeTrack.artists.length ? (
@@ -4871,10 +4903,10 @@ function BinarySorter({
                 >
                   Better
                 </button>
-                {activeTrack?.id ? (
+                {activeTrackId ? (
                   <button
                     className="btn duelSecondaryBtn"
-                    onClick={() => openTrackInSpotify(activeTrack.id)}
+                    onClick={() => openTrackInSpotify(activeTrackId)}
                     title="Play in Spotify"
                   >
                     Play
@@ -4903,7 +4935,7 @@ function BinarySorter({
 
             <div className="duelCard">
               <div className="duelTitle">
-                {midTrack?.name || midKey || "(untitled track)"}
+                {getTrackDisplayName(midTrack, midKey)}
               </div>
               {Array.isArray(midTrack?.artists) && midTrack.artists.length ? (
                 <div className="duelMeta">{midTrack.artists.join(", ")}</div>
@@ -4920,10 +4952,10 @@ function BinarySorter({
                 >
                   Better
                 </button>
-                {midTrack?.id ? (
+                {midTrackId ? (
                   <button
                     className="btn duelSecondaryBtn"
-                    onClick={() => openTrackInSpotify(midTrack.id)}
+                    onClick={() => openTrackInSpotify(midTrackId)}
                     title="Play in Spotify"
                   >
                     Play
