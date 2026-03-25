@@ -1015,6 +1015,18 @@ function readAuthErrorFromLocation() {
   const authStatus = params.get("auth_status");
   const statusText = authStatus ? ` (Spotify ${authStatus})` : "";
 
+  if (authError === "spotify_login_cancelled") {
+    params.delete("auth_error");
+    params.delete("auth_status");
+    const nextSearch = params.toString();
+    const nextUrl =
+      window.location.pathname +
+      (nextSearch ? `?${nextSearch}` : "") +
+      window.location.hash;
+    window.history.replaceState(null, "", nextUrl);
+    return null;
+  }
+
   let message = "Spotify login failed.";
   if (authError === "spotify_profile_forbidden") {
     message =

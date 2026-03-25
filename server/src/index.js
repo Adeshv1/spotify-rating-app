@@ -2079,6 +2079,18 @@ const server = http.createServer((req, res) => {
       return
     }
 
+    const authError = url.searchParams.get('error')
+    if (authError) {
+      clearSpotifyAuthCookies(res)
+      clearCookie(res, 'sp_state', { path: '/' })
+      clearCookie(res, 'sp_verifier', { path: '/' })
+      redirectWithAuthError(
+        res,
+        authError === 'access_denied' ? 'spotify_login_cancelled' : authError,
+      )
+      return
+    }
+
     const code = url.searchParams.get('code')
     const state = url.searchParams.get('state')
     const storedState = cookies.sp_state
