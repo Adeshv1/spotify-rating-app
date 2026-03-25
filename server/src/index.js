@@ -1537,6 +1537,7 @@ function readJsonFile(filePath) {
 }
 
 function writeJsonFileAtomic(filePath, value) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true })
   const tmpPath = `${filePath}.${process.pid}.${Date.now()}.tmp`
   fs.writeFileSync(tmpPath, JSON.stringify(value, null, 2), 'utf8')
   fs.renameSync(tmpPath, filePath)

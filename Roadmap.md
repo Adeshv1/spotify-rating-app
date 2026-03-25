@@ -142,3 +142,4 @@
 + Ranking data: reconcile duplicate song variants by normalized name + artists even when Spotify durations differ slightly across releases (implemented 2026-03-25)
 + Dashboard: merge duplicate album-progress rows across album-id and alternate-release variants when the album name matches and the songs overlap (implemented 2026-03-25)
 + Dashboard/Rank Songs: keep album expansion read-only, make per-song `Rate` add only that track, and replace `Rate next song` with `Rank whole album` for single-album adds (implemented 2026-03-25)
++ Server: recreate the `rankings` parent directory on every ranking save so deleting it mid-run does not break autosave (implemented 2026-03-25)
