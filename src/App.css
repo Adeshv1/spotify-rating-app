@@ -2294,6 +2294,118 @@
   text-overflow: ellipsis;
 }
 
+@media (max-width: 768px) {
+  .binarySorterCard {
+    margin-top: 0.38rem;
+    padding-top: 0.62rem;
+  }
+
+  .binarySorterStatus {
+    margin: 0 0 0.38rem;
+    color: rgba(255, 255, 255, 0.54);
+    font-size: 0.74rem;
+    line-height: 1.15;
+  }
+
+  .duelGrid {
+    gap: 0.46rem;
+    margin-top: 0.58rem;
+  }
+
+  .duelCard {
+    padding: 0.58rem;
+    border-radius: 13px;
+  }
+
+  .duelVs {
+    font-size: 0.8rem;
+    min-height: 0.72rem;
+  }
+
+  .duelTitle {
+    font-size: 0.88rem;
+  }
+
+  .duelMeta,
+  .duelStats {
+    margin-top: 0.14rem;
+    font-size: 0.76rem;
+  }
+
+  .duelActions {
+    gap: 0.34rem;
+    margin-top: 0.42rem;
+  }
+
+  .duelPrimaryBtn {
+    padding: 0.38rem 0.52rem;
+    font-size: 0.82rem;
+  }
+
+  .duelSecondaryBtn {
+    padding: 0.3rem 0.52rem;
+    font-size: 0.78rem;
+  }
+
+  .duelCardLeft .duelActions {
+    min-height: 0;
+  }
+
+  .duelCardLeft .duelActionsFooter {
+    gap: 0.3rem;
+    margin-top: 0.44rem;
+  }
+
+  .duelCardLeft .duelActionsFooter .btn {
+    padding: 0.28rem 0.46rem;
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .binarySorterCard {
+    margin-top: 0.28rem;
+    padding-top: 0.52rem;
+  }
+
+  .binarySorterStatus {
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .duelGrid {
+    gap: 0.38rem;
+  }
+
+  .duelCard {
+    padding: 0.5rem;
+  }
+
+  .duelTitle {
+    font-size: 0.84rem;
+  }
+
+  .duelMeta,
+  .duelStats {
+    font-size: 0.72rem;
+  }
+
+  .duelPrimaryBtn {
+    padding: 0.34rem 0.46rem;
+    font-size: 0.78rem;
+  }
+
+  .duelSecondaryBtn {
+    padding: 0.26rem 0.46rem;
+    font-size: 0.74rem;
+  }
+
+  .duelCardLeft .duelActionsFooter .btn {
+    padding: 0.24rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
+
 .read-the-docs {
   color: var(--text-muted);
   text-decoration: underline;

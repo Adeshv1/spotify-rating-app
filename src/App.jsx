@@ -71,6 +71,23 @@ function normalizeArtistNameKey(name) {
   return name.trim().toLowerCase().replaceAll(/\s+/g, " ");
 }
 
+function findScrollableAncestor(node) {
+  if (!node || typeof window === "undefined") return null;
+  let current = node.parentElement;
+  while (current) {
+    const style = window.getComputedStyle(current);
+    const overflowY = style?.overflowY || "";
+    if (
+      (overflowY === "auto" || overflowY === "scroll") &&
+      current.scrollHeight > current.clientHeight + 2
+    ) {
+      return current;
+    }
+    current = current.parentElement;
+  }
+  return null;
+}
+
 function formatCountdown(targetMs, nowMs) {
   if (!Number.isFinite(targetMs) || !Number.isFinite(nowMs)) return "not scheduled";
   const totalSeconds = Math.max(0, Math.ceil((targetMs - nowMs) / 1000));
@@ -2320,6 +2337,213 @@ function TopArtistCard({ artist, artistId, rootEl, imageState, onVisible }) {
   );
 }
 
+function AlbumProgressExpandedContent({
+  album,
+  albumLoadState,
+  onOpenAlbum,
+  onRankWholeAlbum,
+  onRateTrack,
+}) {
+  const hasPendingAlbumTracks =
+    album.unratedCount > 0 || album.doNotRateCount > 0;
+
+  return (
+    <Fragment>
+      <div className="albumExpandHeader">
+        <div className="albumPromptGroup">
+          {album.unratedCount > 0 ? (
+            <p className="meta albumPrompt">
+              {album.unratedCount} song
+              {album.unratedCount === 1 ? "" : "s"} still need
+              ranking. Finish this album from here.
+            </p>
+          ) : album.doNotRateCount > 0 ? (
+            <p className="meta albumPrompt">
+              {album.doNotRateCount} song
+              {album.doNotRateCount === 1 ? "" : "s"} marked
+              Do not rate for this album.
+            </p>
+          ) : (
+            <p className="meta albumPrompt">
+              All songs from this album are rated.
+            </p>
+          )}
+          {!album.albumTracksLoaded &&
+          album.totalTracks >
+            album.ratedTracks.length +
+              album.unratedTracks.length +
+              album.doNotRateTracks.length ? (
+            <p className="meta albumPromptSecondary">
+              {albumLoadState?.status === "loading"
+                ? "Loading full album tracklist…"
+                : albumLoadState?.status === "error"
+                  ? albumLoadState.error
+                  : "Expanding this album fetches the remaining songs from Spotify once, then caches them."}
+            </p>
+          ) : null}
+        </div>
+        <span className="albumHeaderActions">
+          {album.albumId ? (
+            <button
+              className="btn small"
+              onClick={() => onOpenAlbum?.(album.albumId)}
+            >
+              Open album
+            </button>
+          ) : null}
+          {album.unratedCount > 0 ? (
+            <button
+              className="btn small"
+              onClick={() => onRankWholeAlbum?.(album)}
+            >
+              Rank whole album
+            </button>
+          ) : null}
+        </span>
+      </div>
+      <div
+        className={`albumExpandGrid ${hasPendingAlbumTracks ? "" : "albumExpandGridSingle"}`.trim()}
+      >
+        <div className="albumSection">
+          <div className="albumSectionTitle">
+            Rated ({album.ratedCount})
+          </div>
+          {album.ratedTracks.length ? (
+            <ul className="albumTrackList">
+              {album.ratedTracks.map(track => {
+                const trackId =
+                  (typeof track?.id === "string" ? track.id : null) ||
+                  (typeof track?.trackKey === "string" &&
+                  track.trackKey.startsWith("spid:")
+                    ? track.trackKey.slice("spid:".length)
+                    : null);
+                return (
+                  <li
+                    key={track.trackKey}
+                    className="albumTrackRow"
+                  >
+                    <div className="albumTrackMain">
+                      <span className="albumTrackName">
+                        {track.name || track.trackKey}
+                      </span>
+                      <span className="albumTrackMeta">
+                        {track.artists?.length
+                          ? track.artists.join(", ")
+                          : "Unknown artist"}
+                      </span>
+                    </div>
+                    <span className="albumTrackActions">
+                      <span className="rankValue">
+                        #{Math.round(track.rank || 0)}
+                      </span>
+                      {trackId ? (
+                        <button
+                          className="btn small compact"
+                          onClick={() => openTrackInSpotify(trackId)}
+                          title="Open in Spotify"
+                        >
+                          Play
+                        </button>
+                      ) : null}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <p className="meta">No rated songs yet.</p>
+          )}
+        </div>
+        {hasPendingAlbumTracks ? (
+          <div className="albumSection">
+            <div className="albumSectionTitle">
+              Unrated ({album.unratedCount})
+            </div>
+            {album.unratedTracks.length ? (
+              <ul className="albumTrackList">
+                {album.unratedTracks.map(track => (
+                  <li
+                    key={track.trackKey}
+                    className="albumTrackRow"
+                  >
+                    <div className="albumTrackMain">
+                      <span className="albumTrackName">
+                        {track.name || track.trackKey}
+                      </span>
+                      <span className="albumTrackMeta">
+                        {track.artists?.length
+                          ? track.artists.join(", ")
+                          : "Unknown artist"}
+                      </span>
+                    </div>
+                    <span className="albumTrackActions">
+                      <button
+                        className="btn small compact"
+                        onClick={() => onRateTrack?.(album, track)}
+                      >
+                        Rate
+                      </button>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="meta">
+                Nothing left to rate.
+              </p>
+            )}
+            {album.doNotRateCount > 0 ? (
+              <Fragment>
+                <div className="albumSectionDivider" />
+                <div className="albumSectionSubTitle">
+                  DO NOT RATE ({album.doNotRateCount})
+                </div>
+                {album.doNotRateTracks.length ? (
+                  <ul className="albumTrackList">
+                    {album.doNotRateTracks.map(track => (
+                      <li
+                        key={track.trackKey}
+                        className="albumTrackRow"
+                      >
+                        <div className="albumTrackMain">
+                          <span className="albumTrackName">
+                            {track.name || track.trackKey}
+                          </span>
+                          <span className="albumTrackMeta">
+                            {track.artists?.length
+                              ? track.artists.join(", ")
+                              : "Unknown artist"}
+                          </span>
+                        </div>
+                        <span className="albumTrackActions">
+                          <button
+                            className="btn small compact"
+                            onClick={() =>
+                              onRateTrack?.(album, track, {
+                                restoreExcluded: true,
+                              })
+                            }
+                          >
+                            Rate
+                          </button>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="meta">
+                    No songs are marked Do not rate.
+                  </p>
+                )}
+              </Fragment>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
+    </Fragment>
+  );
+}
+
 function DashboardPage({
   userId,
   ranking,
@@ -2328,6 +2552,10 @@ function DashboardPage({
   onOverwriteRanking,
   onStartRankingTrack,
 }) {
+  const [mobileDashboardTab, setMobileDashboardTab] = useState("songs");
+  const [isMobileDashboardLayout, setIsMobileDashboardLayout] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= 768 : false,
+  );
   const [artistCardsRootEl, setArtistCardsRootEl] = useState(null);
   const [expandedAlbumKey, setExpandedAlbumKey] = useState(null);
   const [albumProgressInfoOpen, setAlbumProgressInfoOpen] = useState(false);
@@ -3317,6 +3545,24 @@ function DashboardPage({
     for (const a of list.slice(0, count)) ensureArtistImageForArtist(a);
   }, [computed, ensureArtistImageForArtist]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const media = window.matchMedia("(max-width: 768px)");
+    const sync = event => {
+      setIsMobileDashboardLayout(Boolean(event?.matches));
+    };
+
+    setIsMobileDashboardLayout(media.matches);
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", sync);
+      return () => media.removeEventListener("change", sync);
+    }
+
+    media.addListener(sync);
+    return () => media.removeListener(sync);
+  }, []);
+
   if (!userId) return <p className="meta">Loading…</p>;
   if (!ranking) return <p className="meta">Loading ranking…</p>;
   if (!computed?.hasAnyRatings) {
@@ -3333,6 +3579,670 @@ function DashboardPage({
     );
   }
 
+  const renderSongsPanel = (panelClassName = "dashPanel") => (
+    <div className={panelClassName}>
+      <div className="dashPanelHeader">
+        <h3>Top songs ({computed.topSongs.length})</h3>
+      </div>
+      <div
+        className="dashPanelBody dashPanelBodyTight"
+        role="region"
+        aria-label="Top songs list"
+        tabIndex={0}
+      >
+        <div
+          className="dashboardSongsMobileList"
+          role="list"
+          aria-label="Top songs cards"
+        >
+          {computed.topSongs.map((t, idx) => {
+            const trackId =
+              (typeof t?.id === "string" ? t.id : null) ||
+              (typeof t?.trackKey === "string" &&
+              t.trackKey.startsWith("spid:")
+                ? t.trackKey.slice("spid:".length)
+                : null);
+            return (
+              <article
+                key={t.trackKey}
+                className="dashboardSongMobileCard"
+                role="listitem"
+              >
+                <div className="dashboardSongMobileTop">
+                  <span className="dashboardSongMobileRank">
+                    #{topSongRanks[idx] ?? idx + 1}
+                  </span>
+                  {trackId ? (
+                    <button
+                      className="btn small"
+                      onClick={() => openTrackInSpotify(trackId)}
+                      title="Open in Spotify"
+                    >
+                      Play
+                    </button>
+                  ) : null}
+                </div>
+                <div className="dashboardSongMobileTitle">
+                  {t.name || t.id || t.trackKey}
+                </div>
+                <div className="dashboardSongMobileMeta">
+                  {t.artists?.length
+                    ? t.artists.join(", ")
+                    : "Unknown artist"}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <table className="dashTable dashboardTopSongsDesktopTable">
+          <colgroup>
+            <col className="dashColIndex" />
+            <col />
+            <col className="dashColPlay" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th className="right dashColIndex">#</th>
+              <th>Song</th>
+              <th
+                className="right dashColPlay"
+                aria-label="Play column"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            {computed.topSongs.map((t, idx) => {
+              const trackId =
+                (typeof t?.id === "string" ? t.id : null) ||
+                (typeof t?.trackKey === "string" &&
+                t.trackKey.startsWith("spid:")
+                  ? t.trackKey.slice("spid:".length)
+                  : null);
+              return (
+                <tr
+                  key={t.trackKey}
+                  className="dashTableRow"
+                >
+                  <td className="right">
+                    <span className="cellSub">
+                      {topSongRanks[idx] ?? idx + 1}
+                    </span>
+                  </td>
+                  <td>
+                    <div className="cellTitle">
+                      {t.name || t.id || t.trackKey}
+                    </div>
+                    <div className="cellSub">
+                      {t.artists?.length
+                        ? t.artists.join(", ")
+                        : "Unknown artist"}
+                    </div>
+                  </td>
+                  <td className="right">
+                    {trackId ? (
+                      <button
+                        className="btn small rowPlayBtn"
+                        onClick={() => openTrackInSpotify(trackId)}
+                        title="Open in Spotify"
+                      >
+                        Play
+                      </button>
+                    ) : null}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+
+  const renderArtistsPanel = (panelClassName = "dashPanel dashPanelArtists") => (
+    <div className={panelClassName}>
+      <div className="dashPanelHeader">
+        <h3>Top artists ({computed.topArtists.length})</h3>
+      </div>
+      <div
+        ref={setArtistCardsRootEl}
+        className="dashPanelBody"
+        role="region"
+        aria-label="Top artists list"
+        tabIndex={0}
+      >
+        <div
+          className="artistGrid"
+          role="list"
+          aria-label="Top artists cards"
+        >
+          {computed.topArtists.map(a => {
+            const artistName =
+              typeof a?.name === "string" ? a.name : "Unknown artist";
+            const artistKey = normalizeArtistNameKey(artistName);
+            const effectiveArtistId =
+              (typeof a?.artistId === "string" ? a.artistId : null) ||
+              (typeof resolvedArtistByName?.[artistKey]?.artistId === "string"
+                ? resolvedArtistByName[artistKey].artistId
+                : null) ||
+              null;
+            const imageState = effectiveArtistId
+              ? artistImagesById?.[effectiveArtistId]
+              : null;
+            return (
+              <TopArtistCard
+                key={a.name}
+                artist={a}
+                artistId={effectiveArtistId}
+                rootEl={artistCardsRootEl}
+                imageState={imageState}
+                onVisible={ensureArtistImageForArtist}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderAlbumsPanel = (panelClassName = "dashPanel") => (
+    <div className={panelClassName}>
+      <div className="dashPanelHeader">
+        <div className="dashPanelHeaderRow">
+          <h3>Album progress ({computed.topAlbums.length})</h3>
+          <button
+            className="albumProgressInfoButton"
+            type="button"
+            onClick={() => setAlbumProgressInfoOpen(v => !v)}
+            aria-expanded={albumProgressInfoOpen}
+            aria-controls="album-progress-info"
+            aria-label="Show album progress sorting info"
+            title="How album progress is sorted"
+          >
+            i
+          </button>
+        </div>
+      </div>
+      <div
+        className="dashPanelBody dashPanelBodyTight"
+        role="region"
+        aria-label="Album progress list"
+        tabIndex={0}
+      >
+        {albumProgressInfoOpen ? (
+          <div
+            id="album-progress-info"
+            className="albumProgressInfoPanel"
+          >
+            <p className="meta">
+              Album progress is sorted by <strong>percent of the album rated</strong> first.
+              Albums with the same completion percent are then sorted by{" "}
+              <strong>average rank</strong>, where a lower average rank places higher.
+            </p>
+          </div>
+        ) : null}
+        <div
+          className="dashboardAlbumsMobileList"
+          role="list"
+          aria-label="Album progress cards"
+        >
+          {computed.topAlbums.map((a, idx) => {
+            const expanded = expandedAlbumKey === a.key;
+            const albumLoadState =
+              a.albumId && albumLoadStateById?.[a.albumId]
+                ? albumLoadStateById[a.albumId]
+                : null;
+            return (
+              <article
+                key={a.key}
+                className={`dashboardAlbumMobileCard ${
+                  expanded ? "isExpanded" : ""
+                }`.trim()}
+                role="listitem"
+              >
+                <div className="dashboardAlbumMobileTop">
+                  <span className="dashboardAlbumMobileRank">
+                    #{idx + 1}
+                  </span>
+                  <button
+                    className="btn small"
+                    onClick={async () => {
+                      const nextExpanded =
+                        expandedAlbumKey === a.key ? null : a.key;
+                      setExpandedAlbumKey(nextExpanded);
+                      if (
+                        nextExpanded &&
+                        a.albumId &&
+                        !a.albumTracksLoaded
+                      ) {
+                        await ensureAlbumTracks(a);
+                      }
+                    }}
+                    title={
+                      expanded ? "Hide album songs" : "Show album songs"
+                    }
+                  >
+                    {expanded ? "Hide" : "Show"}
+                  </button>
+                </div>
+
+                <div className="dashboardAlbumMobileTitle">{a.name}</div>
+                <div className="dashboardAlbumMobileMeta">
+                  {a.artistLabel}
+                </div>
+
+                <div className="dashboardAlbumMobileStats">
+                  <div className="dashboardAlbumMobileStat">
+                    <span className="dashboardAlbumMobileStatLabel">
+                      Avg rank
+                    </span>
+                    <span className="dashboardAlbumMobileStatValue">
+                      {Number.isFinite(a.avgRank)
+                        ? Math.round(a.avgRank)
+                        : "-"}
+                    </span>
+                  </div>
+                  <div className="dashboardAlbumMobileStat">
+                    <span className="dashboardAlbumMobileStatLabel">
+                      Rated
+                    </span>
+                    <span className="dashboardAlbumMobileStatValue">
+                      {a.ratedCount} / {a.totalTracks}
+                    </span>
+                  </div>
+                </div>
+
+                {expanded ? (
+                  <div className="dashboardAlbumMobileExpanded">
+                    <AlbumProgressExpandedContent
+                      album={a}
+                      albumLoadState={albumLoadState}
+                      onOpenAlbum={openAlbumInSpotify}
+                      onRankWholeAlbum={addWholeAlbumToRanking}
+                      onRateTrack={addSingleTrackToRanking}
+                    />
+                  </div>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
+
+        <table className="dashTable dashboardAlbumsDesktopTable">
+          <colgroup>
+            <col className="dashColIndex" />
+            <col />
+            <col className="dashColActions" />
+            <col className="dashColPlay" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th className="right dashColIndex">#</th>
+              <th>Album</th>
+              <th>Avg Rank</th>
+              <th className="right dashColPlay">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {computed.topAlbums.map((a, idx) => {
+              const expanded = expandedAlbumKey === a.key;
+              const albumLoadState =
+                a.albumId && albumLoadStateById?.[a.albumId]
+                  ? albumLoadStateById[a.albumId]
+                  : null;
+              return (
+                <Fragment key={a.key}>
+                  <tr
+                    className={`dashTableRow ${expanded ? "albumRowOpen" : ""}`}
+                  >
+                    <td className="right">
+                      <span className="cellSub">
+                        {idx + 1}
+                      </span>
+                    </td>
+                    <td>
+                      <div className="cellTitle">{a.name}</div>
+                      <div className="cellSub">{a.artistLabel}</div>
+                    </td>
+                    <td>
+                      <div className="cellTitle albumProgressValue">
+                        {Number.isFinite(a.avgRank)
+                          ? ` ${Math.round(a.avgRank)}`
+                          : "-"}
+                      </div>
+                      <div className="cellSub">
+                        {a.ratedCount} / {a.totalTracks} rated
+                      </div>
+                    </td>
+                    <td className="right">
+                      <button
+                        className="btn small"
+                        onClick={async () => {
+                          const nextExpanded =
+                            expandedAlbumKey === a.key ? null : a.key;
+                          setExpandedAlbumKey(nextExpanded);
+                          if (
+                            nextExpanded &&
+                            a.albumId &&
+                            !a.albumTracksLoaded
+                          ) {
+                            await ensureAlbumTracks(a);
+                          }
+                        }}
+                        title={
+                          expanded ? "Hide album songs" : "Show album songs"
+                        }
+                      >
+                        {expanded ? "Hide" : "Show"}
+                      </button>
+                    </td>
+                  </tr>
+                  {expanded ? (
+                    <tr className="albumRowExpanded">
+                      <td
+                        className="albumExpandCell"
+                        colSpan={4}
+                      >
+                        <AlbumProgressExpandedContent
+                          album={a}
+                          albumLoadState={albumLoadState}
+                          onOpenAlbum={openAlbumInSpotify}
+                          onRankWholeAlbum={addWholeAlbumToRanking}
+                          onRateTrack={addSingleTrackToRanking}
+                        />
+                      </td>
+                    </tr>
+                  ) : null}
+                </Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+
+  const renderSongsMobileContent = () => (
+    <div
+      className="dashboardMobilePanelBody"
+      role="region"
+      aria-label="Top songs list"
+      tabIndex={0}
+    >
+      <div className="dashboardMobileSectionLabel">
+        Top songs ({computed.topSongs.length})
+      </div>
+      <div
+        className="dashboardSongsMobileList"
+        role="list"
+        aria-label="Top songs cards"
+      >
+        {computed.topSongs.map((t, idx) => {
+          const trackId =
+            (typeof t?.id === "string" ? t.id : null) ||
+            (typeof t?.trackKey === "string" &&
+            t.trackKey.startsWith("spid:")
+              ? t.trackKey.slice("spid:".length)
+              : null);
+          return (
+            <article
+              key={t.trackKey}
+              className="dashboardSongMobileCard"
+              role="listitem"
+            >
+              <div className="dashboardSongMobileTop">
+                <span className="dashboardSongMobileRank">
+                  #{topSongRanks[idx] ?? idx + 1}
+                </span>
+                {trackId ? (
+                  <button
+                    className="btn small"
+                    onClick={() => openTrackInSpotify(trackId)}
+                    title="Open in Spotify"
+                  >
+                    Play
+                  </button>
+                ) : null}
+              </div>
+              <div className="dashboardSongMobileTitle">
+                {t.name || t.id || t.trackKey}
+              </div>
+              <div className="dashboardSongMobileMeta">
+                {t.artists?.length
+                  ? t.artists.join(", ")
+                  : "Unknown artist"}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  const renderArtistsMobileContent = () => (
+    <div
+      ref={setArtistCardsRootEl}
+      className="dashboardMobilePanelBody"
+      role="region"
+      aria-label="Top artists list"
+      tabIndex={0}
+    >
+      <div className="dashboardMobileSectionLabel">
+        Top artists ({computed.topArtists.length})
+      </div>
+      <div
+        className="artistGrid"
+        role="list"
+        aria-label="Top artists cards"
+      >
+        {computed.topArtists.map(a => {
+          const artistName =
+            typeof a?.name === "string" ? a.name : "Unknown artist";
+          const artistKey = normalizeArtistNameKey(artistName);
+          const effectiveArtistId =
+            (typeof a?.artistId === "string" ? a.artistId : null) ||
+            (typeof resolvedArtistByName?.[artistKey]?.artistId === "string"
+              ? resolvedArtistByName[artistKey].artistId
+              : null) ||
+            null;
+          const imageState = effectiveArtistId
+            ? artistImagesById?.[effectiveArtistId]
+            : null;
+          return (
+            <TopArtistCard
+              key={a.name}
+              artist={a}
+              artistId={effectiveArtistId}
+              rootEl={artistCardsRootEl}
+              imageState={imageState}
+              onVisible={ensureArtistImageForArtist}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  const renderAlbumsMobileContent = () => (
+    <div
+      className="dashboardMobilePanelBody"
+      role="region"
+      aria-label="Album progress list"
+      tabIndex={0}
+    >
+      <div className="dashboardMobileSectionHeader">
+        <div className="dashboardMobileSectionLabel">
+          Album progress ({computed.topAlbums.length})
+        </div>
+        <button
+          className="albumProgressInfoButton"
+          type="button"
+          onClick={() => setAlbumProgressInfoOpen(v => !v)}
+          aria-expanded={albumProgressInfoOpen}
+          aria-controls="album-progress-info-mobile"
+          aria-label="Show album progress sorting info"
+          title="How album progress is sorted"
+        >
+          i
+        </button>
+      </div>
+      {albumProgressInfoOpen ? (
+        <div
+          id="album-progress-info-mobile"
+          className="albumProgressInfoPanel"
+        >
+          <p className="meta">
+            Album progress is sorted by <strong>percent of the album rated</strong> first.
+            Albums with the same completion percent are then sorted by{" "}
+            <strong>average rank</strong>, where a lower average rank places higher.
+          </p>
+        </div>
+      ) : null}
+      <div
+        className="dashboardAlbumsMobileList"
+        role="list"
+        aria-label="Album progress cards"
+      >
+        {computed.topAlbums.map((a, idx) => {
+          const expanded = expandedAlbumKey === a.key;
+          const albumLoadState =
+            a.albumId && albumLoadStateById?.[a.albumId]
+              ? albumLoadStateById[a.albumId]
+              : null;
+          return (
+            <article
+              key={a.key}
+              className={`dashboardAlbumMobileCard ${
+                expanded ? "isExpanded" : ""
+              }`.trim()}
+              role="listitem"
+            >
+              <div className="dashboardAlbumMobileTop">
+                <span className="dashboardAlbumMobileRank">
+                  #{idx + 1}
+                </span>
+                <button
+                  className="btn small"
+                  onClick={async () => {
+                    const nextExpanded =
+                      expandedAlbumKey === a.key ? null : a.key;
+                    setExpandedAlbumKey(nextExpanded);
+                    if (
+                      nextExpanded &&
+                      a.albumId &&
+                      !a.albumTracksLoaded
+                    ) {
+                      await ensureAlbumTracks(a);
+                    }
+                  }}
+                  title={
+                    expanded ? "Hide album songs" : "Show album songs"
+                  }
+                >
+                  {expanded ? "Hide" : "Show"}
+                </button>
+              </div>
+
+              <div className="dashboardAlbumMobileTitle">{a.name}</div>
+              <div className="dashboardAlbumMobileMeta">
+                {a.artistLabel}
+              </div>
+
+              <div className="dashboardAlbumMobileStats">
+                <div className="dashboardAlbumMobileStat">
+                  <span className="dashboardAlbumMobileStatLabel">
+                    Avg rank
+                  </span>
+                  <span className="dashboardAlbumMobileStatValue">
+                    {Number.isFinite(a.avgRank)
+                      ? Math.round(a.avgRank)
+                      : "-"}
+                  </span>
+                </div>
+                <div className="dashboardAlbumMobileStat">
+                  <span className="dashboardAlbumMobileStatLabel">
+                    Rated
+                  </span>
+                  <span className="dashboardAlbumMobileStatValue">
+                    {a.ratedCount} / {a.totalTracks}
+                  </span>
+                </div>
+              </div>
+
+              {expanded ? (
+                <div className="dashboardAlbumMobileExpanded">
+                  <AlbumProgressExpandedContent
+                    album={a}
+                    albumLoadState={albumLoadState}
+                    onOpenAlbum={openAlbumInSpotify}
+                    onRankWholeAlbum={addWholeAlbumToRanking}
+                    onRateTrack={addSingleTrackToRanking}
+                  />
+                </div>
+              ) : null}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  if (isMobileDashboardLayout) {
+    return (
+      <div className="section dashboardPage">
+        <div
+          className="dashboardMobileTabs"
+          role="tablist"
+          aria-label="Dashboard mobile sections"
+        >
+          <button
+            type="button"
+            role="tab"
+            aria-selected={mobileDashboardTab === "songs"}
+            className={`dashboardMobileTabBtn ${
+              mobileDashboardTab === "songs" ? "active" : ""
+            }`.trim()}
+            onClick={() => setMobileDashboardTab("songs")}
+          >
+            Songs
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={mobileDashboardTab === "artists"}
+            className={`dashboardMobileTabBtn ${
+              mobileDashboardTab === "artists" ? "active" : ""
+            }`.trim()}
+            onClick={() => setMobileDashboardTab("artists")}
+          >
+            Artists
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={mobileDashboardTab === "albums"}
+            className={`dashboardMobileTabBtn ${
+              mobileDashboardTab === "albums" ? "active" : ""
+            }`.trim()}
+            onClick={() => setMobileDashboardTab("albums")}
+          >
+            Albums
+          </button>
+        </div>
+
+        <div className="dashboardColumns dashboardMobileColumns">
+          <div className="dashPanel dashboardMobileSinglePanel">
+            {mobileDashboardTab === "songs"
+              ? renderSongsMobileContent()
+              : mobileDashboardTab === "artists"
+                ? renderArtistsMobileContent()
+                : renderAlbumsMobileContent()}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="section dashboardPage">
       <div
@@ -3340,443 +4250,9 @@ function DashboardPage({
         role="region"
         aria-label="Dashboard columns"
       >
-        <div className="dashPanel">
-          <div className="dashPanelHeader">
-            <h3>Top songs ({computed.topSongs.length})</h3>
-          </div>
-          <div
-            className="dashPanelBody dashPanelBodyTight"
-            role="region"
-            aria-label="Top songs list"
-            tabIndex={0}
-          >
-            <table className="dashTable">
-              <colgroup>
-                <col className="dashColIndex" />
-                <col />
-                <col className="dashColPlay" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th className="right dashColIndex">#</th>
-                  <th>Song</th>
-                  <th
-                    className="right dashColPlay"
-                    aria-label="Play column"
-                  />
-                </tr>
-              </thead>
-              <tbody>
-                {computed.topSongs.map((t, idx) => {
-                  const trackId =
-                    (typeof t?.id === "string" ? t.id : null) ||
-                    (typeof t?.trackKey === "string" &&
-                    t.trackKey.startsWith("spid:")
-                      ? t.trackKey.slice("spid:".length)
-                      : null);
-                  return (
-                    <tr
-                      key={t.trackKey}
-                      className="dashTableRow"
-                    >
-                      <td className="right">
-                        <span className="cellSub">
-                          {topSongRanks[idx] ?? idx + 1}
-                        </span>
-                      </td>
-                      <td>
-                        <div className="cellTitle">
-                          {t.name || t.id || t.trackKey}
-                        </div>
-                        <div className="cellSub">
-                          {t.artists?.length
-                            ? t.artists.join(", ")
-                            : "Unknown artist"}
-                        </div>
-                      </td>
-                      <td className="right">
-                        {trackId ? (
-                          <button
-                            className="btn small rowPlayBtn"
-                            onClick={() => openTrackInSpotify(trackId)}
-                            title="Open in Spotify"
-                          >
-                            Play
-                          </button>
-                        ) : null}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div className="dashPanel dashPanelArtists">
-          <div className="dashPanelHeader">
-            <h3>Top artists ({computed.topArtists.length})</h3>
-          </div>
-          <div
-            ref={setArtistCardsRootEl}
-            className="dashPanelBody"
-            role="region"
-            aria-label="Top artists list"
-            tabIndex={0}
-          >
-            <div
-              className="artistGrid"
-              role="list"
-              aria-label="Top artists cards"
-            >
-              {computed.topArtists.map(a => {
-                const artistName =
-                  typeof a?.name === "string" ? a.name : "Unknown artist";
-                const artistKey = normalizeArtistNameKey(artistName);
-                const effectiveArtistId =
-                  (typeof a?.artistId === "string" ? a.artistId : null) ||
-                  (typeof resolvedArtistByName?.[artistKey]?.artistId ===
-                  "string"
-                    ? resolvedArtistByName[artistKey].artistId
-                    : null) ||
-                  null;
-                const imageState = effectiveArtistId
-                  ? artistImagesById?.[effectiveArtistId]
-                  : null;
-                return (
-                  <TopArtistCard
-                    key={a.name}
-                    artist={a}
-                    artistId={effectiveArtistId}
-                    rootEl={artistCardsRootEl}
-                    imageState={imageState}
-                    onVisible={ensureArtistImageForArtist}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="dashPanel">
-          <div className="dashPanelHeader">
-            <div className="dashPanelHeaderRow">
-              <h3>Album progress ({computed.topAlbums.length})</h3>
-              <button
-                className="albumProgressInfoButton"
-                type="button"
-                onClick={() => setAlbumProgressInfoOpen(v => !v)}
-                aria-expanded={albumProgressInfoOpen}
-                aria-controls="album-progress-info"
-                aria-label="Show album progress sorting info"
-                title="How album progress is sorted"
-              >
-                i
-              </button>
-            </div>
-          </div>
-          <div
-            className="dashPanelBody dashPanelBodyTight"
-            role="region"
-            aria-label="Album progress list"
-            tabIndex={0}
-          >
-            {albumProgressInfoOpen ? (
-              <div
-                id="album-progress-info"
-                className="albumProgressInfoPanel"
-              >
-                <p className="meta">
-                  Album progress is sorted by <strong>percent of the album rated</strong> first.
-                  Albums with the same completion percent are then sorted by{" "}
-                  <strong>average rank</strong>, where a lower average rank places higher.
-                </p>
-              </div>
-            ) : null}
-            <table className="dashTable">
-              <colgroup>
-                <col className="dashColIndex" />
-                <col />
-                <col className="dashColActions" />
-                <col className="dashColPlay" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th className="right dashColIndex">#</th>
-                  <th>Album</th>
-                  <th>Avg Rank</th>
-                  <th className="right dashColPlay">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {computed.topAlbums.map((a, idx) => {
-                  const expanded = expandedAlbumKey === a.key;
-                  const hasPendingAlbumTracks =
-                    a.unratedCount > 0 || a.doNotRateCount > 0;
-                  const albumLoadState =
-                    a.albumId && albumLoadStateById?.[a.albumId]
-                      ? albumLoadStateById[a.albumId]
-                      : null;
-                  return (
-                    <Fragment key={a.key}>
-                      <tr
-                        className={`dashTableRow ${expanded ? "albumRowOpen" : ""}`}
-                      >
-                        <td className="right">
-                          <span className="cellSub">
-                            {idx + 1}
-                          </span>
-                        </td>
-                        <td>
-                          <div className="cellTitle">{a.name}</div>
-                          <div className="cellSub">{a.artistLabel}</div>
-                        </td>
-                        <td>
-                          <div className="cellTitle albumProgressValue">
-                            {Number.isFinite(a.avgRank)
-                              ? ` ${Math.round(a.avgRank)}`
-                              : "-"}
-                          </div>
-                          <div className="cellSub">
-                            {a.ratedCount} / {a.totalTracks} rated
-                          </div>
-                        </td>
-                        <td className="right">
-                          <button
-                            className="btn small"
-                            onClick={async () => {
-                              const nextExpanded =
-                                expandedAlbumKey === a.key ? null : a.key;
-                              setExpandedAlbumKey(nextExpanded);
-                              if (
-                                nextExpanded &&
-                                a.albumId &&
-                                !a.albumTracksLoaded
-                              ) {
-                                await ensureAlbumTracks(a);
-                              }
-                            }}
-                            title={
-                              expanded ? "Hide album songs" : "Show album songs"
-                            }
-                          >
-                            {expanded ? "Hide" : "Show"}
-                          </button>
-                        </td>
-                      </tr>
-                      {expanded ? (
-                        <tr className="albumRowExpanded">
-                          <td
-                            className="albumExpandCell"
-                            colSpan={4}
-                          >
-                            <div className="albumExpandHeader">
-                              <div className="albumPromptGroup">
-                                {a.unratedCount > 0 ? (
-                                  <p className="meta albumPrompt">
-                                    {a.unratedCount} song
-                                    {a.unratedCount === 1 ? "" : "s"} still need
-                                    ranking. Finish this album from here.
-                                  </p>
-                                ) : a.doNotRateCount > 0 ? (
-                                  <p className="meta albumPrompt">
-                                    {a.doNotRateCount} song
-                                    {a.doNotRateCount === 1 ? "" : "s"} marked
-                                    Do not rate for this album.
-                                  </p>
-                                ) : (
-                                  <p className="meta albumPrompt">
-                                    All songs from this album are rated.
-                                  </p>
-                                )}
-                                {!a.albumTracksLoaded &&
-                                a.totalTracks >
-                                  a.ratedTracks.length +
-                                    a.unratedTracks.length +
-                                    a.doNotRateTracks.length ? (
-                                  <p className="meta albumPromptSecondary">
-                                    {albumLoadState?.status === "loading"
-                                      ? "Loading full album tracklist…"
-                                      : albumLoadState?.status === "error"
-                                        ? albumLoadState.error
-                                        : "Expanding this album fetches the remaining songs from Spotify once, then caches them."}
-                                  </p>
-                                ) : null}
-                              </div>
-                              <span className="albumHeaderActions">
-                                {a.albumId ? (
-                                  <button
-                                    className="btn small"
-                                    onClick={() =>
-                                      openAlbumInSpotify(a.albumId)
-                                    }
-                                  >
-                                    Open album
-                                  </button>
-                                ) : null}
-                                {a.unratedCount > 0 ? (
-                                  <button
-                                    className="btn small"
-                                    onClick={() => addWholeAlbumToRanking(a)}
-                                  >
-                                    Rank whole album
-                                  </button>
-                                ) : null}
-                              </span>
-                            </div>
-                            <div
-                              className={`albumExpandGrid ${hasPendingAlbumTracks ? "" : "albumExpandGridSingle"}`.trim()}
-                            >
-                              <div className="albumSection">
-                                <div className="albumSectionTitle">
-                                  Rated ({a.ratedCount})
-                                </div>
-                                {a.ratedTracks.length ? (
-                                  <ul className="albumTrackList">
-                                    {a.ratedTracks.map(track => {
-                                      const trackId =
-                                        (typeof track?.id === "string"
-                                          ? track.id
-                                          : null) ||
-                                        (typeof track?.trackKey === "string" &&
-                                        track.trackKey.startsWith("spid:")
-                                          ? track.trackKey.slice("spid:".length)
-                                          : null);
-                                      return (
-                                        <li
-                                          key={track.trackKey}
-                                          className="albumTrackRow"
-                                        >
-                                          <div className="albumTrackMain">
-                                            <span className="albumTrackName">
-                                              {track.name || track.trackKey}
-                                            </span>
-                                            <span className="albumTrackMeta">
-                                              {track.artists?.length
-                                                ? track.artists.join(", ")
-                                                : "Unknown artist"}
-                                            </span>
-                                          </div>
-                                          <span className="albumTrackActions">
-                                            <span className="rankValue">
-                                              #{Math.round(track.rank || 0)}
-                                            </span>
-                                            {trackId ? (
-                                              <button
-                                                className="btn small compact"
-                                                onClick={() =>
-                                                  openTrackInSpotify(trackId)
-                                                }
-                                                title="Open in Spotify"
-                                              >
-                                                Play
-                                              </button>
-                                            ) : null}
-                                          </span>
-                                        </li>
-                                      );
-                                    })}
-                                  </ul>
-                                ) : (
-                                  <p className="meta">No rated songs yet.</p>
-                                )}
-                              </div>
-                              {hasPendingAlbumTracks ? (
-                                <div className="albumSection">
-                                  <div className="albumSectionTitle">
-                                    Unrated ({a.unratedCount})
-                                  </div>
-                                  {a.unratedTracks.length ? (
-                                    <ul className="albumTrackList">
-                                      {a.unratedTracks.map(track => (
-                                        <li
-                                          key={track.trackKey}
-                                          className="albumTrackRow"
-                                        >
-                                          <div className="albumTrackMain">
-                                            <span className="albumTrackName">
-                                              {track.name || track.trackKey}
-                                            </span>
-                                            <span className="albumTrackMeta">
-                                              {track.artists?.length
-                                                ? track.artists.join(", ")
-                                                : "Unknown artist"}
-                                            </span>
-                                          </div>
-                                          <span className="albumTrackActions">
-                                            <button
-                                              className="btn small compact"
-                                              onClick={() => addSingleTrackToRanking(a, track)}
-                                            >
-                                              Rate
-                                            </button>
-                                          </span>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  ) : (
-                                    <p className="meta">
-                                      Nothing left to rate.
-                                    </p>
-                                  )}
-                                  {a.doNotRateCount > 0 ? (
-                                    <Fragment>
-                                      <div className="albumSectionDivider" />
-                                      <div className="albumSectionSubTitle">
-                                        DO NOT RATE ({a.doNotRateCount})
-                                      </div>
-                                      {a.doNotRateTracks.length ? (
-                                        <ul className="albumTrackList">
-                                          {a.doNotRateTracks.map(track => (
-                                            <li
-                                              key={track.trackKey}
-                                              className="albumTrackRow"
-                                            >
-                                              <div className="albumTrackMain">
-                                                <span className="albumTrackName">
-                                                  {track.name || track.trackKey}
-                                                </span>
-                                                <span className="albumTrackMeta">
-                                                  {track.artists?.length
-                                                    ? track.artists.join(", ")
-                                                    : "Unknown artist"}
-                                                </span>
-                                              </div>
-                                              <span className="albumTrackActions">
-                                                <button
-                                                  className="btn small compact"
-                                                  onClick={() =>
-                                                    addSingleTrackToRanking(a, track, {
-                                                      restoreExcluded: true,
-                                                    })
-                                                  }
-                                                >
-                                                  Rate
-                                                </button>
-                                              </span>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      ) : (
-                                        <p className="meta">
-                                          No songs are marked Do not rate.
-                                        </p>
-                                      )}
-                                    </Fragment>
-                                  ) : null}
-                                </div>
-                              ) : null}
-                            </div>
-                          </td>
-                        </tr>
-                      ) : null}
-                    </Fragment>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        {renderSongsPanel()}
+        {renderArtistsPanel()}
+        {renderAlbumsPanel()}
       </div>
     </div>
   );
@@ -3838,6 +4314,26 @@ function RankSongsPage({
   const [unrankedQuery, setUnrankedQuery] = useState("");
   const [rankedQuery, setRankedQuery] = useState("");
   const [excludedOpen, setExcludedOpen] = useState(false);
+  const [mobileRankTab, setMobileRankTab] = useState("unranked");
+  const [mobileUnrankedTab, setMobileUnrankedTab] = useState("unranked");
+  const [rankedArtistImagesById, setRankedArtistImagesById] = useState(() => ({}));
+  const [rankedResolvedArtistByName, setRankedResolvedArtistByName] = useState(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    return next;
+  });
+  const excludedPanelRef = useRef(null);
+  const previousExcludedOpenRef = useRef(false);
+  const rankedArtistImageInFlight = useRef(new Map());
+  const rankedTrackResolveInFlight = useRef(new Map());
+  const rankedArtistImagesByIdRef = useRef({});
+  const rankedResolvedArtistByNameRef = useRef({});
 
   const globalSongs = useMemo(() => {
     if (!userId) return [];
@@ -3908,7 +4404,10 @@ function RankSongsPage({
     if (trackByKey.size === 0) return;
     const canonicalKey =
       canonicalKeyByObservedKey.get(trackRequest.trackKey) || trackRequest.trackKey;
-    if (trackByKey.has(canonicalKey)) setActiveKey(canonicalKey);
+    if (trackByKey.has(canonicalKey)) {
+      setActiveKey(canonicalKey);
+      setMobileRankTab("rank");
+    }
     onTrackRequestHandled?.();
   }, [canonicalKeyByObservedKey, trackByKey, trackRequest, onTrackRequestHandled]);
 
@@ -3959,6 +4458,180 @@ function RankSongsPage({
 
     return map;
   }, [globalSongs, localDataRevision, userId]);
+
+  useEffect(() => {
+    rankedArtistImagesByIdRef.current = rankedArtistImagesById || {};
+  }, [rankedArtistImagesById]);
+
+  useEffect(() => {
+    rankedResolvedArtistByNameRef.current = rankedResolvedArtistByName || {};
+  }, [rankedResolvedArtistByName]);
+
+  useEffect(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    setRankedResolvedArtistByName(next);
+  }, [userId]);
+
+  const ensureRankedArtistImage = useCallback(async artistId => {
+    if (!artistId) return;
+
+    const existing = rankedArtistImagesByIdRef.current?.[artistId] || null;
+    if (existing?.status === "loaded") return;
+    if (existing?.status === "loading") {
+      const inflight = rankedArtistImageInFlight.current.get(artistId);
+      if (inflight) return inflight;
+      return;
+    }
+
+    setRankedArtistImagesById(prev => {
+      const current = prev?.[artistId];
+      if (
+        current &&
+        (current.status === "loading" || current.status === "loaded")
+      ) {
+        return prev;
+      }
+      return {
+        ...prev,
+        [artistId]: {
+          status: "loading",
+          imageUrl:
+            typeof current?.imageUrl === "string" ? current.imageUrl : null,
+        },
+      };
+    });
+
+    if (rankedArtistImageInFlight.current.has(artistId))
+      return rankedArtistImageInFlight.current.get(artistId);
+
+    const request = (async () => {
+      try {
+        const res = await fetch(`/artist-image/${encodeURIComponent(artistId)}`);
+        let data = null;
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+
+        if (!res.ok) {
+          setRankedArtistImagesById(prev => ({
+            ...prev,
+            [artistId]: {
+              status: "error",
+              imageUrl: null,
+            },
+          }));
+          return;
+        }
+
+        setRankedArtistImagesById(prev => ({
+          ...prev,
+          [artistId]: {
+            status: "loaded",
+            imageUrl: typeof data?.imageUrl === "string" ? data.imageUrl : null,
+          },
+        }));
+      } catch {
+        setRankedArtistImagesById(prev => ({
+          ...prev,
+          [artistId]: {
+            status: "error",
+            imageUrl: null,
+          },
+        }));
+      } finally {
+        rankedArtistImageInFlight.current.delete(artistId);
+      }
+    })();
+
+    rankedArtistImageInFlight.current.set(artistId, request);
+    return request;
+  }, []);
+
+  const ensureRankedTrackArtists = useCallback(async trackId => {
+    if (!trackId) return { ok: false, artists: [] };
+
+    const existing = rankedTrackResolveInFlight.current.get(trackId);
+    if (existing) return existing;
+
+    const request = (async () => {
+      try {
+        const res = await fetch(`/api/tracks/${encodeURIComponent(trackId)}`);
+        let data = null;
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+
+        if (!res.ok) {
+          return { ok: false, artists: [] };
+        }
+
+        return {
+          ok: true,
+          artists: Array.isArray(data?.artists) ? data.artists : [],
+        };
+      } catch {
+        return { ok: false, artists: [] };
+      } finally {
+        rankedTrackResolveInFlight.current.delete(trackId);
+      }
+    })();
+
+    rankedTrackResolveInFlight.current.set(trackId, request);
+    return request;
+  }, []);
+
+  const ensureRankedArtistIdsForRow = useCallback(
+    async row => {
+      const trackId =
+        typeof row?.track?.id === "string" && row.track.id ? row.track.id : null;
+      const artistNames = Array.isArray(row?.artistNames) ? row.artistNames : [];
+      if (!trackId || !artistNames.length) return;
+
+      const unresolvedNames = artistNames.filter(name => {
+        const key = normalizeArtistNameKey(name);
+        return (
+          key &&
+          typeof rankedResolvedArtistByNameRef.current?.[key]?.artistId !== "string"
+        );
+      });
+      if (!unresolvedNames.length) return;
+
+      const result = await ensureRankedTrackArtists(trackId);
+      if (!result?.ok) return;
+
+      const artists = Array.isArray(result?.artists) ? result.artists : [];
+      const toCache = {};
+      for (const artist of artists) {
+        const name = typeof artist?.name === "string" ? artist.name : null;
+        const artistId = typeof artist?.id === "string" ? artist.id : null;
+        const key = normalizeArtistNameKey(name);
+        if (!key || !artistId) continue;
+        toCache[key] = artistId;
+      }
+      if (!Object.keys(toCache).length) return;
+
+      setRankedResolvedArtistByName(prev => {
+        const next = { ...prev };
+        for (const [nameKey, artistId] of Object.entries(toCache)) {
+          next[nameKey] = { status: "loaded", artistId };
+        }
+        return next;
+      });
+      mergeArtistIdByNameCache(userId, toCache);
+    },
+    [ensureRankedTrackArtists, userId],
+  );
 
   const unrankedRows = useMemo(() => {
     if (!ranking) return [];
@@ -4028,19 +4701,47 @@ function RankSongsPage({
     if (!ranking) return [];
     return orderedKeys
       .map(key => {
-        const track = trackByKey.get(key) || null;
+        const track = trackIndex.get(key) || trackByKey.get(key) || null;
         if (!track) return null;
+        const artistNames = Array.isArray(track?.artists)
+          ? track.artists.filter(Boolean)
+          : [];
+        const artistIds = Array.isArray(track?.artistIds)
+          ? track.artistIds.filter(
+              artistId => typeof artistId === "string" && artistId,
+            )
+          : [];
+        const primaryArtistName = artistNames[0] || "Unknown artist";
+        const artistImageCandidateIds = Array.from(
+          new Set(
+            artistNames.flatMap((name, idx) => {
+              const cachedId =
+                rankedResolvedArtistByName?.[normalizeArtistNameKey(name)]?.artistId ||
+                null;
+              const directId =
+                Array.isArray(track?.artistIds) &&
+                Array.isArray(track?.artists) &&
+                track.artists.length === track.artistIds.length
+                  ? track.artistIds[idx] || null
+                  : artistIds[idx] || null;
+              return [cachedId, directId].filter(
+                artistId => typeof artistId === "string" && artistId,
+              );
+            }),
+          ),
+        );
         return {
           key,
           track,
           state: getTrackState(ranking, key),
-          artists: Array.isArray(track?.artists)
-            ? track.artists.join(", ")
-            : "",
+          artists: artistNames.join(", "),
+          artistNames,
+          primaryArtistName,
+          artistImageCandidateIds,
         };
       })
       .filter(Boolean);
-  }, [orderedKeys, ranking, trackByKey]);
+  }, [orderedKeys, rankedResolvedArtistByName, ranking, trackByKey, trackIndex]);
 
   const filteredRankedRows = useMemo(() => {
     if (!rankedQuery.trim()) return rankedRows;
@@ -4057,6 +4758,38 @@ function RankSongsPage({
     orderedKeys.forEach((key, idx) => map.set(key, idx));
     return map;
   }, [orderedKeys]);
+
+  useEffect(() => {
+    if (!userId || !rankedRows.length) return;
+
+    rankedRows.forEach(row => {
+      void ensureRankedArtistIdsForRow(row);
+    });
+  }, [ensureRankedArtistIdsForRow, rankedRows, userId]);
+
+  useEffect(() => {
+    if (!userId || !rankedRows.length) return;
+
+    const artistIds = Array.from(
+      new Set(
+        rankedRows
+          .flatMap(row => row.artistImageCandidateIds || [])
+          .filter(artistId => typeof artistId === "string" && artistId),
+      ),
+    );
+
+    artistIds.forEach(artistId => {
+      void ensureRankedArtistImage(artistId);
+    });
+  }, [ensureRankedArtistImage, rankedRows, userId]);
+
+  const getRankedArtistImageUrl = useCallback(
+    row =>
+      (row?.artistImageCandidateIds || [])
+        .map(artistId => rankedArtistImagesById?.[artistId]?.imageUrl)
+        .find(value => typeof value === "string" && value) || null,
+    [rankedArtistImagesById],
+  );
 
   const moveRankedTrack = useCallback(
     (trackKey, direction) => {
@@ -4090,6 +4823,42 @@ function RankSongsPage({
     unrankedRows,
   ]);
 
+  useEffect(() => {
+    if (mobileUnrankedTab !== "excluded") return;
+    if (excludedRows.length > 0) return;
+    setMobileUnrankedTab("unranked");
+  }, [excludedRows.length, mobileUnrankedTab]);
+
+  useEffect(() => {
+    const wasOpen = previousExcludedOpenRef.current;
+    previousExcludedOpenRef.current = excludedOpen;
+    if (!excludedOpen || wasOpen) return;
+
+    const panel = excludedPanelRef.current;
+    if (!panel) return;
+
+    const timeoutId = window.setTimeout(() => {
+      const scrollContainer = findScrollableAncestor(panel);
+      if (
+        scrollContainer &&
+        typeof scrollContainer.scrollBy === "function"
+      ) {
+        scrollContainer.scrollBy({
+          top: 104,
+          behavior: "smooth",
+        });
+        return;
+      }
+
+      window.scrollBy({
+        top: 104,
+        behavior: "smooth",
+      });
+    }, 40);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [excludedOpen]);
+
   return (
     <div className="section dashboardPage rankSongsPage">
       {!userId ? null : uniqueTracks.length === 0 ? (
@@ -4103,95 +4872,209 @@ function RankSongsPage({
           </div>
         </div>
       ) : (
-        <div
-          className="dashboardColumns rankSongsColumns"
-          role="region"
-          aria-label="Rank songs columns"
-        >
-          <div className="dashPanel">
+        <Fragment>
+          <div
+            className="rankSongsMobileTabs"
+            role="tablist"
+            aria-label="Rank songs mobile sections"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mobileRankTab === "unranked"}
+              className={`rankSongsMobileTabBtn ${
+                mobileRankTab === "unranked" ? "active" : ""
+              }`.trim()}
+              onClick={() => setMobileRankTab("unranked")}
+            >
+              Unranked
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mobileRankTab === "rank"}
+              className={`rankSongsMobileTabBtn ${
+                mobileRankTab === "rank" ? "active" : ""
+              }`.trim()}
+              onClick={() => setMobileRankTab("rank")}
+            >
+              Rank
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mobileRankTab === "ranked"}
+              className={`rankSongsMobileTabBtn ${
+                mobileRankTab === "ranked" ? "active" : ""
+              }`.trim()}
+              onClick={() => setMobileRankTab("ranked")}
+            >
+              Ranked
+            </button>
+          </div>
+
+          <div
+            className="dashboardColumns rankSongsColumns"
+            role="region"
+            aria-label="Rank songs columns"
+          >
+          <div
+            className={`dashPanel rankSongsPanel rankSongsUnrankedPanel ${
+              mobileUnrankedTab === "excluded" ? "isMobileExcludedTab" : ""
+            } ${
+              mobileRankTab === "unranked" ? "isMobileActive" : ""
+            }`.trim()}
+          >
             <div className="dashPanelHeader">
-              <div className="dashPanelHeaderRow">
-                <h3>Unranked ({unrankedRows.length})</h3>
+              <div
+                className="rankSongsUnrankedMobileTabs"
+                role="tablist"
+                aria-label="Unranked and do not rate sections"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={mobileUnrankedTab === "unranked"}
+                  className={`rankSongsUnrankedMobileTabBtn ${
+                    mobileUnrankedTab === "unranked" ? "active" : ""
+                  }`.trim()}
+                  onClick={() => setMobileUnrankedTab("unranked")}
+                >
+                  Unranked ({unrankedRows.length})
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={mobileUnrankedTab === "excluded"}
+                  className={`rankSongsUnrankedMobileTabBtn ${
+                    mobileUnrankedTab === "excluded" ? "active" : ""
+                  }`.trim()}
+                  onClick={() => setMobileUnrankedTab("excluded")}
+                >
+                  Do not rate ({excludedRows.length})
+                </button>
+              </div>
+              <div className="dashPanelHeaderRow rankSongsUnrankedHeaderRow">
+                <h3>
+                  {mobileUnrankedTab === "excluded"
+                    ? `Do not rate (${excludedRows.length})`
+                    : `Unranked (${unrankedRows.length})`}
+                </h3>
                 <input
-                  className="textInput"
+                  className="textInput rankSongsUnrankedSearch"
                   value={unrankedQuery}
                   onChange={e => setUnrankedQuery(e.target.value)}
-                  placeholder="Search unranked…"
-                  aria-label="Search unranked songs"
+                  placeholder={
+                    mobileUnrankedTab === "excluded"
+                      ? "Search do not rate…"
+                      : "Search unranked…"
+                  }
+                  aria-label={
+                    mobileUnrankedTab === "excluded"
+                      ? "Search do not rate songs"
+                      : "Search unranked songs"
+                  }
                 />
               </div>
             </div>
             <div
               className="dashPanelBody dashPanelBodyTight rankSongsScroll"
               role="region"
-              aria-label="Unranked songs list"
+              aria-label={
+                mobileUnrankedTab === "excluded"
+                  ? "Do not rate songs list"
+                  : "Unranked songs list"
+              }
               tabIndex={0}
             >
               <div className="rankSongsListStack">
-                <table className="dashTable">
-                  <colgroup>
-                    <col />
-                    <col className="dashColActions" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>Song</th>
-                      <th className="right dashColActions">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredUnrankedRows.map(r => (
-                      <tr
-                        key={r.key}
-                        className="dashTableRow"
-                      >
-                        <td className="rankSongsCellWithCornerAction">
-                          <div className="rankSongsCellTitle rankSongsCellTitleWithCornerAction">
-                            <button
-                              className="rankSongsExcludeBtn"
-                              onClick={() => moveTrackToExcluded(r.key)}
-                              title="Move to Do not rate"
-                              aria-label={`Move ${getTrackDisplayName(r.track, r.key)} to Do not rate`}
-                            >
-                              ×
-                            </button>
-                            <div className="rankSongsCellText">
-                              <div className="cellTitle">
-                                {getTrackDisplayName(r.track, r.key)}
-                              </div>
-                              <div className="cellSub">
-                                {r.artists || "Unknown artist"}
+                <div className="rankSongsUnrankedTableBlock">
+                  <table className="dashTable">
+                    <colgroup>
+                      <col />
+                      <col className="dashColActions" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Song</th>
+                        <th className="right dashColActions">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(mobileUnrankedTab === "excluded"
+                        ? filteredExcludedRows
+                        : filteredUnrankedRows
+                      ).map(r => (
+                        <tr
+                          key={r.key}
+                          className="dashTableRow"
+                        >
+                          <td className="rankSongsCellWithCornerAction">
+                            <div className="rankSongsCellTitle rankSongsCellTitleWithCornerAction">
+                              {mobileUnrankedTab === "excluded" ? null : (
+                                <button
+                                  className="rankSongsExcludeBtn"
+                                  onClick={() => moveTrackToExcluded(r.key)}
+                                  title="Move to Do not rate"
+                                  aria-label={`Move ${getTrackDisplayName(r.track, r.key)} to Do not rate`}
+                                >
+                                  ×
+                                </button>
+                              )}
+                              <div className="rankSongsCellText">
+                                <div className="cellTitle">
+                                  {getTrackDisplayName(r.track, r.key)}
+                                </div>
+                                <div className="cellSub">
+                                  {r.artists || "Unknown artist"}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td className="right">
-                          <span className="btnRow">
-                            <button
-                              className="btn"
-                              onClick={() => setActiveKey(r.key)}
-                              disabled={activeKey === r.key}
-                              title="Rank this song"
-                            >
-                              Rank
-                            </button>
-                            {typeof r.track?.id === "string" ? (
-                              <button
-                                className="btn compact"
-                                onClick={() => openTrackInSpotify(r.track.id)}
-                                title="Play in Spotify"
-                              >
-                                Play
-                              </button>
-                            ) : null}
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                          </td>
+                          <td className="right">
+                            <span className="btnRow">
+                              {mobileUnrankedTab === "excluded" ? (
+                                <button
+                                  className="btn compact"
+                                  onClick={() => restoreExcludedTrack(r.key)}
+                                  title="Add this song back to ranking"
+                                >
+                                  Restore
+                                </button>
+                              ) : (
+                                <button
+                                  className="btn"
+                                  onClick={() => {
+                                    setActiveKey(r.key);
+                                    setMobileRankTab("rank");
+                                  }}
+                                  disabled={activeKey === r.key}
+                                  title="Rank this song"
+                                >
+                                  Rank
+                                </button>
+                              )}
+                              {typeof r.track?.id === "string" ? (
+                                <button
+                                  className="btn compact"
+                                  onClick={() => openTrackInSpotify(r.track.id)}
+                                  title="Play in Spotify"
+                                >
+                                  Play
+                                </button>
+                              ) : null}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
 
-                <div className="rankSongsExcludedPanel">
+                <div
+                  ref={excludedPanelRef}
+                  className="rankSongsExcludedPanel"
+                >
                   <button
                     className="rankSongsExcludedToggle"
                     onClick={() => setExcludedOpen(open => !open)}
@@ -4245,7 +5128,11 @@ function RankSongsPage({
             </div>
           </div>
 
-          <div className="dashPanel">
+          <div
+            className={`dashPanel rankSongsPanel ${
+              mobileRankTab === "rank" ? "isMobileActive" : ""
+            }`.trim()}
+          >
             <div className="dashPanelHeader">
               <div className="dashPanelHeaderRow">
                 <h3>Rank</h3>
@@ -4294,7 +5181,11 @@ function RankSongsPage({
             </div>
           </div>
 
-          <div className="dashPanel">
+          <div
+            className={`dashPanel rankSongsPanel ${
+              mobileRankTab === "ranked" ? "isMobileActive" : ""
+            }`.trim()}
+          >
             <div className="dashPanelHeader">
               <div className="dashPanelHeaderRow">
                 <h3>Ranked ({rankedRows.length})</h3>
@@ -4313,7 +5204,107 @@ function RankSongsPage({
               aria-label="Ranked songs list"
               tabIndex={0}
             >
-              <table className="dashTable">
+              <div
+                className="rankSongsRankedMobileList"
+                role="list"
+                aria-label="Ranked songs cards"
+              >
+                {filteredRankedRows.map((r, idx) => {
+                  const imageUrl = getRankedArtistImageUrl(r);
+                  const displayRank = (orderedIndexByKey.get(r.key) ?? idx) + 1;
+                  return (
+                    <article
+                      key={r.key}
+                      className="rankSongsRankedMobileCard"
+                      role="listitem"
+                      aria-label={`Ranked song ${displayRank}: ${getTrackDisplayName(r.track, r.key)}`}
+                    >
+                      <div
+                        className={`artistAvatar rankSongsRankedMobileAvatar ${
+                          imageUrl ? "hasImage" : ""
+                        }`.trim()}
+                        aria-hidden="true"
+                      >
+                        {imageUrl ? (
+                          <img
+                            src={imageUrl}
+                            alt=""
+                            loading="lazy"
+                          />
+                        ) : (
+                          <span>
+                            {(r.primaryArtistName || "?").slice(0, 1).toUpperCase()}
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="rankSongsRankedMobileMain">
+                        <div className="rankSongsRankedMobileTop">
+                          <div className="rankSongsRankedMobileCopy">
+                            <div className="cellTitle">
+                              {getTrackDisplayName(r.track, r.key)}
+                            </div>
+                            <div className="cellSub">
+                              {r.artists || "Unknown artist"}
+                            </div>
+                          </div>
+                          <span className="rankSongsRankedMobileRank">
+                            #{displayRank}
+                          </span>
+                        </div>
+
+                        <div className="btnRow rankSongsRankedMobileActions">
+                          {typeof r.track?.id === "string" ? (
+                            <button
+                              className="btn compact"
+                              onClick={() => openTrackInSpotify(r.track.id)}
+                              title="Play in Spotify"
+                              aria-label={`Play ${getTrackDisplayName(r.track, r.key)}`}
+                            >
+                              Play
+                            </button>
+                          ) : null}
+                          <button
+                            className="btn compact"
+                            onClick={() => moveRankedTrack(r.key, -1)}
+                            disabled={(orderedIndexByKey.get(r.key) ?? idx) <= 0}
+                            title="Move this song up one position"
+                            aria-label={`Move ${getTrackDisplayName(r.track, r.key)} up one position`}
+                          >
+                            ↑
+                          </button>
+                          <button
+                            className="btn compact"
+                            onClick={() => moveRankedTrack(r.key, 1)}
+                            disabled={
+                              (orderedIndexByKey.get(r.key) ?? idx) >=
+                              orderedKeys.length - 1
+                            }
+                            title="Move this song down one position"
+                            aria-label={`Move ${getTrackDisplayName(r.track, r.key)} down one position`}
+                          >
+                            ↓
+                          </button>
+                          <button
+                            className="btn compact"
+                            onClick={() => {
+                              setActiveKey(null);
+                              onChangeRanking?.(rk =>
+                                rk ? resetTrackState(rk, r.key) : rk,
+                              );
+                            }}
+                            title="Move this song back to unranked"
+                          >
+                            Reset
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+
+              <table className="dashTable rankSongsRankedDesktopTable">
                 <colgroup>
                   <col className="dashColIndex" />
                   <col />
@@ -4402,7 +5393,8 @@ function RankSongsPage({
               </table>
             </div>
           </div>
-        </div>
+          </div>
+        </Fragment>
       )}
     </div>
   );
@@ -5556,10 +6548,10 @@ function BinarySorter({
   }
 
   return (
-    <div className="cardSub">
-      <p className="meta">
+    <div className="cardSub binarySorterCard">
+      <p className="meta binarySorterStatus">
         {session && midIndex != null
-          ? ` Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
+          ? `Comparing against rank ${midIndex + 1} of ${baseOrder.length}.`
           : activeKey
             ? " Ready to compare."
             : " Pick a song from the left to start."}

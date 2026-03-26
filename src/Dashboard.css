@@ -60,6 +60,12 @@
   display: inline-flex;
 }
 
+.dashboardPage .dashboardMobileTabs,
+.dashboardPage .dashboardSongsMobileList,
+.dashboardPage .dashboardAlbumsMobileList {
+  display: none;
+}
+
 .dashboardPage .dashTable .cellTitle,
 .dashboardPage .dashTable .cellSub {
   display: block;
@@ -484,6 +490,309 @@
   }
 }
 
+@media (max-width: 768px) {
+  .dashboardPage .dashboardMobileTabs {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    width: min(100%, 24rem);
+    max-width: 100%;
+    margin: 0.18rem auto 0.82rem;
+    padding: 0.28rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .dashboardPage .dashboardMobileTabs::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.08), transparent 80%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .dashboardPage .dashboardMobileTabBtn {
+    position: relative;
+    appearance: none;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 2.58rem;
+    padding: 0.52rem 0.45rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.94rem;
+    font-weight: 700;
+    text-align: center;
+    transition:
+      transform 180ms ease,
+      color 180ms ease,
+      background 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .dashboardPage .dashboardMobileTabBtn.active {
+    color: #fff;
+    background: linear-gradient(180deg, rgba(122, 162, 255, 0.96), rgba(79, 141, 255, 0.84));
+    box-shadow:
+      0 10px 24px rgba(47, 109, 255, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  }
+
+  .dashboardPage .dashboardMobileColumns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .dashboardPage .dashboardMobileSinglePanel {
+    overflow: visible;
+  }
+
+  .dashboardPage .dashboardPanel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboardPage .dashboardPanel:not(.isMobileActive) {
+    display: none;
+  }
+
+  .dashboardPage .dashPanelBody {
+    max-height: none;
+  }
+
+  .dashboardPage .dashPanelBodyTight {
+    overflow-y: visible;
+  }
+
+  .dashboardPage .dashPanelHeader {
+    padding: 0.8rem 0.82rem 0.74rem;
+  }
+
+  .dashboardPage .dashPanelBody {
+    padding: 0.8rem 0.82rem;
+  }
+
+  .dashboardPage .dashPanelBodyTight {
+    padding: 0;
+  }
+
+  .dashboardPage .dashPanelHeaderRow {
+    gap: 0.55rem;
+  }
+
+  .dashboardPage .dashboardMobilePanelBody {
+    padding: 0.82rem;
+    display: grid;
+    gap: 0.72rem;
+  }
+
+  .dashboardPage .dashboardMobileSectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+  }
+
+  .dashboardPage .dashboardMobileSectionLabel {
+    font-size: 0.96rem;
+    font-weight: 760;
+    line-height: 1.2;
+  }
+
+  .dashboardPage .dashboardSongsMobileList,
+  .dashboardPage .dashboardAlbumsMobileList {
+    display: grid !important;
+    gap: 0.72rem;
+    padding: 0;
+  }
+
+  .dashboardPage .dashboardTopSongsDesktopTable,
+  .dashboardPage .dashboardAlbumsDesktopTable {
+    display: none;
+  }
+
+  .dashboardPage .dashboardSongMobileCard,
+  .dashboardPage .dashboardAlbumMobileCard {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.015)),
+      rgba(255, 255, 255, 0.02);
+    padding: 0.76rem 0.78rem;
+  }
+
+  .dashboardPage .dashboardSongMobileTop,
+  .dashboardPage .dashboardAlbumMobileTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-bottom: 0.48rem;
+  }
+
+  .dashboardPage .dashboardSongMobileRank,
+  .dashboardPage .dashboardAlbumMobileRank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.75rem;
+    padding: 0.2rem 0.56rem;
+    border-radius: 999px;
+    background: rgba(122, 162, 255, 0.12);
+    border: 1px solid rgba(122, 162, 255, 0.2);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.79rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dashboardPage .dashboardSongMobileTitle,
+  .dashboardPage .dashboardAlbumMobileTitle {
+    font-size: 0.98rem;
+    font-weight: 750;
+    line-height: 1.24;
+  }
+
+  .dashboardPage .dashboardSongMobileMeta,
+  .dashboardPage .dashboardAlbumMobileMeta {
+    margin-top: 0.16rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.28;
+  }
+
+  .dashboardPage .dashboardAlbumMobileStats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    margin-top: 0.7rem;
+  }
+
+  .dashboardPage .dashboardAlbumMobileStat {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    background: rgba(8, 13, 30, 0.34);
+    padding: 0.52rem 0.58rem;
+  }
+
+  .dashboardPage .dashboardAlbumMobileStatLabel {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .dashboardPage .dashboardAlbumMobileStatValue {
+    display: block;
+    margin-top: 0.16rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dashboardPage .dashboardAlbumMobileExpanded {
+    margin-top: 0.8rem;
+    padding-top: 0.76rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .dashboardPage .dashboardAlbumMobileExpanded .albumExpandHeader {
+    margin-bottom: 0.7rem;
+  }
+
+  .dashboardPage .dashboardAlbumMobileExpanded .albumExpandGrid {
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .dashboardPage .dashboardAlbumMobileExpanded .albumSection {
+    padding: 0.72rem;
+  }
+
+  .dashboardPage .artistGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.68rem;
+  }
+
+  .dashboardPage .artistCardImage {
+    aspect-ratio: 1 / 0.92;
+  }
+
+  .dashboardPage .artistCardBody {
+    padding: 0.48rem 0.58rem 0.6rem;
+  }
+
+  .dashboardPage .artistCardHeaderRow {
+    gap: 0.45rem;
+  }
+
+  .dashboardPage .artistCardName {
+    font-size: 0.92rem;
+  }
+
+  .dashboardPage .artistCardScore {
+    font-size: 0.8rem;
+  }
+
+  .dashboardPage .artistCardTrackCount {
+    font-size: 0.76rem;
+  }
+
+  .dashboardPage .artistCardPlayBtn {
+    padding: 0.22rem 0.42rem;
+    font-size: 0.72rem;
+  }
+
+  .dashboardPage .artistCardTracks {
+    margin-top: 0.28rem;
+    margin-left: -0.58rem;
+    margin-right: -0.58rem;
+    padding: 0.14rem 0.58rem 0.36rem;
+    font-size: 0.75rem;
+    border-radius: 0 0 14px 14px;
+  }
+
+  .dashboardPage .artistCardTrack {
+    padding: 0.14rem 0;
+  }
+
+  .dashboardPage .artistCardTrackName {
+    font-size: 0.75rem;
+  }
+
+  .dashboardPage .artistCardTrackRight {
+    min-width: 4.45rem;
+    width: 4.45rem;
+  }
+
+  .dashboardPage .artistCardTrackPlayBtn {
+    padding: 0.18rem 0.36rem;
+    font-size: 0.7rem;
+  }
+
+  .dashboardPage .artistCardTrack:hover .artistCardTrackScore.rankValue,
+  .dashboardPage .artistCardTrack:focus-within .artistCardTrackScore.rankValue {
+    right: 2.45rem;
+  }
+
+  .dashboardPage .artistCardTrack:nth-child(n + 4) {
+    display: none;
+  }
+}
+
 /* Rank Songs three-column layout tweaks */
 .rankSongsPage {
   flex: 1 1 auto;
@@ -496,6 +805,14 @@
 .rankSongsPage .rankSongsColumns {
   flex: 1 1 auto;
   min-height: 0;
+}
+
+.rankSongsPage .rankSongsMobileTabs {
+  display: none;
+}
+
+.rankSongsPage .rankSongsUnrankedMobileTabs {
+  display: none;
 }
 
 .rankSongsPage .cardSub {
@@ -636,7 +953,8 @@
 }
 
 .rankSongsPage .rankSongsCenter {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .rankSongsPage .rankSongsRankCell {
@@ -662,4 +980,314 @@
 .rankSongsPage .dashTableRow:hover .rankSongsRankValue,
 .rankSongsPage .dashTableRow:focus-within .rankSongsRankValue {
   display: none;
+}
+
+.rankSongsPage .rankSongsRankedMobileList {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rankSongsPage .rankSongsMobileTabs {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    width: min(100%, 24rem);
+    max-width: 100%;
+    margin: 0.18rem auto 0.82rem;
+    padding: 0.28rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .rankSongsPage .rankSongsMobileTabs::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.08), transparent 80%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .rankSongsPage .rankSongsMobileTabBtn {
+    position: relative;
+    appearance: none;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 2.58rem;
+    padding: 0.52rem 0.45rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.94rem;
+    font-weight: 700;
+    text-align: center;
+    transition:
+      transform 180ms ease,
+      color 180ms ease,
+      background 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .rankSongsPage .rankSongsMobileTabBtn.active {
+    color: #fff;
+    background: linear-gradient(180deg, rgba(122, 162, 255, 0.96), rgba(79, 141, 255, 0.84));
+    box-shadow:
+      0 10px 24px rgba(47, 109, 255, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  }
+
+  .rankSongsPage .rankSongsColumns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .rankSongsPage .dashPanelBody {
+    max-height: none;
+  }
+
+  .rankSongsPage .rankSongsScroll {
+    overflow-y: visible;
+  }
+
+  .rankSongsPage .rankSongsListStack {
+    min-height: 0;
+  }
+
+  .rankSongsPage .rankSongsPanel {
+    display: none;
+  }
+
+  .rankSongsPage .rankSongsPanel.isMobileActive {
+    display: flex;
+  }
+
+  .rankSongsPage .rankSongsUnrankedMobileTabs {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.26rem;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.68rem;
+    padding: 0.22rem;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .rankSongsPage .rankSongsUnrankedMobileTabBtn {
+    appearance: none;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 2.2rem;
+    padding: 0.42rem 0.44rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .rankSongsPage .rankSongsUnrankedMobileTabBtn.active {
+    color: #fff;
+    background: linear-gradient(180deg, rgba(122, 162, 255, 0.96), rgba(79, 141, 255, 0.84));
+    box-shadow:
+      0 8px 18px rgba(47, 109, 255, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  }
+
+  .rankSongsPage .rankSongsUnrankedPanel .rankSongsExcludedPanel {
+    display: none;
+  }
+
+  .rankSongsPage .rankSongsUnrankedHeaderRow h3 {
+    display: none;
+  }
+
+  .rankSongsPage .dashPanelHeaderRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+  }
+
+  .rankSongsPage .dashPanelHeaderRow .textInput {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    align-self: center;
+  }
+
+  .rankSongsPage .dashPanelHeader h3 {
+    white-space: normal;
+  }
+
+  .rankSongsPage .rankSongsExcludedPanel {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    z-index: 3;
+    box-shadow: 0 -10px 22px rgba(6, 10, 24, 0.34);
+  }
+
+  .rankSongsPage .dashPanelHeader {
+    padding: 0.8rem 0.78rem 0.72rem;
+  }
+
+  .rankSongsPage .dashPanelBody {
+    padding-left: 0.78rem;
+    padding-right: 0.78rem;
+  }
+
+  .rankSongsPage .dashPanelBodyTight {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .rankSongsPage .dashTable th,
+  .rankSongsPage .dashTable td {
+    padding: 0.6rem 0.62rem;
+  }
+
+  .rankSongsPage .dashTable th {
+    font-size: 0.82rem;
+  }
+
+  .rankSongsPage .dashTable .cellTitle {
+    font-size: 0.95rem;
+  }
+
+  .rankSongsPage .dashTable .cellSub {
+    font-size: 0.82rem;
+  }
+
+  .rankSongsPage .dashTable col.dashColActions {
+    width: 7.25rem;
+  }
+
+  .rankSongsPage .btnRow {
+    gap: 0.22rem;
+    flex-wrap: nowrap;
+  }
+
+  .rankSongsPage .dashTable td.right .btnRow {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .rankSongsPage .btnRow .btn {
+    padding: 0.24rem 0.34rem;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileList {
+    display: grid;
+    gap: 0.72rem;
+    padding: 0.78rem;
+  }
+
+  .rankSongsPage .rankSongsRankedDesktopTable {
+    display: none;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileCard {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.72rem;
+    align-items: start;
+    padding: 0.72rem 0.74rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.015)),
+      rgba(255, 255, 255, 0.02);
+  }
+
+  .rankSongsPage .rankSongsRankedMobileAvatar {
+    width: 2.15rem;
+    height: 2.15rem;
+    margin-top: 0.04rem;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileMain {
+    min-width: 0;
+    display: grid;
+    gap: 0.48rem;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileTop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.52rem;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileCopy {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileCopy .cellTitle {
+    font-size: 0.98rem;
+    line-height: 1.24;
+    white-space: normal;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileCopy .cellSub {
+    margin-top: 0.14rem;
+    font-size: 0.8rem;
+    line-height: 1.24;
+    color: var(--text-muted);
+    white-space: normal;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileRank {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.7rem;
+    padding: 0.18rem 0.52rem;
+    border-radius: 999px;
+    background: rgba(122, 162, 255, 0.12);
+    border: 1px solid rgba(122, 162, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileActions {
+    justify-content: flex-start;
+    gap: 0.28rem;
+  }
+
+  .rankSongsPage .rankSongsRankedMobileActions .btn {
+    min-width: 2.08rem;
+    padding: 0.28rem 0.42rem;
+    font-size: 0.75rem;
+  }
 }
