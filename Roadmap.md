@@ -191,3 +191,5 @@
 + Dashboard/UI: add artist-image media blocks and overlaid rank badges to the mobile Top songs cards, show song/artist/album beside a top-right Play button, and move mobile dashboard scrolling into the inner panel rectangle (implemented 2026-03-25)
 + Dashboard/UI: enlarge the mobile Top songs artist square slightly and move its rank badge to the image’s top-left corner (implemented 2026-03-25)
 + Dashboard/UI: remove the hover requirement for mobile artist-card track ranks by laying out the rank and Play controls side by side on touch screens (implemented 2026-03-25)
++ Safari/UI: replace the default Vite gray document background with the app’s dark background and set a matching mobile theme color so Safari’s top and bottom chrome no longer show distracting gray bars (implemented 2026-03-25)
++ Empty states/UI: make shared empty-state cards use border-box sizing so narrow layouts do not clip the Rank Songs `No songs to rank yet` box at the sides (implemented 2026-03-25)

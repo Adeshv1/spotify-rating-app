@@ -219,6 +219,8 @@
 
 .pageEmptyStateCard {
   width: min(680px, 100%);
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 2rem 2.25rem;
   border: 1px solid var(--surface-border);
   border-radius: 22px;
