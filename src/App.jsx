@@ -5223,7 +5223,7 @@ function RankSongsPage({
           </div>
 
           <div
-            className={`dashPanel rankSongsPanel ${
+            className={`dashPanel rankSongsPanel rankSongsRankPanel ${
               mobileRankTab === "rank" ? "isMobileActive" : ""
             }`.trim()}
           >

@@ -496,10 +496,11 @@
     display: inline-flex;
     align-items: center;
     gap: 0.32rem;
+    overflow: visible;
     width: min(100%, 24rem);
     max-width: 100%;
-    margin: 0.18rem auto 0.82rem;
-    padding: 0.28rem;
+    margin: 0.24rem auto 0.82rem;
+    padding: 0.34rem 0.28rem;
     box-sizing: border-box;
     border-radius: 20px;
     border: 1px solid var(--surface-border);
@@ -1104,10 +1105,11 @@
     display: inline-flex;
     align-items: center;
     gap: 0.32rem;
+    overflow: visible;
     width: min(100%, 24rem);
     max-width: 100%;
-    margin: 0.18rem auto 0.82rem;
-    padding: 0.28rem;
+    margin: 0.24rem auto 0.82rem;
+    padding: 0.34rem 0.28rem;
     box-sizing: border-box;
     border-radius: 20px;
     border: 1px solid var(--surface-border);
@@ -1188,10 +1190,11 @@
     display: inline-flex;
     align-items: center;
     gap: 0.26rem;
+    overflow: visible;
     width: 100%;
     max-width: 100%;
     margin-top: 0.68rem;
-    padding: 0.22rem;
+    padding: 0.28rem 0.22rem;
     box-sizing: border-box;
     border-radius: 16px;
     border: 1px solid var(--surface-border);
@@ -1252,6 +1255,19 @@
 
   .rankSongsPage .dashPanelHeader h3 {
     white-space: normal;
+  }
+
+  .rankSongsPage .rankSongsRankPanel .dashPanelHeader {
+    padding-top: 0.56rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .rankSongsPage .rankSongsRankPanel .dashPanelHeaderRow {
+    gap: 0.32rem;
+  }
+
+  .rankSongsPage .rankSongsRankPanel .dashPanelHeaderRow h3 {
+    display: none;
   }
 
   .rankSongsPage .rankSongsExcludedPanel {

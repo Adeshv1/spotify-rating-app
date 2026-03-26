@@ -193,3 +193,5 @@
 + Dashboard/UI: remove the hover requirement for mobile artist-card track ranks by laying out the rank and Play controls side by side on touch screens (implemented 2026-03-25)
 + Safari/UI: replace the default Vite gray document background with the app’s dark background and set a matching mobile theme color so Safari’s top and bottom chrome no longer show distracting gray bars (implemented 2026-03-25)
 + Empty states/UI: make shared empty-state cards use border-box sizing so narrow layouts do not clip the Rank Songs `No songs to rank yet` box at the sides (implemented 2026-03-25)
++ Rank Songs/UI: remove the redundant mobile `Rank` title, tighten the mobile Rank panel header, and reduce compare-card/button vertical spacing to avoid the small inner scrollbar in the Rank tab (implemented 2026-03-25)
++ Mobile shell/UI: add Safari-safe top/bottom inset handling and give the mobile segmented tab wrappers extra vertical padding/visible overflow so phone chrome and active tab pills no longer look cropped at the top or bottom (implemented 2026-03-25)
