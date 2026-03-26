@@ -3530,6 +3530,73 @@ function DashboardPage({
     [computed?.topSongs],
   );
 
+  const topSongsMobileRows = useMemo(() => {
+    const songs = Array.isArray(computed?.topSongs) ? computed.topSongs : [];
+    return songs.map(song => {
+      const primaryArtistName =
+        Array.isArray(song?.artists) && song.artists.length
+          ? song.artists[0]
+          : "Unknown artist";
+      const directArtistId =
+        typeof song?.artistsDetailed?.[0]?.id === "string" &&
+        song.artistsDetailed[0].id
+          ? song.artistsDetailed[0].id
+          : null;
+      const cachedArtistId =
+        resolvedArtistByName?.[normalizeArtistNameKey(primaryArtistName)]?.artistId ||
+        null;
+      return {
+        ...song,
+        primaryArtistName,
+        artistImageCandidateIds: [directArtistId, cachedArtistId].filter(
+          artistId => typeof artistId === "string" && artistId,
+        ),
+      };
+    });
+  }, [computed?.topSongs, normalizeArtistNameKey, resolvedArtistByName]);
+
+  useEffect(() => {
+    if (!userId || !topSongsMobileRows.length) return;
+
+    topSongsMobileRows.forEach(song => {
+      const artistName =
+        typeof song?.primaryArtistName === "string"
+          ? song.primaryArtistName
+          : null;
+      const hasArtistId =
+        Array.isArray(song?.artistImageCandidateIds) &&
+        song.artistImageCandidateIds.length > 0;
+      if (hasArtistId || !artistName || artistName === "Unknown artist") return;
+      void ensureArtistIdForName({
+        artistName,
+        tracks: [song],
+      });
+    });
+  }, [ensureArtistIdForName, topSongsMobileRows, userId]);
+
+  useEffect(() => {
+    if (!userId || !topSongsMobileRows.length) return;
+
+    const artistIds = Array.from(
+      new Set(
+        topSongsMobileRows
+          .flatMap(song => song.artistImageCandidateIds || [])
+          .filter(artistId => typeof artistId === "string" && artistId),
+      ),
+    );
+    artistIds.forEach(artistId => {
+      void ensureArtistImage(artistId);
+    });
+  }, [ensureArtistImage, topSongsMobileRows, userId]);
+
+  const getTopSongArtistImageUrl = useCallback(
+    song =>
+      (song?.artistImageCandidateIds || [])
+        .map(artistId => artistImagesById?.[artistId]?.imageUrl)
+        .find(value => typeof value === "string" && value) || null,
+    [artistImagesById],
+  );
+
   useEffect(() => {
     if (!expandedAlbumKey) return;
     const exists = computed?.topAlbums?.some(a => a.key === expandedAlbumKey);
@@ -3977,40 +4044,67 @@ function DashboardPage({
         role="list"
         aria-label="Top songs cards"
       >
-        {computed.topSongs.map((t, idx) => {
+        {topSongsMobileRows.map((t, idx) => {
           const trackId =
             (typeof t?.id === "string" ? t.id : null) ||
             (typeof t?.trackKey === "string" &&
             t.trackKey.startsWith("spid:")
               ? t.trackKey.slice("spid:".length)
               : null);
+          const imageUrl = getTopSongArtistImageUrl(t);
           return (
             <article
               key={t.trackKey}
               className="dashboardSongMobileCard"
               role="listitem"
             >
-              <div className="dashboardSongMobileTop">
-                <span className="dashboardSongMobileRank">
-                  #{topSongRanks[idx] ?? idx + 1}
+              <div className="dashboardSongMobileMedia">
+                <div
+                  className={`dashboardSongMobileImage ${imageUrl ? "hasImage" : ""}`.trim()}
+                  aria-hidden="true"
+                >
+                  {imageUrl ? (
+                    <img
+                      src={imageUrl}
+                      alt=""
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span>
+                      {(t.primaryArtistName || "?").slice(0, 1).toUpperCase()}
+                    </span>
+                  )}
+                </div>
+                <span className="dashboardSongMobileRankBadge">
+                  {topSongRanks[idx] ?? idx + 1}
                 </span>
-                {trackId ? (
-                  <button
-                    className="btn small"
-                    onClick={() => openTrackInSpotify(trackId)}
-                    title="Open in Spotify"
-                  >
-                    Play
-                  </button>
-                ) : null}
               </div>
-              <div className="dashboardSongMobileTitle">
-                {t.name || t.id || t.trackKey}
-              </div>
-              <div className="dashboardSongMobileMeta">
-                {t.artists?.length
-                  ? t.artists.join(", ")
-                  : "Unknown artist"}
+
+              <div className="dashboardSongMobileMain">
+                <div className="dashboardSongMobileTop">
+                  <div className="dashboardSongMobileCopy">
+                    <div className="dashboardSongMobileTitle">
+                      {t.name || t.id || t.trackKey}
+                    </div>
+                    <div className="dashboardSongMobileMeta">
+                      {t.artists?.length
+                        ? t.artists.join(", ")
+                        : "Unknown artist"}
+                    </div>
+                    <div className="dashboardSongMobileAlbum">
+                      {t.album || "Unknown album"}
+                    </div>
+                  </div>
+                  {trackId ? (
+                    <button
+                      className="btn small dashboardSongMobilePlayBtn"
+                      onClick={() => openTrackInSpotify(trackId)}
+                      title="Open in Spotify"
+                    >
+                      Play
+                    </button>
+                  ) : null}
+                </div>
               </div>
             </article>
           );

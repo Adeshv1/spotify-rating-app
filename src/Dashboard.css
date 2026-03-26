@@ -552,11 +552,15 @@
   .dashboardPage .dashboardMobileColumns {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     gap: 0.85rem;
+    min-height: 0;
   }
 
   .dashboardPage .dashboardMobileSinglePanel {
-    overflow: visible;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .dashboardPage .dashboardPanel {
@@ -594,8 +598,12 @@
 
   .dashboardPage .dashboardMobilePanelBody {
     padding: 0.82rem;
+    min-height: 0;
+    flex: 1 1 auto;
     display: grid;
     gap: 0.72rem;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .dashboardPage .dashboardMobileSectionHeader {
@@ -633,6 +641,68 @@
     padding: 0.76rem 0.78rem;
   }
 
+  .dashboardPage .dashboardSongMobileCard {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.72rem;
+    align-items: start;
+  }
+
+  .dashboardPage .dashboardSongMobileMedia {
+    position: relative;
+    width: 3.42rem;
+  }
+
+  .dashboardPage .dashboardSongMobileImage {
+    width: 3.42rem;
+    height: 3.42rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      radial-gradient(circle at top, rgba(122, 162, 255, 0.26), rgba(19, 28, 57, 0.92));
+    color: rgba(255, 255, 255, 0.92);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .dashboardPage .dashboardSongMobileImage.hasImage {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .dashboardPage .dashboardSongMobileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .dashboardPage .dashboardSongMobileRankBadge {
+    position: absolute;
+    top: -0.22rem;
+    left: -0.22rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 999px;
+    border: 1px solid rgba(122, 162, 255, 0.24);
+    background: rgba(10, 17, 38, 0.96);
+    color: rgba(255, 255, 255, 0.94);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  }
+
+  .dashboardPage .dashboardSongMobileMain {
+    min-width: 0;
+  }
+
   .dashboardPage .dashboardSongMobileTop,
   .dashboardPage .dashboardAlbumMobileTop {
     display: flex;
@@ -640,6 +710,16 @@
     justify-content: space-between;
     gap: 0.6rem;
     margin-bottom: 0.48rem;
+  }
+
+  .dashboardPage .dashboardSongMobileTop {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .dashboardPage .dashboardSongMobileCopy {
+    min-width: 0;
+    flex: 1 1 auto;
   }
 
   .dashboardPage .dashboardSongMobileRank,
@@ -671,6 +751,17 @@
     color: var(--text-muted);
     font-size: 0.84rem;
     line-height: 1.28;
+  }
+
+  .dashboardPage .dashboardSongMobileAlbum {
+    margin-top: 0.14rem;
+    color: var(--text-muted-2);
+    font-size: 0.78rem;
+    line-height: 1.24;
+  }
+
+  .dashboardPage .dashboardSongMobilePlayBtn {
+    flex: 0 0 auto;
   }
 
   .dashboardPage .dashboardAlbumMobileStats {
@@ -778,14 +869,35 @@
     width: 4.45rem;
   }
 
+  .dashboardPage .artistCardTrackRight {
+    gap: 0.28rem;
+    min-width: auto;
+    width: auto;
+    position: static;
+  }
+
+  .dashboardPage .artistCardTrackScore.rankValue {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    opacity: 1;
+  }
+
   .dashboardPage .artistCardTrackPlayBtn {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
     padding: 0.18rem 0.36rem;
     font-size: 0.7rem;
   }
 
   .dashboardPage .artistCardTrack:hover .artistCardTrackScore.rankValue,
   .dashboardPage .artistCardTrack:focus-within .artistCardTrackScore.rankValue {
-    right: 2.45rem;
+    right: auto;
   }
 
   .dashboardPage .artistCardTrack:nth-child(n + 4) {

@@ -188,3 +188,6 @@
 + Dashboard/UI: add mobile-only segmented tabs for Songs, Artists, and Albums; replace Top songs and Album progress tables with cards on mobile; and compact the artist cards to better fit the mobile layout while keeping desktop unchanged (implemented 2026-03-25)
 + Rank Songs/UI: update the mobile Ranked cards to show song name plus artist text instead of album, and add a top-right global-rank pill to each card (implemented 2026-03-25)
 + Dashboard/UI: simplify the mobile Dashboard to one plain content panel under the Songs/Artists/Albums tabs instead of desktop-style nested panel headers, fixing blank mobile section renders (implemented 2026-03-25)
++ Dashboard/UI: add artist-image media blocks and overlaid rank badges to the mobile Top songs cards, show song/artist/album beside a top-right Play button, and move mobile dashboard scrolling into the inner panel rectangle (implemented 2026-03-25)
++ Dashboard/UI: enlarge the mobile Top songs artist square slightly and move its rank badge to the image’s top-left corner (implemented 2026-03-25)
++ Dashboard/UI: remove the hover requirement for mobile artist-card track ranks by laying out the rank and Play controls side by side on touch screens (implemented 2026-03-25)
