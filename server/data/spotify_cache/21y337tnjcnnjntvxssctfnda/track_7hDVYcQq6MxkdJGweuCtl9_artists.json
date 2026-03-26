@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7hDVYcQq6MxkdJGweuCtl9_artists",
+  "fetchedAt": "2026-03-26T01:17:14.839Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.839Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+        "name": "Billie Eilish"
+      }
+    ],
+    "album": {
+      "id": "7fRrTyKvE4Skh93v97gtcU",
+      "name": "dont smile at me",
+      "totalTracks": 9
+    }
+  }
+}

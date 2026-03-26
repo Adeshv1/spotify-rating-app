@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0UENPp0gkseopK29vUsOkt_artists",
+  "fetchedAt": "2026-03-26T01:16:15.277Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.277Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "03NjaVnVwllxUUcSUDglNJ",
+        "name": "Dishant"
+      }
+    ],
+    "album": {
+      "id": "6kxQ7gEUby7TDZStYKFLrq",
+      "name": "4 Real",
+      "totalTracks": 4
+    }
+  }
+}

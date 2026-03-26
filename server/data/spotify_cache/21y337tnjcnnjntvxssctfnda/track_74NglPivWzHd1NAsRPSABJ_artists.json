@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_74NglPivWzHd1NAsRPSABJ_artists",
+  "fetchedAt": "2026-03-26T01:16:15.048Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.048Z",
+  "data": {
+    "artists": [
+      {
+        "id": "04zsOadyaRBqhi2d1nKGUe",
+        "name": "Gagan Kooner"
+      }
+    ],
+    "album": {
+      "id": "0vRto25h8Z3CKsactiHw4K",
+      "name": "24 (Freestyle)",
+      "totalTracks": 1
+    }
+  }
+}

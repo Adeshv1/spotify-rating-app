@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2zDvY1uKpQHXYCXht7jDP6_artists",
+  "fetchedAt": "2026-03-26T01:16:14.868Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.868Z",
+  "data": {
+    "artists": [
+      {
+        "id": "2zGP5dYW7vsTnCtjnhO8eo",
+        "name": "Dulla"
+      },
+      {
+        "id": "2TFn1e5UTGZzzkt0TkGWPl",
+        "name": "Shah Rehan"
+      }
+    ],
+    "album": {
+      "id": "7i8uFkrzZ0vJvgv44oyuiw",
+      "name": "The One And Only",
+      "totalTracks": 5
+    }
+  }
+}

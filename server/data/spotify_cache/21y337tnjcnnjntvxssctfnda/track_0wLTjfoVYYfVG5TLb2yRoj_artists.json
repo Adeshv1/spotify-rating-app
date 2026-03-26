@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0wLTjfoVYYfVG5TLb2yRoj_artists",
+  "fetchedAt": "2026-03-26T01:16:15.079Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.079Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      },
+      {
+        "id": "1EcHnxGHxHqFMo2gmfhXSl",
+        "name": "Hxrmxn"
+      }
+    ],
+    "album": {
+      "id": "6cAd282UZ32MHlkbe4hq8F",
+      "name": "Sigma",
+      "totalTracks": 1
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_1lOe9qE0vR9zwWQAOk6CoO_artists",
+  "fetchedAt": "2026-03-26T01:17:15.150Z",
+  "lastRefreshedAt": "2026-03-26T01:17:15.150Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4Ga1P7PMIsmqEZqhYZQgDo",
+        "name": "Lil Tecca"
+      }
+    ],
+    "album": {
+      "id": "1I6FpscJIfwf4T56VxGVsB",
+      "name": "We Love You Tecca",
+      "totalTracks": 18
+    }
+  }
+}

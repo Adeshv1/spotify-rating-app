@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2qxmye6gAegTMjLKEBoR3d_artists",
+  "fetchedAt": "2026-03-26T01:17:15.141Z",
+  "lastRefreshedAt": "2026-03-26T01:17:15.141Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5IH6FPUwQTxPSXurCrcIov",
+        "name": "Alec Benjamin"
+      }
+    ],
+    "album": {
+      "id": "6jKZplJpy21R5lHaYHHjmZ",
+      "name": "Narrated For You",
+      "totalTracks": 12
+    }
+  }
+}

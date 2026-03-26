@@ -66,6 +66,11 @@ function normalizedRankValue(value) {
   return Number.isFinite(n) ? Math.round(n) : null;
 }
 
+function normalizeArtistNameKey(name) {
+  if (typeof name !== "string") return "";
+  return name.trim().toLowerCase().replaceAll(/\s+/g, " ");
+}
+
 function formatCountdown(targetMs, nowMs) {
   if (!Number.isFinite(targetMs) || !Number.isFinite(nowMs)) return "not scheduled";
   const totalSeconds = Math.max(0, Math.ceil((targetMs - nowMs) / 1000));
@@ -1004,7 +1009,7 @@ const HOW_TO_USE_PAGES = [
 const HOW_TO_USE_RULES = [
   "Your ranking is global, so the same song only needs to be ranked once even if it appears in multiple playlists.",
   "Do not rate removes a song from ranking until you restore it.",
-  "Export / Import lets you back up or restore your data on this device.",
+  "Back up & Restore lets you save or restore your data on this device.",
 ];
 
 function readAuthErrorFromLocation() {
@@ -1070,8 +1075,6 @@ function App() {
   const [tracksError, setTracksError] = useState(null);
   const [tracksCache, setTracksCache] = useState(null);
   const [tracksSource, setTracksSource] = useState(null); // 'cache' | 'api'
-  const importInputRef = useRef(null);
-  const dataMenuRef = useRef(null);
   const [dashboardImportError, setDashboardImportError] = useState(null);
   const [dataImportDragActive, setDataImportDragActive] = useState(false);
   const [isHowToUseOpen, setIsHowToUseOpen] = useState(false);
@@ -1091,6 +1094,10 @@ function App() {
   const isRankRoute = routePath === "/rank";
   const isDashboardLikeRoute = isDashboardRoute;
   const isPublicLanding = !loggedIn;
+  const isPlaylistsRoute =
+    loggedIn && routePath === "/app" && !selectedPlaylistId;
+  const isPlaylistDetailRoute =
+    loggedIn && routePath === "/app" && Boolean(selectedPlaylistId);
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 30_000);
@@ -1487,6 +1494,12 @@ function App() {
     window.location.href = "/";
   }
 
+  const closeHeaderDataMenus = useCallback(() => {
+    document.querySelectorAll(".headerDataMenu[open]").forEach(menu => {
+      menu.open = false;
+    });
+  }, []);
+
   const exportDashboardJson = useCallback(() => {
     const userId = profile?.id ?? null;
     if (!userId) return;
@@ -1506,8 +1519,14 @@ function App() {
     a.click();
     a.remove();
     URL.revokeObjectURL(url);
-    if (dataMenuRef.current) dataMenuRef.current.open = false;
-  }, [dataMenuRef, profile, routePath, selectedPlaylistId, userRanking]);
+    closeHeaderDataMenus();
+  }, [
+    closeHeaderDataMenus,
+    profile,
+    routePath,
+    selectedPlaylistId,
+    userRanking,
+  ]);
 
   const importDashboardFromText = useCallback(
     text => {
@@ -1582,7 +1601,7 @@ function App() {
           setTracksSource(null);
         }
         setLocalDataRevision(value => value + 1);
-        if (dataMenuRef.current) dataMenuRef.current.open = false;
+        closeHeaderDataMenus();
         return;
       }
 
@@ -1600,9 +1619,9 @@ function App() {
       if (userId) importedState.userId = userId;
 
       setUserRanking(importedState);
-      if (dataMenuRef.current) dataMenuRef.current.open = false;
+      closeHeaderDataMenus();
     },
-    [dataMenuRef, profile?.id, selectedPlaylistId],
+    [closeHeaderDataMenus, profile?.id, selectedPlaylistId],
   );
 
   const importDashboardFile = useCallback(
@@ -1801,8 +1820,93 @@ function App() {
     );
   }
 
+  const closeHeaderStorageNotice = event => {
+    closeHeaderDataMenus();
+    const details = event.currentTarget.closest("details");
+    if (details) details.open = false;
+  };
+
+  const renderHeaderDataMenu = className => (
+    <details className={`headerDataMenu ${className}`.trim()}>
+      <summary className="btn small">Back up & Restore</summary>
+      <div className="headerDataMenuPanel">
+        <div className="headerDataMenuTitle">Backup and restore</div>
+        <button
+          className="btn small"
+          onClick={exportDashboardJson}
+        >
+          Export Backup
+        </button>
+        <label
+          className={`headerDataDropzone ${dataImportDragActive ? "active" : ""}`.trim()}
+          onDragEnter={onDataImportDragOver}
+          onDragOver={onDataImportDragOver}
+          onDragLeave={onDataImportDragLeave}
+          onDrop={onDataImportDrop}
+        >
+          <span className="headerDataDropzoneTitle">Import Backup</span>
+          <span className="headerDataDropzoneMeta">
+            Drag and drop a JSON backup here or click to browse.
+          </span>
+          <span className="headerDataDropzoneHint">Choose file</span>
+          <input
+            type="file"
+            accept="application/json"
+            onChange={onPickDashboardImportFile}
+            className="headerDataFileInput"
+          />
+        </label>
+      </div>
+    </details>
+  );
+
+  const renderHeaderStorageNotice = (className, { includeDataMenu = false } = {}) => (
+    <details className={`headerStorageNotice ${className}`.trim()}>
+      <summary
+        className="headerStorageNoticeBtn"
+        aria-label="Storage and backup notice"
+        title="Storage and backup notice"
+      >
+        !
+      </summary>
+      <div className="headerStorageNoticePanel">
+        <div className="headerStorageNoticePanelHeader">
+          <div className="headerStorageNoticeTitle">Back up & restore</div>
+          <button
+            type="button"
+            className="headerStorageNoticeClose"
+            aria-label="Close storage and backup notice"
+            onClick={closeHeaderStorageNotice}
+          >
+            X
+          </button>
+        </div>
+        <p className="headerStorageNoticeText">
+          {isOwnerUser
+            ? "This owner account also syncs changes to the server, but you should still use Back up & Restore regularly."
+            : "Your rankings and playlist data stay in this browser on this device."}
+        </p>
+        <p className="headerStorageNoticeText">
+          Use Back up & Restore regularly so you have a local backup if this
+          browser's stored site data is cleared or the browser resets.
+        </p>
+        <p className="headerStorageNoticeText headerStorageNoticeTextSubtle">
+          This normally should not happen as long as the browser's stored data
+          is not cleared.
+        </p>
+        {includeDataMenu ? (
+          <div className="headerStorageNoticeActions">
+            {renderHeaderDataMenu("headerDataMenuNoticeMobile")}
+          </div>
+        ) : null}
+      </div>
+    </details>
+  );
+
   return (
-    <div className={`appShell ${isPublicLanding ? "appShellPublicLanding" : ""}`.trim()}>
+    <div
+      className={`appShell ${isPublicLanding ? "appShellPublicLanding" : ""} ${isPlaylistsRoute ? "appShellPlaylistsRoute" : ""} ${isPlaylistDetailRoute ? "appShellPlaylistDetailRoute" : ""}`.trim()}
+    >
       <header className={`topBar ${!loggedIn ? "topBarPublic" : ""}`.trim()}>
         <div className={`topBarInner ${!loggedIn ? "topBarInnerPublic" : ""}`.trim()}>
           <div className="topBarLeft">
@@ -1818,70 +1922,8 @@ function App() {
             </div>
             {loggedIn ? (
               <div className="headerUtilityActions">
-                <details
-                  ref={dataMenuRef}
-                  className="headerDataMenu"
-                >
-                  <summary className="btn small">Export / Import</summary>
-                  <div className="headerDataMenuPanel">
-                    <div className="headerDataMenuTitle">Data backup</div>
-                    <button
-                      className="btn small"
-                      onClick={exportDashboardJson}
-                    >
-                      Export Data
-                    </button>
-                    <label
-                      className={`headerDataDropzone ${dataImportDragActive ? "active" : ""}`.trim()}
-                      onDragEnter={onDataImportDragOver}
-                      onDragOver={onDataImportDragOver}
-                      onDragLeave={onDataImportDragLeave}
-                      onDrop={onDataImportDrop}
-                    >
-                      <span className="headerDataDropzoneTitle">
-                        Import Backup
-                      </span>
-                      <span className="headerDataDropzoneMeta">
-                        Drag and drop a JSON backup here or click to browse.
-                      </span>
-                      <span className="headerDataDropzoneHint">Choose file</span>
-                      <input
-                        ref={importInputRef}
-                        type="file"
-                        accept="application/json"
-                        onChange={onPickDashboardImportFile}
-                        className="headerDataFileInput"
-                      />
-                    </label>
-                  </div>
-                </details>
-                <details className="headerStorageNotice">
-                  <summary
-                    className="headerStorageNoticeBtn"
-                    aria-label="Storage and backup notice"
-                    title="Storage and backup notice"
-                  >
-                    !
-                  </summary>
-                  <div className="headerStorageNoticePanel">
-                    <div className="headerStorageNoticeTitle">
-                      Back up your data
-                    </div>
-                    <p className="headerStorageNoticeText">
-                      {isOwnerUser
-                        ? "This owner account also syncs changes to the server, but you should still export backups regularly."
-                        : "Your rankings and playlist data are stored in this browser on this device."}
-                    </p>
-                    <p className="headerStorageNoticeText">
-                      Export backups often. If this browser's stored site data is
-                      cleared or the browser resets, you could lose your rankings.
-                    </p>
-                    <p className="headerStorageNoticeText headerStorageNoticeTextSubtle">
-                      This normally should not happen as long as the browser's
-                      stored data is not cleared.
-                    </p>
-                  </div>
-                </details>
+                {renderHeaderDataMenu("headerDataMenuDesktop")}
+                {renderHeaderStorageNotice("headerStorageNoticeDesktop")}
               </div>
             ) : null}
           </div>
@@ -1933,18 +1975,23 @@ function App() {
                     Save failed (will retry)
                   </span>
                 ) : null}
-                <button
-                  className="btn"
-                  onClick={() => setIsHowToUseOpen(true)}
-                >
-                  How to use
-                </button>
-                <button
-                  className="btn danger"
-                  onClick={logout}
-                >
-                  Log out
-                </button>
+                <div className="topActionButtons">
+                  <button
+                    className="btn"
+                    onClick={() => setIsHowToUseOpen(true)}
+                  >
+                    How to use
+                  </button>
+                  {renderHeaderStorageNotice("headerStorageNoticeMobile", {
+                    includeDataMenu: true,
+                  })}
+                  <button
+                    className="btn danger"
+                    onClick={logout}
+                  >
+                    Log out
+                  </button>
+                </div>
               </>
             ) : (
               <a
@@ -2033,6 +2080,7 @@ function App() {
                   />
                 ) : selectedPlaylistId ? (
                   <PlaylistView
+                    userId={profile?.id}
                     playlistsCache={playlistsCache}
                     playlistId={selectedPlaylistId}
                     ranking={userRanking}
@@ -2091,7 +2139,7 @@ function App() {
               </div>
               <button
                 type="button"
-                className="btn small"
+                className="btn small helpDialogClose"
                 onClick={() => setIsHowToUseOpen(false)}
                 aria-label="Close how to use dialog"
               >
@@ -4544,7 +4592,7 @@ function PlaylistsView({
     }
   }
   return (
-    <div className="section">
+    <div className="section playlistsPage">
       <h2>Your playlists</h2>
 
       {playlistsError ? <p className="error">{playlistsError}</p> : null}
@@ -4579,7 +4627,7 @@ function PlaylistsView({
 
       {playlistsCache?.items?.length ? (
         <Fragment>
-          <div className="controls">
+          <div className="controls playlistsSearchControls">
             <input
               className="textInput"
               value={playlistQuery}
@@ -4637,6 +4685,17 @@ function PlaylistsView({
                   : inGlobalRankingPool
                     ? "Sync"
                     : "Add to Global Ranking";
+              const mobilePoolLabel = inGlobalRankingPool
+                ? "In pool"
+                : "Not in pool";
+              const mobilePoolTitle = inGlobalRankingPool
+                ? "Remove playlist songs from the global pool"
+                : "Add playlist songs to the global pool";
+              const mobilePoolDisabled =
+                !p.id ||
+                isRemoving ||
+                isFetching ||
+                (!inGlobalRankingPool && isGlobalActionCooling);
               const imageUrl =
                 Array.isArray(p?.images) && typeof p.images?.[0]?.url === "string"
                   ? p.images[0].url
@@ -4647,6 +4706,33 @@ function PlaylistsView({
                   key={p.id || p.name}
                   className="playlistCard"
                 >
+                  <button
+                    type="button"
+                    className={`playlistCardPoolToggleMobile ${
+                      inGlobalRankingPool ? "isInPool" : "isOutOfPool"
+                    }`.trim()}
+                    onClick={() => {
+                      if (!p.id) return;
+                      if (inGlobalRankingPool) {
+                        setPlaylistPendingRemoval(p);
+                        return;
+                      }
+                      ingestPlaylist(p.id);
+                    }}
+                    disabled={mobilePoolDisabled}
+                    title={mobilePoolTitle}
+                  >
+                    <span className="playlistCardPoolToggleMobileLabel">
+                      {mobilePoolLabel}
+                    </span>
+                    <span
+                      className="playlistCardPoolToggleMobileIcon"
+                      aria-hidden="true"
+                    >
+                      {inGlobalRankingPool ? "✓" : "X"}
+                    </span>
+                  </button>
+
                   <div className="playlistCardMedia">
                     <button
                       className="playlistCardArt"
@@ -4722,7 +4808,11 @@ function PlaylistsView({
                       </div>
                     ) : null}
 
-                    <div className="playlistCardActions">
+                    <div
+                      className={`playlistCardActions ${
+                        inGlobalRankingPool ? "playlistCardActionsMobileDual" : ""
+                      }`.trim()}
+                    >
                       <button
                         className="btn"
                         onClick={() => p.id && ingestPlaylist(p.id)}
@@ -4730,6 +4820,16 @@ function PlaylistsView({
                       >
                         {actionLabel}
                       </button>
+                      {inGlobalRankingPool ? (
+                        <button
+                          type="button"
+                          className="btn danger playlistCardRemoveBtnMobile"
+                          onClick={() => setPlaylistPendingRemoval(p)}
+                          disabled={isRemoving || isFetching}
+                        >
+                          {isRemoving ? "Removing..." : "Remove from pool"}
+                        </button>
+                      ) : null}
                     </div>
                   </div>
                 </article>
@@ -4763,7 +4863,7 @@ function PlaylistsView({
               </div>
               <button
                 type="button"
-                className="btn small"
+                className="btn small helpDialogClose"
                 onClick={() => setPlaylistPendingRemoval(null)}
                 aria-label="Close remove from pool dialog"
               >
@@ -4817,6 +4917,7 @@ function PlaylistsView({
 }
 
 function PlaylistView({
+  userId,
   playlistsCache,
   playlistId,
   ranking,
@@ -4877,6 +4978,7 @@ function PlaylistView({
       {tracksError ? <p className="error">{tracksError}</p> : null}
 
       <PlaylistTracksTable
+        userId={userId}
         uniqueTracks={uniqueTracks}
         globalRankByKey={globalRankByKey}
       />
@@ -4884,15 +4986,239 @@ function PlaylistView({
   );
 }
 
-function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
+function PlaylistTracksTable({ userId, uniqueTracks, globalRankByKey }) {
+  const [artistImagesById, setArtistImagesById] = useState(() => ({}));
+  const [resolvedArtistByName, setResolvedArtistByName] = useState(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    return next;
+  });
+  const artistImageInFlight = useRef(new Map());
+  const trackResolveInFlight = useRef(new Map());
+  const artistImagesByIdRef = useRef({});
+  const resolvedArtistByNameRef = useRef({});
+
+  useEffect(() => {
+    artistImagesByIdRef.current = artistImagesById || {};
+  }, [artistImagesById]);
+
+  useEffect(() => {
+    resolvedArtistByNameRef.current = resolvedArtistByName || {};
+  }, [resolvedArtistByName]);
+
+  useEffect(() => {
+    const cached = readArtistIdByNameCache(userId);
+    const items =
+      cached?.items && typeof cached.items === "object" ? cached.items : {};
+    const next = {};
+    for (const [nameKey, artistId] of Object.entries(items)) {
+      if (typeof artistId !== "string" || !artistId) continue;
+      next[nameKey] = { status: "loaded", artistId };
+    }
+    setResolvedArtistByName(next);
+  }, [userId]);
+
+  const ensureArtistImage = useCallback(async artistId => {
+    if (!artistId) return;
+
+    const existing = artistImagesByIdRef.current?.[artistId] || null;
+    if (existing?.status === "loaded") return;
+    if (existing?.status === "loading") {
+      const inflight = artistImageInFlight.current.get(artistId);
+      if (inflight) return inflight;
+      return;
+    }
+
+    setArtistImagesById(prev => {
+      const current = prev?.[artistId];
+      if (
+        current &&
+        (current.status === "loading" || current.status === "loaded")
+      ) {
+        return prev;
+      }
+      return {
+        ...prev,
+        [artistId]: {
+          status: "loading",
+          imageUrl:
+            typeof current?.imageUrl === "string" ? current.imageUrl : null,
+        },
+      };
+    });
+
+    if (artistImageInFlight.current.has(artistId))
+      return artistImageInFlight.current.get(artistId);
+
+    const request = (async () => {
+      try {
+        const res = await fetch(`/artist-image/${encodeURIComponent(artistId)}`);
+        let data = null;
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+
+        if (!res.ok) {
+          setArtistImagesById(prev => ({
+            ...prev,
+            [artistId]: {
+              status: "error",
+              imageUrl: null,
+            },
+          }));
+          return;
+        }
+
+        setArtistImagesById(prev => ({
+          ...prev,
+          [artistId]: {
+            status: "loaded",
+            imageUrl: typeof data?.imageUrl === "string" ? data.imageUrl : null,
+          },
+        }));
+      } catch {
+        setArtistImagesById(prev => ({
+          ...prev,
+          [artistId]: {
+            status: "error",
+            imageUrl: null,
+          },
+        }));
+      } finally {
+        artistImageInFlight.current.delete(artistId);
+      }
+    })();
+
+    artistImageInFlight.current.set(artistId, request);
+    return request;
+  }, []);
+
+  const ensureTrackArtists = useCallback(async trackId => {
+    if (!trackId) return { ok: false, artists: [] };
+
+    const existing = trackResolveInFlight.current.get(trackId);
+    if (existing) return existing;
+
+    const request = (async () => {
+      try {
+        const res = await fetch(`/api/tracks/${encodeURIComponent(trackId)}`);
+        let data = null;
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+
+        if (!res.ok) {
+          return { ok: false, artists: [] };
+        }
+
+        return {
+          ok: true,
+          artists: Array.isArray(data?.artists) ? data.artists : [],
+        };
+      } catch {
+        return { ok: false, artists: [] };
+      } finally {
+        trackResolveInFlight.current.delete(trackId);
+      }
+    })();
+
+    trackResolveInFlight.current.set(trackId, request);
+    return request;
+  }, []);
+
+  const ensureArtistIdsForRow = useCallback(
+    async row => {
+      const trackId =
+        typeof row?.track?.id === "string" && row.track.id ? row.track.id : null;
+      const artistNames = Array.isArray(row?.artistNames) ? row.artistNames : [];
+      if (!trackId || !artistNames.length) return;
+
+      const unresolvedNames = artistNames.filter(name => {
+        const key = normalizeArtistNameKey(name);
+        return (
+          key &&
+          typeof resolvedArtistByNameRef.current?.[key]?.artistId !== "string"
+        );
+      });
+      if (!unresolvedNames.length) return;
+
+      const result = await ensureTrackArtists(trackId);
+      if (!result?.ok) return;
+
+      const artists = Array.isArray(result?.artists) ? result.artists : [];
+      const toCache = {};
+      for (const artist of artists) {
+        const name = typeof artist?.name === "string" ? artist.name : null;
+        const artistId = typeof artist?.id === "string" ? artist.id : null;
+        const key = normalizeArtistNameKey(name);
+        if (!key || !artistId) continue;
+        toCache[key] = artistId;
+      }
+      if (!Object.keys(toCache).length) return;
+
+      setResolvedArtistByName(prev => {
+        const next = { ...prev };
+        for (const [nameKey, artistId] of Object.entries(toCache)) {
+          next[nameKey] = { status: "loaded", artistId };
+        }
+        return next;
+      });
+      mergeArtistIdByNameCache(userId, toCache);
+    },
+    [ensureTrackArtists, userId],
+  );
+
   const rows = useMemo(() => {
     const list = uniqueTracks.map(({ key, track }) => {
       const globalRank = globalRankByKey?.get?.(key) ?? null;
+      const artistNames = Array.isArray(track?.artists)
+        ? track.artists.filter(Boolean)
+        : [];
+      const artistIds = Array.isArray(track?.artistIds)
+        ? track.artistIds.filter(
+            artistId => typeof artistId === "string" && artistId,
+          )
+        : [];
+      const primaryArtistName =
+        artistNames[0] ||
+        "Unknown artist";
+      const artistImageCandidateIds = Array.from(
+        new Set(
+          artistNames.flatMap((name, idx) => {
+            const cachedId =
+              resolvedArtistByName?.[normalizeArtistNameKey(name)]?.artistId ||
+              null;
+            const directId =
+              Array.isArray(track?.artistIds) &&
+              Array.isArray(track?.artists) &&
+              track.artists.length === track.artistIds.length
+                ? track.artistIds[idx] || null
+                : artistIds[idx] || null;
+            return [cachedId, directId].filter(
+              artistId => typeof artistId === "string" && artistId,
+            );
+          }),
+        ),
+      );
+
       return {
         key,
         track,
         globalRank,
-        artists: Array.isArray(track?.artists) ? track.artists.join(", ") : "",
+        artists: artistNames.join(", "),
+        artistNames,
+        primaryArtistName,
+        artistImageCandidateIds,
       };
     });
     list.sort((a, b) => {
@@ -4906,14 +5232,123 @@ function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
       return ar - br;
     });
     return list;
-  }, [uniqueTracks, globalRankByKey]);
+  }, [resolvedArtistByName, uniqueTracks, globalRankByKey]);
+
+  useEffect(() => {
+    if (!userId || !rows.length) return;
+
+    rows.forEach(row => {
+      void ensureArtistIdsForRow(row);
+    });
+  }, [ensureArtistIdsForRow, rows, userId]);
+
+  useEffect(() => {
+    if (!userId || !rows.length) return;
+
+    const artistIds = Array.from(
+      new Set(
+        rows
+          .flatMap(row => row.artistImageCandidateIds || [])
+          .filter(artistId => typeof artistId === "string" && artistId),
+      ),
+    );
+
+    artistIds.forEach(artistId => {
+      void ensureArtistImage(artistId);
+    });
+  }, [ensureArtistImage, rows, userId]);
+
+  const getArtistImageUrl = useCallback(
+    row =>
+      (row?.artistImageCandidateIds || [])
+        .map(artistId => artistImagesById?.[artistId]?.imageUrl)
+        .find(value => typeof value === "string" && value) || null,
+    [artistImagesById],
+  );
 
   if (!uniqueTracks?.length) return <p className="meta">No tracks found.</p>;
 
   return (
-    <div className="cardSub">
+    <div className="cardSub playlistTracksTableShell">
       <div
-        className="tableWrap"
+        className="playlistTracksCards"
+        role="list"
+        aria-label="Playlist tracks cards"
+      >
+        {rows.map((r, idx) => {
+          const imageUrl = getArtistImageUrl(r);
+          const globalRankNumber = Number(r.globalRank);
+          const isRanked =
+            Number.isFinite(globalRankNumber) && globalRankNumber > 0;
+          return (
+            <article
+              key={r.key}
+              className="playlistTrackCard"
+              role="listitem"
+            >
+              <div className="playlistTrackCardTop">
+                <div className="playlistTrackCardBadges">
+                  <span className="playlistTrackCardBadge">
+                    Playlist #{idx + 1}
+                  </span>
+                  <span
+                    className={`playlistTrackCardBadge playlistTrackCardGlobalBadge ${
+                      isRanked ? "isRanked" : "isUnranked"
+                    }`.trim()}
+                  >
+                    {isRanked ? `Global #${globalRankNumber}` : "Unranked"}
+                  </span>
+                </div>
+                {r.track?.id ? (
+                  <button
+                    className="btn small playlistTrackCardPlayBtn"
+                    onClick={() => openTrackInSpotify(r.track.id)}
+                    title="Play in Spotify"
+                  >
+                    Play
+                  </button>
+                ) : null}
+              </div>
+
+              <div className="playlistTrackCardSong">
+                {r.track?.name || "(untitled track)"}
+              </div>
+
+              <div className="artistCell playlistTrackCardArtist">
+                <div
+                  className={`artistAvatar ${imageUrl ? "hasImage" : ""}`.trim()}
+                  aria-hidden="true"
+                >
+                  {imageUrl ? (
+                    <img
+                      src={imageUrl}
+                      alt=""
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span>
+                      {(r.primaryArtistName || "?").slice(0, 1).toUpperCase()}
+                    </span>
+                  )}
+                </div>
+                <div className="artistCellText">
+                  <div className="cellSub">{r.artists || "Unknown artist"}</div>
+                </div>
+              </div>
+
+              <div className="playlistTrackCardMetaBlock">
+                <div className="playlistTrackCardMetaLabel">Album</div>
+                <div className="playlistTrackCardMetaValue">
+                  {r.track?.album || "Unknown album"}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <div
+        className="tableWrap playlistTracksTableDesktop"
         role="region"
         aria-label="Tracks table"
         tabIndex={0}
@@ -4949,7 +5384,32 @@ function PlaylistTracksTable({ uniqueTracks, globalRankByKey }) {
                   </div>
                 </td>
                 <td>
-                  <div className="cellSub">{r.artists || "Unknown artist"}</div>
+                  {(() => {
+                    const imageUrl = getArtistImageUrl(r);
+                    return (
+                  <div className="artistCell">
+                    <div
+                      className={`artistAvatar ${imageUrl ? "hasImage" : ""}`.trim()}
+                      aria-hidden="true"
+                    >
+                      {imageUrl ? (
+                        <img
+                          src={imageUrl}
+                          alt=""
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span>
+                          {(r.primaryArtistName || "?").slice(0, 1).toUpperCase()}
+                        </span>
+                      )}
+                    </div>
+                    <div className="artistCellText">
+                      <div className="cellSub">{r.artists || "Unknown artist"}</div>
+                    </div>
+                  </div>
+                    );
+                  })()}
                 </td>
                 <td>
                   <div className="cellSub">
@@ -4996,10 +5456,24 @@ function BinarySorter({
   }, [uniqueTracks]);
 
   const orderedKeys = useMemo(() => buildOrderedKeys(ranking), [ranking]);
+  const visibleOrderedKeys = useMemo(
+    () =>
+      orderedKeys.filter(
+        key => (trackIndex?.get?.(key) || trackByKey.get(key)) && key !== activeKey,
+      ),
+    [activeKey, orderedKeys, trackByKey, trackIndex],
+  );
+  const hiddenOrderedKeys = useMemo(
+    () =>
+      orderedKeys.filter(
+        key => !(trackIndex?.get?.(key) || trackByKey.get(key)) && key !== activeKey,
+      ),
+    [activeKey, orderedKeys, trackByKey, trackIndex],
+  );
   const baseOrder = useMemo(() => {
     if (!activeKey) return orderedKeys;
-    return orderedKeys.filter(k => k !== activeKey);
-  }, [orderedKeys, activeKey]);
+    return visibleOrderedKeys;
+  }, [orderedKeys, activeKey, visibleOrderedKeys]);
   useEffect(() => {
     if (!activeKey || !ranking) {
       lastActiveRef.current = activeKey;
@@ -5050,6 +5524,7 @@ function BinarySorter({
     if (!ranking || !activeKey) return;
     const nextOrder = baseOrder.slice();
     nextOrder.splice(position, 0, activeKey);
+    nextOrder.push(...hiddenOrderedKeys);
     onChange?.(rk => (rk ? applyOrderToRanking(rk, nextOrder) : rk));
     setSession(null);
     onActiveKeyChange?.(null);

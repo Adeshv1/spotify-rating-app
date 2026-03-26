@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7ySUcLPVX7KudhnmNcgY2D_artists",
+  "fetchedAt": "2026-03-26T01:17:14.959Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.959Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5pKCCKE2ajJHZ9KAiaK11H",
+        "name": "Rihanna"
+      }
+    ],
+    "album": {
+      "id": "5QG3tjE5L9F6O2vCAPph38",
+      "name": "Loud",
+      "totalTracks": 13
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0sps5UVl5nsm5S9hXSe1z2_artists",
+  "fetchedAt": "2026-03-26T01:16:14.971Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.971Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      }
+    ],
+    "album": {
+      "id": "0kLmKuiGyOw36XsVsngNnf",
+      "name": "Big Plays",
+      "totalTracks": 1
+    }
+  }
+}

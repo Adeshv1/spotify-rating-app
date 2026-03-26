@@ -54,11 +54,11 @@ There is also a playlist detail view that opens from the Playlists page.
 After login or demo entry, the top bar includes:
 
 - navigation for `Playlists`, `Rank Songs`, and `Dashboard`
-- `Export / Import`
+- `Back up & Restore`
 - `How to use`
 - `Log out`
 
-`Export / Import` backs up or restores your local app state. `How to use` opens a short in-app summary of the recommended workflow.
+`Back up & Restore` saves or restores your local app state. `How to use` opens a short in-app summary of the recommended workflow.
 
 ## Playlists page
 
@@ -225,7 +225,7 @@ Album progress uses cached full album tracklists when needed, so it can be more 
 
 ## Export and Import
 
-The `Export / Import` menu backs up or restores the local app state for the current browser.
+The `Back up & Restore` menu saves or restores the local app state for the current browser.
 
 Export includes:
 

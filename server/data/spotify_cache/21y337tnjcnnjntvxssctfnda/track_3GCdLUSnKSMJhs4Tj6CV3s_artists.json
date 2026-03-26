@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3GCdLUSnKSMJhs4Tj6CV3s_artists",
+  "fetchedAt": "2026-03-26T01:17:15.204Z",
+  "lastRefreshedAt": "2026-03-26T01:17:15.204Z",
+  "data": {
+    "artists": [
+      {
+        "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+        "name": "Kendrick Lamar"
+      },
+      {
+        "id": "7tYKF4w9nC0nq9CsPZTHyP",
+        "name": "SZA"
+      }
+    ],
+    "album": {
+      "id": "3pLdWdkj83EYfDN6H2N8MR",
+      "name": "Black Panther The Album Music From And Inspired By",
+      "totalTracks": 14
+    }
+  }
+}

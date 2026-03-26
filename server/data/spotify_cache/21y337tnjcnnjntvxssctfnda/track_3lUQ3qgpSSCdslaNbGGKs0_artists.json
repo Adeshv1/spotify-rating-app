@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3lUQ3qgpSSCdslaNbGGKs0_artists",
+  "fetchedAt": "2026-03-26T01:16:14.719Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.719Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      },
+      {
+        "id": "503jMzlAxbEpfltywmU45E",
+        "name": "SOE"
+      }
+    ],
+    "album": {
+      "id": "3f73vI4hBxPr45OJSX6ywC",
+      "name": "No Chance",
+      "totalTracks": 1
+    }
+  }
+}

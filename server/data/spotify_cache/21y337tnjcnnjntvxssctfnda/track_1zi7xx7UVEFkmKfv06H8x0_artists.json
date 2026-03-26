@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_1zi7xx7UVEFkmKfv06H8x0_artists",
+  "fetchedAt": "2026-03-26T01:17:14.807Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.807Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3TVXtAsR1Inumwj472S9r4",
+        "name": "Drake"
+      },
+      {
+        "id": "3tVQdUvClmAT7URs9V3rsp",
+        "name": "Wizkid"
+      },
+      {
+        "id": "6TK7fjRPdy2GW2pJzNF23L",
+        "name": "Kyla"
+      }
+    ],
+    "album": {
+      "id": "40GMAhriYJRO1rsY4YdrZb",
+      "name": "Views",
+      "totalTracks": 20
+    }
+  }
+}

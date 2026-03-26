@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_2VKIsMhpHQ4jLm0XuN91TU_artists",
+  "fetchedAt": "2026-03-26T01:16:14.727Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.727Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      }
+    ],
+    "album": {
+      "id": "3j0JixGDc8OCx9m9hgv4eg",
+      "name": "They Don't Know",
+      "totalTracks": 1
+    }
+  }
+}

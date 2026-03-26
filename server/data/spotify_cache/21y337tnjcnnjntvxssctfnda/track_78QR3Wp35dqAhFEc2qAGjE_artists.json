@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_78QR3Wp35dqAhFEc2qAGjE_artists",
+  "fetchedAt": "2026-03-26T01:17:14.785Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.785Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5f7VJjfbwm532GiveGC0ZK",
+        "name": "Lil Baby"
+      },
+      {
+        "id": "2hlmm7s2ICUX0LVIhVFlZQ",
+        "name": "Gunna"
+      }
+    ],
+    "album": {
+      "id": "2yXnY2NiaZk9QiJJittS81",
+      "name": "Drip Harder",
+      "totalTracks": 13
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_4YjXm9L1RJ6aDWNNAqFGFV_artists",
+  "fetchedAt": "2026-03-26T01:16:14.711Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.711Z",
+  "data": {
+    "artists": [
+      {
+        "id": "7tdsry60La1Fi7QADcDB9t",
+        "name": "GAV"
+      }
+    ],
+    "album": {
+      "id": "1j51SWYk2K38Z0Fd962Cj0",
+      "name": "Ima Rider",
+      "totalTracks": 1
+    }
+  }
+}

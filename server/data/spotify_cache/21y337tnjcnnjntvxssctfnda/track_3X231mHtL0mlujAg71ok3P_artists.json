@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3X231mHtL0mlujAg71ok3P_artists",
+  "fetchedAt": "2026-03-26T01:16:15.124Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.124Z",
+  "data": {
+    "artists": [
+      {
+        "id": "04zsOadyaRBqhi2d1nKGUe",
+        "name": "Gagan Kooner"
+      }
+    ],
+    "album": {
+      "id": "0JFMoXfjgUA2DWFrYy8GsA",
+      "name": "Kaali Ghodi",
+      "totalTracks": 1
+    }
+  }
+}

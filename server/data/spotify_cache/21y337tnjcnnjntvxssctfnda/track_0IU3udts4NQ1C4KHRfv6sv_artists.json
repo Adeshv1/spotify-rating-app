@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_0IU3udts4NQ1C4KHRfv6sv_artists",
+  "fetchedAt": "2026-03-26T01:16:14.871Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.871Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      },
+      {
+        "id": "2RSjOH1tYnTgkpkz81WICb",
+        "name": "Sickboi"
+      }
+    ],
+    "album": {
+      "id": "4P8OqjU0giUlyoPgCLnR2e",
+      "name": "Breakin Boundaries",
+      "totalTracks": 5
+    }
+  }
+}

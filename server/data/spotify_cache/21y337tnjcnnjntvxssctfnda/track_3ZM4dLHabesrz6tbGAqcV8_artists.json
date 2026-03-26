@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_3ZM4dLHabesrz6tbGAqcV8_artists",
+  "fetchedAt": "2026-03-26T01:16:14.913Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.913Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6Yw8Jl1i7Rb1sznqyPYocL",
+        "name": "Jassi Gosal"
+      },
+      {
+        "id": "5bzhWJolUrQTS7XbGyZWQQ",
+        "name": "Jagan Randhawa"
+      }
+    ],
+    "album": {
+      "id": "5kh82xbL0rSc5zwJo7D93k",
+      "name": "Boomin",
+      "totalTracks": 4
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_6ocbgoVGwYJhOv1GgI9NsF_artists",
+  "fetchedAt": "2026-03-26T01:17:14.808Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.808Z",
+  "data": {
+    "artists": [
+      {
+        "id": "66CXWjxzNUsdJxJ2JdwvnR",
+        "name": "Ariana Grande"
+      }
+    ],
+    "album": {
+      "id": "2fYhqwDWXjbpjaIJPEfKFw",
+      "name": "thank u, next",
+      "totalTracks": 12
+    }
+  }
+}

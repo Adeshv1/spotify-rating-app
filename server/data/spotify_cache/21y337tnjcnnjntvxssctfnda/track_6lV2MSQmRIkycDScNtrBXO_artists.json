@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_6lV2MSQmRIkycDScNtrBXO_artists",
+  "fetchedAt": "2026-03-26T01:17:15.166Z",
+  "lastRefreshedAt": "2026-03-26T01:17:15.166Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5ndkK3dpZLKtBklKjxNQwT",
+        "name": "B.o.B"
+      },
+      {
+        "id": "6Rx1JKzBrSzoKQtmbVmBnM",
+        "name": "Hayley Williams"
+      }
+    ],
+    "album": {
+      "id": "7apLPYT8szV1IqTxyVSy5P",
+      "name": "B.o.B Presents: The Adventures of Bobby Ray",
+      "totalTracks": 12
+    }
+  }
+}

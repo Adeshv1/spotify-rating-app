@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_5w7N5Rm5YdFtURcZzempat_artists",
+  "fetchedAt": "2026-03-26T01:16:14.713Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.713Z",
+  "data": {
+    "artists": [
+      {
+        "id": "3fD8S8sslhiMSVOdXv8yuG",
+        "name": "Jxggi"
+      }
+    ],
+    "album": {
+      "id": "6kxQ7gEUby7TDZStYKFLrq",
+      "name": "4 Real",
+      "totalTracks": 4
+    }
+  }
+}

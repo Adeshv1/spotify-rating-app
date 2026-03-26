@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_29InCgoMa4g3zQP53MoxSd_artists",
+  "fetchedAt": "2026-03-26T01:16:15.065Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.065Z",
+  "data": {
+    "artists": [
+      {
+        "id": "7mAbpafXc2MIAZn4ldxEuP",
+        "name": "Real Boss"
+      }
+    ],
+    "album": {
+      "id": "1wuAMPMwLxPHDgd2zpY9dK",
+      "name": "Naar",
+      "totalTracks": 1
+    }
+  }
+}

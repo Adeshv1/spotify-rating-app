@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_4DvhkX2ic4zWkQeWMwQ2qf_artists",
+  "fetchedAt": "2026-03-26T01:17:14.919Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.919Z",
+  "data": {
+    "artists": [
+      {
+        "id": "698hF4vcwHwPy8ltmXermq",
+        "name": "Far East Movement"
+      },
+      {
+        "id": "7C64wNX3howEFZjAYRKsfP",
+        "name": "The Cataracs"
+      },
+      {
+        "id": "7Ip2u3e5Nv6fFb5xyIHxEE",
+        "name": "DEV"
+      }
+    ],
+    "album": {
+      "id": "1TuKgkCGIxiIns9Bc5XKRC",
+      "name": "Free Wired",
+      "totalTracks": 10
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7vGuf3Y35N4wmASOKLUVVU_artists",
+  "fetchedAt": "2026-03-26T01:17:14.957Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.957Z",
+  "data": {
+    "artists": [
+      {
+        "id": "64KEffDW9EtZ1y2vBYgq8T",
+        "name": "Marshmello"
+      },
+      {
+        "id": "6LuN9FCkKOj5PcnpouEgny",
+        "name": "Khalid"
+      }
+    ],
+    "album": {
+      "id": "2bw00gRKNKbTFOqCkohbSh",
+      "name": "Silence",
+      "totalTracks": 1
+    }
+  }
+}

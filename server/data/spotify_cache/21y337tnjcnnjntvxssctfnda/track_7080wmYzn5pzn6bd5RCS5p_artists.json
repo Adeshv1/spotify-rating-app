@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7080wmYzn5pzn6bd5RCS5p_artists",
+  "fetchedAt": "2026-03-26T01:16:15.116Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.116Z",
+  "data": {
+    "artists": [
+      {
+        "id": "6Yw8Jl1i7Rb1sznqyPYocL",
+        "name": "Jassi Gosal"
+      },
+      {
+        "id": "5bzhWJolUrQTS7XbGyZWQQ",
+        "name": "Jagan Randhawa"
+      }
+    ],
+    "album": {
+      "id": "01DnhbhHmpnvRUA2tQVgBX",
+      "name": "Anthem",
+      "totalTracks": 1
+    }
+  }
+}

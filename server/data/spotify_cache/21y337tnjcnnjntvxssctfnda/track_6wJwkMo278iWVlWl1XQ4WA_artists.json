@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_6wJwkMo278iWVlWl1XQ4WA_artists",
+  "fetchedAt": "2026-03-26T01:17:14.941Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.941Z",
+  "data": {
+    "artists": [
+      {
+        "id": "0C8ZW7ezQVs4URX5aX7Kqx",
+        "name": "Selena Gomez"
+      }
+    ],
+    "album": {
+      "id": "2iFTxCYwhF5oC1L8s1B0rI",
+      "name": "The Heart Wants What It Wants",
+      "totalTracks": 1
+    }
+  }
+}

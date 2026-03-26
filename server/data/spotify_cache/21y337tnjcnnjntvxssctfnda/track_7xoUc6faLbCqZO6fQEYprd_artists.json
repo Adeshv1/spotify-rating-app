@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_7xoUc6faLbCqZO6fQEYprd_artists",
+  "fetchedAt": "2026-03-26T01:17:14.808Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.808Z",
+  "data": {
+    "artists": [
+      {
+        "id": "66CXWjxzNUsdJxJ2JdwvnR",
+        "name": "Ariana Grande"
+      }
+    ],
+    "album": {
+      "id": "6EVYTRG1drKdO8OnIQBeEj",
+      "name": "My Everything (Deluxe)",
+      "totalTracks": 15
+    }
+  }
+}

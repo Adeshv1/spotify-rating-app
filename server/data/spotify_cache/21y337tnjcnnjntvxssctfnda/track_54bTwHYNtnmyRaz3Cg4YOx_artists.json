@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_54bTwHYNtnmyRaz3Cg4YOx_artists",
+  "fetchedAt": "2026-03-26T01:16:15.214Z",
+  "lastRefreshedAt": "2026-03-26T01:16:15.214Z",
+  "data": {
+    "artists": [
+      {
+        "id": "5qSNDcAZoMZyquEAsDqjTl",
+        "name": "BIG JORA"
+      },
+      {
+        "id": "0tCBqgwUjIFqRNYpDJZoPG",
+        "name": "Seji Dhillon"
+      }
+    ],
+    "album": {
+      "id": "3kXLqLXh6XmvKpCFhaEPRZ",
+      "name": "Big Gun",
+      "totalTracks": 1
+    }
+  }
+}

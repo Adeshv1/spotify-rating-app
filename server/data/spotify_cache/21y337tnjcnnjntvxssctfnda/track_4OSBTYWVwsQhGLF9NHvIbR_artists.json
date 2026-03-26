@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_4OSBTYWVwsQhGLF9NHvIbR_artists",
+  "fetchedAt": "2026-03-26T01:17:14.831Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.831Z",
+  "data": {
+    "artists": [
+      {
+        "id": "4dpARuHxo51G3z768sgnrY",
+        "name": "Adele"
+      }
+    ],
+    "album": {
+      "id": "5duyQokC4FMcWPYTV9Gpf9",
+      "name": "21",
+      "totalTracks": 11
+    }
+  }
+}

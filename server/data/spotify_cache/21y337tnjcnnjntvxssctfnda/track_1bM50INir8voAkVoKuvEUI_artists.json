@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_1bM50INir8voAkVoKuvEUI_artists",
+  "fetchedAt": "2026-03-26T01:17:14.942Z",
+  "lastRefreshedAt": "2026-03-26T01:17:14.942Z",
+  "data": {
+    "artists": [
+      {
+        "id": "23zg3TcAtWQy7J6upgbUnj",
+        "name": "USHER"
+      },
+      {
+        "id": "085pc2PYOi8bGKj0PNjekA",
+        "name": "will.i.am"
+      }
+    ],
+    "album": {
+      "id": "6A1F3Fkq5dYeYYNkXflcTX",
+      "name": "Raymond v Raymond (Expanded Edition)",
+      "totalTracks": 22
+    }
+  }
+}

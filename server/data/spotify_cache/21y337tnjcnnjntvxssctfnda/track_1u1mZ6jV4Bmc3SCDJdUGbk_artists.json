@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "userId": "21y337tnjcnnjntvxssctfnda",
+  "cacheKey": "track_1u1mZ6jV4Bmc3SCDJdUGbk_artists",
+  "fetchedAt": "2026-03-26T01:16:14.884Z",
+  "lastRefreshedAt": "2026-03-26T01:16:14.884Z",
+  "data": {
+    "artists": [
+      {
+        "id": "04zsOadyaRBqhi2d1nKGUe",
+        "name": "Gagan Kooner"
+      }
+    ],
+    "album": {
+      "id": "6LNF0uISrexqyvEQoyeOoA",
+      "name": "Lemme Know",
+      "totalTracks": 1
+    }
+  }
+}
